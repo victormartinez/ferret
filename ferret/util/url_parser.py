@@ -3,10 +3,17 @@ import re
 
 
 def extract_sorted_keywords_in_url(url):
-    title_by_hyphens = re.search(r'(\w*-(-*)?\w+)+', url)
-    if title_by_hyphens is None or len(title_by_hyphens.group()) == 0:
+    title_by_hyphens = re.findall(r'(\w*-(-*)\w+)', url, re.M | re.I)
+    if len(title_by_hyphens or '') == 0:
         return None
-    keywords = title_by_hyphens.group().split('-')  # stop words tend to have less characters
-    cleaned_keywords = [x for x in keywords if x != '']  # the list might have empty entries
-    cleaned_keywords.sort(key=len, reverse=True)
-    return cleaned_keywords
+
+    keywords = []
+    for index, tuple in enumerate(title_by_hyphens):
+        (first_match, second_match) = tuple
+        words = first_match.split('-')
+        cleaned_keywords = [x for x in words if x != '-' and x != ''] # the list might have empty entries
+        keywords.extend(cleaned_keywords)
+
+    # stop words tend to have less characters
+    keywords.sort(key=len, reverse=True)
+    return keywords
