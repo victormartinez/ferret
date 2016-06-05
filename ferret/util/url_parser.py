@@ -14,6 +14,4 @@ def extract_sorted_keywords_in_url(url):
         cleaned_keywords = [x for x in words if x != '-' and x != ''] # the list might have empty entries
         keywords.extend(cleaned_keywords)
 
-    # stop words tend to have less characters
-    keywords.sort(key=len, reverse=True)
     return keywords
