@@ -28,6 +28,9 @@ class UrlTitleExtractor(object):
 
         title_candidates = doc_body.select(",".join(DEFAULT_TITLE_WEIGHTS.keys()))
         title_weight = self._calculate_title_weight_by_tag(title_candidates)
+
+        # stop words tend to have less characters
+        keywords.sort(key=len, reverse=True)
         for candidate in title_candidates:
             title_weight[candidate.get_text()] += self._calculate_title_weight_by_keyword_matching(candidate.get_text(), keywords)
 
