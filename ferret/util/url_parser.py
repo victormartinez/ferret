@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import dateparser
 import re
 
 
@@ -15,3 +16,12 @@ def extract_sorted_keywords_from_url(url):
         keywords.extend(cleaned_keywords)
 
     return keywords
+
+
+def extract_date_from_url(url):
+    published_date = re.search(r'(\d{4}/\d{2}/\d{2})/', url)
+    if not published_date:
+        return None
+
+    extracted_date = published_date.group()
+    return dateparser.parse(extracted_date, languages=['en'])  # date format used by blogs follow the american pattern
