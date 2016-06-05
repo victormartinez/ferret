@@ -11,7 +11,7 @@ def extract_sorted_keywords_from_url(url):
     for index, tuple in enumerate(title_by_hyphens):
         (first_match, second_match) = tuple
         words = first_match.split('-')
-        cleaned_keywords = [x for x in words if x != '-' and x != ''] # the list might have empty entries
+        cleaned_keywords = [x for x in words if x != '-' and x != '']  # the list might have empty entries
         keywords.extend(cleaned_keywords)
 
     return keywords
