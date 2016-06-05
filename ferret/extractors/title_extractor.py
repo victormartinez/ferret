@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
-from ferret.util.url_parser import extract_sorted_keywords_in_url
+from ferret.util.url_parser import extract_sorted_keywords_from_url
 
 DEFAULT_TITLE_WEIGHTS = {
     'h1': 8,
@@ -17,7 +17,7 @@ DEFAULT_TITLE_WEIGHTS = {
 class UrlTitleExtractor(object):
 
     def extract(self, html, url):
-        keywords = extract_sorted_keywords_in_url(url)
+        keywords = extract_sorted_keywords_from_url(url)
         if keywords is None:
             return None
 

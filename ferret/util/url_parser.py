@@ -2,7 +2,7 @@
 import re
 
 
-def extract_sorted_keywords_in_url(url):
+def extract_sorted_keywords_from_url(url):
     title_by_hyphens = re.findall(r'(\w*-(-*)\w+)', url, re.M | re.I)
     if len(title_by_hyphens or '') == 0:
         return None
