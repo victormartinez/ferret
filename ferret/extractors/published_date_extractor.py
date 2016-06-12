@@ -7,7 +7,7 @@ import re
 
 class UrlPublishedDateExtractor(object):
 
-    def extract(self, html, url):
+    def extract(self, url):
         return extract_date_from_url(url)
 
 
