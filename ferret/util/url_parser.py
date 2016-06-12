@@ -19,7 +19,7 @@ def extract_sorted_keywords_from_url(url):
 
 
 def extract_date_from_url(url):
-    published_date = re.search(r'(\d{4}/\d{2}/\d{2})/', url)
+    published_date = re.search(r'(\d{4}/\d{2}/\d{2})/?', url)
     if not published_date:
         return None
 
