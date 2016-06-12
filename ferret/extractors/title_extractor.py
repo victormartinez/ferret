@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import urllib
 from bs4 import BeautifulSoup
 from ferret.util.url_parser import extract_sorted_keywords_from_url
 
@@ -17,6 +18,7 @@ DEFAULT_TITLE_WEIGHTS = {
 class UrlTitleExtractor(object):
 
     def extract(self, html, url):
+        url = urllib.unquote(url).decode('utf8')
         keywords = extract_sorted_keywords_from_url(url)
         if keywords is None:
             return None
@@ -31,8 +33,8 @@ class UrlTitleExtractor(object):
 
         # stop words tend to have less characters
         keywords.sort(key=len, reverse=True)
-        for candidate in title_candidates:
-            title_weight[candidate.get_text()] += self._calculate_title_weight_by_keyword_matching(candidate.get_text(), keywords)
+        for candidate in title_weight.keys():
+            title_weight[candidate] += self._calculate_title_weight_by_keyword_matching(candidate, keywords)
 
         ordered_candidates = list(sorted(title_weight, key=title_weight.__getitem__, reverse=True))
         return ordered_candidates[0]
@@ -41,15 +43,14 @@ class UrlTitleExtractor(object):
         title_weight = {}
         for candidate in title_candidates:
             if candidate.get_text() and DEFAULT_TITLE_WEIGHTS[candidate.name]:
-                title_weight[candidate.get_text()] = DEFAULT_TITLE_WEIGHTS.get(candidate.name)
+                title_weight[candidate.get_text().strip()] = DEFAULT_TITLE_WEIGHTS.get(candidate.name)
         return title_weight
 
     def _calculate_title_weight_by_keyword_matching(self, title, keywords):
         title_words = title.lower().split(" ")
         keywords = [x.lower() for x in keywords]
-        max_weight = len(keywords)
         weight = 0
         for i, key in enumerate(keywords):
             if key in title_words:
-                weight += max_weight - i
+                weight += 1
         return weight
