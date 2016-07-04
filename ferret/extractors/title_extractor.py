@@ -5,7 +5,6 @@ from ferret.util.url_parser import extract_sorted_keywords_from_url
 import requests
 from pprint import pprint as pp
 
-
 DEFAULT_TITLE_WEIGHTS = {
     'h1': 8,
     'h2': 7,
@@ -27,7 +26,6 @@ def calculate_title_weight_by_tag(title_candidates):
 
 
 class UrlTitleExtractor(object):
-
     def extract(self, html, url):
         url = urllib.unquote(url).decode('utf8')
         keywords = extract_sorted_keywords_from_url(url)
@@ -58,3 +56,17 @@ class UrlTitleExtractor(object):
             if key in title_words:
                 weight += 1
         return weight
+
+
+class TagTitleExtractor(object):
+    def extract(self, html):
+        doc = BeautifulSoup(html, 'html.parser')
+        doc_body = doc.body
+        if not doc_body:
+            return None
+
+        title_candidates = doc_body.select(",".join(DEFAULT_TITLE_WEIGHTS.keys()))
+        title_weight = calculate_title_weight_by_tag(title_candidates)
+        if title_weight:
+            return list(title_weight)[0]
+        return None
