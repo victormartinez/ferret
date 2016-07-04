@@ -2,8 +2,6 @@
 import urllib
 from bs4 import BeautifulSoup
 from ferret.util.url_parser import extract_sorted_keywords_from_url
-import requests
-from pprint import pprint as pp
 
 DEFAULT_TITLE_WEIGHTS = {
     'h1': 8,
