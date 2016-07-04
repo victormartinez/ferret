@@ -66,6 +66,7 @@ target/
 
 # virtualenv
 venv/
+venv3/
 ENV/
 
 # User-specific stuff:
