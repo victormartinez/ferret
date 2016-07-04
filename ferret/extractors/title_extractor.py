@@ -2,6 +2,9 @@
 import urllib
 from bs4 import BeautifulSoup
 from ferret.util.url_parser import extract_sorted_keywords_from_url
+import requests
+from pprint import pprint as pp
+
 
 DEFAULT_TITLE_WEIGHTS = {
     'h1': 8,
@@ -13,6 +16,14 @@ DEFAULT_TITLE_WEIGHTS = {
     'b': 0,
     'strong': 0
 }
+
+
+def calculate_title_weight_by_tag(title_candidates):
+    title_weight = {}
+    for candidate in title_candidates:
+        if candidate.get_text() and DEFAULT_TITLE_WEIGHTS[candidate.name]:
+            title_weight[candidate.get_text().strip()] = DEFAULT_TITLE_WEIGHTS.get(candidate.name)
+    return title_weight
 
 
 class UrlTitleExtractor(object):
@@ -29,7 +40,7 @@ class UrlTitleExtractor(object):
             return None
 
         title_candidates = doc_body.select(",".join(DEFAULT_TITLE_WEIGHTS.keys()))
-        title_weight = self._calculate_title_weight_by_tag(title_candidates)
+        title_weight = calculate_title_weight_by_tag(title_candidates)
 
         # stop words tend to have less characters
         keywords.sort(key=len, reverse=True)
@@ -38,13 +49,6 @@ class UrlTitleExtractor(object):
 
         ordered_candidates = list(sorted(title_weight, key=title_weight.__getitem__, reverse=True))
         return ordered_candidates[0]
-
-    def _calculate_title_weight_by_tag(self, title_candidates):
-        title_weight = {}
-        for candidate in title_candidates:
-            if candidate.get_text() and DEFAULT_TITLE_WEIGHTS[candidate.name]:
-                title_weight[candidate.get_text().strip()] = DEFAULT_TITLE_WEIGHTS.get(candidate.name)
-        return title_weight
 
     def _calculate_title_weight_by_keyword_matching(self, title, keywords):
         title_words = title.lower().split(" ")
