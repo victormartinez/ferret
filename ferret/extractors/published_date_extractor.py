@@ -89,7 +89,8 @@ class PatternPublishedDateExtractor(object):
         # 13 de março de 2013 - 19:35
         # 13 de março de 2013 - 19:35:00
         # 13 de março de 2013 - 19h35min
-        r'\d{2}\sde\s[\wç]+\sde\s\d{4}(\s?(às|-)?\s(\d{2}[:h]\d{2}(min)?(:\d{2})?))?': 'pt',
+        # 5 de julho de 2016 - 11h25
+        r'\d{1,2}\sde\s[\wç]+\sde\s\d{4}(\s?(às|-)?\s(\d{2}[:h]\d{2}(min)?(:\d{2})?))?': 'pt',
 
         # Terça, (26 Junho 2012)
         # Terça, (26 Junho 2012 16:02)
