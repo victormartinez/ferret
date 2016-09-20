@@ -1,0 +1,1598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+	<head>
+  
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8;" /> <!-- Desativa o modo de compatibilidade quanto ativado. Deve ser a primeira linha do <head>. -->
+<title>.: Tribunal de Justi&ccedil;a de MS :.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="resource-type" content="document" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="revisit-after" content="1" />
+<meta name="classification" content="Internet" />
+<meta name="description" content="Tribunal de Justiça do Estado de Mato Grosso do Sul" />
+<meta name="keywords" content="justiça, poder judiciário, tjms, mato grosso do sul" />
+<meta name="robots" content="ALL" />
+<meta name="distribution" content="Global" />
+<meta name="rating" content="General" />
+<meta name="author" content="DSA - Departamento de Sistemas Administrativos" />
+<meta name="language" content="pt-br" />
+<meta name="doc-class" content="Completed" />
+<meta name="doc-rights" content="Public" />
+<meta name="DC.title" content="tjms.jus.br" />
+
+<!-- Framework css para o layout -->
+<link type="text/css" rel="stylesheet" href="/portal2013/css/grid/reset.css" />
+<link type="text/css" rel="stylesheet" href="/portal2013/css/grid/text.css" />
+<link type="text/css" rel="stylesheet" href="/portal2013/css/grid/960_24_col.css" />
+
+<script src="/js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="/js/jquery.meio.mask.js" type="text/javascript"></script>
+
+<!-- jqueryUI -->
+<script type="text/javascript" src="/js/jqueryUI/1.10.0/jquery-ui-1.10.0.custom.min.js"></script>
+<script type="text/javascript" src="/js/jqueryUI/1.10.0/jquery.ui.datepicker-pt-BR.js"></script>
+<link type="text/css" rel="stylesheet" href="/js/jqueryUI/themes/smoothness/jquery-ui-1.10.3.custom.css"/>
+
+<!-- primeUI -->
+<script src="/js/primeui/1.0/src/production/primeui-min.js" type="text/javascript"></script>
+<link href="/js/primeui/1.0/src/production/primeui-min.css" type="text/css" rel="stylesheet" />
+<link href="/js/primeui/1.0/src/themes/smoothness/theme.css" type="text/css" rel="stylesheet" />
+
+<script src="/js/util.js" type="text/javascript"></script>
+<script src="/js/loading.js" type="text/javascript"></script>
+
+<!-- Data table -->
+<link rel="stylesheet" href="/js/jquery/plugins/dataTable/css/demo_table_jui.css" />
+<script src="/js/jquery/plugins/dataTable/js/jquery.dataTables.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/js/jquery/plugins/cookie/jquery.cookie.js"></script>
+
+<!-- Notícias destaque -->
+<script type="text/javascript" src="/js/jquery/plugins/rotate/rotate.js"></script>
+<link type="text/css" rel="stylesheet" href="/js/jquery/plugins/rotate/rotate.css" />
+
+<!-- Menu -->
+<script type="text/javascript" src="/js/jquery/plugins/megaMenu/megaMenu.js"></script>
+<link type="text/css" rel="stylesheet" href="/js/jquery/plugins/megaMenu/megaMenu.css" />
+
+<!-- Menu accordion áreas internas -->
+<script type="text/javascript" src="/js/jquery/plugins/menuAccordion/menuAccordion.js"></script>
+<link type="text/css" rel="stylesheet" href="/js/jquery/plugins/menuAccordion/menuAccordionPortal.css" />
+
+<!-- Carrossel de serviços -->
+<script type="text/javascript" src="/js/jquery/plugins/anythingslider/js/jquery.anythingslider.min.js"></script>
+<link type="text/css" rel="stylesheet" href="/js/jquery/plugins/anythingslider/css/theme-mini-light.css" />
+
+<link rel="stylesheet" type="text/css" href="/portal2013/css/conteudo.css" />
+<link rel="stylesheet" type="text/css" href="/portal2013/css/cabecalho.css" />
+<link rel="stylesheet" type="text/css" href="/portal2013/css/rodape.css" />
+<link rel="stylesheet" type="text/css" href="/messages.css" />
+
+<link rel="stylesheet" media="print" type="text/css" href="/portal2013/css/print.css" />
+
+
+<script type="text/javascript" src="/js/highslide4/highslide-full.js"></script>
+<link type="text/css" rel="stylesheet" href="/js/highslide4/highslide.css" />
+
+<script type="text/javascript">
+
+      //Início google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-43690971-1', 'tjms.jus.br');
+    ga('send', 'pageview');
+    //Fim google analytics
+  
+  hs.graphicsDir = '/js/highslide4/graphics/';
+  hs.outlineType = 'rounded-white';
+  hs.objectLoadTime = 'after';
+  hs.preserveContent = false;
+  window.onload = function() {
+    hs.preloadImages();
+  };
+
+  $(document).ready(function () {
+
+    //Menu
+    $("#megaMenu").megaMenu();
+
+    $('.inputData').datepicker({
+      showOn: "button",
+      buttonImage: "/_images/icons/schedule-16.gif",
+      buttonImageOnly: true
+    });
+    $('.inputData').setMask('date');
+
+    //Menus das áreas internas
+    if ($(".menuAreaInterna").length !== 0) {
+      $(".menuAreaInterna").menuAccordion();
+    }
+
+    var linkEsaj = '';
+
+    // INÍCIO - Quando for para desabilitar mensagens comentar o código logo abaixo
+    $(".linkEsaj").click(
+      function () {
+        if ($.cookie('avisoEsaj') != 1) {
+          $("#divAlertaEsaj").dialog("open");
+          linkEsaj = $(this).attr('href');
+          return false;
+        }
+      }
+    );
+    // FIM
+
+    $("#divAlertaEsaj").dialog(
+      {
+        width : 500,
+        autoOpen: false,
+        modal: true,
+        buttons: {
+          Continuar: function() {
+            if ($('#naoExibirNovamente').is(':checked')) {
+              $.cookie("avisoEsaj", 1);
+            }
+            $("#divAlertaEsaj").dialog("close");
+            window.location = linkEsaj;
+          }
+        }
+      }
+    );
+
+    $("input[name='consultaProcessualTexto']")
+      .focusin(
+      function () {
+        if ($(this).val() == 'Termo consulta...') {
+          $(this).val('');
+        }
+      }
+    ).focusout(
+      function() {
+        if ($(this).val() == '') {
+          $(this).val('Termo consulta...');
+        }
+      }
+    );
+
+    //Notícias destaque
+    $("#noticias").rotate();
+
+    //Carrossel de serviços
+    $('#carousel').anythingSlider(
+      {
+        theme			: 'mini-light',
+        showMultiple    : 6,
+        changeBy        : 5,
+        infiniteSlides  : false,
+        buildNavigation : false,
+        buildStartStop  : false,
+        hashTags		: false
+      });
+
+    var primeiroGrauArray = {"cpopg5\/search.do?cdForo=1&dadosConsulta.localPesquisa.cdLocal=1":"01 - Campo Grande","cpopg5\/search.do?cdForo=49&dadosConsulta.localPesquisa.cdLocal=49":"49 - &Aacute;gua Clara","cpopg5\/search.do?cdForo=4&dadosConsulta.localPesquisa.cdLocal=4":"04 - Amambai","cpopg5\/search.do?cdForo=52&dadosConsulta.localPesquisa.cdLocal=52":"52 - Anast&aacute;cio","cpopg5\/search.do?cdForo=22&dadosConsulta.localPesquisa.cdLocal=22":"22 - Anauril&acirc;ndia","cpopg5\/search.do?cdForo=23&dadosConsulta.localPesquisa.cdLocal=23":"23 - Ang&eacute;lica","cpopg5\/search.do?cdForo=24&dadosConsulta.localPesquisa.cdLocal=24":"24 - Aparecida do Taboado","cpopg5\/search.do?cdForo=5&dadosConsulta.localPesquisa.cdLocal=5":"05 - Aquidauana","cpopg5\/search.do?cdForo=25&dadosConsulta.localPesquisa.cdLocal=25":"25 - Bandeirantes","cpopg5\/search.do?cdForo=26&dadosConsulta.localPesquisa.cdLocal=26":"26 - Bataguassu","cpopg5\/search.do?cdForo=27&dadosConsulta.localPesquisa.cdLocal=27":"27 - Bataipor&atilde;","cpopg5\/search.do?cdForo=3&dadosConsulta.localPesquisa.cdLocal=3":"03 - Bela Vista","cpopg5\/search.do?cdForo=28&dadosConsulta.localPesquisa.cdLocal=28":"28 - Bonito","cpopg5\/search.do?cdForo=30&dadosConsulta.localPesquisa.cdLocal=30":"30 - Brasil&acirc;ndia","cpopg5\/search.do?cdForo=31&dadosConsulta.localPesquisa.cdLocal=31":"31 - Caarap&oacute;","cpopg5\/search.do?cdForo=6&dadosConsulta.localPesquisa.cdLocal=6":"06 - Camapu&atilde;","cpopg5\/search.do?cdForo=7&dadosConsulta.localPesquisa.cdLocal=7":"07 - Cassil&acirc;ndia","cpopg5\/search.do?cdForo=46&dadosConsulta.localPesquisa.cdLocal=46":"46 - Chapad&atilde;o do Sul","cpopg5\/search.do?cdForo=8&dadosConsulta.localPesquisa.cdLocal=8":"08 - Corumb&aacute;","cpopg5\/search.do?cdForo=9&dadosConsulta.localPesquisa.cdLocal=9":"09 - Costa Rica","cpopg5\/search.do?cdForo=11&dadosConsulta.localPesquisa.cdLocal=11":"11 - Coxim","cpopg5\/search.do?cdForo=32&dadosConsulta.localPesquisa.cdLocal=32":"32 - Deod&aacute;polis","cpopg5\/search.do?cdForo=53&dadosConsulta.localPesquisa.cdLocal=53":"53 - Dois Irm&atilde;os do Buriti","cpopg5\/search.do?cdForo=2&dadosConsulta.localPesquisa.cdLocal=2":"02 - Dourados","cpopg5\/search.do?cdForo=33&dadosConsulta.localPesquisa.cdLocal=33":"33 - Eldorado","cpopg5\/search.do?cdForo=10&dadosConsulta.localPesquisa.cdLocal=10":"10 - F&aacute;tima do Sul","cpopg5\/search.do?cdForo=34&dadosConsulta.localPesquisa.cdLocal=34":"34 - Gl&oacute;ria de Dourados","cpopg5\/search.do?cdForo=35&dadosConsulta.localPesquisa.cdLocal=35":"35 - Iguatemi","cpopg5\/search.do?cdForo=36&dadosConsulta.localPesquisa.cdLocal=36":"36 - Inoc&ecirc;ncia","cpopg5\/search.do?cdForo=37&dadosConsulta.localPesquisa.cdLocal=37":"37 - Itapor&atilde;","cpopg5\/search.do?cdForo=51&dadosConsulta.localPesquisa.cdLocal=51":"51 - Itaquira&iacute;","cpopg5\/search.do?cdForo=12&dadosConsulta.localPesquisa.cdLocal=12":"12 - Ivinhema","cpopg5\/search.do?cdForo=13&dadosConsulta.localPesquisa.cdLocal=13":"13 - Jardim","cpopg5\/search.do?cdForo=14&dadosConsulta.localPesquisa.cdLocal=14":"14 - Maracaju","cpopg5\/search.do?cdForo=15&dadosConsulta.localPesquisa.cdLocal=15":"15 - Miranda","cpopg5\/search.do?cdForo=16&dadosConsulta.localPesquisa.cdLocal=16":"16 - Mundo Novo","cpopg5\/search.do?cdForo=29&dadosConsulta.localPesquisa.cdLocal=29":"29 - Navira&iacute;","cpopg5\/search.do?cdForo=38&dadosConsulta.localPesquisa.cdLocal=38":"38 - Nioaque","cpopg5\/search.do?cdForo=54&dadosConsulta.localPesquisa.cdLocal=54":"54 - Nova Alvorada do Sul","cpopg5\/search.do?cdForo=17&dadosConsulta.localPesquisa.cdLocal=17":"17 - Nova Andradina","cpopg5\/search.do?cdForo=18&dadosConsulta.localPesquisa.cdLocal=18":"18 - Parana&iacute;ba","cpopg5\/search.do?cdForo=39&dadosConsulta.localPesquisa.cdLocal=39":"39 - Pedro Gomes","cpopg5\/search.do?cdForo=19&dadosConsulta.localPesquisa.cdLocal=19":"19 - Ponta Por&atilde;","cpopg5\/search.do?cdForo=40&dadosConsulta.localPesquisa.cdLocal=40":"40 - Porto Murtinho","cpopg5\/search.do?cdForo=41&dadosConsulta.localPesquisa.cdLocal=41":"41 - Ribas do Rio Pardo","cpopg5\/search.do?cdForo=20&dadosConsulta.localPesquisa.cdLocal=20":"20 - Rio Brilhante","cpopg5\/search.do?cdForo=48&dadosConsulta.localPesquisa.cdLocal=48":"48 - Rio Negro","cpopg5\/search.do?cdForo=42&dadosConsulta.localPesquisa.cdLocal=42":"42 - Rio Verde de Mato Grosso","cpopg5\/search.do?cdForo=43&dadosConsulta.localPesquisa.cdLocal=43":"43 - S&atilde;o Gabriel do Oeste","cpopg5\/search.do?cdForo=44&dadosConsulta.localPesquisa.cdLocal=44":"44 - Sete Quedas","cpopg5\/search.do?cdForo=45&dadosConsulta.localPesquisa.cdLocal=45":"45 - Sidrol&acirc;ndia","cpopg5\/search.do?cdForo=55&dadosConsulta.localPesquisa.cdLocal=55":"55 - Sonora","cpopg5\/search.do?cdForo=47&dadosConsulta.localPesquisa.cdLocal=47":"47 - Terenos","cpopg5\/search.do?cdForo=21&dadosConsulta.localPesquisa.cdLocal=21":"21 - Tr&ecirc;s Lagoas"};
+    var segundoGrauArray = {"cposg5\/search.do?tpClasse=J":"Tribunal de Justi&ccedil;a"};
+    var juizadoArray = {"cpopg5\/search.do?cdForo=104&dadosConsulta.localPesquisa.cdLocal=104":"4&ordf; Vara do J.E. - Moreninhas","cpopg5\/search.do?cdForo=105&dadosConsulta.localPesquisa.cdLocal=105":"5&ordf; Vara do J.E. - UCDB - Virtual","cpopg5\/search.do?cdForo=115&dadosConsulta.localPesquisa.cdLocal=115":"7&ordf; Vara do Juizado Especial","cpopg5\/search.do?cdForo=108&dadosConsulta.localPesquisa.cdLocal=108":"8&ordf; Vara do J.E. - Justi&ccedil;a Itinerante","cpopg5\/search.do?cdForo=109&dadosConsulta.localPesquisa.cdLocal=109":"9&ordf; Vara do J.E. - Tr&acirc;nsito","cpopg5\/search.do?cdForo=101&dadosConsulta.localPesquisa.cdLocal=101":"Dourados - 1&ordf; Vara do JE","cpopg5\/search.do?cdForo=102&dadosConsulta.localPesquisa.cdLocal=102":"Dourados - 2&ordf; Vara do JE","cpopg5\/search.do?cdForo=110&dadosConsulta.localPesquisa.cdLocal=110":"Juizado Especial Central","cpopg5\/search.do?cdForo=114&dadosConsulta.localPesquisa.cdLocal=114":"Tr&ecirc;s Lagoas - 1&ordf; Vara do JE","cposg\/pcpoSelecaoProcesso2Grau.jsp?_&tpClasse=T":"Turma Recursal - Processos F&iacute;sicos","cposg5\/search.do?paginaConsulta=1":"Turma Recursal - Processos Digitais"};
+    $('#formConsultaProcessual').find('select[name="consultaProcessualInstancia"]').change(
+      function() {
+
+        var instancia = $(this).val();
+        var selectComarca = $('select[name="consultaProcessualComarca"]');
+        var arraySelecionado = null;
+
+        if (instancia == 'pg') {
+          arraySelecionado = primeiroGrauArray;
+        } else if (instancia == 'sg') {
+          arraySelecionado = segundoGrauArray;
+        } else if (instancia == 'jz') {
+          arraySelecionado = juizadoArray;
+        }
+
+        selectComarca.empty();
+        $.each(arraySelecionado,
+          function (value, label) {
+            selectComarca.append('<option value="' + value + '">' + label + '</option>');
+          }
+        );
+      }
+
+    );
+
+    $('#formConsultaProcessual').submit(function() {
+
+      var url = $(this).find('select[name="consultaProcessualComarca"]').val();
+      var parametro = $(this).find('select[name="consultaProcessualParametro"]').val();
+      var texto = $(this).find('input[name="consultaProcessualTexto"]').val();
+      texto = unescape(encodeURIComponent(texto));
+
+      if (parametro == 'NUMPROC' && texto.length >= 20) {
+        var numeroProcesso = texto.replace(/\D+/g , "");
+        var numero = numeroProcesso.substr(0, 13);
+        var foro = numeroProcesso.substr(16, 4);
+        address = '/' + url;
+        address += '&conversationId=';
+        address += '&cbPesquisa=' + parametro;
+        address += '&dadosConsulta.tipoNuProcesso=UNIFICADO';
+        address += '&tipoNuProcesso=UNIFICADO';
+        address += '&numeroDigitoAnoUnificado=' + numero;
+        address += '&foroNumeroUnificado=' + foro;
+        address += '&dadosConsulta.valorConsultaNuUnificado=' + numeroProcesso;
+        address += '&valorConsultaNuUnificado=' + numeroProcesso;
+        address += '&dePesquisaNuUnificado=' + numeroProcesso;
+      } else {
+        address = '/' + url;
+        address += '&cbPesquisa=' + parametro;
+        address += '&dePesquisa=' + texto;
+        address += '&tipoNuProcesso=SAJ';
+      }
+
+      var win = window.open(address, '', 'width=790,height=390,scrollbars=YES,menubar=YES,resizable=YES,toolbar=YES,location=YES');
+      win.focus();
+
+      return false;
+
+    });
+
+    $('#cmbAcessoRapido').change(function() {
+      if ($(this).val() != '') {
+        window.location.href = $(this).val();
+      }
+    });
+
+    $('.tooltip').tooltip(
+      {
+        track: true,
+        items: ".tooltip",
+        content: function() {
+          var element = $(this);
+          var titulo = element.attr('tooltipTitulo');
+          var descricao = element.attr('tooltipDescricao');
+
+          var html = '<div class="tooltipStyle">';
+
+          if (titulo != null) {
+            html += '<div class="tooltipStyleTitulo">' + titulo + '</div>';
+          }
+          if (descricao != null) {
+            html += '<div class="tooltipStyleDescricao">' +	descricao +	'</div>';
+          }
+
+          html += '</div>';
+
+          return html;
+        }
+      }
+    );
+
+    $("#loading").dialog({
+      autoOpen: false,
+      height: 100,
+      width: 200,
+      closeOnEscape: false,
+      resizable: false,
+      draggable: false,
+      modal: true,
+      title: "Aguarde!",
+      open: function(event, ui) {
+        $(".ui-dialog-titlebar-close").remove();
+      }
+    });
+
+  });
+
+  function carregarOrganograma() {
+    $("#organogramaDialog").load(
+      '/organograma/index.php',
+      function() {
+        $("#organogramaDialog").dialog(
+          {
+            modal: true,
+            height: 810,
+            width: 1000,
+            autoOpen: false,
+            show: { effect: "fade", duration: 800 },
+            hide: { effect: "fade", duration: 800 }
+          }
+        );
+        $("#organogramaDialog").dialog('open');
+      }
+    );
+  }
+
+  function carregarSubEstrutura(src, width, height) {
+
+    $("#subOrganogramaDialog").dialog(
+      {
+        modal: true,
+        height: height,
+        width: width,
+        autoOpen: false,
+        show: { effect: "fade", duration: 800 },
+        hide: { effect: "fade", duration: 500 }
+      }
+    );
+
+    $("#subOrganogramaDialog").html('<img src="' + src + '" />');
+    $("#subOrganogramaDialog").dialog('open');
+  }
+
+</script>
+
+<style type="text/css">
+
+  /* Adicionando propriedade height na classe do 960.gs, verificar forma melhor... */
+  .clear {
+    height: 8px;
+  }
+
+  .ui-widget-header {
+    background: url("/portal2013/images/backRodape.png") repeat-x scroll 50% 50% #CCCCCC;
+    border: 1px solid #5E8663;
+    color: #FFF;
+    font-weight: bold;
+  }
+
+</style>
+
+
+		<meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="http://www.tjms.jus.br//noticias/visualizarNoticia.php?id=32011" />
+    <meta property="og:type" content="website" />
+    <meta name="author" content="Tribunal de Justiça de Mato Grosso do Sul" />
+    <meta property="og:title" content="Negado recurso de detenta que cometeu homicídio qualificado na prisão" />
+    <meta property="og:description" content="Os desembargadores da 2ª Câmara Criminal, por maioria, negaram provimento ao recurso interposto por J.A.E. objetivando a reforma da sentença que a condenou a 15 anos de reclusão, em regime fechado, por homicídio qualificado (art. 121, § 2º, I, III e IV, do Código Penal).
+Consta nos autos que em 21 de novembro de 2012, na carceragem da Delegacia de Dourados, junto a M.S.M. e L.S., e utilizando uma corda improvisada com porções de tecido, J.A.E. agrediu fisicamente e asfixiou J.R.B., causando-lhe a morte. O motivo do crime foi torpe, por vingança, uma vez que mataram a vítima por ser ela acusada de conivência no crime de estupro contra a própria filha.
+O meio utilizado para matar a vítima foi cruel, tendo em vista que para o homicídio as acusadas improvisaram uma corda para o enforcamento e, após várias tentativas de asfixiá-la, somente conseguiram quando a penduraram na grade da cela com os pés e mãos amarrados. O recurso utilizado dificultou a defesa da vítima, considerando a superioridade numérica das agentes e o fato do crime ter ocorrido dentro da cela prisional, o que impossibilitou eventual fuga.
+J.A.E. pediu a anulação do julgamento, vez que o reconhecimento das qualificadoras da torpeza e do recurso que dificultou a defesa da vítima, bem como a negativa de incidência do privilégio, são circunstâncias que contrariam as provas dos autos. Afirma ainda que a aplicação da reincidência contrariou o disposto no art. 492, I, “b”, do Código de Processo Penal, e art. 61, do Código Penal, uma vez que as agravantes só poderão ser consideradas quando debatidas em plenário.
+A Procuradoria-Geral de Justiça opina pelo parcial provimento, para o fim de afastar a reincidência.
+O relator do processo, Des. Carlos Eduardo Contar, explica que a anulação de uma decisão proferida pelo Tribunal do Júri somente é possível quando estiver irremediavelmente dissociada do acervo probatório, o que não verificou na hipótese versada.
+Ressalta que, para que a acusada seja remetida a novo julgamento, faz-se necessário que as qualificadoras da torpeza, meio cruel e recurso que dificultou a defesa da vítima não estejam demonstradas nos autos, o que não acontece neste caso.
+Consta do processo o depoimento de um policial civil relatando que as apurações apontaram que J.A.E. e outras duas acusadas teriam levado a vítima até a grade e a amarraram com uma corda, mas que na primeira tentativa não conseguiram matá-la. Na sequência, suspenderam o corpo da vítima, com a corda amarrada em seu pescoço, e soltaram o corpo para que fosse asfixiada com o próprio peso.
+Diante do relato, o desembargador entendeu que a decisão do Conselho de Sentença não foi contrária à prova dos autos, confortando versão mais coerente e segura, condizente com a realidade.
+Quanto às alegações de violação da Lei nº 11.689/2008, o relator explica que a exigência de alegação em debates é relacionada com a necessidade de convencimento dos jurados, por exemplo, acerca do abuso de poder (art. 61, II, “g”, do Código Penal) ou sobre a confissão espontânea do agente (art. 65, III, “d”, do Código Penal), o que não ocorre nas questões objetivas de aplicação obrigatória.
+“Este dispositivo não se aplica à reincidência por se tratar de elemento modificador de caráter objetivo, que demanda unicamente análise documental da vida pregressa do acusado a ser feita pelo juiz togado, verificando a correção dos dados, a extinção da punibilidade da condenação anterior, os reais efeitos da condenação pretérita, de forma que é absolutamente desnecessário condicionar a aplicação da reincidência à alegação nos debates. (…) Ante o exposto, nego provimento ao recurso interposto por J.A.E., mantendo a sentença de primeiro grau”.
+Processo nº 0012120-45.2012.8.12.0002" />
+		
+    	    <meta property="og:image" content="http://www.tjms.jus.br/webfiles/producao/GP/noticiasFotos/20160919152443.JPG" />
+        <meta property="og:site_name" content="Tribunal de Justiça de Mato Grosso do Sul" />
+    
+		<script type='text/javascript' src='/js/lightbox-0.5/jquery.lightbox-0.5.pack.js'></script>
+		<link type="text/css" rel="stylesheet" href="/js/lightbox-0.5/jquery.lightbox-0.5.css" media="screen" />
+		<script type="text/javascript" src="/js/jquery/plugins/ad-gallery/jquery.ad-gallery.pack.js"></script>
+		<link rel="stylesheet" type="text/css" href="/js/jquery/plugins/ad-gallery/jquery.ad-gallery.css" />
+		
+		<style type="text/css">
+	  
+			div.divMensagem {
+			  display: none;
+			  border: 1px solid #CCC;
+			  padding: 5px;
+			  margin-bottom: 5px; 
+			}
+
+			div.divMensagem ul {
+			  margin: 0;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+		
+			$(document).ready(
+				function() {
+			
+					$("#aumentarFonte").click(
+						function() {
+							$("#textoNoticia, #tituloNoticia, #dataNoticia").css("font-size", "+=1");
+						}
+					);
+						
+					$("#diminuirFonte").click(
+						function() {
+							$("#textoNoticia, #tituloNoticia, #dataNoticia").css("font-size", "-=1");
+						}
+					);
+						
+					$("#dialogEnvioNoticia").dialog({
+						autoOpen : false,
+						width : 500,
+						modal : true,
+						hide: "fade",
+						show: "fade",
+						buttons : {
+						  Enviar : function () {
+							$("#divMensagem").hide();
+							$.post(
+							  'envioNoticia/enviar.php',
+							  $('#formEnvioNoticia').serialize(),
+							  function (retorno) {
+								$("#divMensagem").html(retorno.mensagem);
+								if (!retorno.deuErro) {
+								  $("#divMensagem").css('color', 'green');
+								  $("#divMensagem").css('font-weight', 'bold');
+								  $("#divMensagem").css('text-align', 'center');
+								  window.setTimeout(
+									  function() {
+										$("#dialogEnvioNoticia").dialog("close");
+									  },
+									  3000
+								  );
+								}
+								$("#divMensagem").show();
+							  },
+							  'json'
+							);
+						  },
+						  Cancelar : function () {
+							$("#dialogEnvioNoticia").dialog("close");
+						  }
+						}
+					});
+
+					$("#enviarNoticia").click(
+						function() {
+						  $("#dialogEnvioNoticia").dialog("open");
+						}
+					);
+
+					$("a[glossario_titulo]").tooltip(
+						{
+							track: true,
+							items: "a[glossario_titulo]",
+							content: function() {
+								var element = $(this);
+								var titulo = element.attr('glossario_titulo');
+								var descricao = element.attr('glossario_descricao');
+
+								var html = '<div class="glossario">' +
+										'<div class="tituloGlossario">' +
+										titulo +
+										'</div>' +
+										'<div class="corpoGlossario">' +
+										descricao +
+										'</div>' +
+										'</div>';
+
+								return html;
+							}
+						}
+					);
+
+					$('.ad-gallery').adGallery({
+						effect: 'fade', // or 'slide-vert', 'resize', 'fade', 'none' or false
+						display_next_and_prev: false,
+						display_back_and_forward: true,
+						slideshow: {
+							enable: false,
+							autostart: true,
+							speed: 3000
+						}
+					});
+					
+					$('#imagemNoticia').lightBox({
+						imageBtnClose: '/js/lightbox-0.5/images/closelabel.gif'
+					});
+					
+					
+          window.___gcfg = {lang: 'pt-BR'};
+        
+					var po = document.createElement('script'); 
+					po.type = 'text/javascript'; 
+					po.async = true;
+					po.src = 'https://apis.google.com/js/platform.js';
+					var s = document.getElementsByTagName('script')[0]; 
+					s.parentNode.insertBefore(po, s);
+					
+					
+					var fbfjs = document.getElementsByTagName('script')[0];
+          if (!document.getElementById('facebook-jssdk')) {
+						var fbjs = document.createElement('script');
+						fbjs.id = 'facebook-jssdk';
+						fbjs.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.4";
+						fbfjs.parentNode.insertBefore(fbjs, fbfjs);
+					}
+
+					var twfjs = document.getElementsByTagName('script')[0];
+					var p = /^http:/.test(document.location) ? 'http' : 'https';
+					if (!document.getElementById('twitter-wjs')) {
+						var twjs = document.createElement('script');
+						twjs.id = 'twitter-wjs';
+						twjs.src = p + '://platform.twitter.com/widgets.js';
+						twfjs.parentNode.insertBefore(twjs, twfjs);
+					}				
+
+				}
+			);
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<!-- Primeira linha do layout, possui uma div externa para que o cabeçalho ocupe 100% do topo -->
+<div id="cabecalho">
+  <div class="container_24">
+	<div class="grid_15">
+	  <a href="/"><img src="/portal2013/images/topoLogo2015.jpg" /></a><img src="/portal2013/images/sustentavel.jpg" style="margin-top: -6px;" />
+	</div>
+
+	<div class="prefix_2 grid_7">
+	  <form action="/pesquisa.php" onsubmit="return executeQuery();" id="cse-search-box-form-id">
+		<div id="divPesquisaGoogle">
+		  <input type="hidden" name="form" value="cse-search-box-form-id" />
+		  <input type="hidden" name="lang" value="pt" />
+		  <input type="text" id="cse-search-input-box-id" name="q" autocomplete="off" />
+		  <input type="image" src="/portal2013/images/lupa.jpg" />
+	    </div>
+	  </form>
+	</div>
+
+	<div class="clear" style="height:0"></div>
+
+	<div class="grid_24">
+	  <a href="/"><img src="/portal2013/images/logoBottom2015.jpg" alt="" /></a>
+	  <a href="/"><img src="/portal2013/images/poderJudiciario.jpg" style="margin-top: 32px;" alt="Poder Judiciário - Página inicial." /></a>
+	  <div id="divTopoLinks">
+			<div id="divTopoLinksRedes">
+				<table align="right">
+					<tr>
+						<td style="padding:5px">
+							<a href="http://www.facebook.com/TJMSoficial" target="_blank" title="Facebook"><img src="/_images/icons/facebook-24.png" alt="Facebook" /></a>
+						</td>
+						<td style="padding:5px">
+							<a href="http://twitter.com/TJMS_Oficial" target="_blank" title="Twitter"><img src="/_images/icons/twitter-24.png" alt="Twitter" /></a>
+						</td>
+						<td style="padding:5px">
+							<a href="http://www.instagram.com/TJMSoficial" target="_blank" title="Instagram"><img src="/_images/icons/instagram-24.png" alt="Instagram" /></a>
+						</td>
+						<td style="padding:5px">
+							<a href="http://www.flickr.com/photos/galeriatjms/sets/" target="_blank" title="Flickr"><img src="/_images/icons/flickr-24.png" alt="Flicker" /></a>
+						</td>
+						<td style="padding:5px">
+							<a href="/rss/portaltjms.php" target="_blank" title="RSS"><img src="/_images/icons/rss-24.png" alt="RSS" /></a>
+						</td>
+						<td style="padding:5px">
+							<a href="http://www.youtube.com/user/TJMSJornalismo" target="_blank" title="Youtube"><img src="/_images/icons/youtube-24.png" alt="YouTube" /> </a>
+						</td>
+					</tr>
+				</table>
+				<br />
+                
+			</div>
+			<div id="divTopoAcessoRapido" class="atalhos" style="text-align:right;">
+				&nbsp;
+				<table align="right">
+					<tr>
+            <td>
+							<a href="/institucional/ouvidoria.php">Ouvidoria&nbsp;</a>
+						</td> 
+           
+						<td>
+							| <a href="/contatos/faleconosco.php">Fale Conosco&nbsp;</a>
+						</td>
+						<td>
+							| <a href="/intranet">Intranet&nbsp;</a> 
+						</td>
+						<td>
+							| <a href="/webmail">Webmail&nbsp;</a>
+						</td>
+						<td>
+							<select id="cmbAcessoRapido" style="width: 220px; margin-left: 10px; height: 20px;">
+								<option value="">Acesso Rápido</option>
+								<option value="/contaunica">Conta Única</option>
+								<option value="/dj">Diário da Justiça</option>
+								<option value="/magistratura/plantao_servidores.php?pln=1">Plantão 1º Grau</option>
+								<option value="/magistratura/plantao_servidores.php?pln=2">Plantão 2º Grau</option>
+								<option value="/esaj">Portal e-SAJ</option>
+								<option value="/servicos/pabx">Telefones úteis</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+	  </div>
+	</div>
+
+	<div class="clear"></div>
+
+  </div>
+</div>
+		<div id="container" class="container_24">
+
+			<div id="menu" class="grid_5">
+				<div id="megaMenu" class="megaMenu">
+  <ul>
+    <li>
+      <a href="#">Institucional</a>
+      <div class="subMegaMenu">
+        <div class="subMegaMenuBorder">
+          <ul class="coluna"> <!-- Coluna 1 -->
+            <li><span><a href="/institucional/presidencia.php">Presid&ecirc;ncia</a></span></li>
+            <li><span><a href="/institucional/vicePresidencia.php">Vice-Presid&ecirc;ncia</a></span></li>
+            <li><span><a href="/institucional/corregedoria.php">Corregedoria-Geral de Justi&ccedil;a</a></span></li>
+            <li>
+              <span>Conselho Superior da Magistratura</span>
+              <ul class="itensMenu">
+                <li><a href="/magistratura/csm/composicao.php">Composi&ccedil;&atilde;o</a></li>
+                <li><a href="/legislacao/atos/conselho_superior.php">Atos do CSM</a></li>
+              </ul>
+            </li>
+            <li><span><a href="/institucional/diretoriaGeral.php">Dire&ccedil;&atilde;o Geral da Secretaria</a></span></li>
+            <li><span><a href="javascript:carregarOrganograma();">Estrutura Organizacional</a></span></li>
+            <li><span><a href="/institucional/camaras.php">C&acirc;maras</a></span></li>
+            <li><span><a href="/institucional/orgaoEspecialComposicao.php">&Oacute;rg&atilde;o Especial</a></span></li>
+            <li><span><a href="/institucional/secoes.php">Se&ccedil;&otilde;es</a></span></li>
+          </ul>
+          <ul class="coluna"> <!-- Coluna 2 -->
+            <li><span><a href="/institucional/tribunalPleno.php">Tribunal Pleno</a></span></li>
+            <!--<li><span><a href="/institucional/comissoes_pjms.php">Comiss&otilde;es</a></span></li>-->
+            <li><span><a href="/intranet">Intranet</a></span></li>
+            <li>
+              <span>Magistratura</span>
+              <ul class="itensMenu">
+                <li><a href="/secretarias/csm/afastamento.php">Afastamentos/Licenças</a></li>
+                <li><a href="/secretarias/csm/antiguidade.php">Antiguidade</a></li>
+                <li><a href="/secretarias/csm/quadro_de_pessoal_mag.php">Cargos na Magistratura</a></li>
+                <li><a href="/concursos/csm/ativos.php">Concursos</a></li>
+                <li><a href="/sistemas/biblioteca/legislacao_direta.php?cod=22961">Escala de Substitui&ccedil;&atilde;o</a></li>
+                <li><a href="/secretarias/csm/ferias.php">F&eacute;rias</a></li>
+                <li><a href="/secretarias/csm/jurisdicoes_vagas_antiguidade.php">Jurisdi&ccedil;&otilde;es de Vagas por Antiguidade</a></li>
+                <li><a href="/secretarias/csm/juizes_diretores_de_foro.php">Ju&iacute;zes Diretores de Foro</a></li>
+                <li><a href="/secretarias/csm/lotacao_dos_magistrados.php">Lota&ccedil;&atilde;o</a></li>
+                <li><a href="/secretarias/csm/organizacao_judiciaria.php">Organiza&ccedil;&atilde;o</a></li>
+                <li><a href="/secretarias/csm/plantao.php">Plant&atilde;o</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="coluna"> <!-- Coluna 3 -->
+            <li>
+              <span>Memorial</span>
+              <ul class="itensMenu">
+                <li><a href="/Siabi-Memo/" target="_blank">Acervo</a></li>
+                <li><a href="/institucional/memorial/atas.php">Atas</a></li>
+                <li><a href="/institucional/memorial/discursos.php">Discursos</a></li>
+                <li><a href="/institucional/memorial/galeria_ex_desembargadores.php">Galeria de Desembargadores Aposentados ou Falecidos</a></li>
+                <li><a href="/institucional/galeria_ex_presidentes.php">Galeria de Ex-Presidentes</a></li>
+                <li><a href="/institucional/memorial/historico.php">Hist&oacute;rico</a></li>
+                <li><a href="/premios/premios.php">Pr&ecirc;mios</a></li>
+                <li><a href="/projeto_30anos/" target="_blank">30 Anos de Hist&oacute;ria</a></li>
+                <li><a href="/tjms35anos/">35 Anos de Hist&oacute;ria</a></li>
+              </ul>
+            </li>
+            <li><span><a href="/institucional/missao.php">Direcionadores Estrat&eacute;gicos</a></span></li>
+            <li><span><a href="/institucional/ouvidoria.php">Ouvidoria judici&aacute;ria</a></span></li>
+            <li><span><!--<a href="</_estaticos_/planejamento/Planejamento_Estrategico_10_05_2013.pdf" title="Planejamento Estrat&eacute;gico (PDF)" target="_blank"></a>-->Planejamento Estrat&eacute;gico</span></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <li><a href="/corregedoria">Corregedoria</a></li>
+    <li><a href="/ejud" target="_blank">Escola Judicial - EJUD</a></li>
+    <li>
+      <a href="#">Transpar&ecirc;ncia</a>
+      <div class="subMegaMenu">
+        <div class="subMegaMenuBorder">
+          <ul class="coluna">
+            <li><span><a href="/transparencia/">Apresenta&ccedil;&atilde;o</a></span></li>
+            <li><span><a href="/transparencia/competencia.php">Compet&ecirc;ncia</a></span></li>
+            <li><span><a href="/transparencia/contratos.php">Contratos</a></span></li>
+            <li><span><a href="/transparencia/pagamento_fornecedores.php">Pagamento a Fornecedores</a></span></li>
+            <li><span><a href="/transparencia/relatorio_gestao_fiscal.php">Relat&oacute;rio de Gest&atilde;o Fiscal</a></span></li>
+            <li><span><a href="/transparencia/veiculosOficiais.php">Ve&iacute;culos Oficiais</a></span></li>
+          </ul>
+          <ul class="coluna">
+            <li>
+              <span>Resolu&ccedil;&otilde;es CNJ</span>
+              <ul class="itensMenu">
+                <li><a href="/transparencia/resolucao102">Resolu&ccedil;&atilde;o 102</a></li>
+                <li><a href="/transparencia/resolucao_151.php">Resolu&ccedil;&atilde;o 151</a></li>
+                <li><a href="/transparencia/resolucaoCNJ195.php">Resolu&ccedil;&atilde;o 195</a></li>
+                <li><a href="/transparencia/resolucaoCNJ215/">Resolu&ccedil;&atilde;o 215</a></li>
+                <li><a href="/transparencia/resolucaoCNJ219">Resolu&ccedil;&atilde;o 219</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <a href="/planejamento/index.php">Portal da Estrat&eacute;gia</a>
+    </li>
+
+    <li>
+      <a href="#">Consultas</a>
+      <div class="subMegaMenu">
+        <div class="subMegaMenuBorder">
+          <ul class="coluna">
+            <li ><span>Arquivo</span>
+              <ul class="itensMenu">
+                <li><a href="/consultas/arquivos/temporalidade2010.pdf" target="_blank" >Tabela de Temporalidade</a></li>
+              </ul>
+            </li>
+            <li>
+              <span>Biblioteca</span>
+              <ul class="itensMenu">
+                <li><a href="/Siabi-web/" target="_blank">Acervo</a></li>
+                <li><a href="/sistemas/biblioteca/contato.html">Contato</a></li>
+                <li><a href="/legislacao/">Legisla&ccedil;&atilde;o</a></li>
+                <li><a href="/publicacoes_eletronicas.php">Publica&ccedil;&otilde;es Eletr&ocirc;nicas</a></li>
+              </ul>
+            </li>
+            <li><span><a href="/consultas/sge/consulta.php">Central de Escrituras</a></span></li>
+            <li>
+              <span>Concursos</span>
+              <ul class="itensMenu">
+                <li><a href="/concursos/csm/ativos.php">Magistratura</a></li>
+                <li><a href="/concursos/servidores.php">Servidores</a></li>
+                <li><a href="/concursos/juiz-leigo.php">Juiz Leigo</a></li>
+                <li><a href="/corregedoria/publicacoes/leis/concursos_ativos.php">Extrajudicial</a></li>
+                <li><a href="/concursos/estagiarios.php">Estagi&aacute;rios</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="coluna">
+            <li><span><a href="/contaunica" >Conta &Uacute;nica</a></span></li>
+            <li><span><a href="/dj">Di&aacute;rio da Justi&ccedil;a</a></span></li>
+            <li><span><a href="/monitoramentoEsaj/">Disponibilidade do Portal e-SAJ</a></span></li>
+            <li><span><a href="/institucional/feriados">Feriados</a></span></li>
+            <li><span><a href="/presidencia/cerimonial/guiaAutoridades/">Guia de Autoridades</a></span></li>
+            <li>
+              <span>Jurisprud&ecirc;ncia</span>
+              <ul class="itensMenu">
+                <li><a href="/esaj/portal.do?servico=789900" target="_blank" class="linkEsaj">Consulta</a></li>
+                <li><a href="/jurisprudencia/enunciados.php">Enunciados</a></li>
+                <li><a href="/secretarias/spge/revista.php">Revista</a></li>
+                <li><a href="/sumulas/index.php">Súmulas</a></li>
+              </ul>
+            </li>
+            <li><span><a href="/consultas/metasEnasp.php">Meta ENASP 2015</a></span></li>
+            <li><span><a href="/cposg/pcpoOrgaosJulgadores.jsp" target="_blank" class="linkEsaj">Pauta de Julgamento</a></span></li>
+          </ul>
+
+          <ul class="coluna">
+            <li><span><a href="/esaj" target="_blank" class="linkEsaj">Portal de Servi&ccedil;os (ESAJ)</a></span></li>
+            <li>
+              <span>Processos</span>
+              <ul class="itensMenu">
+                <li><a href="/cpopg5/open.do" target="_blank" class="linkEsaj">1&deg; Grau</a></li>
+                <li><a href="/cposg5/open.do" target="_blank" class="linkEsaj">2&deg; Grau</a></li>
+                <li><a href="/cposg/index.jsp?tpClasse=T" target="_blank" class="linkEsaj">Juizados Especiais</a></li>
+              </ul>
+            </li>
+            <li><span><a href="/varas_digitais.php">Processo Digital</a></span></li>
+            <li><span><a href="/corregedoria/selos/pesquisaSelo.php">Selos</a></span></li>
+            <li><span><a href="/servicos/pabx">Telefones &Uacute;teis</a></span></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <li><a href="/comarcas/comarcas.php">Comarcas</a></li>
+
+    <li><a href="/juizados/index.php">Juizados</a></li>
+
+    <li>
+      <a href="#">Ag&ecirc;ncia TJMS</a>
+      <div class="subMegaMenu">
+        <div class="subMegaMenuBorder">
+          <ul class="coluna">
+            <li><span><a href="/noticias/artigos.php">Artigos</a></span></li>
+            <li><span><a href="/scs/contatos.php">Contato</a></span></li>
+            <li><span><a href="/scs/downloads.php">Downloads</a></span></li>
+            <li><span><a href="http://www.flickr.com/photos/galeriatjms/" target="_blank">Galeria de Fotos</a></span></li>
+            <li><span><a href="/glossario/index.php">Gloss&aacute;rio</a></span></li>
+            <li><span><a href="/noticias/informativo.php">Informativo do TJMS</a></span></li>
+            <li><span><a href="/noticias/">Not&iacute;cias</a></span></li>
+            <li><span><a href="/rss/portaltjms.php">Not&iacute;cias em RSS</a></span></li>
+            <li><span><a href="/noticias/publicacoes.php">Publica&ccedil;&otilde;es</a></span></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <a href="#">Servi&ccedil;os</a>
+      <div class="subMegaMenu">
+        <div class="subMegaMenuBorder">
+          <ul class="coluna">
+            <li><span><a href="/advogadoVoluntario/index.php">Advogado Voluntário</a></span></li>
+            <li><span><a href="/corregedoria/vara_infancia/vara_infancia.php">Autoriza&ccedil;&atilde;o de Viagem</a></span></li>
+            <li><span><a href="/cargaprogramada">Carga Programada</a></span></li>
+            <li><span><a href="/servicos/certidoes/">Certid&otilde;es</a></span></li>
+            <li>
+              <span>Custas Processuais</span>
+              <ul class="itensMenu">
+                <li><a href="/esaj/portal.do?servico=690100" target="_blank" class="linkEsaj">C&aacute;lculo de Custas Iniciais do 1&deg; Grau</a></li>
+                <li><a href="/custassg" target="_blank" class="linkEsaj">C&aacute;lculo de Custas Iniciais do 2&deg; Grau</a></li>
+                <li><a href="/download/custas_processuais.pdf" target="_blank">Orienta&ccedil;&otilde;es de Preenchimento</a></li>
+                <li><a href="http://www.stj.jus.br/grucobranca/app/index.jsf" target="_blank">Recurso Especial/Ordin&aacute;rio - GRU</a></li>
+                <li><a href="http://www.stf.jus.br/portal/recolhimentoDeCustas/recolhimentoDeCustas.asp" target="_blank">Recurso Extraordin&aacute;rio - GRU</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="coluna">
+            <li><span><a href="/contaunica/index_externo.php">Dep&oacute;sitos Judiciais</a></span></li>
+            <li><span><a href="/consultas/juizado_transito.php">Juizado do Tr&acirc;nsito</a></span></li>
+            <li><span><a href="/consultas/justica_itinerante.php">Justi&ccedil;a Itinerante</a></span></li>
+            <li><span><a href="/leilaoeletronico">Leil&atilde;o Eletr&ocirc;nico</a></span></li>
+            <li><span><a href="/licitacao_compra2.php">Licita&ccedil;&otilde;es</a></span></li>
+            <li>
+              <span>Links</span>
+              <ul class="itensMenu">
+                <li><a href="/links/internacionais.php">Internacionais</a></li>
+                <li><a href="/links/jornais_revistas.php">Legisla&ccedil;&atilde;o e Jurisprud&ecirc;ncia</a></li>
+                <li><a href="/links/legis_jurisp.php">Jornais e Revistas</a></li>
+                <li><a href="/links/procuradorias.php">Procuradorias</a></li>
+                <li><a href="/links/tribunais_oabs.php">Tribunais e OABs</a></li>
+                <li><a href="/links/outros.php">Outros</a></li>
+              </ul>
+            </li>
+            <li><span><a href="/conciliacao">Pedido de Concilia&ccedil;&atilde;o</a></span></li>
+          </ul>
+
+          <ul class="coluna">
+            <li><span><a href="/projetos/peticao10sentenca10/index.php">Petição 10 Sentença 10</a></span></li>
+            <li>
+              <span>Plant&atilde;o Judici&aacute;rio</span>
+              <ul class="itensMenu">
+                <li><a href="/secretarias/csm/plantao.php">Magistrados</a></li>
+                <li><a href="/magistratura/plantao_servidores.php?pln=1">1&deg; Grau</a></li>
+                <li><a href="/magistratura/plantao_servidores.php?pln=2">2&deg; Grau</a></li>
+              </ul>
+            </li>
+            <li><span><a href="/consultas/pex.php">Protocolo Externo</a></span></li>
+            <li><span><a href="/esaj/portal.do?servico=750000" target="_blank" class="linkEsaj">Sistema Push</a></span></li>
+            <li><span><a href="/consultas/sge/consulta.php">Sistema de Gerenciamento de Escrituras</a></span></li>
+            <li><span><a href="/consigna">Sistema Consigna</a></span></li>
+            <li><span><a href="/docdigital">Valida&ccedil;&atilde;o de Documento Digital</a></span></li>
+            <li><span><a href="/hollerith">Valida&ccedil;&atilde;o de Holerite</a></span></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <a href="#">A&ccedil;&otilde;es e Projetos</a>
+      <div class="subMegaMenu">
+        <div class="subMegaMenuBorder">
+          <ul class="coluna">
+            <li><span><a href="/projetos/cepa.php">CEPA</a></span></li>
+            <li><span><a href="/conheca" target="_blank">Conhe&ccedil;a o Judici&aacute;rio</a></span></li>
+            <li><span><a href="/infanciaejuventude">Coordenadoria da Inf&acirc;ncia e Juventude</a></span></li>
+            <li><span><a href="/violenciadomestica/">Coordenadoria da Viol&ecirc;ncia Dom&eacute;stica</a></span></li>
+            <li><span><a href="/projetos/covep.php">COVEP</a></span></li>
+            <li><span><a href="http://doarelegal.tjrs.jus.br/index.php" target="_blank">Doar &eacute; legal</a></span></li>
+            <li><span><a href="/projeto_ecogestao" target="_blank">Ecogest&atilde;o</a></span></li>
+          </ul>
+          <ul class="coluna">
+            <li><span><a href="/consultas/juizado_transito.php" >Juizado do Tr&acirc;nsito</a></span></li>
+            <li><span><a href="/consultas/justica_itinerante.php" >Justi&ccedil;a Itinerante</a></span></li>
+            <li><span><a href="/nat">Núcleo de Apoio Técnico - NAT (em saúde)</a></span></li>
+            <li><span><a href="/projetos/nucleoCooperacaoJudiciaria.php">N&uacute;cleo de Coopera&ccedil;&atilde;o Judici&aacute;ria</a></span></li>
+            <li><span><a href="/conciliacao">N&uacute;cleo Permanente de Solu&ccedil;&atilde;o de Conflitos</a></span></li>
+            <li><span><a href="/projetos/peticao10sentenca10/index.php">Petição 10 Sentença 10</a></span></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <a href="#">Precat&oacute;rios</a>
+      <div class="subMegaMenu">
+        <div class="subMegaMenuBorder">
+          <ul class="coluna">
+            <li>
+              <a href="/precatorios/apresentacao.php">
+                  Apresenta&ccedil;&atilde;o
+              </a>
+            </li>
+            <li>
+              <a href="/precatorios/depre.php">
+                  DEPRE
+              </a>
+            </li>
+            <li>
+              <a href="/precatorios/comiteGestorEstadual.php">
+                  Comit&ecirc; Gestor Estadual
+              </a>
+            </li>
+            <li>
+              <a href="/precatorios/camaraNacionalGestores.php">
+                  C&acirc;mara Nacional de Gestores
+              </a>
+            </li>
+            <li>
+              <a href="/precatorios/fonaprec.php">
+                  FONAPREC
+              </a>
+            </li>
+            <li>
+                <a href="/precatorios/legislacao.php">
+                    Legisla&ccedil;&atilde;o
+                </a>
+            </li>
+            <li>
+                <a href="/precatorios/jurisprudencia.php">
+                    Jurisprud&ecirc;ncia
+                </a>
+            </li>
+            <li>
+              <a href="/precatorios/noticias.php">
+                  Not&iacute;cias
+              </a>
+            </li>
+            <li>
+              <a href="/precatorios/perguntasFrequentes.php">
+                  Perguntas Frequentes
+              </a>
+            </li>
+          </ul>
+          <ul class="coluna">
+              <li>
+                  <span>Consultas</span>
+                  <ul class="itensMenu">
+                      <li>
+                        <span>Benefici&aacute;rios</span>
+                        <ul class="itensMenu">
+                            <li>
+                                <a href="/sapre/public/lista_externa.xhtml">
+                                    Consulta Lista
+                                </a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                          <span>Devedores</span>
+                          <ul class="itensMenu">
+                              <li>
+                                  <a href="/sapre/public/precatoriosPorEntidadePrincipalExterna.xhtml">
+                                      D&iacute;vida Total
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/sapre/public/listaEntidadePrincipalExterna.xhtml">
+                                      Regime de pagamento
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/precatorios">
+                                      Pagamentos Realizados por Exerc&iacute;cio
+                                  </a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <span>Benefici&aacute;rios</span>
+                <ul class="itensMenu">
+                  <li>
+                    <a href="/precatorios/informacoes-cadastrais.php">
+                      Informações Cadastrais
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/precatorios/dadosBancarios.php">
+                        Cadastro de Contas
+                    </a>
+                  </li>
+                </ul>
+              <li>
+                <span>
+                    <a href="/sapre/public/comprovante_dirf.xhtml">
+                        DIRF
+                    </a>
+                </span>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>				<br />
+				<div id="calendar"></div>
+			</div>
+
+			<div id="conteudo" class="grid_19">
+
+				<div style="min-height:320px">
+                
+					<div class="titulo1">Notícias</div>
+
+					<img id="enviarNoticia" src="_images/mail.png" class="iconesNoticia" title="Enviar notícia" />
+					<img id="imprimir" src="_images/printer.png" class="iconesNoticia" title="Imprimir notícia" onclick="javascript:print();" />
+					<img id="diminuirFonte" src="_images/font-dec.png" class="iconesNoticia" title="Diminuir fonte" />
+					<img id="aumentarFonte" src="_images/font-inc.png" class="iconesNoticia" title="Aumentar fonte" />
+					
+					
+<div id="messages" class="messages" style="display:none">
+  <div id="errorMessages" class="message errorMessage"></div>
+  <div id="infoMessages" class="message infoMessage"></div>
+  <div id="warnMessages" class="message warnMessage"></div>
+</div>
+					
+						<div id="tituloNoticia" class="titulo3">Negado recurso de detenta que cometeu homicídio qualificado na prisão</div>
+
+						<div style="color:#666666">
+							<div id="dataNoticia">19/09/2016 - 16:21</div>
+							<div>Esta notícia foi acessada 19 vezes.</div>
+
+							
+						</div>
+						<br />
+						<br />
+
+						<div style="text-align:justify">
+															<div style="float:left; padding-right:10px; width:257px">
+									<a id="imagemNoticia" href="/webfiles/producao/GP/noticiasFotos/20160919152443.JPG" title="Imagem">
+										<img src="/webfiles/producao/GP/noticiasFotos/20160919152443.JPG" style="width:257px; height:176px;" />
+									</a>
+
+									
+																	</div>
+															<span id="textoNoticia"><P>Os desembargadores da 2ª Câmara Criminal, por maioria, negaram provimento ao recurso interposto por J.A.E. objetivando a reforma da sentença que a condenou a 15 anos de reclusão, em regime fechado, por homicídio qualificado (art. 121, § 2º, I, III e IV, do Código Penal).</P>
+<P>Consta nos autos que em 21 de novembro de 2012, na carceragem da Delegacia de Dourados, junto a M.S.M. e L.S., e utilizando uma corda improvisada com porções de tecido, J.A.E. agrediu fisicamente e asfixiou J.R.B., causando-lhe a morte. O motivo do crime foi torpe, por vingança, uma vez que mataram a vítima por ser ela acusada de conivência no crime de estupro contra a própria filha.</P>
+<P>O meio utilizado para matar a vítima foi cruel, tendo em vista que para o homicídio as acusadas improvisaram uma corda para o enforcamento e, após várias tentativas de asfixiá-la, somente conseguiram quando a penduraram na grade da cela com os pés e mãos amarrados. O recurso utilizado dificultou a defesa da vítima, considerando a superioridade numérica das agentes e o fato do crime ter ocorrido dentro da cela prisional, o que impossibilitou eventual fuga.</P>
+<P>J.A.E. pediu a anulação do julgamento, vez que o reconhecimento das qualificadoras da torpeza e do recurso que dificultou a defesa da vítima, bem como a negativa de incidência do privilégio, são circunstâncias que contrariam as provas dos autos. Afirma ainda que a aplicação da reincidência contrariou o disposto no art. 492, I, “b”, do Código de Processo Penal, e art. 61, do Código Penal, uma vez que as agravantes só poderão ser consideradas quando debatidas em plenário.</P>
+<P>A Procuradoria-Geral de Justiça opina pelo parcial provimento, para o fim de afastar a reincidência.</P>
+<P>O relator do processo, Des. Carlos Eduardo Contar, explica que a anulação de uma decisão proferida pelo Tribunal do Júri somente é possível quando estiver irremediavelmente dissociada do acervo probatório, o que não verificou na hipótese versada.</P>
+<P>Ressalta que, para que a acusada seja remetida a novo julgamento, faz-se necessário que as qualificadoras da torpeza, meio cruel e recurso que dificultou a defesa da vítima não estejam demonstradas nos autos, o que não acontece neste caso.</P>
+<P>Consta do processo o depoimento de um policial civil relatando que as apurações apontaram que J.A.E. e outras duas acusadas teriam levado a vítima até a grade e a amarraram com uma corda, mas que na primeira tentativa não conseguiram matá-la. Na sequência, suspenderam o corpo da vítima, com a corda amarrada em seu pescoço, e soltaram o corpo para que fosse asfixiada com o próprio peso.</P>
+<P>Diante do relato, o desembargador entendeu que a decisão do Conselho de Sentença não foi contrária à prova dos autos, confortando versão mais coerente e segura, condizente com a realidade.</P>
+<P>Quanto às alegações de violação da Lei nº 11.689/2008, o relator explica que a exigência de alegação em debates é relacionada com a necessidade de convencimento dos jurados, por exemplo, acerca do abuso de poder (art. 61, II, “g”, do Código Penal) ou sobre a confissão espontânea do agente (art. 65, III, “d”, do Código Penal), o que não ocorre nas questões objetivas de aplicação obrigatória.</P>
+<P>“Este dispositivo não se aplica à reincidência por se tratar de elemento modificador de caráter objetivo, que demanda unicamente análise documental da vida pregressa do acusado a ser feita pelo juiz togado, verificando a correção dos dados, a extinção da punibilidade da condenação anterior, os <BR>reais efeitos da condenação pretérita, de forma que é absolutamente desnecessário condicionar a aplicação da reincidência à alegação nos debates. (…) Ante o exposto, nego provimento ao recurso interposto por J.A.E., mantendo a sentença de primeiro grau”.</P>
+<P>Processo nº 0012120-45.2012.8.12.0002</P></span>
+						</div>
+
+						
+																
+											<br/>
+						<div style="color:#666666">
+							Autor da not&iacute;cia: Secretaria de Comunicação - imprensa@tjms.jus.br						</div>
+					          
+          
+        <br />
+        <table style="width:100%">
+      	<tr>
+        	<td style="width:34%">
+						<!--  ---------------------- Botão Google Plus ---------------------- -->
+        		<div class="g-plusone" data-annotation="inline" data-width="300"></div>
+          </td>
+        	<td style="width:33%; text-align:center">
+          	<!--  ---------------------- Botão Facebook ---------------------- -->
+            <div id="fb-root"></div>
+						<div class="fb-share-button" data-layout="button_count"></div>        
+      		</td>
+          <td style="width:33%; text-align:right">
+            <!--  ---------------------- Botão Twitter ---------------------- -->
+            <a class="twitter-share-button" href="https://twitter.com/share?text=TJMS NotÃ­cias: Negado recurso de detenta que cometeu homicÃ­dio qualificado na prisÃ£o" data-lang="pt">Tweetar</a>
+					</td>
+        </tr>
+      </table>
+        
+				</div>
+				<br />
+				<div style="text-align: right;">
+					<a href="javascript:history.back();" class="button">Voltar</a>
+				</div>
+
+			</div>
+
+		</div>
+		
+		<div id="dialogEnvioNoticia" title="Enviar: Negado recurso de detenta que cometeu homicídio qualificado na prisão">
+			<div id="divMensagem" class="divMensagem"></div>
+			<form id="formEnvioNoticia">
+				<input type="hidden" name="id" value="32011" />
+				<table class="borda">
+					<tr>
+						<td style="width: 150px;">Seu nome:</td>
+						<td><input type="text" name="seuNome" style="width: 290px;" /></td>
+					</tr>
+					<tr>
+						<td>Seu email:</td>
+						<td><input type="text" name="seuEmail" style="width: 290px;" /></td>
+					</tr>
+					<tr>
+						<td>Email dos amigos <br/>(no m&aacute;ximo 10 emails separados por v&iacute;rgulas):</td>
+						<td><textarea name="emailsAmigos" rows="5" style="width: 290px;"></textarea></td>
+					</tr>
+					<tr>
+						<td>Mensagem:</td>
+						<td><textarea name="mensagem" rows="5" style="width: 290px;"></textarea></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	
+		<div id="rodapeAcessoRapido" class="container_24">
+
+  <div class="clear"></div>
+
+  
+  <div id="consultaProcessual" class="grid_24">
+    <div class="borda">
+      <div>
+        <div class="input">
+          &nbsp;
+          <form id="formConsultaProcessual">
+            <table title="Consulta Processual" style="margin-left:-4px; margin-top:-39px; border-collapse:separate; border-spacing:4px;">
+              <tr>
+                <td>
+                  <select name="consultaProcessualInstancia" style="width: 100px;">
+                    <option value="pg">1&deg; grau</option>
+                    <option value="sg">2&deg; grau</option>
+                    <option value="jz">Juizados</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="consultaProcessualComarca" style="width: 165px;">
+                                          <option value="cpopg5/search.do?cdForo=1&dadosConsulta.localPesquisa.cdLocal=1">01 - Campo Grande</option>
+                                          <option value="cpopg5/search.do?cdForo=49&dadosConsulta.localPesquisa.cdLocal=49">49 - &Aacute;gua Clara</option>
+                                          <option value="cpopg5/search.do?cdForo=4&dadosConsulta.localPesquisa.cdLocal=4">04 - Amambai</option>
+                                          <option value="cpopg5/search.do?cdForo=52&dadosConsulta.localPesquisa.cdLocal=52">52 - Anast&aacute;cio</option>
+                                          <option value="cpopg5/search.do?cdForo=22&dadosConsulta.localPesquisa.cdLocal=22">22 - Anauril&acirc;ndia</option>
+                                          <option value="cpopg5/search.do?cdForo=23&dadosConsulta.localPesquisa.cdLocal=23">23 - Ang&eacute;lica</option>
+                                          <option value="cpopg5/search.do?cdForo=24&dadosConsulta.localPesquisa.cdLocal=24">24 - Aparecida do Taboado</option>
+                                          <option value="cpopg5/search.do?cdForo=5&dadosConsulta.localPesquisa.cdLocal=5">05 - Aquidauana</option>
+                                          <option value="cpopg5/search.do?cdForo=25&dadosConsulta.localPesquisa.cdLocal=25">25 - Bandeirantes</option>
+                                          <option value="cpopg5/search.do?cdForo=26&dadosConsulta.localPesquisa.cdLocal=26">26 - Bataguassu</option>
+                                          <option value="cpopg5/search.do?cdForo=27&dadosConsulta.localPesquisa.cdLocal=27">27 - Bataipor&atilde;</option>
+                                          <option value="cpopg5/search.do?cdForo=3&dadosConsulta.localPesquisa.cdLocal=3">03 - Bela Vista</option>
+                                          <option value="cpopg5/search.do?cdForo=28&dadosConsulta.localPesquisa.cdLocal=28">28 - Bonito</option>
+                                          <option value="cpopg5/search.do?cdForo=30&dadosConsulta.localPesquisa.cdLocal=30">30 - Brasil&acirc;ndia</option>
+                                          <option value="cpopg5/search.do?cdForo=31&dadosConsulta.localPesquisa.cdLocal=31">31 - Caarap&oacute;</option>
+                                          <option value="cpopg5/search.do?cdForo=6&dadosConsulta.localPesquisa.cdLocal=6">06 - Camapu&atilde;</option>
+                                          <option value="cpopg5/search.do?cdForo=7&dadosConsulta.localPesquisa.cdLocal=7">07 - Cassil&acirc;ndia</option>
+                                          <option value="cpopg5/search.do?cdForo=46&dadosConsulta.localPesquisa.cdLocal=46">46 - Chapad&atilde;o do Sul</option>
+                                          <option value="cpopg5/search.do?cdForo=8&dadosConsulta.localPesquisa.cdLocal=8">08 - Corumb&aacute;</option>
+                                          <option value="cpopg5/search.do?cdForo=9&dadosConsulta.localPesquisa.cdLocal=9">09 - Costa Rica</option>
+                                          <option value="cpopg5/search.do?cdForo=11&dadosConsulta.localPesquisa.cdLocal=11">11 - Coxim</option>
+                                          <option value="cpopg5/search.do?cdForo=32&dadosConsulta.localPesquisa.cdLocal=32">32 - Deod&aacute;polis</option>
+                                          <option value="cpopg5/search.do?cdForo=53&dadosConsulta.localPesquisa.cdLocal=53">53 - Dois Irm&atilde;os do Buriti</option>
+                                          <option value="cpopg5/search.do?cdForo=2&dadosConsulta.localPesquisa.cdLocal=2">02 - Dourados</option>
+                                          <option value="cpopg5/search.do?cdForo=33&dadosConsulta.localPesquisa.cdLocal=33">33 - Eldorado</option>
+                                          <option value="cpopg5/search.do?cdForo=10&dadosConsulta.localPesquisa.cdLocal=10">10 - F&aacute;tima do Sul</option>
+                                          <option value="cpopg5/search.do?cdForo=34&dadosConsulta.localPesquisa.cdLocal=34">34 - Gl&oacute;ria de Dourados</option>
+                                          <option value="cpopg5/search.do?cdForo=35&dadosConsulta.localPesquisa.cdLocal=35">35 - Iguatemi</option>
+                                          <option value="cpopg5/search.do?cdForo=36&dadosConsulta.localPesquisa.cdLocal=36">36 - Inoc&ecirc;ncia</option>
+                                          <option value="cpopg5/search.do?cdForo=37&dadosConsulta.localPesquisa.cdLocal=37">37 - Itapor&atilde;</option>
+                                          <option value="cpopg5/search.do?cdForo=51&dadosConsulta.localPesquisa.cdLocal=51">51 - Itaquira&iacute;</option>
+                                          <option value="cpopg5/search.do?cdForo=12&dadosConsulta.localPesquisa.cdLocal=12">12 - Ivinhema</option>
+                                          <option value="cpopg5/search.do?cdForo=13&dadosConsulta.localPesquisa.cdLocal=13">13 - Jardim</option>
+                                          <option value="cpopg5/search.do?cdForo=14&dadosConsulta.localPesquisa.cdLocal=14">14 - Maracaju</option>
+                                          <option value="cpopg5/search.do?cdForo=15&dadosConsulta.localPesquisa.cdLocal=15">15 - Miranda</option>
+                                          <option value="cpopg5/search.do?cdForo=16&dadosConsulta.localPesquisa.cdLocal=16">16 - Mundo Novo</option>
+                                          <option value="cpopg5/search.do?cdForo=29&dadosConsulta.localPesquisa.cdLocal=29">29 - Navira&iacute;</option>
+                                          <option value="cpopg5/search.do?cdForo=38&dadosConsulta.localPesquisa.cdLocal=38">38 - Nioaque</option>
+                                          <option value="cpopg5/search.do?cdForo=54&dadosConsulta.localPesquisa.cdLocal=54">54 - Nova Alvorada do Sul</option>
+                                          <option value="cpopg5/search.do?cdForo=17&dadosConsulta.localPesquisa.cdLocal=17">17 - Nova Andradina</option>
+                                          <option value="cpopg5/search.do?cdForo=18&dadosConsulta.localPesquisa.cdLocal=18">18 - Parana&iacute;ba</option>
+                                          <option value="cpopg5/search.do?cdForo=39&dadosConsulta.localPesquisa.cdLocal=39">39 - Pedro Gomes</option>
+                                          <option value="cpopg5/search.do?cdForo=19&dadosConsulta.localPesquisa.cdLocal=19">19 - Ponta Por&atilde;</option>
+                                          <option value="cpopg5/search.do?cdForo=40&dadosConsulta.localPesquisa.cdLocal=40">40 - Porto Murtinho</option>
+                                          <option value="cpopg5/search.do?cdForo=41&dadosConsulta.localPesquisa.cdLocal=41">41 - Ribas do Rio Pardo</option>
+                                          <option value="cpopg5/search.do?cdForo=20&dadosConsulta.localPesquisa.cdLocal=20">20 - Rio Brilhante</option>
+                                          <option value="cpopg5/search.do?cdForo=48&dadosConsulta.localPesquisa.cdLocal=48">48 - Rio Negro</option>
+                                          <option value="cpopg5/search.do?cdForo=42&dadosConsulta.localPesquisa.cdLocal=42">42 - Rio Verde de Mato Grosso</option>
+                                          <option value="cpopg5/search.do?cdForo=43&dadosConsulta.localPesquisa.cdLocal=43">43 - S&atilde;o Gabriel do Oeste</option>
+                                          <option value="cpopg5/search.do?cdForo=44&dadosConsulta.localPesquisa.cdLocal=44">44 - Sete Quedas</option>
+                                          <option value="cpopg5/search.do?cdForo=45&dadosConsulta.localPesquisa.cdLocal=45">45 - Sidrol&acirc;ndia</option>
+                                          <option value="cpopg5/search.do?cdForo=55&dadosConsulta.localPesquisa.cdLocal=55">55 - Sonora</option>
+                                          <option value="cpopg5/search.do?cdForo=47&dadosConsulta.localPesquisa.cdLocal=47">47 - Terenos</option>
+                                          <option value="cpopg5/search.do?cdForo=21&dadosConsulta.localPesquisa.cdLocal=21">21 - Tr&ecirc;s Lagoas</option>
+                                      </select>
+                </td>
+                <td>
+                  <select name="consultaProcessualParametro" style="width:165px">
+                    <option value="NUMPROC" selected>N&uacute;mero do Processo</option>
+                    <option value="NMPARTE">Nome da Parte</option>
+                    <option value="DOCPARTE">Documento da Parte</option>
+                    <option value="NMADVOGADO">Nome do Advogado</option>
+                    <option value="NUMOAB">N&uacute;mero da OAB</option>
+                    <option value="OUTRONUMERO">Outro N&ordm; do Processo</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="text" name="consultaProcessualTexto" value="Termo consulta..."  style="width: 165px;" />
+                </td>
+                <td>
+                  <input type="submit" class="button" value="Consultar" style="font-size:11px" />
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+
+  <div id="servicos" class="grid_24">
+    <div style="border: 1px solid #E1E1E1;">
+	<div id="carousel">
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=1" target="_blank" class="linkEsaj">
+					<img src="/portal2013/images/slide/portal_esaj.png" alt="Portal Esaj" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=22" target="_self" class="">
+					<img src="/portal2013/images/slide/infanciaejuventude.png" alt="Corregedoria da Infância e Juventude" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=26" target="_self" class="">
+					<img src="/portal2013/images/slide/coordenadoria_mulher.png" alt="Coordenadoria Estadual da Mulher" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=25" target="_self" class="">
+					<img src="/portal2013/images/slide/conciliar.png" alt="Núcleo Permanente de Métodos Consensuais de Soluções de Conflitos" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=24" target="_self" class="">
+					<img src="/portal2013/images/slide/malote_digital.png" alt="Malote Digital" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=23" target="_self" class="">
+					<img src="/portal2013/images/slide/juizados.png" alt="Juizados Especiais" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=21" target="_blank" class="">
+					<img src="/portal2013/images/slide/ejud.png" alt="Escola Judicial do Estado de Mato Grosso do Sul - Ejud" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=20" target="_self" class="">
+					<img src="/portal2013/images/slide/corregedoria.png" alt="Corregedoria Geral de Justiça" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=18" target="_self" class="">
+					<img src="/portal2013/images/slide/telefones_uteis.png" alt="Telefones Úteis" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=17" target="_self" class="">
+					<img src="/portal2013/images/slide/sge.png" alt="Gerenciamento de Escrituras" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=16" target="_self" class="">
+					<img src="/portal2013/images/slide/selos.png" alt="Consulta Selos" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=15" target="_self" class="">
+					<img src="/portal2013/images/slide/publicacoes_eletronicas.png" alt="Publicações Eletrônicas" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=14" target="_self" class="">
+					<img src="/portal2013/images/slide/processo_digital.png" alt="Processo Digital" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=13" target="_self" class="">
+					<img src="/portal2013/images/slide/precatorio.png" alt="Precatórios" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=12" target="_self" class="">
+					<img src="/portal2013/images/slide/plantao.png" alt="Plantão Judiciário" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=11" target="_self" class="">
+					<img src="/portal2013/images/slide/ouvidoria.png" alt="Ouvidoria" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=10" target="_self" class="">
+					<img src="/portal2013/images/slide/licitacao.png" alt="Licitações" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=9" target="_self" class="">
+					<img src="/portal2013/images/slide/leilao.png" alt="Leilão Eletrônico" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=8" target="_self" class="">
+					<img src="/portal2013/images/slide/legislacao.png" alt="Legislação" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=7" target="_blank" class="linkEsaj">
+					<img src="/portal2013/images/slide/jurisprudencia.png" alt="Jurisprudência" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=6" target="_self" class="">
+					<img src="/portal2013/images/slide/diario_da_justica.png" alt="Diário de Justiça" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=5" target="_self" class="">
+					<img src="/portal2013/images/slide/descarte.png" alt="Descarte" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=4" target="_self" class="">
+					<img src="/portal2013/images/slide/depositos_judiciais.png" alt="Depósitos Judiciais" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=3" target="_blank" class="">
+					<img src="/portal2013/images/slide/consigna.png" alt="Alvarás Conta Única" />
+				</a>
+			</div>
+					<div style="text-align: center;">
+				<a href="/clickTJMS.php?type=servico&id=2" target="_blank" class="">
+					<img src="/portal2013/images/slide/certidoes.png" alt="Certidões" />
+				</a>
+			</div>
+			</div>
+</div>  </div>
+
+  <div class="clear"></div>
+
+  
+</div>
+
+<div id="mapa" style="background-color: #3E6E44; padding: 15px 0 6px 0; color: #FFF;">
+  <div class="container_24">
+
+    <div class="grid_6">
+      <div class="mapaSite">
+        <p>Institucional</p>
+        <ul>
+          <li><span><a href="/institucional/presidencia.php">Presid&ecirc;ncia</a></span></li>
+          <li><span><a href="/institucional/vicePresidencia.php">Vice-Presid&ecirc;ncia</a></span></li>
+          <li><span><a href="/institucional/corregedoria.php">Corregedoria-Geral de Justi&ccedil;a</a></span></li>
+          <li><span><a href="/magistratura/csm/composicao.php">Conselho Superior da Magistratura</a></span></li>
+          <li><span><a href="/institucional/diretoriaGeral.php">Direção Geral da Secretaria</a></span></li>
+          <li><span><a href="/controleinterno/index.php">Controle Interno</a></span></li>
+          <li><span><a href="javascript:carregarOrganograma()">Estrutura Organizacional</a></span></li>
+          <!--
+                    <li><span><a href="javascript:var x = hs.htmlExpand(null, { src: '/organograma/index.php', objectType: 'iframe', dimmingOpacity: 0.8, height:810, width:930} );">Estrutura Organizacional</a></span></li>
+          -->
+          <li><span><a href="/institucional/camaras.php">Câmaras</a></span></li>
+          <li><span><a href="/institucional/orgaoEspecialComposicao.php">&Oacute;rg&atilde;o Especial</a></span></li>
+          <li><span><a href="/institucional/secoes.php">Seções</a></span></li>
+          <li><span><a href="/institucional/tribunalPleno.php">Tribunal Pleno</a></span></li>
+          <!--<li><span><a href="/institucional/comissoes_pjms.php">Comiss&otilde;es</a></span></li>-->
+          <li><span><a href="/intranet/" target="_blank">Intranet</a></span></li>
+          <li><span><a href="/institucional/magistratura_links.php">Magistratura</a></span></li>
+          <li><span><a href="/institucional/memorial_links.php">Memorial</a></span></li>
+          <li><span><a href="/institucional/missao.php">Miss&atilde;o</a></span></li>
+          <li><span><a href="/institucional/ouvidoria.php">Ouvidoria Judiciária</a></span></li>
+          <li><span><a href="/_estaticos_/planejamento/PlanejamentoEstrategicoAtual.pdf" target="_blank">Planejamento Estrat&eacute;gico</a></span></li>
+        </ul>
+
+        <br/>
+
+        <p><a href="/corregedoria/" style="font-weight: bold; color: white">Corregedoria</a></p>
+        <br/>
+        <p><a href="/ejud/" target="_blank" style="font-weight: bold; color: white">Escola Judicial</a></p>
+        <br/>
+        <p>Transparência</p>
+        <ul>
+          <li><span><a href="/transparencia/">Apresenta&ccedil;&atilde;o</a></span></li>
+          <li><span><a href="/transparencia/competencia.php">Compet&ecirc;ncia</a></span></li>
+          <li><span><a href="/transparencia/contratos.php">Contratos</a></span></li>
+          <li><span><a href="/transparencia/pagamento_fornecedores.php">Pagamento a Fornecedores</a></span></li>
+          <li><span><a href="/transparencia/relatorio_gestao_fiscal.php">Relat&oacute;rio de Gest&atilde;o Fiscal</a></span></li>
+          <li><span><a href="/transparencia/resolucao102/index.php">Resolu&ccedil;&atilde;o CNJ 102</a></span></li>
+          <li><span><a href="/transparencia/resolucao_151.php">Resolu&ccedil;&atilde;o CNJ 151</a></span></li>
+          <li><span><a href="/transparencia/resolucaoCNJ195.php">Resolu&ccedil;&atilde;o CNJ 195</a></span></li>
+          <li><span><a href="/transparencia/resolucaoCNJ219">Resolu&ccedil;&atilde;o CNJ 219</a></span></li>
+          <li><span><a href="/transparencia/veiculosOficiais.php">Ve&iacute;culos Oficiais</a></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid_6">
+      <div class="mapaSite">
+        <p>Portal da Estratégia</p>
+        <ul>
+          <li><span><a href="/_estaticos_/planejamento/PlanejamentoEstrategicoAtual.pdf" target="_blank">Planejamento Estratégico</a></span></li>
+          <li><span><a href="/planejamento/estatisticaPrimeiroGrau.php">Estatísticas 1º Grau e Juizados Especiais</a></span></li>
+          <li><span><a href="/planejamento/estatisticaSegundoGrau.php">Estatísticas 2º Grau e Turmas Recursais</a></span></li>
+        </ul>
+        <br />
+        <p>Consultas</p>
+        <ul>
+          <li><span><a href="/consultas/arquivos/temporalidade2010.pdf" target="_blank">Arquivo</a></span></li>
+          <li><span><a href="/consultas/bibliotecas_links.php">Biblioteca</a></span></li>
+          <li><span><a href="/consultas/sge/consulta.php">Central de Escrituras</a></span></li>
+          <li><span><a href="/concursos">Concursos</a></span></li>
+          <li><span><a href="/contaunica" target="_blank">Conta Única</a></span></li>
+          <li><span><a href="/dj/index.php">Diário da Justiça</a></span></li>
+          <li><span><a href="/sistemas/interrupcoesesaj/index.php">Disponibilidade do Portal ESAJ</a></span></li>
+          <li><span><a href="/institucional/feriados">Feriados</a></span></li>
+          <li><span><a href="/esaj/portal.do?servico=789900" target="_blank" class="linkEsaj">Jurisprudência</a></span></li>
+          <li><span><a href="/cposg/pcpoOrgaosJulgadores.jsp" target="_blank" class="linkEsaj">Pauta de Julgamento</a></span></li>
+          <li><span><a href="/esaj" target="_blank" class="linkEsaj">Portal de Servi&ccedil;os (ESAJ)</a></span></li>
+          <li><span><a href="/consultas/processos_links.php" target="_blank">Processos</a></span></li>
+          <li><span><a href="/varas_digitais.php">Processo Digital</a></span></li>
+          <li><span><a href="/corregedoria/selos/pesquisaSelo.php">Selos</a></span></li>
+          <li><span><a href="/servicos/pabx/index.php">Telefones Úteis</a></span></li>
+        </ul>
+        <br />
+        <p>Precatórios</p>
+        <ul>
+          <li>
+            <span>
+              <a href="/sapre/public/comprovante_dirf.xhtml" target="_blank">
+                Informe de Rendimentos - IR
+              </a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="/sapre/public/lista_externa.xhtml" target="_blank">
+                Ranking
+              </a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="/sapre/public/listaEntidadePrincipalExterna.xhtml" target="_blank">
+                Entidades Devedoras
+              </a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="/sapre/public/precatoriosPorEntidadePrincipalExterna.xhtml" target="_blank">
+                Saldo devedor por Entidade Devedora
+              </a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="/precatorios">
+                Pagamentos realizados
+              </a>
+            </span>
+          </li>
+        </ul>
+        <br />
+
+
+      </div>
+    </div>
+
+    <div class="grid_6">
+      <div class="mapaSite">
+        <p><a href="/comarcas/comarcas.php" style="font-weight: bold; color: white">Comarcas</a></p>
+        <br/>
+        <p>Juizados</p>
+        <ul>
+          <li><span><a href="/juizados/juizados_comarcas.php">Comarcas (endere&ccedil;os)</a></span></li>
+          <li><span><a href="/juizados/bairrosJuizados.php">Compet&ecirc;ncia dos Juizados de Campo Grande</a></span></li>
+          <li><span><a href="/juizados/conselho_links.php">Conselho de Supervisão dos Juizados Especiais</a></span></li>
+          <li><span><a href="/descarte.php">Descarte</a></span></li>
+          <li><span><a href="/juizados/doutrinas.php">Doutrina</a></span></li>
+          <li><span><a href="/juizados/juizados_central.php">Juizado Central</a></span></li>
+          <li><span><a href="/juizados/legislacao_links.php">Legislação</a></span></li>
+          <li><span><a href="/juizados/revistadosjuizadosespeciais/index.php">Revista Eletr&ocirc;nica</a></span></li>
+          <li><span><a href="/juizados/composicao_turmas_recursais.php">Turmas Recursais</a></span></li>
+        </ul>
+        <br/>
+        <p>Ag&ecirc;ncia TJMS</p>
+        <ul>
+          <li><span><a href="/noticias/artigos.php">Artigos</a></span></li>
+          <li><span><a href="/scs/contatos.php">Contato</a></span></li>
+          <li><span><a href="/scs/downloads.php">Downloads</a></span></li>
+          <li><span><a href="http://www.flickr.com/photos/galeriatjms/" target="_blank">Galeria de Fotos</a></span></li>
+          <li><span><a href="/glossario/index.php">Gloss&aacute;rio</a></span></li>
+          <li><span><a href="/noticias/informativo.php">Informativo do TJMS</a></span></li>
+          <li><span><a href="/noticias/">Not&iacute;cias</a></span></li>
+          <li><span><a href="/rss/portaltjms.php" target="_blank">Not&iacute;cias em RSS</a></span></li>
+          <li><span><a href="/noticias/publicacoes.php">Publica&ccedil;&otilde;es</a></span></li>
+        </ul>
+        <br/>
+
+      </div>
+    </div>
+
+    <div class="grid_6">
+      <div class="mapaSite ultimaColunaMapa">
+
+        <p>Servi&ccedil;os</p>
+        <ul>
+          <li><span><a href="/advogadoVoluntario/index.php">Advogado Volunt&aacute;rio</a></span></li>
+          <li><span><a href="/infanciaejuventude/autorizacaoViagem.php">Autoriza&ccedil;&atilde;o de Viagem</a></span></li>
+          <li><span><a href="/cargaprogramada">Carga Programada</a></span></li>
+          <li><span><a href="/servicos/certidoes/"  >Certid&otilde;es</a></span></li>
+          <li><span><a href="/servicos/custas_links.php">Custas Processuais</a></span></li>
+          <li><span><a href="/contaunica/index_externo.php">Dep&oacute;sitos Judiciais</a></span></li>
+          <li><span><a href="/consultas/juizado_transito.php">Juizado do Tr&acirc;nsito</a></span></li>
+          <li><span><a href="/consultas/justica_itinerante.php">Justi&ccedil;a Itinerante</a></span></li>
+          <li><span><a href="/leilaoeletronico/index.php">Aliena&ccedil;&atilde;o Judicial</a></span></li>
+          <li><span><a href="/licitacao_compra2.php">Licita&ccedil;&otilde;es</a></span></li>
+          <li><span><a href="/servicos/links_links.php">Links</a></span></li>
+          <li><span><a href="/conciliacao/">Pedido de Concilia&ccedil;&atilde;o</a></span></li>
+          <li><span><a href="/servicos/plantao_links.php">Plantão Judiciário</a></span></li>
+          <li><span><a href="/consultas/pex.php">Protocolo Externo</a></span></li>
+          <li><span><a href="/push/avisoRecadastro.do" target="_blank" class="linkEsaj">Sistema Push</a></span></li>
+          <li><span><a href="/sistemas/sge/" >Sistema de Gerenciamento de Escrituras</a></span></li>
+          <li><span><a href="/consigna" target="_blank">Sistema Consign@</a></span></li>
+          <li><span><a href="/docdigital/">Valida&ccedil;&atilde;o de Documento Digital</a></span></li>
+          <li><span><a href="/hollerith">Valida&ccedil;&atilde;o de Holerite</a></span></li>
+        </ul>
+        <br/>
+        <p>A&ccedil;&otilde;es e Projetos</p>
+        <ul>
+          <li><span><a href="/nat">Núcleo de Apoio Técnico - NAT (em saúde)</a></span></li>
+          <li><span><a href="/projetos/cepa.php">CEPA</a></span></li>
+          <li><span><a href="/conheca" target="_blank">Conhe&ccedil;a o Judici&aacute;rio</a></span></li>
+          <li><span><a href="/violenciadomestica/">Coordenadoria da Violência Doméstica</a></span></li>
+          <li><span><a href="/projetos/covep.php">COVEP</a></span></li>
+          <li><span><a href="http://doarelegal.tjrs.jus.br/index.php" target="_blank">Doar &eacute; legal</a></span></li>
+          <li><span><a href="/projeto_ecogestao" target="_blank">Ecogest&atilde;o</a></span></li>
+          <li><span><a href="/consultas/juizado_transito.php" >Juizado do Trânsito</a></span></li>
+          <li><span><a href="/consultas/justica_itinerante.php" >Justiça Itinerante</a></span></li>
+          <li><span><a href="/projetos/nucleoCooperacaoJudiciaria.php">Núcleo de Cooperação Judiciária</a></span></li>
+          <li><span><a href="/conciliacao">Núcleo Permanente de Solução de Conflitos</a></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+  </div>
+</div>
+
+<div id="divAlertaEsaj" title="Aviso" style="text-align: justify;">
+  <p style="text-indent: 30px;">
+    Novas funcionalidades foram implementadas no <span style="font-weight:bold">Portal de Serviços e-SAJ</span>, porém alguns navegadores
+    podem apresentar as páginas desatualizadas. Se ocorrer erro ao acessar alguma dessas páginas, favor atualizar pressionando as
+    teclas <span style="font-weight:bold">CTRL + F5</span>.
+  </p>
+  <p style="text-indent: 30px;">
+    Se houver falha no carregamento do certificado digital, o histórico do seu navegador deverá ser excluído. (Saiba como, clicando nos links: <a href="https://support.mozilla.org/pt-BR/kb/limpar-dados-pessoais#w_como-eu-limpo-meu-histahrico" target="_blank">Firefox</a>,
+    <a href="https://support.google.com/chrome/answer/95582?hl=pt-BR&ref_topic=14666" target="_blank">Chrome</a>,
+    <a href="http://windows.microsoft.com/pt-br/windows-vista/delete-webpage-history" target="_blank">IE 7 e 8</a>,
+    <a href="http://windows.microsoft.com/pt-br/windows7/how-to-delete-your-browsing-history-in-internet-explorer-9" target="_blank">IE9</a> e
+    <a href="http://windows.microsoft.com/pt-br/internet-explorer/reset-ie-settings#ie=ie-10" target="_blank">IE10</a>).
+    Se o problema persistir, o programa "JAVA" deverá ser reinstalado com a versão atualizada, download no site	www.java.com.
+    Clique no nome do seu navegador abaixo para acessar as instru&ccedil;&otilde;es de instala&ccedil;&atilde;o:
+    <a href="http://www.java.com/pt_BR/download/help/ie_online_install.xml" target="_blank">Internet Explorer</a>,
+    <a href="http://www.java.com/pt_BR/download/faq/chrome.xml" target="_blank">Chrome</a> ou
+    <a href="http://java.com/pt_BR/download/help/firefox_online_install.xml" target="_blank">Firefox</a>.
+  </p>
+
+  <input type="checkbox" id="naoExibirNovamente" name="naoExibirNovamente" value="1" />
+  <label for="naoExibirNovamente">Não exibir mensagem novamente.</label>
+</div>
+
+<div id="organogramaDialog" title="Estrutura Organizacional"></div>
+
+<div id="subOrganogramaDialog"></div>
+
+<div id="loading" style="text-align:center; font-weight:bold">
+  <br />
+  Processando... <img src="/_images/loading.gif" style="width:16px; height:16px" />
+</div>
+
+<div id="rodape">
+  Copyright © 2013 TJ-MS - Av. Mato Grosso - Bloco 13 - Fone: (67) 3314-1300 - Parque dos Poderes - 79031-902 - Campo Grande - MS<br/>
+  Horário de Expediente: 12h às 19h.
+</div>    
+	</body>
+</html>

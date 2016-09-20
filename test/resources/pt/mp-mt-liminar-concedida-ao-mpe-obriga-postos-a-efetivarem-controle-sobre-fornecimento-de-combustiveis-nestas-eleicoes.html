@@ -1,0 +1,1475 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Minist&eacute;rio P&uacute;blico do Estado de Mato Grosso</title>
+<script src="/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript" src="javascript/fsmenu.js"></script>
+<script type="text/javascript" src="javascript/utils.js"></script>
+<script type="text/javascript" src="javascript/simpletabs_1.3.packed.js"></script>
+<noscript>Seu navegador não suporta javascript!</noscript>
+<link href="config/estilo.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="config/menu.css" id="listmenu-o" title="Menu Style">
+<link rel="stylesheet" type="text/css" href="config/divmenu.css">
+<link rel="stylesheet" type="text/css" href="css/simpletabs.css">
+<script type="text/javascript">
+var divMenu = new FSMenu('divMenu', false, 'visibility', 'visible', 'hidden');
+divMenu.cssLitClass = 'highlighted';
+function enviar(cid,sid) {
+	document.getElementById('enviadiv').innerHTML=
+		'<form id=formenvia><table border=0 width=400 cellpadding="2" cellspacing="1">'+
+		'<tr><td class="UltimasTitulo">&nbsp;</td>'+
+		'<td class="UltimasTitulo">Remetente</td>'+
+		'<td class="UltimasTitulo">Destinatário</td>'+
+		'<tr><td class="UltimasTitulo">Nome</td><td><input type=text id=nome name=nome size=20></td>'+
+		'<td>'+
+		'<input type=text name=nome1 size=20 id="nome1" />'+
+		'</td>'+
+		'<tr><td class="UltimasTitulo">Email</td><td><input type=text id="email" name="email" size=20></td>'+
+		'<td>'+
+		'<input type=text name=email1 size=20 id="email1" />'+
+		'</td>'+
+		'<tr><td></td><td colspan=2 class="UltimasTitulo">Observa&ccedil;&otilde;es</td>'+
+		'<tr><td colspan=3 align="center"><textarea name=obs id=obs cols="30" rows="4"></textarea>'+
+		'</td>'+
+		'<tr>'+
+		'<td colspan=3 align="center">'+
+		'<input class="EnqueteBotao" type="submit" name="button" id="button" value="Envia" onClick="enviar_email(); return false;"/>'+
+		'&nbsp;<input class="EnqueteBotao" type="button" name="button2" id="button2" value="Cancela" onClick="limpaenviar(); return false;"/>'+
+		'</td>'+
+		'</table></form>';
+}
+function limpaenviar() {
+	document.getElementById('enviadiv').innerHTML='';
+}
+function enviar_email() {
+	erros=0;
+	nome=document.getElementById('nome').value;
+	email=document.getElementById('email').value;
+	nome1=document.getElementById('nome1').value;
+	email1=document.getElementById('email1').value;
+	titulo="";
+	obs=document.getElementById('obs').value;
+	if (nome=="") erros++;
+	//if (email=="") erros++;
+	if (nome1=="") erros++;
+	if (email1=="") erros++;
+
+	if (!erros) {	
+		enviatmp='Enviando email...'+
+			'<iframe width=1 height=1 frameborder=0 style="width=1px; height=1px; visibility:none;"'+
+			' src="envia.php?cid=&sid='+
+			'&nome='+nome+'&email='+email+'&nome1='+nome1+'&email1='+email1+'&obs='+obs+'&titulo='+titulo+'"></iframe>';
+		document.getElementById('enviadiv').innerHTML=enviatmp;
+	} else {
+		alert('Favor preencher todos os campos!');
+		return false;
+	}
+}
+function enviado() {
+	document.getElementById('enviadiv').innerHTML="Email enviado.";
+	setTimeout("limpaenviar()", 3000);
+}
+function tam(t) {
+	if (t==1) tf='9';
+	if (t==2) tf='12';
+	if (t==3) tf='16';
+	document.getElementById('conteudotexto').style.fontSize=tf;
+}
+</script>
+</head>
+
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40887144-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+          
+        <script> 
+function openWindow(){
+	    window.open('https://intranet.mpmt.mp.br/ouvidoria-client/cad_manifest.php','page','channelmode=yes,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=850,height=700');  
+}
+</script>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFF">
+      <tr>
+        <td width="210" valign="top"><a href="/" accesskey="0"><img src="/imagens_clientes/logo_top_site2.gif" alt="Minist&eacute;rio P&uacute;blico do Estado de Mato Grosso" width="210" height="152" border="0" /></a></td>
+        <td valign="top" bgcolor="#FFF"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr >
+            <td width="750"><script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','750','height','100','src','/imagens_clientes/header','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','/imagens_clientes/header' ); //end AC code
+</script><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="750" height="100"  wmode="transparent">
+              <param name="movie" value="/imagens_clientes/header.swf" />
+              <param name="quality" value="high" />
+              <param name="wmode" value="transparent" />
+              <embed src="/imagens_clientes/header.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="750" height="100"  wmode="transparent"></embed>
+            </object></noscript></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFF"><img src="/imagens_clientes/transp.gif" /></td>
+          </tr>
+          <tr>
+            <td background="/imagens_clientes/barra_menu.gif" bgcolor="#FFF"><table width="100%" height="51" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="20"><img src="/imagens_clientes/barra_shd.gif" width="20" height="51" /></td>
+                <td width="45" align="right" valign="top"><a href="/" title="Página Inicial"><img src="/imagens_clientes/menu_home.gif" alt="Página Inicial" width="45" height="40" border="0" /></a></td>
+                <td align="center" valign="top"><a href="index_int_pro.php?sid=57"><img src="/imagens_clientes/menu_gabinete.gif" width="184" height="33" border="0" /></a></td>
+                <td width="2" valign="top"><img src="/imagens_clientes/menu_div.gif" width="2" height="34" /></td>
+                <td align="center" valign="top"><a href="index_les.php?sid=530"><img src="/imagens_clientes/menu_colegio.gif" width="153" height="33" border="0" /></a></td>
+                <td width="2" valign="top"><img src="/imagens_clientes/menu_div.gif" width="2" height="34" /></td>
+                <td align="center" valign="top"><a href="index_les.php?sid=447"><img src="/imagens_clientes/menu_conselho.gif" width="153" height="33" border="0" /></a></td>
+                <td width="2" valign="top"><img src="/imagens_clientes/menu_div.gif" width="2" height="34" /></td>
+                <td align="center" valign="top"><a href="https://www.mpmt.mp.br/ouvidoria-client/cad_manifest.php" accesskey="n" target="_blank"><img src="/imagens_clientes/menu_fale.gif" width="86" height="33" border="0" /></a></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+<map name="tam_texto" id="tam_texto">
+  <area shape="rect" coords="4,10,20,27" href="#" onClick="fsize(10,'px','body');"/>
+  <area shape="rect" coords="25,6,48,27" href="#" onClick="fsize(14,'px','body');" />
+</map> 
+    
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="210" align="right" valign="top" background="/imagens_clientes/left_bg.gif">
+        
+                    				    
+
+				<table width="210" border="0" cellpadding="0" cellspacing="0">
+         
+        
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  ><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=46"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;A Instituição</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  onMouseOver="divMenu.show('MENU_45', this, 125, 5)" onmouseout="divMenu.hide('MENU_45')"><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=45" onmouseover="divMenu.show('MENU_45', this, 125, 5)" onmouseout="divMenu.hide('MENU_45')"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Corregedoria-Geral</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                                        <tr>
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" background="/imagens_clientes/lmenu_bg.gif"  class="trigger" ><font color="#FFFFFF" style="font-family:Arial, Helvetica, sans-serif"><div style="padding-left:15px;"><hr />
+          <a class="!MenuLateral" href="/index_int.php?sid=60" target="_self">&raquo;&nbsp;Acessibilidade</a></div></font></td>
+          
+          
+        </tr>
+                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  onMouseOver="divMenu.show('MENU_670', this, 125, 5)" onmouseout="divMenu.hide('MENU_670')"><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=670" onmouseover="divMenu.show('MENU_670', this, 125, 5)" onmouseout="divMenu.hide('MENU_670')"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Projetos</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  ><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=306"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Controle Interno</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                                        <tr>
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" background="/imagens_clientes/lmenu_bg.gif"  class="trigger" ><font color="#FFFFFF" style="font-family:Arial, Helvetica, sans-serif"><div style="padding-left:15px;"><hr />
+          <a class="!MenuLateral" href="https://mpmt.mp.br/index_int.php?sid=497" target="_self">&raquo;&nbsp;Concursos</a></div></font></td>
+          
+          
+        </tr>
+                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  ><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=47"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Departamentos</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  onMouseOver="divMenu.show('MENU_236', this, 125, 5)" onmouseout="divMenu.hide('MENU_236')"><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=236" onmouseover="divMenu.show('MENU_236', this, 125, 5)" onmouseout="divMenu.hide('MENU_236')"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Gestão Ambiental - MP Sustentável</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  ><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=103"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Legislação</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                                <tr>
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" background="/imagens_clientes/lmenu_bg.gif"  class="trigger" ><font color="#FFFFFF" style="font-family:Arial, Helvetica, sans-serif"><div style="padding-left:15px;margin-bottom: 5px;">
+          <a class="!MenuLateral" href="https://transparencia.mpmt.mp.br/include.php?id=24&tipo=3" target="_self">&raquo;&nbsp;Licitações</a></div></font></td>
+          
+          
+        </tr>
+                                
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  onMouseOver="divMenu.show('MENU_107', this, 125, 5)" onmouseout="divMenu.hide('MENU_107')"><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=107" onmouseover="divMenu.show('MENU_107', this, 125, 5)" onmouseout="divMenu.hide('MENU_107')"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Links</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  onMouseOver="divMenu.show('MENU_68', this, 125, 5)" onmouseout="divMenu.hide('MENU_68')"><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=68" onmouseover="divMenu.show('MENU_68', this, 125, 5)" onmouseout="divMenu.hide('MENU_68')"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Lotacionograma</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  ><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=58"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Notícias</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  onMouseOver="divMenu.show('MENU_67', this, 125, 5)" onmouseout="divMenu.hide('MENU_67')"><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=67" onmouseover="divMenu.show('MENU_67', this, 125, 5)" onmouseout="divMenu.hide('MENU_67')"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Órgãos Auxiliares</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                                <tr>
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" background="/imagens_clientes/lmenu_bg.gif"  class="trigger" ><font color="#FFFFFF" style="font-family:Arial, Helvetica, sans-serif"><div style="padding-left:15px;margin-bottom: 5px;">
+          <a class="!MenuLateral" href="planejamento.php" target="_self">&raquo;&nbsp;Planejamento Estratégico</a></div></font></td>
+          
+          
+        </tr>
+                                
+
+                                <tr>
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" background="/imagens_clientes/lmenu_bg.gif"  class="trigger" ><font color="#FFFFFF" style="font-family:Arial, Helvetica, sans-serif"><div style="padding-left:15px;margin-bottom: 5px;">
+          <a class="!MenuLateral" href="https://transparencia.mpmt.mp.br" target="_self">&raquo;&nbsp;Portal Transparência</a></div></font></td>
+          
+          
+        </tr>
+                                
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  onMouseOver="divMenu.show('MENU_61', this, 125, 5)" onmouseout="divMenu.hide('MENU_61')"><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=61" onmouseover="divMenu.show('MENU_61', this, 125, 5)" onmouseout="divMenu.hide('MENU_61')"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Procuradorias de Justiça Especializadas</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  ><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=271"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Todos Contra as Drogas</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  ><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=73"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Publicações DOE</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  ><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=50"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Terceiro Setor</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                        <tr>       
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" height="20" background="/imagens_clientes/lmenu_bg.gif"  class="trigger"  onMouseOver="divMenu.show('MENU_156', this, 125, 5)" onmouseout="divMenu.hide('MENU_156')"><div style="padding-left:15px;"><a target="_top" class="!MenuLateral" href="index_int.php?sid=156" onmouseover="divMenu.show('MENU_156', this, 125, 5)" onmouseout="divMenu.hide('MENU_156')"><p style="margin:0px 5px 7px 11px; text-indent:-11px;">&raquo;&nbsp;Turma de Uniformização</a></p>
+</div></td>
+ 
+        </tr>
+                                        
+
+                                        <tr>
+          <td width="10" align="center" background="/imagens_clientes/shd_left.gif"><img src="/imagens_clientes/transp.gif" width="10" height="10" /></td>
+          <td width="200" align="left" background="/imagens_clientes/lmenu_bg.gif"  class="trigger" ><font color="#FFFFFF" style="font-family:Arial, Helvetica, sans-serif"><div style="padding-left:15px;"><hr />
+          <a class="!MenuLateral" href="https://www.mpmt.mp.br/memorial/" target="_self">&raquo;&nbsp;Memorial</a></div></font></td>
+          
+          
+        </tr>
+                        
+
+                  <tr>
+            <td width="10" background="/imagens_clientes/shd_left_end.gif">&nbsp;</td>
+            <td width="200"><img src="/imagens_clientes/lmenu_bottom.gif" width="200" height="24" /></td>
+          </tr>
+        </table>
+<div id="MENU_45" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=304" onmouseover="divMenu.show('MENU_304', this, 143, 10)" onmouseout="divMenu.hide('MENU_304')">Relatório Anual de Atividades</a></div>
+	<div><a target="_top" href="index_int.php?sid=305" onmouseover="divMenu.show('MENU_305', this, 143, 10)" onmouseout="divMenu.hide('MENU_305')">Procedimentos Disciplinares em Geral</a></div>
+	<div><a target="_top" href="index_int.php?sid=150" onmouseover="divMenu.show('MENU_150', this, 143, 10)" onmouseout="divMenu.hide('MENU_150')">Cronograma de Correições</a></div>
+	<div><a target="_top" href="index_int.php?sid=134" onmouseover="divMenu.show('MENU_134', this, 143, 10)" onmouseout="divMenu.hide('MENU_134')">Plantão dos Promotores</a></div>
+	<div><a target="_top" href="index_int.php?sid=112" onmouseover="divMenu.show('MENU_112', this, 143, 10)" onmouseout="divMenu.hide('MENU_112')">Atos, Resoluções e Portarias</a></div>
+</div>
+<div id="MENU_61" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=62" onmouseover="divMenu.show('MENU_62', this, 143, 10)" onmouseout="divMenu.hide('MENU_62')">Criminal</a></div>
+	<div><a target="_self" href="index_les.php?sid=63">Cidadania</a></div>
+	<div><a target="_top" href="index_int.php?sid=64" onmouseover="divMenu.show('MENU_64', this, 143, 10)" onmouseout="divMenu.hide('MENU_64')">Patrimônio Público</a></div>
+	<div><a target="_top" href="index_int.php?sid=65" onmouseover="divMenu.show('MENU_65', this, 143, 10)" onmouseout="divMenu.hide('MENU_65')">Criança e Adolescente</a></div>
+	<div><a target="_blank" href="https://mpmt.mp.br/pjedaou">Meio ambiente e Ordem Urbanística</a></div>
+</div>
+<div id="MENU_63" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=688" onmouseover="divMenu.show('MENU_688', this, 143, 10)" onmouseout="divMenu.hide('MENU_688')">Ação Civil Publica</a></div>
+</div>
+<div id="MENU_67" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=75" onmouseover="divMenu.show('MENU_75', this, 143, 10)" onmouseout="divMenu.hide('MENU_75')">NARE</a></div>
+	<div><a target="_top" href="index_int.php?sid=76" onmouseover="divMenu.show('MENU_76', this, 143, 10)" onmouseout="divMenu.hide('MENU_76')">NACO</a></div>
+	<div><a target="_top" href="index_int.php?sid=77" onmouseover="divMenu.show('MENU_77', this, 143, 10)" onmouseout="divMenu.hide('MENU_77')">CAOP</a></div>
+	<div><a target="_top" href="index_int.php?sid=78" onmouseover="divMenu.show('MENU_78', this, 143, 10)" onmouseout="divMenu.hide('MENU_78')">CEAF</a></div>
+</div>
+<div id="MENU_68" class="menudiv" style="width: 140px">
+	<div><a target="_self" href="https://www.mpmt.mp.br/transparencia/conteudo.php?id=127&tipo=7">Organograma</a></div>
+	<div><a target="_self" href="https://mpmt.mp.br/transparencia/include.php?id=104&tipo=3">Procuradoria-Geral</a></div>
+	<div><a target="_self" href="https://mpmt.mp.br/transparencia/include.php?id=105&tipo=3">Promotorias</a></div>
+</div>
+<div id="MENU_74" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=83" onmouseover="divMenu.show('MENU_83', this, 143, 10)" onmouseout="divMenu.hide('MENU_83')">Orçamento Anual e Repasses Mensais</a></div>
+	<div><a target="_top" href="index_int.php?sid=84" onmouseover="divMenu.show('MENU_84', this, 143, 10)" onmouseout="divMenu.hide('MENU_84')">Execução Orçamentária e Financeira</a></div>
+	<div><a target="_top" href="index_int.php?sid=85" onmouseover="divMenu.show('MENU_85', this, 143, 10)" onmouseout="divMenu.hide('MENU_85')">Aquisições (Licitações)</a></div>
+	<div><a target="_top" href="index_int.php?sid=86" onmouseover="divMenu.show('MENU_86', this, 143, 10)" onmouseout="divMenu.hide('MENU_86')">Contratos e Atas</a></div>
+	<div><a target="_top" href="index_int.php?sid=135" onmouseover="divMenu.show('MENU_135', this, 143, 10)" onmouseout="divMenu.hide('MENU_135')">Convênios e Inst. Congêneres</a></div>
+	<div><a target="_top" href="index_int.php?sid=87" onmouseover="divMenu.show('MENU_87', this, 143, 10)" onmouseout="divMenu.hide('MENU_87')">Diárias e Adiantamentos</a></div>
+	<div><a target="_top" href="index_int.php?sid=88" onmouseover="divMenu.show('MENU_88', this, 143, 10)" onmouseout="divMenu.hide('MENU_88')">Pessoal</a></div>
+	<div><a target="_top" href="index_int.php?sid=89" onmouseover="divMenu.show('MENU_89', this, 143, 10)" onmouseout="divMenu.hide('MENU_89')">Capacitação</a></div>
+	<div><a target="_top" href="index_int.php?sid=90" onmouseover="divMenu.show('MENU_90', this, 143, 10)" onmouseout="divMenu.hide('MENU_90')">Lei de Responsabilidade Fiscal</a></div>
+	<div><a target="_top" href="index_int.php?sid=91" onmouseover="divMenu.show('MENU_91', this, 143, 10)" onmouseout="divMenu.hide('MENU_91')">Relatório de Gestão Institucional</a></div>
+</div>
+<div id="MENU_78" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=124" onmouseover="divMenu.show('MENU_124', this, 143, 10)" onmouseout="divMenu.hide('MENU_124')">Trabalhos Premiados</a></div>
+	<div><a target="_top" href="index_int.php?sid=126" onmouseover="divMenu.show('MENU_126', this, 143, 10)" onmouseout="divMenu.hide('MENU_126')">Eventos Nacionais</a></div>
+</div>
+<div id="MENU_107" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=120" onmouseover="divMenu.show('MENU_120', this, 143, 10)" onmouseout="divMenu.hide('MENU_120')">Associações dos MP´s Estaduais</a></div>
+	<div><a target="_top" href="index_int.php?sid=121" onmouseover="divMenu.show('MENU_121', this, 143, 10)" onmouseout="divMenu.hide('MENU_121')">Ministérios Públicos Estaduais</a></div>
+	<div><a target="_top" href="index_int.php?sid=122" onmouseover="divMenu.show('MENU_122', this, 143, 10)" onmouseout="divMenu.hide('MENU_122')">Tribunais</a></div>
+	<div><a target="_top" href="index_int.php?sid=123" onmouseover="divMenu.show('MENU_123', this, 143, 10)" onmouseout="divMenu.hide('MENU_123')">Outros</a></div>
+</div>
+<div id="MENU_124" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=147" onmouseover="divMenu.show('MENU_147', this, 143, 10)" onmouseout="divMenu.hide('MENU_147')">Cível</a></div>
+	<div><a target="_top" href="index_int.php?sid=148" onmouseover="divMenu.show('MENU_148', this, 143, 10)" onmouseout="divMenu.hide('MENU_148')">Criminal</a></div>
+	<div><a target="_top" href="index_int.php?sid=149" onmouseover="divMenu.show('MENU_149', this, 143, 10)" onmouseout="divMenu.hide('MENU_149')">Iniciativa Extrajudicial</a></div>
+</div>
+<div id="MENU_156" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=101" onmouseover="divMenu.show('MENU_101', this, 143, 10)" onmouseout="divMenu.hide('MENU_101')">Votos e Assentos</a></div>
+	<div><a target="_top" href="index_int.php?sid=102" onmouseover="divMenu.show('MENU_102', this, 143, 10)" onmouseout="divMenu.hide('MENU_102')">Resoluções</a></div>
+</div>
+<div id="MENU_236" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=242" onmouseover="divMenu.show('MENU_242', this, 143, 10)" onmouseout="divMenu.hide('MENU_242')">Peças do Programa</a></div>
+	<div><a target="_top" href="index_int.php?sid=243" onmouseover="divMenu.show('MENU_243', this, 143, 10)" onmouseout="divMenu.hide('MENU_243')">Links</a></div>
+	<div><a target="_top" href="index_int.php?sid=244" onmouseover="divMenu.show('MENU_244', this, 143, 10)" onmouseout="divMenu.hide('MENU_244')">Dicas</a></div>
+</div>
+<div id="MENU_305" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=308" onmouseover="divMenu.show('MENU_308', this, 143, 10)" onmouseout="divMenu.hide('MENU_308')">Pedido de Explicações</a></div>
+	<div><a target="_top" href="index_int.php?sid=309" onmouseover="divMenu.show('MENU_309', this, 143, 10)" onmouseout="divMenu.hide('MENU_309')">Sindicância</a></div>
+	<div><a target="_top" href="index_int.php?sid=310" onmouseover="divMenu.show('MENU_310', this, 143, 10)" onmouseout="divMenu.hide('MENU_310')">Processos Administrativos Diciplinares</a></div>
+</div>
+<div id="MENU_320" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=383" onmouseover="divMenu.show('MENU_383', this, 143, 10)" onmouseout="divMenu.hide('MENU_383')">Prestação de contas do ordenador de despesas</a></div>
+	<div><a target="_top" href="index_int.php?sid=411" onmouseover="divMenu.show('MENU_411', this, 143, 10)" onmouseout="divMenu.hide('MENU_411')">Cartão Corporativo e Suprimentos de Fundos</a></div>
+</div>
+<div id="MENU_321" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=362" onmouseover="divMenu.show('MENU_362', this, 143, 10)" onmouseout="divMenu.hide('MENU_362')">Prestadores de Serviço</a></div>
+</div>
+<div id="MENU_322" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=437" onmouseover="divMenu.show('MENU_437', this, 143, 10)" onmouseout="divMenu.hide('MENU_437')">servidores e membros com gratificacao</a></div>
+</div>
+<div id="MENU_328" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=464" onmouseover="divMenu.show('MENU_464', this, 143, 10)" onmouseout="divMenu.hide('MENU_464')">Editais</a></div>
+</div>
+<div id="MENU_330" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=403" onmouseover="divMenu.show('MENU_403', this, 143, 10)" onmouseout="divMenu.hide('MENU_403')">2013</a></div>
+	<div><a target="_top" href="index_int.php?sid=404" onmouseover="divMenu.show('MENU_404', this, 143, 10)" onmouseout="divMenu.hide('MENU_404')">2012</a></div>
+</div>
+<div id="MENU_331" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=405" onmouseover="divMenu.show('MENU_405', this, 143, 10)" onmouseout="divMenu.hide('MENU_405')">2013</a></div>
+	<div><a target="_top" href="index_int.php?sid=406" onmouseover="divMenu.show('MENU_406', this, 143, 10)" onmouseout="divMenu.hide('MENU_406')">2012</a></div>
+</div>
+<div id="MENU_333" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=514" onmouseover="divMenu.show('MENU_514', this, 143, 10)" onmouseout="divMenu.hide('MENU_514')">Relatórios CNMP</a></div>
+	<div><a target="_top" href="index_int.php?sid=486" onmouseover="divMenu.show('MENU_486', this, 143, 10)" onmouseout="divMenu.hide('MENU_486')">Processo Administrativo de Dispensa</a></div>
+</div>
+<div id="MENU_334" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=515" onmouseover="divMenu.show('MENU_515', this, 143, 10)" onmouseout="divMenu.hide('MENU_515')">Relatórios CNMP</a></div>
+	<div><a target="_top" href="index_int.php?sid=407" onmouseover="divMenu.show('MENU_407', this, 143, 10)" onmouseout="divMenu.hide('MENU_407')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=408" onmouseover="divMenu.show('MENU_408', this, 143, 10)" onmouseout="divMenu.hide('MENU_408')">2013</a></div>
+	<div><a target="_top" href="index_int.php?sid=490" onmouseover="divMenu.show('MENU_490', this, 143, 10)" onmouseout="divMenu.hide('MENU_490')">Processo Administrativo de Inexigibilidade</a></div>
+</div>
+<div id="MENU_362" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=364" onmouseover="divMenu.show('MENU_364', this, 143, 10)" onmouseout="divMenu.hide('MENU_364')">2013</a></div>
+</div>
+<div id="MENU_369" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=374" onmouseover="divMenu.show('MENU_374', this, 143, 10)" onmouseout="divMenu.hide('MENU_374')">2013</a></div>
+	<div><a target="_top" href="index_int.php?sid=375" onmouseover="divMenu.show('MENU_375', this, 143, 10)" onmouseout="divMenu.hide('MENU_375')">2012</a></div>
+</div>
+<div id="MENU_370" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=376" onmouseover="divMenu.show('MENU_376', this, 143, 10)" onmouseout="divMenu.hide('MENU_376')">2013</a></div>
+	<div><a target="_top" href="index_int.php?sid=377" onmouseover="divMenu.show('MENU_377', this, 143, 10)" onmouseout="divMenu.hide('MENU_377')">2012</a></div>
+</div>
+<div id="MENU_383" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=478" onmouseover="divMenu.show('MENU_478', this, 143, 10)" onmouseout="divMenu.hide('MENU_478')">PGJ</a></div>
+</div>
+<div id="MENU_384" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=567" onmouseover="divMenu.show('MENU_567', this, 143, 10)" onmouseout="divMenu.hide('MENU_567')">2013</a></div>
+	<div><a target="_top" href="index_int.php?sid=568" onmouseover="divMenu.show('MENU_568', this, 143, 10)" onmouseout="divMenu.hide('MENU_568')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=385" onmouseover="divMenu.show('MENU_385', this, 143, 10)" onmouseout="divMenu.hide('MENU_385')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=386" onmouseover="divMenu.show('MENU_386', this, 143, 10)" onmouseout="divMenu.hide('MENU_386')">2011</a></div>
+</div>
+<div id="MENU_388" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=565" onmouseover="divMenu.show('MENU_565', this, 143, 10)" onmouseout="divMenu.hide('MENU_565')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=566" onmouseover="divMenu.show('MENU_566', this, 143, 10)" onmouseout="divMenu.hide('MENU_566')">2015</a></div>
+</div>
+<div id="MENU_393" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=473" onmouseover="divMenu.show('MENU_473', this, 143, 10)" onmouseout="divMenu.hide('MENU_473')">PGJ</a></div>
+</div>
+<div id="MENU_395" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=557" onmouseover="divMenu.show('MENU_557', this, 143, 10)" onmouseout="divMenu.hide('MENU_557')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=558" onmouseover="divMenu.show('MENU_558', this, 143, 10)" onmouseout="divMenu.hide('MENU_558')">2015</a></div>
+	<div><a target="_top" href="index_int.php?sid=483" onmouseover="divMenu.show('MENU_483', this, 143, 10)" onmouseout="divMenu.hide('MENU_483')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=484" onmouseover="divMenu.show('MENU_484', this, 143, 10)" onmouseout="divMenu.hide('MENU_484')">2013</a></div>
+</div>
+<div id="MENU_396" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=555" onmouseover="divMenu.show('MENU_555', this, 143, 10)" onmouseout="divMenu.hide('MENU_555')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=556" onmouseover="divMenu.show('MENU_556', this, 143, 10)" onmouseout="divMenu.hide('MENU_556')">2015</a></div>
+	<div><a target="_top" href="index_int.php?sid=481" onmouseover="divMenu.show('MENU_481', this, 143, 10)" onmouseout="divMenu.hide('MENU_481')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=482" onmouseover="divMenu.show('MENU_482', this, 143, 10)" onmouseout="divMenu.hide('MENU_482')">2013</a></div>
+</div>
+<div id="MENU_397" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=559" onmouseover="divMenu.show('MENU_559', this, 143, 10)" onmouseout="divMenu.hide('MENU_559')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=560" onmouseover="divMenu.show('MENU_560', this, 143, 10)" onmouseout="divMenu.hide('MENU_560')">2015</a></div>
+	<div><a target="_top" href="index_int.php?sid=677" onmouseover="divMenu.show('MENU_677', this, 143, 10)" onmouseout="divMenu.hide('MENU_677')">2016</a></div>
+</div>
+<div id="MENU_398" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=561" onmouseover="divMenu.show('MENU_561', this, 143, 10)" onmouseout="divMenu.hide('MENU_561')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=562" onmouseover="divMenu.show('MENU_562', this, 143, 10)" onmouseout="divMenu.hide('MENU_562')">2015</a></div>
+</div>
+<div id="MENU_411" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=563" onmouseover="divMenu.show('MENU_563', this, 143, 10)" onmouseout="divMenu.hide('MENU_563')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=564" onmouseover="divMenu.show('MENU_564', this, 143, 10)" onmouseout="divMenu.hide('MENU_564')">2015</a></div>
+	<div><a target="_top" href="index_int.php?sid=412" onmouseover="divMenu.show('MENU_412', this, 143, 10)" onmouseout="divMenu.hide('MENU_412')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=413" onmouseover="divMenu.show('MENU_413', this, 143, 10)" onmouseout="divMenu.hide('MENU_413')">2013</a></div>
+</div>
+<div id="MENU_415" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=575" onmouseover="divMenu.show('MENU_575', this, 143, 10)" onmouseout="divMenu.hide('MENU_575')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=576" onmouseover="divMenu.show('MENU_576', this, 143, 10)" onmouseout="divMenu.hide('MENU_576')">2015</a></div>
+</div>
+<div id="MENU_416" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=573" onmouseover="divMenu.show('MENU_573', this, 143, 10)" onmouseout="divMenu.hide('MENU_573')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=574" onmouseover="divMenu.show('MENU_574', this, 143, 10)" onmouseout="divMenu.hide('MENU_574')">2015</a></div>
+	<div><a target="_top" href="index_int.php?sid=445" onmouseover="divMenu.show('MENU_445', this, 143, 10)" onmouseout="divMenu.hide('MENU_445')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=446" onmouseover="divMenu.show('MENU_446', this, 143, 10)" onmouseout="divMenu.hide('MENU_446')">2013</a></div>
+</div>
+<div id="MENU_417" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=571" onmouseover="divMenu.show('MENU_571', this, 143, 10)" onmouseout="divMenu.hide('MENU_571')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=572" onmouseover="divMenu.show('MENU_572', this, 143, 10)" onmouseout="divMenu.hide('MENU_572')">2015</a></div>
+	<div><a target="_top" href="index_int.php?sid=443" onmouseover="divMenu.show('MENU_443', this, 143, 10)" onmouseout="divMenu.hide('MENU_443')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=444" onmouseover="divMenu.show('MENU_444', this, 143, 10)" onmouseout="divMenu.hide('MENU_444')">2013</a></div>
+</div>
+<div id="MENU_423" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=448" onmouseover="divMenu.show('MENU_448', this, 143, 10)" onmouseout="divMenu.hide('MENU_448')">Legislação Sobre Acesso a Informação</a></div>
+</div>
+<div id="MENU_424" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=594" onmouseover="divMenu.show('MENU_594', this, 143, 10)" onmouseout="divMenu.hide('MENU_594')">2014</a></div>
+</div>
+<div id="MENU_434" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=593" onmouseover="divMenu.show('MENU_593', this, 143, 10)" onmouseout="divMenu.hide('MENU_593')">2014</a></div>
+</div>
+<div id="MENU_437" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=438" onmouseover="divMenu.show('MENU_438', this, 143, 10)" onmouseout="divMenu.hide('MENU_438')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=439" onmouseover="divMenu.show('MENU_439', this, 143, 10)" onmouseout="divMenu.hide('MENU_439')">2013</a></div>
+</div>
+<div id="MENU_441" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=442" onmouseover="divMenu.show('MENU_442', this, 143, 10)" onmouseout="divMenu.hide('MENU_442')">Projeto Mato Grosso sem Fumaça</a></div>
+</div>
+<div id="MENU_451" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=553" onmouseover="divMenu.show('MENU_553', this, 143, 10)" onmouseout="divMenu.hide('MENU_553')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=554" onmouseover="divMenu.show('MENU_554', this, 143, 10)" onmouseout="divMenu.hide('MENU_554')">2015</a></div>
+	<div><a target="_top" href="index_int.php?sid=471" onmouseover="divMenu.show('MENU_471', this, 143, 10)" onmouseout="divMenu.hide('MENU_471')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=472" onmouseover="divMenu.show('MENU_472', this, 143, 10)" onmouseout="divMenu.hide('MENU_472')">2013</a></div>
+</div>
+<div id="MENU_452" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=551" onmouseover="divMenu.show('MENU_551', this, 143, 10)" onmouseout="divMenu.hide('MENU_551')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=552" onmouseover="divMenu.show('MENU_552', this, 143, 10)" onmouseout="divMenu.hide('MENU_552')">2015</a></div>
+	<div><a target="_top" href="index_int.php?sid=469" onmouseover="divMenu.show('MENU_469', this, 143, 10)" onmouseout="divMenu.hide('MENU_469')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=470" onmouseover="divMenu.show('MENU_470', this, 143, 10)" onmouseout="divMenu.hide('MENU_470')">2013</a></div>
+</div>
+<div id="MENU_453" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=474" onmouseover="divMenu.show('MENU_474', this, 143, 10)" onmouseout="divMenu.hide('MENU_474')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=475" onmouseover="divMenu.show('MENU_475', this, 143, 10)" onmouseout="divMenu.hide('MENU_475')">2013</a></div>
+</div>
+<div id="MENU_464" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=465" onmouseover="divMenu.show('MENU_465', this, 143, 10)" onmouseout="divMenu.hide('MENU_465')">Licitações a partir de Julho/2013</a></div>
+</div>
+<div id="MENU_473" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=476" onmouseover="divMenu.show('MENU_476', this, 143, 10)" onmouseout="divMenu.hide('MENU_476')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=477" onmouseover="divMenu.show('MENU_477', this, 143, 10)" onmouseout="divMenu.hide('MENU_477')">2013</a></div>
+</div>
+<div id="MENU_478" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=569" onmouseover="divMenu.show('MENU_569', this, 143, 10)" onmouseout="divMenu.hide('MENU_569')">2013</a></div>
+	<div><a target="_top" href="index_int.php?sid=570" onmouseover="divMenu.show('MENU_570', this, 143, 10)" onmouseout="divMenu.hide('MENU_570')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=479" onmouseover="divMenu.show('MENU_479', this, 143, 10)" onmouseout="divMenu.hide('MENU_479')">2011</a></div>
+	<div><a target="_top" href="index_int.php?sid=480" onmouseover="divMenu.show('MENU_480', this, 143, 10)" onmouseout="divMenu.hide('MENU_480')">2012</a></div>
+</div>
+<div id="MENU_485" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=487" onmouseover="divMenu.show('MENU_487', this, 143, 10)" onmouseout="divMenu.hide('MENU_487')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=488" onmouseover="divMenu.show('MENU_488', this, 143, 10)" onmouseout="divMenu.hide('MENU_488')">2013</a></div>
+	<div><a target="_top" href="index_int.php?sid=495" onmouseover="divMenu.show('MENU_495', this, 143, 10)" onmouseout="divMenu.hide('MENU_495')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=496" onmouseover="divMenu.show('MENU_496', this, 143, 10)" onmouseout="divMenu.hide('MENU_496')">2015</a></div>
+</div>
+<div id="MENU_489" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=491" onmouseover="divMenu.show('MENU_491', this, 143, 10)" onmouseout="divMenu.hide('MENU_491')">2012</a></div>
+	<div><a target="_top" href="index_int.php?sid=492" onmouseover="divMenu.show('MENU_492', this, 143, 10)" onmouseout="divMenu.hide('MENU_492')">2013</a></div>
+	<div><a target="_top" href="index_int.php?sid=493" onmouseover="divMenu.show('MENU_493', this, 143, 10)" onmouseout="divMenu.hide('MENU_493')">2014</a></div>
+	<div><a target="_top" href="index_int.php?sid=494" onmouseover="divMenu.show('MENU_494', this, 143, 10)" onmouseout="divMenu.hide('MENU_494')">2015</a></div>
+</div>
+<div id="MENU_497" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=498" onmouseover="divMenu.show('MENU_498', this, 143, 10)" onmouseout="divMenu.hide('MENU_498')">Promotores</a></div>
+	<div><a target="_top" href="index_int.php?sid=499" onmouseover="divMenu.show('MENU_499', this, 143, 10)" onmouseout="divMenu.hide('MENU_499')">Servidores</a></div>
+	<div><a target="_top" href="index_int.php?sid=500" onmouseover="divMenu.show('MENU_500', this, 143, 10)" onmouseout="divMenu.hide('MENU_500')">Estagiários</a></div>
+	<div><a target="_top" href="index_int.php?sid=501" onmouseover="divMenu.show('MENU_501', this, 143, 10)" onmouseout="divMenu.hide('MENU_501')">Seleção Simplificada</a></div>
+</div>
+<div id="MENU_516" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=520" onmouseover="divMenu.show('MENU_520', this, 143, 10)" onmouseout="divMenu.hide('MENU_520')">Gestão de Pessoas</a></div>
+</div>
+<div id="MENU_517" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=524" onmouseover="divMenu.show('MENU_524', this, 143, 10)" onmouseout="divMenu.hide('MENU_524')">Telefones e Endereços</a></div>
+</div>
+<div id="MENU_518" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=527" onmouseover="divMenu.show('MENU_527', this, 143, 10)" onmouseout="divMenu.hide('MENU_527')">Lei Orçamentária Anual (LOA) e Ajustes</a></div>
+	<div><a target="_top" href="index_int.php?sid=528" onmouseover="divMenu.show('MENU_528', this, 143, 10)" onmouseout="divMenu.hide('MENU_528')">Execução de Despesa</a></div>
+</div>
+<div id="MENU_520" class="menudiv" style="width: 140px">
+	<div><a target="_top" href="index_int.php?sid=523" onmouseover="divMenu.show('MENU_523', this, 143, 10)" onmouseout="divMenu.hide('MENU_523')">Quadro de Servidores Cedidos</a></div>
+	<div><a target="_top" href="index_int.php?sid=546" onmouseover="divMenu.show('MENU_546', this, 143, 10)" onmouseout="divMenu.hide('MENU_546')">Lotacionograma</a></div>
+</div>
+<div id="MENU_670" class="menudiv" style="width: 140px">
+	<div><a target="_self" href="https://transparencia.mpmt.mp.br/conteudo.php?id=154&tipo=5">Acompanhamento</a></div>
+	<div><a target="_self" href="https://transparencia.mpmt.mp.br/conteudo.php?id=160&tipo=5">Projetos e campanhas</a></div>
+</div>  
+                    
+                    <table width="210" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+  <td><img src="/imagens_clientes/tarja_transparencia.png" alt="Intranet" width="210" height="45" /></td> 
+  </tr>
+  <tr>
+    <td align="center" valign="middle" style="height:110px"><a href="https://transparencia.mpmt.mp.br" accesskey="t"><img src="/imagens_clientes/tranparencia-logo-2.png" alt="Acessar" border="0" /></a></td>
+  </tr>
+</table>
+					<table width="210" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+  <td><img src="/imagens_clientes/tarja_sic.png" alt="Intranet" width="210" height="45" /></td> 
+  </tr>
+  <tr>
+    <td align="center" valign="middle" style="height:110px"><a href="https://transparencia.mpmt.mp.br/sic.php" accesskey="c"><img src="/imagens_clientes/logo_sic7.png" alt="Acessar" width="180" height="60" border="0" style="margin: 0 auto"/></a></td>
+  </tr>
+</table>
+
+					<style>
+	body {
+		background-color:#fff;
+		background-image:url("images/fundo.gif");
+		border:0;
+		padding:0;
+		margin:0;
+	}
+	.footer_titulo {
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		color: #000;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	#sobre-nos p {
+		font: 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+		color: #18200b;
+	}
+	.footer_text {
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		color: #FFFFFF;
+		font-size: 12px;
+	}	
+	#disable {
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		z-index:100;
+		padding:0;
+		margin:0;
+		border:0;
+		background-color:#fff;
+		background-image:url("images/loading1.gif");
+		background-position:top center;
+		background-repeat:no-repeat;
+		opacity:0.90;
+		-moz-opacity:0.90;
+		filter:alpha(opacity=90);
+	}
+</style>
+<script>
+function mascara(src, mask){
+   var i = src.value.length;
+   var saida = mask.substring(1,2);
+   var texto = mask.substring(i);
+   if (texto.substring(0,1) != saida)
+   {
+      src.value += texto.substring(0,1);
+   }
+}
+function valDado(e,campo){
+
+		document.getElementById('protocolo').maxLength = 15;
+		var tecla=(window.event)?event.keyCode:e.which;
+		if((tecla > 47 && tecla < 58 ) || (tecla == 13)){
+			   mascara(campo, '######-###/####');
+			   return true;
+			 }
+		else{
+		if (tecla != 8 ) return false;
+		else return true;
+		}
+}
+
+function clearForm(){
+	document.getElementById('idcomarca').selectedIndex = 0;
+	document.getElementById('parametro').selectedIndex = 0;
+	document.getElementById('protocolo').value = "";
+}
+function clearDado(elm){
+	document.getElementById('protocolo').value = "";
+	document.getElementById('protocolo').focus();
+	document.getElementById('protocolo').innerHTML = elm.options[elm.selectedIndex].text;
+}
+function valData(e,campo){
+	var tecla=(window.event)?event.keyCode:e.which;
+	if((tecla > 47 && tecla < 58 )){
+		   mascara(campo, '##/##/####');
+		   return true;
+		 }
+	else{
+	if (tecla != 8 ) return false;
+
+	else return true;
+	}	
+}
+function validar(){
+	if (document.getElementById('protocolo').value == ""){
+		alert("O Campo nao pode ser pesquisado!");
+		document.getElementById('protocolo').focus();
+		return false;
+	} else if (document.getElementById('protocolo').value.length < 3){
+		alert("O Campo dado deve ter no minimo 3 caracteres!");
+		document.getElementById('protocolo').focus();
+		return false;		
+	} else {
+		document.getElementById('submit').disabled='disable';
+		habilitandobotao();
+		
+	}
+}
+function habilitandobotao(){
+	
+	setTimeout("Enable()",5000);
+}
+function Enable(){
+	//alert("ok chamando Enable");
+	document.getElementById('submit').disabled = false;
+	document.getElementById('protocolo').value = "";
+	
+}
+</script>
+<table width="210" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+  <td><img src="/imagens_clientes/tarja_consulta_proc.png" alt="Intranet" width="210" height="45" /></td> 
+  </tr>
+  <tr>
+    <td align="center" valign="middle" style="height:45px">
+    	<form id="form1" target="_blank" name="form1" method="GET" action="transparencia/include.php" onsubmit="return validar();">
+            <input type="hidden" name="action" value="consultar" />
+            <input type="hidden" name="parametro" value="1" />
+            <input type="hidden" name="id" value="93" />
+            <input type="hidden" name="tipo" value="3" />
+            <input type="text" maxlength="15" name="dado" id="protocolo" placeholder="N&uacute;mero de Registro" onKeyPress="return valDado(event,this);return false;" style="width:140px; padding:5px; border:1px solid #aaa; border-radius:3.5px; font-size:14px;" />
+            <input type="image" src="imagens_clientes/lupa-24.png" />
+    	</form>
+    </td>
+  </tr>
+  <tr style="height:45px">
+    <td align="center"><a href="transparencia/include.php?id=93&tipo=3" accesskey="s"><span style="font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; color:#08f">pesquisa avan&ccedil;ada</span></a></td>
+  </tr>
+</table>
+ 
+                                       
+					<table width="210" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="/imagens_clientes/tarja_intranet.png" alt="Intranet" width="210" height="45" /></td>
+  </tr>
+  <tr>
+    <td>
+       <table width="200" border="0" cellspacing="2" cellpadding="2">
+          <tr>
+            <td align="right">
+              <table width="180" border="0" cellspacing="3" cellpadding="0">
+                <tr>
+                  <td align="center">
+                    <a href="https://intranet.mpmt.mp.br/login/"><img src="/imagens_clientes/btn_acessar.gif" title="Acessar Intranet" alt="Acessar Intranet" width="116" height="25" border="0" style="margin-top:5px;" accesskey="1" /></a>
+                   <!--<a href="erro.htm"><img src="/imagens_clientes/btn_acessar.gif" alt="Acessar" width="116" height="25" border="0" style="margin-top:5px;" /></a>-->
+                </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+      </table>
+    </td>
+  </tr>
+</table>  
+          
+                        <table width="210" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="/imagens_clientes/transp.gif" width="210" height="5" /></td>
+            </tr>
+            <tr>
+              <td><img src="/imagens_clientes/tarja_mp_jornaisi.png" alt="MP na M&iacute;dia" width="210" height="45" border="0" /></td>
+            </tr>
+            <tr>
+              <td align="right"><table width="200" border="0" cellspacing="5" cellpadding="5">
+                  <tr>
+                    <td align="right"><table width="180" border="0" cellspacing="3" cellpadding="0">
+                                            
+                      <tr>
+                        <td class="UltimasTitulo" > <span class="UltimasData"><div style="padding-left:0px;">16.09.16 10h40</div></span>
+            <a href="conteudo.php?cid=70205&sid=44" class="UltimasTitulo"><div style="padding-left:0px;">Prefeito de Sinop é alvo de investigação do Gaeco </div></a><div style="padding-left:0px;"></div></td>
+                      </tr>
+                      <tr>
+                        <td><img src="/imagens_clientes/transp.gif" width="10" height="5" /></td>
+                      </tr>
+                                            
+                      <tr>
+                        <td class="UltimasTitulo" > <span class="UltimasData"><div style="padding-left:0px;">16.09.16 10h39</div></span>
+            <a href="conteudo.php?cid=70204&sid=44" class="UltimasTitulo"><div style="padding-left:0px;">Cartão ao Portador não pode ser cobrado </div></a><div style="padding-left:0px;"></div></td>
+                      </tr>
+                      <tr>
+                        <td><img src="/imagens_clientes/transp.gif" width="10" height="5" /></td>
+                      </tr>
+                                            
+                      <tr>
+                        <td class="UltimasTitulo" > <span class="UltimasData"><div style="padding-left:0px;">08.09.16 13h32</div></span>
+            <a href="conteudo.php?cid=70149&sid=44" class="UltimasTitulo"><div style="padding-left:0px;">Permínio sofre nova derrota na Justiça </div></a><div style="padding-left:0px;"></div></td>
+                      </tr>
+                      <tr>
+                        <td><img src="/imagens_clientes/transp.gif" width="10" height="5" /></td>
+                      </tr>
+                                            
+                      <tr>
+                        <td class="UltimasTitulo" > <span class="UltimasData"><div style="padding-left:0px;">08.09.16 11h34</div></span>
+            <a href="conteudo.php?cid=70148&sid=44" class="UltimasTitulo"><div style="padding-left:0px;">Justiça de MT decreta falência de empresas </div></a><div style="padding-left:0px;"></div></td>
+                      </tr>
+                      <tr>
+                        <td><img src="/imagens_clientes/transp.gif" width="10" height="5" /></td>
+                      </tr>
+                                            
+                      <tr>
+                        <td class="UltimasTitulo" > <span class="UltimasData"><div style="padding-left:0px;">08.09.16 11h32</div></span>
+            <a href="conteudo.php?cid=70147&sid=44" class="UltimasTitulo"><div style="padding-left:0px;">Melhorias são  determinadas </div></a><div style="padding-left:0px;"></div></td>
+                      </tr>
+                      <tr>
+                        <td><img src="/imagens_clientes/transp.gif" width="10" height="5" /></td>
+                      </tr>
+                                          </table>
+                      <br />
+                        <a href="/index_int.php?sid=44" class="titulos"><img src="/imagens_clientes/btn_maismp.gif" alt="Mais MP" width="116" height="25" border="0" /></a><br /></td>
+                  </tr>
+              </table></td>
+            </tr>
+          </table>                                         <table width="210" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+  <td><img src="/imagens_clientes/tarja_rede_controle1.fw.png" alt="Intranet" width="210" height="45" /></td> 
+  </tr>
+  <tr>
+    <td align="center"><a href="portal_modelo.php" style="text-align:center;"><img src="/imagens_clientes/portal_transp_modelo.png" alt="Acessar" width="150" height="60" border="0" /></a></td>
+  </tr>
+</table>            
+ 
+          
+          </td>
+        <td width="20" background="/imagens_clientes/shd_mid.gif"><img src="/imagens_clientes/transp.gif" width="20" height="20" /></td>
+        <td valign="top" bgcolor="#FFFFFF">
+			
+        
+           	<!--  query: SELECT * FROM conteudos WHERE autorizado_con = '1' AND codigo_con = 70212 AND publica_con = '1' AND dataini_con <= NOW() --><script type="text/javascript" src="js/jquery1.js"></script>
+<script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+<script language="javascript">
+function Fotos() {
+	var gal = window.open( "galeria.php?cid=70212", 'Galeria', 'toolbars=no,menubar=no,status=yes,width=690,height=450' );
+	gal.focus();
+	return;
+}
+function tam(t) {
+	if (t==1) tf='9';
+	if (t==2) tf='24';
+	if (t==3) tf='36';
+	
+	document.getElementById('conteudotexto').style.fontSize=tf;
+}
+// Início do código de Aumentar/ Diminuir a letra
+ 
+// Para usar coloque o comando: "javascript:mudaTamanho('tag_ou_id_alvo', -1);" para diminuir
+// e o comando "javascript:mudaTamanho('tag_ou_id_alvo', +1);" para aumentar
+ 
+var tagAlvo = new Array('span','font','p'); //pega todas as tags p//
+ 
+// Especificando os possíveis tamanhos de fontes, poderia ser: x-small, small...
+var tamanhos = new Array('10px','11px','12px','13px','14px','15px','16px','50px','80px','90px' );
+var tamanhoInicial = 2;
+ 
+function mudaTamanho( idAlvo,acao ){
+  if (!document.getElementById) return
+  var selecionados = null,tamanho = tamanhoInicial,i,j,tagsAlvo;
+  tamanho += acao;
+  if ( tamanho < 0 ) tamanho = 0;
+  if ( tamanho > 10 ) tamanho = 10;
+  tamanhoInicial = tamanho;
+  if ( !( selecionados = document.getElementById( idAlvo ) ) ) selecionados = document.getElementsByTagName( idAlvo )[ 0 ];
+  
+  selecionados.style.fontSize = tamanhos[ tamanho ];
+  
+  for ( i = 0; i < tagAlvo.length; i++ ){
+    tagsAlvo = selecionados.getElementsByTagName( tagAlvo[ i ] );
+    for ( j = 0; j < tagsAlvo.length; j++ ) tagsAlvo[ j ].style.fontSize = tamanhos[ tamanho ];
+  }
+}
+// Fim do código de Aumentar/ Diminuir a letra
+ 
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('#gallery a').lightBox();
+    });
+    </script>
+   	<style type="text/css">
+	/* jQuery lightBox plugin - Gallery style */
+	#gallery {
+		
+	}
+	#gallery ul { list-style: none; }
+	#gallery ul li { display: inline; }
+	#gallery ul img {
+		border: 5px solid #3e3e3e;
+		border-width: 5px 5px 20px;
+	}
+	#gallery ul a:hover img {
+		border: 5px solid #fff;
+		border-width: 5px 5px 20px;
+		color: #fff;
+	}
+	#gallery ul a:hover { color: #fff; }
+</style>
+<table width="99%" border="0" align="center" cellpadding="5" cellspacing="3">
+<div id="tamanho-texto" align="right"><span class="ConteudoData">Tamanho 
+<a class="ConteudoData" title="Diminuir tamanho do texto" href="javascript:mudaTamanho('body', -1);"  style="font-size:9px;">A</a>&nbsp;<a class="ConteudoData" title="Aumentar tamanho do texto" href="javascript:mudaTamanho('body', 1);" style="font-size:16px;">A</a></span></div>
+	<tr>
+		<td class="TextoNormal">
+		          <span class="ConteudoChapeu">“CAIXA DOIS”</span><br />
+          <br>
+				          <span class="ConteudoTituloShow">Liminar concedida ao MPE obriga postos a efetivarem controle sobre fornecimento de combustíveis nestas eleições</span><br>
+						
+				            <br>
+          Por 
+		  		  <a href="mailto:imprensa@mpmt.mp.br" class="Titulo2">
+		  		  CLÊNIA GORETTH
+		  		  </a>
+		  		  		  <br>
+          
+                    Segunda, 19 de setembro de 2016, 16h27
+                    <br>
+		  <br>
+             		   <div id="gallery" >
+              <a  href="https://www.mpmt.mp.br/storage/webdisco/2016/09/05/original/a9424b2af0ea37cb144e3ae7cfc94c90.jpg">
+               <div style="font-size:9px;margin-left:70px">Clique Aqui para Ampliar <img src="images/b_lupa.png"/></div>
+              	<img align="left" src="https://www.mpmt.mp.br/storage/webdisco/2016/09/05/original/a9424b2af0ea37cb144e3ae7cfc94c90.jpg" width="180px" height="120px" style="border:1px solid #CCC;padding:5px 5px 5px 5px;margin-right:10px;margin-bottom:10px"/>
+              </a>
+         </div>
+         
+                    <div id="conteudotexto" style="width:100%;"><div style="text-align: justify;"><font size="2"><span style="font-family: Tahoma;">O Minist&eacute;rio P&uacute;blico Eleitoral obteve liminar que obriga os postos de combust&iacute;veis da Capital a fornecerem a rela&ccedil;&atilde;o dos tickets de combust&iacute;veis adquiridos por candidatos, pessoa jur&iacute;dica, legendas partid&aacute;rias, coliga&ccedil;&otilde;es e tamb&eacute;m por pessoas f&iacute;sicas que adquirirem&nbsp; quantidade superior a&nbsp; 100 litros . Na rela&ccedil;&atilde;o, dever&atilde;o constar o nome do adquirente, data da aquisi&ccedil;&atilde;o, valor total, n&uacute;mero de s&eacute;rie/lote dos tickets e os dados da pessoa respons&aacute;vel pela retirada.</span></font><br /><font size="2"><span style="font-family: Tahoma;"></span></font><br /><font size="2"><span style="font-family: Tahoma;">De acordo com o autor da a&ccedil;&atilde;o,&nbsp; promotor Eleitoral Vin&iacute;cius Gahyva Martins, a medida &eacute; preventiva e tem como&nbsp; objetivo&nbsp; evitar a distribui&ccedil;&atilde;o de requisi&ccedil;&otilde;es ou vale combust&iacute;vel a pessoas que n&atilde;o estiverem integrando o rol de colaboradores efetivos das respectivas campanhas eleitorais. Pretende-se, tamb&eacute;m, garantir um maior controle&nbsp; para apura&ccedil;&atilde;o de circunst&acirc;ncias que evidenciem os il&iacute;citos eleitorais.</span></font><br /><font size="2"><span style="font-family: Tahoma;"></span></font><br /><font size="2"><span style="font-family: Tahoma;">&ldquo;A aus&ecirc;ncia de controle pelos postos em rela&ccedil;&atilde;o &agrave; venda e utiliza&ccedil;&atilde;o dos tickets combust&iacute;veis &eacute; o que garante aos burladores a possibilidade da pr&aacute;tica do chamado caixa dois em campanhas eleitorais e de compra de votos de eleitores por meio de tais mecanismos de viola&ccedil;&atilde;o normativa&rdquo;, ressaltou o promotor.</span></font><br /><font size="2"><span style="font-family: Tahoma;"></span></font><br /><font size="2"><span style="font-family: Tahoma;">Segundo ele, h&aacute; uma preocupa&ccedil;&atilde;o por parte da Pol&iacute;cia Federal e do pr&oacute;prio MPE em rela&ccedil;&atilde;o ao fornecimento de combust&iacute;veis adquiridos com recursos arrecadados ilicitamente, j&aacute; que as doa&ccedil;&otilde;es de pessoas jur&iacute;dicas para candidatos foram vedadas pela legisla&ccedil;&atilde;o. Al&eacute;m disso, as investiga&ccedil;&otilde;es instauradas para apurar tal pr&aacute;tica esbarravam na falta de controle sobre a venda e utiliza&ccedil;&atilde;o de tickets durante o per&iacute;odo eleitoral. A Pol&iacute;cia Federal, por meio do delegado Carlos Augusto, ir&aacute; intensificar a fiscaliza&ccedil;&atilde;o.</span></font><br /><font size="2"><span style="font-family: Tahoma;"></span></font><br /><font size="2"><span style="font-family: Tahoma;">Na decis&atilde;o, o juiz Gon&ccedil;alo Antunes de Barros Neto enfatiza que o controle n&atilde;o deve ocorrer apenas em rela&ccedil;&atilde;o aos tickets, mas para todas as vendas de combust&iacute;veis, inclusive &agrave;quelas efetuadas por meio de requisi&ccedil;&otilde;es. Os postos ter&atilde;o at&eacute; o dia 12 de outubro ou 09 de novembro, na hip&oacute;tese de segundo turno nas elei&ccedil;&otilde;es majorit&aacute;rias, para fornecimento das informa&ccedil;&otilde;es de forma organizada.</span></font><br /><font size="2"><span style="font-family: Tahoma;"></span></font><br /><font size="2"><span style="font-family: Tahoma;">O promotor Eleitoral Vin&iacute;cius Gahyva Martins adiantou que o Sindicato do Com&eacute;rcio Varejista de Derivados de Petr&oacute;leo, G&aacute;s Natural e Biocombust&iacute;veis do Estado de Mato Grosso (SindiPetr&oacute;leo) j&aacute; foi informado da decis&atilde;o e comunicar&aacute; a todos os postos sobre as determina&ccedil;&otilde;es contidas na liminar.</span></font><br /><font size="2"><span style="font-family: Tahoma;"></span></font><br /><font size="2"><span style="font-family: Tahoma;">&nbsp;&nbsp;&nbsp; </span></font></div></div>
+		  <center>
+		  <a href="imprime.php?cid=70212&sid=58" target="_blank"><img src="images/bt_imprimir.gif" width="70" height="12" vspace="10" border="0"></a>&nbsp;
+		  <!--<a href="#" onClick="enviar(70212,58); return false;"><img src="images/bt_email.gif" width="71" height="13" vspace="10" border="0"></a><br />-->
+          <div name="enviadiv" id="enviadiv"></div>
+          </center>
+          		  
+							  
+		  <br>
+		  <table width="100%" border="0" cellspacing="1" cellpadding="2">
+            <tr>
+              <td class="TDHeader">Confira também:</td>
+            </tr>
+          </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td > <!-- query:58--><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="TextoNormal">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><table width="100%" border="0" cellspacing="1" cellpadding="2">
+			  	                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>19.09.16 16h27 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70212" class="ConteudoTitulo2">Liminar concedida ao MPE obriga postos a efetivarem controle sobre fornecimento de combustíveis nestas eleições</a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>16.09.16 16h23 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70209" class="ConteudoTitulo2">Liminar estabelece prazo de 90 dias para que município e construtora finalizem obras de escola em assentamento</a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>16.09.16 16h12 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70208" class="ConteudoTitulo2">MPE promove mais um debate neste sábado (17), em Chapada dos Guimarães</a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>16.09.16 16h07 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70207" class="ConteudoTitulo2">Gaeco acaba de prender ex-presidente da Câmara Municipal de Cuiabá</a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>16.09.16 11h25 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70206" class="ConteudoTitulo2">Aprimoramento funcional em defesa da vida</a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>16.09.16 09h23 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70203" class="ConteudoTitulo2">Liminar concedida ao MPE determina ao Estado construção de centro socioeducativo em Pontes e Lacerda</a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>15.09.16 13h54 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70202" class="ConteudoTitulo2">Sete mandados de busca e apreensão são cumpridos em Sinop e no Estado de Santa Catarina</a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>15.09.16 13h53 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70201" class="ConteudoTitulo2">População participa de audiência pública e cobra instalação de centro de internação socioeducativo</a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>15.09.16 11h51 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70200" class="ConteudoTitulo2">Nova sede do MPE proporciona maior visibilidade e atendimento digno à população</a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>15.09.16 08h50 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70195" class="ConteudoTitulo2">VI Encontro Estadual sobre o Tribunal do Júri começa nesta quinta-feira, às 19h30</a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>14.09.16 08h32 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70193" class="ConteudoTitulo2">MPE e OAB promovem 1º Jus Ambiental nesta quarta-feira (14) </a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>14.09.16 07h55 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70192" class="ConteudoTitulo2">Confira os assuntos que foram destaque na semana </a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>13.09.16 17h14 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70191" class="ConteudoTitulo2">Instituições definem metas de atuação </a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>13.09.16 16h39 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70190" class="ConteudoTitulo2">Promotores de Justiça afirmam que declarações são infundadas e repudiam tentativas de prejudicar investigações</a> </td>
+
+                  </tr>
+				                  <tr valign="top" class="ConteudoData"><td width="5%" align="right" nowrap>13.09.16 11h07 »</td>
+					  <td width="95%"><a href="conteudo.php?sid=58&cid=70180" class="ConteudoTitulo2">MPE promove medidas em razão do pagamento indevido de diárias na Câmara Municipal </a> </td>
+
+                  </tr>
+				              </table></td>
+            </tr>
+            <tr>
+              <td height="1" background="images/__fundo_cerrilhado.gif"></td>
+            </tr>
+          </table>
+		  
+			<table border="0" width="100%" align="center">
+
+              <tr class="Small">
+                <td width="25%" align="center"></td>
+                <td width="25%" align="center"></td>
+                <td width="25%" align="center">                  <a href="?pageNum_Pagina=1&cid=70212&sid=58&totalRows_Pagina=5970"><img src="images/__btnNext.gif" width="102" height="19" border=0></a>
+
+                  </td>
+                <td width="25%" align="center">                  <a href="?pageNum_Pagina=397&cid=70212&sid=58&totalRows_Pagina=5970"><img src="images/__btnLast.gif" width="102" height="19" border=0></a>
+                  </td>
+              </tr>
+            </table>		  <br>
+<br>
+
+	  </td>
+	</tr>
+</table>	  		</td>
+            </tr>
+          </table>
+		  <br>
+          		  <br>
+<br>
+
+	  </td>
+  </tr>
+</table>                                  
+                                  
+        </td>
+        <td width="20" bgcolor="#FFFFFF"><img src="/imagens_clientes/transp.gif" width="20" height="20" /></td>
+        <td width="220" valign="top" background="/imagens_clientes/right_bg.gif" bgcolor="#FFFFFF">
+        
+            			<table width="210" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="/imagens_clientes/tarja_ouvidoria.png" width="210" height="44" /></td>
+  </tr>
+  <tr>
+    <td>
+		<a href="conteudo_les.php?sid=280&cid=53339#menu" border="0" accesskey="o" title="Ouvidoria Geral"><img src="/imagens_clientes/logo_ouvidoria.png" border="0" /></a>
+    </td>
+  </tr>
+</table> 
+			 
+			
+						
+            <!--<table width="210" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="/imagens_clientes/tarja_concursos.png" width="210" height="44" /></td>
+  </tr>
+  <tr>
+    <td>
+		<a href="http://www.ufmt.br/concursos" border="0" target="_blank"><img src="/imagens_clientes/banner_concurso.gif" border="0" /></a>
+    </td>
+  </tr>
+</table> -->            
+            <table width="210" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="/imagens_clientes/tarja_caop_sigma.png" width="210" height="44" /></td>
+  </tr>
+  <tr>
+    <td>
+		<a href="https://www.mpmt.mp.br/sigma" border="0" title="SIGMA" target="_blank"><img src="/imagens_clientes/caixa_sigma1.png" border="0" /></a>
+    </td>
+  </tr>
+</table>  
+            
+			            
+ 			<table width="210" border="0" cellspacing="0" cellpadding="0">
+
+   <tr>
+   	 <td><a href="https://intranet.mpmt.mp.br/login/?url=index.php&destino=cronograma-caop.php" target="_blank" border="0" ><img src="/imagens_clientes/caop_cronograma_pericias.png" border="0" /></a></td>
+   </tr>
+</table>
+            <script src="../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script>
+function EnviaBusca2() {
+	var f = document.FORM2;
+	if( !f.keyword.value ) {
+		alert( "Informe um texto para pesquisa!" );
+		return;
+	}
+	document.location = 'arquivos.php?keyword=' + f.keyword.value;
+	return;
+}
+</script>
+<style type="text/css">
+<!--
+.topo01 {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #333333;
+	text-decoration: none;
+}
+-->
+</style>
+<table width="210" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><img src="/imagens_clientes/transp.gif" width="210" height="5" /></td>
+    </tr>
+    <tr>
+      <td><img src="/imagens_clientes/tarja_gal_fotos.png" alt="Galeria de Fotos" width="210" height="44" border="0" /></td>
+    </tr>
+    <tr>
+      <td>
+      	<div style="margin-left:11px;">
+			<script type="text/javascript">
+                AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','177','height','177','src','imagens_clientes/galeria_direita2','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','id','','wmode','transparent','movie','imagens_clientes/galeria_direita2' ); //end AC code
+            </script>
+            <noscript>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="177" height="177">
+            <param name="movie" value="imagens_clientes/galeria_direita2.swf" />
+            <param name="quality" value="high" />
+            <param name="wmode" value="transparent" />
+            <embed src="imagens_clientes/galeria_direita2.swf" width="177" height="177" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="transparent"></embed>
+            </object>
+            </noscript>      
+		</div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="galeria_imagens.php" class="titulos">
+            <img src="/imagens_clientes/btn_maisfotos.gif" alt="Mais Fotos" width="116" height="25" border="0" style="padding-bottom:5px;" />
+        </a>      
+      </td>
+    </tr>    
+</table>    
+			
+                        
+			<script language="javascript">
+function Intra() 
+{
+	var f = document.intra;
+	if(!f.login.value)
+	{
+		alert("Informe seu senha!");
+		f.login.focus();
+		return;
+	}
+	if(!f.senha.value)
+	{
+		alert("Informe sua senha!");
+		f.senha.focus();
+		return;
+	}
+	f.submit();
+}
+</script>
+<table width="204" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><img src="/imagens_clientes/tarja_busca.png" border="0" width="210" height="44"/></td>
+	</tr>
+</table>
+<form action="/busca.php" name="busca" method="get" id="busca">
+<table width="210" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center">
+        <input type="text" name="keyword" id="keyword" style="width:170px;" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+        <a href="#" onClick="javascript:window.document.getElementById('busca').submit(); return false;"><img src="imagens_clientes/btn_buscar.gif" alt="Buscar" width="116" height="25" border="0" style="margin-top:5px;" /></a>
+    </td>
+  </tr>
+  <tr>
+  	<td style="height:7px;"></td>
+  </tr>
+</table>
+</form>         
+
+                       
+          
+            <style type="text/css">
+.ConteudoDataExt12 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align:center;
+}
+
+.ConteudoTitulo12 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	color: #3a597c;
+	text-decoration: none;
+	text-align:center;
+}
+
+.ConteudoTitulo12 a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	color: #3a597c;
+	text-decoration: none;
+	text-align:center;
+}
+
+.ConteudoTitulo12 a:hover{
+	text-decoration:underline;
+}
+
+.ConteudoTexto12 {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #fff;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	letter-spacing: 0;
+	font-size: 13px;
+}
+
+.FoneTexto212 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #666666;
+	background-color: #EEEEEE;
+}
+#agenda{
+	margin:0 auto;
+	padding:3px 0px 3px 0px ;
+}
+#agenda table{
+background:#FFF;
+}
+</style>
+
+<div id="geral" style="margin:0 auto;">
+<table width="210" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="/imagens_clientes/tarja_agenda.png" alt="Agenda e Eventos" width="210" height="44" /></td>
+  </tr>
+  <tr>
+    <td>
+      <table width="200" border="0" cellspacing="3" cellpadding="3">
+        <tr>
+          <td align="center">
+            <table width="180" border="0" cellspacing="3" cellpadding="0">
+              <tr>
+                <td align="center">  </td>
+              </tr>
+            </table>
+            <a href="/agenda.php" class="titulos"><img src="/imagens_clientes/btn_maisagenda.gif" alt="Mais Agenda" width="116" height="25" border="0" /></a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>          
+            
+            <!--sql: SELECT codigo_con, dataini_con, secao_con, titulo_con, anexo_con, chamada_con, urlimgcapa_con FROM conteudos WHERE autorizado_con = '1' AND secao_con = 96
+ AND (lower(chapeu_con)='capa' OR lower(chapeu_con)='artigo' OR lower(chapeu_con)='entrevista') AND publica_con = '1' AND dataini_con <= NOW()  ORDER BY dataini_con DESC--><table width="210" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="/imagens_clientes/transp.gif" width="210" height="5" /></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens_clientes/tarja_entrevistas_artigos.png" alt="Entrevistas" width="210" height="44" /></td>
+  </tr>
+  <tr>
+    <td>
+      <table width="200" border="0" cellspacing="3" cellpadding="3">
+        <tr>
+          <td align="center">
+									<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+				<!--<tr>
+					<td style="font-family:arial, tahoma, verdana, helvelvita, sans-serif; font-size:8pt; text-align:center;">
+						Clique no botão abaixo e veja as ultimas entrevistas publicadas no site.
+					</td>
+				</tr>-->
+				<tr>
+					<td align="center">
+						<a href="/index_int.php?sid=96
+"><img src="imagens_clientes/btn_maisentrevistas.gif" width="116" height="25" alt="Entrevistas" border="0" /> </a> 
+					</td>
+				</tr>
+			</table>
+			        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td><img src="/imagens_clientes/transp.gif" width="210" height="20" /></td>
+  </tr>
+</table>           <!-- <img src="imagens_clientes/15_003_Unido_Contra_a_Corrupcao_2_1.png"  /> -->
+           <style type="text/css">
+  .window{
+    display:none;
+    width:50%;
+    height:500px;
+    position:fixed;
+    left:0;
+    top:0;
+    background:#FFF;
+    z-index:9900;
+    padding:10px;
+    border-radius:10px;
+}
+ 
+#mascara{
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+}
+ 
+.fechar{display:block; text-align:right;}
+
+  </style>
+  <script type="text/javascript">
+		$(document).ready(function(){
+				$("a[rel=modal]").click( function(ev){
+					ev.preventDefault();
+
+					var id = $(this).attr("href");
+
+					var alturaTela = $(document).height();
+					var larguraTela = $(window).width();
+	
+					//colocando o fundo preto
+					$('#mascara').css({'width':larguraTela,'height':alturaTela});
+					$('#mascara').fadeIn(1000);	
+					$('#mascara').fadeTo("slow",0.8);
+
+					var left = ($(window).width() /2) - ( $(id).width() / 2 );
+					var top = ($(window).height() / 2) - ( $(id).height() / 2 );
+					
+					$(id).css({'top':top,'left':left});
+					$(id).show();	
+ 				});
+
+ 				$("#mascara").click( function(){
+ 					$(this).hide();
+ 					$(".window").hide();
+ 				});
+
+ 				$('.fechar').click(function(ev){
+ 					ev.preventDefault();
+ 					$("#mascara").hide();
+ 					$(".window").hide();
+ 				});
+			});
+  </script>          
+            
+            </td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+      <tr>
+        <td background="/imagens_clientes/new-footer-bg.gif" style="border-top:1px solid #d7d7d7;"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="1"><img src="/imagens_clientes/transp.gif" width="1" height="153" /></td>
+            <td><table width="100%" border="0" cellspacing="5" cellpadding="5">
+              <tr>
+                <td width="300" valign="top"><p class="footer_titulo">Missão</p>
+                    <div id="sobre-nos"><p>Defender o regime democrático, a ordem jurídica e os interesses sociais e individuais indisponíveis, buscando a justiça social e o pleno exercício da cidadania.</p></div>
+            
+								</td>
+                <td valign="top"><p class="footer_titulo">Mapa do Site</p>
+                    <table border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=46">&raquo;&nbsp;A Instituição</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="https://www.mpmt.mp.br/index_int.php?sid=303">&raquo;&nbsp;Teclas de Atalho</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=45">&raquo;&nbsp;Corregedoria-Geral</a></td>
+</tr><tr><td valign="top" nowrap><a target="_top" class="MapaSite" href="/index_int.php?sid=60">&raquo;&nbsp;Acessibilidade</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="https://mpmt.mp.br/campanhas.php">&raquo;&nbsp;Projetos</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=306">&raquo;&nbsp;Controle Interno</a></td>
+</tr><tr><td valign="top" nowrap><a target="_top" class="MapaSite" href="https://mpmt.mp.br/index_int.php?sid=497">&raquo;&nbsp;Concursos</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=47">&raquo;&nbsp;Departamentos</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=236">&raquo;&nbsp;Gestão Ambiental - MP Sustentável</a></td>
+</tr><tr><td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=103">&raquo;&nbsp;Legislação</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="https://transparencia.mpmt.mp.br/include.php?id=24&tipo=3">&raquo;&nbsp;Licitações</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=107">&raquo;&nbsp;Links</a></td>
+</tr><tr><td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=68">&raquo;&nbsp;Lotacionograma</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=58">&raquo;&nbsp;Notícias</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=67">&raquo;&nbsp;Órgãos Auxiliares</a></td>
+</tr><tr><td valign="top" nowrap><a target="_top" class="MapaSite" href="planejamento.php">&raquo;&nbsp;Planejamento Estratégico</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="https://transparencia.mpmt.mp.br">&raquo;&nbsp;Portal Transparência</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=61">&raquo;&nbsp;Procuradorias de Justiça Especializadas</a></td>
+</tr><tr><td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=73">&raquo;&nbsp;Publicações DOE</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=271">&raquo;&nbsp;Todos Contra as Drogas</a></td>
+<td valign="top" nowrap><a target="_top" class="MapaSite" href="index_int.php?sid=50">&raquo;&nbsp;Terceiro Setor</a></td>
+</tr></tr>
+</table>            
+	                    
+                  </td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+          	<td colspan="2">
+            	<table width="100%" >
+                	<tr>
+                    	<td width="50%" style="padding-left:10px; border-top:1px dotted #bfbfbf;" >
+	                        <br />
+                            <p   style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:16pt; font-weight:bold; margin:0;">Procuradoria Geral de Justiça</p>
+                            <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11pt; margin:0;">Rua Quatro, s/nº</p>
+                            <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11pt; margin:0;">Centro Politico e Administrativo - Cuiabá/MT</p>
+                            <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11pt; margin:0;">CEP: 78049-921</p>
+                            <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11pt; margin:0;">Fone: (65) 3613-5100</p>
+                        </td>
+                        <td style="padding-left:10px; border-top:1px dotted #bfbfbf;">
+                        	<br />
+                            <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:16pt; font-weight:bold; margin:0;">Sede das Promotorias de Justiça da Capital</p>
+                            <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11pt; margin:0;">Av. Desembargador Milton Figueiredo Ferreira Mendes, s/nº</p>
+                            <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11pt; margin:0;">Setor D - Centro Politico e Administrativo - Cuiabá/MT</p>
+                            <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11pt; margin:0;">CEP: 78049-928</p>
+                            <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11pt; margin:0;">Fone: (65) 3611-0600</p>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2">
+                        	<p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:10pt; text-align:center; margin:0;">Horário de atendimento ao público externo e protocolo: 08h às 18h</p>
+                            <a type="application/rss+xml" href="http://mpmt.mp.br/feed/mpmtsite.rss"><img src="images/feedmpmt.png" style="margin-left:10px;margin-top:20px" border="0"/></a>
+                             <a href="https://chrome.google.com/webstore/detail/speakit/pgeolalilifpodheeocdmbhehgnkkbak?utm_source=chrome-app-launcher-info-dialogSpeakIt" target="_blank"><img src="images/Select-Language.png" style="float:right;margin-right:10px;margin-bottom:5px" border="0"/></a>
+                            <a href="http://www.vlibras.gov.br/" target="_blank"><img src="images/vlibras.fw.png" style="float:right;margin-right:10px;margin-bottom:5px" border="0"/></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+          </tr>
+        </table></td>
+      </tr>
+      
+      <tr>
+        <td bgcolor="#730a0a"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="34"><img src="/imagens_clientes/transp.gif" width="34" height="60" /></td>
+            <td align="center"><span class="footer_text">Minist&eacute;rio P&uacute;blico do Estado de Mato Grosso - Procuradoria Geral de Justi&ccedil;a</span></td>
+            <td width="40" valign="bottom"><img src="/imagens_clientes/tnx_logo.gif" width="34" height="14" style="margin-bottom:5px;" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>          
+
+    </td>
+  </tr>
+</table>
+<map name="tam_texto" id="tam_texto">
+<area shape="rect" coords="3,9,21,26"  href="javascript:mudaFonte('menos');" onKeyDown="#REDUZFONTE" />
+<area shape="rect" coords="25,6,49,26" href="javascript:mudaFonte('mais');" onKeyUp="#AUMENTAFONTE" />
+</map></body>
+
+</html>

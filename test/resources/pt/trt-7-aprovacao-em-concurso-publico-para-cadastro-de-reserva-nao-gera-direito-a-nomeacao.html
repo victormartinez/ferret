@@ -1,0 +1,569 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+
+<head>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> <!-- necessário para funcionar o iframe no IE8 -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="TRT/CE - Divisão de Comunicação Social" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Aprovação em concurso público para cadastro de reserva não gera direito à nomeação</title>
+  <link href="/templates/trt7/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="modules/mod_nice_social_bookmark/css/nsb-opac.css" type="text/css" />
+  <link rel="stylesheet" href="/media/jui/css/chosen.css" type="text/css" />
+  <link rel="stylesheet" href="/media/com_finder/css/finder.css" type="text/css" />
+  <link rel="stylesheet" href="/modules/mod_slideshowck/themes/trt7/css/camera.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans" type="text/css" />
+  <style type="text/css">
+/* Multithumb 3.7.2 */
+ .multithumb {
+   margin: 5px;
+   margin-right: 1em;
+   float: left;
+   max-width: 300px;
+}
+.multithumb:nth-child(odd) {
+  clear: left;
+}
+.multithumb_blog {
+float: left;
+}
+ .mtGallery {     margin: 5px;     align: center;     float: none;  }
+.mtCapStyle {
+  color: black;
+  background-color: #ddd;
+  margin: 2px 4px;
+  text-align:center;
+  white-space: pre-wrap;
+  font-size: 9px;
+  max-width: 325px;
+}.nsb_container a.icons{
+	padding:px; float:none; display:inline-block;
+}#plusone{padding:px !important;}#camera_wrap_131 .camera_pag_ul li img, #camera_wrap_131 .camera_thumbs_cont ul li > img {height:100px;}
+#camera_wrap_131 .camera_caption {
+	display: block;
+	position: absolute;
+}
+#camera_wrap_131 .camera_caption > div {
+	-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;font-size: 12px;font-family:'Droid Sans';
+}
+#camera_wrap_131 .camera_caption > div div.slideshowck_description {
+	font-size: 10px;
+}
+
+@media screen and (max-width: 480px) {
+		.camera_caption {
+			font-size: 0.6em !important;
+		}
+}
+  </style>
+  <script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="/media/jui/js/chosen.jquery.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery.autocomplete.min.js" type="text/javascript"></script>
+  <script src="/modules/mod_slideshowck/assets/jquery.easing.1.3.js" type="text/javascript"></script>
+  <script src="/modules/mod_slideshowck/assets/camera.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(document).ready(function(){
+	jQuery('.hasTooltip').tooltip({"html": true,"container": "body"});
+});
+		jQuery(document).ready(function (){
+			jQuery('select').chosen({"disable_search_threshold":10,"search_contains":true,"allow_single_deselect":true,"placeholder_text_multiple":"Selecione alguma op\u00e7\u00e3o","placeholder_text_single":"Selecione uma op\u00e7\u00e3o","no_results_text":"Sem resultados correspondentes"});
+		});
+	
+jQuery(document).ready(function() {
+	var value, searchword = jQuery('#mod-finder-searchword');
+
+		// Get the current value.
+		value = searchword.val();
+
+		// If the current value equals the default value, clear it.
+		searchword.on('focus', function ()
+		{
+			var el = jQuery(this);
+
+			if (el.val() === 'Pesquisar...')
+			{
+				el.val('');
+			}
+		});
+
+		// If the current value is empty, set the previous value.
+		searchword.on('blur', function ()
+		{
+			var el = jQuery(this);
+
+			if (!el.val())
+			{
+				el.val(value);
+			}
+		});
+
+		jQuery('#mod-finder-searchform').on('submit', function (e)
+		{
+			e.stopPropagation();
+			var advanced = jQuery('#mod-finder-advanced');
+
+			// Disable select boxes with no value selected.
+			if (advanced.length)
+			{
+				advanced.find('select').each(function (index, el)
+				{
+					var el = jQuery(el);
+
+					if (!el.val())
+					{
+						el.attr('disabled', 'disabled');
+					}
+				});
+			}
+		});
+	var suggest = jQuery('#mod-finder-searchword').autocomplete({
+		serviceUrl: '/index.php?option=com_finder&amp;task=suggestions.suggest&amp;format=json&amp;tmpl=component',
+		paramName: 'q',
+		minChars: 1,
+		maxHeight: 400,
+		width: 300,
+		zIndex: 9999,
+		deferRequestBy: 500
+	});});
+  </script>
+
+
+<link rel="stylesheet" href="http://www.trt7.gov.br/templates/system/css/system.css" type="text/css" />
+<link rel="stylesheet" href="http://www.trt7.gov.br/templates/system/css/general.css" type="text/css" />
+<link rel="stylesheet" href="http://www.trt7.gov.br/templates/trt7/css/template.css" type="text/css" />
+
+<script language="javascript" type="text/javascript" src="http://www.trt7.gov.br/templates/trt7/js/ja.script.js"></script>
+<script language="javascript" type="text/javascript" src="http://www.trt7.gov.br/templates/trt7/js/contraste.js"></script>
+
+<script language="javascript" type="text/javascript">
+var rightCollapseDefault='show';
+var excludeModules='38';
+</script>
+<script language="javascript" type="text/javascript" src="http://www.trt7.gov.br/templates/trt7/js/ja.rightcol.js"></script>
+
+<link rel="stylesheet" href="http://www.trt7.gov.br/templates/trt7/css/menu.css" type="text/css" />
+
+<link rel="stylesheet" href="http://www.trt7.gov.br/templates/trt7/css/ja-sosdmenu.css" type="text/css" />
+<script language="javascript" type="text/javascript" src="http://www.trt7.gov.br/templates/trt7/js/ja.cssmenu.js"></script>
+
+<link rel="stylesheet" href="http://www.trt7.gov.br/templates/trt7/styles/elements/blue/style.css" type="text/css" />
+
+<link rel="stylesheet" href="http://www.trt7.gov.br/templates/trt7/css/contraste.css" type="text/css" />
+
+<!--[if IE 7.0]>
+<style type="text/css">
+.clearfix {display: inline-block;}
+</style>
+<![endif]-->
+
+<style type="text/css">
+#ja-header,#ja-mainnav,#ja-container,#ja-botsl,#ja-footer {width: 940px;margin: 0 auto;}
+#ja-wrapper {min-width: 941px;}
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-17247436-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+<body id="bd" class="fs3 Others" >
+<noscript>Atenção: é preciso habilitar a utilização de Javascript para que este portal seja plenamente utilizado.</noscript>
+<a name="Top" id="Top"></a>
+<ul class="accessibility">
+	<li><a href="#ja-content" title="Ir para conteúdo">Ir para conteúdo</a></li>
+	<li><a href="#ja-mainnav" title="Ir para navegação principal">Ir para navegação principal</a></li>
+	<li><a href="#ja-col1" title="Ir para 1ª coluna">Ir para 1ª coluna</a></li>
+	<li><a href="#ja-col2" title="Ir para 2ª coluna">Ir para 2ª coluna</a></li>
+</ul>
+
+<div id="ja-wrapper">
+
+<!-- BEGIN: HEADER -->
+<div id="ja-headerwrap">
+
+	<div id="ja-header" class="clearfix" style="background: url(http://www.trt7.gov.br/templates/trt7/images/header/) no-repeat top right;">
+
+	<div class="ja-headermask">&nbsp;</div>
+
+			<h1 class="logo">
+			<a href="index.php" title="Tribunal Regional do Trabalho da 7ª Região"><span>Tribunal Regional do Trabalho da 7ª Região</span></a>
+		</h1>
+	
+        <div class="header_banner">
+        	
+		<!--[if lte IE 7]>
+		<link href="/modules/mod_slideshowck/themes/trt7/css/camera_ie.css" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		<!--[if IE 8]>
+		<link href="/modules/mod_slideshowck/themes/trt7/css/camera_ie8.css" rel="stylesheet" type="text/css" />
+		<![endif]--><script type="text/javascript">
+       jQuery(function(){
+        jQuery('#camera_wrap_131').camera({
+                height: '100',
+                minHeight: '',
+                pauseOnClick: false,
+                hover: 1,
+                fx: 'scrollLeft',
+                loader: 'pie',
+                pagination: 1,
+                thumbnails: 0,
+                thumbheight: 100,
+                thumbwidth: 500,
+                time: 5000,
+                transPeriod: 1500,
+                alignment: 'center',
+                autoAdvance: 1,
+                mobileAutoAdvance: 1,
+                portrait: 0,
+                barDirection: 'leftToRight',
+                imagePath: '/modules/mod_slideshowck/images/',
+                lightbox: 'mediaboxck',
+                fullpage: 0,
+				mobileimageresolution: '0',
+                navigationHover: false,
+					mobileNavHover: false,
+					navigation: false,
+					playPause: false,
+                barPosition: 'bottom',
+				container: ''
+        });
+}); </script><!-- debut Slideshow CK -->
+<div class="slideshowck camera_wrap camera_grey_skin" id="camera_wrap_131" style="width:504px;">
+			<div data-thumb="/images/banners/horizontais/th/feirao_horizontal_2016_th.jpg" data-src="/images/banners/horizontais/feirao_horizontal_2016.jpg" data-link="http://www.trt7.jus.br/index.php?option=com_content&view=article&id=2955:feirao-da-justica-do-trabalho-vende-bens-penhorados-com-descontos-de-55-a-90&catid=152&Itemid=302" data-target="_blank">
+					</div>
+		<div data-thumb="/images/banners/horizontais/th/banner_leilao_unificado_jt_th.jpg" data-src="/images/banners/horizontais/banner_leilao_unificado_jt.jpg" data-link="http://www.trt7.jus.br/index.php?option=com_content&view=article&id=2969:justica-do-trabalho-realiza-leilao-de-bens-penhorados-no-cariri&catid=152&Itemid=302" data-target="_blank">
+					</div>
+		<div data-thumb="/images/banners/horizontais/th/site_execucao_2016_th.jpg" data-src="/images/banners/horizontais/site_execucao_2016.jpg" data-link="http://www.trt7.jus.br/index.php?option=com_chronoforms5&chronoform=semanaNacionalExecucao" data-target="_blank">
+					</div>
+		<div data-thumb="/images/banners/horizontais/th/trabalhoinfantil_rota_th.png" data-src="/images/banners/horizontais/trabalhoinfantil_rota.png" data-link="http://www.trt7.jus.br/trabalhoinfantil/" data-target="_blank">
+					</div>
+		<div data-thumb="/images/banners/horizontais/th/banner_trabalho seguro_th.jpg" data-src="/images/banners/horizontais/banner_trabalho seguro.jpg" data-link="http://www.trt7.jus.br/trabalhoseguro/" data-target="_blank">
+					</div>
+</div>
+<div style="clear:both;"></div>
+<!-- fin Slideshow CK -->
+
+        </div>
+        
+	<div id="acessibilidade">
+			<ul class="ja-usertools-font">
+	      <li><img style="cursor: pointer;" title="Increase font size" src="http://www.trt7.gov.br/templates/trt7/images/user-increase.png" alt="Increase font size" id="ja-tool-increase" onclick="switchFontSize('trt7_ja_font','inc'); return false;" onkeypress="switchFontSize('trt7_ja_font','inc'); return false;" /></li>
+		  <li><img style="cursor: pointer;" title="Default font size" src="http://www.trt7.gov.br/templates/trt7/images/user-reset.png" alt="Default font size" id="ja-tool-reset" onclick="switchFontSize('trt7_ja_font',3); return false;" onkeypress="switchFontSize('trt7_ja_font',3); return false;" /></li>
+		  <li><img style="cursor: pointer;" title="Decrease font size" src="http://www.trt7.gov.br/templates/trt7/images/user-decrease.png" alt="Decrease font size" id="ja-tool-decrease" onclick="switchFontSize('trt7_ja_font','dec'); return false;" onkeypress="switchFontSize('trt7_ja_font','dec'); return false;" /></li>
+		</ul>
+		<script type="text/javascript">var CurrentFontSize=parseInt('3');</script>
+		  <ul class="ja-usertools-font">
+    <li><a href="#" title="Mudar contraste" onclick="mudarContraste(); return false;"><img src="http://www.trt7.gov.br/templates/trt7/images/icone_altocontraste.png" alt="Mudar contraste" /></a></li> <li><a href="http://www.trt7.jus.br/index.php?option=com_content&view=article&id=2875" title="Acessível por Libras"><img class="libras" src="http://www.trt7.gov.br/templates/trt7/images/icone_libras.jpg" alt="Acessível por Libras"/></a></li>
+
+  </ul>
+  </div>
+
+			<div id="ja-search">
+			
+<form id="mod-finder-searchform" action="/index.php?option=com_finder&amp;view=search" method="get" class="form-search">
+	<div class="finder">
+		<label for="mod-finder-searchword" class="element-invisible finder">Pesquisar</label><br /><input type="text" name="q" id="mod-finder-searchword" class="search-query input-medium" size="25" value="" placeholder="Pesquisar..."/>
+						<input type="hidden" name="option" value="com_finder" /><input type="hidden" name="view" value="search" /><input type="hidden" name="Itemid" value="302" />	</div>
+</form>
+
+
+<div class="custom icones"  >
+	<div style="text-align: right; float: right; clear: right; width: 230px; margin-top: 5px;">
+	<a href="http://www.trt7.jus.br/twitter" target="_blank"><img alt="Siga-nos no Twitter" src="images/twitter.png" style="margin-left: 1%; width: 22px; height: 22px;" title="Siga-nos no Twitter" /></a> <a href="http://www.trt7.jus.br/youtube" target="_blank"><img alt="Assista ao canal do TRT7 no YouTube" src="images/yt.png" style="margin-left: 1%; width: 22px; height: 22px;" title="Assista ao canal do TRT7 no YouTube" /></a> <a href="index.php?option=com_content&amp;view=category&amp;id=143&amp;Itemid=302&amp;format=feed&amp;type=rss" target="_blank"><img alt="Acompanhe as notícias por RSS" src="images/rss.png" style="margin-left: 1%; width: 22px; height: 22px;" title="Acompanhe as notícias por RSS" /></a>&nbsp; <a href="http://www.trt7.jus.br/facebook" target="_blank"><img alt="Página do Facebook do TRT7" src="images/face.jpg" style="margin-left: 1%; width: 22px; height: 22px;" title="Página do Facebook do TRT7" /></a> <a href="http://www.trt7.jus.br/fotos" target="_blank"><img alt="Página do TRT7 no Flickr" src="images/flickr.png" style="margin-left: 1%; width: 22px; height: 22px;" title="Página do TRT7 no Flickr" /></a> <a href="https://soundcloud.com/trtceara" target="_blank"><img alt="Página do TRT7 no SoundCloud" class="cke-resize" src="images/soundcloud.png" style="margin-left: 1%; width: 22px; height: 22px;" title="Página do TRT7 no SoundCloud" /></a></div>
+<div id="ckimgrsz" style="left: 1104px; top: 5px;">
+	<div class="preview">
+		&nbsp;</div>
+</div>
+</div>
+
+		</div>
+	
+	</div>
+</div>
+<!-- END: HEADER -->
+
+<!-- BEGIN: MAIN NAVIGATION -->
+<div id="ja-mainnavwrap">
+	<div id="ja-mainnav" class="clearfix">
+	<ul class="nav menu">
+<li class="item-99 deeper parent"><a href="/index.php?option=com_content&amp;view=categories&amp;id=144&amp;Itemid=99" >INSTITUCIONAL</a><ul class="nav-child unstyled small"><li class="item-98"><a href="/index.php?option=com_content&amp;view=article&amp;id=48&amp;Itemid=98" >1ª Instância</a></li><li class="item-97"><a href="/index.php?option=com_content&amp;view=article&amp;id=56&amp;Itemid=97" >2ª Instância</a></li><li class="item-659"><a href="/index.php?option=com_content&amp;view=article&amp;id=2870&amp;Itemid=659" >Cadeia de Valor</a></li><li class="item-104 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;id=94&amp;Itemid=104" >Comendas</a><ul class="nav-child unstyled small"><li class="item-258"><a href="/index.php?option=com_content&amp;view=article&amp;id=228&amp;Itemid=258" >Labor et Justitia</a></li><li class="item-259"><a href="/index.php?option=com_content&amp;view=article&amp;id=61&amp;Itemid=259" >Ordem Alencarina</a></li></ul></li><li class="item-102"><a href="/index.php?option=com_content&amp;view=article&amp;id=59&amp;Itemid=102" >Comissões Permanentes</a></li><li class="item-100"><a href="/index.php?option=com_content&amp;view=article&amp;id=57&amp;Itemid=100" >Corregedoria</a></li><li class="item-224"><a href="http://www.trt7.jus.br/escolajudicial/" target="_blank" >Escola Judicial</a></li><li class="item-101"><a href="files/institucional/estrutura_administrativa_TRT7.pdf" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,');return false;" >Estrutura Administrativa</a></li><li class="item-226"><a href="/index.php?option=com_content&amp;view=article&amp;id=154&amp;Itemid=226" >Gestão Ambiental</a></li><li class="item-103"><a href="http://www.trt7.jus.br/pe/" >Gestão Estratégica</a></li><li class="item-622"><a href="/index.php?option=com_content&amp;view=article&amp;id=2621&amp;Itemid=622" >Governança de Pessoas</a></li><li class="item-491"><a href="/index.php?option=com_content&amp;view=category&amp;id=168&amp;Itemid=487" >Governança de TI</a></li><li class="item-306"><a href="http://www.trt7.jus.br/images/comunicacao/imagens_site/mapa_jurisdicional_2014a.pdf" >Mapa Jurisdicional</a></li><li class="item-222"><a href="http://www.trt7.jus.br/memorial/" target="_blank" >Memorial</a></li><li class="item-108"><a href="/index.php?option=com_content&amp;view=article&amp;id=65&amp;Itemid=108" >Regimento Interno</a></li></ul></li></ul>
+<ul class="nav menu">
+<li class="item-321 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=187&amp;Itemid=321" >ACESSO À INFORMAÇÃO</a><ul class="nav-child unstyled small"><li class="item-641"><a href="/index.php?option=com_content&amp;view=article&amp;id=2657&amp;Itemid=641" >Finalidades e objetivos institucionais do TRT7</a></li><li class="item-440"><a href="/index.php?option=com_content&amp;view=article&amp;id=153&amp;Itemid=440" >Ouvidoria</a></li><li class="item-666"><a href="https://calendar.google.com/calendar/embed?src=trt7.jus.br_s65mue7ur41fcugos5dn2clf10%40group.calendar.google.com&amp;ctz=America/Fortaleza" >Agenda da Diretoria Geral</a></li><li class="item-642"><a href="/index.php?option=com_content&amp;view=article&amp;id=2658&amp;Itemid=642" >Participação de membros e servidores em conselhos, comitês, comissões e grupos de trabalho externos</a></li><li class="item-643"><a href="/index.php?option=com_content&amp;view=article&amp;id=2659&amp;Itemid=643" >Perguntas e respostas</a></li><li class="item-644"><a href="/index.php?option=com_content&amp;view=article&amp;id=2660&amp;Itemid=644" >Programas, projetos, ações e atividades</a></li><li class="item-130"><a href="/index.php?option=com_content&amp;view=article&amp;id=907&amp;Itemid=130" >Relatório de Atividades</a></li><li class="item-326"><a href="/index.php?option=com_chronoforms&amp;view=form&amp;Itemid=326" >Serviço de Informação ao Cidadão</a></li><li class="item-645 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=188&amp;Itemid=645" >Transparência/Contas Públicas</a><ul class="nav-child unstyled small"><li class="item-646"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=189&amp;Itemid=646" >Ações de controle</a></li><li class="item-647"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=191&amp;Itemid=647" >Acordos, termos e ajustes diversos</a></li><li class="item-648"><a href="/index.php?option=com_content&amp;view=article&amp;id=166&amp;Itemid=648" >Diárias e passagens</a></li><li class="item-649"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=192&amp;Itemid=649" >Gestão da força de trabalho</a></li><li class="item-650"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=193&amp;Itemid=650" >Gestão orçamentária e financeira</a></li><li class="item-651"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=194&amp;Itemid=651" >Gestão patrimonial</a></li><li class="item-652"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=78&amp;Itemid=652" >Licitações e contratos</a></li><li class="item-653"><a href="/index.php?option=com_content&amp;view=category&amp;id=202&amp;Itemid=653" >Prestações de contas</a></li></ul></li></ul></li></ul>
+<ul class="nav menu">
+<li class="item-125 deeper parent"><a href="/index.php?option=com_content&amp;view=categories&amp;id=147&amp;Itemid=125" >ATOS NORMATIVOS</a><ul class="nav-child unstyled small"><li class="item-134"><a href="/index.php?option=com_content&amp;view=category&amp;id=59&amp;Itemid=134" >Atos</a></li><li class="item-529"><a href="/index.php?option=com_content&amp;view=article&amp;id=2294&amp;Itemid=529" >Constituição de Comissões e Designação de Fiscais </a></li><li class="item-318"><a href="/index.php?option=com_content&amp;view=category&amp;id=135&amp;Itemid=318" >Portarias</a></li><li class="item-138"><a href="/index.php?option=com_content&amp;view=category&amp;id=137&amp;Itemid=138" >Provimentos</a></li><li class="item-140"><a href="/index.php?option=com_content&amp;view=category&amp;id=136&amp;Itemid=140" >Recomendações</a></li><li class="item-142"><a href="/index.php?option=com_content&amp;view=category&amp;id=138&amp;Itemid=142" >Resoluções</a></li></ul></li></ul>
+<ul class="nav menu">
+<li class="item-143 deeper parent"><a href="/index.php?option=com_content&amp;view=categories&amp;id=149&amp;Itemid=143" >PUBLICAÇÕES</a><ul class="nav-child unstyled small"><li class="item-532"><a href="/index.php?option=com_content&amp;view=article&amp;id=2434&amp;Itemid=532" >Atas Comitê 1º Grau</a></li><li class="item-147 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;id=80&amp;Itemid=147" >Concursos</a><ul class="nav-child unstyled small"><li class="item-303"><a href="/index.php?option=com_content&amp;view=category&amp;id=132&amp;Itemid=303" >Estagiários</a></li><li class="item-530"><a href="/index.php?option=com_content&amp;view=category&amp;id=180&amp;Itemid=530" >Servidores</a></li></ul></li><li class="item-274"><a href="https://dejt.jt.jus.br/dejt/" target="_blank" >DEJT</a></li><li class="item-129"><a href="/index.php?option=com_wrapper&amp;view=wrapper&amp;Itemid=129" >DOJT 7ª Região</a></li><li class="item-493"><a href="/index.php?option=com_content&amp;view=article&amp;id=1088&amp;Itemid=493" >Editais Diversos</a></li><li class="item-161"><a href="files/publicacoes_e_midia/estatutoEticaServidor.pdf" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,');return false;" >Estatuto de Ética</a></li><li class="item-146"><a href="/index.php?option=com_content&amp;view=category&amp;id=103&amp;Itemid=146" >Feriados</a></li><li class="item-311"><a href="/index.php?option=com_content&amp;view=article&amp;id=1592&amp;Itemid=311" >Gestão Documental</a></li><li class="item-150"><a href="/index.php?option=com_content&amp;view=article&amp;id=98&amp;Itemid=150" >Leilão Judicial</a></li><li class="item-307"><a href="/index.php?option=com_content&amp;view=article&amp;id=1284&amp;Itemid=307" >Metas do CNJ</a></li><li class="item-153"><a href="/index.php?option=com_content&amp;view=article&amp;id=102&amp;Itemid=153" >Plantão Judiciário</a></li><li class="item-144 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;id=81&amp;Itemid=144" >Relatórios e-Gestão</a><ul class="nav-child unstyled small"><li class="item-541"><a href="/index.php?option=com_content&amp;view=article&amp;id=2543&amp;Itemid=541" >Produção dos Magistrados</a></li><li class="item-240"><a href="/index.php?option=com_content&amp;view=article&amp;id=173&amp;Itemid=240" >Varas (1ª Instância)</a></li><li class="item-239"><a href="/index.php?option=com_content&amp;view=article&amp;id=172&amp;Itemid=239" >Tribunal (2ª Instância)</a></li></ul></li><li class="item-154"><a href="files/publicacoes_e_midia/Regulamento_PAD.pdf" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,');return false;" >Regulamento do Processo Administrativo Disciplinar</a></li><li class="item-155"><a href="files/informacoes/tab_temporalidade/Ato_101-2006.pdf" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,');return false;" >Tabela de Temporalidade</a></li></ul></li></ul>
+<ul class="nav menu">
+<li class="item-156 active deeper parent"><a href="/index.php?option=com_content&amp;view=categories&amp;id=150&amp;Itemid=156" >IMPRENSA</a><ul class="nav-child unstyled small"><li class="item-283"><a href="https://www.flickr.com/photos/100159827@N07/" target="_blank" >Banco de Imagens</a></li><li class="item-159"><a href="/index.php?option=com_content&amp;view=category&amp;id=96&amp;Itemid=159" >Campanhas</a></li><li class="item-325"><a href="http://www.youtube.com/trtceara" target="_blank" >Canal You Tube</a></li><li class="item-536"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_cartilhadireitos2015_pdf.html" target="_blank" >Cartilha dos Direitos Trabalhistas</a></li><li class="item-398"><a href="/index.php?option=com_content&amp;view=article&amp;id=1839&amp;Itemid=398" >Contatos</a></li><li class="item-160"><a href="/index.php?option=com_content&amp;view=article&amp;id=112&amp;Itemid=160" >Programa Justiça do Trabalho</a></li><li class="item-384"><a href="http://www.facebook.com/pages/Tribunal-Regional-do-Trabalho-da-7%C2%AA-Regi%C3%A3o/148692398514459" target="_blank" >Facebook</a></li><li class="item-162"><a href="/index.php?option=com_content&amp;view=article&amp;id=114&amp;Itemid=162" >Folha 7</a></li><li class="item-294"><a href="http://www.trt7.jus.br/index.php?option=com_podcastmanager&amp;format=raw&amp;feedname=1" target="_blank" >Minuto do Trabalho</a></li><li class="item-302 current active"><a href="/index.php?option=com_content&amp;view=category&amp;id=152&amp;Itemid=302" >Notícias</a></li><li class="item-523"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_corregedoria_12_14_pdf.html" target="_blank" >Revista da Corregedoria</a></li><li class="item-327"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_revistagestao20102012_pdf.html" target="_blank" >Revista de Gestão 2010-2012</a></li><li class="item-535"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_revistagestao20122014_pdf.html#/0" target="_blank" >Revista de Gestão 2012-2014</a></li><li class="item-164"><a href="http://www.twitter.com/trt7ceara" target="_blank" >Twitter</a></li><li class="item-378"><a href="https://www.youtube.com/watch?v=77znIkohmDY" target="_blank" >Vídeo Institucional</a></li></ul></li></ul>
+<ul class="nav menu">
+<li class="item-169 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;id=66&amp;Itemid=169" >JURISPRUDÊNCIA</a><ul class="nav-child unstyled small"><li class="item-654"><a href="http://www.trt7.jus.br/files/jurisprudencia/banco_teses/2016_03.pdf" >Banco de Teses Jurídicas Prevalecentes</a></li><li class="item-171"><a href="/index.php?option=com_content&amp;view=article&amp;id=96&amp;Itemid=171" >Boletim de Jurisprudência</a></li><li class="item-170"><a href="http://www3.trt7.jus.br/consultajuris/pesqacordao.aspx" target="_blank" >Jurisprudência</a></li><li class="item-172"><a href="/index.php?option=com_content&amp;view=article&amp;id=93&amp;Itemid=172" >Revista do Tribunal</a></li><li class="item-173"><a href="/index.php?option=com_content&amp;view=article&amp;id=2936&amp;Itemid=173" >Súmulas do TRT</a></li></ul></li></ul>
+<ul class="nav menu">
+<li class="item-273 deeper parent"><a href="#" >SERVIÇOS</a><ul class="nav-child unstyled small"><li class="item-461"><a href="https://www3.bcb.gov.br/bacenjud2/dologin" target="_blank" >BacenJud</a></li><li class="item-223 deeper parent"><a href="#" target="_blank" >Biblioteca</a><ul class="nav-child unstyled small"><li class="item-533"><a href="http://www.trt7.jus.br/biblioteca/index.php" >Site</a></li><li class="item-534"><a href="/index.php?option=com_content&amp;view=category&amp;id=184&amp;Itemid=534" >XIV EBJUT</a></li></ul></li><li class="item-145"><a href="/index.php?option=com_content&amp;view=category&amp;id=79&amp;Itemid=145" >Cálculos Trabalhistas</a></li><li class="item-661 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;id=205&amp;Itemid=661" >Certidões Trabalhistas</a><ul class="nav-child unstyled small"><li class="item-434"><a href="http://www.tst.jus.br/certidao" target="_blank" >CNDT</a></li><li class="item-662"><a href="/index.php?option=com_content&amp;view=article&amp;id=2897&amp;Itemid=662" >Outras</a></li></ul></li><li class="item-287"><a href="/index.php?option=com_content&amp;view=article&amp;id=2553&amp;Itemid=287" >Depósito Recursal</a></li><li class="item-272"><a href="http://www.trt7.jus.br/das" target="_blank" >DRH.Saúde</a></li><li class="item-464"><a href="http://egestao.tst.jus.br/" >e-Gestão</a></li><li class="item-433"><a href="/index.php?option=com_content&amp;view=article&amp;id=1015&amp;Itemid=433" >GRU Judicial</a></li><li class="item-537"><a href="/index.php?option=com_content&amp;view=article&amp;id=2264&amp;Itemid=537" >Horário de Funcionamento</a></li><li class="item-462"><a href="https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx" target="_blank" >InfoJud</a></li><li class="item-281"><a href="http://aplicacao2.jt.jus.br/malotedigital/login.jsf" target="_blank" >Malote Digital</a></li><li class="item-623"><a href="https://proad.trt7.jus.br/proad" target="_blank" >PROAD</a></li><li class="item-270"><a href="http://portaldoservidor.trt7.jus.br/csp/trt7/portal/index.csp" target="_blank" >Portal do Servidor</a></li><li class="item-432"><a href="/index.php?option=com_content&amp;view=article&amp;id=1925&amp;Itemid=481" >Precatórios</a></li><li class="item-435"><a href="/index.php?option=com_content&amp;view=article&amp;id=1720&amp;Itemid=435" >Recolhimento GPS</a></li><li class="item-463"><a href="https://renajud.denatran.serpro.gov.br/" target="_blank" >RenaJud</a></li><li class="item-106"><a href="/index.php?option=com_content&amp;view=article&amp;id=60&amp;Itemid=106" >Visita ao Tribunal</a></li><li class="item-525 deeper parent"><a href="/index.php?option=com_content&amp;view=article&amp;id=2718&amp;Itemid=525" >Validação de Documentos</a><ul class="nav-child unstyled small"><li class="item-528"><a href="https://portaldeservicos.trt7.jus.br/portalservicos/autenticaAssinaturaDocumentos/buscaDocumentoPorAssinatura.jsf" target="_blank" >Documentos Diversos</a></li><li class="item-526"><a href="http://pje.trt7.jus.br/primeirograu/Processo/ConsultaDocumento/listView.seam" target="_blank" >PJe 1º Grau</a></li><li class="item-527"><a href="http://pje.trt7.jus.br/segundograu/Processo/ConsultaDocumento/listView.seam" target="_blank" >PJe 2º Grau</a></li><li class="item-271"><a href="https://portaldoservidor.trt7.jus.br/csp/trt7/portal/autenticacao/index.csp" target="_blank" >Validação de Contracheque</a></li></ul></li></ul></li></ul>
+<ul class="nav menu">
+<li class="item-436 deeper parent"><a href="#" >Fale Conosco</a><ul class="nav-child unstyled small"><li class="item-437"><a href="/index.php?option=com_content&amp;view=category&amp;id=73&amp;Itemid=437" >Contatos</a></li><li class="item-438"><a href="/index.php?option=com_chronoforms5&amp;view=form&amp;Itemid=438" >Fale Conosco</a></li><li class="item-439"><a href="http://webmail.trt7.jus.br" target="_blank" >Webmail</a></li></ul></li></ul>
+
+	</div>
+</div>
+<!-- END: MAIN NAVIGATION -->
+
+<div id="ja-containerwrap-fr">
+<div id="ja-containerwrap2">
+	<div id="ja-container">
+	<div id="ja-container2" class="clearfix">
+
+		<div id="ja-mainbody-fr" class="clearfix">
+
+		<!-- BEGIN: CONTENT -->
+		<div id="ja-contentwrap">
+		<div id="ja-content">
+
+			<div id="system-message-container">
+	</div>
+
+
+						<div id="ja-pathway">
+				
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li class="active">
+			<span class="divider icon-location"></span>
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/index.php?option=com_content&amp;view=featured&amp;Itemid=328" class="pathway"><span itemprop="name">Início</span></a>
+				
+									<span class="divider">
+						&gt;					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/index.php?option=com_content&amp;view=categories&amp;id=150&amp;Itemid=156" class="pathway"><span itemprop="name">IMPRENSA</span></a>
+				
+									<span class="divider">
+						&gt;					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/index.php?option=com_content&amp;view=category&amp;id=152&amp;Itemid=302" class="pathway"><span itemprop="name">Notícias</span></a>
+				
+									<span class="divider">
+						&gt;					</span>
+								<meta itemprop="position" content="3">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Aprovação em concurso público para cadastro de reserva não gera direito à nomeação				</span>
+				<meta itemprop="position" content="4">
+			</li>
+		</ul>
+
+			</div>
+			
+						<div class="item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+		
+			<div class="page-header">
+		<h2 itemprop="name">
+							Aprovação em concurso público para cadastro de reserva não gera direito à nomeação					</h2>
+							</div>
+	  
+  <div class="article-tools">
+  
+		              
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+											<li class="print-icon"> <a href="/index.php?option=com_content&amp;view=article&amp;id=2970:aprovacao-em-concurso-publico-para-cadastro-de-reserva-nao-gera-direito-a-nomeacao&amp;catid=152&amp;Itemid=302&amp;tmpl=component&amp;print=1&amp;layout=default&amp;page=" title="Imprimir" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow"><span class="icon-print"></span>Imprimir</a> </li>
+																<li class="email-icon"> <a href="/index.php?option=com_mailto&amp;tmpl=component&amp;template=trt7&amp;link=ca24ce03a021e7ef5f14ec41ede3b63bf8554984" title="Email" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+            
+          	<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+																</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Escrito por <span itemprop="name">TRT/CE - Divisão de Comunicação Social</span>	</dd>
+			
+			
+			
+										<dd class="published">
+				<span class="icon-calendar"></span>
+				<time datetime="2016-09-16T11:36:01-03:00" itemprop="datePublished">
+					16 Setembro 2016				</time>
+			</dd>					
+			</dl>
+      
+    				<div class="moduletable">
+						<div class="nsb_container">
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-count="horizontal" data-size="medium" data-lang="en">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async=true;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.async=true;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <div class="fb-like" data-href="http://www.trt7.gov.br/index.php?Itemid=302&catid=152&id=2970%3Aaprovacao-em-concurso-publico-para-cadastro-de-reserva-nao-gera-direito-a-nomeacao&option=com_content&view=article" data-width="100" data-layout="button_count" data-action="like"  data-show-faces="false" data-send="true" data-colorscheme="light" ></div>
+<div id="fb-root"></div>
+  </div><div style="clear:both;"></div>		</div>
+		</div>
+
+		
+								<div itemprop="articleBody">
+		
+<p>
+	Uma candidata aprovada em concurso p&uacute;blico para forma&ccedil;&atilde;o de cadastro de reserva para t&eacute;cnico banc&aacute;rio da Caixa Econ&ocirc;mica Federal teve julgada improcedente reclama&ccedil;&atilde;o trabalhista que pedia sua nomea&ccedil;&atilde;o. A autora da a&ccedil;&atilde;o alegava a exist&ecirc;ncia de vagas decorrentes do desligamento de empregados, sem reposi&ccedil;&atilde;o do quadro de pessoal, e contrata&ccedil;&atilde;o indevida de terceirizados tempor&aacute;rios. Mas a Vara do Trabalho de Aracati, no litoral leste do Cear&aacute;, entendeu que, em raz&atilde;o da presun&ccedil;&atilde;o de legitimidade e de legalidade de que disp&otilde;em os atos praticados pela administra&ccedil;&atilde;o p&uacute;blica, caberia &agrave; candidata provar o fato alegado, o que n&atilde;o se verificou no processo.</p>
+<p>
+	Conforme a decis&atilde;o do juiz titular da Vara, Rob&eacute;rio Maia de Oliveira, a aprovada no concurso n&atilde;o tem direito l&iacute;quido e certo &agrave; nomea&ccedil;&atilde;o, mas apenas expectativa de direito. Ap&oacute;s conduzir a instru&ccedil;&atilde;o processual e analisar documentos apresentados por ambas as partes, ele concluiu que, se comprovada viola&ccedil;&atilde;o aos princ&iacute;pios da legalidade, da impessoalidade e da moralidade em rela&ccedil;&atilde;o &agrave; contrata&ccedil;&atilde;o de pessoal terceirizado ou tempor&aacute;rio, caberia ao Judici&aacute;rio apenas afastar os contratados irregularmente.</p>
+<p>
+	A autora da a&ccedil;&atilde;o obteve a 15&ordf; coloca&ccedil;&atilde;o no concurso realizado em 2014 pela Caixa, no polo de Aracati. Foram nomeados cinco candidatos. O banco alegou que muitos dos preg&otilde;es para contrata&ccedil;&atilde;o de servi&ccedil;os terceirizados apontados pela autora ocorreram para atendimento a polos diferentes e que as atividades de <em>telemarketing </em>indicadas n&atilde;o se confundem com as inerentes ao cargo de t&eacute;cnico banc&aacute;rio. Acrescentou ainda que a contrata&ccedil;&atilde;o de aprovados est&aacute; condicionada &agrave; autoriza&ccedil;&atilde;o do Departamento de Coordena&ccedil;&atilde;o e Governan&ccedil;a das Empresas Estatais (Dest), que em 2015 reduziu o quadro da Caixa de 111.922 para 97.732 empregados.</p>
+<p>
+	A senten&ccedil;a esclarece que nem a movimenta&ccedil;&atilde;o no quadro de pessoal (decorrente de aposentadorias, demiss&otilde;es ou nomea&ccedil;&otilde;es) ocorrida no per&iacute;odo de vig&ecirc;ncia do concurso obriga a convoca&ccedil;&atilde;o dos candidatos aprovados em concurso quando destinado &agrave; forma&ccedil;&atilde;o de cadastro de reserva, porque a contrata&ccedil;&atilde;o de pessoal deve observar a disponibilidade financeira e efetiva necessidade da empresa, verificada, no caso, ag&ecirc;ncia por ag&ecirc;ncia.</p>
+<p>
+	De acordo com a senten&ccedil;a, a autora n&atilde;o demonstrou o n&uacute;mero de empregados em cada ag&ecirc;ncia integrante do polo de Aracati na &eacute;poca da abertura do edital e o n&uacute;mero de afastados de cada unidade (aposentados, demitidos, transferidos) para caracterizar eventual exist&ecirc;ncia de vaga, nem o aumento do n&uacute;mero de terceirizados e tempor&aacute;rios para caracterizar pr&aacute;tica de eventual ato il&iacute;cito de substitui&ccedil;&atilde;o de empregados efetivos. &quot;Inverter o &ocirc;nus da prova implicaria contrariedade a toda constru&ccedil;&atilde;o doutrin&aacute;ria e jurisprudencial quanto &agrave; presun&ccedil;&atilde;o de legalidade e legitimidade dos atos administrativos&quot;, justificou o magistrado.</p>
+<p>
+	A autora n&atilde;o recorreu da decis&atilde;o.</p>
+<p>
+	Processo relacionado: 0001402-41.2016.5.07.0033</p>
+	</div>
+
+				<dl class="article-info muted">
+
+		
+					
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2016-09-16T12:01:19-03:00" itemprop="dateModified">
+					Última Atualização: 16 Setembro 2016				</time>
+			</dd>			
+										<dd class="hits">
+					<span class="icon-eye-open"></span>
+					<meta itemprop="interactionCount" content="UserPageVisits:13" />
+					Acessos: 13			</dd>						</dl>
+			
+						</div>
+
+						
+		</div>
+		</div>
+		<!-- END: CONTENT -->
+
+				<!-- BEGIN: LEFT COLUMN -->
+		<div id="ja-col1">
+					<div class="moduletable">
+						<ul class="nav menu">
+<li class="item-156 active deeper parent"><a href="/index.php?option=com_content&amp;view=categories&amp;id=150&amp;Itemid=156" >IMPRENSA</a><ul class="nav-child unstyled small"><li class="item-283"><a href="https://www.flickr.com/photos/100159827@N07/" target="_blank" >Banco de Imagens</a></li><li class="item-159"><a href="/index.php?option=com_content&amp;view=category&amp;id=96&amp;Itemid=159" >Campanhas</a></li><li class="item-325"><a href="http://www.youtube.com/trtceara" target="_blank" >Canal You Tube</a></li><li class="item-536"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_cartilhadireitos2015_pdf.html" target="_blank" >Cartilha dos Direitos Trabalhistas</a></li><li class="item-398"><a href="/index.php?option=com_content&amp;view=article&amp;id=1839&amp;Itemid=398" >Contatos</a></li><li class="item-160"><a href="/index.php?option=com_content&amp;view=article&amp;id=112&amp;Itemid=160" >Programa Justiça do Trabalho</a></li><li class="item-384"><a href="http://www.facebook.com/pages/Tribunal-Regional-do-Trabalho-da-7%C2%AA-Regi%C3%A3o/148692398514459" target="_blank" >Facebook</a></li><li class="item-162"><a href="/index.php?option=com_content&amp;view=article&amp;id=114&amp;Itemid=162" >Folha 7</a></li><li class="item-294"><a href="http://www.trt7.jus.br/index.php?option=com_podcastmanager&amp;format=raw&amp;feedname=1" target="_blank" >Minuto do Trabalho</a></li><li class="item-302 current active"><a href="/index.php?option=com_content&amp;view=category&amp;id=152&amp;Itemid=302" >Notícias</a></li><li class="item-523"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_corregedoria_12_14_pdf.html" target="_blank" >Revista da Corregedoria</a></li><li class="item-327"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_revistagestao20102012_pdf.html" target="_blank" >Revista de Gestão 2010-2012</a></li><li class="item-535"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_revistagestao20122014_pdf.html#/0" target="_blank" >Revista de Gestão 2012-2014</a></li><li class="item-164"><a href="http://www.twitter.com/trt7ceara" target="_blank" >Twitter</a></li><li class="item-378"><a href="https://www.youtube.com/watch?v=77znIkohmDY" target="_blank" >Vídeo Institucional</a></li></ul></li></ul>
+		</div>
+			<div class="moduletable">
+						<ul class="nav menu destaques_esquerda">
+<li class="item-412"><a href="http://www.trt7.jus.br/escolajudicial" target="_blank" >Escola Judicial</a></li><li class="item-413"><a href="/index.php?option=com_content&amp;view=article&amp;id=153&amp;Itemid=413" >Ouvidoria</a></li><li class="item-414"><a href="/index.php?option=com_content&amp;view=article&amp;id=1925&amp;Itemid=481" >Precatórios</a></li><li class="item-415"><a href="/index.php?option=com_content&amp;view=article&amp;id=1015&amp;Itemid=415" >GRU Judicial</a></li><li class="item-416"><a href="/index.php?option=com_content&amp;view=category&amp;id=205&amp;Itemid=416" >Certidões Trabalhistas</a></li><li class="item-417"><a href="/index.php?option=com_content&amp;view=article&amp;id=1720&amp;Itemid=417" >Recolhimento GPS</a></li><li class="item-418"><a href="/index.php?option=com_content&amp;view=article&amp;id=154&amp;Itemid=418" >Ecosétima</a></li><li class="item-441"><a href="http://www.trt7.jus.br/biblioteca" target="_blank" >Biblioteca</a></li><li class="item-460"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=78&amp;Itemid=652" >Licitação</a></li><li class="item-492"><a href="http://www.trt7.jus.br/trabalhoseguro" target="_blank" >Trabalho Seguro</a></li><li class="item-531"><a href="http://www.trt7.jus.br/trabalhoinfantil" >Trabalho Infantil</a></li><li class="item-542"><a href="/index.php?option=com_content&amp;view=article&amp;id=2543&amp;Itemid=541" >Produção dos Magistrados</a></li></ul>
+		</div>
+	
+		</div><br />
+		<!-- END: LEFT COLUMN -->
+		
+		</div>
+
+		
+	</div>
+	</div>
+</div>
+</div>
+
+
+
+
+<!-- BEGIN: FOOTER -->
+<div id="ja-footerwrap">
+<div id="ja-footer" class="clearfix">
+
+	<div id="ja-footnav">
+		
+                <div class="menu_inferior_col">
+        	<ul class="nav menu">
+<li class="item-99 deeper parent"><a href="/index.php?option=com_content&amp;view=categories&amp;id=144&amp;Itemid=99" >INSTITUCIONAL</a><ul class="nav-child unstyled small"><li class="item-98"><a href="/index.php?option=com_content&amp;view=article&amp;id=48&amp;Itemid=98" >1ª Instância</a></li><li class="item-97"><a href="/index.php?option=com_content&amp;view=article&amp;id=56&amp;Itemid=97" >2ª Instância</a></li><li class="item-659"><a href="/index.php?option=com_content&amp;view=article&amp;id=2870&amp;Itemid=659" >Cadeia de Valor</a></li><li class="item-104 parent"><a href="/index.php?option=com_content&amp;view=category&amp;id=94&amp;Itemid=104" >Comendas</a></li><li class="item-102"><a href="/index.php?option=com_content&amp;view=article&amp;id=59&amp;Itemid=102" >Comissões Permanentes</a></li><li class="item-100"><a href="/index.php?option=com_content&amp;view=article&amp;id=57&amp;Itemid=100" >Corregedoria</a></li><li class="item-224"><a href="http://www.trt7.jus.br/escolajudicial/" target="_blank" >Escola Judicial</a></li><li class="item-101"><a href="files/institucional/estrutura_administrativa_TRT7.pdf" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,');return false;" >Estrutura Administrativa</a></li><li class="item-226"><a href="/index.php?option=com_content&amp;view=article&amp;id=154&amp;Itemid=226" >Gestão Ambiental</a></li><li class="item-103"><a href="http://www.trt7.jus.br/pe/" >Gestão Estratégica</a></li><li class="item-622"><a href="/index.php?option=com_content&amp;view=article&amp;id=2621&amp;Itemid=622" >Governança de Pessoas</a></li><li class="item-491"><a href="/index.php?option=com_content&amp;view=category&amp;id=168&amp;Itemid=487" >Governança de TI</a></li><li class="item-306"><a href="http://www.trt7.jus.br/images/comunicacao/imagens_site/mapa_jurisdicional_2014a.pdf" >Mapa Jurisdicional</a></li><li class="item-222"><a href="http://www.trt7.jus.br/memorial/" target="_blank" >Memorial</a></li><li class="item-108"><a href="/index.php?option=com_content&amp;view=article&amp;id=65&amp;Itemid=108" >Regimento Interno</a></li></ul></li></ul>
+<ul class="nav menu">
+<li class="item-321 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=187&amp;Itemid=321" >ACESSO À INFORMAÇÃO</a><ul class="nav-child unstyled small"><li class="item-641"><a href="/index.php?option=com_content&amp;view=article&amp;id=2657&amp;Itemid=641" >Finalidades e objetivos institucionais do TRT7</a></li><li class="item-440"><a href="/index.php?option=com_content&amp;view=article&amp;id=153&amp;Itemid=440" >Ouvidoria</a></li><li class="item-666"><a href="https://calendar.google.com/calendar/embed?src=trt7.jus.br_s65mue7ur41fcugos5dn2clf10%40group.calendar.google.com&amp;ctz=America/Fortaleza" >Agenda da Diretoria Geral</a></li><li class="item-642"><a href="/index.php?option=com_content&amp;view=article&amp;id=2658&amp;Itemid=642" >Participação de membros e servidores em conselhos, comitês, comissões e grupos de trabalho externos</a></li><li class="item-643"><a href="/index.php?option=com_content&amp;view=article&amp;id=2659&amp;Itemid=643" >Perguntas e respostas</a></li><li class="item-644"><a href="/index.php?option=com_content&amp;view=article&amp;id=2660&amp;Itemid=644" >Programas, projetos, ações e atividades</a></li><li class="item-130"><a href="/index.php?option=com_content&amp;view=article&amp;id=907&amp;Itemid=130" >Relatório de Atividades</a></li><li class="item-326"><a href="/index.php?option=com_chronoforms&amp;view=form&amp;Itemid=326" >Serviço de Informação ao Cidadão</a></li><li class="item-645 parent"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=188&amp;Itemid=645" >Transparência/Contas Públicas</a></li></ul></li></ul>
+
+        </div>
+                        <div class="menu_inferior_col">
+        	<ul class="nav menu">
+<li class="item-125 deeper parent"><a href="/index.php?option=com_content&amp;view=categories&amp;id=147&amp;Itemid=125" >ATOS NORMATIVOS</a><ul class="nav-child unstyled small"><li class="item-134"><a href="/index.php?option=com_content&amp;view=category&amp;id=59&amp;Itemid=134" >Atos</a></li><li class="item-529"><a href="/index.php?option=com_content&amp;view=article&amp;id=2294&amp;Itemid=529" >Constituição de Comissões e Designação de Fiscais </a></li><li class="item-318"><a href="/index.php?option=com_content&amp;view=category&amp;id=135&amp;Itemid=318" >Portarias</a></li><li class="item-138"><a href="/index.php?option=com_content&amp;view=category&amp;id=137&amp;Itemid=138" >Provimentos</a></li><li class="item-140"><a href="/index.php?option=com_content&amp;view=category&amp;id=136&amp;Itemid=140" >Recomendações</a></li><li class="item-142"><a href="/index.php?option=com_content&amp;view=category&amp;id=138&amp;Itemid=142" >Resoluções</a></li></ul></li></ul>
+<ul class="nav menu">
+<li class="item-436 deeper parent"><a href="#" >Fale Conosco</a><ul class="nav-child unstyled small"><li class="item-437"><a href="/index.php?option=com_content&amp;view=category&amp;id=73&amp;Itemid=437" >Contatos</a></li><li class="item-438"><a href="/index.php?option=com_chronoforms5&amp;view=form&amp;Itemid=438" >Fale Conosco</a></li><li class="item-439"><a href="http://webmail.trt7.jus.br" target="_blank" >Webmail</a></li></ul></li></ul>
+
+        </div>
+                        <div class="menu_inferior_col">
+        	<ul class="nav menu">
+<li class="item-143 deeper parent"><a href="/index.php?option=com_content&amp;view=categories&amp;id=149&amp;Itemid=143" >PUBLICAÇÕES</a><ul class="nav-child unstyled small"><li class="item-532"><a href="/index.php?option=com_content&amp;view=article&amp;id=2434&amp;Itemid=532" >Atas Comitê 1º Grau</a></li><li class="item-147 parent"><a href="/index.php?option=com_content&amp;view=category&amp;id=80&amp;Itemid=147" >Concursos</a></li><li class="item-274"><a href="https://dejt.jt.jus.br/dejt/" target="_blank" >DEJT</a></li><li class="item-129"><a href="/index.php?option=com_wrapper&amp;view=wrapper&amp;Itemid=129" >DOJT 7ª Região</a></li><li class="item-493"><a href="/index.php?option=com_content&amp;view=article&amp;id=1088&amp;Itemid=493" >Editais Diversos</a></li><li class="item-161"><a href="files/publicacoes_e_midia/estatutoEticaServidor.pdf" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,');return false;" >Estatuto de Ética</a></li><li class="item-146"><a href="/index.php?option=com_content&amp;view=category&amp;id=103&amp;Itemid=146" >Feriados</a></li><li class="item-311"><a href="/index.php?option=com_content&amp;view=article&amp;id=1592&amp;Itemid=311" >Gestão Documental</a></li><li class="item-150"><a href="/index.php?option=com_content&amp;view=article&amp;id=98&amp;Itemid=150" >Leilão Judicial</a></li><li class="item-307"><a href="/index.php?option=com_content&amp;view=article&amp;id=1284&amp;Itemid=307" >Metas do CNJ</a></li><li class="item-153"><a href="/index.php?option=com_content&amp;view=article&amp;id=102&amp;Itemid=153" >Plantão Judiciário</a></li><li class="item-144 parent"><a href="/index.php?option=com_content&amp;view=category&amp;id=81&amp;Itemid=144" >Relatórios e-Gestão</a></li><li class="item-154"><a href="files/publicacoes_e_midia/Regulamento_PAD.pdf" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,');return false;" >Regulamento do Processo Administrativo Disciplinar</a></li><li class="item-155"><a href="files/informacoes/tab_temporalidade/Ato_101-2006.pdf" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,');return false;" >Tabela de Temporalidade</a></li></ul></li></ul>
+
+        </div>
+                        <div class="menu_inferior_col">
+        	<ul class="nav menu">
+<li class="item-156 active deeper parent"><a href="/index.php?option=com_content&amp;view=categories&amp;id=150&amp;Itemid=156" >IMPRENSA</a><ul class="nav-child unstyled small"><li class="item-283"><a href="https://www.flickr.com/photos/100159827@N07/" target="_blank" >Banco de Imagens</a></li><li class="item-159"><a href="/index.php?option=com_content&amp;view=category&amp;id=96&amp;Itemid=159" >Campanhas</a></li><li class="item-325"><a href="http://www.youtube.com/trtceara" target="_blank" >Canal You Tube</a></li><li class="item-536"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_cartilhadireitos2015_pdf.html" target="_blank" >Cartilha dos Direitos Trabalhistas</a></li><li class="item-398"><a href="/index.php?option=com_content&amp;view=article&amp;id=1839&amp;Itemid=398" >Contatos</a></li><li class="item-160"><a href="/index.php?option=com_content&amp;view=article&amp;id=112&amp;Itemid=160" >Programa Justiça do Trabalho</a></li><li class="item-384"><a href="http://www.facebook.com/pages/Tribunal-Regional-do-Trabalho-da-7%C2%AA-Regi%C3%A3o/148692398514459" target="_blank" >Facebook</a></li><li class="item-162"><a href="/index.php?option=com_content&amp;view=article&amp;id=114&amp;Itemid=162" >Folha 7</a></li><li class="item-294"><a href="http://www.trt7.jus.br/index.php?option=com_podcastmanager&amp;format=raw&amp;feedname=1" target="_blank" >Minuto do Trabalho</a></li><li class="item-302 current active"><a href="/index.php?option=com_content&amp;view=category&amp;id=152&amp;Itemid=302" >Notícias</a></li><li class="item-523"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_corregedoria_12_14_pdf.html" target="_blank" >Revista da Corregedoria</a></li><li class="item-327"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_revistagestao20102012_pdf.html" target="_blank" >Revista de Gestão 2010-2012</a></li><li class="item-535"><a href="http://www.trt7.jus.br/files/publicacoes_e_midia/flash/index_revistagestao20122014_pdf.html#/0" target="_blank" >Revista de Gestão 2012-2014</a></li><li class="item-164"><a href="http://www.twitter.com/trt7ceara" target="_blank" >Twitter</a></li><li class="item-378"><a href="https://www.youtube.com/watch?v=77znIkohmDY" target="_blank" >Vídeo Institucional</a></li></ul></li></ul>
+<ul class="nav menu">
+<li class="item-169 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;id=66&amp;Itemid=169" >JURISPRUDÊNCIA</a><ul class="nav-child unstyled small"><li class="item-654"><a href="http://www.trt7.jus.br/files/jurisprudencia/banco_teses/2016_03.pdf" >Banco de Teses Jurídicas Prevalecentes</a></li><li class="item-171"><a href="/index.php?option=com_content&amp;view=article&amp;id=96&amp;Itemid=171" >Boletim de Jurisprudência</a></li><li class="item-170"><a href="http://www3.trt7.jus.br/consultajuris/pesqacordao.aspx" target="_blank" >Jurisprudência</a></li><li class="item-172"><a href="/index.php?option=com_content&amp;view=article&amp;id=93&amp;Itemid=172" >Revista do Tribunal</a></li><li class="item-173"><a href="/index.php?option=com_content&amp;view=article&amp;id=2936&amp;Itemid=173" >Súmulas do TRT</a></li></ul></li></ul>
+
+        </div>
+                        <div class="menu_inferior_col">
+        	<ul class="nav menu">
+<li class="item-273 deeper parent"><a href="#" >SERVIÇOS</a><ul class="nav-child unstyled small"><li class="item-461"><a href="https://www3.bcb.gov.br/bacenjud2/dologin" target="_blank" >BacenJud</a></li><li class="item-223 parent"><a href="#" target="_blank" >Biblioteca</a></li><li class="item-145"><a href="/index.php?option=com_content&amp;view=category&amp;id=79&amp;Itemid=145" >Cálculos Trabalhistas</a></li><li class="item-661 parent"><a href="/index.php?option=com_content&amp;view=category&amp;id=205&amp;Itemid=661" >Certidões Trabalhistas</a></li><li class="item-287"><a href="/index.php?option=com_content&amp;view=article&amp;id=2553&amp;Itemid=287" >Depósito Recursal</a></li><li class="item-272"><a href="http://www.trt7.jus.br/das" target="_blank" >DRH.Saúde</a></li><li class="item-464"><a href="http://egestao.tst.jus.br/" >e-Gestão</a></li><li class="item-433"><a href="/index.php?option=com_content&amp;view=article&amp;id=1015&amp;Itemid=433" >GRU Judicial</a></li><li class="item-537"><a href="/index.php?option=com_content&amp;view=article&amp;id=2264&amp;Itemid=537" >Horário de Funcionamento</a></li><li class="item-462"><a href="https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx" target="_blank" >InfoJud</a></li><li class="item-281"><a href="http://aplicacao2.jt.jus.br/malotedigital/login.jsf" target="_blank" >Malote Digital</a></li><li class="item-623"><a href="https://proad.trt7.jus.br/proad" target="_blank" >PROAD</a></li><li class="item-270"><a href="http://portaldoservidor.trt7.jus.br/csp/trt7/portal/index.csp" target="_blank" >Portal do Servidor</a></li><li class="item-432"><a href="/index.php?option=com_content&amp;view=article&amp;id=1925&amp;Itemid=481" >Precatórios</a></li><li class="item-435"><a href="/index.php?option=com_content&amp;view=article&amp;id=1720&amp;Itemid=435" >Recolhimento GPS</a></li><li class="item-463"><a href="https://renajud.denatran.serpro.gov.br/" target="_blank" >RenaJud</a></li><li class="item-106"><a href="/index.php?option=com_content&amp;view=article&amp;id=60&amp;Itemid=106" >Visita ao Tribunal</a></li><li class="item-525 parent"><a href="/index.php?option=com_content&amp;view=article&amp;id=2718&amp;Itemid=525" >Validação de Documentos</a></li></ul></li></ul>
+
+        </div>
+        	</div>
+	<div class="copyright">
+		<div class="footer1">Tribunal Regional do Trabalho da 7ª Região</div>
+<div class="footer2">Av. Santos Dumont, 3384 - Aldeota - Cep. 60150.162 - Fortaleza - Ceará - Fone (85) 3388.9400 (85) 3388.9300</div>
+
+	</div>
+
+	<div class="ja-cert">
+		
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank" title="CSS Validity" style="text-decoration: none;">
+		<img src="http://www.trt7.gov.br/templates/trt7/images/but-css.gif" border="none" alt="CSS Validity" />
+		</a>
+		<a href="http://validator.w3.org/check/referer" target="_blank" title="XHTML Validity" style="text-decoration: none;">
+		<img src="http://www.trt7.gov.br/templates/trt7/images/but-xhtml10.gif" border="none" alt="XHTML Validity" />
+		</a>
+	</div>
+
+	<br />
+</div>
+</div>
+<!-- END: FOOTER -->
+
+</div>
+
+
+
+</body>
+</html>

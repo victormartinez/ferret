@@ -1,0 +1,1279 @@
+
+
+<!-- Doctype comentado por erro de espaçamento nos botões vermelhos dos serviços -->
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> -->
+
+
+<html>
+<head>
+
+    <meta property="fb:app_id" content="158423674359420" />
+    <meta property="og:url" content="http://www.aasp.org.br/aasp/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="AASP :: Associação dos Advogados de São Paulo" />
+    <meta property="og:image" content="http://www.aasp.org.br/aasp/img/logoquadrado.jpg" />
+    <meta property="og:title" content="AASP :: Associação dos Advogados de São Paulo" />
+
+    <title>AASP :: Associação dos Advogados de São Paulo</title>
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+	<script language="javascript">	    app_url = 'http://www.aasp.org.br/aasp/'; </script>
+    <script type="text/javascript" src="http://www.aasp.org.br/aasp/js/funcoes.js"></script>
+    <link href="http://www.aasp.org.br/aasp/img/iaasp.ico" rel="SHORTCUT ICON" />
+    <link href="http://www.aasp.org.br/aasp/style/estilos.css" rel="stylesheet" type="text/css" />
+    
+        
+    <script src="http://www.aasp.org.br/aasp/js/menu.js" type="text/javascript"></script>
+    
+    
+    <!-- <script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script> -->
+</head>
+<!-- <body leftmargin="0" topmargin="0" bgcolor="white"  onload="popup()" > -->
+<body onLoad="ManterSessaoAtiva()" leftmargin="0" topmargin="0" bgcolor="white">
+<script src="http://www.aasp.org.br/aasp/js/menuForum.js" type="text/javascript"></script>
+
+<table class="txt-aasp" width="765" align="center" cellpadding="0" cellspacing="0" border="0" style="z-index:0;">
+    <tr height="3px"><td></td></tr>
+    <tr>
+        <td colspan="2">
+            <!-- linha logotipo / busca -->
+            <form method="post" id="frmBuscaSite" name="frmBuscaSite" action="http://www.aasp.org.br/aasp/busca/resultado.aspx" style="margin-bottom:0px;">
+            <table width="100%" border="0" class="txt-aasp">
+                <tr>
+                    <td rowspan="2" width="33%" align="left">
+                        <a href="http://www.aasp.org.br/aasp/" title="Página inicial"><img src="http://cdn.aasp.org.br/institucional/images/logotipo_aasp.gif" border="0" /></a></td>
+                    <td rowspan="2" width="33%" align="center"></td>
+                    <td colspan="2" width="33%" align="right" valign="bottom"></td>
+                </tr>
+                <!--Início da remoção do input e botão de busca-->
+                <!--<tr valign="middle" align="right">
+                    <td>
+                        <input type="text" class="frm_txt" id="txtTermoBusca" name="termo" style="width:180px"/>
+                    </td>
+                    <td>
+                        <input type="image" id="Image1" name="BtBuscar" src="http://cdn.aasp.org.br/institucional/images/botao_buscar.gif" onClick="return VerificaBuscaSite()" />
+                    </td>
+                </tr>-->
+                <!--Fim da remoção do input e botão de busca-->
+            </table>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td height="25" colspan="2" align="center" valign="top">
+            <!-- barra -->
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="5"><img src="http://cdn.aasp.org.br/institucional/images/barra_esquerda.gif"/></td>
+                    <td width="755" height="20"><img src="http://cdn.aasp.org.br/institucional/images/barra_meio.gif" width="755" height="20"/></td>
+                    <td width="5"><img src="http://cdn.aasp.org.br/institucional/images/barra_direita.gif"/></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="2" height="20" valign="top" align="center">
+            <!-- menu topo -->
+
+            <table id="ctl00_Menu1" class="txt-aasp ctl00_Menu1_2" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td onMouseOver="Menu_HoverStatic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n0" width="110">
+                        <table class="ctl00_Menu1_4 txt-aasp" cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tr><td>
+                                    <a href="http://www.aasp.org.br/aasp/institucional/apresentacao.asp">Institucional</a>
+                            </td></tr>
+                        </table>
+                    </td>
+
+                    <td><img src="http://www.aasp.org.br/aasp/img/divisor_menu.gif" /></td>
+                    <td onMouseOver="Menu_HoverStatic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n1">
+                        <table class="ctl00_Menu1_4 txt-aasp" cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tr><td>
+                                    <a href="http://www.aasp.org.br/aasp/servicos/index_servicos.asp">Outros Serviços</a>
+                                </td></tr>
+                        </table>
+                    </td>
+
+                    <td><img src="http://www.aasp.org.br/aasp/img/divisor_menu.gif"  /></td>
+                    <td onMouseOver="Menu_HoverStatic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n2">
+                        <table class="ctl00_Menu1_4 txt-aasp" cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tr><td>
+                                    <a href="http://www.aasp.org.br/aasp/cursos/index.asp">AASP Cultural</a>
+                            </td></tr>
+                        </table>
+                    </td>
+
+                    <td><img src="http://www.aasp.org.br/aasp/img/divisor_menu.gif"  /></td>
+                    <td onMouseOver="Menu_HoverStatic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n3" width="190">
+                        <table class="ctl00_Menu1_4 txt-aasp" cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tr><td>
+                                    <a href="http://vitae.aasp.org.br/">Vitae - Rede Profissional</a>
+                            </td></tr>
+                        </table>
+                    </td>
+
+                    <td><img src="http://www.aasp.org.br/aasp/img/divisor_menu.gif"  /></td>
+                    <td onMouseOver="Menu_HoverStatic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n4">
+                        <table class="ctl00_Menu1_4 txt-aasp" cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tr><td>
+                                    <a href="http://www.aasp.org.br/aasp/mapa_site/mapa.asp">Mapa do Site</a>
+                            </td></tr>
+                        </table>
+                    </td>
+
+                    <td><img src="http://www.aasp.org.br/aasp/img/divisor_menu.gif"  /></td>
+                    <td onMouseOver="Menu_HoverStatic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n5">
+                        <table class="ctl00_Menu1_4 txt-aasp" cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tr><td>
+                                    <a href="http://www.aasp.org.br/aasp/faleconosco/contatos/faleconosco.asp">Fale Conosco</a>
+                            </td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div id="ctl00_Menu1n0Items" class="ctl00_Menu1_0">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n01">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/institucional/apresentacao.asp">&nbsp;Apresenta&#231;&#227;o&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n010">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://acervo.aasp.org.br/" target="_blank">&nbsp;Acervo Digital&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n02">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/institucional/historia/aaspfun.asp">&nbsp;Hist&#243;ria&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n03">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/institucional/nossas_instalacoes/index.asp">&nbsp;Nossas Instala&#231;&#245;es&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n04">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/institucional/conselho_diretoria/diretoria.asp">&nbsp;Diretoria e Conselho&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n05">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/institucional/conquistas_realizacoes/index.asp">&nbsp;Conquistas e Realiza&#231;&#245;es&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n06">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/institucional/estatuto_regimento/aaspesta2003.asp">&nbsp;Estatutos e Regulamentos&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n07">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/institucional/localizacao.asp">&nbsp;Localiza&#231;&#227;o&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n08">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/institucional/video_institucional/video_institucional.asp">&nbsp;V&#237;deo Institucional&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n09">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/institucional/wallpaper_site/wallpapers.asp">&nbsp;Wallpapers / Pap&#233;is de Parede&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+                </table>
+            </div>
+            <div id="ctl00_Menu1n1Items" class="ctl00_Menu1_0">
+                <table border="0" cellpadding="0" cellspacing="0" width="300">
+                    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n011">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/acompanhamento_processos/sa_acomprocessos.asp">&nbsp;Acompanhamento de Processos&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n012">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/aplicativoaasp/index.asp">&nbsp;Aplicativo M&#243;vel AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n013">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/assinantes/">&nbsp;Assinantes AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n014">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/atendimento/atendimento.asp">&nbsp;Atendimento ao Associado&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n015">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/biblioteca/index.asp">&nbsp;Biblioteca&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n0200">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/central_apoio/index.asp">&nbsp;Central de Apoio ao Associado&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n016">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/centrodeestudos/index.asp">&nbsp;Centro de estudos&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n017">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/tribunais/competencias/index_territorial.asp">&nbsp;Compet&#234;ncia Territorial&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n018">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/email_gratuito/index.asp">&nbsp;Criar e-mail gratuito&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n019">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/emprestimo_becas/index.asp">&nbsp;Empr&#233;stimo de Becas&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n020">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/brasilia/sa_escrbrasilia.asp">&nbsp;Escrit&#243;rio em Bras&#237;lia&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n021">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="https://gerenciador.aasp.org.br/">&nbsp;Gerenciador AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n022">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/tribunais/custas/tabelas_custas/guia_aasp.asp">&nbsp;Guia de Custas Judiciais e Extrajudiciais&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n023">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/guia_enderecos/index_guia.asp">&nbsp;Guia de Endere&#231;os&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n024">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/informacoes/economicas/indecon.asp">&nbsp;Informa&#231;&#245;es Econ&#244;micas&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n025">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/informativos/minicodigos.asp">&nbsp;Minic&#243;digos AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n026">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/informativos/navegador.asp">&nbsp;Navegador AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n027">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/informativos/notas_falecimento/index.asp">&nbsp;Notas de Falecimento&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n028">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/acordaos/index.asp">&nbsp;N&#250;cleo de Suporte Forense&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n029">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/biblioteca/index.asp">&nbsp;Pesquisa de Legisla&#231;&#227;o, Doutrina e Jurisprud&#234;ncia&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n030">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://processoeletronico.aasp.org.br/" target="_blank">&nbsp;Processo Eletr&#244;nico&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n031">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/regulamento/prod_serv.asp">&nbsp;Regulamentos dos Servi&#231;os AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n032">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/salas_advogados/sa_sala_advogado.asp">&nbsp;Sala dos Advogados&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n033">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/seguro_vida/index.asp">&nbsp;Seguro de Vida em Grupo&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n034">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp">&nbsp;Sites de Interesse&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n035">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/index.asp">&nbsp;Situa&#231;&#227;o Cadastral / Financeira&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n036">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/mudanca_ortografica/lingua_portuguesa.asp">&nbsp;Sobre o Acordo Ortogr&#225;fico da L&#237;ngua Portuguesa&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n037">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/tribunais/index.asp">&nbsp;Sobre os Tribunais&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+                </table>
+            </div>
+            <div id="ctl00_Menu1n0200Items" class="ctl00_Menu1_0">
+                <table border="0" cellpadding="0" cellspacing="0" width="300">
+                    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n0201">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://certidigital.aasp.org.br/Agendamento/Apresentacao">&nbsp;Certifica&#231;&#227;o Digital&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n0202">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/regulamento/sp_esp_digitalizacao.asp">&nbsp;Digitaliza&#231;&#227;o e c&#243;pia de documentos e processos&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n0203">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/jucesp/sa_jucesp.asp">&nbsp;Posto Jucesp&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n0204">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/regulamento/sp_saladosadvs.asp">&nbsp;Sala Privativa do Associado&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n0205">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/sala_internet/sala_internet.asp">&nbsp;Sala de Internet&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+                </table>
+            </div>
+            <div id="ctl00_Menu1n2Items" class="ctl00_Menu1_0">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n042">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/simposio/" target="_blank">&nbsp;10&#186; Simp&#243;sio Regional AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n043">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/congresso_paulista/" target="_blank">&nbsp;VII Congresso Paulista de Direito de Fam&#237;lia&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n044">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/agendacultural/" target="_blank">&nbsp;Agenda Cultural&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n045">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/cursos/crs_index.asp">&nbsp;Cursos AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n046">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/curso-conciliadores/", target="_blank">&nbsp;Curso para capacita&#231;&#227;o de conciliadores e mediadores judiciais&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n047">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/preparatorio/", target="_blank">&nbsp;Curso Preparat&#243;rio para Exame da Ordem&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n048">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/cursos-ena-aasp/" target="_blank">&nbsp;Cursos de extens&#227;o - Parceria ENA/AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n049">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/cursos/outros/out_cursos.asp">&nbsp;Cursos de Outras Entidades&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n050">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.unisc.br/site/direito_ead_aasp/", target="_blank">&nbsp;Curso de p&#243;s-gradua&#231;&#227;o EAD - AASP/UNISC&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n051">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/cursos/outros/eve_com.asp">&nbsp;Eventos e Comemora&#231;&#245;es&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n052">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/introducao_arbitragem/", target="_blank">&nbsp;Introdu&#231;&#227;o &#224; Arbitragem&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n053">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/cursos/outros/lanc_juri.asp">&nbsp;Lan&#231;amentos Jur&#237;dicos&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n054">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/cursos/videoteca/index.asp">&nbsp;Videoteca&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n055">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.pauliceialiteraria.com.br/" target="_blank">&nbsp;Pauliceia Liter&#225;ria&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n056">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://washulaw.aasp.org.br/", target="_blank">&nbsp;Washington University of St. Louis&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+                </table>
+            </div>
+            <div id="ctl00_Menu1n5Items" class="ctl00_Menu1_0">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n061">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/faleconosco/contatos/faleconosco.asp">&nbsp;Contatos&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n0100">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://forum2.aasp.org.br/indexassociado.aspx">&nbsp;De olho no F&#243;rum&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n063">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/faleconosco/duvidas_frequentes/faq_2.asp">&nbsp;D&#250;vidas Frequentes&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n064">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/faleconosco/fax.asp">&nbsp;Fax&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n065">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://filiacao.aasp.org.br/">&nbsp;Filie-se &#224; AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n066">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/ouvidoria/login_ouvidoria.asp">&nbsp;Ouvidoria AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n067">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/regulamento/prod_serv.asp">&nbsp;Regulamentos dos Servi&#231;os AASP&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+                </table>
+            </div>
+            <div id="ctl00_Menu1n03Items" class="ctl00_Menu1_0">
+	            <table border="0" cellpadding="0" cellspacing="0">
+		            
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n061">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/institucional/nossas_instalacoes/predio_alvares/foto_1.asp">&nbsp;Pr&#233;dio &#193;lvares Penteado&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n062">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/institucional/nossas_instalacoes/predio_vilamariana/foto_8.asp">&nbsp;Pr&#233;dio Vila Mariana&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n063">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/servicos/brasilia/sa_escrbrasilia.asp">&nbsp;Escrit&#243;rio em Bras&#237;lia&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+	            </table>
+            </div>
+			 <div id="ctl00_Menu1n0100Items" class="ctl00_Menu1_0">
+	            <table border="0" cellpadding="0" cellspacing="0">
+		            
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n0101">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://forum2.aasp.org.br/avaliacao.aspx?id=48">&nbsp;Presidente Prudente - Justi&#231;a Estadual, Federal e do Trabalho.&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n0102">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://forum2.aasp.org.br/avaliacao.aspx?id=50">&nbsp;S&#227;o Jos&#233; dos Campos - Justi&#231;a Estadual, Federal e do Trabalho.&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+    <tr onMouseOver="Menu_HoverDynamic(this)" onMouseOut="Menu_Unhover(this)" onKeyUp="Menu_Key(this)" id="ctl00_Menu1n0103">
+    <td><table class="txt-MenuItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+       
+		        <tr><td><a href="http://www.aasp.org.br/aasp/deolhonoforum/resultados.asp">&nbsp;Conhe&#231;a aqui os f&#243;runs avaliados desde 2012 por nossos associados.&nbsp;</a></td>
+        
+        </tr></table></td>
+    </tr>
+    
+	            </table>
+            </div>
+            <a id="ctl00_Menu1_SkipLink"></a>
+        </td>
+    </tr>
+    <tr valign="top">
+        <!-- menu botões vermelhos -->
+        <td width="268px" valign="top" align="left" class="botoes_vermelhos">
+            <table width="268px" style="font-size:11px;">
+                <tr height="24px">
+                    <td width="134px" style="text-align:right;"><a href="http://www.aasp.org.br/aasp/cursos/crs_index.asp" title="Cursos"><img src="http://cdn.aasp.org.br/institucional/images/servico_cursos.png" border="0" alt="Cursos" /></a></td>
+
+                    <td width="134px"><a href="http://www.aasp.org.br/aasp/jurisprudencia/index.asp" title="Jurisprudência"><img src="http://cdn.aasp.org.br/institucional/images/servico_jurisprudencia.png" border="0" alt="Jurisprudência" /></a></td>
+                </tr>
+                <tr height="24px">
+                    <td width="134px" style="text-align:right;"><a href="http://www.aasp.org.br/aasp/boletins/index.asp" title="Boletim"><img src="http://cdn.aasp.org.br/institucional/images/servico_boletim.png" border="0" alt="Boletim" /></a></td>
+
+                    <td width="134px"><a href="http://www.aasp.org.br/aasp/servicos/revista_advogado/servrev.asp" title="Revista do Advogado"><img src="http://cdn.aasp.org.br/institucional/images/servico_revista.png" border="0" alt="Revista do Advogado" /></a></td>
+                </tr>
+                <tr height="24px">
+                    <td width="134px" style="text-align:right;"><a href="http://www.aasp.org.br/aasp/clubedebeneficios/index.asp" title="Clube de Benefícios"><img src="http://cdn.aasp.org.br/institucional/images/servico_clube_beneficios.png" border="0" alt="Clube de Benefícios" /></a></td>                
+                    <td width="134px"><a href="http://www.aasp.org.br/novo_cpc/conhecimento.html" target="_blank" title="Novo Código de Processo Civil"><img src="http://cdn.aasp.org.br/institucional/images/servico_novo_cpc.png" border="0" alt="Novo Código de Processo Civil" /></a></td>
+                </tr>
+                <tr height="24px">
+                    <td width="134px" style="text-align:right;"><a href="http://certidigital.aasp.org.br/Agendamento/Apresentacao" title="Certificação Digital"><img src="http://cdn.aasp.org.br/institucional/images/servico_certificacao.png" border="0" alt="Certificação Digital" /></a></td>
+
+                    <td width="134px"><a href="http://www.aasp.org.br/aasp/servicos/calculos/index.asp" title="Cálculos Judiciais"><img src="http://cdn.aasp.org.br/institucional/images/servico_calculos.png" border="0" alt="Cálculos Judiciais" /></a></td>
+                </tr>
+                <tr height="24px">
+                    <td width="134px" style="text-align:right;"><a href="http://www.aasp.org.br/aasp/tribunais/expediente_forense.asp" title="Expediente Forense"><img src="http://cdn.aasp.org.br/institucional/images/servico_expediente_forense.png" border="0" alt="Expediente Forense" /></a></td>
+
+                    <td width="134px"><a href="http://www.aasp.org.br/aasp/servicos/index.asp" title="Alteração Cadastral"><img src="http://cdn.aasp.org.br/institucional/images/servico_alteracao_cadastral.png" border="0" alt="Alteração Cadastral" /></a></td>
+                </tr>
+                <tr height="24px">
+                    <td width="134px" style="text-align:right;"><a href="http://www.aasp.org.br/aasp/recortes/index.asp" title="Intimações"><img src="http://cdn.aasp.org.br/institucional/images/servico_intimacoes.png" border="0" alt="Intimações" style="margin-top: -6px;" /></a></td>
+
+                    <td width="134px" title="De olho no Fórum">
+                        <style type="text/css">
+                            #menuForum {
+                                background: url('http://cdn.aasp.org.br/institucional/images/servico_olho_forum.png') no-repeat;
+                                width: 134px;
+                                *width: 134px;
+                                height: 29px;
+                                padding: 0px;
+                                margin: 0px;
+                                text-decoration: none;
+                                list-style-type: none;
+                            }
+
+                            #menuForum ul {
+                                margin: 0;
+                                padding: 0;
+                                list-style-type: none;
+                            }
+
+                            /* Primeiro nível */
+                            #menuForum a {
+                                font-size: 12px;
+                                font-family: Arial;
+                                float: left;
+                                width: 100%;
+                                height: 30px;                
+                                text-decoration: none;
+                                display: block;
+                            }
+
+                                #menuForum a:hover,
+                                #menuForum a.menu_open {
+                                }
+
+                            /* Segundo nível */
+                            #menuForum ul {
+                                visibility: hidden;
+                                position: absolute;
+                                width: 240px;
+                                *width: 276px;                
+                                height: 202px;
+                                *height: 202px;                                
+								background: url('http://cdn.aasp.org.br/institucional/images/tooltip_OlhoForum_3itens.png') no-repeat left top;
+                                padding: 20px 0 0 38px;
+                                margin-top: -70px;
+                                margin-left: -6px;
+                            }
+
+                            #menuForum ul a {
+                                color: #fff;
+                                width: 220px;
+                                height: auto;
+                                *margin-left:-10px;
+                            }
+                            #menuForum ul a:hover {
+                                /*text-decoration:underline;*/
+                                color: #CCC;
+                            }
+                            #menuForum img{
+                                border:0;
+                                
+                            }
+                            .menuForumTexto{
+                                line-height:18px;
+                                text-indent:-13px;
+                                *text-indent: 0;
+                            }
+
+                        </style>
+                        <ul id="menuForum">
+                            <li>
+                                <a href="http://forum2.aasp.org.br/indexassociado.aspx">&nbsp;</a>
+                                <ul>
+                                    <li class="menuForumTexto"><a href="http://forum2.aasp.org.br/avaliacao.aspx?id=48"><img src="http://cdn.aasp.org.br/institucional/images/seta_branca_direita.png" width="13" height="9" />Presidente Prudente - Justiça Estadual, Federal e do Trabalho.</a><br style="line-height:48px;"></li>                                                                     
+                                    <li class="menuForumTexto"><a href="http://forum2.aasp.org.br/avaliacao.aspx?id=50"><img src="http://cdn.aasp.org.br/institucional/images/seta_branca_direita.png" width="13" height="9" />São José dos Campos - Justiça Estadual, Federal e do Trabalho.</a><br style="line-height:48px;"></li>
+                                    <li class="menuForumTexto"><a href="http://www.aasp.org.br/aasp/deolhonoforum/resultados.asp"><img src="http://cdn.aasp.org.br/institucional/images/seta_branca_direita.png" width="13" height="9" />Conheça aqui os fóruns avaliados desde 2012 por nossos associados.</a></li>
+                                </ul>
+                            </li>
+                        </ul>                        
+                    </td>
+
+                </tr>
+                <tr height="24px">
+                    <td width="134px" style="text-align:right;"><a href="http://www.aasp.org.br/aasp/imprensa/clipping/index.asp" title="Clipping Eletrônico"><img src="http://cdn.aasp.org.br/institucional/images/servico_clipping.png" border="0" alt="Clipping Eletrônico" style="margin-top: -9px;" /></a></td>
+
+                    <td rowspan="2" valign="bottom">
+                        
+                        <div>
+                            <a href="http://www.aasp.org.br/aasp/servicos/intro_filiese.asp" title="Filie-se à AASP"><img src="http://cdn.aasp.org.br/institucional/images/botao_filiacao.gif" border="0" alt="Filie-se à AASP" style="margin-top: -3px;"/></a>                        
+                        </div>
+                        
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="134px" style="text-align:right;"><a href="http://www.pauliceialiteraria.com.br/" border="0" target="_blank" title="Pauliceia Literária"><img src="http://cdn.aasp.org.br/institucional/images/servico_pauliceia_literaria.png" border="0" alt="Pauliceia Literária" style="margin-top: -7px; *margin-top: -8px;" /></a></td>
+                </tr>
+
+            </table>
+        </td>
+        <!-- vitrine -->
+        <td style="width: 472px; height: 228px; margin: 0; padding: 0; padding-top: 3px;">
+            <iframe frameborder="0" scrolling="no" name="vitrine" src="http://www.aasp.org.br/aasp//vitrine/vitrine.asp" width="472px" height="228px"></iframe>
+        </td>
+    </tr>
+    
+    <tr height="100">
+        <td colspan="2">
+    
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+        <tr>
+            <td width="569">
+    <table width="100%" cellpadding="1" cellspacing="1">
+    <tr>
+                    
+            <td width="25%">
+                <table width="100%" class="submenu1" cellpadding="0" cellspacing="0">
+                <tr height="20">
+                
+                    
+                    <td class="smbg" background="http://www.aasp.org.br/aasp/img/fundo_submenu_left.gif" width="4">&nbsp;</td>
+                        <td width="100%" background="http://www.aasp.org.br/aasp/img/fundo_submenu_center.gif">
+                        <a href="http://www.aasp.org.br/aasp/noticias/noticias_capa.asp">Ver mais notícias</a>
+                        </td>
+                    <td background="http://www.aasp.org.br/aasp/img/fundo_submenu_right.gif" width="4">&nbsp;</td></tr></table></td>
+                    
+                    
+            <td width="25%">
+                <table width="100%" class="submenu1" cellpadding="0" cellspacing="0">
+                <tr height="20">
+                
+                    
+                    <td class="smbg" background="http://www.aasp.org.br/aasp/img/fundo_submenu_left.gif" width="4">&nbsp;</td>
+                        <td width="100%" background="http://www.aasp.org.br/aasp/img/fundo_submenu_center.gif">
+                        <a href="http://www.aasp.org.br/aasp/index.asp">Destaques</a>
+                        </td>
+                    <td background="http://www.aasp.org.br/aasp/img/fundo_submenu_right.gif" width="4">&nbsp;</td></tr></table></td>
+                    
+                    
+            <td width="25%">
+                <table width="100%" class="submenu1" cellpadding="0" cellspacing="0">
+                <tr height="20">
+                
+                    
+                    <td class="smbg" background="http://www.aasp.org.br/aasp/img/fundo_submenu_left.gif" width="4">&nbsp;</td>
+                        <td width="100%" background="http://www.aasp.org.br/aasp/img/fundo_submenu_center.gif">
+                        <a href="http://www.aasp.org.br/aasp/noticias/noticias_busca.asp">Busca de Notícias</a>
+                        </td>
+                    <td background="http://www.aasp.org.br/aasp/img/fundo_submenu_right.gif" width="4">&nbsp;</td></tr></table></td>
+                    
+                    
+            <td width="25%">
+                <table width="100%" class="submenu1" cellpadding="0" cellspacing="0">
+                <tr height="20">
+                
+                    
+                    <td class="smbg" background="http://www.aasp.org.br/aasp/img/fundo_submenu_left.gif" width="4">&nbsp;</td>
+                        <td width="100%" background="http://www.aasp.org.br/aasp/img/fundo_submenu_center.gif">
+                        <a href="http://www.aasp.org.br/aasp/noticias/todas_noticias.asp">Todas as notícias</a>
+                        </td>
+                    <td background="http://www.aasp.org.br/aasp/img/fundo_submenu_right.gif" width="4">&nbsp;</td></tr></table></td>
+                    </tr>
+    </table>
+    </td>
+            <td width="16" valign="top" align="left" rowspan="2">
+            <img alt="" src="http://cdn.aasp.org.br/institucional/images/divisor.gif" /></td>
+            <td valign="top" width="180" rowspan="2">
+
+            
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr height="10"><td></td></tr>
+                <tr>
+                    <td><img src="http://cdn.aasp.org.br/institucional/images/titulo_intimacoes.png" /></td>
+                </tr>
+                <tr height="0"><td></td></tr>
+                <tr>
+                    <td>
+    <form id="frmAutenticacao" action="http://www.aasp.org.br/aasp/includes/login.asp" method="post" Onsubmit="return VerificaAcessoRapido();" style="margin-top:5;margin-bottom:0">
+    <table width="100%" class="txt-aasp" border="0" cellpadding="2" cellspacing="0">
+        <tr>
+            <td width="55">Nº AASP</td>
+            <td><input type="text" name="matricula_aasp" class="frm_txt_menor" style="width:85px" tabindex="1" OnKeyDown="OnlyNumbers();"/></td>
+            <td rowspan="2" align="left"><input type="image" src="http://cdn.aasp.org.br/institucional/images/botao_ok.gif" title="Acesse o ambiente autenticado" tabindex="3"/></td>
+        </tr>
+        <tr>
+            <td width="55">Senha</td>
+            <td><input type="password" name="senha" class="frm_txt_menor" style="width:85px" tabindex="2"/></td>
+        </tr>
+    </table>
+    <input type="hidden" id="hidIdAcesso" name="id_acesso" value="1" />
+    </form>
+    </td>
+                </tr>
+                <tr height="10"><td></td></tr>
+                <tr>
+                    <td><img src="http://cdn.aasp.org.br/institucional/images/titulo_webmail.gif" /></td>
+                </tr>
+                <tr height="5"><td></td></tr>
+                <tr>
+                    <td>
+                    <!--<form name="xfrmwebmail" action="http://wwww.aasp.org.br/webmail/index.aspx" method="post" Onsubmit="return fc_VerificaAcessoWebmail();" style="margin-bottom:0;">-->       
+         
+                     <form name="xfrmwebmail" action="https://webserver.aasp.org.br/webmail/index.aspx" method="post" Onsubmit="return fc_VerificaAcessoWebmail();" style="margin-bottom:0;">
+                        <script type="text/javascript">
+                            function VerificaRecadastroSenha() {
+                                if (document.xfrmwebmail.username.value == '') {
+                                    alert("E-mail inválido.")
+                                    return false;
+                                }
+                                else {
+                                    document.xfrmwebmail.esqueceuSenha.value = 1;
+                                    document.xfrmwebmail.submit();
+                                }
+                            }
+                        </script>
+                        <table width="100%" class="txt-aasp" border="0" cellpadding="2" cellspacing="0">
+                            <tr>
+                                <td width="55">E-mail</td>
+                                <td><input type="hidden" name="esqueceuSenha" id="esqueceuSenha" value="0" /><input type="text" name="username" class="frm_txt_menor" style="width:85px" tabindex="4"/></td>
+                                <td rowspan="2" align="left"><input type="image" src="http://cdn.aasp.org.br/institucional/images/botao_ok.gif" title="" tabindex="6" onMouseOver="mostrarHelpWebmail(arguments[0],998);" onMouseOut="esconderHelpWebmail(998);" /></td>
+                            </tr>
+                            <tr>
+                                <td width="55">Senha</td>
+                                <td><input type="password" name="password" class="frm_txt_menor" style="width:85px" tabindex="5"/></td>
+                            </tr>                        
+                        </table>
+					    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+						    <tr>
+							    
+							    <td colspan="2" style="text-align:right;"><a href="#" onclick="javascript:return VerificaRecadastroSenha();" style="font-size:9px; margin-right:3px;">Esqueci minha senha webmail</a></td>
+						    </tr>
+					    </table>
+                        </form>
+                    </td>
+                </tr>
+                <tr height="5"><td></td></tr>
+                <tr>
+                    <td>
+                       <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                         <tr>
+                           <td width="57"></td>
+                           <td><b><a href="http://www.aasp.org.br/aasp/servicos/email_gratuito/index.asp" style="font-size:10px;">Criar e-mail gratuito</a></b></td>
+                         </tr>
+                       </table>
+                    </td>
+                </tr>
+                <tr height="10"><td></td></tr>
+                <tr>
+                    <td class="txt-aasp"><a href="http://www.aasp.org.br/aasp/ouvidoria/login_ouvidoria.asp">
+                        <img border="0" src="http://cdn.aasp.org.br/institucional/images/botao_ouvidoria.png" />
+                    </a></td>
+                </tr>
+                <tr height="10"><td></td></tr>
+                <tr>
+                    <td>
+    <table border="0" cellspacing="0" cellpadding="0" width="170" id="tblAcessoRapido" style="height:20px;">
+    <tr><td><a href="javascript:showMenu('divAcessoRapido');"><img src="http://cdn.aasp.org.br/institucional/images/combobox_acesso_rapido.gif" border="0"/></a></td></tr>
+    </table>
+    <div id="divAcessoRapido" style="display:none;background-color:White;border: solid 1px #666666; width:170px;text-align:left;padding: 0 0 0 2;z-index:90000000">
+        <a id="arItem11" href="javascript:mudaOpcaoAR(11);" class="txt-aasp-link">Histórico de Publicações</a><br />
+        <a id="arItem1" href="javascript:mudaOpcaoAR(1);" class="txt-aasp-link">Boletins</a><br />
+        <a id="arItem2" href="javascript:mudaOpcaoAR(2);" class="txt-aasp-link">Competência Territorial</a><br />
+		 <a id="arItem12" href="javascript:mudaOpcaoAR(12);" class="txt-aasp-link">Débito Automático</a><br />
+        <a id="arItem3" href="javascript:mudaOpcaoAR(3);" class="txt-aasp-link">Guia de Custas Judiciais</a><br />
+        <a id="arItem4" href="javascript:mudaOpcaoAR(4);" class="txt-aasp-link">Guia de Endereços</a><br />
+        <a id="arItem5" href="javascript:mudaOpcaoAR(5);" class="txt-aasp-link">Posto JUCESP</a><br />
+        <a id="arItem6" href="javascript:mudaOpcaoAR(6);" class="txt-aasp-link">WebMail</a><br />
+        <a id="arItem7" href="javascript:mudaOpcaoAR(7);" class="txt-aasp-link">Imprimir Boleto</a><br />
+        <a id="arItem8" href="javascript:mudaOpcaoAR(8);" class="txt-aasp-link">Informações de Cobrança</a><br />
+        <a id="arItem9" href="javascript:mudaOpcaoAR(9);" class="txt-aasp-link">Informações Econômicas</a><br />
+        <a id="arItem10" href="javascript:mudaOpcaoAR(10);" class="txt-aasp-link">Minha Senha</a><br />
+       
+    </div>
+    </td>
+                </tr>
+                <tr height="10"><td></td></tr>
+                <tr>
+                    <td>
+	<!--  Cada numero do LinkMenu corresponde ao Index da celula do accordeon na pagina destino -->
+    <table border="0" cellspacing="0" cellpadding="0" width="170" id="tblInteresse" style="height:20px;">
+    <tr><td><a href="javascript:showMenu('divInteresse');"><img src="http://cdn.aasp.org.br/institucional/images/combobox_sites_interesse.gif" border="0"/></a></td></tr>
+    </table>
+    <div id="divInteresse" style="display:none;background-color:White;border: solid 1px #666666; width:170px;text-align:left;padding: 0 0 0 2;">
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=0" class="txt-aasp-link">Busca na Internet</a><br />
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=1" class="txt-aasp-link">Certidões</a><br />
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=2" class="txt-aasp-link">Diários Eletrônicos</a><br />
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=3" class="txt-aasp-link">Emissão de Guias</a><br />
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=4" class="txt-aasp-link">Governamentais</a><br />
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=5" class="txt-aasp-link">Jornais</a><br />
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=6" class="txt-aasp-link">Ministérios</a><br />
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=7" class="txt-aasp-link">Órgãos Diversos</a><br />
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=9" class="txt-aasp-link">Serviços On-line</a><br />
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=10" class="txt-aasp-link">Sites Jurídicos</a><br />
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=11" class="txt-aasp-link">Sites no Exterior</a><br />
+        <a href="http://www.aasp.org.br/aasp/sites_interesse/intersit.asp?linkmenu=12" class="txt-aasp-link">Tribunais</a><br />
+    </div>
+    </td>
+                </tr>
+                <tr height="16"><td></td></tr>
+            </table>
+
+            </td>
+        </tr>
+        <tr><td width="574" valign="top">
+        
+
+  <div class="div_dica" id="popup_999" style="display: none; left: 190px; width: 220px; heigth:43px; position: absolute; top: 360px;">
+    <table class="table_dica">
+        <tr>
+          <td align="left"><span style="FONT-SIZE: 8pt; text-align:justify">
+          O <i>Outlook Web Access Light</i> oferece menos recursos, 
+          porém, se a versão do seu navegador Internet Explorer 
+          for diferente da versão 6 ou posterior a ela, esta 
+          será sua opção. Se a conexão estiver lenta ou a 
+          configuração de segurança for restritiva, utilize-o 
+          para obter agilidade.
+          </span></td>
+        </tr>
+    </table>
+  </div>
+  
+  <div class="div_dica" id="popup_998" style="display: none; left: 190px; width: 220px; heigth:43px; position: absolute; top: 360px;">
+    <table class="table_dica">
+      <tr>
+        <td align="left"><span style="FONT-SIZE: 8pt; text-align:justify">
+        Importante: A digitação da senha incorreta por 5 vezes consecutivas 
+        provoca o bloqueio do acesso ao Webmail por 1 hora. Para desbloqueio 
+        imediato, por gentileza contatar o serviço de atendimento ao 
+        associado no telefone (11) 3291-9200.
+        </span></td>
+      </tr>
+    </table>
+  </div>
+	
+ 
+<script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script>
+<script language="Javascript">
+    function printit(vmxid) {
+        var vmaux
+        vmaux = 'http://www.aasp.org.br/aasp/noticias/visualizar_noticia_print.asp?ID='
+        x = NewWindow(vmaux + vmxid, 'name', '720', '450', 'yes');
+    }
+
+    function enviar(id) {
+        var frmTemp;
+        frmTemp = window.open('enviar.asp?id=' + id, 'enviarnoticia', 'top=50,left=50,width=350,height=300,toolbar=0,scrollbar=0,locationbar=0');
+        frmTemp.focus();
+    }
+</script>
+
+<table align="center" border="0" cellspacing="2" cellpadding="3" width="100%" height="300">
+
+	<tr>
+		<td class="titulo_chama1" align="right">Notícias
+            <br><hr width="100%" size="1" color="#CCCCCC"></td>
+	</tr>
+	<tr>
+		<td height="35">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="80" class="txt-aasp">
+                        Data/Hora:
+                    </td>
+                    <td class="txt-aasp">
+                        19/9/2016 - 17:27:36
+                    </td>
+                    <td style="text-align:right;">
+                        <a href="#" id="btnAumentarFonte" style="border:0px;">
+                            <img title="Aumentar fonte da notícia" src="../../../aasp/imagens/bt_ampliarFonte.png" alt="Aumentar o texto" class="linkImagem" style="border:0px;" /></a>
+                        <a href="#" id="btnDiminuirFonte" style="border:0px;">
+                            <img title="Diminuir fonte da notícia" src="../../../aasp/imagens/bt_reduzirFonte.png" alt="Diminuir o texto" class="linkImagem" style="border:0px;" /></a>
+                    </td>
+                </tr>
+            </table>
+		 </td>
+    </tr>
+	<tr>
+		<td id="tblTitulo" class="txt-aasp" width="650" valign="top"><b><b>Agência Brasil</b> - Diário Oficial publica resolução que altera o Simples Nacional</b></td>
+    </tr>
+    <tr>  
+		<td id="tblNoticias" class="txt-aasp" width="650" valign="top"><p align="justify">Resolução publicada hoje (19) no <a target="_blank" href="http://pesquisa.in.gov.br/imprensa/jsp/visualiza/index.jsp?jornal=1&pagina=14&data=19/09/2016"><font color="#000000"><b>Diário Oficial da União</b></font></a> faz alterações no Simples Nacional. O novo texto consolida e organiza dispositivos relativos à composição e ao momento do reconhecimento da receita bruta para fins de tributação no Simples Nacional, informou a Receita Federal.<br>
+<br>
+Pela norma, compõem a receita bruta, dentre outros fatos geradores, os royalties, aluguéis e demais receitas decorrentes de cessão de direito de uso ou gozo, bem como as verbas de patrocínio. Por outro lado, destaca a Receita Federal, não são componentes da receita bruta a remessa de mercadorias a título de bonificação, doação ou brinde (desde que seja incondicional e não haja contraprestação por parte do destinatário), a remessa de amostra grátis e os valores recebidos a título de multa ou indenização por rescisão contratual (desde que não corresponda à parte executada do contrato).<br>
+<br>
+A resolução trata também das operações de troca, dispondo que os valores correspondentes compõem a receita bruta para todas as partes envolvidas, e determina que as receitas devem ser reconhecidas quando do faturamento, da entrega do bem ou do direito ou à proporção em que os serviços são efetivamente prestados, o que primeiro ocorrer.<br>
+<br>
+Quanto às receitas auferidas por agências de turismo, corresponderá à comissão ou ao adicional percebido, quando houver somente a intermediação de serviços turísticos prestados por conta e em nome de terceiros, ou incluirá a totalidade dos valores auferidos, nos demais casos.<br>
+<br>
+A resolução permite ainda, entre outras situações, que os estados exijam das empresas optantes pelo Simples Nacional informações relativas ao Fundo de Combate à Pobreza, acrescenta a Receita Federal.<br>
+<br>
+O Simples Nacional é um regime tributário diferenciado, simplificado e favorecido previsto em lei aplicável às microempresas e às empresas de pequeno porte.<br>
+<br>
+Fonte: Agência Brasil
+		</p></td>
+    </tr>      
+	<map name="Map">
+	<area shape="rect" coords="195,7,205,17" href="javascript:window.close();">
+	<area shape="rect" coords="79,25,138,46" href="javascript:printit(50519);">
+	<area shape="rect" coords="161,26,207,46" href="javascript:enviar(50519)">
+	</map>
+	<tr>
+		<td>
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr> 
+					<td width="214">&nbsp;</td>
+					<td>&nbsp;</td>
+					<td width="214" align="right" class="txt-aasp"><a href="#" class="linkbranco" onClick="javascript:printit(50519);" title="Imprimir">
+					<img src="http://www.aasp.org.br/aasp/images/icoimprimir.gif" width="20" height="16" border="0">&nbsp;<b>imprimir</b></a> | <a href="#" class="linkbranco" onClick="javascript:enviar(50519)" title="Enviar por e-mail"><img src="http://www.aasp.org.br/aasp/images/icoenviar.gif" width="20" height="13" border="0">&nbsp;<b>enviar</a></b></td>
+					<td width="10" align="right">&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+
+	</tr>
+</table>
+    <script type="text/javascript">
+        $("btnAumentarFonte").on('click', function (event) {
+            event.preventDefault();
+            RedimensionarFonte($("tblNoticias"), 1);
+            RedimensionarFonte($("tblTitulo"), 1);
+        });
+        $("btnDiminuirFonte").on('click', function (event) {
+            event.preventDefault();
+            RedimensionarFonte($("tblNoticias"), -1);
+            RedimensionarFonte($("tblTitulo"), -1);
+        });
+
+    </script>
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-5363617-1");
+    pageTracker._trackPageview();
+</script>
+
+        </td>
+        </table>
+    
+                
+        </td>
+    </tr>
+    <tr><td></td></tr>
+    
+    <tr>
+        <td colspan="2">
+        <table width="764" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+		<td width="247" height="53"><a href="http://www.aasp.org.br/aasp/institucional/video_institucional/video_institucional.asp"><img src="http://cdn.aasp.org.br/institucional/images/rodape_sociais_esquerda.png" alt="" width="247" height="53" border="0" /></a></td>
+		<td width="298" height="53"><img src="http://cdn.aasp.org.br/institucional/images/rodape_sociais_meio.png" width="298" height="53" alt="" /></td>
+		<td width="219" height="53">
+        
+        <table id="MídiasSociais" width="219" height="53" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		<td width="13" height="30"></td>
+		<td width="30" height="30"><a href="http://www.facebook.com/aasponline" target="_blank" title="Facebook da AASP"><img src="http://cdn.aasp.org.br/institucional/images/aasp_facebook.png" alt="Facebook da AASP" width="30" height="30" border="0" /></a></td>
+		<td width="4" height="30"></td>
+		<td width="29" height="30"><a href="http://twitter.com/aasp_online" target="_blank" title="Twitter da AASP"><img src="http://cdn.aasp.org.br/institucional/images/aasp_twitter.png" alt="Twitter da AASP" width="29" height="30" border="0" /></a></td>
+		<td width="4" height="30"></td>
+		<td width="29" height="30"><a href="http://instagram.com/aasponline" target="_blank" title="Instagram da AASP"><img src="http://cdn.aasp.org.br/institucional/images/aasp_instagram.png" alt="Instagram da AASP" border="0" /></a></td>
+		<td width="4" height="30"></td>
+		<td width="30" height="30"><a href="http://www.youtube.com/user/aasponline" target="_blank" title="Canal da AASP no Youtube"><img src="http://cdn.aasp.org.br/institucional/images/aasp_youtube.png" alt="Canal da AASP no Youtube" width="30" height="30" border="0" /></a></td>
+		<td width="4" height="30"></td>
+        <td width="30" height="30"><a href="https://www.flickr.com/photos/aasponline" target="_blank" title="Flickr"><img src="http://cdn.aasp.org.br/institucional/images/aasp_flickr.png" alt="Flickr" width="30" height="30" border="0" /></a></td>
+        <td width="4" height="30"></td>
+        <td width="30" height="30"><a href="javascript:;" onmouseover="exibeWhatsapp();" onmouseout="ocultaWhatsapp();" title="WhatsApp da AASP"><img src="http://cdn.aasp.org.br/institucional/images/aasp_whatsapp.png" alt="WhatsApp da AASP" width="30" height="30" border="0" id="iconeWhatsapp" />
+            <div class="telWhatsapp" id="telWhatsapp">(11) 99424-6731
+                <div class="arrow-down"></div>
+            </div>
+        </td>
+        <td width="8" height="30"></td>
+		</tr>
+		<tr>
+		<td width="219" height="23" colspan="13"><img src="http://cdn.aasp.org.br/institucional/images/rodape_sociais_direita.png" width="219" height="23" alt="" /></td>
+	</tr>
+	</table>
+        </td>
+	</tr>
+        </table>
+
+       </td>
+    </tr>
+    
+    <tr>
+        <td colspan="2">
+        <img src="http://cdn.aasp.org.br/institucional/images/rodape.png"/>
+        </td>
+    </tr>
+</table>
+
+    <script type="text/javascript">
+        function ManterSessaoAtiva() {
+            document.getElementById('HiddenFrame').src = "http://www.aasp.org.br/aasp/includes/controle_login.asp";
+            setTimeout("ManterSessaoAtiva()", 20000);
+        }
+    </script>
+    <p>
+        <iframe id="HiddenFrame" frameborder="0" height="0" width="0"></iframe>
+    </p>
+<script type="text/javascript">
+    Menu.init("menuForum", {"orientation": Menu.VERTICAL});
+</script>
+</body>
+</html>
+<script type="text/javascript" src="http://www.aasp.org.br/aasp/js/rodape.js"></script>
+<script language="javascript" src="http://www.aasp.org.br/aasp/js/combo.js"></script>
