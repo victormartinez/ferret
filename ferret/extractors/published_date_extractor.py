@@ -2,12 +2,17 @@
 import re
 import dateparser
 from bs4 import BeautifulSoup
-from ferret.util.url_parser import extract_date_from_url
 
 
 class UrlPublishedDateExtractor(object):
     def extract(self, url):
-        return extract_date_from_url(url)
+        published_date = re.search(r'(\d{4}/\d{2}/\d{2})/?', url)
+        if not published_date:
+            return None
+
+        extracted_date = published_date.group()
+        return dateparser.parse(extracted_date,
+                                languages=['en'])  # date format used by blogs follow the american pattern
 
 
 class MetaTagsPublishedDateExtractor(object):
@@ -23,6 +28,15 @@ class MetaTagsPublishedDateExtractor(object):
                 match = re.match(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}', content)
                 if match:
                     return dateparser.parse(match.group())
+        return None
+
+
+class OpenGraphPublishedDateExtractor:
+    def extract(self, html):
+        soup = BeautifulSoup(html, 'lxml')
+        published_time = soup.select('meta[property=article:published_time]')
+        if published_time:
+            return published_time
         return None
 
 
