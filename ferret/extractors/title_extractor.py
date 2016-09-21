@@ -31,6 +31,15 @@ class UrlTitleExtractor:
         title_candidates = get_title_element_candidates(self.soup)
         return calculate_weights_of_candidates(title_candidates)
 
+    def _calculate_title_weight_by_keyword_matching(self, candidate, keywords):
+        title_words = candidate.lower().split(" ")
+        keywords = [x.lower() for x in keywords]
+        weight = 0
+        for i, key in enumerate(keywords):
+            if key in title_words:
+                weight += 1
+        return weight
+
 
 class OpenGraphTitleExtractor:
     def __init__(self, html):
@@ -73,7 +82,6 @@ class TagTitleExtractor:
         ordered_candidates = ordered_candidates[:2]
         first_candidate = ordered_candidates[0]
         second_candidate = ordered_candidates[1]
-
 
         if title_weights[first_candidate] == title_weights[second_candidate]:
             if len(first_candidate) >= len(second_candidate):
