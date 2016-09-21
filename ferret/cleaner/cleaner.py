@@ -11,6 +11,14 @@ TAGS_TO_UNWRAP = ['font']
 UNWANTED_CSS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer|subscribe|foot"
 
 
+def normalize_text(text):
+    result = ' '.join([s for s in text.split(' ') if s != ''])
+    result = result.replace('\n', '')
+    result = result.replace('\t', '')
+    result = result.replace('\r', '')
+    return result
+
+
 def _get_flatten_attr_list(tag):
     attrs = tag.attrs
     if 'id' in attrs:
