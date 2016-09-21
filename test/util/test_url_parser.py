@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import pytest
-from ferret.util.url_parser import extract_sorted_keywords_from_url, extract_date_from_url
+from ferret.util.parser.parser import extract_sorted_keywords_from_url
 
 
 @pytest.mark.parametrize("url, expected_keyword_list", [
@@ -15,15 +15,3 @@ from ferret.util.url_parser import extract_sorted_keywords_from_url, extract_dat
 def test_correct_keywords_extraction(url, expected_keyword_list):
     keyword_list = extract_sorted_keywords_from_url(url)
     assert keyword_list == expected_keyword_list
-
-
-@pytest.mark.parametrize("url, expected_date_string", [
-    ('http://edition.cnn.com/2016/05/12/politics/china-trump-fans/index.html', '2016-05-12T00:00:00'),
-    ('http://edition.cnn.com/2016/06/04/us/muhammad-ali-final-days/index.html', '2016-06-04T00:00:00'),
-    ('http://edition.cnn.com/videos/us/2016/06/02/gorilla-drags-boy-eyewitness-intv-recounts-moment-ac.cnn?iid=ob_lockedrail_topeditorial', '2016-06-02T00:00:00'),
-    ('http://www.hlntv.com/shows/the-daily-share/articles/2014/07/19/16-celebs-who-love-playful-hair-color', '2014-07-19T00:00:00'),
-    ('http://edition.cnn.com/2013/07/02/showbiz/gallery/upcoming-sequels-movie-release-dates/index.html', '2013-07-02T00:00:00'),
-])
-def test_date_extraction(url, expected_date_string):
-    datetime = extract_date_from_url(url)
-    assert datetime.isoformat() == expected_date_string
