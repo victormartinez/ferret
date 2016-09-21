@@ -70,15 +70,26 @@ class TagTitleExtractor:
         if len(title_element_candidates) == 1:
             return title_element_candidates[0].text
 
-        print(title_element_candidates)
-
         title_weights = calculate_weights_of_candidates(title_element_candidates)
+        title_weights = self._calc_by_title_tag(title_weights)
+        return self._choose_best_candidate(title_weights)
+
+    def _calc_by_title_tag(self, title_weights):
         title_text = get_title_text_from_title_tag(self.soup)
-        title_weights = self._calc_by_title_tag(title_text, title_weights)
+        if not title_text:
+            return title_weights
+
+        for title, weight in title_weights.items():
+            title_keywords = [k for k in title_text.split() if k != '']
+            title_candidate_keywords = [t for t in title.split() if t != '']
+            if set(title_keywords).intersection(title_candidate_keywords):
+                new_weight = title_weights.get(title) + 1
+                title_weights[title] = new_weight
+
+        return title_weights
+
+    def _choose_best_candidate(self, title_weights):
         ordered_candidates = sorted(title_weights, key=title_weights.__getitem__, reverse=True)
-
-        print(title_weights)
-
         ordered_candidates = ordered_candidates[:2]
         first_candidate = ordered_candidates[0]
         second_candidate = ordered_candidates[1]
@@ -89,16 +100,3 @@ class TagTitleExtractor:
             return second_candidate.strip()
         else:
             return first_candidate.strip()
-
-    def _calc_by_title_tag(self, title_element_text, title_weights):
-        if not title_element_text:
-            return title_weights
-
-        for title, weight in title_weights.items():
-            title_keywords = [k for k in title_element_text.split() if k != '']
-            title_candidate_keywords = [t for t in title.split() if t != '']
-            if set(title_keywords).intersection(title_candidate_keywords):
-                new_weight = title_weights.get(title) + 1
-                title_weights[title] = new_weight
-
-        return title_weights
