@@ -36,7 +36,7 @@ def _get_contents_of_file(path):
     ("pt/carta-forense-vigilantes-do-peso-nao-indenizarao-orientadora-por-exigir-manutencao-do-peso.html", "http://www.cartaforense.com.br/conteudo/noticias/vigilantes-do-peso-nao-indenizarao-orientadora-por-exigir-manutencao-do-peso/16962", "TRABALHO  Vigilantes do Peso não indenizarão orientadora por exigir manutenção do peso"),
 ])
 def test_title_extractor(test_file_path, url_page, expected_title):
-    html = _get_contents_of_file("../../resources/{}".format(test_file_path))
+    html = _get_contents_of_file("test/resources/{}".format(test_file_path))
     extractor = _get_url_title_extractor(url_page, html)
     assert extractor.extract() == expected_title
 

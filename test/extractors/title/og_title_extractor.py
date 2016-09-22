@@ -64,7 +64,7 @@ def _get_contents_of_file(path):
     ("pt/tre-rj-eleitor-tem-ate-esta-quinta-feira-22-para-solicitar-2a-via-do-titulo.html", "Eleitor tem até esta quinta-feira (22) para solicitar 2ª via do título "),
 ])
 def test_og_title_extractor(test_file_path, expected_title):
-    html = _get_contents_of_file("../../resources/{}".format(test_file_path))
+    html = _get_contents_of_file("test/resources/{}".format(test_file_path))
     extractor = _get_og_title_extractor(html)
     assert extractor.extract() == expected_title
 
@@ -74,6 +74,6 @@ def test_og_title_extractor(test_file_path, expected_title):
     ("pt/tce-ce-iniciada-2a-fase-da-selecao-para-provimento-de-cargo-em-comissao-do-mp-junto-ao-tce-ceara.html", None),
 ])
 def test_og_title_extractor_gets_none(test_file_path, expected_title):
-    html = _get_contents_of_file("../../resources/{}".format(test_file_path))
+    html = _get_contents_of_file("test/resources/{}".format(test_file_path))
     extractor = _get_og_title_extractor(html)
     assert extractor.extract() == expected_title
