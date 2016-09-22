@@ -20,9 +20,9 @@ class UrlPublishedDateExtractor:
 
 class MetaTagsPublishedDateExtractor:
     def __init__(self, html):
-        soup = BeautifulSoup(html, 'html.parser')
+        self.soup = BeautifulSoup(html, 'html.parser')
 
-    def extract(self, html):
+    def extract(self):
         meta_tags = self.soup.select('meta')
         if not meta_tags:
             return None
@@ -40,7 +40,7 @@ class OpenGraphPublishedDateExtractor:
     def __init__(self, html):
         self.soup = BeautifulSoup(html, 'lxml')
 
-    def extract(self, html):
+    def extract(self):
         published_time = self.soup.select('meta[property=article:published_time]')
         if published_time:
             return published_time
