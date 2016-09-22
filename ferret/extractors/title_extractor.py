@@ -88,14 +88,24 @@ class TagTitleExtractor:
         return title_weights
 
     def _choose_best_candidate(self, title_weights):
-        ordered_candidates = sorted(title_weights, key=title_weights.__getitem__, reverse=True)
-        ordered_candidates = ordered_candidates[:2]
-        first_candidate = ordered_candidates[0]
-        second_candidate = ordered_candidates[1]
+        candidades_weight = self._filter_less_evaluated_candidates(title_weights)
+        if len(candidades_weight) == 1:
+            return list(candidades_weight)[0]
+        return self._choose_candidate_by_length(title_weights)
 
-        if title_weights[first_candidate] == title_weights[second_candidate]:
-            if len(first_candidate) >= len(second_candidate):
-                return first_candidate
-            return second_candidate.strip()
-        else:
-            return first_candidate.strip()
+    def _filter_less_evaluated_candidates(self, title_weights):
+        t_w = title_weights.copy()
+        ordered_candidates = sorted(title_weights, key=title_weights.__getitem__, reverse=True)
+
+        highest_value = title_weights[ordered_candidates[0]]
+        for k, v in title_weights.items():
+            if title_weights[k] < highest_value:
+                del (t_w[k])
+
+        return t_w
+
+    def _choose_candidate_by_length(self, title_weights):
+        candidates = list(title_weights)
+        max_length_candidate = max(candidates, key=len)
+        print(max_length_candidate)
+        return max_length_candidate.strip()
