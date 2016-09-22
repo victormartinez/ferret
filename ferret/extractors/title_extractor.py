@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
-from ferret.analysers.title_analyser import calculate_title_weight_by_keyword_matching
 from ferret.cleaner.cleaner import clean_body, normalize_text
 from ferret.util.parser.parser import extract_sorted_keywords_from_url
 from ferret.util.parser.title import get_title_element_candidates, calculate_weights_of_candidates, \
@@ -23,7 +22,7 @@ class UrlTitleExtractor:
     def get_best_candidate(self, keywords):
         candidates_weights = self._get_candidates_weights()
         for candidate, weight in candidates_weights.items():
-            candidates_weights[candidate] += calculate_title_weight_by_keyword_matching(candidate, keywords)
+            candidates_weights[candidate] += self._calculate_title_weight_by_keyword_matching(candidate, keywords)
         candidates = list(sorted(candidates_weights, key=candidates_weights.__getitem__, reverse=True))
         return candidates[0]
 
