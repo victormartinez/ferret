@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from urllib.parse import urlparse
 from math import ceil
 from bs4 import BeautifulSoup
 from ferret.cleaner.cleaner import clean_body
@@ -8,8 +7,7 @@ import re
 
 
 def extract_sorted_keywords_from_url(url):
-    path = urlparse(url).path
-    title_by_hyphens = re.findall(r'(\w*-(-*)\w+)', path, re.M | re.I)
+    title_by_hyphens = re.findall(r'(\w*-(-*)\w+)', url, re.M | re.I)
     if len(title_by_hyphens or '') == 0:
         return None
 
