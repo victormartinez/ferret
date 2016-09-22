@@ -4,7 +4,7 @@ import dateparser
 from bs4 import BeautifulSoup
 
 
-class UrlPublishedDateExtractor(object):
+class UrlPublishedDateExtractor:
     def __init__(self, url):
         self.url = url
 
@@ -18,7 +18,7 @@ class UrlPublishedDateExtractor(object):
                                 languages=['en'])  # date format used by blogs follow the american pattern
 
 
-class MetaTagsPublishedDateExtractor(object):
+class MetaTagsPublishedDateExtractor:
     def __init__(self, html):
         soup = BeautifulSoup(html, 'html.parser')
 
@@ -47,7 +47,8 @@ class OpenGraphPublishedDateExtractor:
         return None
 
 
-class PatternPublishedDateExtractor(object):
+class PatternPublishedDateExtractor:
+    # TODO Use lib to recognize date
     DATE_PATTERNS = {
         r'\d{4}/\d{2}/\d{2}': 'en',  # 2016/04/01
         r'\w+\s\d,\s\d{4}': 'en',  # May 1, 2016
