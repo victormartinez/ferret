@@ -4,11 +4,11 @@ import re
 
 TAGS_TO_REMOVE = ['script', 'style', 'iframe', 'meta', 'link', 'form', 'embed', 'noscript', 'object', 'source',
                   'svg', 'use', 'code', 'pre', 'input', 'textarea', 'option', 'select', 'fieldset', 'aside', 'menuitem',
-                  'nav', 'footer']
+                  'nav', 'footer', 'hr']
 
 TAGS_TO_UNWRAP = ['font']
 
-UNWANTED_CSS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer|subscribe|foot"
+UNWANTED_ATTRS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer|subscribe|foot|twitter|dropdown|"
 
 
 def normalize_text(text):
@@ -68,13 +68,13 @@ def clean_body(html):
             again = True
             tag.extract()
 
-        if re.search(UNWANTED_CSS_REGEX, tag.name):
+        if re.search(UNWANTED_ATTRS_REGEX, tag.name):
             again = True
             tag.extract()
 
         attrs = _get_flatten_attr_list(tag)
         for attr in attrs:
-            if re.search(UNWANTED_CSS_REGEX, attr):
+            if re.search(UNWANTED_ATTRS_REGEX, attr):
                 again = True
                 tag.extract()
 
