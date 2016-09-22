@@ -5,8 +5,11 @@ from bs4 import BeautifulSoup
 
 
 class UrlPublishedDateExtractor(object):
-    def extract(self, url):
-        published_date = re.search(r'(\d{4}/\d{2}/\d{2})/?', url)
+    def __init__(self, url):
+        self.url = url
+
+    def extract(self):
+        published_date = re.search(r'(\d{4}/\d{2}/\d{2})/?', self.url)
         if not published_date:
             return None
 
@@ -16,9 +19,11 @@ class UrlPublishedDateExtractor(object):
 
 
 class MetaTagsPublishedDateExtractor(object):
-    def extract(self, html):
+    def __init__(self, html):
         soup = BeautifulSoup(html, 'html.parser')
-        meta_tags = soup.select('meta')
+
+    def extract(self, html):
+        meta_tags = self.soup.select('meta')
         if not meta_tags:
             return None
 
@@ -32,9 +37,11 @@ class MetaTagsPublishedDateExtractor(object):
 
 
 class OpenGraphPublishedDateExtractor:
+    def __init__(self, html):
+        self.soup = BeautifulSoup(html, 'lxml')
+
     def extract(self, html):
-        soup = BeautifulSoup(html, 'lxml')
-        published_time = soup.select('meta[property=article:published_time]')
+        published_time = self.soup.select('meta[property=article:published_time]')
         if published_time:
             return published_time
         return None
@@ -119,16 +126,19 @@ class PatternPublishedDateExtractor(object):
         r'\d{4}\s-\s[\wç]+\s-\s\d{2}': 'pt',
     }
 
-    def extract(self, html):
-        date_candidates = self.extract_date_candidates(html)
+    def __init__(self, html):
+        self.html = html
+
+    def extract(self):
+        date_candidates = self._extract_date_candidates()
         if len(date_candidates) == 0:
             return None
         return date_candidates[0]
 
-    def extract_date_candidates(self, html):
+    def _extract_date_candidates(self):
         candidates = []
         for date_pattern in self.DATE_PATTERNS.keys():
-            search = re.search(date_pattern, html, re.I)
+            search = re.search(date_pattern, self.html, re.I)
             if search:
                 candidates.append(search.group())
         return candidates
