@@ -8,7 +8,10 @@ TAGS_TO_REMOVE = ['script', 'style', 'iframe', 'meta', 'link', 'form', 'embed', 
 
 TAGS_TO_UNWRAP = ['font']
 
-UNWANTED_ATTRS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer|subscribe|foot|twitter|dropdown|"
+UNWANTED_ATTRS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer|subscribe|foot|nav|google|share|search" \
+                       "|form|contact|search|breadcrumb|banner|advertisement|lang|btn|tab|sitemap|instagram|flickr|print" \
+                       "|button|pinterest|radio|box|bread|portlet|icon|dusqus|sponsor|popup|modal|pagination|page|promo" \
+                       "|related|scroll|tool|login|sign|next|prev|old|new"
 
 
 def normalize_text(text):
@@ -16,7 +19,7 @@ def normalize_text(text):
     result = result.replace('\n', '')
     result = result.replace('\t', '')
     result = result.replace('\r', '')
-    return result
+    return result.strip()
 
 
 def _get_flatten_attr_list(tag):
@@ -49,12 +52,6 @@ def clean_body(html):
         if tag.name in TAGS_TO_UNWRAP:
             again = True
             tag.unwrap()
-
-            # try:
-            # Maybe it is not a good idea because the css might give us a hint
-            # tag.attrs.clear()
-        # except Exception:
-        #     pass
 
         if len(tag.text.strip()) == 0:
             again = True
