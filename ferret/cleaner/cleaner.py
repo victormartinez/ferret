@@ -12,7 +12,7 @@ def clean_body(html):
     body = unwrap_tags(body)
     body = remove_comments(body)
     body = _remove_tags(body)
-    # body = _remove_redundant_blocks(body)
+    body = _remove_redundant_blocks(body)
     body = _remove_noise_by_weight(body)
     body_str = str(body)
     return remove_special_chars(body_str)
@@ -65,7 +65,7 @@ def _remove_noise_by_weight(body):
             word_ratio_parent = palavras_parent / count
             word_ratio = palavras / count
 
-        if word_ratio_parent == word_ratio and parent_tag.name not in ['body', 'html', '[document]']:
+        if word_ratio_parent == word_ratio and parent_tag.name not in ['body', 'html', '[document]', 'article']:
             parent_tag.unwrap()
 
     for tag in body.find_all(True):
