@@ -8,3 +8,4 @@ python-dateutil==2.5.3
 pytz==2016.4
 requests==2.10.0
 lxml==3.6.4
+toolz==0.8.0
