@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
-from ferret.cleaner.cleaner import clean_body, normalize_text
+from ferret.cleaner.cleaner import clean_body
+from ferret.cleaner.text import normalize_text
 from ferret.util.parser.parser import extract_sorted_keywords_from_url
 from ferret.util.parser.title import get_title_element_candidates, calculate_weights_of_candidates, \
     get_open_graph_title_text, get_title_text_from_title_tag
