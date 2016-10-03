@@ -11,7 +11,7 @@ TAGS_TO_UNWRAP = ['font']
 UNWANTED_ATTRS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer|subscribe|foot|nav|google|share|search" \
                        "|form|contact|breadcrumb|banner|advertisement|lang|btn|tab|sitemap|instagram|flickr|print" \
                        "|button|pinterest|radio|bread|icon|dusqus|sponsor|popup|modal|pagination|promo" \
-                       "|related|scroll|tool|login|sign|next|prev|old|new|shop|continue"
+                       "|related|scroll|tool|login|sign|next|prev|old|new|shop|continue|fb-|messenger"
 
 
 def remove_id_and_class(tag):
