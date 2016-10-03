@@ -15,9 +15,9 @@ class ContentExtractor:
         body = self._convert_divs_to_paragraph()
         body = self._label_tags_with_scores(body)
         body = self._remove_elements_by_score(body)
-        body = self.clean_up_scores(body)
-        paragraphs = self.get_paragraphs(body)
-        return self.paragraphs_to_string(paragraphs)
+        body = self._clean_up_scores(body)
+        paragraphs = self._get_paragraphs(body)
+        return self._paragraphs_to_string(paragraphs)
 
     def _convert_divs_to_paragraph(self):
         soup = BeautifulSoup(self.html_body, 'lxml')
@@ -95,16 +95,16 @@ class ContentExtractor:
 
         return body
 
-    def clean_up_scores(self, body):
+    def _clean_up_scores(self, body):
         for e in body.find_all(True):
             for attr in ['anchor', 'punct', 'words', 'sentences', 'parag']:
                 del e.attrs[attr]
         return body
 
-    def get_paragraphs(self, body):
+    def _get_paragraphs(self, body):
         return [p for p in body.find_all('p')]
 
-    def paragraphs_to_string(self, paragraphs):
+    def _paragraphs_to_string(self, paragraphs):
         parags = ''
         for p in paragraphs:
             parags += str(p)
