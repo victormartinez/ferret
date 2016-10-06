@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
 from ferret.cleaner.comments import remove_comments
-from ferret.cleaner.tag import should_remove_tag, remove_id_and_class, remove_unwanted_tags, unwrap_tags, contains_text, \
+from ferret.cleaner.tag import should_remove_tag, remove_unwanted_tags, unwrap_tags, contains_text, \
     has_only_one_anchor
 from ferret.cleaner.text import remove_special_chars
 
@@ -29,14 +29,13 @@ def _remove_tags(body):
             tag.extract()
 
         if has_only_one_anchor(tag):
-            again = True
-            tag.extract()
+            if tag.parent and tag.parent.name != 'p':
+                again = True
+                tag.extract()
 
         if should_remove_tag(tag):
             again = True
             tag.extract()
-
-        remove_id_and_class(tag)
 
     if again:
         return _remove_tags(body)
