@@ -14,12 +14,12 @@ class TitleAnalyser:
 
     def get_title_extractor(self):
         if self._html_complies_with_og_protocol():
-            yield OpenGraphTitleExtractor(self.soup)
+            return OpenGraphTitleExtractor(self.soup)
 
         if self._url_follows_cms_pattern():
-            yield UrlTitleExtractor(self.url, self.soup)
+            return UrlTitleExtractor(self.url, self.soup)
 
-        yield TitleElementExtractor(self.soup)
+        return TitleElementExtractor(self.soup)
 
     def _url_follows_cms_pattern(self):
         """
@@ -32,7 +32,8 @@ class TitleAnalyser:
         return False
 
     def _html_complies_with_og_protocol(self):
-        return len(self.soup.select('meta[property=og:title]')) > 0
+        title = self.soup.select('meta[property=og:title]')
+        return title or len(title) > 0
 
 
 class PublishedDateAnalyser:
