@@ -32,7 +32,7 @@ def get_title_text_from_title_tag(soup):
 
 def get_open_graph_title_text(soup):
     titles = soup.select('meta[property=og:title]')
-    if titles and titles[0]['content']:
+    if titles and titles[0].get('content'):
         return titles[0]['content'].strip()
     return None
 

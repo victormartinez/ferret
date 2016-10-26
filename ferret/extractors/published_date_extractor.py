@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-import re
 import dateparser
+import re
 from bs4 import BeautifulSoup
 
 
@@ -28,7 +28,7 @@ class MetaTagsPublishedDateExtractor:
             return None
 
         for tag in meta_tags:
-            content = tag.attrs['content']
+            content = tag.attrs.get('content')
             if content:
                 match = re.match(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}', content)
                 if match:

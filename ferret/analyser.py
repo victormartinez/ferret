@@ -12,14 +12,14 @@ class TitleAnalyser:
         self.raw_html = raw_html
         self.soup = BeautifulSoup(raw_html, 'lxml')
 
-    def get_title_extractor(self):
-        if self._html_complies_with_og_protocol():
-            return OpenGraphTitleExtractor(self.soup)
+    def next_extractor(self):
+        if self._contains_valid_og_meta_tag():
+            yield OpenGraphTitleExtractor(self.raw_html)
 
         if self._url_follows_cms_pattern():
-            return UrlTitleExtractor(self.url, self.soup)
+            yield UrlTitleExtractor(self.url, self.raw_html)
 
-        return TitleElementExtractor(self.soup)
+        yield TitleElementExtractor(self.raw_html)
 
     def _url_follows_cms_pattern(self):
         """
@@ -31,9 +31,9 @@ class TitleAnalyser:
             return True
         return False
 
-    def _html_complies_with_og_protocol(self):
-        title = self.soup.select('meta[property=og:title]')
-        return title or len(title) > 0
+    def _contains_valid_og_meta_tag(self):
+        title_tag = self.soup.select_one('meta[property=og:title]')
+        return title_tag and title_tag.get('content')
 
 
 class PublishedDateAnalyser:
@@ -42,16 +42,20 @@ class PublishedDateAnalyser:
         self.raw_html = raw_html
         self.soup = BeautifulSoup(raw_html, 'lxml')
 
-    def get_published_date_extractor(self):
-        if self._html_complies_with_og_protocol():
-            yield OpenGraphPublishedDateExtractor()
+    def next_extractor(self):
+        if self._contains_valid_og_meta_tag():
+            yield OpenGraphPublishedDateExtractor(self.raw_html)
 
-        yield UrlPublishedDateExtractor()
-        yield MetaTagsPublishedDateExtractor()
-        yield PatternPublishedDateExtractor()
+        if self._url_contains_date():
+            yield UrlPublishedDateExtractor(self.url)
 
-    def _html_complies_with_og_protocol(self):
-        return len(self.soup.select('meta[property=article:published_time]')) > 0
+        yield PatternPublishedDateExtractor(self.raw_html)
+        yield MetaTagsPublishedDateExtractor(self.raw_html)
+
+    def _contains_valid_og_meta_tag(self):
+        date_tag = self.soup.select_one('meta[property=article:published_time]')
+        return date_tag and date_tag.get('content')
 
     def _url_contains_date(self):
         published_date = re.search(r'(\d{4}/\d{2}/\d{2})/?', self.url)
+        return published_date is not None
