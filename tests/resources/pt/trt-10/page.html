@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr"> 
+   <head>
+      <title>Tribunal Regional do Trabalho - 10&ordf; Regi&atilde;o</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <link rel="stylesheet" type="text/css" media="all" title="TRT Layouts" href="estilo1geral.css"/>
+      <link type="text/css" media="screen" rel="stylesheet" href="colorbox.css" />
+      <script language="JavaScript" src="scripts/jquery-1.3.2.min.js" type="text/javascript"></script>
+      <script language="JavaScript" src="scripts/cycle.js" type="text/javascript"></script>
+      <script language="JavaScript" src="scripts/jquery.colorbox.js" type="text/javascript"></script>
+      <script type="text/javascript" src="scripts/form.js"></script>
+      <script language="JavaScript" src="scripts/funcoes.js" type="text/javascript"></script>
+      <script type="text/javascript" src="scripts/jquery.alphanumeric.pack.js"></script>
+      <script src="agenda/Scripts/swfobject_modified.js" type="text/javascript"></script>
+      <script type="text/javascript" src="scripts/jquery.selectboxes.js"></script>
+      <script type="text/javascript" src="scripts/jquery.validate.js"></script>
+      <link rel="alternate" type="application/rss+xml" href="/ascom/noticiasrss.xml" title="Midia 10">
+   </head>
+   <body onload="$('#slideShow').show();$('#slideShowBanner').show();campos_numericos();$('#slideShowBannerAdv').show();$('#slideShowBannerPrinc').show();$('#slideShowBannerMagServ').show();" id="corpoSite">
+      <table width="980" border="0" id="tbIndex" cellspacing="0" cellpadding="0" align="center" bgcolor="#FFFFFF">
+         <tr>
+            <td><table width="980" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                     <td colspan="6" height="170">
+                        <script language="javascript" type="text/javascript">
+                           $(function() {
+                              $('#slideShow').cycle({ fx: 'fade' });
+                              $('#slideShowBanner').cycle({ fx: 'fade' });
+                              $('#slideShowBannerAdv').cycle({ fx: 'fade', timeout:15000});
+                              $('#slideShowBannerPrinc').cycle({ fx: 'fade', timeout:15000, pager: '#nav'});
+                              $('#slideShowBannerMagServ').cycle({ fx: 'fade', timeout:15000});
+                           });
+                        </script>
+                        <div id="slideShow" style="display:none;">
+                           <a href="index.php">
+                              <img src="imagens/cab3.jpg" width="980" height="170" alt="TRT10" border="0" />
+                           </a>
+                           <a href="index.php">
+                              <img src="imagens/cab2.jpg" width="980" height="170" alt="TRT10" border="0" />
+                           </a>
+                           <a href="index.php">
+                              <img src="imagens/cab1.jpg" width="980" height="170" alt="TRT10" border="0" />
+                           </a>
+                        </div>
+                        <img src="imagens/cab3.jpg" width="980" height="170" alt="Gemini" border="0" />
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><a href="/">
+                                                      <img src="imagens/btTitulo/botao_pagina_inicial_ligado.jpg" alt="Pgina Inicial" border="0" />
+                                                   </a>
+                     </td>
+                     <td><a href="?mod=ponte.php&ori=trt&pag=composicao&path=institucional/tribunal.php">
+                                                      <img src="imagens/btTitulo/botao_institucional_desligado.jpg" alt="Pgina Inicial" border="0" />
+                                                   </a>
+                     </td>
+                     <td><a href="?mod=magserv.php">
+                                                      <img src="imagens/btTitulo/botao_magistrados_servidores_desligado.jpg" alt="Pgina Inicial" border="0" />
+                                                   </a>
+                     </td>
+                     <td><a href="?mod=advogados.php">
+                                                      <img src="imagens/btTitulo/botao_advogados_desligado.jpg" alt="Pgina Inicial" border="0" />
+                           
+                        </a>
+                     </td>
+                     <td><a href="?mod=ponte.php&path=servicos/ouvidoria/paginas/apresentacao.php&ori=ouvidoria&pag=ouvidoria">
+                                                      <img src="imagens/btTitulo/botao_ouvidoria_desligado.jpg" alt="Pgina Inicial" border="0" />
+                           
+                        </a>
+                     </td>
+                     <td><a href="?mod=ponte.php&ori=con&pag=faleconosco&path=servicos/ouvidoria/fale_conosco.php">
+                                                      <img src="imagens/btTitulo/botao_fale_conosco_desligado.jpg" alt="Pgina Inicial" border="0" />
+                                                   </a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td colspan="6">
+                        <style>
+   .caixaTexto{
+      /*border-color: transparent; 
+      background-color: transparent;*/
+      height:14px;
+   }
+</style>
+<form method="post" id="frmSap" name="frmSap" action="index.php">
+   <input type="hidden" name="mod" value="servicos/consultasap/validar_caracteres.php" />
+   <table border="0" cellpadding="0" id="tabela_consulta_proc" align="left" width="100%" bgcolor="#E5EAD3" style="color:#6c7b5e; font-size:10px;" >
+      <tr>
+         <td width="80px" rowspan="2" align="center"><b><font color="#666600" size="2">
+               <table cellpadding="0" cellspacing="0" >
+                  <tr>
+                     <td>
+                        <a href="https://pje.trt10.jus.br/consultaprocessual/" TARGET="_blank">
+                           <img src="imagens/bannerPJEConsulta.jpeg" border="0" style="width:90px; height:43px;"//>
+                        </a>
+                     </td>
+                     <td>
+                        <!--&nbsp;-->
+                     </td>
+                     <td>
+                        <img src="imagens/bannerSAPConsulta_Reduzido.jpeg" border="0"/>
+                     </td>
+                  </tr>
+               </table>
+         </td>
+         <th>&nbsp;</th>
+         <th>N&ordm;</th>
+         <th>Ano</th>
+         <th>Vara<a href="#"><img src="/imagens/duvida.jpg" border="0" onClick="AbrePopUp('varas')" alt="Lista de Varas do Trabalho da 10&ordf; Região" /></a>
+            <div id="varas" class="lob">
+               <center><a href="#" onclick="javascript:Fechar('varas');">Fechar</a></center><br/>
+			   
+			  
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '000')">000 - TRT</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '001')">001 - 1&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '002')">002 - 2&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '003')">003 - 3&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '004')">004 - 4&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '005')">005 - 5&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '006')">006 - 6&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '007')">007 - 7&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '008')">008 - 8&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '009')">009 - 9&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '010')">010 - 10&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '011')">011 - 11&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '012')">012 - 12&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '013')">013 - 13&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '014')">014 - 14&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '015')">015 - 15&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '016')">016 - 16&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '017')">017 - 17&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '018')">018 - 18&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '019')">019 - 19&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '020')">020 - 20&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '021')">021 - 21&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '022')">022 - 22&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '101')">101 - 1&ordf; Vara de TAGUATINGA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '102')">102 - 2&ordf; Vara de TAGUATINGA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '103')">103 - 3&ordf; Vara de TAGUATINGA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '111')">111 - Vara do GAMA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '801')">801 - 1&ordf; Vara de PALMAS-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '802')">802 - 2&ordf; Vara de PALMAS-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '811')">811 - 1&ordf; Vara de ARAGUAINA-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '812')">812 - 2&ordf; Vara de ARAGUAINA-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '821')">821 - Vara de GURUPI-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '851')">851 - Vara de DIANÓPOLIS-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '861')">861 - Vara de GUARAÍ-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas', 'vara', '999')">999 - Comarcas</a><br/>
+            </div>
+		 
+		 
+		 
+		 </th>
+         <td></td>
+         <td align="center"><a href="/imagens/numeracaounica.jpg" rel="ajuda_numeracao_unica"><b>Ajuda?</b></a></td>
+         <th>N&ordm;</th>
+         <th>Díg</th>
+         <th>Ano</th>
+         <th>Órg</th>
+         <th>Trib</th>
+         <th>Vara<a href="#"><img src="/imagens/duvida.jpg" border="0" onClick="AbrePopUp('varas_II')" alt="Lista de Varas do Trabalho da 10&ordf; Região" /></a>
+            <div id="varas_II" class="lob2">
+               <center><a href="#" onclick="javascript:Fechar('varas_II');">Fechar</a></center><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '000')">000 - TRT</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '001')">001 - 1&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '002')">002 - 2&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '003')">003 - 3&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '004')">004 - 4&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '005')">005 - 5&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '006')">006 - 6&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '007')">007 - 7&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '008')">008 - 8&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '009')">009 - 9&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '010')">010 - 10&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '011')">011 - 11&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '012')">012 - 12&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '013')">013 - 13&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '014')">014 - 14&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '015')">015 - 15&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '016')">016 - 16&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '017')">017 - 17&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '018')">018 - 18&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '019')">019 - 19&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '020')">020 - 20&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '021')">021 - 21&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '022')">022 - 22&ordf; Vara de BRASÍLIA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '101')">101 - 1&ordf; Vara de TAGUATINGA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '102')">102 - 2&ordf; Vara de TAGUATINGA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '103')">103 - 3&ordf; Vara de TAGUATINGA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '111')">111 - Vara do GAMA-DF</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '801')">801 - 1&ordf; Vara de PALMAS-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '802')">802 - 2&ordf; Vara de PALMAS-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '811')">811 - 1&ordf; Vara de ARAGUAINA-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '812')">812 - 2&ordf; Vara de ARAGUAINA-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '821')">821 - Vara de GURUPI-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '851')">851 - Vara de DIANÓPOLIS-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '861')">861 - Vara de GUARAÍ-TO</a><br/>
+               <a href="#" onclick="FechaPopUp('varas_II', 'vara_II', '999')">999 - Comarcas</a><br/>
+            </div>
+		 
+		 </th>
+         <td></td>
+         <td align="center" rowspan="2" id="tdCapcha">&nbsp;</td>
+         <th colspan="2">Digite o código ao lado</th>
+         <th nowrap="nowrap">Acessibilidade</th>
+      </tr>
+      <tr>
+         <th nowrap="nowrap" style="text-align:right">Numeraç&atilde;o Antiga<br/>Até 2009</th>
+         <td><input type="text" name="num" id="num" maxlength="5" size="4" style="height:14px; width: 40px;" title="Número"/></td>
+         <td><input type="text" name="ano" id="ano" maxlength="4" style="height:14px; width: 30px;" title="Ano (até 2009)"/></td>
+         <td>
+            <input type="text" name="vara" id="vara" maxlength="3" style="height:14px; width: 30px;" title="Vara"/>
+         </td>
+         <td>
+		 </td>
+         <th nowrap="nowrap" style="text-align:right">&nbsp;&nbsp;&nbsp;Numeração&nbsp;Única<br/>A partir de 2010</th>
+         <td><input type="text" name="num_II" id="num_II" maxlength="7" style="height:14px; width: 45px;" title="Número"/></td>
+         <td><input type="text" maxlength="7" size="4" style="height:14px; width: 10px;" class="caixaTexto" title="Dígito (Opcional)"/></td>
+         <td><input type="text" name="ano_II" id="ano_II" maxlength="4" style="height:14px; width: 30px;" title="Ano (a partir de 2010)"/></td>
+         <td><input type="text" maxlength="1" size="4" style="height:14px; width: 12px;" class="caixaTexto" value="5" readonly title="Órgão"/></td>
+         <td><input type="text" maxlength="2" size="4" style="height:14px; width: 20px;" class="caixaTexto" value="10" readonly title="Tribunal"/></td>
+         <td><input type="text" name="vara_II" id="vara_II" maxlength="3" style="height:14px; width: 30px;" title="Vara"/><td>
+		</td>
+         <td align="left">
+            <input type="text" name="captcha" id="captcha" style="height:14px; text-transform:uppercase;" size="3" maxlength="4" title="Informe o código de segurança ao lado" />
+         </td>
+         <td align="left">
+            <input type="button" value="Consultar" onclick="enviaFormulario();" alt="Clique aqui para realizar a consulta processual" title="Clique aqui para realizar a consulta processual" style="color:#6c7b5e; font-weight:bold; font-size:11px; font-family:tahoma; border: 1px outset; cursor:pointer; height:22px;" />
+         </td>
+         <td align="center">
+            <input alt="diminuir o tamanho da fonte" title="diminuir o tamanho da fonte" type="button" value="A" style="color:#6c7b5e; width:15px; border: 0px none; background-color:transparent; cursor:pointer; height:22px; font-size:9pt; font-weight:bold;" onclick="tamanhoFonte('08px')"/>
+            <input alt="fonte tamanho normal" title="fonte tamanho normal" type="button" value="A" style="color:#6c7b5e; width:15px; border: 0px none; background-color:transparent; cursor:pointer; height:22px; font-size:11pt; font-weight:bold;" onclick="tamanhoFonte('12px')"/>
+            <input alt="aumentar" title="aumentar o tamanho da fonte" type="button" value="A" style="color:#6c7b5e; width:15px; border: 0px none; background-color:transparent; cursor:pointer; height:22px; font-size:13pt; font-weight:bold;" onclick="tamanhoFonte('16px')"/>
+         </td>
+      </tr>
+   </table>
+</form>
+<script type="text/javascript">
+               function enviaFormulario() {
+                  if ($('#num').val() != '' &&
+                          $('#vara').val() != '' &&
+                          $('#ano').val() != '') {
+                     $("#frmSap").submit();
+                  } else if ($('#num_II').val() != '' &&
+                          $('#vara_II').val() != '' &&
+                          $('#ano_II').val() != '') {
+                     $('#frmSap').submit();
+                  } else {
+                     alert('Preencha o numero, o ano e a vara do processo!');
+                  }
+               }
+
+               function limpaCapcha() {
+                  document.getElementById("captcha").value = '';
+                  document.getElementById("tdCapcha").innerHTML = '<img src="../lib/imagem.php" id="captchaSAP" style="height:33px;" alt="Código de segurança" title="Código de segurança"/>';
+                  /*document.getElementById("captchaSAP").src = "../lib/imagem.php";*/
+               }
+
+               $(document).ready(function() {
+                  $("a[rel='ajuda_numeracao_unica']").colorbox();
+                  setTimeout("limpaCapcha();", 300);
+               });
+
+</script>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            
+            
+            <td>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                <td valign="top"><ul id="menubv">
+   <li><a href="https://www.trt10.jus.br/suj/jsf/publico/incidentes.jsf"   target="_blank" title="Uniformização de Jurisprudência">Uniformização de Jurisprudência</a></li>
+   <li><a href="https://www.trt10.jus.br/suj/jsf/publico/verbetes.jsf" target="_blank" title="Verbetes">Verbetes</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=juris_segunda&path=servicos/consweb/juris_segunda_instancia.php" title="Jurisprudência 2º Grau">Jurisprudência 2º Grau</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=juris_primeira&path=servicos/consweb/juris_primeira_instancia.php" title="Jurisprudência 1º Grau">Jurisprudência 1º Grau</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=normativos&path=servicos/consweb/busca/index.php" title="Atos Normativos">Atos Normativos</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=administrativo" title="Administrativo">Administrativo</a></li>
+   <li><a href="?mod=ponte.php&path=servicos/ouvidoria/paginas/apresentacao.php&ori=ouvidoria&pag=ouvidoria" title="Ouvidoria">Ouvidoria</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=contas_publicas" title="Transparência">Transparência</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=corregedoria" title="Corregedoria">Corregedoria</a></li>
+      <li class="destaque"><a href="?mod=ponte.php&ori=ini&pag=plantao&path=servicos/plantao_jud/nova_consulta_plantao_judiciario.php" title="Plantão Judiciário">Plantão Judiciário</a></li>
+   </ul>
+         </td>
+                                <td valign="top"><ul id="menubv">
+   <li><a href="http://www.csjt.jus.br/e-doc" target="_blank" title="e-DOC">e-DOC</a></li>
+   <li><a href="https://cpe.trt18.jus.br/cpe/" target="_blank" title="Carta Precatória">Carta Precatória</a></li>
+   <li><a href="https://dejt.jt.jus.br/dejt/" target="_blank" title="Diário Eletrônico">Diário Eletrônico</a></li>
+   <li><a href="servicos/sistemas/aplicacoes/precad/usuariosLoginFrm.php" target="_blank" title="Precadastramento">Precadastramento</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=certidao_trabalhista&path=servicos/certidaotrabalhista/index.php" title="Certid&atilde;o Online">Certid&atilde;o Online</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=calendario_oficial&path=servicos/calendario2/calendario.html" title="Calendário Oficial">Calendário Oficial</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=info_uteis" title="Informações Úteis">Informações Úteis</a></li>
+   <li><a href="?mod=pagina.php&ori=ini&pag=links" title="Links Úteis">Links Úteis</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=acessoInfo&path=institucional/informacoes/sic/apresentacao.php" title="SIC - Sistema de Informação ao Cidadão">Acesso à Informação</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=conciliacao&path=institucional/informacoes/conciliacao/index.php" title="Conciliacao">Concilia&ccedil;&atilde;o</a></li>
+</ul>
+         </td>
+                            </tr>
+                                                    </table>
+                    </td>
+                </tr>
+                <!--
+                <tr>
+									<td><a href="http://escolajudicial.trt10.jus.br" border="0" target="_blank">
+										<img alt="Escola Judicial" border="0" src="imagens/banner/banner_escola_judicial.jpg" width="307" height="61" title="Escola Judicial"/></a>
+									</td>
+                </tr>-->
+                         <tr>
+        	 <td>
+							<table border="0" cellspacing="1" cellpadding="0">
+								<tr>
+									<td>
+										<a border="0" rel="abrirAgenda" target="_blank" href="AgendaCompromissosRemote/">
+											<img alt="Agenda do Presidente" border="0" src="imagens/banner/banner_agenda_presidente.jpg" title="Agenda do Presidente" />
+										</a>
+									</td>
+                                    <td style='background-color: #D1D7BD;'>
+                                        <a border="0" target="_blank" href="http://escolajudicial.trt10.jus.br">
+                                            <img alt="Escola Judicial" border="0" src="imagens/banner/logo_portal_trt.png" title="Escola Judicial"  width="153" height="59"/>
+                                        </a>
+                                    </td>
+								</tr>
+							</table>
+						</td>
+         </tr>
+         <tr>
+           <td><!--
+                                    <div id="slideShowBanner" style="display:none;">
+                                        <a href="http://gestaoestrategica.trt10.jus.br/portal/" target="_blank"><img src="imagens/banner/plano estrategico_banner1.jpg" width="307" height="82" border="0" /></a>
+                                        <a href="http://gestaoestrategica.trt10.jus.br/portal/" target="_blank"><img src="imagens/banner/plano estrategico_banner2.jpg" width="307" height="82" border="0" /></a>
+                                        <a href="http://gestaoestrategica.trt10.jus.br/portal/" target="_blank"><img src="imagens/banner/plano estrategico_banner3.jpg" width="307" height="82" border="0" /></a>
+                                        <a href="http://gestaoestrategica.trt10.jus.br/portal/" target="_blank"><img src="imagens/banner/plano estrategico_banner4.jpg" width="307" height="82" border="0" /></a>
+                                        <!--img src="imagens/banner/novo_banner_trabalho_em_dia.jpg" width="307" height="82" alt="Trabalho em dia" border="0" />
+                                                                                        <img src="imagens/banner/novo_banner_fala_trabalhador.jpg" width="307" height="82" alt="Fala Trabalhador" border="0" />
+                                                                                        <img src="imagens/banner/banner_unificacao_cnj.jpg" width="307" height="82" alt="Unificação da Numeração Processual" border="0" /
+                                    </div>
+                                    <img border="0px" src="imagens/banner/plano estrategico_banner1.jpg" width="307" height="82" alt="Fala trabalhador" > -->
+               <table border="0" cellspacing="1" cellpadding="0">
+                   <tr>
+                       <td>
+                           <a href="http://estrategia.trt10.jus.br/" target="_blank">
+                              <img border="0px" src="imagens/icone_gestao_estrategica.png" alt="Fala trabalhador" >
+                           </a>
+                       </td>
+                       <td>
+                           <a href="?mod=ponte.php&ori=ini&pag=acessoInfo&path=institucional/informacoes/sic/apresentacao.php">
+                              <img border="0px" src="imagens/icone_acesso_informacao.png" alt="Fala trabalhador" >
+                           </a>
+                       </td>
+                   </tr>
+               </table>
+
+           </td>
+         </tr>
+
+                            </table>
+        </td>
+        <td valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td><h2  style="background-image:url(imagens/barra_cab_ouvidoria.jpg);">Notícias</h2></td>
+                </tr>
+                <tr>
+                    <td height="280" valign="top">
+                        <table width="100%" valign="top" height="280" cellspacing="0" cellpadding="0" border="0" style="border-left: 1px solid #FFF;">
+                                                            <tr>
+                                <td height="260" class="tb-conteudo2" colspan="0" valign="top">
+                                    <div id="noticia">
+   <a href="ascom/noticiasrss.xml">
+      <img src="ascom/feed-icon-14x14.png" title="Notícias" width="20" title="RSS" alt="RSS" border="0"/>
+   </a>
+   <h3>Trabalhador despedido e reintegrado ao emprego três vezes será indenizado em R$ 100 mil</h3>
+   <h7>26/10/2016</h7><br/>   
+	<img id="imagefloat" src='/imagem/intranet/noticias/imagem20161024160828_thumb.jpg' style="border:1px solid gray;padding:5px;margin-left:10px;"><br><p>&nbsp;Por decis&atilde;o da ju&iacute;za Audrey Choucair Vaz, em atua&ccedil;&atilde;o na 15&ordf; Vara do Trabalho de Bras&iacute;lia, uma empresa p&uacute;blica foi condenada a pagar R$ 100 mil de indeniza&ccedil;&atilde;o por danos morais a um empregado demitido imotivadamente e reintegrado ao emprego tr&ecirc;s vezes, ap&oacute;s decis&atilde;o judicial. Segundo a magistrada, a conduta da empresa foi agravada pela persist&ecirc;ncia da empresa em promover a despedida do trabalhador, fundamentada em tese j&aacute; refutada pelo Judici&aacute;rio, caracterizando ass&eacute;dio processual.<p>O empregado foi admitido em novembro de 2006, ap&oacute;s realizar concurso p&uacute;blico. Em abril de 2012, foi demitido imotivadamente. O trabalhador ent&atilde;o ingressou com a&ccedil;&atilde;o trabalhista alegando a nulidade da despedida. O pedido foi deferido, com antecipa&ccedil;&atilde;o de tutela, e ele foi reintegrado a empresa e despedido novamente no mesmo dia. Na primeira inst&acirc;ncia, foi determinada nova reintegra&ccedil;&atilde;o no primeiro processo, por&eacute;m, pouco mais de um ano depois o empregado foi demitido novamente.<p>Em sua defesa, a empresa afirmou que a &uacute;ltima dispensa ocorreu um ano ap&oacute;s a demiss&atilde;o anterior e que foi motivada, pois o trabalhador apresentava problemas como atrasos e registros de ponto. Alegou ainda que ele n&atilde;o gozava de garantia provis&oacute;ria de emprego e se recusava a realizar as tarefas compat&iacute;veis com o cargo dele. A empresa sustentou que havia necessidade de adequa&ccedil;&atilde;o do quadro de lota&ccedil;&atilde;o do departamento. Tamb&eacute;m afirmou que o empregado tinha hist&oacute;rico de alto &iacute;ndice de impontualidade, que teria motivado descontos salariais nos &uacute;ltimos cinco meses, al&eacute;m de supostas dificuldades de discernimento t&eacute;cnico. Para a empresa, a falta de manifesta&ccedil;&atilde;o do empregado nos 10 dias ap&oacute;s a ci&ecirc;ncia da despedida, resultou em concord&acirc;ncia t&aacute;cita.<p>No entendimento da ju&iacute;za Audrey Choucair Vaz, &eacute; estranho o empregado ter sido despedido por um mau desempenho em setor no qual estava h&aacute; pouco tempo. Para ela, a empresa &eacute; ente da administra&ccedil;&atilde;o p&uacute;blica indireta e, portanto, deve respeitar os princ&iacute;pios da impessoalidade, da moralidade, da legalidade, da publicidade e da efici&ecirc;ncia. Por isso, &eacute; necess&aacute;rio que demiss&otilde;es sejam precedidas de procedimentos administrativos internos, garantindo aos trabalhadores ampla defesa e contradit&oacute;rio.<p>A magistrada explicou em sua senten&ccedil;a que provas testemunhais e documentais demonstraram a permissividade da empresa com rela&ccedil;&atilde;o ao controle de ponto e sua toler&acirc;ncia sobre o cumprimento da jornada de trabalho, extens&iacute;vel a v&aacute;rios trabalhadores. Ficou comprovado ainda que o trabalhador n&atilde;o tinha resist&ecirc;ncia em aprender, mas dificuldade estrutural em alguns procedimentos. Tamb&eacute;m ficou constatado aus&ecirc;ncia de pertin&ecirc;ncia entre a motiva&ccedil;&atilde;o da despedida e os fatos alegados pela empresa.<p>&ldquo;No caso concreto, a primeira conduta empres&aacute;ria, de admitir o reclamante e despedi-lo no mesmo momento, e ainda cometer o erro crasso de anotar um novo contrato de um dia em sua CTPS, &eacute; erro grav&iacute;ssimo da empresa, que revela a n&iacute;tida conduta da empresa de buscar subterf&uacute;gios para descumprir a decis&atilde;o judicial. A decis&atilde;o judicial obviamente poderia estaria equivocada, e para discuti-la existe o duplo grau de jurisdi&ccedil;&atilde;o, o devido processo legal. Mas quando o empregador n&atilde;o aceita que sua tese n&atilde;o foi acolhida e usa meios ardis para descumprir a decis&atilde;o judicial, ele recusa-se a cumprir um requisito para a conviv&ecirc;ncia social, que &eacute; o respeito &agrave; lei e &agrave;s institui&ccedil;&otilde;es estatais. Essa conduta &eacute; ainda mais grave quando oriunda de um ente da administra&ccedil;&atilde;o p&uacute;blica direta, sujeito aos requisitos da moralidade e legalidade&rdquo;, observou a ju&iacute;za.</p><p><strong>Reintegra&ccedil;&atilde;o<p></strong><p>A decis&atilde;o determinou que o empregado seja reintegrado antes do tr&acirc;nsito em julgado do processo, sob pena de multa di&aacute;ria de R$ 10 mil, revers&iacute;vel ao trabalhador. Ficou determinado que empregado receber&aacute; sal&aacute;rios, promo&ccedil;&otilde;es e demais verbas referente ao per&iacute;odo em que deveria estar trabalhando, bem como dever&aacute; ser restabelecido no plano de sa&uacute;de nos moldes anteriores e observados os sal&aacute;rios atualizados da fun&ccedil;&atilde;o, conforme reajustes convencionais, legais ou regulamentares da empresa. Al&eacute;m disso, a empresa foi obrigada a retificar a CTPS, cancelando os registros anteriores de contratos com o trabalhador, e assinando apenas um, iniciado em novembro de 2006, considerado como ainda vigente.<p>(Isis Carmo)<p>Processos n&ordm; 0001136-61.2015.5.10.0015 e 0001786-11.2015.5.10.0015<p>Esta mat&eacute;ria tem car&aacute;ter informativo, sem cunho oficial. Permitida a reprodu&ccedil;&atilde;o mediante cita&ccedil;&atilde;o da fonte. N&uacute;cleo de Comunica&ccedil;&atilde;o Social - Tribunal Regional do Trabalho da 10&ordf; Regi&atilde;o &ndash; Distrito Federal e Tocantins. Tel. (61) 3348-1321 &ndash; imprensa@trt10.jus.br.</p><p><br>Esta notícia já foi lida  vezes<br>Notícia publicada em 26/10/2016 &nbsp;&nbsp;&nbsp; <a href='?mod=ponte.php&ori=ini&pag=noticia&path=ascom/consulta_noticias_internet.php' id='leia_mais' 
+		  style='text-decoration:underline'>mais notícias...</a></p></div><br>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+						</td>
+         </tr>
+         <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0" >
+                  <tr>
+                     <td>
+                        <table style="border:0px; width:100%; height:50px;" cellspacing='0' cellpadding='0'>
+                           <tr>
+                              <td>
+                                 <a href="https://intranet.trt10.jus.br" target="_blank">
+                                   <img src="imagens/banner/rodape/intranet.jpg" title="Intranet" alt="Intranet" border="0" />
+                                 </a>
+                              </td>
+                              <td>
+                                 <a href="?mod=ponte.php&pag=PJE&ori=ini&path=servicos/pje/index.php">
+                                   <img src="imagens/banner/rodape/pje.jpg" title="PJE" alt="PJE" border="0" />
+                                 </a>
+                              </td>
+                              <td align="center">
+                                 <a href="?mod=ponte.php&ori=ini&pag=prodmagistrados&path=institucional/informacoes/corregedoria/produtividade1grau/produtividade1.php" title="Produtividade Magistrados">
+                                    <img src="imagens/banner/rodape/produtividade.jpg" alt="Produtividade Magistrados" border="0" title="Produtividade Magistrados"/>
+                                 </a>
+                              </td>
+                              <td align="center">
+                                 <a href="http://www.tst.jus.br/certidao" title="Certidao negativa de debitos trabalhistas">
+                                    <img src="imagens/banner/rodape/cndt.jpg" alt="Certidao negativa de debitos trabalhistas" border="0"/>
+                                 </a>
+                              </td>
+                              <td align="center">
+                                 <!--a href="?mod=ponte.php&ori=ini&pag=noticia&path=ascom/consulta_noticias_internet.php" title="Sala de Imprensa">
+                                    <img src="imagens/banner/rodape/sala_imprensa.png" alt="Sala de Imprensa" border="0"/>
+                                 </a-->
+                              </td>
+                              <td align="center">
+                                 <!--a href="?mod=ponte.php&ori=ini&pag=noticia&path=ascom/consulta_noticias_internet.php" title="Midia 10">
+                                    <img src="imagens/banner/rodape/midia_10.png" alt="Midia 10" border="0"/>
+                                 </a-->
+                              </td>
+                              <td align="center">
+                                 <a href="?mod=ponte.php&ori=ini&pag=contas_publicas" title="Portal da Transparência">
+                                    <img src="imagens/banner/rodape/transparencia.jpg" alt="Transparencia" border="0"/>
+                                 </a>
+                              </td>
+
+                              <td align="center">
+                                 <a href="http://sei.trt10.jus.br/sei/controlador_externo.php?acao=usuario_externo_logar&id_orgao_acesso_externo=0" target="_blank" title="SEI - Usuários Externos">
+                                    <img src="imagens/banner/rodape/sei.jpg" alt="SEI - Usuários Externos" border="0"/>
+                                 </a>
+                              </td>
+							  <!--
+                              <td align="center">
+                                 <a href="http://www.flickr.com/photos/trt10_oficial" title="TRT 10ª Região no Flickr">
+                                    <img src="imagens/banner/rodape/flickr.jpg" alt="TRT 10ª Região no Flickr" border="0"/>
+                                 </a>
+                              </td>
+							  -->
+                              <td align="center">
+                                 <!--a href="http://www.tst.jus.br/web/trabalhoseguro/" target="_blank">
+                                    <img src="imagens/icones_noticia/trabalho_seguro.png" title="Trabalho seguro" alt="Trabalho seguro" border="0"/>
+                                 </a-->
+                                 <a href="http://www.youtube.com/tvtrt10" title="TRT 10ª Região no YouTube">
+                                    <img src="imagens/banner/rodape/youtube.jpg" alt="TRT 10ª Região no YouTube" border="0"/>
+                                 </a>
+                              </td>
+                            
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </table></td>
+         </tr>
+         <tr>
+            <td align="center" style="font-size:11px; color:#666956;">
+               <i>Endereço: SAS Quadra 1, Bloco "D" Praça dos Tribunais Superiores - Brasilia/DF - CEP: 70097-900 <br/>
+               Telefone: (61) 3348-1100 CNPJ:02.011.574/0001-90<br/>
+			   Atendimento ao público externo de segunda a sexta-feira, exceto feriados, das 9 às 18 horas (RA n.º 31/2011)</i> 
+            </td>
+         </tr>
+		 <!--
+         <tr>
+			<td align="center">
+			 <a href="http://www.tst.jus.br/widget/web/semana-execucao-trabalhista/inicio/-/56_INSTANCE_3Zh4" title="Clique para ver o total arrecadado na Semana Nacional de Execução Trabalhista" target=_blank>
+				<img src="imagens/banner/rodape/executometro_botao.jpg" alt="Clique para ver o total arrecadado na semana de conciliacao" border="0"/>
+			 </a>
+			</td>
+         </tr>
+		 -->
+	 </table>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("a[rel='abrirAgenda']").colorbox({width:'800px', height:'560px', overflow: 'hidden',iframe:true});
+				});
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+				ga('create', 'UA-39883046-1', 'trt10.jus.br');
+				ga('send', 'pageview');
+			</script>
+<!-- -------------------MAPA DO SITE-------------------------- -->      
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="width: 980px;">
+   <tr>
+      <td colspan="5"><img src="imagens/index_r7_c1.jpg" width="100%" height="35" alt="Mapa" /></td>
+   </tr>
+   <tr>
+      <th bgcolor="#99AE6B">Principal</th>
+      <th bgcolor="#99AE6B">Institucional</th>
+      <th bgcolor="#99AE6B">Magistrados e Servidores</th>
+      <th bgcolor="#99AE6B">Advogados e Partes</th>
+      <th bgcolor="#99AE6B">Fale Conosco</th>
+   <tr>
+      <td valign="top">
+         <ul id="menubv">
+   <li><a href="https://www.trt10.jus.br/suj/jsf/publico/incidentes.jsf"   target="_blank" title="Uniformização de Jurisprudência">Uniformização de Jurisprudência</a></li>
+   <li><a href="https://www.trt10.jus.br/suj/jsf/publico/verbetes.jsf" target="_blank" title="Verbetes">Verbetes</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=juris_segunda&path=servicos/consweb/juris_segunda_instancia.php" title="Jurisprudência 2º Grau">Jurisprudência 2º Grau</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=juris_primeira&path=servicos/consweb/juris_primeira_instancia.php" title="Jurisprudência 1º Grau">Jurisprudência 1º Grau</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=normativos&path=servicos/consweb/busca/index.php" title="Atos Normativos">Atos Normativos</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=administrativo" title="Administrativo">Administrativo</a></li>
+   <li><a href="?mod=ponte.php&path=servicos/ouvidoria/paginas/apresentacao.php&ori=ouvidoria&pag=ouvidoria" title="Ouvidoria">Ouvidoria</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=contas_publicas" title="Transparência">Transparência</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=corregedoria" title="Corregedoria">Corregedoria</a></li>
+   </ul>
+         <ul id="menubv">
+   <li><a href="http://www.csjt.jus.br/e-doc" target="_blank" title="e-DOC">e-DOC</a></li>
+   <li><a href="https://cpe.trt18.jus.br/cpe/" target="_blank" title="Carta Precatória">Carta Precatória</a></li>
+   <li><a href="https://dejt.jt.jus.br/dejt/" target="_blank" title="Diário Eletrônico">Diário Eletrônico</a></li>
+   <li><a href="servicos/sistemas/aplicacoes/precad/usuariosLoginFrm.php" target="_blank" title="Precadastramento">Precadastramento</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=certidao_trabalhista&path=servicos/certidaotrabalhista/index.php" title="Certid&atilde;o Online">Certid&atilde;o Online</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=calendario_oficial&path=servicos/calendario2/calendario.html" title="Calendário Oficial">Calendário Oficial</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=info_uteis" title="Informações Úteis">Informações Úteis</a></li>
+   <li><a href="?mod=pagina.php&ori=ini&pag=links" title="Links Úteis">Links Úteis</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=acessoInfo&path=institucional/informacoes/sic/apresentacao.php" title="SIC - Sistema de Informação ao Cidadão">Acesso à Informação</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=conciliacao&path=institucional/informacoes/conciliacao/index.php" title="Conciliacao">Concilia&ccedil;&atilde;o</a></li>
+</ul>
+               </td>
+      <td valign="top">
+         <ul id="menubv" style='width:160px;'>
+   <li><a href="?mod=ponte.php&ori=trt&pag=historico&path=institucional/historico_tribunal.html" title="Histórico">Histórico</a></li>
+   <li><a href="?mod=ponte.php&ori=trt&pag=competencia&path=institucional/competencia.php" title="Competência">Competência</a></li>
+   <li><a href="?mod=ponte.php&ori=trt&pag=composicao" title="Composição">Composição</a></li>
+   <li><a href="?mod=ponte.php&ori=trt&pag=estorg&path=servicos/estrutura_organizacional/manutencao.php" title="TRT-Push">Estrutura Organizacional</a></li>
+   <li><a href="http://escolajudicial.trt10.jus.br" target="_blank" title="Escola Judicial">Escola Judicial</a></li>
+   <li><a href="?mod=ponte.php&ori=trt&pag=ordem_dom_bosco&path=institucional/ordem_dom_bosco_index.html" title="Ordem Dom Bosco">Ordem Dom Bosco</a></li>
+   <li><a href="?mod=ponte.php&ori=trt&pag=concurso&path=servicos/concursos/concursos.html" title="Concursos Públicos">Concursos Públicos</a></li>
+   <li><a href="?mod=ponte.php&ori=trt&pag=contas_publicas" title="Transparência">Transparência</a></li>
+   <li><a href="?mod=ponte.php&ori=trt&pag=administrativo" title="Administrativo">Administrativo</a></li>
+   <li><a href="?mod=ponte.php&ori=trt&pag=galeria" title="Galeria de Fotos">Galeria de Fotos</a></li>
+   <li><a href="?mod=ponte.php&ori=trt&pag=sistemas" title="Sistemas Nacionais">Sistemas Nacionais</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=sede" title="Endereços e Telefones">Endereços e Telefones</a></li>
+            </ul>
+               </td>
+      <td valign="top">
+         <ul id="menubv">
+   <li><a href="?mod=ponte.php&ori=mag&pag=info_proc" title="Informações Processuais">Informações Processuais</a></li>
+   <li><a href="?mod=ponte.php&ori=mag&pag=juris_segunda&path=servicos/consweb/juris_segunda_instancia.php" title="Jurisprudência 2º Grau">Jurisprudência 2º Grau</a></li>
+   <li><a href="?mod=ponte.php&ori=mag&pag=juris_primeira&path=servicos/consweb/juris_primeira_instancia.php" title="Jurisprudência 1º Grau">Jurisprudência 1º Grau</a></li>
+   <li><a href="http://escolajudicial.trt10.jus.br" target="_blank" title="Escola Judicial">Escola Judicial</a></li>
+   <li><a href="?mod=ponte.php&ori=mag&pag=legislacao" title="Legislação">Legislação</a></li>
+   <li><a href="?mod=ponte.php&ori=mag&pag=corregedoria" title="Corregedoria">Corregedoria</a></li>
+   <!--li><a href="?mod=ponte.php&ori=mag&pag=jurisdicao&path=paginas/jurisdicao.html" title="Jurisdição">Jurisdição</a></li-->
+   <li><a href="http://aplicacao2.jt.jus.br/malotedigital/login.jsf" target="_blank" title="Malote Digital">Malote Digital</a></li>
+   <li><a href="http://gabinetevirtual.trt10.jus.br/" target="_blank" title="Gabinete Virtual">Gabinete Virtual</a></li>
+            </ul>
+                  <ul id="menubv">
+   <li><a href="?mod=ponte.php&ori=mag&pag=info_uteis">Informações Úteis</a></li>
+   <li><a href="?mod=ponte.php&ori=mag&pag=saude10&path=servicos/saude10/saude10.html" title="Saúde 10">Saúde 10</a></li>
+   <li><a href="?mod=ponte.php&ori=mag&pag=servicos">Serviços</a></li>
+   <li><a href="?mod=ponte.php&ori=mag&pag=calendario_oficial&path=servicos/calendario2/calendario.html">Calendário Oficial</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=sede">Endereços e Telefones</a></li>
+   <li><a href="?mod=pagina.php&ori=mag&pag=links">Links Úteis</a></li>
+   <li><a href="?mod=ponte.php&ori=mag&pag=calculos">Cálculos Judiciais</a></li>
+   <li><a href="?mod=ponte.php&ori=mag&pag=sisjud">Sistemas Judiciais</a></li>
+   <li><a href="http://www.amatra10.org.br" target="_blank">AMATRA 10</a></li>
+   <li><a href="http://www.asdr.org.br" target="_blank">ASDR</a></li>
+</ul>
+               </td>
+      <td valign="top">
+         <ul id="menubv">
+   <li><a href="?mod=ponte.php&ori=adv&pag=info_proc" title="Informações Processuais">Informações Processuais</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=juris_segunda&path=servicos/consweb/juris_segunda_instancia.php" title="Jurisprudência 2º Grau">Jurisprudência 2º Grau</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=juris_primeira&path=servicos/consweb/juris_primeira_instancia.php" title="Jurisprudência 1º Grau">Jurisprudência 1º Grau</a></li>
+ 	<li><a href="?mod=ponte.php&ori=adv&pag=normativos&path=servicos/consweb/busca/index.php" title="Atos Normativos">Atos Normativos</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=legislacao" title="Legislação">Legislação</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=corregedoria" title="Corregedoria">Corregedoria</a></li>
+   <!--li><a href="?mod=ponte.php&ori=adv&pag=jurisdicao&path=paginas/jurisdicao.html" title="Jurisdição">Jurisdição</a></li-->
+   <li><a href="?mod=ponte.php&ori=adv&pag=info_uteis" title="Informações Úteis">Informações Úteis</a></li>
+   <li><a href="?mod=pagina.php&ori=adv&pag=convenios" title="Convênios">Convênios</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=servicos" title="Serviços">Serviços</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=calendario_oficial&path=servicos/calendario2/calendario.html" title="Calendário Oficial">Calendário Oficial</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=sede" title="Endereços e Telefones">Endereços e Telefones</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=conciliacao&path=institucional/informacoes/conciliacao/index.php" title="Conciliacao">Concilia&ccedil;&atilde;o</a></li>
+   <li><a href="?mod=ponte.php&ori=ini&pag=precatorios" title="Precatórios">Precatórios</a></li>
+            </ul>
+         <ul id="menubv">
+   <li><a href="http://www.csjt.jus.br/e-doc" target="_blank" title="e-DOC">e-DOC</a></li>
+   <li><a href="https://cpe.trt18.jus.br/cpe/" target="_blank" title="Carta Precatória">Carta Precatória</a></li>
+   <li><a href="https://dejt.jt.jus.br/dejt/" target="_blank" title="Diário Eletrônico">Diário Eletrônico</a></li>
+   <li><a href="servicos/sistemas/aplicacoes/precad/usuariosLoginFrm.php" target="_blank" title="Precadastramento">Precadastramento</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=certidao_trabalhista&path=servicos/certidaotrabalhista/index.php" title="Certid&atilde;o Online">Certid&atilde;o Online</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=push&path=servicos/push/login_senha.php" title="TRT-Push">TRT-Push</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=carga&path=servicos/carga/login_senha.php" title="TRT-Carga">Download e carga de processos</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=leiloeiro&path=servicos/leiloeiro/leiloeiros.php" title="Leil&atilde;oes Unificados">Leil&otilde;es Unificados</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=pautas" title="Pautas">Pautas</a></li>
+   <!--<li><a href="?mod=ponte.php&ori=adv&pag=oral&path=servicos/sustentacao_oral/inicio_tpl.php" title="Sustentação Oral">Sustentação Oral</a></li>-->
+   <li><a href="?mod=ponte.php&ori=adv&pag=guias&path=servicos/guias/alerta.html" title="Gerar Guias">Gerar Guias</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=manuais&path=institucional/informacoes/corregedoria/manuais_sistemas.htm" title="Manuais dos Sistemas">Manuais dos Sistemas</a></li>
+   <!--li><a href="http://www.oabdf.org.br" target="_blank" title="OAB-DF">OAB-DF</a></li-->
+   <li><a href="?mod=ponte.php&ori=adv&pag=oab" title="OAB">OAB</a></li>
+   <!--li><a href="http://www.oabto.org.br" target="_blank" title="OAB-DF">OAB-TO</a></li-->
+   <li><a href="?mod=ponte.php&ori=adv&pag=conciliar&path=servicos/sistemas/aplicacoes/conciliar/Inicio.php" title="Conciliar é 10">Quer conciliar?</a></li>
+   <li><a href="?mod=ponte.php&ori=adv&pag=calculos" title="Cálculos Judiciais">Cálculos Judiciais</a></li>
+</ul>
+               </td>
+      <td valign="top">
+         <ul id="menubv">
+   <li><a href="?mod=ponte.php&ori=con&pag=ouvidoria&path=servicos/ouvidoria/informacoes_ouvidoria.html" title="Ouvidoria">Ouvidoria</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=sede" title="Edifício-Sede">Edifício-Sede</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=arqGeral" title="Arquivo Geral">Arquivo Geral</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=brasilia" title="Foro de Brasília">Foro de Brasília</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=taguatinga" title="Foro de Taguatinga">Foro de Taguatinga</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=palmas" title="Foro de Palmas">Foro de Palmas</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=araguaina" title="Foro de Araguaína">Foro de Araguaína</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=gama" title="VT do Gama">VT do Gama</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=gurupi" title="VT do Gurupi">VT de Gurupi</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=dianopolis" title="VT do Dianópolis">VT de Dianópolis</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=guarai" title="VT do Guaraí">VT de Guaraí</a></li>
+   <li><a href="?mod=falecon.php&ori=con&pag=informatica" title="Informática">Informática</a></li>
+</ul>
+               </td>
+   </tr>
+</table>
+;   
+      </div>
+  
+   </body>
+</html>

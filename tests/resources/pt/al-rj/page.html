@@ -1,0 +1,792 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <![endif]-->
+    <meta charset="utf-8" /><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/colorpicker.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/lightbox.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/jquery.jscrollpane.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/jquery-ui.theme.css">
+    <link rel="stylesheet" type="text/css" href="/Content/css/jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="/Content/css/estilos.css" />
+
+
+    <script type="text/javascript" src="/Scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.validate.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-ui-1.10.4.custom.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/Scripts/acessibilidade.js"></script>
+    <link href="/BotDetectCaptcha.ashx?get=layoutStyleSheet" rel="stylesheet"/>
+<title>
+	
+            Assembléia Legislativa do Estado do Rio de Janeiro
+        
+</title>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" /><link href="/Content/css?v=" rel="stylesheet"/>
+<script src="/bundles/modernizr?v=qVODBytEBVVePTNtSFXgRX0NCEjh9U_Oj8ePaSiRcGg1"></script>
+<script src="/bundles/jquery?v="></script>
+</head>
+<body class="background_color_ffffff">
+    <div id="popupCarregando" class="carregando" style="display: none">
+        <div class="aguarde">AGUARDE...</div>
+        <div class="loader">
+            <img src="/Content/imagens/loading.gif" width="32" height="32">
+        </div>
+    </div>
+    <input type="hidden" name="tempoBanner" id="tempoBanner" />
+    <input type="hidden" name="tempoNoticia" id="tempoNoticia" />
+
+    
+    
+
+<div class="superior">
+    <div class="brilho ">
+        <div class="conteudo">
+            <div class="logotipo">
+                <a href="/">
+                    <img src="/Content/imagens/logotipo.png" class="sem_altocontraste" width="210" alt="Assembléia Legislativa do Estado do Rio de Janeiro" title="Assembléia Legislativa do Estado do Rio de Janeiro">
+                    <img src="/Content/imagens/logotipo_altocontraste.png" width="210" class="altocontraste" alt="Assembléia Legislativa do Estado do Rio de Janeiro" title="Assembléia Legislativa do Estado do Rio de Janeiro">
+                </a>
+            </div>
+            
+            <div class="coluna">
+                <div class="link_alo_alerj"><a href="https://www.aloalerj.rj.gov.br/" target="_blank" title="Alô ALERJ" class="links_topo">ALÔ ALERJ</a></div>
+                <div class="redes_sociais">
+                    <div class="logotipo_redes">
+
+                        <a target="_blank" href="https://instagram.com/instalerj/" title="Instagram">
+                            <img src="/Content/imagens/icone_36.png" width="20" height="20" alt="Instagram" title="Instagram"></a>
+
+                    </div>
+
+                    <div class="logotipo_redes">
+                        <a target="_blank"  href="https://www.facebook.com/assembleiaRJ" title="Facebook">
+                            <img src="/Content/imagens/icone_06.png" width="20" height="20" alt="Facebook" title="Facebook"></a>
+                    </div>
+                    <div class="logotipo_redes">
+                        <a target="_blank"  href="https://plus.google.com/u/0/+alerj/posts" title="Google Mais">
+                            <img src="/Content/imagens/icone_07.png" width="20" height="20" alt="Google Mais" title="Google Mais"></a>
+                    </div>
+                    <div class="logotipo_redes">
+                        <a target="_blank"  href="https://twitter.com/alerj" title="Twitter">
+                            <img src="/Content/imagens/icone_08.png" width="20" height="20" alt="Twitter" title="Twitter"></a>
+                    </div>
+                    <div class="logotipo_redes">
+                        <a target="_blank"  href="https://www.youtube.com/user/dcsalerj" title="Youtube">
+                            <img src="/Content/imagens/icone_09.png" width="20" height="20" alt="Youtube" title="Youtube"></a>
+                    </div>
+                </div>
+                <div class="acessibilidade">
+                   <div class="icone first display_none"><a href="/ResultadoPesquisa/MontaTelaPesquisa" class="icone_05" title="Pesquisar"></a></div>
+					<div class="icone"><a href="javascript:;" class="icone_01 diminuir_fonte" rel="nofollow" title="Diminuir fonte do texto"></a></div>
+					<div class="icone"><a href="javascript:;" class="icone_02 normalizar_fonte" rel="nofollow" title="Voltar para tamanho original da fonte do texto"></a></div>
+					<div class="icone"><a href="javascript:;" class="icone_03 aumentar_fonte" rel="nofollow" title="Aumentar fonte do texto"></a></div>
+					<div class="icone"><a href="javascript:;" class="icone_04 altocontraste_fonte" rel="nofollow" title="Ativar Alto contraste" style="cursor: pointer;"></a></div>
+                </div>
+                <div class="link_perguntas_frequentes"><a href="/Transparencia/PerguntasFrequentes" title="Perguntas frequentes" class="links_topo">PERGUNTAS FREQUENTES</a></div>
+			
+                <div class="pesquisar display_none_320">
+                    <input type="text" value="" id="txtPesquisar" placeholder="Procurar..." maxlength="50">
+                    <div class="icone">
+                        <a href="#" id="btnPesquisar"  class="icone_05" title="Pesquisar">
+                        </a>
+                    </div>
+                    <div class="fio"></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+<div class="base_menu">
+    <a href="javascript:;" class="quadrado"></a>
+    <div class="menu_movel">
+        <div class="controle">
+            <div class="menu_select">
+                <div class="descricao">INÍCIO</div>
+                <div class="icone Expandir">
+                    <a href="javascript:;" title="Expandir Menu">
+                        <img src="/Content/imagens/icone_21.png" width="40" height="34" alt="Expandir Menu" title="Expandir Menu" border="0"></a>
+                </div>
+                <div class="icone Recuar">
+                    <a href="javascript:;" title="Recolher Menu">
+                        <img src="/Content/imagens/icone_22.png" width="40" height="34" alt="Recolher Menu" title="Recolher Menu" border="0"></a>
+                </div>
+            </div>
+            <div class="posicao_menu_movel">
+                <div class="fundo_submovel">
+                    <ul>
+                        <li><a href="/" id="lkbInicioMovel">IN&#205;CIO</a></li>
+                        
+                        <li class="pai"><a target="" href="javascript:;" class="titulo" title="ALERJ">ALERJ</a>
+
+                           <div class='submenu_movel'><ul><li><a target='' href='/Alerj/ComoFunciona' title='Como Funciona'>Como Funciona</a></li><li><a target='' href='/Alerj/MesaDiretora' title='Mesa Diretora'>Mesa Diretora</a></li><li><a target='' href='/Alerj/Biblioteca' title='Biblioteca'>Biblioteca</a></li><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Palácio Tiradentes '>Palácio Tiradentes </a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='http://www.palaciotiradentes.rj.gov.br/' title='Palácio Tiradentes 90 Anos'>Palácio Tiradentes 90 Anos</a></li><li><a  target='' href='http://www.palaciotiradentes.rj.gov.br/visitaguiada' title='Visita Guiada'>Visita Guiada</a></li><li><a  target='' href='http://www.palaciotiradentes.rj.gov.br/tour-virtual/' title='Tour Virtual'>Tour Virtual</a></li><li><a  target='' href='http://www.palaciotiradentes.rj.gov.br/historia/' title='História'>História</a></li></ul></ul></div>
+                        </li>
+
+                        
+                        <li class="pai"><a target="" href="javascript:;" class="titulo" title="DEPUTADOS">DEPUTADOS</a>
+
+                           <div class='submenu_movel'><ul><li><a target='' href='/Deputados/QuemSao' title='Quem São'>Quem São</a></li><li><a target='' href='/Deputados/RepresentacaoPartidaria' title='Representação Partidária'>Representação Partidária</a></li><li><a target='' href='/Deputados/LinhaDireta' title='Linha Direta'>Linha Direta</a></li></ul></div>
+                        </li>
+
+                        
+                        <li class="pai"><a target="" href="javascript:;" class="titulo" title="PROCESSO LEGISLATIVO">PROCESSO LEGISLATIVO</a>
+
+                           <div class='submenu_movel'><ul><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Plenário'>Plenário</a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=57' title='Discursos e Votações'>Discursos e Votações</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=59' title='Ordem do Dia'>Ordem do Dia</a></li></ul><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Comissões'>Comissões</a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=60' title='O Que São'>O Que São</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=61' title='Comissões Permanentes'>Comissões Permanentes</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=62' title='CPI (COMISSÃO PARLAMENTAR DE INQUÉRITO)'>CPI (COMISSÃO PARLAMENTAR DE INQUÉRITO)</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=63' title='Comissões Especiais'>Comissões Especiais</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=64' title='Comissões de Representação'>Comissões de Representação</a></li></ul><li><a target='_blank' href='https://www.ioerj.com.br/portal/modules/content/index.php?id=21' title='Diário Oficial'>Diário Oficial</a></li><li><a target='_blank' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=7' title='Leis e Projetos'>Leis e Projetos</a></li></ul></div>
+                        </li>
+
+                        
+                        <li class="pai"><a target="" href="#" class="titulo" title="COMUNICA&#199;&#195;O">COMUNICA&#199;&#195;O</a>
+
+                           <div class='submenu_movel'><ul><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Sala de Imprensa'>Sala de Imprensa</a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='/Comunicacao/SalaDeImprensa/Noticias' title='Notícias'>Notícias</a></li><li><a  target='' href='/Comunicacao/SalaDeImprensa/Imagens' title='Imagens'>Imagens</a></li><li><a  target='' href='https://www.youtube.com/user/AlerjTV' title='TV ALERJ'>TV ALERJ</a></li><li><a  target='' href='http://www.radioalerj.com.br' title='Rádio ALERJ'>Rádio ALERJ</a></li><li><a  target='' href='/Comunicacao/SalaDeImprensa/Jornalistas' title='Cadastro de Jornalista'>Cadastro de Jornalista</a></li></ul><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Publicações'>Publicações</a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='/Listar/IndexDocumentoEletronico?tipo=DI' title='CAPAS D. O.'>CAPAS D. O.</a></li><li><a  target='' href='/Comunicacao/Publicacoes/Jornal' title='Jornal da ALERJ'>Jornal da ALERJ</a></li></ul></ul></div>
+                        </li>
+
+                        
+                        <li class="pai"><a target="" href="javascript:;" class="titulo" title="CONTATO">CONTATO</a>
+
+                           <div class='submenu_movel'><ul><li><a target='_blank' href='https://www.aloalerj.rj.gov.br/contact' title='Alô Alerj'>Alô Alerj</a></li><li><a target='' href='/Contatos/Enquetes' title='Enquetes'>Enquetes</a></li><li><a target='' href='/Contatos/Disques' title='Comunicação Social'>Comunicação Social</a></li></ul></div>
+                        </li>
+
+                        
+                        <li class="pai"><a target="" href="javascript:;" class="titulo" title="LICITA&#199;&#213;ES / TRANSPAR&#202;NCIA">LICITA&#199;&#213;ES / TRANSPAR&#202;NCIA</a>
+
+                           <div class='submenu_movel'><ul><li><a target='' href='/Transparencia/PerguntasFrequentes' title='Perguntas Frequentes'>Perguntas Frequentes</a></li><li><a target='_blank' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=L' title='Consulta de Preços'>Consulta de Preços</a></li><li><a target='_blank' href='http://www2.alerj.rj.gov.br/cadimalerj/default2.asp' title='Empresas Sancionadas'>Empresas Sancionadas</a></li><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Licitações'>Licitações</a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=C' title='Convites'>Convites</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=T' title='Tomada de Preços'>Tomada de Preços</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=P' title='Concorrências'>Concorrências</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=R' title='Pregão'>Pregão</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=I' title='Leilão'>Leilão</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/leideacesso/interna-2016.asp?id=51' title='REGISTROS DE PREÇO'>REGISTROS DE PREÇO</a></li></ul><li><a target='_blank' href='http://www2.alerj.rj.gov.br/leideacesso/default.html' title='Lei de Acesso à Informação'>Lei de Acesso à Informação</a></li></ul></div>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+                <div class="detalhe"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a class="" href="/" id="lkbInicio">IN&#205;CIO</a></li>
+            
+            <li class="pai">
+                <a target="" href="javascript:;" class="titulo " title="ALERJ">ALERJ</a>
+                <div class='submenu'><ul><li><a target='' href='/Alerj/ComoFunciona' title='Como Funciona'>Como Funciona</a></li><li><a target='' href='/Alerj/MesaDiretora' title='Mesa Diretora'>Mesa Diretora</a></li><li><a target='' href='/Alerj/Biblioteca' title='Biblioteca'>Biblioteca</a></li><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Palácio Tiradentes '>Palácio Tiradentes </a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='http://www.palaciotiradentes.rj.gov.br/' title='Palácio Tiradentes 90 Anos'>Palácio Tiradentes 90 Anos</a></li><li><a  target='' href='http://www.palaciotiradentes.rj.gov.br/visitaguiada' title='Visita Guiada'>Visita Guiada</a></li><li><a  target='' href='http://www.palaciotiradentes.rj.gov.br/tour-virtual/' title='Tour Virtual'>Tour Virtual</a></li><li><a  target='' href='http://www.palaciotiradentes.rj.gov.br/historia/' title='História'>História</a></li></ul></ul><div class='detalhe'></div></div>
+            </li>
+
+            
+            <li class="pai">
+                <a target="" href="javascript:;" class="titulo " title="DEPUTADOS">DEPUTADOS</a>
+                <div class='submenu'><ul><li><a target='' href='/Deputados/QuemSao' title='Quem São'>Quem São</a></li><li><a target='' href='/Deputados/RepresentacaoPartidaria' title='Representação Partidária'>Representação Partidária</a></li><li><a target='' href='/Deputados/LinhaDireta' title='Linha Direta'>Linha Direta</a></li></ul><div class='detalhe'></div></div>
+            </li>
+
+            
+            <li class="pai">
+                <a target="" href="javascript:;" class="titulo " title="PROCESSO LEGISLATIVO">PROCESSO LEGISLATIVO</a>
+                <div class='submenu'><ul><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Plenário'>Plenário</a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=57' title='Discursos e Votações'>Discursos e Votações</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=59' title='Ordem do Dia'>Ordem do Dia</a></li></ul><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Comissões'>Comissões</a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=60' title='O Que São'>O Que São</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=61' title='Comissões Permanentes'>Comissões Permanentes</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=62' title='CPI (COMISSÃO PARLAMENTAR DE INQUÉRITO)'>CPI (COMISSÃO PARLAMENTAR DE INQUÉRITO)</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=63' title='Comissões Especiais'>Comissões Especiais</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=64' title='Comissões de Representação'>Comissões de Representação</a></li></ul><li><a target='_blank' href='https://www.ioerj.com.br/portal/modules/content/index.php?id=21' title='Diário Oficial'>Diário Oficial</a></li><li><a target='_blank' href='http://www2.alerj.rj.gov.br/lotus_notes/default.asp?id=7' title='Leis e Projetos'>Leis e Projetos</a></li></ul><div class='detalhe'></div></div>
+            </li>
+
+            
+            <li class="pai">
+                <a target="" href="#" class="titulo " title="COMUNICA&#199;&#195;O">COMUNICA&#199;&#195;O</a>
+                <div class='submenu'><ul><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Sala de Imprensa'>Sala de Imprensa</a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='/Comunicacao/SalaDeImprensa/Noticias' title='Notícias'>Notícias</a></li><li><a  target='' href='/Comunicacao/SalaDeImprensa/Imagens' title='Imagens'>Imagens</a></li><li><a  target='' href='https://www.youtube.com/user/AlerjTV' title='TV ALERJ'>TV ALERJ</a></li><li><a  target='' href='http://www.radioalerj.com.br' title='Rádio ALERJ'>Rádio ALERJ</a></li><li><a  target='' href='/Comunicacao/SalaDeImprensa/Jornalistas' title='Cadastro de Jornalista'>Cadastro de Jornalista</a></li></ul><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Publicações'>Publicações</a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='/Listar/IndexDocumentoEletronico?tipo=DI' title='CAPAS D. O.'>CAPAS D. O.</a></li><li><a  target='' href='/Comunicacao/Publicacoes/Jornal' title='Jornal da ALERJ'>Jornal da ALERJ</a></li></ul></ul><div class='detalhe'></div></div>
+            </li>
+
+            
+            <li class="pai">
+                <a target="" href="javascript:;" class="titulo " title="CONTATO">CONTATO</a>
+                <div class='submenu'><ul><li><a target='_blank' href='https://www.aloalerj.rj.gov.br/contact' title='Alô Alerj'>Alô Alerj</a></li><li><a target='' href='/Contatos/Enquetes' title='Enquetes'>Enquetes</a></li><li><a target='' href='/Contatos/Disques' title='Comunicação Social'>Comunicação Social</a></li></ul><div class='detalhe'></div></div>
+            </li>
+
+            
+            <li class="pai">
+                <a target="" href="javascript:;" class="titulo " title="LICITA&#199;&#213;ES / TRANSPAR&#202;NCIA">LICITA&#199;&#213;ES / TRANSPAR&#202;NCIA</a>
+                <div class='submenu'><ul><li><a target='' href='/Transparencia/PerguntasFrequentes' title='Perguntas Frequentes'>Perguntas Frequentes</a></li><li><a target='_blank' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=L' title='Consulta de Preços'>Consulta de Preços</a></li><li><a target='_blank' href='http://www2.alerj.rj.gov.br/cadimalerj/default2.asp' title='Empresas Sancionadas'>Empresas Sancionadas</a></li><li class='filho_pai'><a id='filhoPai' target='' href='#' title='Licitações'>Licitações</a><ul class='submenu_filho_pai comissoes' ><li><a  target='' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=C' title='Convites'>Convites</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=T' title='Tomada de Preços'>Tomada de Preços</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=P' title='Concorrências'>Concorrências</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=R' title='Pregão'>Pregão</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/licitacao/default2.asp?param=buscar&modalidade=I' title='Leilão'>Leilão</a></li><li><a  target='' href='http://www2.alerj.rj.gov.br/leideacesso/interna-2016.asp?id=51' title='REGISTROS DE PREÇO'>REGISTROS DE PREÇO</a></li></ul><li><a target='_blank' href='http://www2.alerj.rj.gov.br/leideacesso/default.html' title='Lei de Acesso à Informação'>Lei de Acesso à Informação</a></li></ul><div class='detalhe'></div></div>
+            </li>
+
+            
+        </ul>
+         
+    </div>
+</div>
+
+    <script type="text/javascript">
+        var audios = {};
+        var caminhoJPlayer = '/Scripts/';
+    </script>
+
+    <section class="content-wrapper main-content clear-fix">
+        
+    <input id="hdnIsVideoDestaque" name="isVideoDestaque" type="hidden" value="" />
+    <div class="interna">
+        <div class="controle">
+            <div class="conteudo">
+                <div class="titulo">
+                    <h1>PUBLICAÇÕES</h1>
+                    <div class="caminho">NOTÍCIAS</div>
+                    <a href="javascript:history.back(-1);" title="Voltar">VOLTAR</a>
+                    <div class="fio"></div>
+                </div>
+                <div>
+                    <p><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.alerj.rj.gov.br/Visualizar/Noticia/39430"><img src="/Content/imagens/icone_40.png" alt="Facebook" ></a><a target="_blank" href="https://twitter.com/intent/tweet?url=http://www.alerj.rj.gov.br/Visualizar/Noticia/39430&text=COMISSÕES SE UNIRÃO PARA TENTAR EVITAR EXTINÇÃO DA SECRETARIA DE ASSISTÊNCIA SOCIAL E DIREITOS HUMANOS"><img src="/Content/imagens/icone_39.png" alt="Twitter" ></a><a target="_blank" href="https://plus.google.com/share?url=http://www.alerj.rj.gov.br/Visualizar/Noticia/39430"><img src="/Content/imagens/icone_38.png" alt="Google+" style="margin-bottom: 4px;" ></a>&nbsp;<a href="#modal"><img id="modalEmail" src="/Content/imagens/icone_43.png" alt="Email" style="cursor:pointer; margin-bottom: 4px;" ></a><input id="urlEmail" type="hidden" value="http://www.alerj.rj.gov.br/Visualizar/Noticia/39430"/><input id="titleEmail" type="hidden" value="COMISSÕES SE UNIRÃO PARA TENTAR EVITAR EXTINÇÃO DA SECRETARIA DE ASSISTÊNCIA SOCIAL E DIREITOS HUMANOS"/></p>
+                </div>
+                <div class="subtitulo">
+                    24.10.2016 - 19:45
+                    
+                    <span>
+                        
+                        Por Julieta Casara
+                        
+                    </span>
+                </div>
+                <h1>COMISS&#213;ES SE UNIR&#195;O PARA TENTAR EVITAR EXTIN&#199;&#195;O DA SECRETARIA DE ASSIST&#202;NCIA SOCIAL E DIREITOS HUMANOS</h1>
+                
+                    <h2 class="margin_bottom_20">
+                  
+                  <!--  Foi decidido nesta segunda-feira (24/10), durante audiência pública, que uma comissão mista será formada pelas comissões de Defesa dos Direitos da Mulher, Assuntos da Criança, do Adolescente e do Idoso e da Pessoa com Deficiência da Assembleia Legislativa do Estado do Rio de Janeiro (Al...    // retirado pois estava replicando o resumo da notícia -->
+                    
+                </h2>
+                
+                <div class="painel_interno " style="background-color: #004500;">
+                    <div class="navegacao">
+                        
+                        <a href="javascript:;" class="imagens" title="Imagens">IMAGENS</a>
+                        
+                    </div>
+                    
+                    <div class="paginacao">
+                        <div class="icone prev">
+                            <a href="javascript:;" title="Voltar">
+                                <img src="/Content/imagens/icone_27.png" width="20" height="20" alt="Voltar" title="Voltar"></a>
+                        </div>
+                        <div class="icone next">
+                            <a href="javascript:;" title="Avançar">
+                                <img src="/Content/imagens/icone_28.png" width="20" height="20" alt="Avançar" title="Avançar"></a>
+                        </div>
+                        <div class="status"><span class="atual">1</span>/<span class="total">1</span></div>
+                    </div>
+                    
+                    <ul class="controle_imagem">
+                        
+                        <li>
+                            <div class="imagem image-set">
+                                <a class="example-image-link" href="/Uploads/Publicacao/Imagem/24102016_173243geral_RayzaHanna_24_10_16.jpg" data-lightbox="example-set" creditos="24.10.2016 - 17:32 | Por Rayza Hanna" legendaimagem="Reuni&#227;o das Comiss&#245;es de Assuntos da Crian&#231;a, do Adolescente e do Idoso; da Pessoa com Defici&#234;ncia, e de Defesa dos Direitos da Mulher" data-title="Click the right half of the image to move forward.">
+                                    <div class="icone">
+                                        <span>
+                                            <img src="/Content/imagens/icone_30.png" width="20" height="20" alt="Ampliar" title="Ampliar">
+                                        </span>
+                                    </div>
+                                    <img src="/Uploads/Publicacao/Imagem/media_24102016_173243geral_RayzaHanna_24_10_16.jpg" width="460" height="260" />
+                                </a>
+                            </div>
+                            <div class="conteudo">
+                                <div class="creditos">Por Rayza Hanna</div>
+                                <div class="controle_sroll">
+                                    <div class="descricao">
+                                        Reunião das Comissões de Assuntos da Criança, do Adolescente e do Idoso; da Pessoa com Deficiência, e de Defesa dos Direitos da Mulher
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="imagem image-set">
+                                <a class="example-image-link" href="/Uploads/Publicacao/Imagem/24102016_174150geral_2_RayzaHanna_24_10_16.jpg" data-lightbox="example-set" creditos="24.10.2016 - 17:41 | Por Rayza Hanna" legendaimagem="Reuni&#227;o das comiss&#245;es de Assuntos da Crian&#231;a, do Adolescente e do Idoso; da Pessoa com Defici&#234;ncia, e de Defesa dos Direitos da Mulher " data-title="Click the right half of the image to move forward.">
+                                    <div class="icone">
+                                        <span>
+                                            <img src="/Content/imagens/icone_30.png" width="20" height="20" alt="Ampliar" title="Ampliar">
+                                        </span>
+                                    </div>
+                                    <img src="/Uploads/Publicacao/Imagem/media_24102016_174150geral_2_RayzaHanna_24_10_16.jpg" width="460" height="260" />
+                                </a>
+                            </div>
+                            <div class="conteudo">
+                                <div class="creditos">Por Rayza Hanna</div>
+                                <div class="controle_sroll">
+                                    <div class="descricao">
+                                        Reunião das comissões de Assuntos da Criança, do Adolescente e do Idoso; da Pessoa com Deficiência, e de Defesa dos Direitos da Mulher 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="imagem image-set">
+                                <a class="example-image-link" href="/Uploads/Publicacao/Imagem/24102016_180154dilseiaquintela_RayzaHanna_24_10_16.jpg" data-lightbox="example-set" creditos="24.10.2016 - 18:01 | Por Rayza Hanna" legendaimagem="Representante da Assist&#234;ncia Social de Direitos Humanos, Dilseia Quintela" data-title="Click the right half of the image to move forward.">
+                                    <div class="icone">
+                                        <span>
+                                            <img src="/Content/imagens/icone_30.png" width="20" height="20" alt="Ampliar" title="Ampliar">
+                                        </span>
+                                    </div>
+                                    <img src="/Uploads/Publicacao/Imagem/media_24102016_180154dilseiaquintela_RayzaHanna_24_10_16.jpg" width="460" height="260" />
+                                </a>
+                            </div>
+                            <div class="conteudo">
+                                <div class="creditos">Por Rayza Hanna</div>
+                                <div class="controle_sroll">
+                                    <div class="descricao">
+                                        Representante da Assistência Social de Direitos Humanos, Dilseia Quintela
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="imagem image-set">
+                                <a class="example-image-link" href="/Uploads/Publicacao/Imagem/24102016_175859combateasdiscriminacoes_AndreaSepulveda_RayzaHanna_24_10_16.jpg" data-lightbox="example-set" creditos="24.10.2016 - 17:58 | Por Rayza Hanna" legendaimagem="Sub-Secret&#225;ria de Direitos Humanos, Andrea Sepulveda" data-title="Click the right half of the image to move forward.">
+                                    <div class="icone">
+                                        <span>
+                                            <img src="/Content/imagens/icone_30.png" width="20" height="20" alt="Ampliar" title="Ampliar">
+                                        </span>
+                                    </div>
+                                    <img src="/Uploads/Publicacao/Imagem/media_24102016_175859combateasdiscriminacoes_AndreaSepulveda_RayzaHanna_24_10_16.jpg" width="460" height="260" />
+                                </a>
+                            </div>
+                            <div class="conteudo">
+                                <div class="creditos">Por Rayza Hanna</div>
+                                <div class="controle_sroll">
+                                    <div class="descricao">
+                                        Sub-Secretária de Direitos Humanos, Andrea Sepulveda
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="imagem image-set">
+                                <a class="example-image-link" href="/Uploads/Publicacao/Imagem/24102016_172854geral_RayzaHanna_24_10_16.jpg" data-lightbox="example-set" creditos="24.10.2016 - 17:28 | Por Rayza Hanna" legendaimagem="Reunbi&#227;o das Comiss&#245;es de Assuntos da Crian&#231;a, do Adolescente e do Idoso; da Pessoa com Defici&#234;ncia, e de Defesa dos Direitos da Mulher" data-title="Click the right half of the image to move forward.">
+                                    <div class="icone">
+                                        <span>
+                                            <img src="/Content/imagens/icone_30.png" width="20" height="20" alt="Ampliar" title="Ampliar">
+                                        </span>
+                                    </div>
+                                    <img src="/Uploads/Publicacao/Imagem/media_24102016_172854geral_RayzaHanna_24_10_16.jpg" width="460" height="260" />
+                                </a>
+                            </div>
+                            <div class="conteudo">
+                                <div class="creditos">Por Rayza Hanna</div>
+                                <div class="controle_sroll">
+                                    <div class="descricao">
+                                        Reunbião das Comissões de Assuntos da Criança, do Adolescente e do Idoso; da Pessoa com Deficiência, e de Defesa dos Direitos da Mulher
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+                
+                <div style="word-wrap: break-word;">
+                    <p class="margintop11">Foi decidido nesta segunda-feira (24/10), durante audi&ecirc;ncia p&uacute;blica, que uma comiss&atilde;o mista ser&aacute; formada pelas comiss&otilde;es de Defesa dos Direitos da Mulher, Assuntos da Crian&ccedil;a, do Adolescente e do Idoso e da Pessoa com Defici&ecirc;ncia da Assembleia Legislativa do Estado do Rio de Janeiro (Alerj) para tentar evitar a extin&ccedil;&atilde;o da Secretaria de Assist&ecirc;ncia Social e Direitos Humanos do Estado (SEADH). "A comiss&atilde;o tem o objetivo de manter a secret&aacute;ria aberta e buscar novos recursos com o Governo Federal, inclusive para as subsecretarias", explicou a deputada Enfermeira Rejane (PCdoB), presidente da comiss&atilde;o de Defesa dos Direitos da Mulher.</p>
+<p class="margintop11">Ainda n&atilde;o foi confirmada a suspens&atilde;o das atividades da secretaria, mas, segundo a subsecret&aacute;ria de Direitos Humanos, Andrea Sepulveda, os rumores s&atilde;o fortes. "No ponto de vista dos direitos humanos, haver&aacute; um enfraquecimento do &oacute;rg&atilde;o que garante esses direitos em todas as suas vertentes. N&oacute;s protegemos pessoas amea&ccedil;adas de morte, resgatamos v&iacute;timas de tr&aacute;fico de pessoas e de trabalho escravo, atendemos refugiados e trabalhamos tamb&eacute;m em coordena&ccedil;&atilde;o com outras subsecretarias. Todas as pol&iacute;ticas t&ecirc;m como objetivo resguardar as pessoas mais vulner&aacute;veis", disse.</p>
+<p class="margintop11">Confirmando os rumores de desmonte da pasta, a conselheira Estadual de Direitos da Mulher (Cedim), Dilceia Quintela denuncia a precariza&ccedil;&atilde;o do trabalho para o atendimento da mulher desde o ano passado. "Necessitamos setenta funcion&aacute;rios para atendermos a demanda, hoje temos dezessete. Precisamos de investimentos de cerca de 2,5 milh&otilde;es por ano, em torno de 200 mil por m&ecirc;s para que nosso trabalho seja feito", desabafa.</p>
+<p class="margintop11"><strong>Obstru&ccedil;&atilde;o</strong></p>
+<p class="margintop11">Os deputados sugeriram realizar a obstru&ccedil;&atilde;o das pr&oacute;ximas pautas do plen&aacute;rio. O deputado Waldeck Carneiro (PT) defende explica que a obstru&ccedil;&atilde;o &eacute; um recurso que os parlamentares t&ecirc;m para pressionar o Governo. "Vamos pedir verifica&ccedil;&atilde;o de cada mat&eacute;ria e discutir cada item da pauta, impedindo que projetos sejam aprovados, com o intuito de sensibilizar o governador e fazer com que ele compreenda que n&atilde;o se pode interromper as pol&iacute;ticas de garantia de direitos, inclus&atilde;o social e promo&ccedil;&atilde;o da cidadania". Os parlamentares tentar&atilde;o, nos pr&oacute;ximos dias, realizar uma audi&ecirc;ncia com a presen&ccedil;a do governador para tratar do tema.</p>
+<p class="margintop11">Tamb&eacute;m participaram da reuni&atilde;o os deputados Carlos Minc (sem partido), Tio Carlos (SDD), M&aacute;rcio Pacheco (PSC), al&eacute;m de representantes da Secretaria de Assist&ecirc;ncia Social e Direitos Humanos, do N&uacute;cleo Espacial de Defesa dos Direitos da Mulher (Nudem-RJ).</p>
+                </div>
+                <p><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.alerj.rj.gov.br/Visualizar/Noticia/39430"><img src="/Content/imagens/icone_40.png" alt="Facebook" ></a><a target="_blank" href="https://twitter.com/intent/tweet?url=http://www.alerj.rj.gov.br/Visualizar/Noticia/39430&text=COMISSÕES SE UNIRÃO PARA TENTAR EVITAR EXTINÇÃO DA SECRETARIA DE ASSISTÊNCIA SOCIAL E DIREITOS HUMANOS"><img src="/Content/imagens/icone_39.png" alt="Twitter" ></a><a target="_blank" href="https://plus.google.com/share?url=http://www.alerj.rj.gov.br/Visualizar/Noticia/39430"><img src="/Content/imagens/icone_38.png" alt="Google+" style="margin-bottom: 4px;" ></a>&nbsp;<a href="#modal"><img id="modalEmail" src="/Content/imagens/icone_43.png" alt="Email" style="cursor:pointer; margin-bottom: 4px;" ></a><input id="urlEmail" type="hidden" value="http://www.alerj.rj.gov.br/Visualizar/Noticia/39430"/><input id="titleEmail" type="hidden" value="COMISSÕES SE UNIRÃO PARA TENTAR EVITAR EXTINÇÃO DA SECRETARIA DE ASSISTÊNCIA SOCIAL E DIREITOS HUMANOS"/></p>
+                 <div id="modal" class="window">
+                    <div class="content content-modal">
+                        <div class="interna">
+                            <div class="">
+                                <div class="" style="float: none; padding: 0px 0px 0px 0px;">
+                                    <div class="titulo">
+                                        <h1>ENVIE POR E-MAIL</h1>
+                                        <div class="fio"></div>
+                                    </div>
+
+                                    <p class="margin_top_10 margin_bottom_10">
+                                        Os campos que contém
+                    <img width="10" height="10" title="Obrigatório" class="asterisco" alt="Obrigatório" src="/Content/imagens/asterisco.png">são de preenchimento obrigatório.
+                                    </p>
+                                    <div class="formulario margin_bottom_40">
+                                        <form id="formEnvioEmail" method="post">
+                                            <div class="controle_linha margin_bottom_20">
+                                                <div class="coluna_02 margin_bottom_20">
+                                                    <div class="label">
+                                                        <label for="nome">
+                                                            <img width="10" height="10" title="Obrigatório" class="asterisco" alt="Obrigatório" src="/Content/imagens/asterisco.png">SEU NOME</label>
+                                                    </div>
+                                                    <div class="campo campo_personalizado">
+                                                        <input type="text" class="js-obrigatorio" name="nome" id="campoNome">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="controle_linha margin_bottom_20">
+                                                <div class="coluna_02 margin_bottom_20">
+                                                    <div class="label">
+                                                        <label for="nome">
+                                                            <img width="10" height="10" title="Obrigatório" class="asterisco" alt="Obrigatório" src="/Content/imagens/asterisco.png">SEU E-MAIL</label>
+                                                    </div>
+                                                    <div class="campo campo_personalizado">
+                                                        <input type="text" class="js-obrigatorio js-email-valido" name="email" id="campoEmail">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="controle_linha margin_bottom_20">
+                                                <div class="coluna_02">
+                                                    <div class="label">
+                                                        <label for="email">
+                                                            <img width="10" height="10" title="Obrigatório" class="asterisco" alt="Obrigatório" src="/Content/imagens/asterisco.png">E-MAIL DO DESTINATÁRIO</label>
+                                                    </div>
+                                                    <div class="campo campo_personalizado">
+                                                        <input type="text" class="js-obrigatorio js-email-valido" name="emailDestinatario" id="campoEmailDestinatario">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="controle_linha margin_bottom_20">
+                                                <div class="coluna_02">
+                                                    <div class="label">
+                                                        <label for="email">
+                                                            DESEJA RECEBER UMA CÓPIA DA MENSAGEM?</label>
+                                                    </div>
+
+                                                    <div class="radio">
+                                                        <input id="sim" type="radio" name="name" value="SIM" />
+                                                        <label for="sim" class="item_radio_modal">SIM</label>
+                                                        <input id="nao" type="radio" name="name" value="NÃO" />
+                                                        <label for="nao" class="item_radio_modal">NÃO</label>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="controle_linha margin_bottom_20">
+                                                <div class="coluna_02">
+                                                    <div class="label">
+                                                        <label for="escolhadeputado">SEU COMENTÁRIO</label>
+                                                    </div>
+                                                    <div class="campo_personalizado">
+                                                        <textarea rows="4" id="campoMensagem" name="mensagem" style="width: 337px"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="controle_botao">
+                                                <div class="botao"><a id="btnEnviar" title="Enviar" style="cursor:pointer;">ENVIAR</a></div>
+                                                <div class="botao"><a id="btnLimpar" title="Limpar" style="cursor:pointer;">LIMPAR</a></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       <a href="javascript:window.history.go(-1)"  class="close">X</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="banner">
+                <div class="fio"></div>
+                
+
+<ul>
+    
+    <li>
+        
+        <div class="controle_linha">
+            <div class="imagem">
+                
+                    <a style="cursor: pointer;" href="javascript:;" id="link_0"  title="https://portal.office.com/Home" alt="https://portal.office.com/Home" onclick="redirecionaUrlExterna('https://portal.office.com/Home','False','link_0');">
+                        <img src="/Uploads/Banner/01072016_154142banner-office365_novo.jpg" style="display: block; margin-left: auto; margin-right: auto;" height="80" />
+                    </a>
+                
+            </div>
+            
+        </div>
+        
+        <div class="controle_linha">
+            <div class="imagem">
+                
+                    <a style="cursor: pointer;" href="javascript:;" id="link_1"  title="www.aloalerj.rj.gov.br" alt="www.aloalerj.rj.gov.br" onclick="redirecionaUrlExterna('www.aloalerj.rj.gov.br','False','link_1');">
+                        <img src="/Uploads/Banner/11042016_153526banner.jpg" style="display: block; margin-left: auto; margin-right: auto;" height="80" />
+                    </a>
+                
+            </div>
+            
+        </div>
+        
+        <div class="controle_linha">
+            <div class="imagem">
+                
+                    <a style="cursor: pointer;" href="javascript:;" id="link_2"  title="http://www.agenciaradioweb.com.br/novosite4/alerj/jw.php" alt="http://www.agenciaradioweb.com.br/novosite4/alerj/jw.php" onclick="redirecionaUrlExterna('http://www.agenciaradioweb.com.br/novosite4/alerj/jw.php','False','link_2');">
+                        <img src="/Uploads/Banner/28032016_153427radioalerj.jpg" style="display: block; margin-left: auto; margin-right: auto;" height="80" />
+                    </a>
+                
+            </div>
+            
+        </div>
+        
+        <div class="controle_linha">
+            <div class="imagem">
+                
+                    <a style="cursor: pointer;" href="javascript:;" id="link_3"  title="https://www.youtube.com/user/AlerjTV" alt="https://www.youtube.com/user/AlerjTV" onclick="redirecionaUrlExterna('https://www.youtube.com/user/AlerjTV','False','link_3');">
+                        <img src="/Uploads/Banner/21032016_143745tvalerj.jpg" style="display: block; margin-left: auto; margin-right: auto;" height="80" />
+                    </a>
+                
+            </div>
+            
+        </div>
+         
+    </li>
+    
+    <li>
+        
+        <div class="controle_linha">
+            <div class="imagem">
+                
+                    <a style="cursor: pointer;" href="javascript:;" id="link_4"  title="http://www.carteiradadobem.com.br/" alt="http://www.carteiradadobem.com.br/" onclick="redirecionaUrlExterna('http://www.carteiradadobem.com.br/','False','link_4');">
+                        <img src="/Uploads/Banner/11032016_171018banner_ Carteirada_do_Bem_TESTE.jpg" style="display: block; margin-left: auto; margin-right: auto;" height="80" />
+                    </a>
+                
+            </div>
+            
+        </div>
+        
+        <div class="controle_linha">
+            <div class="imagem">
+                
+                    <a style="cursor: pointer;" href="javascript:;" id="link_5"  title="http://www.palaciotiradentes.rj.gov.br/" alt="http://www.palaciotiradentes.rj.gov.br/" onclick="redirecionaUrlExterna('http://www.palaciotiradentes.rj.gov.br/','False','link_5');">
+                        <img src="/Uploads/Banner/09052016_14545790anos.jpg" style="display: block; margin-left: auto; margin-right: auto;" height="80" />
+                    </a>
+                
+            </div>
+            
+        </div>
+         
+    </li>
+    
+</ul>
+<div class="paginacao_banner"></div>
+
+<div class="modal" style="display: none" title="ATENÇÃO">
+    <p>
+        Você esta sendo direcionado para um website diferente do portal da ALERJ.
+        <br />
+        <br />
+        Deseja continuar?
+    </p>
+</div>
+<link rel="stylesheet" type="text/css" href="/Content/css/estilo_dsv.css" />
+<script type="text/javascript">
+    function downloadAnexo(caminho, tipoDocumento) {
+        window.location = rootUrl + 'Home/Download?caminho=' + caminho + '&tipoDocumento=' + tipoDocumento;
+    }
+    function redirecionaUrlExterna(url, isExibeAlerta, idCampo) {
+        if (url != "") {
+            if (url.indexOf("http") < 0) {
+                url = 'http://' + url;
+            }
+            if (isExibeAlerta == "true" || isExibeAlerta == "True") {
+                $(".modal").dialog({
+                    resizable: true,
+                    width: 500,
+                    height: 220,
+                    closeText: 'Fechar',
+                    modal: true,
+                    buttons: {
+                        SIM: function () {
+                            $(this).dialog("close");
+                            window.open(url, '_blank');
+                            return true;
+                        },
+                        NÃO: function () {
+                            $(this).dialog("close");
+                            return false;
+                        }
+                    }
+                });
+            } else {
+                window.open(url, '_blank');
+            }
+        } else
+            return false;
+
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+
+    </section>
+
+    
+<div class="inferior interna "> 
+    <div class="controle_botao">
+		<a href="javascript:;" class="scrolltop">TOPO</a>
+    </div>
+    
+	<div class="controle">
+        <div class="logotipo"><a href="/" title="Assembléia Legislativa do Estado do Rio de Janeiro"><img src="/Content/imagens/logotipo_inferior.png" width="145" alt="Assembléia Legislativa do Estado do Rio de Janeiro" title="Assembléia Legislativa do Estado do Rio de Janeiro"></a></div>
+        <div class="informacoes">
+	        <p class="titulo">PALÁCIO TIRADENTES</p>
+        	<p>Rua Primeiro de março, s/n - Praça XV - Rio de Janeiro<br /><span>CEP</span> 20010-090 &nbsp;&nbsp; <span>Telefone</span> +55 (21) 2588-1000 &nbsp;&nbsp; <span>Fax</span> +55 (21) 2588-1516</p>
+        </div>
+        <div class="redes_sociais">
+            <div class="logotipo_redes"><a target="_blank" href="https://instagram.com/instalerj/" title="Instagram"><img src="/Content/imagens/icone_36.png" width="20" height="20" alt="Instagram" title="Instagram"></a></div>
+            <div class="logotipo_redes"><a target="_blank" href="https://www.facebook.com/assembleiaRJ" title="Facebook"><img src="/Content/imagens/icone_06.png" width="20" height="20" alt="Facebook" title="Facebook"></a></div>
+            <div class="logotipo_redes"><a target="_blank" href="https://plus.google.com/u/0/+alerj/posts"><img src="/Content/imagens/icone_07.png" width="20" height="20" alt="Google Mais" title="Google Mais"></a></div>
+            <div class="logotipo_redes"><a target="_blank" href="https://twitter.com/alerj" title="Twitter"><img src="/Content/imagens/icone_08.png" width="20" height="20" alt="Twitter" title="Twitter"></a></div>
+            <div class="logotipo_redes"><a target="_blank" href="https://www.youtube.com/user/dcsalerj" title="Youtube"><img src="/Content/imagens/icone_09.png" width="20" height="20" alt="Youtube" title="Youtube"></a></div>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        
+        var rootUrl = "http://www.alerj.rj.gov.br/";
+    </script>
+    <script type="text/javascript" src="/Scripts/menu.js"></script>
+    <script type="text/javascript" src="/Scripts/cycle.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.jscrollpane.min.js"></script>
+    <!-- <script type="text/javascript" src=""></script> -->
+    <script type="text/javascript" src="/Content/javascript/javascript.js"></script>
+    <script type="text/javascript">
+        
+        var rootUrl = "http://www.alerj.rj.gov.br/";
+        var tempoBanner =
+            jQuery(function ($) {
+                $(document).ajaxStart(function () {
+                    $("#popupCarregando").show();
+                });
+                $(document).ajaxStop(function () {
+                    if (typeof $notAjaxStop === 'undefined')
+                        $("#popupCarregando").fadeOut();
+                });
+            });
+        $(document).ready(function () {
+            $.ajaxSetup({ cache: false }); //resolver problema com IE e cache quando são feitas chamadas via Json
+
+
+
+            RequisicaoAjax(rootUrl + "Home/RecuperaConfiguracoesExibicao", "", function (response) {
+                $("#tempoNoticia").val(response.tempoNoticia * 1000);
+                $("#tempoBanner").val(response.tempoBanner * 1000);
+
+                $('.banner ul').cycle({
+                    fx: 'scrollLeft',
+                    speed: 500,
+                    timeout: $("#tempoBanner").val(),
+                    pager: '.paginacao_banner'
+                })
+            }, function (error) {
+
+            });
+
+            $(function () {
+                $('input').placeholder();
+            });
+
+            //script partial _superior
+            $("#btnPesquisar").click(function () {
+                window.location.href = rootUrl + "ResultadoPesquisa/PesquisarSite/?termoPesquisa=" + $("#txtPesquisar").val();
+            });
+            //fim script partial _superior
+
+
+        });
+
+        function RequisicaoAjax(urlMetodo, parametros, funcSucesso, funcErro, isAsync) {
+
+            $.ajax({
+                url: urlMetodo,
+                data: parametros,
+                type: 'post',
+                async: isAsync ? isAsync : false,
+                dataType: 'json',
+                success: function (data) {
+                    funcSucesso(data);
+                },
+                error: (funcErro) ? function (data) { funcErro(data); } : null
+            });
+
+        }
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-5511064-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+    <link rel="stylesheet" type="text/css" href="/Content/imagens/player_skin/alerj/jplayer.blue.monday.css" />
+    <script type="text/javascript" src="/Scripts/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Visualizar/visualizar.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Content/css/lightbox.css" />
+    <script type="text/javascript" src="/Scripts/lightbox-2.6.min.js"></script>
+    <script type="text/javascript" src="/Scripts/main.js"></script>
+    <script type="text/javascript">
+        $("#btnLimpar").click(function () {
+            LimparTudo('formEnvioEmail');
+            $("input [type='text']").val();
+            $('[id*="error"]').remove();
+        });
+
+        $("#modalEmail").click(function () {
+            $("#modal").show();
+        });
+
+        $("#btnEnviar").click(function () {
+            if (ValidarPreenchimento('js-obrigatorio') && ValidarPreenchimento('js-email-valido')) {
+                $.ajax({
+                    url: rootUrl +  "Visualizar/EnviarEmail",
+                    data: JSON.stringify({
+                        remetente: $("#campoEmail").val(),
+                        nome: $("#campoNome").val(),
+                        destinatario: $("#campoEmailDestinatario").val(),
+                        copiaRemetente: $("#sim").is(':checked'),
+                        mensagem: $("#campoMensagem").val(),
+                        url: $("#urlEmail").val(),
+                        assunto: $("#titleEmail").val(),
+                    }),
+                    dataType: "json",
+                    cache:false,
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        $("#modal").hide();
+
+                        $("#campoEmail").val("");
+                        $("#campoNome").val("");
+                        $("#campoEmailDestinatario").val("");
+                        $("#sim").prop('checked', false);
+                        $("#nao").prop('checked', false);
+                        $("#campoMensagem").val("");
+
+                        alert("Mensagem enviada com sucesso!");
+                        window.history.back();
+                    },
+                    error: function () {
+                        $("#modal").hide();
+
+                        alert("Erro ao enviar mensagem!");
+                    }
+                });
+            }
+        });
+
+    </script>
+
+</body>
+</html>

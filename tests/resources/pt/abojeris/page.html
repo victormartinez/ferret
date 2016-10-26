@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ABOJERIS - Associação dos Oficiais de Justiça do Rio Grande do Sul &raquo; Not&iacute;cias</title>
+<link href="css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+<script src="js/src/jquery.backstretch.js"></script>
+<link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".fancybox").fancybox();
+});
+</script>
+</head>
+<body><div id="show_mensagens" style="display: none;"></div>
+<div id="barra_topo">
+<form method="post" action="logar.php" name="logar" id="logar" onsubmit="Logar(); return false;">
+	<div id="associado">
+    	<div id="area_associado">&Aacute;rea do associado: <input type="submit" value="ok" class="botaook" /><input type="password" class="formlogin" id="senhaassociado" name="senhaassociado" style="width:60px;" value="000000" onclick="javascript:this.value=''" /><input type="text" value="E-mail:" class="formlogin" id="loginassociado" name="loginassociado" style="width:80px;" onclick="javascript:this.value=''"  /></div>
+    </div>
+</form>
+</div>
+<div id="topo">
+	<div id="banners_topo">
+	    <a href="index.php" title="ABOJERIS - Associação dos Oficiais de Justiça do Rio Grande do Sul &raquo; Not&iacute;cias"><div id="logo" style="background-image:url(banners/logo_04_442e1.png);"></div></a>
+    </div>
+</div>
+<div id="menu" class="menunormal">
+	<div id="menus">
+    <div style="float: right; width: 630px;" id="ladomenu">
+    	<ul class="menus">
+        	<li class="separa"><a href="index.php" title="Home" class="menuoff">Home</a></li>
+        	<li class="separa" rel="subabojeris"><a href="?pag=Abojeris" title="Empresa" class="menuoff">Abojeris</a>
+                    			<div class="boxsub" id="subabojeris">                
+					<ul class="submenus"><li><a href="?pag=Pagina&P=1&M=1" class="sub1" title="Diretoria">Diretoria</a></li><li class="lsub2">- <a href="?pag=Pagina&P=1&M=1&S=1" class="sub2" title="Executiva">Executiva</a></li><li class="lsub2">- <a href="?pag=Pagina&P=1&M=1&S=2" class="sub2" title="Conselho Fiscal">Conselho Fiscal</a></li><li class="lsub2">- <a href="?pag=Pagina&P=1&M=1&S=3" class="sub2" title="Conselho Deliberativo">Conselho Deliberativo</a></li><li class="lsub2">- <a href="?pag=Pagina&P=1&M=1&S=4" class="sub2" title="Como se associar">Como se associar</a></li><li><a href="?pag=Pagina&P=1&M=2" class="sub1" title="Sedes">Sedes</a></li><li class="lsub2">- <a href="?pag=Pagina&P=1&M=2&S=5" class="sub2" title="Sede Administrativa - Porto Alegre">Sede Administrativa - Porto Alegre</a></li><li class="lsub2">- <a href="?pag=Pagina&P=1&M=2&S=6" class="sub2" title="Sede Campestre - Sítio Dom Quixote">Sede Campestre - Sítio Dom Quixote</a></li><li class="lsub2">- <a href="?pag=Pagina&P=1&M=2&S=7" class="sub2" title="Sede em Pinhal">Sede em Pinhal</a></li><li class="lsub2">- <a href="?pag=Pagina&P=1&M=2&S=8" class="sub2" title="Sede Tradicionalista - Santo Ângelo">Sede Tradicionalista - Santo Ângelo</a></li><li><a href="?pag=Pagina&P=1&M=22" class="sub1" title="Núcleo">Núcleo</a></li><li><a href="?pag=Pagina&P=1&M=25" class="sub1" title="Estatuto">Estatuto</a></li>					</ul>
+				</div>  
+            </li>
+        	<li class="separa" rel="subjuridico"><a href="?pag=Juridico" title="Jur&iacute;dico" class="menuoff">Jur&iacute;dico</a>
+                    			<div class="boxsub" id="subjuridico">                
+					<ul class="submenus"><li><a href="?pag=Pagina&P=2&M=6" class="sub1" title="Assessoria Jurídica">Assessoria Jurídica</a></li><li><a href="?pag=Pagina&P=2&M=7" class="sub1" title="Diário de Justiça">Diário de Justiça</a></li>					</ul>
+				</div>           
+            
+            </li>
+            <li class="separa" rel="subconvenios"><a href="?pag=Convenios" title="Conv&ecirc;nios" class="menuoff">Conv&ecirc;nios</a>
+                                  
+            
+            </li>
+            <li class="separa" rel="subcomunicacao"><a href="?pag=Comunicacao" title="Comunica&ccedil;&atilde;o" class="menuoff">Comunica&ccedil;&atilde;o</a>
+                    			<div class="boxsub" id="subcomunicacao">                
+					<ul class="submenus"><li><a href="?pag=Pagina&P=4&M=8" class="sub1" title="Hora Certa">Hora Certa</a></li><li><a href="?pag=Pagina&P=4&M=9" class="sub1" title="Notícias">Notícias</a></li><li><a href="?pag=Pagina&P=4&M=10" class="sub1" title="Galeria de fotos">Galeria de fotos</a></li><li><a href="?pag=Pagina&P=4&M=11" class="sub1" title="Agenda">Agenda</a></li>					</ul>
+				</div>  
+                
+            </li>
+        	<li class="separa" rel="subarea"><a href="?pag=Area-Restrita" title="&Aacute;rea restrita" class="menuoff">&Aacute;rea restrita</a><div class="boxsub" id="subarea"><div class="aviso_login">Informe seus dados de acesso &agrave; &Aacute;rea do Associado.</div></div>                            
+            </li>
+            <li rel="subcontatos"><a href="?pag=Ouvidoria" title="Ouvidoria" class="menuoff">Ouvidoria</a>
+						<div class="boxsub" id="subcontatos">                
+					<ul class="submenus"><li><a href="?pag=Pagina&P=5&M=13" class="sub1" title="Fale conosco">Fale conosco</a></li>					</ul>
+				</div>             
+            </li>                                                      
+        </ul>
+    </div>
+    </div>
+</div>
+<div id="meio_site">
+<div id="conteudo_inicial">
+
+    	<div id="conteudo_esquerdo">
+
+            <div class="titulos_preto" style="width: 980px;">&raquo; Nota de falecimento<div id="print" onclick="javascript:window.print();" title="Imprimir p&aacute;gina"></div></div>
+
+            <div class="datanews" style="width: 980px;">Publicado em: 24 de Outubro de 2016.</div>
+
+            <div class="textos_paginas_grande"><p>&Eacute; com pesar que informamos o falecimento do Oficial de Justi&ccedil;a e associado Jo&atilde;o Fernando Dal Molin, da comarca de Farroupilha. O vel&oacute;rio do colega ainda n&atilde;o tem local e hor&aacute;rio definido. Mais informa&ccedil;&otilde;es em breve.</p>
+</div>
+
+                        
+
+		</div>
+
+        
+
+    	<div id="conteudo_modulo_grande">
+
+	<div id="todas_noticias">
+
+    	<div class="titulos_amarelo" style="width: 980px;">Confira outras not&iacute;cias:</div>
+
+        
+
+		<div id="lista_todas">
+
+                            <ul id="todas_asnoticias">
+
+                            
+    
+
+                            <li>
+
+                            
+
+                            
+                                <div class="tx_todas" style="width:  955px;"><span class="data_nova">20.10</span> <a href="?pag=Noticias&N=272" class="ltit_noticia" title="Nota de esclarecimento à posição do sindicato quanto ao projeto que visa ao pagamento de horas extras">Nota de esclarecimento à posição do sindicato quanto ao projeto que visa ao pagamento de horas extras</a></div>
+
+                                <div class="txt_todas" style="width:  955px;"><a href="?pag=Noticias&N=272" class="txnoticias" title="Nota de esclarecimento à posição do sindicato quanto ao projeto que visa ao pagamento de horas extras">A ABOJERIS tomou conhecimento, na ter&ccedil;a-feira (18/10), de uma proposta do Sindjus que tramitava no TJ referente ao pagamento de horas extras aos OJs. O projeto tratava do pagamento de horas extras e adicionais noturnos aos Oficiais de Justi&ccedil;a.&nbsp;
+
+As fun&ccedil;&otilde;es de Oficial de Justi&ccedil;a s&atilde;o cumpridas, em sua grande...</a></div></li>
+
+                            
+    
+
+                            <li>
+
+                            
+
+                            
+                                <div class="tx_todas" style="width:  955px;"><span class="data_nova">11.10</span> <a href="?pag=Noticias&N=269" class="ltit_noticia" title="10ª Cavalgada dos Oficiais de Justiça">10ª Cavalgada dos Oficiais de Justiça</a></div>
+
+                                <div class="txt_todas" style="width:  955px;"><a href="?pag=Noticias&N=269" class="txnoticias" title="10ª Cavalgada dos Oficiais de Justiça">Acontece nesse final de semana, de sexta (14) a domingo (16), a 10&ordf; Cavalgada dos Oficiais de Justi&ccedil;a. O evento, promovido pelo Piquete Cavaleiros da ABOJERIS com apoio da entidade, faz alus&atilde;o &agrave; primeira dilig&ecirc;ncia realizada no Rio Grande do Sul, em 1875, na Comarca de Santo &Acirc;ngelo. Durante o evento, que acontece anualmente,...</a></div></li>
+
+                            
+    
+
+                            <li>
+
+                            
+
+                            
+                                <div class="tx_todas" style="width:  955px;"><span class="data_nova">07.10</span> <a href="?pag=Noticias&N=268" class="ltit_noticia" title="ABOJERIS emite Parecer Técnico sobre recolhimento de Despesas de Condução em Cartas Precatórias">ABOJERIS emite Parecer Técnico sobre recolhimento de Despesas de Condução em Cartas Precatórias</a></div>
+
+                                <div class="txt_todas" style="width:  955px;"><a href="?pag=Noticias&N=268" class="txnoticias" title="ABOJERIS emite Parecer Técnico sobre recolhimento de Despesas de Condução em Cartas Precatórias">A entidade foi consultada pela Central de Mandados da&nbsp;Comarca de Santa Cruz do Sul, a fim de tirar d&uacute;vidas no que diz respeito ao recolhimento de Despesas de Condu&ccedil;&atilde;o em Cartas Precat&oacute;rias de Busca e Apreens&atilde;o de Autos. Atrav&eacute;s da emiss&atilde;o de um parecer, a ABOJERIS informou &agrave; Comarca que, em face...</a></div></li>
+
+                            
+    
+
+                            <li>
+
+                            
+
+                            
+                                <div class="tx_todas" style="width:  955px;"><span class="data_nova">30.09</span> <a href="?pag=Noticias&N=267" class="ltit_noticia" title="ABOJERIS presente na reunião da Copeam">ABOJERIS presente na reunião da Copeam</a></div>
+
+                                <div class="txt_todas" style="width:  955px;"><a href="?pag=Noticias&N=267" class="txnoticias" title="ABOJERIS presente na reunião da Copeam">A Comiss&atilde;o Parit&aacute;ria de Preven&ccedil;&atilde;o e Enfrentamento ao Ass&eacute;dio Moral e Doen&ccedil;as Decorrentes (Copeam) reuniu-se na manh&atilde; de ontem, 29/09, no Tribunal de Justi&ccedil;a. A comiss&atilde;o desenvolve pertinente e in&eacute;dito trabalho na busca de solu&ccedil;&otilde;es de situa&ccedil;&otilde;es que configurem...</a></div></li>
+
+                            
+    
+
+                            <li>
+
+                            
+
+                            
+                                <div class="tx_todas" style="width:  955px;"><span class="data_nova">28.09</span> <a href="?pag=Noticias&N=266" class="ltit_noticia" title=" Problemas técnicos no repasse dos pagamentos"> Problemas técnicos no repasse dos pagamentos</a></div>
+
+                                <div class="txt_todas" style="width:  955px;"><a href="?pag=Noticias&N=266" class="txnoticias" title=" Problemas técnicos no repasse dos pagamentos">Devido a problemas t&eacute;cnicos no sistema do Tribunal de Justi&ccedil;a do RS, a transfer&ecirc;ncia dos valores referentes ao pagamento dos servidores do judici&aacute;rio n&atilde;o pode ser realizado dentro da normalidade. O TJ informou &agrave; ABOJERIS que ao longo do dia a situa&ccedil;&atilde;o ser&aacute; normalizada.
+</a></div></li>
+
+                            
+                            </ul>
+
+                            
+
+						<div class="mais_noticias"><a href="?pag=Pagina&P=4&M=9#todas_noticias" class="lmais_noticias">+ not&iacute;cias</a></div>                            
+
+
+
+                        </div>                   
+
+        </div>
+
+	</div>
+    
+</div> 
+</div>
+<div class="separador_rodape"></div>
+<div id="rodape">
+	<div id="centraliza_rodape">
+    	<div id="endereco">Fone: <strong>(51) 3224.1997</strong><br />Rua André Belo, 603 - Porto Alegre / RS<br />Associação dos Oficiais de Justiça do Rio Grande do Sul</div>        
+    </div>
+</div>
+</body>
+</html>
+<script>
+		
+	var links = [ "http://www.abojeris.com.br/site/index.php?pag=Noticias&N=272", "http://www.abojeris.com.br/site/?pag=Noticias&N=255","http://www.abojeris.com.br/site/?pag=Noticias&N=255" ];
+    $("#banners_topo").backstretch([ "banners/fundo_topo_01_5dfaa.jpg", "banners/fundo_topo_02_c09b9.jpg", "banners/fundo_topo_03_c09b9.jpg" ], { fade: 750, duration: 8000 });
+	$(window).on("backstretch.show", function (e, instance) { var url = links[instance.index]; $(".backstretch").on("click", function () { document.location.href = url; }); });
+	
+	        $(document).ready(function(){
+						
+			$(".menus li").mouseover(function(){
+				var op = $(this).attr('rel');
+				$("#"+op).fadeIn(128);                 
+			}); 
+            $(".menus li").mouseleave(function(){
+				var op = $(this).attr('rel');
+				$("#"+op).fadeOut(64);
+            });
+			$(".duvidas").fancybox({
+				maxWidth	: 560,
+				maxHeight	: 320,
+				fitToView	: false,
+				autoSize	: false,
+				openEffect	: 'none',
+				closeEffect	: 'none',
+				closeClick  : false
+			});
+		});
+		function Votar(e,rd,r){
+				$("#resultados").fadeOut(100, function(){
+					$("#load_enquete").fadeIn(50).fadeOut(100, function(){
+						$.post("votar.php", { e: e, rd: rd, r:r }, function(dados){								
+								$("#resultados").html(dados).fadeIn(100);					
+						});
+					});
+				});		
+		}
+		
+		function Logar(){
+			var usr=$("#loginassociado").val();
+			if(usr=="" || usr == "E-mail:"){ alert('Informe seu e-mail corretamente.'); } else {
+				var sen=$("#senhaassociado").val();
+				if(sen=="" || sen=="000000"){ alert('Informe sua senha corretamente.'); } else { $("#logar").submit(); }	
+			}
+		}
+		function LogarPagina(){
+			var usr=$("#loginassociadop").val();
+			if(usr=="" || usr == "E-mail:"){ alert('Informe seu e-mail corretamente.'); $("#loginassociadop").focus(); } else {
+				var sen=$("#senhaassociadop").val();
+				if(sen=="" || sen=="000000"){ alert('Informe sua senha corretamente.'); $("#senhaassociadop").focus(); } else { $("#logar_pagina").submit(); }	
+			}
+		}
+		function SolicitarSenha(){
+			var nm=$("#nomecompleto").val();
+			if(nm==""){ alert('Informe seu nome completo.'); $("#nomecompleto").focus(); } else {
+				var em=$("#seuemail").val();
+				if(em==""){ alert('Informe seu e-mail.'); $("#seuemail").focus(); } else { $("#solicitar_senha").submit(); }	
+			}
+		}
+		function AbreDiario(op){
+			$(".edicaoon").each(function(i, v){ $(this).fadeOut(64); });
+			$("#"+op).fadeIn(128);			 			
+		}
+</script>

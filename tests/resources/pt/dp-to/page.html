@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Defensoria Pública do Estado do Tocantins</title>
+		<link rel="stylesheet" type="text/css" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="/novo_portal/bootstrap/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="/novo_portal/bootstrap/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="/novo_portal/fa/css/font-awesome.min.css">
+		<link href="/assets/application-bcb142f67ffc0bccd6f2beca277c9b72.css" media="all" rel="stylesheet" />
+	  <script src="/assets/application-aa1b138cfe3bd3b8571531e376d57105.js"></script>
+		<meta content="authenticity_token" name="csrf-param" />
+<meta content="CWfyvYVzujawtjL/S24zgts0AJQ2vwJenwdKwn7eJaA=" name="csrf-token" />
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="/novo_portal/js/jquery-1.11.2.min.js"></script>
+		<script src="/novo_portal/bootstrap/js/bootstrap.js"></script>
+
+		<script src="/novo_portal/js/jquery_browse.js"></script>
+		<script src="/novo_portal/js/jquery.cycle.all.js"></script>
+		<script src="/novo_portal/js/ekko-lightbox.min.js"></script> 
+		<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"6cd909da67","applicationID":"14840351","transactionName":"e1ZZEEpdClsBRR1ZCVVcGApXRg9UDVY=","queueTime":0,"applicationTime":628,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+		<script src="/sweetalert/dist/sweetalert.min.js"></script> 
+	    <link rel="stylesheet" type="text/css" href="/sweetalert/dist/sweetalert.css">
+		<meta itemscope itemtype="http://schema.org/LocalBusiness" itemref="_name1 _image2 _telephone3 _address4 _url9">
+		<meta id="_name1" itemprop="name" content="Página Principal:: Defensoria Pública do Estado do Tocantins">
+		<meta id="_image2" itemprop="image" content="http://ww1.defensoria.to.gov.br/static/img/iconDefensoria.png">
+		<meta id="_address4" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" itemref="_streetAddress5 _addressLocality6 _addressRegion7 _postalCode8">
+		<script src="/novo_portal/js/pace.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="dp-header hidden-print">
+	<p>&nbsp;</p>
+	<div class="btn-group pull-right visible-lg visible-md">
+		<button type="button" class="btn btn-default dropdown-toggle btn-sm visible-lg visible-md" data-toggle="dropdown" aria-expanded="false">
+			Acesso Interno <span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<li style="padding-left:10px"><b><i>Servidor</i></b></li>
+			<li><a href="http://intranet.defensoria.to.gov.br/" target="_blank">Intranet</a></li>
+			<li><a href="http://webmail.defensoria.to.gov.br" target="_blank">Webmail</a></li>
+			<li><a href="http://intranet.defensoria.to.gov.br/rh/comprovante_irrf/acesso-comprovantes" target="_blank">Comprovantes</a></li>
+			<li><a href="http://saed.defensoria.to.gov.br" target="_blank">Estágio probatório</a></li>
+      <li><a href="http://helpdesk.defensoria.to.gov.br/chamados/add?grupo_responsavel=1&categorias=33" target="_blank">Help Desk</a></li>
+			<li class="divider"></li>
+			<li style="padding-left:10px"><b><i>Atendimento</i></b></li>
+			<li><a href="http://sisat.defensoria.to.gov.br/" target="_blank">Solar</a></li>
+			<li><a href="http://www.defensoria.to.gov.br/sisat/" target="_blank">Sisat</a></li>
+			<li class="divider"></li>
+			<li style="padding-left:10px"><b><i>Demais Sistemas</i></b></li>
+			<li><a href="http://novaintranet.defensoria.to.gov.br" target="_blank">Portal</a></li>
+			<li><a href="http://projetos.defensoria.to.gov.br/" target="_blank">Gestão de Projetos</a></li>
+		</ul>
+	</div>
+
+	<div class="pull-right visible-lg visible-md hidden-print">
+		<div class="right-inner-addon hidden-print">
+			<i class="fa fa-search text-success hidden-print"></i>
+			<form accept-charset="UTF-8" action="/pesquisa/conteudo" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+				<input class="form-control input-sm hidden-print" id="q_title_or_text_or_short_description_cont" name="q[title_or_text_or_short_description_cont]" placeholder="Buscar no site" type="text" />
+</form>
+			<form class="" name="search" method="get" action="/search/">
+				
+			</form>
+		</div>
+	</div>
+	<ul class="links-header">
+		<li class="link-dp-green">
+			<a href="/">Defensoria Pública</a>
+		</li>
+		<li class="link-dp-blue">
+			<a href="/atendimento">Atendimento</a>
+		</li>
+		<li class="link-dp-green-hard">
+			<a href="/corregedoria">Corregedoria</a>
+		</li>
+		<li class="link-dp-red">
+			<a href="/contatos">Contatos</a>
+		</li>
+	</ul>
+	<div class="top-header">
+		<div class="col-md-8 col-xs-12 col-md-12"> 					
+			<ul class="header-text">
+		      <a data-remote="true" href="/site_home/menu_dinamico">
+						<li >					
+							MENU <i class="fa fa-sort"></i>
+						</li>
+</a>
+					<li class="left">
+				    Defensoria Pública
+					</li>
+
+			</ul>
+		</div>
+			<div class="col-md-4 hidden-xs hidden-sm">
+				<img src="/novo_portal/img/logo_DPE.png" height="100px">
+			</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+<style type="text/css">
+	a:link {text-decoration: none}
+</style>
+			<div class="conteudo">
+			<div class="visible-xs visible-sm hidden-print"><div class="menufix"></div>
+			  <link data-turbolinks-track="true" href="/assets/letrilizar-9ede814dbae7a7290942eaa527139cd7.css" media="all" rel="stylesheet" />
+  <style>
+    .slide_show { 
+      width: 235px; 
+      height: 261px;
+      margin-top: 5px; 
+      margin-bottom: 5px;
+    }
+
+    .slide_show img { 
+      padding: 3px; 
+      border: 1px solid #ddd; 
+      background-color: #eee; 
+    }
+
+    .imagem-banner {
+      width: 235px;
+      height: 261px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  </style>
+
+				<style type="text/css">
+	@-moz-document url-prefix() {
+    .btn-topo {
+    	margin-top: 35px;
+		}
+		.menu{
+			padding-top: 30px;
+		}
+		.links-header{
+			font-size: 150%;
+			font-size-adjust:0.5;
+		}
+	}
+
+	/*
+	body{
+		font-family: "Tahoma", Geneva, sans-serif;
+	}
+	*/
+
+	/* HEADER */
+	.dp-header{
+		position: fixed;
+		background: #fff;
+		z-index: 1000;
+	}
+
+	@media (min-width: 768px) {
+		.dp-header {
+			width: 710px;
+		}
+		
+	}
+	@media (min-width: 992px) {
+		.dp-header {
+			width: 940px;
+		}
+		.botoes_atendimento{
+			padding-top: 240px;
+		}
+
+
+	}
+	@media (min-width: 1200px) {
+		.dp-header {
+			width: 1140px;
+		}
+		.no_padding_right{
+			padding-right: 0px;
+		}
+		.botoes_atendimento{
+			padding-top: 290px;
+		}
+	}
+
+	@media (max-width: 1200px; min-width: 401px) {
+		.bloco-imagem{
+			width:100%;
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.bloco-imagem{
+			width:100%;
+			text-align: right;
+		}
+	}
+
+	.dp-header .links-header li{
+		display: inline;
+		list-style-type: none;
+		padding-right: 20px;
+	}
+	.links-header{
+		font-size: 160%;
+		font-weight: bold;
+		padding-left: 40px;
+	}
+
+	.link-dp-green a{
+		color: #4c8c2e;
+	}
+	.link-dp-blue a{
+		color: #337ab7;
+	}
+
+	.link-dp-green-hard a{
+		color: #00420C;
+	}
+
+	.link-dp-red a{
+		color: #CC3300;
+	}
+
+	.link-dp-default a{
+		color: #d53290;
+	}
+
+	.link-dp-default{
+		color: #d53290;
+	}
+
+	.strong{
+		font-weight:bold;
+	}
+
+	.dp-header .top-header {
+		max-height: 100px;
+		background: #d53290;
+		padding-left: 0px;
+	}
+
+	.header-text{
+		padding: 30px;
+		padding-right: 0px;
+
+	}
+
+	.top-header .header-text li {
+		color: #fff;
+		font-size: 170%;
+		font-weight: bold;
+		display: inline;
+		list-style-type: none;
+		padding-right: 20px;
+		border-right: dotted;
+		border-width: 1px;
+		border-color: #fff;
+	}
+
+	.top-header .header-text .left {
+		padding-left: 20px;
+		font-size: 120%;
+		border-right: none;
+		top:-2px;
+		position: relative;
+	}
+
+	.top-header img{
+		position: relative;
+	}
+
+	.menu{
+		background: #fff;
+		width: 100%;
+		margin-bottom: 10px;
+		margin-top: 15px;
+	}
+
+	.menu-item{	
+		color: #7D93A5;
+		font-weight: bold;
+		padding: 10px;
+		border-bottom: solid;
+		border-width: 2px;
+		border-color: #dbe1e6;
+		margin:10px;
+		width:100%;
+		font-size: 105%;
+	}
+
+	.menu-item a {	
+		color: #7D93A5;
+	}
+
+
+	div.menu-item.has_sub:after{
+		/*color: #dbe1e6;*/
+		float: right;
+		text-align: right;
+		content: "\f0dd";
+		font-family: FontAwesome;
+		/* more styling for the icon, including color, font-size, positioning, etc. */
+	}
+
+	.menu .title-menu{
+		color:  #7D93A5;
+		background: #dbe1e6;
+		font-size: 130%;
+		font-weight: bold;
+		margin-top: 20px;
+		padding: 10px;
+		padding-left: 30px;
+	}
+	.menu .title-menu span{
+		border-left: dotted;
+		border-top-color: #7D93A5;
+		border-width: 1px;
+		padding-left: 20px;
+		margin-left: 20px;
+		content: "\f00d";
+		font-family: FontAwesome;
+	}
+	/* CONTEUDO */
+	.conteudo{
+		padding-top:150px;
+		margin-right: 0px;
+	}
+
+	@media print {
+		.conteudo{
+			padding-top: 0px;
+			margin-right: 0px;
+		}
+	}
+	.topo-btns{
+		width:100%;
+	}
+
+	.btn-topo {
+		background: #fff;
+		min-height: 35px;
+		text-align: center;
+		padding-top: 5px;
+		border-right: solid;
+		border-right-color: #dbe1e6;
+		border-bottom: solid;
+		border-bottom-color: #dbe1e6;
+		border-top: solid;
+		border-top-color: #d53290;
+		border-radius: 10px;
+		border-width: 2px;
+	}
+
+
+	.btn-topo:hover{
+		border-top: solid;
+		border-top-color: #d53290;
+		border-top-width: 5px;
+		padding-top: 3px;
+		font-size: 106%;
+	}
+
+	.btn-topo a {
+		vertical-align: center;
+		font-size: 105%;
+		color: #515c60;
+	}
+
+	.btn-topo-right{
+		border-right: none;
+	}
+
+
+	.dp-chamada{
+		font-weight: bold;
+		text-align: left;
+		height: 95px;
+	}
+	.dp-chamada a{
+		color: #162a33;	
+	}
+
+	.slide-title h2{
+		font-size: 28px;
+	}
+
+	.dp-btn{
+		color:  #515c60;
+		border:solid;
+		padding: 5px;
+		padding-right:10px; 
+		border-left:none;
+		border-color: #dbe1e6;
+		border-top-color: #d53290;
+		border-width: 2px;
+		border-radius: 4px;
+		margin-right:10px;
+
+	}
+
+	.dp-chamada-list{
+		margin-top:70px;
+	}
+
+	.dp-chamada-list .item{
+		padding-bottom: 13px;
+		border-bottom: solid;
+		border-color: #dbe1e6;
+	}
+
+	.dp-chamada-list .dp-lead{
+		font-size: 90%;
+	}
+	.dp-chamada-list .dp-title{
+		font-weight: bold;
+	}
+
+	.dp-chamada-list .dp-title a{
+		color:#000;
+	}
+
+	.hide{
+		display: none;
+	}
+
+	.footer{
+		width:100%;
+		border-top: solid;
+		border-width: 10px;
+		border-color: #d53290;
+		margin-top:100px;
+		background: #f7f7f7;
+	}
+	.links-footer {
+		padding-bottom: 100px;
+	}
+
+	.links-footer li{
+		font-size: 120%;
+		list-style-type: none;
+	}
+
+	.links-footer a{
+		color: #515c60;
+	}
+	.mailing_address{
+		text-align: center;
+	}
+	.footer-phone{
+		border-top:solid;
+		border-color: #515c60;
+		background:  #dbe1e6;
+		padding:5px;
+	}
+
+	.right-inner-addon {
+		position: relative;
+		padding-right: 20px;
+	}
+	.right-inner-addon input {
+		padding-right: 30px;    
+	}
+	.right-inner-addon i {
+		position: absolute;
+		right: 0px;
+		padding: 5px 32px;
+		pointer-events: none;
+	}
+
+	.audio_play{
+		background: #d53290;
+		color: #fff;
+		font-size: 400%;
+		min-height: 107px;
+		width: 100%;
+		text-align: center;
+		padding-top: 10px;
+	}
+
+	.image_thumb{
+		height: 120px;
+		overflow:hidden;
+	}
+
+	.image_thumb img{
+		width: 160px;
+		height: 120px;
+	}
+
+	.text-inverse {
+		color: #000;
+	}
+
+	.text-inverse a {
+		color: #000;
+	}
+	.nucleos{
+		border-top: solid;
+		border-bottom: solid;
+		border-color: #dbe1e6;
+		padding-bottom: 10px;
+		min-height: 261px;
+		max-height: 261px;
+		overflow:hidden;
+	}
+
+	.dp-descricao {
+		height: 77px;
+		overflow:hidden;
+		margin-bottom: 30px;
+		text-align: justify;
+	}
+
+	.with-divider{
+		border-bottom: solid;
+		border-color: #dbe1e6;
+		margin-bottom: 30px;
+	}
+
+	.dp-block-description{
+		height: 71px;
+		overflow:hidden;
+		padding: 5px;
+	}
+
+	audio:hover, audio:focus, audio:active {
+		-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+		-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+		box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		transform: scale(1.05);
+	}
+
+	audio {
+		-webkit-transition:all 0.5s linear;
+		-moz-transition:all 0.5s linear;
+		-o-transition:all 0.5s linear;
+		transition:all 0.5s linear;
+		-moz-box-shadow: 2px 2px 4px 0px #d53290;
+		-webkit-box-shadow:  2px 2px 4px 0px #d53290;
+		box-shadow: 2px 2px 4px 0px #d53290;
+		-moz-border-radius:7px 7px 7px 7px ;
+		-webkit-border-radius:7px 7px 7px 7px ;
+		border-radius:7px 7px 7px 7px ;
+		background-color: #51FF00	;
+	}
+
+	.menufix{
+		height: 30px;
+	}
+
+	.no_padding_left{
+		padding-left: 0px;
+	}
+
+	.padding-left{
+		padding-left: 30px;
+	}
+
+	.bloco-imagem span{
+		padding: 10px;
+		padding-bottom: 0px;
+	}
+
+
+	#newsletter {
+		background-color:#EAEAEA;
+		padding:2px 12px;
+		height:auto;
+		overflow:hidden;
+		margin-top: 20px;
+		border-radius: 25px;
+	}
+
+	#newsletter legend {
+		font-size:14px; 
+		line-height:14px; 
+		margin:0 0 20px 0; 
+		font-weight: bold;
+	}
+
+	#newsletter .input1 {
+		float:left; 
+		width:158px;
+	}
+
+	#newsletter .bt1 {
+		margin-left:-2px; 
+		padding:5px;
+	}
+
+	#newsletter form {
+		margin:0;
+	}
+
+	.navbar-search {
+		position: relative;
+	}
+
+	.navbar-search .search-query {
+		padding-left: 29px;
+	}
+
+	.navbar-search .icon-search {
+		position: absolute;
+		top: 7px;
+		left: 11px;
+		background-image: url("{{STATIC_URL}}/img/glyphicons-halflings.png");
+	}
+
+	.border-bottom {
+		border-bottom: 1px solid #e2e1e1 !important;
+	}
+
+	.innerAll {
+		padding: 14px;
+		position: relative;
+	}
+
+	.center{
+		text-align: center;
+
+	}
+
+	.justify{
+		text-align: justify;
+	}
+
+	.center-cropped {
+		width: 100%;
+		height: 400px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		border-radius: 10px;
+	}
+
+	/* Set the image to fill its parent and make transparent */
+	.center-cropped img {
+		min-height: 100%;
+		min-width: 100%;
+		/* IE 8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		/* IE 5-7 */
+		filter: alpha(opacity=0);
+		/* modern browsers */
+		opacity: 0;
+	}
+
+	.noticias-blog{
+		padding-bottom: 40px;
+	}
+
+	.banner_topo{
+		padding-top: 25px;
+		padding-left: 10%;
+		padding-right: 10%;
+		text-align: center;
+	}
+
+	.go_top{
+		z-index:1000;
+		text-align:center; 
+		font-weight: bold;
+		color: #444;
+		text-decoration: none;
+		position:fixed;
+		bottom: 0px;
+		right:20%;
+		display:none;
+	}
+
+	.list-imagem li{
+		display: inline;
+		list-style-type: none;
+	}
+
+	.links_scroll{
+		padding-top:40px;
+	}
+
+	.links_scroll .scroll { 
+	    height: 258px;
+	    overflow: hidden;
+	}
+
+	.links_scroll li{
+		list-style-type: none;
+		padding: 10px;
+		border-bottom: dotted;
+		border-color: #dbe1e6;
+		border-width: 2px;
+	}
+
+	/*atendimento */
+
+	.atendimento_topo {
+		background-image: url(/novo_portal/img/bg_atendimento5.jpg);
+		/*background-image: url(/img/resize?post_id=601&amp;width=900&amp;height=100);*/
+		padding-top:100px;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		margin-top:10px;
+
+	}
+
+	.processo_form{
+		padding-left:50px;
+	}
+
+	.botao_atendimento{
+		padding-left:0px;
+		padding-right:0px;
+	}
+
+	.atendimento_texto{
+		padding:15px;
+		padding-left:50px;
+		padding-right:50px;
+	}
+
+	.atendimento_areas{
+		background-image: url(/novo_portal/img/base_areas.png);
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		padding-bottom:20px;
+		padding-top:20px;
+
+	}
+
+	.botao_area{
+		padding:10px;
+	}
+
+	.atendimento_mapa{
+		background-image: url(/novo_portal/img/base_maps.png);
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		padding:20px;
+		padding-top:40px;
+
+	}
+
+	.widget {
+		background: #fff;
+		margin: 0 auto 24px;
+		border: 1px solid #e2e1e1;
+		box-shadow: 0 3px 0 0 #dbdbdb;
+		-moz-box-shadow: 0 3px 0 0 #dbdbdb;
+		-webkit-box-shadow: 0 3px 0 0 #dbdbdb;
+	}
+
+	.innerAll {
+		padding: 14px;
+		position: relative;
+	}
+
+	.foto_grade:hover {
+		transform: scale(1.1);
+		z-index: 1000;
+	}
+
+	/* contatos */
+
+	.widget_border{
+		border-bottom: dotted;
+		border-color:#dbe1e6;
+		padding-bottom:30px;
+	}
+
+	.widget_border_light{
+		border-bottom: dotted;
+		border-color:#dbe1e6;
+		padding-bottom:30px;
+		border-width: 2px;
+	}
+
+	.contato_mapa{
+		text-align:center;
+		padding-top:30px;
+		padding-bottom: 30px;
+		margin-bottom:20px;
+	}
+
+	.contato_item{
+		padding-left:50px;
+		padding-top:10px;
+	}
+
+	.share-links{
+		text-align:right;
+		margin-top:20px;
+	}
+
+	.share-links .link{
+		display:inline;
+		background:#d53290;
+		color:#fff;
+		padding:10px;
+		padding-top:5px;
+		padding-bottom:5px;
+		margin-left: 5px;
+		margin-right: 5px;
+		border-radius: 3px;
+	}
+
+	.share-links .inverse {
+		background: #999 ;
+	}
+
+
+	/* PACE */
+
+	.pace {
+	  -webkit-pointer-events: none;
+	  pointer-events: none;
+
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  user-select: none;
+
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  z-index:1001;
+	  -webkit-transform: translate3d(0, -50px, 0);
+	  -ms-transform: translate3d(0, -50px, 0);
+	  transform: translate3d(0, -50px, 0);
+
+	  -webkit-transition: -webkit-transform .5s ease-out;
+	  -ms-transition: -webkit-transform .5s ease-out;
+	  transition: transform .5s ease-out;
+	}
+
+	.pace.pace-active {
+	  -webkit-transform: translate3d(0, 0, 0);
+	  -ms-transform: translate3d(0, 0, 0);
+	  transform: translate3d(0, 0, 0);
+	}
+
+	.pace .pace-progress {
+	  display: block;
+	  position: fixed;
+	  z-index: 2000;
+	  top: 0;
+	  right: 100%;
+	  width: 100%;
+	  height: 10px;
+	  background: #d53290;
+
+	  pointer-events: none;
+	}
+
+	.imagem-carrosel {
+	  max-width: 530px;
+		min-height: 352px;
+		background-size: cover;
+	}
+
+	.imagem-albuns img {
+		width: 100% !important;
+		height: 190px !important;
+		display: block !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.imagem-albuns:hover img {
+		transform: scale(1.1);
+		z-index: 1000;
+		top: -4px;
+		box-shadow: 4px 8px 8px #999;
+		transition: all .2s ease-in-out;
+	}
+
+  .author_noticia {
+  	text-align: right;
+  	font-size: 10px;
+  }
+	.text-box {
+		height: 60px;
+	}
+
+	.dp-border-bottom {
+		/*border-top: solid;*/
+		border-bottom: solid;
+		border-color: #dbe1e6;
+	}
+
+	.text_mapa {
+   color: #696969;
+	}
+
+	.box_mapa {
+		background: #E9E9E9;
+		border-color: #dbe1e6;
+		border-radius: 10px;
+	}
+
+	.icone_oab {
+		max-width: 65%;
+		margin-left: 38%;
+	}
+
+</style>
+
+			</div>
+			  
+			  <div id="menus_dinamicos">
+				</div>
+				
+				<p>&nbsp;</p>
+				<div class="topo-btns hidden-print">
+	<div class="col-md-4 no_padding_left">					
+		<div class="btn-topo">
+			<a href="/pagina/15091/" target="_blank">Missão e Visão</a>
+		</div>
+	</div>
+	<div class="col-md-4 no_padding_left">					
+		<div class="btn-topo">
+			<a href="http://plantao.defensoria.to.gov.br" target="_blank">Defensoria de Plantão</a>
+		</div>
+	</div>
+	<div class="col-md-4 no_padding_left no_padding_right">					
+		<div class="btn-topo">
+			<a href="http://transparencia.defensoria.to.gov.br/" target="_blank">Portal da Transparência</a>
+		</div>
+	</div>	
+</div>
+
+<!-- Bloco visível apenas em dispositivos móveis. -->
+<div class="visible-xs visible-sm">
+	<p>&nbsp;</p>
+	<div class="right-inner-addon">
+		<i class="fa fa-search text-success"></i>
+		<form class="" name="search" method="get" action="/search/">
+			<input type="text" name="q" class="form-control input-sm" placeholder="Buscar no site">
+		</form>
+	</div>
+
+	<p>&nbsp;</p>
+
+ 
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    <ul class="nav navbar-nav pull-right">
+	      <li class="dropdown">
+	        <a href="#" class="dropdown-toggle btn btn-default btn-xs" data-toggle="dropdown" data-aria-haspopup="true" data-aria-expanded="false">Acesso Interno<span class="caret"></span></a>
+	        <ul class="dropdown-menu bg-black border-fff">
+		        <li style="padding-left:10px"><b><i>Servidor</i></b></li>
+					  <li><a href="http://intranet.defensoria.to.gov.br/">Intranet</a></li>
+						<li><a href="http://webmail.defensoria.to.gov.br">Webmail</a></li>
+						<li><a href="http://intranet.defensoria.to.gov.br/rh/comprovante_irrf/acesso-comprovantes">Comprovantes</a></li>
+						<li><a href="http://saed.defensoria.to.gov.br">Estágio probatório</a></li>
+						<li><a href="http://helpdesk.defensoria.to.gov.br/chamados/add?grupo_responsavel=1&categorias=33" target="_blank">Help Desk</a></li>
+						<li class="divider"></li>
+						<li style="padding-left:10px"><b><i>Atendimento</i></b></li>
+						<li><a href="http://sisat.defensoria.to.gov.br/">Solar</a></li>
+						<li><a href="http://www.defensoria.to.gov.br/sisat/">Sisat</a></li>
+						<li class="divider"></li>
+						<li style="padding-left:10px"><b><i>Demais Sistemas</i></b></li>
+						<li><a href="http://novaintranet.defensoria.to.gov.br">Portal</a></li>
+						<li><a href="http://projetos.defensoria.to.gov.br/">Gestão de Projetos</a></li>
+	        </ul>
+	      </li>
+	    </ul>
+	  </div>
+
+</div>
+				
+				
+				<input id="chrome_extension_id" name="chrome_extension" type="hidden" value="20537" />
+<div class="col-md-9">
+	<p>&nbsp;</p>
+	<h2 style="margin-bottom:0">
+	  Campanha solidária da DPE-TO arrecada roupas para reeducandas de Palmas
+	</h2>
+	<br/>
+	<h4>
+	  Arrecadação de roupas novas e usadas vai até o dia 16 de novembro
+	</h4>
+	<sup>
+	  Publicado em 25/10/2016 18:01
+	</sup>
+	<div class="row">
+		<div class="col-md-12 widget_border_light">
+			  </br>
+				<span class="col-md-12 col-xs-12 author_noticia">
+				  Publicidade DPE-TO
+				</span>
+				<div class="pull-right bloco-imagem">
+					<a class="fancybox" rel="gallery1" title=" - Foto: Publicidade DPE-TO" href="/img/resize.png?post_id=20538&width=900&height=600">
+						<img alt="Resize?post id=20538&amp;width=250&amp;height=200" class="img-thumbnail img-responsive" height="200" src="/img/resize?post_id=20538&amp;width=250&amp;height=200" style="margin: 10px" width="250" />
+					</a>
+				</div>
+			<section class="letrilizar">
+				<div id="letrilizar-book">	
+					<p><p style="text-align: justify;">Quaisquer  peças do vestuário feminino, novas ou usadas, que estão guardadas no armário  podem ter maior utilidade na campanha de arrecadação de roupas do Serviço Social  da DPE- TO – Defensoria Pública em Palmas, que vai destinar os donativos às  reeducandas da Unidade Prisional de Palmas. A iniciativa é da Equipe  Multidisciplinar da Defensoria. </p><p style="text-align: justify;"> </p><p style="text-align: justify;">De  acordo com a coordenadora da Equipe Multidisciplinar, a assistente social Elma  Santos de Souza, a campanha tem o objetivo de garantir condições mínimas de  cuidado pessoal às mulheres encarceradas, porque “a maioria das reeducandas não  tem acesso aos itens solicitados, visto a falta da participação da família ou  da situação precária que se encontra, além do mais, a unidade prisional não está  fornecendo uniformes às reeducandas no momento”, disse.&nbsp; </p><p style="text-align: justify;"> </p><p style="text-align: justify;">As  doações podem ser entregues até o dia 16 de novembro, na sede da Defensoria  Pública em Palmas, sala do Serviço Social, no 1º andar. Mais informações pelo  telefone (63) 3218-5654.</p></p>
+					</br>
+					<p><b>Autor:</b> Keliane Vale</p>
+					</br>
+				</div>
+				<strong>Tags:</strong>
+				<a href='/list_tag/PALMAS' class='text-inverse'>PALMAS</a>, <a href='/list_tag/FEMININA' class='text-inverse'>FEMININA</a>, <a href='/list_tag/prisional' class='text-inverse'>prisional</a>, <a href='/list_tag/UNIDADE' class='text-inverse'>UNIDADE</a>, <a href='/list_tag/ROUPAS' class='text-inverse'>ROUPAS</a>, <a href='/list_tag/Doação' class='text-inverse'>Doação</a>, <a href='/list_tag/SOLIDARIEDADE' class='text-inverse'>SOLIDARIEDADE</a>, <a href='/list_tag/campanha' class='text-inverse'>campanha</a>, <a href='/list_tag/MULTIDISCIPLINAR' class='text-inverse'>MULTIDISCIPLINAR</a>, <a href='/list_tag/EQUIPE' class='text-inverse'>EQUIPE</a>
+				</br>
+			</section>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 widget_border">
+		</div>
+	</div>
+	<div class="share-links">
+	<strong> Compartilhar:</strong>
+	<div class="link" onclick="share_facebook()"><i class="fa fa-facebook"></i></div>
+	<a class="link" href="https://twitter.com/share" target="_new"><i class="fa fa-twitter"></i></a>
+	<a class="link" target="_new" href="https://plus.google.com/share?url=http://ww2.defensoria.to.gov.br/noticia/20537"><i class="fa fa-google-plus"></i></a>
+	<div class="link inverse" onclick="javascript:if(window.print)window.print()">
+		<i class="fa fa-print"></i>
+	</div>
+</div>
+
+</div>
+
+<div class='letrilizar-markupholder hidden-print'>
+    <script type='text/template' id='letrilizar-template-action-ballon'>
+        <div class='letrilizar-action-ballon'>
+            <span class='letrilizar-close-button'></span>
+            <div class='letrilizar-preview'>
+                <canvas width='480' height='310'></canvas>
+            </div>
+            <div class='letrilizar-buttons'>
+                <span class='letrilizar-download-button'>download</span>
+                <span class='letrilizar-change-button'>trocar visual</span>
+                <span class='letrilizar-share-button' onclick="share_facebook()">
+                  Compartilhar
+                </span>
+            </div>
+            <div class='letrilizar-status'></div>
+        </div>
+    </script>
+</div>
+
+ 
+<div class="col-md-3 hidden-print">
+<p>&nbsp;</p>
+	<a class="twitter-timeline" href="https://twitter.com/DefensoriaTO" data-widget-id="591287859170172928">Tweets by @DefensoriaTO</a>
+	
+	<p>&nbsp;</p>
+	
+<section class='galeria-slide-show col-md-12 no_padding_right' style="">
+  <div class="slide_show">
+      <a href="http://evento.defensoria.to.gov.br/ii-seminario-acoes-afirmativas-garantia-da-igualdade-racial/inscricao/">
+          <img alt="Resize?post id=20535&amp;width=235&amp;height=261" border="0px" class="img-thumbnail img-responsive" height="261" src="/img/resize?post_id=20535&amp;width=235&amp;height=261" width="235" />
+</a>      <a href="http://evento.defensoria.to.gov.br/ii-seminario-acoes-afirmativas-garantia-da-igualdade-racial/inscricao/">
+          <img alt="Resize?post id=20521&amp;width=235&amp;height=261" border="0px" class="img-thumbnail img-responsive" height="261" src="/img/resize?post_id=20521&amp;width=235&amp;height=261" width="235" />
+</a>      <a href="http://evento.defensoria.to.gov.br/ii-seminario-acoes-afirmativas-garantia-da-igualdade-racial/inscricao/">
+          <img alt="Resize?post id=20520&amp;width=235&amp;height=261" border="0px" class="img-thumbnail img-responsive" height="261" src="/img/resize?post_id=20520&amp;width=235&amp;height=261" width="235" />
+</a>  </div> 
+</section>
+
+<script>
+    $(document).ready(function() {
+        $('.slide_show').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+        });
+    });
+</script>
+</div>
+			</div>
+		</div>
+		<div class="footer hidden-print">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Links Úteis</h3>
+			</div>
+			<div class="col-md-4">
+				<ul class="links-footer">				
+					<li><a href="http://www.stf.jus.br/" target="_blank">Supremo Tribunal Federal</a></li>
+					<li><a href="http://www.stj.jus.br" target="_blank">Superior Tribunal de Justiça</a></li>
+					<li><a href="http://portal.to.gov.br" target="_blank">Governo do Tocantins</a></li>
+					<li><a href="http://www.tjto.jus.br" target="_blank">Tribunal de Justiça - TO </a></li>
+				</ul>
+			</div>
+			<div class="col-md-5">
+				<ul class="links-footer">				
+					<li><a href="http://www.mpto.mp.br" target="_blank">Ministério Público do Estado do Tocantins</a></li>
+					<li><a href="http://www.anadep.org.br" target="_blank">Associação Nacional dos Defensores Públicos</a></li>
+					<li><a href="http://www.adpeto.org.br" target="_blank">Associação dos Defensores Públicos do Tocantins</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3">
+			  <div class="col-md-offset-1 col-md-3 col-xs-3">
+				  <a href="https://www.facebook.com/DefensoriaPublicadoTocantins" target="_blank">
+					  <img src="/novo_portal/img/Botao_facebook.png" class="img-responsive">
+					</a>
+				</div>
+				<div class="col-md-offset-1 col-md-3 col-xs-3">
+				  <a href="https://twitter.com/DefensoriaTO" target="_blank">
+					  <img src="/novo_portal/img/twitter.png" class="img-responsive">
+					</a>
+				</div>
+				<div class="col-md-offset-1 col-md-3 col-xs-3">
+				  <a href="https://www.youtube.com/channel/UC66JHjydPQIV4GyrxeB4ZrA" target="_blank">
+					  <img src="/novo_portal/img/youtube.png" class="img-responsive">
+					</a>
+					<p>&nbsp;</p>
+				</div>
+				<div class="col-md-offset-1 col-md-3 col-xs-3">
+				  <a href= /site_home/mapa >
+					  <img src="/novo_portal/img/mapa.png" class="img-responsive">
+					</a>
+				</div>
+				<div class="col-md-offset-1 col-md-3 col-xs-3">
+				  <a href="http://sei.defensoria.to.gov.br/sei/controlador_externo.php?acao=usuario_externo_logar&id_orgao_acesso_externo=0
+" target="_blank">
+					  <img src="/novo_portal/img/sei.png" class="img-responsive">
+					</a>
+				</div>
+				<div class=" col-md-4 col-xs-3 pull-right">
+				  <a href= /site_home/oab target="_blank">
+					  <img src="/novo_portal/img/botao_oab.png" class="icone_oab img-responsive">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mailing_address">
+		<img src="/novo_portal/img/brasao.png" width="200px">
+		<p>&nbsp;</p>
+		<p>Quadra 502 Sul, Avenida Joaquim Teotônio Segurado | Palmas - TO </p>
+		<div class=""> <img src="/novo_portal/img/go_top.png" width="80px" class="go_top" onclick="got_top()"></div>
+		<div class="footer-phone">
+			Fone: 63.3218.6784 | CEP: 77021-654
+		</div>
+	</div>
+</div>
+
+	  <script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	  <script type="text/javascript" src="/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>	
+	  <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script> 
+	  <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+	  <script type="text/javascript" src="/novo_portal/js/main.js"></script>
+	  <script type="text/javascript">
+			$(document).ready(function() {
+		  	$('.fancybox-media').fancybox({
+			    openEffect  : 'none',
+			    closeEffect : 'none',
+			    helpers : {
+			      media : {}
+			    }
+		  	});
+			});
+	  </script>
+	  <script type="text/javascript">
+		  // This is the App Id for this example application
+		  // Please REPLACE it by your App Id
+		  var demoAppId = '1582074392077843';
+		  var appId = document.location.search.replace('?appid=','').replace('/','');
+		  // To get an App Id for your domain, visit https://developers.facebook.com
+
+		  window.fbAsyncInit = function() {
+		    FB.init({appId: appId || demoAppId, status: true, cookie: true, xfbml: true});
+		  };
+	  </script>
+	  <script type="text/javascript" src="http://connect.facebook.net/pt_BR/all.js"></script>
+	  
+	<script type="text/javascript">
+		function share_facebook () {
+			FB.ui({
+			  method: 'feed',
+			  link: window.location.href,
+			  caption: 'Defensoria Pública do Tocantins',
+			}, function(response){});
+		};
+	</script>
+  <script data-turbolinks-track="true" src="/assets/letrilizar-01eb27015add04099d6dbdc1a2c60cfd.js"></script>
+
+  <script type="text/javascript">
+    function share_facebook () {
+      FB.ui({
+        method: 'feed',
+        link: window.location.href,
+        caption: 'Defensoria Pública do Tocantins',
+      }, function(response){});
+    };
+  </script>
+
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	
+	  <script src="https://apis.google.com/js/platform.js" async defer></script>
+	  <script type="text/javascript">
+		  paceOptions = {
+		    // Disable the 'elements' source
+		    elements: false,
+
+		    // Only show the progress on regular and ajax-y page navigation,
+		    // not every request
+		    restartOnRequestAfter: false
+		  }
+	  </script>
+	    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43241536-1', 'auto');
+  ga('send', 'pageview');
+</script>
+	</body>
+</html>
