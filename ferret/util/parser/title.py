@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from bs4 import BeautifulSoup
+from toolz import dicttoolz
 
 DEFAULT_TITLE_WEIGHTS = {
     'h1': 8,
@@ -16,30 +18,51 @@ def get_title_element_candidates(soup):
     tags = ",".join(DEFAULT_TITLE_WEIGHTS.keys())
     elements = soup.body.select(tags)
     for e in elements:
-        if e.select('a'):
+        anchor = e.select('a')
+        if len(anchor) > 1:
             elements.remove(e)
         if len(e.text) == 1:
             elements.remove(e)
-    return elements
+    return [e for e in elements if len(e.get_text().strip())]
 
 
-def get_title_text_from_title_tag(soup):
-    titles = soup.select("title")
-    if titles:
-        return titles[0].text
+def get_text_from_title_tag(raw_html):
+    soup = BeautifulSoup(raw_html, 'lxml')
+    title = soup.select_one("title")
+    if title:
+        return title.text
+    return ''
+
+
+def get_text_from_dc_title_tag(raw_html):
+    soup = BeautifulSoup(raw_html, 'lxml')
+    title = soup.select_one("meta[dc:title]")
+    if title:
+        return title.text
+    return ''
+
+
+def get_text_from_meta_title(raw_html):
+    soup = BeautifulSoup(raw_html, 'lxml')
+    title = soup.select_one("meta[name=title]")
+    if title and title.get('content'):
+        return title.get('content').strip()
     return None
 
 
-def get_open_graph_title_text(soup):
-    titles = soup.select('meta[property=og:title]')
-    if titles and titles[0].get('content'):
-        return titles[0]['content'].strip()
+def get_open_graph_title_text(raw_html):
+    soup = BeautifulSoup(raw_html, 'lxml')
+    title = soup.select_one('meta[property=og:title]')
+    if title and title.get('content'):
+        return title.get('content').strip()
     return None
 
 
-def calculate_weights_of_candidates(title_candidates):
-    title_weight = {}
-    for candidate in title_candidates:
-        if candidate.get_text() and DEFAULT_TITLE_WEIGHTS[candidate.name]:
-            title_weight[candidate.get_text().strip()] = DEFAULT_TITLE_WEIGHTS.get(candidate.name)
-    return title_weight
+def get_score_candidates(html):
+    soup = BeautifulSoup(html, 'lxml')
+    elements = get_title_element_candidates(soup)
+
+    title_score = {}
+    for candidate in elements:
+        title_score[candidate.get_text().strip()] = DEFAULT_TITLE_WEIGHTS.get(candidate.name)
+    return dicttoolz.keyfilter(lambda k: len(k), title_score)
