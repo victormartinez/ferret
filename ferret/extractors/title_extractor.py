@@ -23,7 +23,7 @@ class UrlTitleExtractor:
 
     def extract(self):
         keywords = break_url_into_keywords(self.url)
-        if not keywords or not str(self.soup.body):
+        if not keywords or not str(self.raw_html):
             return None
 
         relevant_candidates = self._get_relevant_candidates(keywords)
