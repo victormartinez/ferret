@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import unicodedata
 
-from bs4 import BeautifulSoup
 from ferret.cleaner.text import normalize_text
 from ferret.util.parser.parser import break_url_into_keywords
 from ferret.util.parser.title import get_open_graph_title_text, get_text_from_title_tag, get_score_candidates, \
@@ -21,7 +20,6 @@ class UrlTitleExtractor:
     def __init__(self, url, html):
         self.url = url
         self.raw_html = html
-        self.soup = BeautifulSoup(html, 'lxml')
 
     def extract(self):
         keywords = break_url_into_keywords(self.url)
@@ -77,7 +75,6 @@ class TitleTagExtractor:
 class TitleCandidateExtractor:
     def __init__(self, html):
         self.raw_html = html
-        self.soup = BeautifulSoup(html, 'lxml')
 
     def extract(self):
         score_candidates = get_score_candidates(self.raw_html)
