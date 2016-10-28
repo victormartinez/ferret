@@ -6,7 +6,7 @@ from scrapely import HtmlPage
 import re
 
 
-def extract_sorted_keywords_from_url(url):
+def break_url_into_keywords(url):
     title_by_hyphens = re.findall(r'(\w*-(-*)\w+)', url, re.M | re.I)
     if len(title_by_hyphens or '') == 0:
         return None
@@ -18,8 +18,6 @@ def extract_sorted_keywords_from_url(url):
         cleaned_keywords = [x for x in words if x != '-' and x != '']  # the list might have empty entries
         keywords.extend(cleaned_keywords)
 
-    # stop words tend to have less characters
-    keywords.sort(key=len, reverse=True)
     return keywords
 
 
