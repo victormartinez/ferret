@@ -47,3 +47,8 @@ def _remove_redundant_blocks(body):
     if len(articles) >= 1:
         return articles[0]
     return body
+
+
+def extract_body_text_from_html(html):
+    body = BeautifulSoup(html, 'lxml').body
+    return body.get_text()
