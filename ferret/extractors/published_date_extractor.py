@@ -35,7 +35,6 @@ class MetaTagsPublishedDateExtractor:
         return meta_tags
 
     def extract(self):
-        print("META TAG PUBLISHED DATE")
         soup = BeautifulSoup(self.raw_html, 'html.parser')
         meta_tags = soup.select('meta')
         for tag in meta_tags:
@@ -75,7 +74,6 @@ class OpenGraphPublishedDateExtractor:
         return date_tag and date_tag.get('content')
 
     def extract(self):
-        print("OPEN GRAPH PUBLISHED DATE")
         soup = BeautifulSoup(self.raw_html, 'lxml')
         published_time = soup.select_one('meta[property=article:published_time]')
         if not published_time:
@@ -169,17 +167,13 @@ class PatternPublishedDateExtractor:
         return True
 
     def extract(self):
-        print("PATTERN PUBLISHED DATE")
         text = normalize_text(normalize_text(extract_body_text_from_html(self.raw_html)))
         start_index = ceil(len(text) / 3)
-        print(text)
         date = self.extract_date(text, start_index, start_index)
         if not date:
             return None
 
-        print(date)
         datetime = dateparser.parse(date, languages=[self.lang])
-        print(str(datetime))
         if not datetime:
             return None
 
