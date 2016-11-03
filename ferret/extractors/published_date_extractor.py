@@ -1,145 +1,224 @@
-# -*- coding: utf-8 -*-
 import dateparser
 import re
 from bs4 import BeautifulSoup
+from dateutil import parser
+from ferret.cleaner.cleaner import extract_body_text_from_html
+from ferret.cleaner.text import normalize_text
+from ferret.util.date import parse_into_friendly_string, DATE_PATTERNS
+from math import ceil
 
 
 class UrlPublishedDateExtractor:
-    def __init__(self, url):
-        self.url = url
+    def __init__(self, context):
+        self.url = context.get('url')
+        self.regex = r'(\d{4}/\d{2}/\d{2})/'
+
+    def is_suitable(self):
+        published_date = re.match(self.regex, self.url)
+        return published_date is not None
 
     def extract(self):
-        published_date = re.search(r'(\d{4}/\d{2}/\d{2})/?', self.url)
-        if not published_date:
-            return None
-
-        extracted_date = published_date.group()
-        return dateparser.parse(extracted_date,
-                                languages=['en'])  # date format used by blogs follow the american pattern
+        published_date = re.search(self.regex, self.url)
+        datetime = parser.parse(published_date.group())
+        if datetime.tzinfo:
+            return datetime.isoformat()[:-6]
+        return datetime.isoformat()
 
 
 class MetaTagsPublishedDateExtractor:
-    def __init__(self, html):
-        self.soup = BeautifulSoup(html, 'html.parser')
+    def __init__(self, context):
+        self.raw_html = context.get('html')
+
+    def is_suitable(self):
+        soup = BeautifulSoup(self.raw_html, 'html.parser')
+        meta_tags = soup.select('meta')
+        return meta_tags
 
     def extract(self):
-        meta_tags = self.soup.select('meta')
-        if not meta_tags:
-            return None
-
+        print("META TAG PUBLISHED DATE")
+        soup = BeautifulSoup(self.raw_html, 'html.parser')
+        meta_tags = soup.select('meta')
         for tag in meta_tags:
             content = tag.attrs.get('content')
-            if content:
-                match = re.match(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}', content)
-                if match:
-                    return dateparser.parse(match.group())
+            match = re.match(r'\d{4}-\d{2}-\d{2}T?\d{2}:\d{2}:\d{2}', content)
+            if content and match:
+                datetime = parser.parse(match.group())
+                if datetime.tzinfo:
+                    return datetime.isoformat()[:-6]
+                return datetime.isoformat()
         return None
+
+
+class TimeTagExtractor:
+    def __init__(self, context):
+        self.raw_html = context.get('html')
+
+    def is_suitable(self):
+        time_tag = self._get_time_tag()
+        return time_tag and time_tag.get('datetime')
+
+    def _get_time_tag(self):
+        soup = BeautifulSoup(self.raw_html, 'lxml')
+        return soup.select_one('time')
+
+    def extract(self):
+        return self._get_time_tag().get('datetime')
 
 
 class OpenGraphPublishedDateExtractor:
-    def __init__(self, html):
-        self.soup = BeautifulSoup(html, 'lxml')
+    def __init__(self, context):
+        self.raw_html = context.get('html')
+
+    def is_suitable(self):
+        soup = BeautifulSoup(self.raw_html, 'lxml')
+        date_tag = soup.select_one('meta[property=article:published_time]')
+        return date_tag and date_tag.get('content')
 
     def extract(self):
-        published_time = self.soup.select('meta[property=article:published_time]')
-        if published_time:
-            return published_time
+        print("OPEN GRAPH PUBLISHED DATE")
+        soup = BeautifulSoup(self.raw_html, 'lxml')
+        published_time = soup.select_one('meta[property=article:published_time]')
+        if not published_time:
+            return None
+
+        datetime = parser.parse(published_time.get('content'))
+        if datetime.tzinfo:
+            return datetime.isoformat()[:-6]
+        return datetime.isoformat()
+
+
+class PublishedDateNearTitleExtractor:
+    def __init__(self, context):
+        self.context = context
+
+    def is_suitable(self):
+        text = extract_body_text_from_html(self.context.get('html'))
+        title = self.context.get('title')
+        return len(text) and len(title) and len(text) > len(title) and title in text
+
+    def extract(self):
+        offset = 500
+        text = normalize_text(extract_body_text_from_html(self.context.get('html')))
+        start_index = self._get_start_index(text, 500)
+        end_index = self._get_end_index(text, 500)
+        date = self.extract_date(text, start_index, end_index, offset)
+        if not date:
+            return None
+
+        datetime = dateparser.parse(date, languages=[self.context.get('lang')])
+        if not datetime:
+            return None
+
+        if datetime.tzinfo:
+            return datetime.isoformat()[:-6]
+        return datetime.isoformat()
+
+    def _get_start_index(self, text, offset):
+        title_start_index = text.index(self.context.get('title'))
+        if title_start_index < offset:
+            return 0
+        return title_start_index - offset
+
+    def _get_end_index(self, text, offset):
+        title_start_index = text.index(self.context.get('title'))
+        length_until_title_ends = title_start_index + len(self.context.get('title'))
+        return length_until_title_ends + offset
+
+    def extract_date(self, text, start_index, end_index, offset):
+        fragment = text[start_index:end_index]
+        candidate = self._extract_date_candidate(fragment)
+        if candidate:
+            return candidate
+
+        if len(fragment) >= len(text):
+            return None
+
+        next_start_index = self._get_next_start_index(start_index, offset)
+        next_end_index = end_index + offset
+        return self.extract_date(text, next_start_index, next_end_index, offset)
+
+    def _get_next_start_index(self, start_index, offset):
+        next_start_index = start_index - offset
+        if next_start_index < 0:
+            return 0
+        return next_start_index
+
+    def _extract_date_candidate(self, fragment):
+        text = normalize_text(fragment)
+        for date_pattern in DATE_PATTERNS:
+            search = re.search(date_pattern, text, re.I)
+            if search:
+                candidate = parse_into_friendly_string(search.group())
+                if self._is_candidade_valid(candidate):
+                    return candidate
+
         return None
+
+    def _is_candidade_valid(self, candidate):
+        return candidate.count('/') == 2 or candidate.count('.') == 2 or candidate.count('-') == 2 or candidate.count(
+            '/') == 2
 
 
 class PatternPublishedDateExtractor:
-    # TODO Use lib to recognize date
-    DATE_PATTERNS = {
-        r'\d{4}/\d{2}/\d{2}': 'en',  # 2016/04/01
-        r'\w+\s\d,\s\d{4}': 'en',  # May 1, 2016
-        r'\d{2}\s\w{3}\s\d{4}': 'en',  # 01 May 2016
+    def __init__(self, context):
+        self.url = context.get('url')
+        self.raw_html = context.get('html')
+        self.lang = context.get('lang')
 
-        # 02/02/2016 às 14h10
-        # 02/02/2016 às 14h10min
-        # 02/02/2016 14h10min
-        # 02/02/2016
-        # 02/02/2016 - 14h10
-        # 02/02/2016 - 14h10min
-        #
-        # 02/02/2016 às 14:10
-        # 02/02/2016 às 14:10:10
-        # 02/02/2016 14:10
-        # 02/02/2016
-        # 02/02/2016 14:10:10
-        # 02/02/2016 - 14:10
-        # 02/02/2016 - 14:10:10
-        #
-        # 02.02.2016 às 14:10
-        # 02.02.2016 às 14:10:10
-        # 02.02.2016 14:10
-        # 02.02.2016
-        # 02.02.2016 14:10:10
-        # 02.02.2016 - 14:10
-        # 02.02.2016 - 14:10:10
-        #
-        # 02.02.2016 às 14h10
-        # 02.02.2016 às 14h10min
-        # 02.02.2016 14h10
-        # 02.02.2016 14h10min
-        # 02.02.2016 - 14h10
-        # 02.02.2016 - 14h10min
-        #
-        # 02-02-2016 às 14h10
-        # 02-02-2016 às 14h10min
-        # 02-02-2016 14h10
-        # 02-02-2016 14h10min
-        # 02-02-2016 - 14h10
-        # 02-02-2016 - 14h10min
-        #
-        # 02-02-2016 às 14:10
-        # 02-02-2016 às 14:10:10
-        # 02-02-2016 14:10
-        # 02-02-2016
-        # 02-02-2016 14:10:10
-        # 02-02-2016 - 14:10
-        # 02-02-2016 - 14:10:10
-        #
-        # 5/7/2016 às 21h18
-        # And the same above for 02.02.02
-        r'\d{1,4}.\d{1,2}.\d{2,4}(\s?(às|-)?\s(\d{2}[:h]\d{2}(min)?(:\d{2})?))?': 'pt',
-
-        # 26 de abril de 2012
-        # 09 de fevereiro de 2015 às 12:40
-        # 09 de fevereiro de 2015 às 12:40:00
-        # 09 de fevereiro de 2015 às 12h40
-        # 09 de fevereiro de 2015 às 12h40min
-        # 13 de março de 2013 - 19:35
-        # 13 de março de 2013 - 19:35:00
-        # 13 de março de 2013 - 19h35min
-        # 5 de julho de 2016 - 11h25
-        r'\d{1,2}\sde\s[\wç]+\sde\s\d{4}(\s?(às|-)?\s(\d{2}[:h]\d{2}(min)?(:\d{2})?))?': 'pt',
-
-        # Terça, (26 Junho 2012)
-        # Terça, (26 Junho 2012 16:02)
-        # Terça, (26 Junho 2012 - 16:02)
-        # Terça, (26 Junho 2012 às 16:02)
-        # Terça, (26 Junho 2012 08:36)
-        # Segunda, (25 Junho 2012 15:27)
-        # quinta-feira, (22 de julho de 2009)
-        r'\d{2}\s(de\s)?[\wç]+\s(de\s)?\d{4}(\s?(às|-)?\s(\d{2}[:h]\d{2}(min)?(:\d{2})?))?': 'pt',
-
-        # 2015 - junho - 29
-        r'\d{4}\s-\s[\wç]+\s-\s\d{2}': 'pt',
-    }
-
-    def __init__(self, html):
-        self.html = html
+    def is_suitable(self):
+        return True
 
     def extract(self):
-        date_candidates = self._extract_date_candidates()
-        if len(date_candidates) == 0:
+        print("PATTERN PUBLISHED DATE")
+        text = normalize_text(normalize_text(extract_body_text_from_html(self.raw_html)))
+        start_index = ceil(len(text) / 3)
+        print(text)
+        date = self.extract_date(text, start_index, start_index)
+        if not date:
             return None
-        return date_candidates[0]
 
-    def _extract_date_candidates(self):
-        candidates = []
-        for date_pattern in self.DATE_PATTERNS.keys():
-            search = re.search(date_pattern, self.html, re.I)
+        print(date)
+        datetime = dateparser.parse(date, languages=[self.lang])
+        print(str(datetime))
+        if not datetime:
+            return None
+
+        if datetime.tzinfo:
+            return datetime.isoformat()[:-6]
+        return datetime.isoformat()
+
+    def extract_date(self, text, start_index, end_index):
+        offset_up = 200
+        offset_down = 100
+
+        fragment = text[start_index:end_index]
+        candidate = self._extract_date_candidate(fragment)
+        if candidate:
+            return candidate
+
+        if len(fragment) >= len(text):
+            return None
+
+        next_start_index = self._get_next_start_index(start_index, offset_up)
+        next_end_index = end_index + offset_down
+        return self.extract_date(text, next_start_index, next_end_index)
+
+    def _extract_date_candidate(self, text):
+        for date_pattern in DATE_PATTERNS:
+            search = re.search(date_pattern, text, re.I)
             if search:
-                candidates.append(search.group())
-        return candidates
+                candidate = parse_into_friendly_string(search.group())
+                if self._is_candidade_valid(candidate):
+                    return candidate
+
+        return None
+
+    def _is_candidade_valid(self, candidate):
+        return candidate.count('/') == 2 or candidate.count('.') == 2 or candidate.count('-') == 2 or candidate.count(
+            '/') == 2
+
+    def _get_next_start_index(self, start_index, offset):
+        next_start_index = start_index - offset
+        if next_start_index < 0:
+            return 0
+        return next_start_index

@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import unicodedata
 
+import re
+from bs4 import BeautifulSoup
 from ferret.cleaner.text import normalize_text
 from ferret.util.parser.parser import break_url_into_keywords
 from ferret.util.parser.title import get_open_graph_title_text, get_text_from_title_tag, get_score_candidates, \
@@ -9,17 +11,31 @@ from toolz import dicttoolz, itertoolz
 
 
 class OpenGraphTitleExtractor:
-    def __init__(self, html):
-        self.raw_html = html
+    def __init__(self, context):
+        self.url = context.get('url')
+        self.raw_html = context.get('html')
+
+    def is_suitable(self):
+        soup = BeautifulSoup(self.raw_html, 'lxml')
+        title_tag = soup.select_one('meta[property=og:title]')
+        site_name_tag = soup.select_one('meta[property=og:site_name]')
+
+        if title_tag and site_name_tag and title_tag.get('content') and site_name_tag.get('content'):
+            return title_tag.get('content') != site_name_tag.get('content')
+        return title_tag and title_tag.get('content')
 
     def extract(self):
         return get_open_graph_title_text(self.raw_html)
 
 
 class UrlTitleExtractor:
-    def __init__(self, url, html):
-        self.url = url
-        self.raw_html = html
+    def __init__(self, context):
+        self.url = context.get('url')
+        self.raw_html = context.get('html')
+
+    def is_suitable(self):
+        title_by_hyphens = re.findall(r'(\w*-(-*)\w+)', self.url, re.M | re.I)
+        return len(title_by_hyphens or '')
 
     def extract(self):
         keywords = break_url_into_keywords(self.url)
@@ -29,8 +45,6 @@ class UrlTitleExtractor:
         relevant_candidates = self._get_relevant_candidates(keywords)
         if not relevant_candidates:
             return None
-
-        print(relevant_candidates)
 
         title = self._choose_candidate(relevant_candidates)
         return normalize_text(title)
@@ -65,22 +79,29 @@ class UrlTitleExtractor:
 
 
 class TitleTagExtractor:
-    def __init__(self, html):
-        self.raw_html = html
+    def __init__(self, context):
+        self.url = context.get('url')
+        self.raw_html = context.get('html')
+
+    def is_suitable(self):
+        title = get_text_from_title_tag(self.raw_html)
+        return title is not None and title != ''
 
     def extract(self):
         return get_text_from_title_tag(self.raw_html)
 
 
 class TitleCandidateExtractor:
-    def __init__(self, html):
-        self.raw_html = html
+    def __init__(self, context):
+        self.url = context.get('url')
+        self.raw_html = context.get('html')
+
+    def is_suitable(self):
+        score_candidates = get_score_candidates(self.raw_html)
+        return score_candidates is not None and len(score_candidates) > 0
 
     def extract(self):
         score_candidates = get_score_candidates(self.raw_html)
-        if not score_candidates:
-            return None
-
         score_candidates = self._score_candidates_by_keywords(score_candidates)
         score_candidates = self._score_candidates_by_length(score_candidates)
         score_candidates = self._filter_highest_candidates(score_candidates)
@@ -130,5 +151,4 @@ class TitleCandidateExtractor:
         if len(score_candidates) == 2:
             if len(c) == 2:
                 return c[1] if c[1] in c[0] else c[0]
-
         return c[0]
