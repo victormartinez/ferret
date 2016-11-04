@@ -51,4 +51,6 @@ def _remove_redundant_blocks(body):
 
 def extract_body_text_from_html(html):
     body = BeautifulSoup(html, 'lxml').body
+    for elem in body.select('script,style,link,source'):
+        elem.extract()
     return body.get_text()
