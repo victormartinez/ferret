@@ -25,9 +25,9 @@ class Ferret:
         self.date_extractors = (
             OpenGraphPublishedDateExtractor,
             UrlPublishedDateExtractor,
-            TimeTagExtractor,
             PublishedDateNearTitleExtractor,
             PatternPublishedDateExtractor,
+            TimeTagExtractor,
             MetaTagsPublishedDateExtractor
         )
 
