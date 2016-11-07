@@ -5,7 +5,7 @@ import re
 from bs4 import BeautifulSoup
 from ferret.cleaner.cleaner import simple_clean
 from ferret.cleaner.text import normalize_text
-from ferret.util.title import get_text_from_title_tag, get_score_candidates
+from ferret.util.title import get_score_candidates
 from toolz import dicttoolz, itertoolz
 
 
@@ -96,15 +96,21 @@ class UrlTitleExtractor:
 
 class TitleTagExtractor:
     def __init__(self, context):
-        self.url = context.get('url')
-        self.raw_html = context.get('html')
+        self.html = context.get('html')
+        self.soup = BeautifulSoup(context.get('html'), 'lxml')
 
     def is_suitable(self):
-        title = get_text_from_title_tag(self.raw_html)
-        return title is not None and title != ''
+        title = self._get_text_from_title_tag()
+        return title is not None
+
+    def _get_text_from_title_tag(self):
+        title = self.soup.select_one("title")
+        if title:
+            return title.text
+        return None
 
     def extract(self):
-        return get_text_from_title_tag(self.raw_html)
+        return self._get_text_from_title_tag()
 
 
 class TitleCandidateExtractor:
