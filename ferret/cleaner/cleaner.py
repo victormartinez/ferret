@@ -54,3 +54,10 @@ def extract_body_text_from_html(html):
     for elem in body.select('script,style,link,source'):
         elem.extract()
     return body.get_text()
+
+
+def simple_clean(html):
+    body = BeautifulSoup(html, 'lxml').body
+    for elem in body.select('script,style,link,source'):
+        elem.extract()
+    return remove_special_chars(str(body))

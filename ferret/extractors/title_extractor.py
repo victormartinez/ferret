@@ -3,10 +3,9 @@ import unicodedata
 
 import re
 from bs4 import BeautifulSoup
+from ferret.cleaner.cleaner import simple_clean
 from ferret.cleaner.text import normalize_text
-from ferret.util.parser.parser import break_url_into_keywords
-from ferret.util.parser.title import get_open_graph_title_text, get_text_from_title_tag, get_score_candidates, \
-    get_text_from_meta_title, get_text_from_dc_title_tag
+from ferret.util.title import get_open_graph_title_text, get_text_from_title_tag, get_score_candidates
 from toolz import dicttoolz, itertoolz
 
 
@@ -38,7 +37,7 @@ class UrlTitleExtractor:
         return len(title_by_hyphens or '')
 
     def extract(self):
-        keywords = break_url_into_keywords(self.url)
+        keywords = self._break_url_into_keywords(self.url)
         if not keywords or not str(self.raw_html):
             return None
 
@@ -48,6 +47,20 @@ class UrlTitleExtractor:
 
         title = self._choose_candidate(relevant_candidates)
         return normalize_text(title)
+
+    def _break_url_into_keywords(self, url):
+        title_by_hyphens = re.findall(r'(\w*-(-*)\w+)', url, re.M | re.I)
+        if len(title_by_hyphens or '') == 0:
+            return None
+
+        keywords = []
+        for index, tuple in enumerate(title_by_hyphens):
+            (first_match, second_match) = tuple
+            words = first_match.split('-')
+            cleaned_keywords = [x for x in words if x != '-' and x != '']  # the list might have empty entries
+            keywords.extend(cleaned_keywords)
+
+        return keywords
 
     def _get_relevant_candidates(self, keywords):
         score_candidates = get_score_candidates(self.raw_html)
@@ -101,42 +114,26 @@ class TitleCandidateExtractor:
         return score_candidates is not None and len(score_candidates) > 0
 
     def extract(self):
-        score_candidates = get_score_candidates(self.raw_html)
-        score_candidates = self._score_candidates_by_keywords(score_candidates)
-        score_candidates = self._score_candidates_by_length(score_candidates)
+        cleaned_html = simple_clean(self.raw_html)
+        score_candidates = get_score_candidates(cleaned_html)
+        if not score_candidates:
+            return None
+
+        score_candidates = dicttoolz.keyfilter(lambda title: len(title) > 3, score_candidates)
+        score_candidates = dicttoolz.keyfilter(lambda title: len(title.split()) > 1, score_candidates)
         score_candidates = self._filter_highest_candidates(score_candidates)
         return self._choose_best_candidate(score_candidates)
 
-    def _score_candidates_by_keywords(self, candidates):
-        keywords = self._get_keywords()
-        if not keywords:
-            return candidates
-
-        for candidate, score in candidates.items():
-            title_keywords = candidate.split()
-            occurence_score = len(set(title_keywords).intersection(keywords))
-            candidates[candidate] += occurence_score
-
-        return candidates
-
-    def _score_candidates_by_length(self, candidates):
-        for candidate, score in candidates.items():
-            if len(candidate) > 3:
-                candidates[candidate] += 1
-        return candidates
-
-    def _get_keywords(self):
-        title1 = get_text_from_title_tag(self.raw_html)
-        title2 = get_open_graph_title_text(self.raw_html)
-        title3 = get_text_from_meta_title(self.raw_html)
-        title4 = get_text_from_dc_title_tag(self.raw_html)
-
-        keywords1 = title1.split() if title1 else []
-        keywords2 = title2.split() if title2 else []
-        keywords3 = title3.split() if title3 else []
-        keywords4 = title4.split() if title3 else []
-
-        return list(itertoolz.concatv(keywords1, keywords2, keywords3, keywords4))
+    def _filter_by_text_similarity(self, score_candidates, html):
+        soup = BeautifulSoup(html, 'lxml').body
+        text = soup.get_text()
+        for title, score in score_candidates.items():
+            title_words = title.split()
+            keywords_by_length = itertoolz.filter(lambda title: len(title) > 3, title_words)
+            ordered_keyword_list = list(sorted(keywords_by_length, key=len, reverse=True))
+            score = len([k for k in ordered_keyword_list if k in text])
+            score_candidates[title] += score
+        return score_candidates
 
     def _filter_highest_candidates(self, candidate_scores):
         candidates = list(sorted(candidate_scores, key=candidate_scores.__getitem__, reverse=True))
@@ -144,11 +141,16 @@ class TitleCandidateExtractor:
         return dicttoolz.valfilter(lambda x: x == max_value, candidate_scores)
 
     def _choose_best_candidate(self, score_candidates):
-        if len(score_candidates) == 1:
-            return itertoolz.first(score_candidates)
+        # If x > 0 then it means there is not evidence of title
+        filtered_candidates = dicttoolz.valfilter(lambda x: x > 0, score_candidates)
+        if not filtered_candidates:
+            return None
 
-        c = list(sorted(score_candidates, key=len, reverse=True))
-        if len(score_candidates) == 2:
+        if len(filtered_candidates) == 1:
+            return itertoolz.first(filtered_candidates)
+
+        c = list(sorted(filtered_candidates, key=len, reverse=True))
+        if len(filtered_candidates) == 2:
             if len(c) == 2:
                 return c[1] if c[1] in c[0] else c[0]
         return c[0]

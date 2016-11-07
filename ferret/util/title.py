@@ -14,9 +14,10 @@ DEFAULT_TITLE_WEIGHTS = {
 }
 
 
-def get_title_element_candidates(soup):
+def get_title_element_candidates(html):
+    soup = BeautifulSoup(html, 'lxml').body
     tags = ",".join(DEFAULT_TITLE_WEIGHTS.keys())
-    elements = soup.body.select(tags)
+    elements = soup.select(tags)
     for e in elements:
         anchor = e.select('a')
         if len(anchor) > 1:
@@ -59,9 +60,7 @@ def get_open_graph_title_text(raw_html):
 
 
 def get_score_candidates(html):
-    soup = BeautifulSoup(html, 'lxml')
-    elements = get_title_element_candidates(soup)
-
+    elements = get_title_element_candidates(html)
     title_score = {}
     for candidate in elements:
         title_score[candidate.get_text().strip()] = DEFAULT_TITLE_WEIGHTS.get(candidate.name)
