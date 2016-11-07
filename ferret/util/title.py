@@ -51,14 +51,6 @@ def get_text_from_meta_title(raw_html):
     return None
 
 
-def get_open_graph_title_text(raw_html):
-    soup = BeautifulSoup(raw_html, 'lxml')
-    title = soup.select_one('meta[property=og:title]')
-    if title and title.get('content'):
-        return title.get('content').strip()
-    return None
-
-
 def get_score_candidates(html):
     elements = get_title_element_candidates(html)
     title_score = {}

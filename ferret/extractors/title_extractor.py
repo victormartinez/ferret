@@ -5,26 +5,29 @@ import re
 from bs4 import BeautifulSoup
 from ferret.cleaner.cleaner import simple_clean
 from ferret.cleaner.text import normalize_text
-from ferret.util.title import get_open_graph_title_text, get_text_from_title_tag, get_score_candidates
+from ferret.util.title import get_text_from_title_tag, get_score_candidates
 from toolz import dicttoolz, itertoolz
 
 
 class OpenGraphTitleExtractor:
     def __init__(self, context):
-        self.url = context.get('url')
-        self.raw_html = context.get('html')
+        self.soup = BeautifulSoup(context.get('html'), 'lxml')
 
     def is_suitable(self):
-        soup = BeautifulSoup(self.raw_html, 'lxml')
-        title_tag = soup.select_one('meta[property=og:title]')
-        site_name_tag = soup.select_one('meta[property=og:site_name]')
-
-        if title_tag and site_name_tag and title_tag.get('content') and site_name_tag.get('content'):
-            return title_tag.get('content') != site_name_tag.get('content')
+        title_tag = self.soup.select_one('meta[property=og:title]')
         return title_tag and title_tag.get('content')
 
     def extract(self):
-        return get_open_graph_title_text(self.raw_html)
+        title = self.soup.select_one('meta[property=og:title]')
+        if self._is_title_tag_valid(title):
+            return title.get('content').strip()
+        return None
+
+    def _is_title_tag_valid(self, title_tag):
+        site_name_tag = self.soup.select_one('meta[property=og:site_name]')
+        if title_tag and site_name_tag and title_tag.get('content') and site_name_tag.get('content'):
+            return title_tag.get('content') != site_name_tag.get('content')
+        return title_tag and title_tag.get('content')
 
 
 class UrlTitleExtractor:
