@@ -7,11 +7,10 @@ def _get_contents_of(file_path):
         with open(file_path, errors='ignore') as file:
             return file.read()
     except IOError:
-        return None
+        return ''
 
 
 @pytest.mark.parametrize("language,website", [
-    ("pt", "aasp"),
     ("pt", "aba"),
     ("pt", "abdc"),
     ("pt", "age-mg"),
@@ -33,7 +32,6 @@ def _get_contents_of(file_path):
     ("pt", "amatra-05"),
     ("pt", "ambito-juridico"),
     ("pt", "anamatra"),
-    ("pt", "anpt"),
     ("pt", "apbc"),
     ("pt", "apeminas"),
     ("pt", "cd"),
@@ -157,15 +155,12 @@ def _get_contents_of(file_path):
     ("pt", "bndes"),
     ("pt", "dp-ms"),
     ("pt", "oab-mg"),
-    ("pt", "sintese"),
-    ("pt", "tce-ms"),
     ("pt", "coad"),
     ("pt", "anda"),
     ("pt", "amb"),
     ("pt", "al-ma"),
     ("pt", "iape"),
     ("pt", "al-am"),
-    ("pt", "sefaz-to"),
     ("pt", "amagis"),
     ("pt", "carta-forense"),
     ("pt", "csjt"),
@@ -189,16 +184,26 @@ def _get_contents_of(file_path):
     ("pt", "gazeta-do-povo"),
     ("pt", "epoca"),
     ("pt", "imaster"),
-    ("pt", "dp-pe"),
     ("pt", "abrampa"),
     ("pt", "terra"),
+    ("pt", "dp-pe"),
+    ("pt", "sintese"),
+    ("pt", "tce-ms"),
+    ("pt", "dias-brasil-adv"),
+    ("pt", "trt-10"),
 
-    # Failing Tests
+    # # Failing Tests
+    ("pt", "stf"),
+    ("pt", "tj-rj"),
+    ("pt", "trt-3"),
+    ("pt", "sefaz-to"),
+    ("pt", "aasp"),
+    ("pt", "anpt"),
+    ("pt", "trt-4"),
     ("pt", "direito-do-estado"),  # <<<<<<<
     ("pt", "enm"),  # <<<<<<<
     ("pt", "abojeris"),
     ("pt", "acat"),
-    ("pt", "dias-brasil-adv"),
     ("pt", "dp-sp"),
     ("pt", "mp-mt"),
     ("pt", "mpt"),
@@ -209,14 +214,9 @@ def _get_contents_of(file_path):
     ("pt", "sefaz-rs"),
     ("pt", "sefaz-sc"),
     ("pt", "sefaz-sp"),
-    ("pt", "stf"),
-    ("pt", "tj-rj"),
     ("pt", "tj-sp"),
     ("pt", "trf-3"),
-    ("pt", "trt-10"),
     ("pt", "trt-24"),
-    ("pt", "trt-3"),
-    ("pt", "trt-4"),
 ])
 def test_title_extractor(language, website):
     url_file_path = "tests/resources/{}/{}/url.txt".format(language, website)
@@ -351,7 +351,6 @@ def test_title_extractor(language, website):
     ("pt", "tj-pr"),
     ("pt", "tj-df"),
     ("pt", "dp-sp"),
-    ("pt", "sefaz-rs"),
     ("pt", "ambito-juridico"),
     ("pt", "juristas"),
     ("pt", "internet-legal"),
@@ -415,8 +414,11 @@ def test_title_extractor(language, website):
     ("pt", "controle-publico"),
     ("pt", "folha"),
     ("pt", "al-am"),
+    ("pt", "mj"),
+    ("pt", "msn"),
 
     # Failing Tests
+    ("pt", "sefaz-rs"),
     ("pt", "mpt"),
     ("pt", "mp-mt"),
     ("pt", "trf-5"),
@@ -424,8 +426,6 @@ def test_title_extractor(language, website):
     ("pt", "anpt"),
     ("pt", "dp-mt"),
     ("pt", "inst-rui-barbosa"),
-    ("pt", "mj"),
-    ("pt", "msn"),
     ("pt", "oab-rn"),
     ("pt", "observatorio-eco"),
     ("pt", "r7"),
@@ -434,11 +434,6 @@ def test_title_extractor(language, website):
     ("pt", "terra"),
     ("pt", "trt-14"),
     ("pt", "trt-15"),
-
-    # There is no date in the HTML page
-    ("pt", "acat"),
-    ("pt", "dp-pe"),
-    ("pt", "age-mg"),
 ])
 def test_published_date_extraction(language, website):
     url_file_path = "tests/resources/{}/{}/url.txt".format(language, website)
@@ -454,3 +449,26 @@ def test_published_date_extraction(language, website):
     article = ferret.get_article()
     extracted_date = article['published_date']
     assert expected_date[:10] == extracted_date[:10]
+
+
+@pytest.mark.parametrize("language,website", [
+    ("pt", "acat"),
+    ("pt", "dp-pe"),
+    ("pt", "age-mg"),
+])
+def test_there_is_no_date_to_be_extracted(language, website):
+    url_file_path = "tests/resources/{}/{}/url.txt".format(language, website)
+    date_file_path = "tests/resources/{}/{}/date.txt".format(language, website)
+    html_file_path = "tests/resources/{}/{}/page.html".format(language, website)
+
+    url = _get_contents_of(url_file_path)
+    html = _get_contents_of(html_file_path)
+
+    expected_date = _get_contents_of(date_file_path)
+
+    ferret = Ferret(url, html)
+    article = ferret.get_article()
+    extracted_date = article['published_date']
+
+    assert expected_date == ''
+    assert extracted_date == ''
