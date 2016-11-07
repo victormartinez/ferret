@@ -70,7 +70,7 @@ class Ferret:
             datetime = e.extract()
             if datetime is not None:
                 return datetime
-        return None
+        return ''
 
     def extract_html_content(self, context):
         return ''
