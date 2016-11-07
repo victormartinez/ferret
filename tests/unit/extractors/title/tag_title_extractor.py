@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import pytest
-from ferret.extractors.title_extractor import TagTitleExtractor
+from ferret.extractors.title_extractor import TitleCandidateExtractor
 
 
 def _get_tag_title_extractor(html):
-    return TagTitleExtractor(html)
+    return TitleCandidateExtractor(html)
 
 
 def _get_contents_of_file(path):
