@@ -1,5 +1,6 @@
 from ferret.cleaner.cleaner import extract_body_text_from_html
 from ferret.cleaner.text import normalize_text
+from ferret.extractors.content_extractor import ContentExtractor
 from ferret.extractors.published_date_extractor import OpenGraphPublishedDateExtractor, UrlPublishedDateExtractor, \
     TimeTagExtractor, PatternPublishedDateExtractor, MetaTagsPublishedDateExtractor, PublishedDateNearTitleExtractor
 from ferret.extractors.title_extractor import OpenGraphTitleExtractor, UrlTitleExtractor, TitleCandidateExtractor, \
@@ -14,7 +15,8 @@ class Ferret:
         if html is not None and not isinstance(html, str):
             raise ValueError("HTML must be a string.")
 
-        self.basic_context = {'html': self._get_html(url, html), 'url': url, 'lang': self._get_lang(lang, html)}
+        self.html = self._get_html(url, html)
+        self.basic_context = {'html': self.html, 'url': url, 'lang': self._get_lang(lang, self.html)}
         self.title_extractors = (
             OpenGraphTitleExtractor,
             UrlTitleExtractor,
@@ -73,7 +75,8 @@ class Ferret:
         return ''
 
     def extract_html_content(self, context):
-        return ''
+        extractor = ContentExtractor(context)
+        return extractor.extract()
 
     def _get_extractors(self, extractors, context):
         for extractor_instance in extractors:
