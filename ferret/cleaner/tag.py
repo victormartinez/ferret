@@ -11,7 +11,7 @@ TAGS_TO_UNWRAP = ['font']
 UNWANTED_ATTRS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer|subscribe|foot|nav|google|share|search"\
                        "|form|contact|breadcrumb|banner|advertisement|lang|btn|tab|sitemap|instagram|flickr|print"\
                        "|button|pinterest|radio|bread|icon|dusqus|sponsor|popup|modal|pagination"\
-                       "|related|scroll|tool|login|sign|next|prev|shop|continue|fb-|messenger|header|meta"
+                       "|related|scroll|tool|login|sign|next|prev|shop|continue|fb-|messenger|header|meta|twitter|rss"
 
 
 def remove_unnecessary_attributes(tag):
@@ -32,18 +32,6 @@ def should_remove_tag(tag):
         should = True
 
     return should
-
-
-def remove_unwanted_tags(body):
-    for elem in body.select(','.join(TAGS_TO_REMOVE)):
-        elem.extract()
-    return body
-
-
-def unwrap_tags(body):
-    for elem in body.select(','.join(TAGS_TO_UNWRAP)):
-        elem.unwrap()
-    return body
 
 
 def contains_text(tag):
