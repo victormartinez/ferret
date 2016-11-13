@@ -2,19 +2,20 @@
 import re
 
 from bs4 import BeautifulSoup
-from ferret.cleaner.cleaner import clean_body
+from ferret.cleaner.cleaner import Cleaner
 from ferret.cleaner.tag import remove_unnecessary_attributes, has_only_one_anchor
 
 
 class ContentExtractor:
-    def __init__(self, html):
-        """html, title, """
-        self.html_body = clean_body(html)
+    def __init__(self, context):
+        self.context = context
+        self.cleaner = Cleaner(context.get('html'))
         self.divToP = re.compile("<(a|blockquote|dl|div|img|ol|p|pre|table|ul)", re.I)
 
     def extract(self):
-        body = self._convert_divs_to_paragraph()
-        body = self._remove_tags_by_word_ratio(body)
+        cleaned_html = self.cleaner.get_cleaned_body()
+        body = self._convert_divs_to_paragraph(cleaned_html)
+        body = self._remove_parent_tags(body)
         body = self._label_tags_with_scores(body)
         body = self._remove_elements_by_score(body)
         body = self._remove_title_candidates(body)
@@ -23,8 +24,8 @@ class ContentExtractor:
         paragraphs = self._get_paragraphs(body)
         return self._paragraphs_to_string(paragraphs)
 
-    def _convert_divs_to_paragraph(self):
-        soup = BeautifulSoup(self.html_body, 'lxml')
+    def _convert_divs_to_paragraph(self, html):
+        soup = BeautifulSoup(html, 'lxml')
         for elem in soup.body.find_all(True):
             if elem.name == 'div':
                 s = elem.encode_contents()
@@ -32,7 +33,7 @@ class ContentExtractor:
                     elem.name = 'p'
         return soup.body
 
-    def _remove_tags_by_word_ratio(self, body):
+    def _remove_parent_tags(self, body):
         number_of_words = len(body.text.split())
         for tag in body.find_all(True):
             parent_tag = tag.parent
@@ -45,9 +46,8 @@ class ContentExtractor:
                 parent_word_ratio = parent_tag_words / number_of_words
                 tag_word_ratio = tag_words / number_of_words
 
-            if parent_word_ratio == tag_word_ratio and parent_tag.name not in ['body', 'html', '[document]', 'article',
-                                                                               'b', 'strong', 'h1', 'h2', 'h3', 'h4',
-                                                                               'h5', 'h6', 'p', 'a']:
+            tags = ['body', 'html', '[document]', 'article', 'b', 'strong', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'a']
+            if parent_word_ratio == tag_word_ratio and parent_tag.name not in tags:
                 parent_tag.unwrap()
         return body
 
