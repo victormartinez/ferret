@@ -11,15 +11,15 @@ TAGS_TO_REMOVE = ['script', 'style', 'iframe', 'meta', 'link', 'form', 'noscript
 TAGS_TO_UNWRAP = ['font']
 
 UNWANTED_ATTRS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer|subscribe|foot|nav|google|share|search" \
-                       "|form|contact|breadcrumb|banner|advertisement|lang|btn|tab|sitemap|instagram|flickr|print" \
+                       "|form|contact|breadcrumb|banner|advertis|lang|btn|tab|sitemap|instagram|flickr|print" \
                        "|button|pinterest|radio|bread|icon|dusqus|sponsor|popup|modal|pagination" \
-                       "|related|scroll|tool|login|sign|next|prev|shop|continue|fb-|messenger|header|meta|twitter|rss"
+                       "|related|scroll|tool|login|sign|next|prev|shop|continue|fb-|messenger|header|meta|twitter|rss|keyword|credit|plugin"
 
 
 class Cleaner:
     def __init__(self, html):
         self.html = html
-        self.body = BeautifulSoup(html, 'lxml').body
+        self.body = BeautifulSoup(html, 'html5lib').body
 
     def get_cleaned_body(self):
         self._remove_unwanted_tags()
@@ -48,8 +48,12 @@ class Cleaner:
     def __remove_tags(self, body):
         again = False
         for tag in body.find_all(True):
-            if tag.name in ['img', 'figure']:
+            if tag.name in ['img', 'figure', 'figcaption', 'caption', 'picture']:
                 continue
+
+            if should_remove_tag(tag):
+                again = True
+                tag.extract()
 
             if not contains_text(tag):
                 again = True
@@ -63,10 +67,6 @@ class Cleaner:
                 if tag.parent and tag.parent.name != 'p':
                     again = True
                     tag.extract()
-
-            if should_remove_tag(tag):
-                again = True
-                tag.extract()
 
         if again:
             return self.__remove_tags(body)

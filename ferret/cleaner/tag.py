@@ -9,9 +9,9 @@ TAGS_TO_REMOVE = ['script', 'style', 'iframe', 'meta', 'link', 'form', 'noscript
 TAGS_TO_UNWRAP = ['font']
 
 UNWANTED_ATTRS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer|subscribe|foot|nav|google|share|search"\
-                       "|form|contact|breadcrumb|banner|advertisement|lang|btn|tab|sitemap|instagram|flickr|print"\
+                       "|form|contact|breadcrumb|banner|advertis|lang|btn|tab|sitemap|instagram|flickr|print"\
                        "|button|pinterest|radio|bread|icon|dusqus|sponsor|popup|modal|pagination"\
-                       "|related|scroll|tool|login|sign|next|prev|shop|continue|fb-|messenger|header|meta|twitter|rss"
+                       "|related|scroll|tool|login|sign|next|prev|shop|continue|fb-|messenger|header|meta|twitter|rss|keywords|credit"
 
 
 def remove_unnecessary_attributes(tag):
