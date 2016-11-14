@@ -4,6 +4,7 @@ import re
 from bs4 import BeautifulSoup
 from ferret.cleaner.cleaner import Cleaner
 from ferret.cleaner.tag import remove_unnecessary_attributes, has_only_one_anchor
+from urllib.parse import urljoin
 
 
 class ContentExtractor:
@@ -20,9 +21,11 @@ class ContentExtractor:
         body = self._remove_elements_by_score(body)
         body = self._remove_title_candidates(body)
         body = self._clean_up_attributes(body)
-        body = self._remove_unnecessary_paragraphs(body)
-        paragraphs = self._get_paragraphs(body)
-        return self._paragraphs_to_string(paragraphs)
+        body = self._fix_image_paths(body)
+        body = self._label_tags_should_keep(body)
+        # body = self._remove_unnecessary_paragraphs(body)
+        # body = self._format_into_paragraphs(body)
+        return self._get_final_content(body)
 
     def _convert_divs_to_paragraph(self, html):
         soup = BeautifulSoup(html, 'lxml')
@@ -46,7 +49,7 @@ class ContentExtractor:
                 parent_word_ratio = parent_tag_words / number_of_words
                 tag_word_ratio = tag_words / number_of_words
 
-            tags = ['body', 'html', '[document]', 'article', 'b', 'strong', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'a']
+            tags = ['body', 'html', '[document]', 'article', 'b', 'strong', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'a', 'img', 'figcaption', 'figure', 'picture']
             if parent_word_ratio == tag_word_ratio and parent_tag.name not in tags:
                 parent_tag.unwrap()
         return body
@@ -81,15 +84,24 @@ class ContentExtractor:
         return body
 
     def _remove_elements_by_score(self, body):
-        for tag in body.find_all('div'):
-            parag_ratio = tag.attrs['paragraphs']
-            if parag_ratio == 0:
+        for p in body.find_all('p'):
+            does_not_have_children = len(p.find_all(True)) == 0
+            if does_not_have_children and p.attrs.get('punctuation') == 0.0:
+                p.extract()
+
+        for tag in body.find_all('span'):
+            if tag.parent.name in ['article', 'body'] and tag.attrs.get('punctuation') == 0:
                 tag.extract()
 
-        for p in body.find_all('p'):
-            punct_ratio = p.attrs['punctuation']
-            if punct_ratio == 0 and not p.select('b, strong, h1, h2, h3, h4, h5, h6') and len(p.text) < 25:
-                p.extract()
+        # for tag in body.find_all('div'):
+        #     parag_ratio = tag.attrs['paragraphs']
+        #     if parag_ratio == 0:
+        #         tag.extract()
+        #
+        # for p in body.find_all('p'):
+        #     punct_ratio = p.attrs['punctuation']
+        #     if punct_ratio == 0 and not p.select('b, strong, h1, h2, h3, h4, h5, h6') and len(p.text) < 25:
+        #         p.extract()
 
         return body
 
@@ -104,18 +116,62 @@ class ContentExtractor:
             h1.extract()
         return body
 
+    # def _format_into_paragraphs(self, body):
+    #     soup = BeautifulSoup(str(body), 'html5lib')
+    #     # figcaption, span, caption
+    #     for tag in soup.select('figure,picture,img'):
+    #         if (tag.parent.name != 'p' or tag.parent.parent.name != 'p') and (tag.parent.name not in ['figure', 'picture', 'img']):
+    #             new_tag = soup.new_tag("p")
+    #             tag.wrap(new_tag)
+    #
+    #             next_tag = tag.find_next()
+    #             if next_tag and next_tag.name in ['span', 'caption', 'figcaption']:
+    #                 new_tag.append(next_tag)
+    #
+    #     return soup.body
+
     def _remove_unnecessary_paragraphs(self, body):
         for p in body.find_all('p'):
             if has_only_one_anchor(p):
                 p.extract()
         return body
 
-    def _get_paragraphs(self, body):
-        return [p for p in body.find_all('p')]
-
-    def _paragraphs_to_string(self, paragraphs):
+    def _get_final_content(self, body):
+        elements = [e for e in body.find_all(True, {'class': 'keep-tag'})]
         parags = ''
-        for p in paragraphs:
-            parags += str(p)
-
+        for e in elements:
+            remove_unnecessary_attributes(e)
+            parags += str(e)
         return parags
+
+    def _label_tags_should_keep(self, body):
+        for tag in body.find_all(True):
+            if tag.name == 'p':
+                tag.attrs.update({'class': 'keep-tag'})
+
+            if tag.parent.name == 'p':
+                continue
+
+            if tag.parent.name in ['caption', 'figcaption', 'figure', 'picture', 'img']:
+                continue
+
+            if tag.name in ['caption', 'figcaption', 'figure', 'picture', 'img']:
+                tag.attrs.update({'class': 'keep-tag'})
+
+            prev_sibling = tag.find_previous_sibling()
+            if prev_sibling and prev_sibling.name in ['caption', 'figcaption', 'figure', 'picture', 'img']:
+                tag.attrs.update({'class': 'keep-tag'})
+
+        return body
+
+    def _fix_image_paths(self, body):
+        for img in body.select('img'):
+            src = img.attrs['src']
+            source = urljoin(self.context.get('url'), src)
+            img.attrs['src'] = source
+
+        for anchor in body.select('a'):
+            href = anchor.attrs['href']
+            source = urljoin(self.context.get('url'), href)
+            anchor.attrs['href'] = source
+        return body
