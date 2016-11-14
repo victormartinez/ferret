@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
+import re
+
 from bs4 import BeautifulSoup, Comment
-from ferret.cleaner.tag import should_remove_tag, contains_text, \
-    has_only_one_anchor
+from ferret.cleaner.tag import contains_text, has_only_one_anchor
 from ferret.cleaner.text import remove_special_chars
+from ferret.util.tag import get_ids_and_classes
 
 TAGS_TO_REMOVE = ['script', 'style', 'iframe', 'meta', 'link', 'form', 'noscript', 'object', 'source',
                   'svg', 'use', 'code', 'pre', 'input', 'textarea', 'option', 'select', 'fieldset', 'aside', 'menuitem',
@@ -51,7 +53,7 @@ class Cleaner:
             if tag.name in ['img', 'figure', 'figcaption', 'caption', 'picture']:
                 continue
 
-            if should_remove_tag(tag):
+            if self.__should_remove(tag):
                 again = True
                 tag.extract()
 
@@ -71,6 +73,18 @@ class Cleaner:
         if again:
             return self.__remove_tags(body)
         return body
+
+    def __should_remove(self, tag):
+        should = False
+        attrs = get_ids_and_classes(tag)
+        for attr in attrs:
+            if re.search(UNWANTED_ATTRS_REGEX, attr):
+                should = True
+
+        if re.search(UNWANTED_ATTRS_REGEX, tag.name):
+            should = True
+
+        return should
 
     def _remove_redundant_blocks(self):
         articles = self.body.select('article')
