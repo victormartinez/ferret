@@ -1,108 +1,210 @@
 # -*- coding: utf-8 -*-
 import re
-
-from bs4 import BeautifulSoup
-from ferret.cleaner.cleaner import Cleaner
-from ferret.cleaner.tag import remove_unnecessary_attributes, has_only_one_anchor
 from urllib.parse import urljoin
+from bs4 import BeautifulSoup, Comment
+from ferret.cleaner.tag import has_only_one_anchor, remove_unnecessary_attributes
+from ferret.cleaner.text import remove_special_chars
+from ferret.util.tag import get_ids_and_classes
+
+TAGS_TO_REMOVE = ['script', 'style', 'iframe', 'meta', 'link', 'form', 'noscript', 'object', 'source',
+                  'svg', 'use', 'code', 'pre', 'input', 'textarea', 'option', 'select', 'fieldset', 'aside', 'menuitem',
+                  'nav', 'footer', 'hr', 'ins', 'button']
+
+UNWANTED_ATTRS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer|subscribe|foot|nav|google|share|search" \
+                       "|form|contact|breadcrumb|banner|advertis|lang|btn|tab|sitemap|instagram|flickr|print" \
+                       "|button|pinterest|radio|bread|icon|dusqus|sponsor|popup|modal|pagination" \
+                       "|related|scroll|tool|login|sign|next|prev|shop|continue|fb-|messenger|header|meta|twitter|rss|keyword|credit|plugin"
 
 
 class ContentExtractor:
     def __init__(self, context):
         self.context = context
-        self.cleaner = Cleaner(context.get('html'))
-        self.divToP = re.compile("<(a|blockquote|dl|div|img|ol|p|pre|table|ul)", re.I)
+        self.div_to_p = re.compile("<(a|blockquote|dl|div|img|ol|p|pre|table|ul)", re.I)
+
+    def is_suitable(self):
+        return True
 
     def extract(self):
-        cleaned_html = self.cleaner.get_cleaned_body()
-        body = self._convert_divs_to_paragraph(cleaned_html)
-        body = self._remove_parent_tags(body)
+        body = BeautifulSoup(self.context.get('html'), 'html5lib').body
+        body = self._remove_unwanted_tags(body)
+        body = self._remove_comments(body)
+        body = self._convert_elements_to_paragraph(body)
         body = self._label_tags_with_scores(body)
-        body = self._remove_elements_by_score(body)
-        body = self._remove_title_candidates(body)
+        body = self._choose_by_density(body)
+        body = self._remove_by_score(body)
+        body = self._remove_noisy_tags(body)
+        body = self._remove_redundant_blocks(body)
+        body = self._remove_unwanted_tags(body)
+        body = self._clean_scores(body)
         body = self._clean_up_attributes(body)
+        body = self._remove_title_from_text(body, self.context.get('title'))
         body = self._fix_image_paths(body)
-        body = self._label_tags_should_keep(body)
-        # body = self._remove_unnecessary_paragraphs(body)
-        # body = self._format_into_paragraphs(body)
-        return self._get_final_content(body)
+        return remove_special_chars(str(body))
 
-    def _convert_divs_to_paragraph(self, html):
-        soup = BeautifulSoup(html, 'lxml')
-        for elem in soup.body.find_all(True):
+    def _remove_unwanted_tags(self, body):
+        for elem in body.select(','.join(TAGS_TO_REMOVE)):
+            elem.decompose()
+        return body
+
+    def _remove_comments(self, body):
+        comments = body.find_all(text=lambda text: isinstance(text, Comment))
+        for comment in comments:
+            comment.extract()
+        return body
+
+    def _convert_elements_to_paragraph(self, body):
+        for elem in body.find_all(True):
             if elem.name == 'div':
                 s = elem.encode_contents()
-                if not self.divToP.search(s.decode()):
+                if not self.div_to_p.search(s.decode()):
                     elem.name = 'p'
-        return soup.body
 
-    def _remove_parent_tags(self, body):
-        number_of_words = len(body.text.split())
-        for tag in body.find_all(True):
-            parent_tag = tag.parent
-            parent_tag_words = len(parent_tag.text.split())
-            tag_words = len(tag.text.split())
+            if elem.name == 'font':
+                elem.name = 'p'
 
-            parent_word_ratio = 0
-            tag_word_ratio = 0
-            if number_of_words != 0:
-                parent_word_ratio = parent_tag_words / number_of_words
-                tag_word_ratio = tag_words / number_of_words
-
-            tags = ['body', 'html', '[document]', 'article', 'b', 'strong', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'a', 'img', 'figcaption', 'figure', 'picture']
-            if parent_word_ratio == tag_word_ratio and parent_tag.name not in tags:
-                parent_tag.unwrap()
         return body
 
     def _label_tags_with_scores(self, body):
         for tag in body.find_all(True):
-            tag_text_length = len(tag.text)
-            if tag_text_length == 0:
-                tag_text_length = 1
-
-            anchors = tag.find_all('a')
-            anchor_text_length = 0
-            for a in anchors:
-                anchor_text_length += len(a.text)
-
-            anchor_ratio = anchor_text_length / tag_text_length
-            punctuation_score = tag.text.count('.') + tag.text.count(',') + tag.text.count('!') + tag.text.count('?')
-            punct_ratio = 0
-            number_of_words = len(tag.text.split())
-            if number_of_words != 0:
-                punct_ratio = punctuation_score / len(tag.text.split())
-
-            tag.attrs.update(
-                {
-                    'anchor': round(anchor_ratio, 4),
-                    'punctuation': round(punct_ratio, 4),
-                    'words': len(tag.text.split()),
-                    'sentences': len(tag.text.split('.')),
-                    'paragraphs': len(tag.select('p'))
-                }
-            )
+            scores = {
+                'anchor': self._get_anchor_ratio(tag),
+                'punctuation': self._get_punctuation_ratio(tag),
+                'words': len(tag.text.split()),
+                'sentences': len(tag.text.split('.')) - 1,
+                'paragraphs': len(tag.select('p'))
+            }
+            if tag.attrs:
+                tag.attrs.update(scores)
+            else:
+                tag.attrs = scores
         return body
 
-    def _remove_elements_by_score(self, body):
-        for p in body.find_all('p'):
-            does_not_have_children = len(p.find_all(True)) == 0
-            if does_not_have_children and p.attrs.get('punctuation') == 0.0:
+    def _get_anchor_ratio(self, tag):
+        text_length = len(remove_special_chars(tag.text))
+        anchors_length = sum(len(remove_special_chars(a.text)) for a in tag.find_all('a'))
+
+        if anchors_length == 0:
+            return 0
+        return round(anchors_length / float(text_length), 4)
+
+    def _get_punctuation_ratio(self, tag):
+        tag_text = remove_special_chars(tag.text)
+
+        words_count = len(tag_text.split())
+        punct_count = sum(tag_text.count(symbol) for symbol in ['.', ',', '!', '?', ':', ';'])
+
+        if words_count == 0:
+            return 0
+        return round(punct_count / float(words_count), 4)
+
+    def _choose_by_density(self, body):
+        candidate = None
+        for tag in body.find_all(True):
+            if not candidate:
+                candidate = tag
+                continue
+
+            candidate_sentences = candidate.attrs.get('sentences')
+            tag_sentences = tag.attrs.get('sentences')
+            if candidate_sentences < tag_sentences:
+                candidate = tag
+                continue
+
+            candidate_punctuation = candidate.attrs.get('punctuation')
+            tag_punctuation = tag.attrs.get('punctuation')
+            if candidate_sentences == tag_sentences:
+                if candidate_punctuation < tag_punctuation:
+                    candidate = tag
+
+        if candidate:
+            return candidate
+        return body
+
+    def _remove_by_score(self, body):
+        highest_sentence_score = 0
+        for elem in body.select('div'):
+            attrs = elem.attrs
+            if not attrs:
+                continue
+
+            if attrs.get('sentences') > highest_sentence_score:
+                highest_sentence_score = attrs.get('sentences')
+
+        for elem in body.select('div'):
+            attrs = elem.attrs
+            if not attrs:
+                continue
+
+            if attrs.get('anchor') > 0.6 and ((attrs.get('sentences') / highest_sentence_score) <= 0.1):
+                elem.decompose()
+
+            if attrs.get('words') == 0:
+                elem.decompose()
+
+        for p in body.select('p'):
+            not_contains_article_element = not len(p.select('b, strong, h1, h2, h3, h4, h5, h6, img, figure, picture'))
+            not_contains_text = not len(p.text)
+            if not_contains_article_element and not_contains_text:
                 p.extract()
 
-        for tag in body.find_all('span'):
-            if tag.parent.name in ['article', 'body'] and tag.attrs.get('punctuation') == 0:
+            attrs = p.attrs
+            if not attrs:
+                continue
+
+            if attrs.get('paragraphs') == 0 and not_contains_text and not_contains_article_element and not p.a:
+                p.extract()
+
+        return body
+
+    def _remove_noisy_tags(self, body):
+        again = False
+        for tag in body.find_all(True):
+            if tag.name in ['img', 'figure', 'figcaption', 'caption', 'picture']:
+                continue
+
+            if self.__should_remove(tag):
+                again = True
                 tag.extract()
 
-        # for tag in body.find_all('div'):
-        #     parag_ratio = tag.attrs['paragraphs']
-        #     if parag_ratio == 0:
-        #         tag.extract()
-        #
-        # for p in body.find_all('p'):
-        #     punct_ratio = p.attrs['punctuation']
-        #     if punct_ratio == 0 and not p.select('b, strong, h1, h2, h3, h4, h5, h6') and len(p.text) < 25:
-        #         p.extract()
+            not_contains_text = len(tag.text.strip()) == 0
+            not_contains_img = len(tag.find_all('img')) == 0
+            if not_contains_text and not_contains_img:
+                again = True
+                tag.extract()
 
+            if tag.is_empty_element:
+                again = True
+                tag.extract()
+
+            if has_only_one_anchor(tag) and tag.parent and tag.parent.name != 'p':
+                again = True
+                tag.extract()
+
+        if again:
+            return self._remove_noisy_tags(body)
+        return body
+
+    def __should_remove(self, tag):
+        should = False
+        attrs = get_ids_and_classes(tag)
+        for attr in attrs:
+            if re.search(UNWANTED_ATTRS_REGEX, attr):
+                should = True
+
+        return should
+
+    def _remove_redundant_blocks(self, body):
+        articles = body.select('article')
+        if len(articles) >= 1:
+            return BeautifulSoup(str(articles[0]), 'lxml').body
+        return body
+
+    def _clean_scores(self, body):
+        for tag in body.find_all(True):
+            keys = list(tag.attrs.keys())
+            for attr in keys:
+                if attr in ['words', 'anchor', 'sentences', 'punctuation', 'paragraphs']:
+                    del tag.attrs[attr]
         return body
 
     def _clean_up_attributes(self, body):
@@ -110,58 +212,13 @@ class ContentExtractor:
             remove_unnecessary_attributes(e)
         return body
 
-    def _remove_title_candidates(self, body):
-        h1 = body.find('h1')
-        if h1:
-            h1.extract()
-        return body
+    def _remove_title_from_text(self, body, title_str):
+        if not title_str:
+            return body
 
-    # def _format_into_paragraphs(self, body):
-    #     soup = BeautifulSoup(str(body), 'html5lib')
-    #     # figcaption, span, caption
-    #     for tag in soup.select('figure,picture,img'):
-    #         if (tag.parent.name != 'p' or tag.parent.parent.name != 'p') and (tag.parent.name not in ['figure', 'picture', 'img']):
-    #             new_tag = soup.new_tag("p")
-    #             tag.wrap(new_tag)
-    #
-    #             next_tag = tag.find_next()
-    #             if next_tag and next_tag.name in ['span', 'caption', 'figcaption']:
-    #                 new_tag.append(next_tag)
-    #
-    #     return soup.body
-
-    def _remove_unnecessary_paragraphs(self, body):
-        for p in body.find_all('p'):
-            if has_only_one_anchor(p):
-                p.extract()
-        return body
-
-    def _get_final_content(self, body):
-        elements = [e for e in body.find_all(True, {'class': 'keep-tag'})]
-        parags = ''
-        for e in elements:
-            remove_unnecessary_attributes(e)
-            parags += str(e)
-        return parags
-
-    def _label_tags_should_keep(self, body):
-        for tag in body.find_all(True):
-            if tag.name == 'p':
-                tag.attrs.update({'class': 'keep-tag'})
-
-            if tag.parent.name == 'p':
-                continue
-
-            if tag.parent.name in ['caption', 'figcaption', 'figure', 'picture', 'img']:
-                continue
-
-            if tag.name in ['caption', 'figcaption', 'figure', 'picture', 'img']:
-                tag.attrs.update({'class': 'keep-tag'})
-
-            prev_sibling = tag.find_previous_sibling()
-            if prev_sibling and prev_sibling.name in ['caption', 'figcaption', 'figure', 'picture', 'img']:
-                tag.attrs.update({'class': 'keep-tag'})
-
+        found = body.find(text=title_str)
+        if found:
+            found.extract()
         return body
 
     def _fix_image_paths(self, body):
@@ -175,3 +232,17 @@ class ContentExtractor:
             source = urljoin(self.context.get('url'), href)
             anchor.attrs['href'] = source
         return body
+
+
+def extract_body_text_from_html(html):
+    body = BeautifulSoup(html, 'lxml').body
+    for elem in body.select('script,style,link,source'):
+        elem.extract()
+    return remove_special_chars(str(body.get_text()))
+
+
+def simple_clean(html):
+    body = BeautifulSoup(html, 'lxml').body
+    for elem in body.select('script,style,link,source'):
+        elem.extract()
+    return remove_special_chars(str(body))
