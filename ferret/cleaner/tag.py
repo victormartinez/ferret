@@ -5,9 +5,5 @@ def remove_unnecessary_attributes(tag):
             del tag.attrs[attr]
 
 
-def contains_text(tag):
-    return len(tag.text.strip()) != 0
-
-
 def has_only_one_anchor(tag):
     return len(list(tag.children)) == 1 and tag.next.name == 'a'
