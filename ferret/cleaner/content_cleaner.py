@@ -30,6 +30,7 @@ class ContentCleaner:
         body = self._remove_by_score(body)
         body = self._remove_noisy_tags(body)
         body = self._remove_redundant_blocks(body)
+        body = self._clean_scores(body)
         return remove_special_chars(str(body))
 
     def _remove_unwanted_tags(self, body):
@@ -166,8 +167,9 @@ class ContentCleaner:
         for tag in body.find_all(True):
             keys = list(tag.attrs.keys())
             for attr in keys:
-                if attr in ['words', 'anchor', 'sentences', 'punctuation']:
+                if attr in ['words', 'anchor', 'sentences', 'punctuation', 'paragraphs']:
                     del tag.attrs[attr]
+        return body
 
 
 def extract_body_text_from_html(html):
