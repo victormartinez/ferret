@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import re
-
 from bs4 import BeautifulSoup, Comment
 from ferret.cleaner.tag import has_only_one_anchor
 from ferret.cleaner.text import remove_special_chars
@@ -162,6 +161,13 @@ class Cleaner:
         if len(articles) >= 1:
             return BeautifulSoup(str(articles[0]), 'lxml').body
         return body
+
+    def _clean_scores(self, body):
+        for tag in body.find_all(True):
+            keys = list(tag.attrs.keys())
+            for attr in keys:
+                if attr in ['words', 'anchor', 'sentences', 'punctuation']:
+                    del tag.attrs[attr]
 
 
 def extract_body_text_from_html(html):
