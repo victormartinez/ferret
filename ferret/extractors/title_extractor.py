@@ -3,7 +3,7 @@ import unicodedata
 
 import re
 from bs4 import BeautifulSoup
-from ferret.cleaner.cleaner import simple_clean
+from ferret.cleaner.content_cleaner import simple_clean
 from ferret.cleaner.text import normalize_text
 from ferret.util.title import get_score_candidates
 from toolz import dicttoolz, itertoolz

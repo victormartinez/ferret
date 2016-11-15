@@ -1,7 +1,7 @@
 import dateparser
 import re
 from bs4 import BeautifulSoup
-from ferret.cleaner.cleaner import extract_body_text_from_html
+from ferret.cleaner.content_cleaner import extract_body_text_from_html
 from ferret.cleaner.text import normalize_text
 from ferret.util.date import find_and_parse_into_date, parse_to_date
 from math import ceil

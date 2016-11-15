@@ -15,7 +15,7 @@ UNWANTED_ATTRS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer
                        "|related|scroll|tool|login|sign|next|prev|shop|continue|fb-|messenger|header|meta|twitter|rss|keyword|credit|plugin"
 
 
-class Cleaner:
+class ContentCleaner:
     def __init__(self, html):
         self.html = html
         self.div_to_p = re.compile("<(a|blockquote|dl|div|img|ol|p|pre|table|ul)", re.I)

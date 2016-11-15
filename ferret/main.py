@@ -1,4 +1,4 @@
-from ferret.cleaner.cleaner import extract_body_text_from_html
+from ferret.cleaner.content_cleaner import extract_body_text_from_html
 from ferret.cleaner.text import normalize_text
 from ferret.extractors.content_extractor import ContentExtractor
 from ferret.extractors.published_date_extractor import OpenGraphPublishedDateExtractor, UrlPublishedDateExtractor, \
