@@ -219,6 +219,10 @@ class ContentExtractor:
         found = body.find(text=title_str)
         if found:
             found.extract()
+        else:
+            h1 = body.select_one('h1')
+            if h1:
+                h1.extract()
         return body
 
     def _fix_image_paths(self, body):
