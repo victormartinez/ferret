@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-import re
 from urllib.parse import urljoin
+
+import re
 from bs4 import BeautifulSoup, Comment
 from ferret.cleaner.tag import has_only_one_anchor, remove_unnecessary_attributes
 from ferret.cleaner.text import remove_special_chars
