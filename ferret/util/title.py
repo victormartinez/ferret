@@ -27,22 +27,6 @@ def get_title_element_candidates(html):
     return [e for e in elements if len(e.get_text().strip())]
 
 
-def get_text_from_dc_title_tag(raw_html):
-    soup = BeautifulSoup(raw_html, 'lxml')
-    title = soup.select_one("meta[dc:title]")
-    if title:
-        return title.text
-    return ''
-
-
-def get_text_from_meta_title(raw_html):
-    soup = BeautifulSoup(raw_html, 'lxml')
-    title = soup.select_one("meta[name=title]")
-    if title and title.get('content'):
-        return title.get('content').strip()
-    return None
-
-
 def get_score_candidates(html):
     elements = get_title_element_candidates(html)
     title_score = {}
