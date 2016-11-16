@@ -4,7 +4,7 @@ from ferret.extractors.content_extractor import ContentExtractor
 from ferret.extractors.published_date_extractor import OpenGraphPublishedDateExtractor, UrlPublishedDateExtractor, \
     TimeTagExtractor, PatternPublishedDateExtractor, MetaTagsPublishedDateExtractor, PublishedDateNearTitleExtractor
 from ferret.extractors.title_extractor import OpenGraphTitleExtractor, UrlTitleExtractor, TitleCandidateExtractor, \
-    TitleTagExtractor
+    TitleTagExtractor, TwitterTitleExtractor
 from ferret.util.http import get_html
 from langdetect import detect
 from toolz import dicttoolz
@@ -18,6 +18,7 @@ class Ferret:
         self.html = self._get_html(url, html)
         self.basic_context = {'html': self.html, 'url': url, 'lang': self._get_lang(lang, self.html)}
         self.title_extractors = (
+            TwitterTitleExtractor,
             OpenGraphTitleExtractor,
             UrlTitleExtractor,
             TitleCandidateExtractor,

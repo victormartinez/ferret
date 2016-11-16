@@ -3,10 +3,31 @@ import unicodedata
 
 import re
 from bs4 import BeautifulSoup
-from ferret.extractors.content_extractor import simple_clean
 from ferret.cleaner.text import normalize_text
+from ferret.extractors.content_extractor import simple_clean
 from ferret.util.title import get_score_candidates
 from toolz import dicttoolz, itertoolz
+
+
+class TwitterTitleExtractor:
+    def __init__(self, context):
+        self.soup = BeautifulSoup(context.get('html'), 'lxml')
+
+    def is_suitable(self):
+        title_tag = self.soup.select_one('meta[name=twitter:title]')
+        return title_tag and title_tag.get('content')
+
+    def extract(self):
+        title = self.soup.select_one('meta[name=twitter:title]')
+        if self._is_title_tag_valid(title):
+            return title.get('content').strip()
+        return None
+
+    def _is_title_tag_valid(self, title_tag):
+        site_name_tag = self.soup.select_one('meta[property=og:site_name]')
+        if title_tag and site_name_tag and title_tag.get('content') and site_name_tag.get('content'):
+            return title_tag.get('content') != site_name_tag.get('content')
+        return title_tag and title_tag.get('content')
 
 
 class OpenGraphTitleExtractor:
