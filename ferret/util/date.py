@@ -194,8 +194,9 @@ def _string_contains_month(candidate):
 
 
 def parse_to_date(date_str, lang):
-    datetime = dateparser.parse(date_str, languages=[lang])
-    if datetime:
-        return datetime
-
-    return dateparser.parse(date_str)
+    try:
+        datetime = dateparser.parse(date_str, languages=[lang])
+        if datetime:
+            return datetime
+    except ValueError:
+        return dateparser.parse(date_str)
