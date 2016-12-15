@@ -6,4 +6,4 @@ def remove_unnecessary_attributes(tag):
 
 
 def has_only_one_anchor(tag):
-    return len(list(tag.children)) == 1 and tag.next.name == 'a'
+    return len(list(tag.children)) == 1 and tag.next and tag.next.name == 'a'
