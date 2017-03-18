@@ -1,6 +1,5 @@
 ![ferret-logo](https://cloud.githubusercontent.com/assets/4680755/24068678/e7aedea0-0b73-11e7-9dd3-3775f959e46f.png)
 
----
 ## Quick Start
 The library is pretty straightforward to be used:
 
@@ -11,6 +10,17 @@ ferret = Ferret(url='http://g1.globo.com/politica/blog/cristiana-lobo/post/setor
 
 ferret.get_article()
 ```
+
+Ferret also takes two optional arguments: HTML and/or language.
+
+```python
+from ferret.main import Ferret
+
+ferret = Ferret(url='http://g1.globo.com/politica/blog/cristiana-lobo/post/setor-de-propina-da-odebrecht-movimentou-us-33-bi-diz-delator.html', html='<html><head></head><body><h1>Título da página de notcias</h1></body></html>', lang='pt')
+
+ferret.get_article()
+```
+
 
 ## Contribute
 
