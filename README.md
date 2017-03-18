@@ -15,3 +15,6 @@ ferret.get_article()
 ## Contribute
 
 ## Licensing
+
+## Credits to Logo
+The image contains copyright to skaterjob at [Vecteezy](https://www.vecteezy.com/vector-art/128860-chinchilla-vector-set).
