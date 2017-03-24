@@ -10,3 +10,4 @@ requests==2.10.0
 lxml==3.6.4
 toolz==0.8.0
 langdetect==1.0.7
+html5lib==1.0b8
