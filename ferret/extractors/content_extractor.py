@@ -228,14 +228,16 @@ class ContentExtractor:
 
     def _fix_image_paths(self, body):
         for img in body.select('img'):
-            src = img.attrs['src']
-            source = urljoin(self.context.get('url'), src)
-            img.attrs['src'] = source
+            src = img.attrs.get('src', None)
+            if src:
+                source = urljoin(self.context.get('url'), src)
+                img.attrs['src'] = source
 
         for anchor in body.select('a'):
-            href = anchor.attrs['href']
-            source = urljoin(self.context.get('url'), href)
-            anchor.attrs['href'] = source
+            href = anchor.attrs.get('href', None)
+            if href:
+                source = urljoin(self.context.get('url'), href)
+                anchor.attrs['href'] = source
         return body
 
 
