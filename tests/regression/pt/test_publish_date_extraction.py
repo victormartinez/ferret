@@ -11,6 +11,10 @@ def _get_contents_of(file_path):
 
 
 @pytest.mark.parametrize("website", [
+    # "espaco-vital", Ignored due to processing problems
+
+    "aasp",
+    "abdc",
     "al-sp",
     "mps",
     "portal-justificando",
@@ -76,7 +80,6 @@ def _get_contents_of(file_path):
     "coad",
     "al-ma",
     "amagis",
-    "espaco-vital",
     "fenasj",
     "tech-tudo",
     "sbt",
