@@ -1,0 +1,1025 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script type='text/javascript'>window.NREUM||(NREUM={});NREUM.info = {"agent":"","beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3672224fa0","applicationID":"32221633","applicationTime":1.948746,"transactionName":"MQZQMEVRDUNYARddWwhMfAtFXQJcUBgGUGEUCh1OGEMMRU0KTlZRCAcfCVZJDEIUEgZAUUsBRxBDWQRZXAVOW1pLE10BQ0IaHVgMBxlEAxFBC1lRDx1aDQ1aUQUXWwtZQw==","queueTime":0,"ttGuid":"113fb24275b75f0","agentToken":null}; (window.NREUM||(NREUM={})).loader_config={xpid:"VQMGWFZaCRADVlNQBgcEVQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];n.exports=u;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(m,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+  <title>South Bend Mayor Pete Buttigieg on Poetry and Personal Connections - MTV</title>
+  <link rel="dns-prefetch" href="https://shared.mtv.com"/>
+  <link rel="dns-prefetch" href="http://cdn.optimizely.com"/>
+  <link rel="dns-prefetch" href="http://btg.mtvnservices.com"/>
+  <link rel="dns-prefetch" href="http://imagesmtv-a.akamaihd.net/"/>
+  <link rel="dns-prefetch" href="http://www.mtv.com/"/>
+  <style>
+  body,html{overflow-x:hidden}body,button,h1{margin:0}.site_header .search_input,.topicbar .gradient-after,.topicbar .gradient-before,.topicbar::after,.topicbar::before{background-position:initial initial;background-repeat:initial initial}#page_root,.site_header *,html{box-sizing:border-box}.navbar-inner-crabapple *,.site_header .search_input{-webkit-font-smoothing:antialiased}*{box-sizing:inherit}body{font-family:AkzidenzGrotesk,sans-serif}.headline{font-family:'AkzidenzGrotesk Cnd',sans-serif}h1.headline{font-size:2rem;font-weight:700;letter-spacing:.0625rem;line-height:1.5}label{font-size:.625rem;font-weight:400;letter-spacing:.1875rem}@media screen and (min-width:600px){h1.headline{font-size:2.375rem}}@media screen and (min-width:960px){h1.headline{font-size:2.75rem;line-height:1.6}}html{font-family:sans-serif}article,aside,header,main,nav{display:block}a{background-color:transparent}h1{font-size:2em}img{border:0;height:auto;width:100%}button{color:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit;overflow:visible;text-transform:none;-webkit-appearance:button;cursor:pointer}.lazyloaded{opacity:1;transition:opacity .3s;-webkit-transition:opacity .3s}main>article .blur-up{-webkit-filter:blur(.3125rem);transition:filter .4s,-webkit-filter .4s;-webkit-transition:filter .4s,-webkit-filter .4s}.site_header,.site_header .menu_holder .page_overlay,.site_header .top_outer{transition:left .4s cubic-bezier(.17,.67,.59,1.21)}main>article .blur-up.lazyloaded{-webkit-filter:blur(0)}.site-footer{margin-top:1.25rem;background-color:#8e8e8e;height:6.25rem;padding-top:0}ul{list-style-type:none;margin:0;padding:0}.hide{display:none}.ad-banner{margin:auto;text-align:center}label{margin-left:-.625rem}label.taxonomy{display:block;text-transform:uppercase;visibility:hidden}footer .inline>li,label.taxonomy a{display:inline-block}.single label.taxonomy{visibility:visible}body a,body a:link{color:#1a1a1a;text-decoration:none}nav{z-index:3;position:relative}footer .text-center{font-size:.625rem;text-align:center}footer .inline>li{font-size:.875rem;margin-top:0}footer #social [class*=icon-]{font-size:1rem}.sub-footer{width:100%;background-color:#ccc;clear:both;text-align:center;font-weight:700;font-size:1.25rem;text-transform:lowercase;padding-top:.25rem}.site-header,.topicbar,nav{background-color:#181013}.headline,.topicbar li{text-transform:uppercase}.sub-footer .icon-logo-mtv{padding:.3125rem;margin-top:.625rem;display:inline;vertical-align:middle;font-size:2.75rem}.sub-footer .about{padding-left:1.25rem}.topicbar{overflow-y:hidden;overflow-x:scroll;padding:.9375rem .625rem;white-space:nowrap}.topicbar li{display:inline}.topicbar li a,.topicbar li a:link{color:#f9f9f9}.topicbar .gradient-after,.topicbar .gradient-before{bottom:0;content:'';display:block;position:absolute;top:0}.topicbar .gradient-after{right:0;width:35px}.topicbar .gradient-after,.topicbar::after{background-image:linear-gradient(to right,rgba(30,0,20,0) 0,#1e0014 100%)}.topicbar .gradient-before,.topicbar::before{background-image:linear-gradient(to right,#1e0014 0,rgba(30,0,20,0) 100%)}@media screen and (min-width:600px){.topicbar{max-width:75rem;overflow-x:inherit;width:inherit}}.post-header{padding-bottom:.625rem}article>.post{display:block}h1{line-height:2.2rem;margin-top:0}.byline .handle{display:none}.photocredit,.single>article img:first-of-type{display:block}a.post{position:relative}.photocredit{font-size:.625rem;position:absolute;right:.3125rem;top:.0625rem}.single{margin:auto}.single>article{border-bottom-color:#dcdbdb;border-bottom-style:solid;margin:0 -1.25rem 1.875rem;position:relative}.single .post-header{max-width:43.75rem;padding:0 1.25rem 1.25rem}.single aside{margin:1.25rem auto;text-align:center}@media screen and (min-width:600px){.single>article .post-header{margin:auto;max-width:43.75rem;min-width:43.75rem}}@media screen and (min-width:960px){main>article .blur-up{-webkit-filter:blur(.625rem)}.ad-banner{min-height:5.625rem}.single article{margin:0 auto;max-width:75rem}.single aside{margin:0 auto;text-align:right}.site-header{background-color:#181013}}main>article label.taxonomy{margin-top:-.5rem}label.taxonomy{margin-top:0;padding-bottom:.625rem}label.taxonomy a,label.taxonomy a:link{background-color:#ff6464;color:#f9f9f9;padding:.375rem .25rem .375rem .375rem;text-transform:uppercase}.post-header{position:relative;text-align:center}.photocredit{color:#777}.headline span{border-bottom-width:.1875rem;border-bottom-color:#181013;border-bottom-style:solid}.single>article{border-bottom-width:0}@media screen and (min-width:600px){.single>article{margin:auto auto 1.875rem;width:94%}.single>article>.post{margin:1.875rem auto 0}.single>article .post-header{margin:auto}}@media screen and (min-width:960px){.single>article{margin:auto;max-width:73.125rem}.single>article aside{background-color:#f9f9f9;text-align:right}.single>article .post-header{padding:0;width:auto}}.topicbar{margin:auto;max-width:73.125rem}.topicbar li{font-family:Lekton,'sans serif';height:3.125rem;letter-spacing:.0625rem;line-height:1;padding:1.25rem 0}.topicbar .gradient-after,.topicbar .gradient-before{height:3.0625rem}body:not(.gonative) .topicbar .gradient-before{left:0}body:not(.gonative) .topicbar li{margin-right:.625rem}body:not(.gonative) .topicbar li a,body:not(.gonative) .topicbar li a:link{color:#f9f9f9}body{background-color:#f9f9f9}main{padding:0 .9375rem}article{background-color:transparent}#aosocial-widget{background-color:rgba(255,255,255,.901961);bottom:0;left:0;padding:.625rem;position:fixed;right:0;z-index:1}.share-panel{display:-webkit-flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center}.share-panel>button{border-width:.1875rem;height:2.75rem;font-size:1.25rem;outline:#000;width:2.75rem}.share-panel .facebook{border-color:#3f4979;color:#3f4979}.single .share-panel{margin:0;width:auto}.single .share-panel .facebook::after{position:relative;top:-.0625rem}.single .share-panel .twitter::after{left:.0625rem}@media screen and (min-width:600px){#aosocial-widget{background-color:transparent;bottom:auto;padding-left:0;position:absolute;right:auto;top:1.25rem}#aosocial-widget~.headline{margin-left:2.1875rem}.single .share-panel{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;background-color:transparent}.single .share-panel>button{margin:.3125rem 0}}@media screen and (min-width:960px){.touchevents #aosocial-widget~.headline{margin-left:4.375rem}#aosocial-widget{background-color:transparent;left:auto;top:1.5625rem}.share-panel>button{height:3.125rem;width:3.125rem}}.single a.post.featured-image,a.post.featured-image{position:relative}.cards:not(.promoted) a.post.featured-image:after,.single a.post.featured-image:after{content:'';display:block;height:0;padding-bottom:56.25%;width:100%}.cards:not(.promoted) a.post.featured-image>*,.single a.post.featured-image>*{height:100%;left:0;position:absolute;top:0;width:100%}.cards.trending a.post.featured-image:after{padding-bottom:100%}[data-graphics]::before{content:attr(data-graphics);font-family:SpikeIcons-Regular;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;text-align:center;font-variant:normal;text-transform:none}.page-initialized{height:100%}.page-initialized .site_header{opacity:1}.site_header{font-size:1.7rem;line-height:1.4;opacity:0;width:100%;left:0;z-index:1002;position:absolute;text-transform:lowercase;-webkit-transition:left .4s cubic-bezier(.17,.67,.59,1.21)}.site_header a{cursor:pointer;font-weight:700}.site_header .search_wrapper{transition:all .25s cubic-bezier(.7,0,.3,1) 0s;-webkit-transition:all .25s cubic-bezier(.7,0,.3,1) 0s;width:295px;height:50px;position:absolute;top:0;right:0;z-index:1200;background-color:rgba(255,255,255,.2);overflow:hidden}.site_header .search_wrapper .form_containment{height:50px;width:295px}.site_header .search_wrapper form::before{content:;font-family:mtv;position:absolute;top:14px;right:14px;font-size:2.2rem;line-height:1;cursor:pointer;color:#fafafa}.site_header .search_btn{border:none;outline:0;width:50px;height:50px;padding:0;background-color:transparent;overflow:hidden;text-indent:-99999px;position:absolute;transition:all 1s ease-out 0s;-webkit-transition:all 1s ease-out 0s}.site_header .preload_wrapper{z-index:-1;position:absolute;width:50px;height:50px;right:0;top:0;opacity:0;transition:opacity 1s ease-in 0s;-webkit-transition:opacity 1s ease-in 0s}.site_header .hide_search{display:none;position:absolute;top:0;right:-40px;width:40px;height:40px;line-height:40px;font-weight:700;cursor:pointer;color:#fff;text-align:center}.site_header .hide_search::before{font-weight:700}.site_header .search_input{display:inline-block;vertical-align:top;border:0;outline:0;background-color:transparent;width:240px;height:50px;box-sizing:border-box;padding:0 0 0 15px;font-size:1.4rem;font-family:ProximaNova,Helvetica,Arial,sans-serif;font-weight:700;color:#fff;text-transform:lowercase}.site_header .search .search_input{padding:0 0 0 20px;width:285px}.site_header .slide_menu .search{display:none}.site_header .slide_menu .search_input{color:#fff}.site_header .top_inner{position:relative;max-width:1200px;height:50px;margin:auto}.site_header .top_outer{z-index:1000;width:100%;background-color:#232323;-webkit-transition:left .4s cubic-bezier(.17,.67,.59,1.21);border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgba(255,255,255,.298039)}.site_header .bottom_outer{width:100%;height:50px}.site_header .menu_holder,.site_header .show_logo{display:inline-block;vertical-align:top}.site_header .menu_holder{position:relative;margin:0 7px 0 10px}.site_header .menu_holder .hamburger{display:inline-block;float:left;height:50px;color:#fff;cursor:pointer;transition:color .7s cubic-bezier(.7,0,.3,1);-webkit-transition:color .7s cubic-bezier(.7,0,.3,1);padding:0 10px 0 15px;vertical-align:middle}.site_header .menu_holder .hamburger .icon::after{content:;display:block;font-family:mtv;font-size:2.2rem;line-height:inherit;speak:none;vertical-align:middle;height:30px;margin-top:.5em}.site_header .menu_holder .page_overlay{-webkit-transition:left .4s cubic-bezier(.17,.67,.59,1.21);background-color:rgba(0,0,0,.498039);bottom:0;right:0;left:0;position:fixed;z-index:2000;display:none}.site_header .menu_holder .slide_menu{position:fixed;top:0;background-color:#fff;height:100%;z-index:3000;overflow:hidden;transition:left .4s cubic-bezier(.17,.67,.59,1.21);-webkit-transition:left .4s cubic-bezier(.17,.67,.59,1.21);left:-280px;width:280px}.site_header .menu_holder .slide_menu .search{height:50px;border-top-width:1px;border-top-style:solid;border-top-color:#9b9b9b;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#9b9b9b}.site_header .menu_holder .slide_menu .side_navigation{background-color:#1a1a1a;height:100%;overflow-y:auto;overflow-x:hidden;margin:0}.site_header .menu_holder .slide_menu .side_navigation>li{position:relative;margin-bottom:3px;background-color:#333;font-size:1.2em}.site_header .menu_holder .slide_menu .side_navigation>li.login{background-color:transparent;margin-bottom:0;cursor:pointer}.site_header .menu_holder .slide_menu .side_navigation>li.provider_signout{padding:22px 30px;text-decoration:none;color:#fff;font-size:15px;display:none;cursor:pointer}.site_header .menu_holder .slide_menu .side_navigation>li.provider_signout a{padding:0}.site_header .menu_holder .slide_menu .side_navigation>li.provider_signout .provider-logo{width:74px;display:inline-block}.site_header .menu_holder .slide_menu .side_navigation>li a{padding:.85em 30px}.site_header .menu_holder .slide_menu .side_navigation>li .sub_entries{max-height:0;overflow:hidden;transition:max-height .5s ease-out;-webkit-transition:max-height .5s ease-out}.site_header .menu_holder .slide_menu .side_navigation>li .sub_entries a:not(.see_all){position:relative;color:#fff}.site_header .menu_holder .slide_menu .side_navigation>li ul a{padding:15px 30px;line-height:1.1em}.site_header .menu_holder .slide_menu .side_navigation>li a,.site_header .menu_holder .slide_menu .side_navigation>li ul a{text-decoration:none;color:#fff;display:block;transition:all .7s cubic-bezier(.7,0,.3,1);-webkit-transition:all .7s cubic-bezier(.7,0,.3,1)}.site_header .menu_holder .slide_menu .side_navigation>li>a.has_arrow::after{font-family:mtv;content:;position:absolute;font-size:.85em;top:20px;right:30px;color:#fff;transition:all .7s cubic-bezier(.17,.67,.44,1.1);-webkit-transition:all .7s cubic-bezier(.17,.67,.44,1.1)}.site_header .menu_holder .slide_menu .side_navigation>li>a.selected{transition:all 1s ease-out;-webkit-transition:all 1s ease-out;background-color:#fff200;color:#000}.site_header .menu_holder .slide_menu .side_navigation>li>a.selected::after{-webkit-transform:rotate(180deg);color:#000}.site_header .menu_holder .slide_menu .side_navigation>li>a.selected+.sub_entries{max-height:1000px}.site_header .menu_holder .slide_menu .side_navigation .social{height:100px;width:inherit;position:inherit;margin-left:inherit;background-color:transparent}.site_header .menu_holder .slide_menu .side_navigation .social::before{content:'Follow us on';display:block;line-height:1;border-top-width:3px;border-top-style:solid;border-top-color:rgba(250,250,250,.14902);padding:17px 30px 0;color:rgba(250,250,250,.298039);text-transform:lowercase;font-size:1.6rem}.site_header .menu_holder .slide_menu .side_navigation .social>a{float:left;margin:10px 0 0 10px;padding:0}.site_header .menu_holder .slide_menu .side_navigation .social>a:first-child{margin-left:30px}.site_header .menu_holder .slide_menu .side_navigation .social>a [data-graphics]::before{font-family:mtv;font-size:1.7rem;vertical-align:middle}.site_header .menu_holder .slide_menu .side_navigation .social>a [data-graphics="N"]::before{content:}.site_header .menu_holder .slide_menu .side_navigation .social>a [data-graphics="O"]::before{content:}.site_header .menu_holder .slide_menu .side_navigation .social>a [data-graphics="Q"]::before{content:}.site_header .site_logo{float:left;display:table-cell;padding-left:5px;padding-right:5px;vertical-align:middle;text-decoration:none;cursor:pointer;height:50px}.site_header .site_logo .icon{color:#fff}.site_header .site_logo .icon::before{content:;font-family:mtv;display:block;font-size:3.8rem;line-height:inherit}.site_header .show_logo .title{display:block;margin:0}.site_header .show_logo{z-index:1;position:relative;color:#fff;transition:color .7s cubic-bezier(.7,0,.3,1);-webkit-transition:color .7s cubic-bezier(.7,0,.3,1);font-weight:700;font-size:2.7rem;text-decoration:none;text-transform:lowercase;margin-top:8px}.site_header .site_menu_wrapper{position:absolute;top:50px;left:0;width:100%;line-height:50px;color:#fff;-webkit-backface-visibility:hidden}.site_header .site_menu_wrapper .site_menu_inner{max-width:1200px;margin:0 auto}.site_header .main_nav{z-index:1000;margin:0}.site_header .main_nav>li{float:left;line-height:50px;font-size:2rem}.site_header .main_nav>li.social [data-graphics]{display:inline-block;padding:3px 6px;background-color:#fafafa;color:#232323;border-radius:50%}.site_header .main_nav>li.social [data-graphics]::before{font-family:mtv;font-size:1.7rem;vertical-align:middle}.site_header .main_nav>li.social [data-graphics="N"]::before{content:}.site_header .main_nav>li.social [data-graphics="O"]::before{content:}.site_header .main_nav>li.social [data-graphics="Q"]::before{content:}.site_header .main_nav>li>a{font-family:ProximaNova,Helvetica,Arial,sans-serif;font-size:2rem;text-decoration:none;color:inherit;display:block}.site_header .main_nav>li>a.has_arrow::after{text-transform:none;display:inline-block;font-family:mtv;speak:none;content:;position:relative;top:1px;left:9px;font-size:.8em;line-height:13px}.site_header .main_nav>li.social{width:inherit;position:inherit;margin-left:inherit;padding:0 10px;height:50px;float:right}.site_header .main_nav>li.social a{text-decoration:none;color:#fff;padding:0 0 0 5px}.site_header .main_nav>li.social .top_flux_userbar,.site_header .main_nav>li.social a{display:inline-block;font-size:2rem;line-height:1;transition:all .4s cubic-bezier(.7,0,.3,1);-webkit-transition:all .4s cubic-bezier(.7,0,.3,1);vertical-align:middle;text-align:center}.navbar-inner-crabapple .site_header .menu_holder,.navbar-inner-crabapple.global_navigation_portable .site_header .bottom_outer,.navbar-inner-crabapple.global_navigation_portable .site_header .site_menu_inner{display:none}.site_header .main_nav>li.social a+.top_flux_userbar{padding:0 0 0 5px}.site_header .main_nav>li:not(.social)>a::before{content:'';position:absolute;left:0;bottom:0;width:100%;height:100%;-webkit-transition:background .1s cubic-bezier(.7,0,.3,1);transition:background .1s cubic-bezier(.7,0,.3,1);background-color:transparent}.site_header .main_nav>li>a{position:relative;padding:0 25px 0 15px;text-transform:lowercase}.site_header .main_nav>li>a.has_arrow{padding:0 25px 0 15px}.site_header .main_nav>li .menu_dropdown{display:none;background-color:#434343;position:absolute;width:100%;padding:0 10px;z-index:99;left:0}.site_header .main_nav>li .menu_dropdown>div{background-color:inherit;margin:0 auto;max-width:1200px;overflow:hidden;padding:20px 0 30px;position:relative}.site_header .main_nav>li .menu_dropdown>div .sidea{float:left;padding-right:10px;width:69%}.site_header .main_nav>li .menu_dropdown>div .sidea.wide{width:100%}.site_header .main_nav>li .menu_dropdown>div .sidea.wide .column{width:25%;padding:0 13px}.site_header .main_nav>li .menu_dropdown>div .sidea .links{float:left;margin-bottom:10px;width:100%}.site_header .main_nav>li .menu_dropdown>div .sidea .column{width:33.3%;min-width:200px;float:left;padding-right:12px}.site_header .main_nav>li .menu_dropdown>div .sidea .column>a{float:left;width:100%;text-decoration:none;color:rgba(255,255,255,.701961);font-size:2rem;line-height:1;padding:15px 0;position:relative;text-align:left;transition:all .7s cubic-bezier(.7,0,.3,1);-webkit-transition:all .7s cubic-bezier(.7,0,.3,1)}@media screen and (max-width:1200px){.site_header .main_nav{margin-left:0}.site_header .main_nav li.social{float:none;position:absolute;right:0}}#page_root{position:relative}.page-initialized #page_root{transition:left .4s cubic-bezier(.17,.67,.59,1.21);-webkit-transition:left .4s cubic-bezier(.17,.67,.59,1.21);left:0}.navbar-inner-crabapple{height:100px}.navbar-inner-crabapple.global_navigation_portable{height:50px}body.show_menu_holder .navbar-inner-crabapple .site_header .menu_holder{display:inline-block}.screen-reader-text{left:-9999px;position:absolute;top:-9999px}@media screen and (min-width:1200px){.site_header .site_menu_wrapper,.site_header .top_outer{padding:0 10px}}@media screen and (max-width:979px){.site_header .menu_holder{margin-left:0}.site_header .search_wrapper{width:50px}.site_header .search_wrapper .search_input{display:none}.navbar-inner-crabapple .site_header .menu_holder{display:block}.navbar-inner-crabapple .site_header .menu_holder .hamburger{display:table-cell}.navbar-inner-crabapple .site_header .site_menu_wrapper{display:none}}.site_header .search_wrapper{display:none}[class*=" icon-"],[class^=icon-]{font-family:mtv;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-feature-settings:'liga' 1;-webkit-font-smoothing:antialiased}.site_header .menu_holder .slide_menu .side_navigation .social>a [data-graphics]{display:inline-block;padding:0 6px;background-color:#fafafa;color:#232323;height:31px;border-radius:50%}
+  </style>  <link rel="preload" href="https://shared.mtv.com/site/alwaysOn/0.1/bundles/mtvnews/responsive_css_head.php" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="http://www.mtv.com/news/node/assets/css/b583da8f1d/style.min.css" as="style" onload="this.rel='stylesheet'">
+  <script type='text/javascript'>
+  !function(e){"use strict";var t=function(t,n,r){function o(e){return i.body?e():void setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(t){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);
+  </script>  <link rel="alternate" type="application/rss+xml" title="News &raquo; Feed" href="http://www.mtv.com/news/feed/" />
+  <link rel="shortcut icon" href="http://www.mtv.com/favicon.ico"/>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="HandheldFriendly" content="true"/>
+  <meta name="MobileOptimized" content="320"/>
+  <meta name="description" content="South Bend mayor Pete Buttigieg’s view from a deep-blue perch in a deep-red state is unexpectedly optimistic"/>
+  <meta property="reporting:beacon_url" content="http://mb.mtv.com/data/collect/v1/mb.gif"/>
+  <meta property="reporting:call_config" content='{"omniture":{"pageName":"/news/2996150/south-bend-mayor-pete-buttigieg-on-poetry-and-personal-connections/","channel":"news","events":"event16, event18","prop1":"","prop8":"none","prop9":"","prop11":"","prop12":"Politics","prop14":"","prop15":"no-franchise","prop18":"South Bend Mayor Pete Buttigieg On Poetry And Personal Connections [Politics]","prop19":"03.23.2017","prop20":"Ana Marie Cox","prop21":"ALLTRAFFIC:MTV","prop28":"News article","prop38":"mtv.com","prop44":null,"prop55":"news:Column","prop65":"News Article","eVar6":"none","eVar9":"/news/2996150/south-bend-mayor-pete-buttigieg-on-poetry-and-personal-connections/","eVar10":"ALLTRAFFIC:MTV","eVar68":"no-franchise","hier1":"/news/2996150/south-bend-mayor-pete-buttigieg-on-poetry-and-personal-connections/"}}'/>
+  <meta property="og:site_name" content="MTV News"/>
+  <meta property="ao:mgid" content="mgid:wordpress:post:articles.mtv.com:2996150"/>
+  <link rel="canonical" href="http://www.mtv.com/news/2996150/south-bend-mayor-pete-buttigieg-on-poetry-and-personal-connections/"/>
+  <meta property="og:url" content="http://www.mtv.com/news/2996150/south-bend-mayor-pete-buttigieg-on-poetry-and-personal-connections/"/>
+  <meta name="twitter:url" content="http://www.mtv.com/news/2996150/south-bend-mayor-pete-buttigieg-on-poetry-and-personal-connections/"/>
+  <meta name="thumbnail" content="http://imagesmtv-a.akamaihd.net/uri/mgid:ao:image:mtv.com:227324?quality=0.8&amp;format=jpg&amp;width=1440&amp;height=810&amp;.jpg" />
+  <meta property="og:image" content="http://imagesmtv-a.akamaihd.net/uri/mgid:ao:image:mtv.com:227324?quality=0.8&amp;format=jpg&amp;width=1440&amp;height=810&amp;.jpg"/>
+  <meta name="twitter:image" content="http://imagesmtv-a.akamaihd.net/uri/mgid:ao:image:mtv.com:227324?quality=0.8&amp;format=jpg&amp;width=500&amp;height=375"/>
+  <meta property="og:image:width" content="1440"/>
+  <meta property="og:image:height" content="810"/>
+  <meta property="og:author" content="Ana Marie Cox"/>
+  <meta property="article:author" content="http://www.twitter.com/anamariecox">
+  <meta property="fb:app_id" content="122150691493"/>
+  <meta property="fb:admins" content="unset"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta property="og:type" content="article"/>
+  <meta property="asset_url" content="http://www.mtv.com/news/node"/>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "headline": "South Bend Mayor Pete Buttigieg On Poetry And Personal Connections",
+      "url": "http://www.mtv.com/news/2996150/south-bend-mayor-pete-buttigieg-on-poetry-and-personal-connections/",
+      "thumbnailUrl": "http://imagesmtv-a.akamaihd.net/uri/mgid:ao:image:mtv.com:227324?quality=0.8&amp;format=jpg",
+      "dateCreated": "2017-03-23T17:49:28+00:00",
+      "articleSection": "Politics",
+      "creator": ["Ana Marie Cox"],
+      "evergreen": false,
+      "keywords": ["Column"]
+    }
+  </script>
+  <script src="//cdn.optimizely.com/js/335736224.js"></script>
+  <link rel="amphtml" href="http://www.mtv.com/news/2996150/south-bend-mayor-pete-buttigieg-on-poetry-and-personal-connections/amp/">
+<meta name="expression" content="shownav" />	<meta property="og:description" content="His view from a deep-blue perch in a deep-red state is unexpectedly optimistic"/>
+	<meta name="twitter:description" content="His view from a deep-blue perch in a deep-red state is unexpectedly optimistic"/>
+	<meta name="twitter:title" content="Indiana Mayor Pete Buttigieg On Coming Out And Protecting Local Politics"/>
+	<meta property="og:title" content="Indiana Mayor Pete Buttigieg On Coming Out And Protecting Local Politics"/>
+<script type="text/javascript">
+
+  window._tfa = window._tfa || [];
+
+  _tfa.push({
+    notify: 'action',
+    name: 'page_view'
+  });
+
+  _tfa.push({
+    notify: 'mark',
+    type: 'sitevisitors'
+  });
+
+</script>
+
+<script type="text/javascript" src="//cdn.taboola.com/libtrc/mtv-sc/tfa.js"></script>
+
+</head>
+
+<body class="single site-build-mtv post shownav">
+<div id="page_root">
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '122150691493',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script><script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+    console.log('js:', js, 'fjs:', fjs, 't:', t);
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<header class="site-header cf" role="banner">
+	<div id="ad-banner" class="ad-banner" data-ad-sizes="728x90"></div>
+	<div id="nav">
+
+
+
+
+
+
+
+
+<div id="header" class="navbar-inner-crabapple global_navigation_portable">
+  <div class="site_header">
+    <div class="top_outer">
+      <div class="top_inner">
+        <div class="menu_holder">
+          <div class="hamburger" id="trigger">
+            <span class="icon"></span>
+            <span class="screen-reader-text">mtv Menu</span>
+          </div>
+          <div class="site_logo">
+            <span data-graphics="A" class="icon"></span>
+            <span class="screen-reader-text">mtv</span>
+          </div>
+          <div class="slide_menu">
+            <div class="search">
+              <form id="side_search" action="/search">
+                <input type="text" class="search_input" name="searchKeywords" placeholder="Search">
+                <input type="submit" value="M" class="search_btn">
+              </form>
+            </div>
+            <ul class="side_navigation">
+	<li><a href="/"><span class="brand-name">mtv</span> Home</a></li>
+
+
+
+
+
+
+
+
+
+
+
+			<li class="shows">
+
+
+
+					<a href="javascript:void(0);" data-graphics-after="&#86;" class="has_arrow notriforce n-link shows">
+						Shows
+					</a>
+
+
+					<div class="sub_entries">
+						<ul>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/full-episodes">Full Episodes</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/shows">Shows A-Z</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/tv-schedule">TV Schedule</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/app">App</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/mtv2">MTV2</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/news/collection/mtv-shows/">Shows News</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://soundtrack.mtv.com">Music from the Shows</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/casting-calls">Casting Calls</a>
+
+
+							</li>
+
+						</ul>
+					</div>
+
+			</li>
+
+
+
+
+
+
+
+
+
+
+			<li class="music">
+
+
+
+					<a href="http://www.mtv.com/music" data-graphics-after="&#86;" class=" notriforce n-link music">
+						Music
+					</a>
+
+
+			</li>
+
+
+
+
+
+
+
+
+
+
+			<li class="news">
+
+
+
+					<a href="javascript:void(0);" data-graphics-after="&#86;" class="has_arrow notriforce n-link news">
+						News
+					</a>
+
+
+					<div class="sub_entries">
+						<ul>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/news/">Latest News</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/news/music/">Music</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/news/celebrity/">Celebrity</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/news/tv/">TV</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/news/movies/">Movies</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/news/style/">Style</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/news/politics/">Politics</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/news/life/">Life</a>
+
+
+							</li>
+
+							<li>
+
+
+										<a href="http://www.mtv.com/news/podcasts/">Podcasts</a>
+
+
+							</li>
+
+						</ul>
+					</div>
+
+			</li>
+
+
+
+
+
+
+
+
+
+
+			<li class="watch live tv">
+
+
+
+					<a href="http://www.mtv.com/live-tv" data-graphics-after="&#86;" class=" notriforce n-link watch live tv">
+						Watch Live TV
+					</a>
+
+
+			</li>
+
+
+	<li class="provider_signout tve-logout tve-auth-container">
+		<a class="btn-tve-logout">
+			<span>TV Provider Signout</span>
+			<span class="provider-logo pull-right"></span>
+		</a>
+	</li>
+	<li class="login">
+	  <span data-widget="smallUserBar"></span>
+	</li>
+	<li class="social">
+
+			<a href="http://www.facebook.com/MTV" target="_blank" class="notriforce">
+				<span data-graphics="N" class="icon"></span>
+				<span class="screen-reader-text">facebook</span>
+			</a>
+
+
+			<a href="https://twitter.com/MTV" target="_blank" class="notriforce">
+			  <span data-graphics="O" class="icon"></span>
+			  <span class="screen-reader-text">twitter</span>
+			</a>
+
+
+			<a href="http://mtv.tumblr.com/" target="_blank" class="notriforce">
+			  <span data-graphics="Q" class="icon"></span>
+			  <span class="screen-reader-text">tumblr</span>
+			</a>
+
+	</li>
+</ul>
+          </div>
+          <div class="page_overlay"></div>
+        </div>
+
+
+
+
+
+        <a href="http://www.mtv.com/news/" class="show_logo">
+          <span class="wrapper"><span class="title sitename">news</span></span>
+        </a>
+
+
+
+
+
+
+
+
+        <div class="full_logo_wrapper">
+          <div class="logo_anim">
+          </div>
+        </div>
+        <div class="search_wrapper">
+          <div class="form_containment" id="site_search">
+            <form action="/search">
+              <input type="text" name="searchKeywords" class="search_input" placeholder="Search">
+              <input type="submit" value="M" class="search_btn">
+              <div class="preload_wrapper"></div>
+            </form>
+          </div>
+          <div class="hide_search" data-graphics="W"></div>
+        </div>
+
+      </div>
+
+        <div class="site_menu_wrapper">
+          <div class="site_menu_inner">
+            <ul itemtype="http://www.schema.org/SiteNavigationElement" class="main_nav">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<li class="shows">
+
+
+
+					<a href="javascript:void(0);" data-graphics-after="&#86;" class="has_arrow notriforce n-link shows">
+						Shows
+					</a>
+
+
+					<div class="menu_dropdown">
+	                 	<div>
+							<div class="sidea wide">
+								<div class="links">
+									<div class="column">
+
+
+												</div>
+												<div class="column">
+
+
+
+													<a href="http://www.mtv.com/full-episodes">Full Episodes</a>
+
+
+
+
+
+
+													<a href="http://www.mtv.com/shows">Shows A-Z</a>
+
+
+
+
+												</div>
+												<div class="column">
+
+
+
+													<a href="http://www.mtv.com/tv-schedule">TV Schedule</a>
+
+
+
+
+
+
+													<a href="http://www.mtv.com/app">App</a>
+
+
+
+
+												</div>
+												<div class="column">
+
+
+
+													<a href="http://www.mtv.com/mtv2">MTV2</a>
+
+
+
+
+
+
+													<a href="http://www.mtv.com/news/collection/mtv-shows/">Shows News</a>
+
+
+
+
+												</div>
+												<div class="column">
+
+
+
+													<a href="http://soundtrack.mtv.com">Music from the Shows</a>
+
+
+
+
+
+
+													<a href="http://www.mtv.com/casting-calls">Casting Calls</a>
+
+
+
+									</div>
+	                        </div>
+						</div>
+					</div>
+
+			</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<li class="music">
+
+
+
+					<a href="http://www.mtv.com/music" data-graphics-after="&#86;" class=" notriforce n-link music">
+						Music
+					</a>
+
+
+			</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<li class="news">
+
+
+
+					<a href="javascript:void(0);" data-graphics-after="&#86;" class="has_arrow notriforce n-link news">
+						News
+					</a>
+
+
+					<div class="menu_dropdown">
+	                 	<div>
+							<div class="sidea wide">
+								<div class="links">
+									<div class="column">
+
+
+												</div>
+												<div class="column">
+
+
+
+													<a href="http://www.mtv.com/news/">Latest News</a>
+
+
+
+
+
+
+													<a href="http://www.mtv.com/news/music/">Music</a>
+
+
+
+
+
+
+													<a href="http://www.mtv.com/news/celebrity/">Celebrity</a>
+
+
+
+
+												</div>
+												<div class="column">
+
+
+
+													<a href="http://www.mtv.com/news/tv/">TV</a>
+
+
+
+
+
+
+													<a href="http://www.mtv.com/news/movies/">Movies</a>
+
+
+
+
+
+
+													<a href="http://www.mtv.com/news/style/">Style</a>
+
+
+
+
+												</div>
+												<div class="column">
+
+
+
+													<a href="http://www.mtv.com/news/politics/">Politics</a>
+
+
+
+
+
+
+													<a href="http://www.mtv.com/news/life/">Life</a>
+
+
+
+
+
+
+													<a href="http://www.mtv.com/news/podcasts/">Podcasts</a>
+
+
+
+									</div>
+	                        </div>
+						</div>
+					</div>
+
+			</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<li class="watch live tv">
+
+
+
+					<a href="http://www.mtv.com/live-tv" data-graphics-after="&#86;" class=" notriforce n-link watch live tv">
+						Watch Live TV
+					</a>
+
+
+			</li>
+
+
+	<li class="social">
+
+			<a href="http://www.facebook.com/MTV" target="_blank" class="notriforce">
+				<span data-graphics="N" class="icon"></span>
+				<span class="screen-reader-text">facebook</span>
+			</a>
+
+
+			<a href="https://twitter.com/MTV" target="_blank" class="notriforce">
+			  <span data-graphics="O" class="icon"></span>
+			  <span class="screen-reader-text">twitter</span>
+			</a>
+
+
+			<a href="http://mtv.tumblr.com/" target="_blank" class="notriforce">
+			  <span data-graphics="Q" class="icon"></span>
+			  <span class="screen-reader-text">tumblr</span>
+			</a>
+
+	    <div class="top_flux_userbar">
+	        <span class="flux-userbar"></span>
+	        <span class="sm4Widget" data-widget="userProfile"></span>
+        </div>
+	</li>
+</ul>
+          </div>
+        </div>
+
+    </div>
+    <div class="bottom_outer"></div>
+  </div>
+</div>
+<script type="text/javascript">
+  var MTVN = window.MTVN ? window.MTVN : {};
+  MTVN.socialnetworks = {};
+  MTVN.socialnetworks.facebook = '';
+  MTVN.socialnetworks.twitter = '';
+  MTVN.socialnetworks.tumblr = '';
+</script>
+
+<script type="text/javascript">
+	var MTVN = window.MTVN ? window.MTVN : {};
+	MTVN.socialnetworks = {};
+	MTVN.socialnetworks.facebook = '';
+	MTVN.socialnetworks.twitter = '';
+	MTVN.socialnetworks.tumblr = '';
+</script>
+
+</div>
+	<div class="topicbar">
+	  <ul>
+
+	      <li><a href="http://www.mtv.com/news/2995413/drake-more-life-reaction/">#Drake: More Life</a></li>
+	      <li><a href="http://www.mtv.com/news/2995484/hurray-riff-raff-navigator-feature/">#Hurray For The Riff Raff</a></li>
+	      <li><a href="http://www.mtv.com/news/2992726/introducing-the-rookie-podcast-a-podcast-tavi-gevinson-mtv-news/">#Rookie Podcast</a></li>
+	      <li><a href="http://www.mtv.com/news/podcasts/happy-sad-confused/">#Happy Sad Confused</a></li>
+	      <li><a href="http://www.mtv.com/news/movie/beauty-and-the-beast/">#Beauty And The Beast</a></li>
+
+	  </ul>
+	</div>
+</header>
+
+
+
+<main role="main" class="single post">
+
+  <article itemscope itemtype="http://schema.org/NewsArticle" data-mgid="mgid:wordpress:post:articles.mtv.com:2996150" data-taxonomy="category:politics" class="post"  data-posttype="post">
+
+
+
+      <a class="post  featured-image" data-href="{&quot;canonical&quot;:&quot;http://on.mtv.com/2ns9LKC&quot;,&quot;facebook&quot;:&quot;http://www.mtv.com/news/2996150/south-bend-mayor-pete-buttigieg-on-poetry-and-personal-connections/?fb_ref&#x3D;fbshare_web&quot;,&quot;twitter&quot;:&quot;http://on.mtv.com/2nsdNCH&quot;,&quot;email&quot;:&quot;http://on.mtv.com/2nseFaM&quot;,&quot;sms&quot;:&quot;http://on.mtv.com/2ns9Vln&quot;,&quot;whatsapp&quot;:&quot;http://on.mtv.com/2nsdeZX&quot;}">
+        <img data-ratio="16/9" src="http://imagesmtv-a.akamaihd.net/uri/mgid:ao:image:mtv.com:227324?width=385&height=217&quality=.05&format=jpg" data-sizes="auto" class="lazyload blur-up" data-src="http://imagesmtv-a.akamaihd.net/uri/mgid:ao:image:mtv.com:227324?height={height}&width={width}&format=jpg&quality=.7"/>
+      </a>
+      <span class="photocredit">
+
+
+          Getty Images
+
+      </span>
+
+    <header class="post-header">
+          <label class="taxonomy ">
+
+              <a href="http://www.mtv.com/news/politics/">
+                Politics
+              </a>
+
+          </label>
+      <h1 class="headline">
+        <a class="post" data-href="{&quot;canonical&quot;:&quot;http://on.mtv.com/2ns9LKC&quot;,&quot;facebook&quot;:&quot;http://www.mtv.com/news/2996150/south-bend-mayor-pete-buttigieg-on-poetry-and-personal-connections/?fb_ref&#x3D;fbshare_web&quot;,&quot;twitter&quot;:&quot;http://on.mtv.com/2nsdNCH&quot;,&quot;email&quot;:&quot;http://on.mtv.com/2nseFaM&quot;,&quot;sms&quot;:&quot;http://on.mtv.com/2ns9Vln&quot;,&quot;whatsapp&quot;:&quot;http://on.mtv.com/2nsdeZX&quot;}" >
+          <span>                South Bend Mayor Pete Buttigieg On Poetry And Personal Connections
+          </span>
+        </a>
+      </h1>
+      <p class="subhead">
+          His view from a deep-blue perch in a deep-red state is unexpectedly optimistic
+
+      </p>
+        <div class="byline" itemscope itemtype="http://schema.org/Person">
+
+          	<div class="avatar" style="background-image:url('http://imagesmtv-a.akamaihd.net/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2016/12/amc-250-1482170849.jpg?format=jpg&quality=.8')"></div>
+          <div>
+            <address>
+              <a href="http://www.mtv.com/news/author/coxan/" rel="author" class="author">
+              	Ana Marie Cox
+              </a>
+                  <a href="https://twitter.com/anamariecox" class="twitter" target="twitter"><span class="handle">anamariecox</span></a>
+              <time datetime="2017-03-23 13:49">6h ago</time>
+            </address>
+          </div>
+        </div>
+
+
+    </header>
+
+
+
+
+      <section class="entry-content">
+
+        <p>Pete Buttigieg, the Democrat mayor of South Bend, Indiana, aims high and tends to hit his mark. He’s a graduate of Harvard and Oxford, and a former Naval intelligence officer who served in Afghanistan; in 2011, at 29, he became the youngest mayor ever elected to lead a city of over 100,000 residents. In 2015, just a few months before he was up for reelection and right as the state debated its controversial “religious liberty” law, he <a href="https://mic.com/articles/120774/indiana-mayor-pete-buttigieg-comes-out-as-gay-in-op-ed#.fA9pmMbik" target="_blank">came out as gay</a>. He still wound up <a href="http://www.wndu.com/home/headlines/Buttigieg-vies-for-second-term-as-South-Bend-mayor-340002362.html" target="_blank">winning</a> a second term with 80 percent of the vote. </p>
+      <p>Considering these achievements, perhaps it’s no wonder that Buttigieg's view from a deep-blue perch (South Bend has had Democratic mayors going back to 1972) in a deep-red state is unexpectedly optimistic. He talked to MTV News about why “salvation comes from the local” and which American poet might best speak to the current political moment.</p>
+      <p>[<em>This interview has been edited and condensed.</em>]</p>
+      <p><b>What Trump administration policies are having an impact on the people of South Bend?</b></p>
+      <p><strong>Pete Buttigieg:</strong> We’re a community that’s got a lot of low- to middle-income people. We’ve got a lot of working families. So I’m very concerned about things like the empowerment of Wall Street at the expense of Middle America and the attack on the CFPB [Consumer Financial Protection Bureau]. There’s a lot of people who are protected from shady financial practices by an agency like that. I think they’re going to be worse off if that agency gets gutted. </p>
+      <p>By the way, taking health care away isn’t really just taking health care away — it’s ultimately a wealth transfer. If you’re in a community like mine where the per capita income on average is $19,000, the real problem with Trumpcare/Ryancare isn’t just that it leaves people without health care, it’s that it will represent a transfer of wealth <em>out</em> of my community. </p>
+      <p>Another thing is safety. Our neighborhoods are safer when there is trust between communities and the police who are in charge of protecting them. It’s going to be that much harder for us to get some members of the Latino community to inform police when they know something about a crime, because they’re going to be nervous around law enforcement even though our policy is that our law enforcement does not do federal immigration authority’s job for them. </p>
+      <p>In really every area of the mayor’s life, whether you’re trying to fill in holes in the road, trying to keep your community safe, trying to have the robust neighborhood life, or trying to encourage the arts — really at every turn our job has gotten a lot harder under this president.</p>
+      <p><b>How are people responding?</b></p>
+      <p><b>Buttigieg:</b> Here’s why I think salvation comes from the local. We’ve got a family here that is in this nightmarish situation where the guy’s been in the community for about 16 years. He’s undocumented. He came here on a trip of some kind, fell in love, wound up marrying into a family that owned a restaurant, saved up and bought the restaurant, and now owns it and has 20 employees. On a routine visit to ICE that he chose to make, he wound up getting detained and is now scheduled for deportation this Friday.</p>
+      <p>When I went to this diner restaurant that he owns to meet the family, it was full of people from the community. Some of them explained that they had voted for Trump, but they strongly objected to the way [the restaurant owner] is being treated and what’s happening to him. </p>
+      <p><b>I want to believe that you’re correct, but there seem to be a lot of people who have trouble making the connection between the person they voted for and those local politics.</b></p>
+      <p><b>Buttigieg:</b> I also think politicians on our side of the aisle have failed to make those connections. To me, politics is something that [happens] in communities, in neighborhoods, and in our homes. Yet we seem to struggle to talk about where politics hits home there.</p>
+      <p>Trump deserves to have all of his flaws pointed out, [but] it remains the case that if we spend 90 percent of our time talking about <em>him</em>, that’s 90 percent of our time that we are not talking about <em>you</em>. Or even worse, if [left politicians] do [make it personal], we do it in incredibly condescending language, like saying, “Hey, you’ve been voting against your own interests for years.” Which is maybe not a great way to start a conversation with somebody, even if that’s true.</p>
+      <blockquote class="pullquote" >If we spend 90 percent of our time talking about him, that’s 90 percent of our time that we are not talking about you.</blockquote><p><b>I want to return briefly to the idea that when you know people, you’re less scared of them or you’re less likely to fight with them. Tell me what America should know about Mike Pence. Do you like him more than other people who don’t know him so well?</b></p>
+      <p><b>Buttigieg:</b> He’s decent to be around and he’s agreeable. We have cooperated on issues where we see eye to eye [and have] joined together and got some good stuff done in South Bend. Unlike the president, he has a respect for the institutions of American government. </p>
+      <p><b>Do you ever think about if it would be better or worse underneath a President Pence?</b></p>
+      <p><b>Buttigieg:</b> I try not to think about things like that too much.</p>
+      <p><b>Oh come on, you’ve thought about it <em>a little bit</em>.</b></p>
+      <p><strong>Buttigieg:</strong> What’s worse: a president who is very faithful to an ideology that you find extreme, or a president who is very cynical and appears to have no ideology at all? Neither one of those things is great. At the very least, I know that [Pence] wants to be decent toward people whom he knows, and he respects American institutions. I would still find myself vigorously resisting probably most of his proposals, but at least we would have that going for us as a country.</p>
+      <p><b>I used to argue that Pence would be worse, and now I think that basic respect for American institutions is maybe worth more than I thought it was.</b></p>
+      <p><b>Buttigieg:</b> Yeah. When you’re worried about the actual foundations of the republic, then it puts ordinary disagreements about our values into perspective.</p>
+      <p>I will also say, power does weird things. Having said that I’ve always found Mike Pence to be authentically decent and true to his values, he also made a decision to be part of a ticket and administration that flies in the face of any concept of decency and violates the values he espouses on a regular basis.</p>
+      <p><b>You came out during your first term as mayor. Has being Indiana's only gay executive gone like you thought it would, or have there been any surprises along the way?</b></p>
+      <p><b>Buttigieg:</b> I didn’t really have any expectations for how it would go, because it was impossible to really guess or gauge, which is part of what made it a little bit of a leap of faith. My hope is that, even one generation from now, it’s not something you announce. Straight people don’t have to come out. It’s just something that at some point people notice about you and may or may not care. We’re not there yet. </p>
+      <p>A lot of people don’t care, which is great. One very touching thing is that some people — especially younger people — made it clear that they felt safer or more accepted in their community after I disclosed that about myself. Even though that wasn’t my purpose — my purpose was very personal — that validated that position. </p>
+      <p>There was obviously some ugliness online and some things that were unfortunate, too. Perhaps the most interesting thing to me [is that some people] — and this is especially true of people in the older generation — saw it as an opportunity to show that they were cool with it. People have been inching their way toward the right side of history, [and] it’s very important for us to open our arms [to them]. You want to try to find a way to guide people like that toward a kind of acceptance that as neighbors and nice people they really would like to find themselves able to have.</p>
+      <blockquote class="pullquote" >My hope is that, even one generation from now, it’s not something you announce. Straight people don’t have to come out. It’s just something that at some point people notice about you and may or may not care. We’re not there yet.</blockquote><p><b>You’re one of the youngest mayors out there. What advice do you have for people even younger than yourself who want to make a difference in politics?</b></p>
+      <p><b>Buttigieg:</b> One thing I would strongly suggest is looking local. You don’t even have to be old enough to vote to have an impact at the local level. The LGBT ordinance on nondiscrimination is just one example of [an] issue where I’ve seen people [in high school] come to the city council to testify on a bill that was being considered. They present[ed] a really compelling case and that [could] affect how the vote goes, and how elected officials think about the issue.</p>
+      <p>At a moment when my side of the aisle has some catching up to do to conservatives when it comes to realizing how much races like [those for] state legislatures, city councils, county sheriffs, and school boards really matter, my hope is that young people, even if they decide running for office isn’t for them, and even if they decide political campaigns aren’t for them, realize that if they care about an issue, they can often get directly involved in the decision-making process around that issue simply by showing up.</p>
+      <p><b>But let’s also address the other side of the issue: What about those who are already active, how do they keep from burning out?</b></p>
+      <p><b>Buttigieg:</b> Self-care is important for all of us, especially because we’re in what amounts to a nationally traumatic phase. I think part of it is to remember that there is more to opposition than opposition. In other words, it’s not just about recognizing and cataloguing and publicizing all the things that are going wrong; it’s about modeling and celebrating the alternative. </p>
+      <p>One of the examples that I’ve hit on to explain what’s happening is that it resembles a certain kind of computer virus that works by presenting the system with equations that it can’t solve because there’s a character missing or something. The system keeps trying to process, but it doesn’t compute until it overheats and breaks. I think that is what is happening when, for example, you have a government official in a position of great responsibility make a demonstrably false statement about a matter of simple fact that anybody with Google can check and know he’s lying. When something like that happens, that can kind of fry our circuits. </p>
+      <p>Those of us who work in politics can only make ourselves useful if our heads are filled with things that we can contribute to the political space. [March 21 was] World Poetry Day. JFK had this quote about how if more politicians knew poetry and more poets knew about politics, the world would be a better place. Being attentive to the things that add meaning to our lives alongside politics will help us inform our politics with the values that really do make America great.</p>
+      <p><b>Is there a poem or poet who might be especially helpful in this historical moment?</b></p>
+      <p><b>Buttigieg:</b> Maybe <a href="https://www.poets.org/poetsorg/poem/i-hear-america-singing" target="_blank">Walt Whitman</a>. Whitman’s got this kind of ecstatic sense of America that doesn’t hide any of the craziness of the American experience or the stench of some places, but he also talks about the beauty of other [experiences and places]. We’re in this kind of postmodern world, but I’m not sure [the American people] should be reading a lot of postmodern literature right now — it’d be too much!</p>
+
+
+
+        <aside role="complementary" class="sidebar ad">
+          <div id="post-ad" data-ad-sizes="300x250"></div>  </aside>
+
+      </section>
+
+      <section class="tags">
+
+        <ul>
+                <li><a href="http://www.mtv.com/news/politics/">Politics</a></li>
+        </ul>
+
+      </section>
+
+
+    <script type="application/json" class="article_model">
+    {
+      "mgid": "mgid:wordpress:post:articles.mtv.com:2996150",
+      "title": "South Bend Mayor Pete Buttigieg On Poetry And Personal Connections",
+      "contentType": "post",
+      "taxonomy": [{"slug":"category","description":null,"id":72,"name":"category","terms":[{"modifiedDate":null,"id":79045,"label":"Politics","slug":"politics","description":"","mgid":"mgid:aodb:term:mtv:79045","searchIndex":null,"image":null,"adOverrides":null,"reportingOverrides":null,"attributes":{}}],"taxslug":"category"},{"slug":"story-type","description":null,"id":87,"name":"story-type","terms":[{"modifiedDate":null,"id":83283,"label":"Column","slug":"column","description":"A distinctly opinionated commentary on an event (e.g. a Politics roundtable, the \"Delete Your Account\" series).","mgid":"mgid:aodb:term:mtv:83283","searchIndex":null,"image":null,"adOverrides":{"eventOverride":null,"franchiseOverride":null,"level3Override":null,"contentTypeOverride":null},"reportingOverrides":{"eventRollup":null},"attributes":{}}],"taxslug":"story-type"}],
+      "dateCreated": "2017-03-23T17:49:28+00:00",
+      "author": "Ana Marie Cox"
+    }
+  </script>
+
+  </article>
+
+  <hr/>
+
+  <section class="cards">
+    <button class="btn more"><a href="http://www.mtv.com/news/node/ajax/recirculation?start=1&size=24"></a></button>  </section>
+
+</main>
+
+<footer class="article-footer">
+
+</footer>
+
+
+<footer class="site-footer hide" role="contentinfo">
+<div class="sub-footer">
+	<a href="http://www.mtv.com/"><span class="icon-logo-mtv icon-logo-brand"></span></a>
+	<span class="sitename"><a href="http://www.mtv.com/news">News</a></span>
+	<span class="about"><a href="http://www.mtv.com/news/about/">about</a></span>
+</div><!-- Footer ================================================== -->
+<footer>
+	<div class="container">
+		<div class="row text-center">
+			<div id="legal" class="col-lg-12 col-md-12 col-sm-12">
+				<div>
+					<ul class="inline">
+						<li><a data-report="SHOWS_FOOTER:Help/FAQ" href="http://www.mtv.com/sitewide/legal/frequently_asked_questions.jhtml" class="muted">FAQ/Help</a></li>
+						<li><a data-report="SHOWS_FOOTER:Jobs" href="http://www.viacomcareers.com/" class="muted">Jobs</a></li>
+						<li><a data-report="SHOWS_FOOTER:Terms_of_Use" href="http://www.mtv.com/sitewide/legal/terms.jhtml" class="muted">Terms of Use</a></li>
+						<li><a data-report="SHOWS_FOOTER:Privacy_Policy" href="http://www.mtv.com/sitewide/legal/privacy.jhtml" class="muted">Privacy Policy/Privacy Rights</a></li>
+						<li><a data-report="SHOWS_FOOTER:Copyright" href="http://www.mtv.com/sitewide/legal/copyright_compliance.jhtml" class="muted">Copyright</a></li>
+						<li><a data-report="SHOWS_FOOTER:Closed_Captioning" href="http://mainevents.mtvn.com/accessibility/" class="muted">Closed Captioning</a></li>
+						<li><a data-report="SHOWS_FOOTER:Eventful" href="http://losangeles.eventful.com/events" class="muted">Eventful</a></li>
+						<li><a data-report="SHOWS_FOOTER:Partners" href="http://www.mtv.com/partners/mtv_tribe/index.jhtml" class="muted">Partners</a></li>
+						<li><a data-report="SHOWS_FOOTER:Ad_Choices" href="http://srp.viacom.com/sitefaq.html" class="muted">Ad Choices <span class="icon-adchoice"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div id="social" class="col-lg-12 col-md-12 col-sm-12">
+				<div>
+					<ul class="inline">
+						<li><a data-report="SHOWS_FOOTER:SOCIAL:facebook" href="http://www.facebook.com/MTV"><span><span class="icon-share-facebook"></span></span></a></li>
+						<li><a data-report="SHOWS_FOOTER:SOCIAL:twitter" href="https://twitter.com/MTV"><span><span class="icon-share-twitter"></span></span></a></li>
+						<li><a data-report="SHOWS_FOOTER:SOCIAL:tumblr" href="http://mtv.tumblr.com"><span><span class="icon-share-tumblr"></span></span></a></li>
+						<li><a data-report="SHOWS_FOOTER:SOCIAL:instagram" href="http://instagram.com/mtv"><span><span class="icon-share-instagram"></span></span></a></li>
+						<li><a data-report="SHOWS_FOOTER:SOCIAL:vine" href="https://vine.co/MTV"><span><span class="icon-share-vine"></span></span></a></li>
+						<li><a data-report="SHOWS_FOOTER:SOCIAL:newsletter" href="http://www.mtv.com/partners/newsletters/index.jhtml"><span><span class="icon-mail"></span></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div>
+					<p><span class="icon-logo-viacom muted"></span>&copy;2017 Viacom International Inc. All Rights Reserved. MTV and all related titles and logos are trademarks of Viacom International Inc.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</footer>
+<script src="http://www.mtv.com/news/node/assets/js/321cab96e4/main.min.js" type="text/javascript" async></script>
+<script type='text/javascript'>
+if (typeof MTVN == 'undefined') MTVN = {};
+if (typeof MTVN.config == 'undefined') MTVN.config = {};
+if (typeof MTVN.config.btg == 'undefined') MTVN.config.btg = {};
+if (typeof MTVN.config.btg.DoubleClick == 'undefined') MTVN.config.btg.DoubleClick = {};
+if (typeof MTVN.config.btg.Omniture == 'undefined') MTVN.config.btg.Omniture = {};
+if (typeof MTVN.config.btg.Flux == 'undefined') MTVN.config.btg.Flux = {};
+
+MTVN.config.btg.DoubleClick.auto = false;
+MTVN.config.btg.DoubleClick.onDemand = true;
+MTVN.config.btg.Omniture.account = "viamtv";
+MTVN.config.btg.Flux.enabled = false;
+
+var vmn_page_data = {"metadata":{"property":"mtv_web","is_main":false,"hub":"news"},"mappings":{"ad-unit":{"1":"@property","2":"@hub"},"key-values":{"article_id":"2996150"},"exclusion-categories":"blogs"},"settings":{"reload":true,"reload_interval":60000,"autoRefreshByVisibility":true}};
+</script>
+<script src="http://btg.mtvnservices.com/aria/coda.html?site=mtv.com&v=3.22" type="text/javascript"></script>
+<script type="text/javascript" id="simplereach-analytics-tag">__reach_config = {"pid":"5272a23c97b0c9134f000001","title":"South Bend Mayor Pete Buttigieg On Poetry And Personal Connections","url":"http://www.mtv.com/news/2996150/south-bend-mayor-pete-buttigieg-on-poetry-and-personal-connections/","date":"2017-03-23T17:49:28+00:00","authors":"Ana Marie Cox","channels":["politics"],"tags":["Category::Politics News","Story-type::Column","Source::MTV News","Content Type::article"]};(function(){var s   = document.createElement("script");s.async = true;s.type  = "text/javascript";s.src   = document.location.protocol + "//simple-cdn.s3.amazonaws.com/js/reach.js";(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(s);})();</script><script type='text/javascript'>
+
+  var _nanData = {
+    appId: 526869,
+    sku: '2996150'
+  };
+
+  NaN_api = [
+    [_nanData.appId, ''],
+    ['visit', 'landing', 0, {
+      'sku': _nanData.sku
+    }]
+  ];
+
+  (function() {
+    var h = document.getElementsByTagName('head')[0];
+
+    var m = document.createElement('meta');
+    m.id = 'nanigans-meta';
+    m.content = JSON.stringify(_nanData);
+    h.appendChild(m);
+
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = '//cdn.nanigans.com/NaN_tracker.js';
+    h.appendChild(s);
+  })();
+
+</script>
+
+
+<!-- START Parse.ly Include: Standard -->
+<div id="parsely-root" style="display: none">
+  <span id="parsely-cfg" data-parsely-site="mtv.com"></span>
+</div>
+<script>
+  (function(s, p, d) {
+    var h=d.location.protocol, i=p+"-"+s,
+      e=d.getElementById(i), r=d.getElementById(p+"-root"),
+      u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+      :"static."+p+".com";
+    if (e) return;
+    e = d.createElement(s); e.id = i; e.async = true;
+    e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+  })("script", "parsely", document);
+</script>
+<!-- END Parse.ly Include: Standard --></div>
+</body>
+</html>
+<!-- PAGEOK -->
