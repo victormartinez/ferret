@@ -24,7 +24,10 @@ ferret.get_article()
 
 ## Contribute
 
-## Licensing
+## License
+Authored and maintained by Victor Martinez.
+
+Ferret uses a small routine to inherited from python-goose's code. See their license [here](https://github.com/victormartinez/ferret/blob/master/GOOSE-LICENSE.txt).
 
 ## Credits to Logo
 The image contains copyright to skaterjob at [Vecteezy](https://www.vecteezy.com/vector-art/128860-chinchilla-vector-set).

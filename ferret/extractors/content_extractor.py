@@ -16,6 +16,11 @@ UNWANTED_ATTRS_REGEX = "sidebar|widget|social|facebook|comment|tweet|menu|footer
                        "|button|pinterest|radio|bread|icon|dusqus|sponsor|popup|modal|pagination" \
                        "|related|scroll|tool|login|sign|next|prev|shop|continue|fb-|messenger|header|meta|twitter|rss|keyword|credit|plugin"
 
+"""
+The process of converting divs to paragraphs is inherited from python-goose's code. See the license:
+https://github.com/victormartinez/ferret/blob/master/GOOSE-LICENSE.txt
+"""
+
 
 class ContentExtractor:
     def __init__(self, context):
