@@ -75,9 +75,9 @@ class ContentExtractor:
             scores = {
                 'anchor': self._get_anchor_ratio(tag),
                 'punctuation': self._get_punctuation_ratio(tag),
-                'words': len(tag.text.split()),
-                'sentences': len(tag.text.split('.')) - 1,
-                'paragraphs': len(tag.select('p'))
+                'words': self._get_words(tag),
+                'sentences': self._get_sentences(tag),
+                'paragraphs': self._get_paragraphs(tag)
             }
             if tag.attrs:
                 tag.attrs.update(scores)
@@ -86,22 +86,46 @@ class ContentExtractor:
         return body
 
     def _get_anchor_ratio(self, tag):
-        text_length = len(remove_special_chars(tag.text))
-        anchors_length = sum(len(remove_special_chars(a.text)) for a in tag.find_all('a'))
+        try:
+            text_length = len(remove_special_chars(tag.text))
+            anchors_length = sum(len(remove_special_chars(a.text)) for a in tag.find_all('a'))
 
-        if anchors_length == 0:
+            if anchors_length == 0:
+                return 0
+            return round(anchors_length / float(text_length), 4)
+        except AttributeError:
             return 0
-        return round(anchors_length / float(text_length), 4)
 
     def _get_punctuation_ratio(self, tag):
-        tag_text = remove_special_chars(tag.text)
+        try:
+            tag_text = remove_special_chars(tag.text)
 
-        words_count = len(tag_text.split())
-        punct_count = sum(tag_text.count(symbol) for symbol in ['.', ',', '!', '?', ':', ';'])
+            words_count = len(tag_text.split())
+            punct_count = sum(tag_text.count(symbol) for symbol in ['.', ',', '!', '?', ':', ';'])
 
-        if words_count == 0:
+            if words_count == 0:
+                return 0
+            return round(punct_count / float(words_count), 4)
+        except AttributeError:
             return 0
-        return round(punct_count / float(words_count), 4)
+
+    def _get_words(self, tag):
+        try:
+            return len(tag.text.split())
+        except AttributeError:
+            return 0
+
+    def _get_sentences(self, tag):
+        try:
+            return len(tag.text.split('.')) - 1
+        except AttributeError:
+            return 0
+
+    def _get_paragraphs(self, tag):
+        try:
+            len(tag.select('p'))
+        except AttributeError:
+            return 0
 
     def _choose_by_density(self, body):
         candidate = None
