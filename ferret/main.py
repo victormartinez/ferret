@@ -8,6 +8,7 @@ from ferret.extractors.title_extractor import OpenGraphTitleExtractor, UrlTitleE
 from ferret.util.http import get_html
 from langdetect import detect
 from toolz import dicttoolz
+import json
 
 
 class Ferret:
@@ -43,7 +44,7 @@ class Ferret:
             return detect(cleaned_text)
         return lang
 
-    def get_article(self):
+    def get_article(self, output='json'):
         title = self.extract_title(self.basic_context)
         context_with_title = dicttoolz.merge(self.basic_context, {'title': title})
 
@@ -51,7 +52,12 @@ class Ferret:
         context_with_date = dicttoolz.merge(context_with_title, {'published_date': published_date})
 
         content = self.extract_html_content(context_with_date)
-        return dicttoolz.merge(context_with_date, {'content': content})
+        context = dicttoolz.merge(context_with_date, {'content': content})
+        if output == 'json':
+            return json.dumps(context)
+        elif output == 'dict':
+            return context
+        return context
 
     def extract_title(self, context=None):
         if context is None:
