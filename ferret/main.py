@@ -29,28 +29,13 @@ class Ferret:
         self.url = self._validate_url(url)
         self.html = self._validate_and_download_html(html, url)
         self.lang = self._validate_and_detect_lang(lang, html)
-
+        self.title_extractors = self._get_title_extractors()
+        self.date_extractors = self._get_date_extractors()
         self.context = {
             'html': self.html,
             'url': self.url,
             'lang': self.lang
         }
-        self.title_extractors = (
-            TwitterTitleExtractor,
-            OpenGraphTitleExtractor,
-            UrlTitleExtractor,
-            TitleCandidateExtractor,
-            TitleTagExtractor
-        )
-
-        self.date_extractors = (
-            OpenGraphPublishedDateExtractor,
-            UrlPublishedDateExtractor,
-            PublishedDateNearTitleExtractor,
-            PatternPublishedDateExtractor,
-            TimeTagExtractor,
-            MetaTagsPublishedDateExtractor
-        )
 
     def _validate_url(self, url):
         if url is None or (url is not None and not isinstance(url, str)):
@@ -71,6 +56,25 @@ class Ferret:
 
         cleaned_text = extract_body_text_from_html(html)
         return detect(cleaned_text)
+
+    def _get_title_extractors(self):
+        return (
+            TwitterTitleExtractor,
+            OpenGraphTitleExtractor,
+            UrlTitleExtractor,
+            TitleCandidateExtractor,
+            TitleTagExtractor
+        )
+
+    def _get_date_extractors(self):
+        return (
+            OpenGraphPublishedDateExtractor,
+            UrlPublishedDateExtractor,
+            PublishedDateNearTitleExtractor,
+            PatternPublishedDateExtractor,
+            TimeTagExtractor,
+            MetaTagsPublishedDateExtractor
+        )
 
     def get_article(self, output='json'):
         title = self.extract_title(self.context)
