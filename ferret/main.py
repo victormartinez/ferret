@@ -26,13 +26,9 @@ from .util.http import get_html
 
 class Ferret:
     def __init__(self, url, html=None, lang=None):
-        self.url = url
-        self.html = html
-        self.lang = lang
-
-        self._validate()
-        self._download_html()
-        self._detect_language()
+        self.url = self._validate_url(url)
+        self.html = self._validate_and_download_html(html, url)
+        self.lang = self._validate_and_detect_lang(lang, html)
 
         self.context = {
             'html': self.html,
@@ -56,27 +52,25 @@ class Ferret:
             MetaTagsPublishedDateExtractor
         )
 
-    def _validate(self):
-        if self.url is None or (self.url is not None and not isinstance(self.url, str)):
+    def _validate_url(self, url):
+        if url is None or (url is not None and not isinstance(url, str)):
             raise ValueError("The URL provided is not a string.")
+        return url
 
-        if self.html is not None and not isinstance(self.html, str):
+    def _validate_and_download_html(self, html, url):
+        if html is not None and not isinstance(html, str):
             raise ValueError("The HTML provided is not a string.")
+        return get_html(url)
 
-        if self.lang is not None and not isinstance(self.lang, str):
+    def _validate_and_detect_lang(self, lang, html):
+        if lang is not None and not isinstance(lang, str):
             raise ValueError("The LANG provided is not a string.")
 
-        if self.lang is not None and self.lang not in ['en', 'pt']:
+        if lang is not None and lang not in ['en', 'pt']:
             raise ValueError('The LANG value must be \'en\' or \'pt\'.')
 
-    def _download_html(self):
-        if self.html is None:
-            self.html = get_html(self.url)
-
-    def _detect_language(self):
-        if not self.lang:
-            cleaned_text = extract_body_text_from_html(self.html)
-            self.lang = detect(cleaned_text)
+        cleaned_text = extract_body_text_from_html(html)
+        return detect(cleaned_text)
 
     def get_article(self, output='json'):
         title = self.extract_title(self.context)
