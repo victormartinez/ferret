@@ -34,7 +34,11 @@ class Ferret:
         self._download_html()
         self._detect_language()
 
-        self.context = {'html': self.html, 'url': url, 'lang': self.lang}
+        self.context = {
+            'html': self.html,
+            'url': self.url,
+            'lang': self.lang
+        }
         self.title_extractors = (
             TwitterTitleExtractor,
             OpenGraphTitleExtractor,
