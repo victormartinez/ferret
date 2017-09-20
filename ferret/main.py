@@ -32,8 +32,9 @@ class Ferret:
 
         self._validate()
         self._download_html()
+        self._detect_language()
 
-        self.context = {'html': self.html, 'url': url, 'lang': self._get_lang(lang, self.html)}
+        self.context = {'html': self.html, 'url': url, 'lang': self.lang}
         self.title_extractors = (
             TwitterTitleExtractor,
             OpenGraphTitleExtractor,
@@ -68,11 +69,10 @@ class Ferret:
         if self.html is None:
             self.html = get_html(self.url)
 
-    def _get_lang(self, lang, html):
-        if not lang:
-            cleaned_text = extract_body_text_from_html(html)
-            return detect(cleaned_text)
-        return lang
+    def _detect_language(self):
+        if not self.lang:
+            cleaned_text = extract_body_text_from_html(self.html)
+            self.lang = detect(cleaned_text)
 
     def get_article(self, output='json'):
         title = self.extract_title(self.context)
