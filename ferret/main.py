@@ -1,22 +1,38 @@
-from ferret.extractors.content_extractor import extract_body_text_from_html
-from ferret.cleaner.text import normalize_text
-from ferret.extractors.content_extractor import ContentExtractor
-from ferret.extractors.published_date_extractor import OpenGraphPublishedDateExtractor, UrlPublishedDateExtractor, \
-    TimeTagExtractor, PatternPublishedDateExtractor, MetaTagsPublishedDateExtractor, PublishedDateNearTitleExtractor
-from ferret.extractors.title_extractor import OpenGraphTitleExtractor, UrlTitleExtractor, TitleCandidateExtractor, \
-    TitleTagExtractor, TwitterTitleExtractor
-from ferret.util.http import get_html
+import json
+
 from langdetect import detect
 from toolz import dicttoolz
-import json
+
+from .cleaner.text import normalize_text
+from .extractors.content_extractor import extract_body_text_from_html
+from .extractors.content_extractor import ContentExtractor
+from .extractors.published_date_extractor import (
+    OpenGraphPublishedDateExtractor,
+    UrlPublishedDateExtractor,
+    TimeTagExtractor,
+    PatternPublishedDateExtractor,
+    MetaTagsPublishedDateExtractor,
+    PublishedDateNearTitleExtractor
+)
+from .extractors.title_extractor import (
+    OpenGraphTitleExtractor,
+    UrlTitleExtractor,
+    TitleCandidateExtractor,
+    TitleTagExtractor,
+    TwitterTitleExtractor
+)
+from .util.http import get_html
 
 
 class Ferret:
     def __init__(self, url, html=None, lang=None):
-        if html is not None and not isinstance(html, str):
-            raise ValueError("HTML must be a string.")
+        self.url = url
+        self.html = html
+        self.lang = lang
 
-        self.html = self._get_html(url, html)
+        self._validate()
+        self._download_html()
+
         self.basic_context = {'html': self.html, 'url': url, 'lang': self._get_lang(lang, self.html)}
         self.title_extractors = (
             TwitterTitleExtractor,
@@ -35,8 +51,22 @@ class Ferret:
             MetaTagsPublishedDateExtractor
         )
 
-    def _get_html(self, url, html):
-        return html if html is not None else get_html(url)
+    def _validate(self):
+        if self.url is None or (self.url is not None and not isinstance(self.url, str)):
+            raise ValueError("The URL provided is not a string.")
+
+        if self.html is not None and not isinstance(self.html, str):
+            raise ValueError("The HTML provided is not a string.")
+
+        if self.lang is not None and not isinstance(self.lang, str):
+            raise ValueError("The LANG provided is not a string.")
+
+        if self.lang is not None and self.lang not in ['en', 'pt']:
+            raise ValueError('The LANG value must be \'en\' or \'pt\'.')
+
+    def _download_html(self):
+        if self.html is None:
+            self.html = get_html(self.url)
 
     def _get_lang(self, lang, html):
         if not lang:
