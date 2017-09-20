@@ -33,7 +33,7 @@ class Ferret:
         self._validate()
         self._download_html()
 
-        self.basic_context = {'html': self.html, 'url': url, 'lang': self._get_lang(lang, self.html)}
+        self.context = {'html': self.html, 'url': url, 'lang': self._get_lang(lang, self.html)}
         self.title_extractors = (
             TwitterTitleExtractor,
             OpenGraphTitleExtractor,
@@ -75,8 +75,8 @@ class Ferret:
         return lang
 
     def get_article(self, output='json'):
-        title = self.extract_title(self.basic_context)
-        context_with_title = dicttoolz.merge(self.basic_context, {'title': title})
+        title = self.extract_title(self.context)
+        context_with_title = dicttoolz.merge(self.context, {'title': title})
 
         published_date = self.extract_published_date(context_with_title)
         context_with_date = dicttoolz.merge(context_with_title, {'published_date': published_date})
@@ -91,7 +91,7 @@ class Ferret:
 
     def extract_title(self, context=None):
         if context is None:
-            context = self.basic_context
+            context = self.context
 
         extractors = self._get_extractors(self.title_extractors, context)
         for e in extractors:
@@ -102,7 +102,7 @@ class Ferret:
 
     def extract_published_date(self, context=None):
         if context is None:
-            context = self.basic_context
+            context = self.context
 
         extractors = self._get_extractors(self.date_extractors, context)
         for e in extractors:
