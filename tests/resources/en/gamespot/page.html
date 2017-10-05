@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en" itemscope id="" class="no-js no-touch ">
+
+<head><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vg8OUFFACgYBUVZQDw=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1059.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+
+  <title>Shadow Of War Review Roundup - GameSpot</title>
+
+  <meta name="description" content="Middle-earth: Shadow of War&#039;s reviews have gone live ahead of its October 10 release date on PS4, Xbox One, and PC.">
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="application-name" content="GameSpot"/>
+  <meta name="msapplication-TileColor" content="#26292B"/>
+  <meta name="msapplication-TileImage" content="https://static.gamespot.com/bundles/gamespotsite/images/win8pin.png"/>
+
+                                <meta property="SocialTitle" content="Shadow Of War Review Roundup" />
+          <meta property="SocialDeck" content="Middle-earth: Shadow of War&#039;s reviews have gone live ahead of its October 10 release date on PS4, Xbox One, and PC." />
+          <meta property="SocialImage" content="https://static.gamespot.com/uploads/screen_kubrick/1556/15568848/3297870-3196120070-middle-earth-shadow-of-war-listing-thumb-01-ps4-us-17feb17" />
+
+
+
+    <meta name="userAuthState" content="noUser"/>
+
+            <meta name="modal-cdn-url" content="/js/modals.json">
+
+    <meta name='js-sort-filter-text' content='yes'>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta itemprop="cdnHost" content="static.gamespot.com">
+      <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="apple-touch-icon" href="https://static.gamespot.com/bundles/gamespotsite/images/touch-icon-iphone-precomposed.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://static.gamespot.com/bundles/gamespotsite/images/touch-icon-ipad.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://static.gamespot.com/bundles/gamespotsite/images/touch-icon-iphone-retina-precomposed.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://static.gamespot.com/bundles/gamespotsite/images/touch-icon-ipad-retina-precomposed.png">
+
+        <link rel="amphtml" href="https://www.gamespot.com/amp-articles/shadow-of-war-review-roundup/1100-6453805/">
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": "https://www.gamespot.com/articles/shadow-of-war-review-roundup/1100-6453805/",
+        "headline": "Shadow Of War Review Roundup",
+        "description": "Middle-earth: Shadow of War&#039;s reviews have gone live ahead of its October 10 release date on PS4, Xbox One, and PC.",
+        "datePublished": "2017-10-05T10:01:00Z",
+        "dateModified": "2017-10-05T10:01:49Z",
+        "author": {
+          "@type": "Person",
+          "name": "Oscar Dayus"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Gamespot",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://static.gamespot.com/bundles/gamespotsite/images/gs-logo-amp.png",
+            "width": "370",
+            "height": "144"
+          }
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://static.gamespot.com/uploads/original/1556/15568848/3297870-3196120070-middle-earth-shadow-of-war-listing-thumb-01-ps4-us-17feb17",
+          "height": "900",
+          "width": "1600"
+        }
+      }
+    </script>
+
+      <meta id="view-guid-meta" name="view-guid-meta" itemprop="view-guid" content="">
+
+
+
+
+
+
+
+    <meta id="ad-settings" class="js-post-render-tracking-consumer ad-settings" itemprop="ad-settings" content="{&quot;service&quot;:&quot;dart&quot;,&quot;client&quot;:&quot;xfp&quot;,&quot;deferred&quot;:true,&quot;load_in_head&quot;:&quot;gpt&quot;,&quot;single_request&quot;:true,&quot;disable_initial_load&quot;:true,&quot;enable_callback&quot;:true,&quot;enable_collapse_empty_divs&quot;:true,&quot;enable_guilt&quot;:true,&quot;script&quot;:&quot;\/\/www.googletagservices.com\/tag\/js\/gpt.js&quot;,&quot;unit_name&quot;:&quot;\/8264\/aw-gamespot\/news&quot;,&quot;target_params&quot;:{&quot;session&quot;:&quot;h&quot;,&quot;test&quot;:&quot;{abTestLabelDart}&quot;,&quot;ptype&quot;:&quot;news_article&quot;,&quot;cid&quot;:&quot;gs-1100-6453805&quot;,&quot;game&quot;:&quot;middleearth-shadow-of-war&quot;,&quot;genre&quot;:&quot;action,adventure&quot;,&quot;rdate&quot;:&quot;m2&quot;,&quot;con&quot;:&quot;playstation-4,xbox-one,pc&quot;,&quot;publisher&quot;:&quot;warner-bros-interactive-entertainment&quot;,&quot;embed&quot;:&quot;autoplay&quot;,&quot;franchise&quot;:&quot;the-lord-of-the-rings&quot;,&quot;category&quot;:&quot;games&quot;,&quot;user&quot;:&quot;anon&quot;},&quot;slot_order&quot;:[&quot;leader_top&quot;,&quot;leader_plus_top&quot;,&quot;mpu_top&quot;,&quot;mpu_plus_top&quot;,&quot;skin_top&quot;,&quot;omnibar_top&quot;,&quot;nav_logo_top&quot;,&quot;logo_top&quot;,&quot;interstitial&quot;,&quot;native-top&quot;,&quot;incontent-ad&quot;,&quot;mpu_bottom&quot;,&quot;leader_bottom&quot;,&quot;companion_ad&quot;,&quot;ytembed_top&quot;,&quot;overlay_leader_top&quot;,&quot;overlay_mpu_top&quot;],&quot;mapped_units&quot;:{&quot;interstitial&quot;:{&quot;outOfPage&quot;:true},&quot;leader_plus_top&quot;:{&quot;size&quot;:[[970,66],[728,90],[970,90],[970,250]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;}},&quot;skin_top&quot;:{&quot;size&quot;:[[1600,1000]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;}},&quot;incontent-ad&quot;:{&quot;size&quot;:[[321,31],[11,11]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;,&quot;strnativekey&quot;:&quot;wht2J3jeQyvCupX61JvMZoej&quot;}},&quot;native-top&quot;:{&quot;size&quot;:[[11,11]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;,&quot;strnativekey&quot;:&quot;wht2J3jeQyvCupX61JvMZoej&quot;}},&quot;mpu_top&quot;:{&quot;size&quot;:[[300,250]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;}},&quot;mpu_bottom&quot;:{&quot;size&quot;:[[300,250]],&quot;target&quot;:{&quot;pos&quot;:&quot;bottom&quot;}},&quot;leader_bottom&quot;:{&quot;size&quot;:[[728,90],[970,66]],&quot;target&quot;:{&quot;pos&quot;:&quot;bottom&quot;}},&quot;companion_ad&quot;:{&quot;size&quot;:[[1,1]]},&quot;logo_top&quot;:{&quot;size&quot;:[[160,70]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;}}},&quot;region&quot;:&quot;us&quot;}">
+
+
+                                            <meta id="qualtrics-settings"
+      itemprop="qualtrics-settings"
+      content="{&quot;id&quot;:&quot;ZN_aah4Vz47v491vLf&quot;,&quot;script&quot;:&quot;\/\/zn_aah4vz47v491vlf-cbs.siteintercept.qualtrics.com\/WRSiteInterceptEngine\/&quot;}" />
+
+    <meta name="username" id="username" content="GS|Anonymous" />
+
+    <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@GameSpot">
+      <meta name="twitter:creator" content="@GameSpot">
+
+  		<meta property="og:image" content="https://static.gamespot.com/uploads/screen_kubrick/1556/15568848/3297870-3196120070-middle-earth-shadow-of-war-listing-thumb-01-ps4-us-17feb17"/>
+
+        	<meta property="og:title" content="Shadow Of War Review Roundup"/>
+  	        <meta property="og:description" content="Middle-earth: Shadow of War&#039;s reviews have gone live ahead of its October 10 release date on PS4, Xbox One, and PC."/>
+
+  <meta property="og:site_name" content="GameSpot"/>
+
+      <meta property="og:type" content="article"/>
+
+
+      <meta property="og:url" content="https://www.gamespot.com/articles/shadow-of-war-review-roundup/1100-6453805/"/>
+              <link rel="canonical" href="https://www.gamespot.com/articles/shadow-of-war-review-roundup/1100-6453805/" />
+
+
+
+
+  <meta name="guid" content="1100-6453805" />
+  <meta name="category" content="Games" />
+
+        <script src="https://static.gamespot.com/js/compiled/header_js.js?183e553b93b5c8363130870bfdc8fd70" type="text/javascript"></script>
+
+
+        <meta id="richTextEditorTheme" itemprop="richTextEditorTheme" content="white" data-themes="{&quot;white&quot;:&quot;https:\/\/static.gamespot.com\/bundles\/gamespotsite\/css\/wysiwyg_white-bce4d9cf07b2d61fb09d7cfc83e84867.css&quot;,&quot;black&quot;:&quot;https:\/\/static.gamespot.com\/bundles\/gamespotsite\/css\/wysiwyg_black-bce4d9cf07b2d61fb09d7cfc83e84867.css&quot;}">
+
+
+            <!--[if !IE]> --><link id="skin-color" rel="stylesheet" href="https://static.gamespot.com/bundles/gamespotsite/css/gamespot_white-bce4d9cf07b2d61fb09d7cfc83e84867.css"><!-- <![endif]--><!--[if IE]><link id="skin-color-0" rel="stylesheet" href="https://static.gamespot.com/bundles/gamespotsite/css/gamespot_white_split1-bce4d9cf07b2d61fb09d7cfc83e84867.css"><link id="skin-color-1" rel="stylesheet" href="https://static.gamespot.com/bundles/gamespotsite/css/gamespot_white_split2-bce4d9cf07b2d61fb09d7cfc83e84867.css"><![endif]-->
+
+
+    <meta id="kCode" itemprop="kCode" name="kCode" content="/contra/cheats/">
+
+
+
+                  <script src="//js-sec.indexww.com/ht/ls-gamespot.js" async></script>
+                      <script type="text/javascript" charset="utf-8">
+        (function(G,o,O,g,L,e){G[g]=G[g]||function(){(G[g]['q']=G[g]['q']||[]).push(
+        arguments)},G[g]['t']=1*new Date;L=o.createElement(O),e=o.getElementsByTagName(
+        O)[0];L.async=1;L.src='//www.google.com/adsense/search/async-ads.js';
+        e.parentNode.insertBefore(L,e)})(window,document,'script','_googCsa');
+      </script>        <script type="text/javascript">
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function () {
+          var gads = document.createElement("script");
+          gads.async = true;
+          gads.id = "ad-service-client";
+          gads.className = "js-spof";
+          gads.type = "text/javascript";
+                    gads.setAttribute('onerror',"this.setAttribute('data-is-spof','true')");
+          gads.src = "//www.googletagservices.com/tag/js/gpt.js";
+          var node = document.getElementsByTagName("script")[0];
+          node.parentNode.insertBefore(gads, node);
+                  })();
+      </script>
+
+              <style>
+/* Hide the feedback button temporarily - Lark 4/22/16 */
+#qualtrics-feedback {
+  display: none;
+}
+
+body.skin-yes { overflow-x: hidden; display: block !important; }
+/* Temporary last minute on Friday fix for headers being cut off on smaller screens */
+@media only screen and (max-width: 1209px) {
+  .pod-title>h4,
+  .pod-title>h4>h4 {
+    font-size: 15px;
+    padding-right: 5px;
+  }
+}
+h4 { font-size: 1.28571rem; line-height: 1.62857rem; }
+@media only screen and (min-width: 1210px) {
+h4 { font-size: 1.28571rem; line-height: 1.72857rem; }
+}
+
+/* This is a weird one but it cuts off the 3rd game href */
+.pod--topgames.pod-filter .filter-results { position: static; }
+
+/* GROSS fix for chat ad problem */
+.has-ads .s-chat #wrapper {
+top: 90px;
+}
+
+/* fix for FF not liking width on table-cell */
+.pod-popular .media--small .media-img { width: inherit; }
+
+/* fixes custom html 5 video embeds bleeding outside container */
+[data-embed-type="html"] video { max-width: 100%; }
+
+/* PC Chrome button whitespace fix */
+.btn { white-space: nowrap; }
+
+.pod-filter .filter-results.grid { overflow: hidden; }
+#incontent_top iframe { display:none; }
+.content-type.content-type--review { box-shadow: none; background: none; }
+
+/* Removing at the moment because of a visual bug on prod, this will need to be reevaluated */
+.skin-yes.money-rainbows #mantle_skin:before {
+display: none;
+}
+
+/* For seamless, larger images that are broken into parts. Keep this for now! -DA */
+#infographic figure,
+#infographic p {
+    margin-bottom: 0;
+}
+
+/* Clear native ads */
+.media--sponsored {
+    clear: both;
+}
+
+/* Top Leader misaligned. Going to investigate why | DA | 1/12/2015 */
+.ad-wrap.ad-wrap-leader_plus_top > div > div > div {
+  margin: 0 auto;
+}
+
+.has-vid-countdown > .av-video-player-bg > .av-video-title {display: none !important; }
+
+/* !LAST-MINUTE - 12/09/2016 - ES
+    Best of 2016 LIs misaligning */
+.span2-5 { min-height: 170px; }
+
+/* !LAST-MINUTE - 12/13/2016 - ES
+    Best of 2016 Mobile Article Margins */
+@media (max-width: 759px) { .article-body { margin: 0 !important; } }
+
+/* !LAST-MINUTE - 12/20/2016 - ES
+    Best of 2016 Winner Thumbnail */
+.best-of-goty-winner {
+   background-image: url('http://www.gamespot.com/bundles/gamespotsite/images/events/bestof2016/kubrick.jpg') !important;
+}
+/* !LAST-MINUTE - 5/11/2017 - DA
+    Fixes transparent background for review score in promos */
+.content-type.content-type--review {
+    background: #e03800;
+}
+
+/* !LAST-MINUTE - 5/31/2017 - DA
+    Temporarily hiding select items on the iframe for E3 2017 */
+.body-event--e3--iframe .context-list--vertical, .body-event--e3--iframe .nav-bar {
+    display: none;
+}
+
+/* !LAST-MINUTE - 6/2/2017 - ES
+    E3 2017 - Fixing height of schedule bar on skins */
+@media only screen and (min-width: 1600px) {
+  .skin-yes .e3--schedule-hud h4 {
+    padding: 0.65rem 0 !important;
+	}
+}
+
+.e3--publisher-subhub .pod--topgames {
+  display: none;
+}
+
+.body-event--e3-2017 .promo--container .btn-large {
+  background: #e03800;
+}
+
+.body-event--e3-2017 .promo--container .btn-large:hover {
+  background: #f03c00;
+  color: #FFFFFF;
+}
+
+.body-event--e3-2017.skin-yes .mapped-leader_plus_top {
+  margin-bottom: 0
+}
+
+.skin-no .mapped-leader_top, .skin-no .mapped-leader_plus_top {
+  padding-bottom: 20px;
+}
+
+.e3--schedule-two-column {
+  display: none;
+}
+
+/*
+Remove: after https://github.com/cbsi/gamespot/pull/1993 goes live
+*/
+.promo-strip.span12 {
+  float: none
+}
+
+/* !LAST-MINUTE - 6/2/2017 - ES
+    E3 2017 - Fixing Press Conference Sidebar Module padding */
+.l-item--push {
+    margin-left: 0;
+}
+
+/* !LAST-MINUTE - 8/3/2017 - DA
+    Stream on homepage has jacked button
+Remove: after https://github.com/cbsi/gamespot/pull/1993 goes live
+*/
+.body-home .btn.btn-border.white {
+    background: transparent;
+    border-color: #e03800;
+    color: #e03800;
+}
+
+.body-home .promo--video-show .btn.btn-border.white {
+    background: transparent;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.body-home .btn.btn-border.white:hover {
+    background: rgba(224,56,0,0.25)
+}
+
+.body-home .promo--video-show .btn.btn-border.white:hover {
+    background: rgba(255,255,255,0.25)
+}
+</style>
+    <meta name='pageType' data-type='article' data-id='6453805' />
+
+            <script type="text/javascript">
+        //---------------------------------------------------------
+        // Boomtrain glue
+        !function(){function a(a){return function(){var b=Array.prototype.slice.call(arguments);return b.unshift(a),window._bt.push(b),window._bt}}window._bt=window._bt||[];for(var b=["track","identify","initialize","clear","setBsin","person.set"],c=0;c<b.length;c++){var d=window._bt,e=b[c].split("."),f=e[0],g=f;2===e.length&&(d[f]=d[f]||{},d=d[f],f=e[1],g=b[c]),d[f]=a(g)}if(!document.getElementById("analyticstrain-js")){var h=document.createElement("script");h.type="text/javascript",h.id="analyticstrain-js",h.async=!0,h.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.boomtrain.com/analyticstrain-2.min.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(h,i)}}();
+        _bt.initialize("0eddb34d4eb4be1df2b4160ec047aa73");
+        //---------------------------------------------------------
+      </script>
+
+
+</head>
+
+
+<body id="default-body" class="default has-nav-slim body-news has-page-events skin-no one-column seamless-article " style="display: block !important" >
+            <section id="message-block" class="message-success" style="display: none">
+                      </section>
+
+    <div id="site-main">
+
+
+
+              <!-- Mast Head --><header id="masthead" role="banner" class="masthead js-show-scroll-dir js-promo-alert-wrapper is-nav-fixed has-scrolled"><div id="goroostcom-bell"></div><div class="container masthead-container masthead-container--flex masthead-container--cushion"><div id="masthead-logo" class="masthead-logo nav-mobile__logo"><a href=https://www.gamespot.com/ data-click-track-id=coreHeaderFrontDoor  class="logo-site"><i><svg class="symbol symbol-logo-outline-full" aria-role="icon"><use xlink:href="#symbol-logo-outline-full"></use></svg></i></a></div><a id="js-btn-mobile-nav" class="nav-mobile__menu btn-mobile btn-mobile-nav"><i><svg class="symbol symbol-reorder symbol--size-2x" title="Reveal" aria-role="icon"><use xlink:href="#symbol-reorder"></use></svg></i><i><svg class="symbol symbol-remove symbol--size-2x" title="Close" aria-role="icon"><use xlink:href="#symbol-remove"></use></svg></i><i><svg class="symbol symbol-search symbol--color-link" title="Search" aria-role="icon"><use xlink:href="#symbol-search"></use></svg></i></a><nav role="navigation" class="masthead-nav masthead-nav--platforms"><ul class="nav-bar"><li class="nav-bar__item"><a href=/pc/ data-click-track-id=eyebrow-platform-pc >PC</a></li><li class="nav-bar__item"><a href=/ps4/ data-click-track-id=eyebrow-platform-ps4 >PS4</a></li><li class="nav-bar__item"><a href=/xbox-one/ data-click-track-id=eyebrow-platform-xbox-one >Xbox One</a></li><li class="nav-bar__item"><a href=/nintendo-switch/ data-click-track-id=eyebrow-platform-nintendo-switch >Switch</a></li><li class="nav-bar__item nav-bar__item--platforms dropnav menu-hover js-dropnav"><a href="#" title="Open More Platforms Menu" >More <i><svg class="symbol symbol-caret-down symbol--color-link symbol--size-rem hide-tablet" aria-role="icon"><use xlink:href="#symbol-caret-down"></use></svg></i></a><ul class="dropnav-menu menu--small menu--arrow-top menu--has-borderRadius js-dropnav-active"><li class="dropnav-menu__item"><a href=/wii-u/ data-click-track-id=eyebrow-platform-wii-u >Wii U</a></li><li class="dropnav-menu__item"><a href=/ps3/ data-click-track-id=eyebrow-platform-ps3 >PS3</a></li><li class="dropnav-menu__item"><a href=/vita/ data-click-track-id=eyebrow-platform-vita >Vita</a></li><li class="dropnav-menu__item"><a href=/xbox-360/ data-click-track-id=eyebrow-platform-xbox-360 >Xbox 360</a></li><li class="dropnav-menu__item"><a href=/3ds/ data-click-track-id=eyebrow-platform-3ds >3DS</a></li><li class="dropnav-menu__item"><a href="/gametech/">Gametech</a></li></ul></li></ul></nav><nav role="navigation" class="masthead-nav masthead-nav--main"><ul class="nav-bar"><li class="nav-bar__item"><a href=https://www.gamespot.com/reviews/ data-click-track-id=coreHeaderReviewsList >Reviews</a></li><li class="nav-bar__item"><a href=https://www.gamespot.com/news/ data-click-track-id=coreHeaderNewsHub >News</a></li><li class="nav-bar__item"><a href=https://www.gamespot.com/universe/ data-click-track-id=coreHeaderEntertainmentDoor >Universe</a></li><li class="nav-bar__item dropnav menu-hover js-dropnav"><a href=https://www.gamespot.com/videos/ data-click-track-id=coreHeaderVideosList  title="Videos Menu Opened" >Videos <i><svg class="symbol symbol-caret-down symbol--color-link symbol--size-rem hide-tablet" aria-role="icon"><use xlink:href="#symbol-caret-down"></use></svg></i></a><ul id="header-video-dropnav" class="dropnav-menu menu--medium menu--arrow-top menu--has-borderRadius dropnav-video js-dropnav-active"><li class="dropnav-menu__item"><a href=https://www.gamespot.com/videos/ data-click-track-id=coreHeader/dropdownvideosVideosList ><span class="dropnav-list__img"><i><svg class="symbol symbol-youtube-play symbol--color-link symbol--size-large" aria-role="icon"><use xlink:href="#symbol-youtube-play"></use></svg></i></span>All Videos
+    </a></li><li class="dropnav-menu__item"><a href=https://www.gamespot.com/videos/trailers/ data-click-track-id=coreHeader/dropdownvideosVideoTrailers ><span class="dropnav-list__img"><i><svg class="symbol symbol-ticket symbol--color-link symbol--size-large" aria-role="icon"><use xlink:href="#symbol-ticket"></use></svg></i></span>Trailers</a></li><li class="dropnav-menu__item dropnav-menu__item--break">-----</li><li class="dropnav-menu__item dropnav-submenu__item--shows"><a href=https://www.gamespot.com/shows/reboot/ data-click-track-id=coreHeader/dropdownvideosVideoShow ><div class="img"><img src="https://static.gamespot.com/uploads/square_mini/536/5360430/3200885-reboot_avatar.jpg" alt="Reboot" class="dropnav-submenu__image" /></div>          Reboot
+        </a></li><li class="dropnav-menu__item dropnav-submenu__item--shows"><a href=https://www.gamespot.com/shows/gsnews/ data-click-track-id=coreHeader/dropdownvideosVideoShow1 ><div class="img"><img src="https://static.gamespot.com/uploads/square_mini/1551/15514330/2998255-news_logo.jpg" alt="GameSpot News" class="dropnav-submenu__image" /></div>          GameSpot News
+        </a></li><li class="dropnav-menu__item dropnav-submenu__item--shows"><a href=https://www.gamespot.com/shows/the-lobby/ data-click-track-id=coreHeader/dropdownvideosVideoShow2 ><div class="img"><img src="https://static.gamespot.com/uploads/square_mini/104/1049837/3003963-thjelobby-2016-avatar.jpg" alt="The Lobby" class="dropnav-submenu__image" /></div>          The Lobby
+        </a></li><li class="dropnav-menu__item dropnav-submenu__item--shows"><a href=https://www.gamespot.com/shows/New_Releases/ data-click-track-id=coreHeader/dropdownvideosVideoShow3 ><div class="img"><img src="https://static.gamespot.com/uploads/square_mini/104/1049837/2961853-new_releases2015-avatar.jpg" alt="New Releases" class="dropnav-submenu__image" /></div>          New Releases
+        </a></li><li class="dropnav-menu__item dropnav-submenu__item--shows"><a href=https://www.gamespot.com/shows/gamespot-live/ data-click-track-id=coreHeader/dropdownvideosVideoShow4 ><div class="img"><img src="https://static.gamespot.com/uploads/square_mini/1352/13527689/3274689-avatar.jpg" alt="GameSpot Live" class="dropnav-submenu__image" /></div>          GameSpot Live
+        </a></li><li class="dropnav-menu__item dropnav-submenu__item--shows"><a href=https://www.gamespot.com/shows/lets-play/ data-click-track-id=coreHeader/dropdownvideosVideoShow5 ><div class="img"><img src="https://static.gamespot.com/uploads/square_mini/1365/13658182/3142527-avatar.jpg" alt="Let&#039;s Play" class="dropnav-submenu__image" /></div>          Let&#039;s Play
+        </a></li><li class="dropnav-menu__item dropnav-submenu__item--shows"><a href=https://www.gamespot.com/shows/now-playing/ data-click-track-id=coreHeader/dropdownvideosVideoShow6 ><div class="img"><img src="https://static.gamespot.com/uploads/square_mini/1527/15277921/2787010-nowplaying_avatar.jpg" alt="Now Playing" class="dropnav-submenu__image" /></div>          Now Playing
+        </a></li><li class="dropnav-menu__item dropnav-submenu__item--shows"><a href=https://www.gamespot.com/shows/quick-look/ data-click-track-id=coreHeader/dropdownvideosVideoShow7 ><div class="img"><img src="https://static.gamespot.com/uploads/square_mini/86/864739/2787991-avatar-nolabel_gbquicklook_show_jb.jpg" alt="Quick Look" class="dropnav-submenu__image" /></div>          Quick Look
+        </a></li></ul></li><li class="nav-bar__item dropnav menu-hover js-dropnav"><a href=https://www.gamespot.com/forums/ data-click-track-id=coreHeaderForumLatestTopicList  title="Forums Menu Opened" >Forums <i><svg class="symbol symbol-caret-down symbol--color-link symbol--size-rem hide-tablet" aria-role="icon"><use xlink:href="#symbol-caret-down"></use></svg></i></a><ul class="dropnav-menu menu--medium menu--arrow-top menu--has-borderRadius js-dropnav-active" data-direction="left"><li class="dropnav-menu__item"><a href=/forums/games-discussion-1000000/ data-click-track-id=coreHeaderForumTopicList >Games Discussion</a></li><li class="dropnav-menu__item"><a href=/forums/pc-mac-linux-society-1000004/ data-click-track-id=coreHeaderForumTopicList1 >PC/Mac/Linux Society</a></li><li class="dropnav-menu__item"><a href=/forums/playstation-nation-1000002/ data-click-track-id=coreHeaderForumTopicList2 >PlayStation Nation</a></li><li class="dropnav-menu__item"><a href=/forums/xbox-association-1000003/ data-click-track-id=coreHeaderForumTopicList3 >Xbox Association</a></li><li class="dropnav-menu__item"><a href=/forums/nintendo-fan-club-1000001/ data-click-track-id=coreHeaderForumTopicList4 >Nintendo Fan Club</a></li><li class="dropnav-menu__item"><a href=/forums/system-wars-314159282/ data-click-track-id=coreHeaderForumTopicList5 >System Wars</a></li><li class="dropnav-menu__item"><a href=/forums/offtopic-discussion-314159273/ data-click-track-id=coreHeaderForumTopicList6 >Off-Topic Discussion</a></li><li class="dropnav-menu__item"><a href=/forums/gamespot-giveaways-909399116/ data-click-track-id=coreHeaderForumTopicList7 >GameSpot Giveaways</a></li><li class="dropnav-menu__item"><a href=/forums/bug-reporting-feedback-1000006/ data-click-track-id=coreHeaderForumTopicList8 >Bug Reporting & Feedback</a></li><li class="dropnav-menu__item"><a href=https://www.gamespot.com/forums/ data-click-track-id=core/headerForumnavstaticForumLatestTopicList >See all Forums</a></li></ul></li><li class="nav-bar__item hide-desktop"><a href=https://auth.gamespot.com/login/ data-click-track-id=coreHeaderLogin  > Sign In/Sign Up</a></li></ul></nav><ul class="masthead-userBox pull-right nav-mobile__auth"><li class="masthead-userBox__item signup hide-tablet"><i><svg class="symbol symbol-rocket symbol--color-link symbol--effect-highlight--secondary hide-mobile" aria-role="icon"><use xlink:href="#symbol-rocket"></use></svg></i><a href=https://auth.gamespot.com/login/ data-click-track-id=coreHeader/userinfoLogin  > Sign in</a> / <a href=https://auth.gamespot.com/signup/ data-click-track-id=coreHeader/userinfoSignUp  >Join</a></li></ul><div class="masthead-search pull-right"><a href="" class=" masthead-search-btn js-search-btn"><i><svg class="symbol symbol-search symbol--position-left-absolute symbol--position-flush symbol--size-resp--base symbol--search-btn" title="Search GameSpot" aria-role="icon"><a  title="Search GameSpot" href="#"><use xlink:href="#symbol-search"></use></a></svg></i></a></div></div><div class="masthead-search-hold nav-mobile__search"><div class="container"><div class="span12 masthead-search-form"><span id="js-btn-mobile-search" class="search-symbol btn-mobile-search"><a href=""><i><svg class="symbol symbol-search symbol--position-left-absolute symbol--position-flush symbol--size-resp--base" title="Search GameSpot" aria-role="icon"><a  title="Search GameSpot" href="#"><use xlink:href="#symbol-search"></use></a></svg></i></a><a href=""><i><svg class="symbol symbol-remove symbol--position-left-absolute symbol--position-flush symbol--size-resp--base" title="Cancel Search" aria-role="icon"><a  title="Cancel Search" href="#"><use xlink:href="#symbol-remove"></use></a></svg></i></a></span><form action="/search/" method="get" class="masthead-search search"><fieldset><input type="hidden" id="search-indice-game" name="indices[0]" value="game"/><input type="hidden" id="search-indice-hub" name="indices[1]" value="hub"/><input type="hidden" id="search-indice-videoshow" name="indices[2]" value="videoshow"/><input type="hidden" id="search-indice-platform" name="indices[3]" value="platform"/><input type="hidden" id="search-indice-franchise" name="indices[4]" value="franchise"/><input type="hidden" id="search-indice-topic" name="indices[5]" value="topic"/><input type="search" id="search-main" name="q" data-click-track-id=coreHeaderSearch-main
+                   placeholder="Search GameSpot" results="5"
+                   autocomplete="off" class="search-input ready" data-search-index="game" value=""/></fieldset></form><span class="masthead-search-cancel"><a href=""><i><svg class="symbol symbol-remove symbol--masthead-search-btn symbol--size-resp--base symbol--search-close-btn symbol--js-search-close-btn" title="Close" aria-role="icon"><a  title="Close" href="#"><use xlink:href="#symbol-remove"></use></a></svg></i></a></span></div></div></div></header>
+                                <div id="site-wrapper" >
+            <div id="mantle_skin">
+    <div id="rbSkin">
+      <span id="adSkinLeft"></span>
+      <span id="adSkinRight"></span>
+                  <div id="wrapper">
+                                        <div id="site" role="main">
+    <div id="default-content" class="js-seamless-content container row">
+                        <div class="primary-content js-seamless-content__page t-container ">
+                                      <div class="article--one-column has-pad--vert--ultra">
+
+
+    <article itemscope itemtype="http://schema.org/Article" class="content-body news-article js-seamless-content__page-content article article--news article--one-column content-body--bufferSocial content-body--bufferAd has-rhythm" data-type-id="1100" data-guid="1100-6453805">
+
+
+            <section class="news-hdr js-seamless-content__page-header has-rhythm--max"><h1 class="news-title instapaper_title entry-title type-headline" itemprop="name">Shadow Of War Review Roundup</h1><h2 class="news-deck type-subheader" itemprop="description">Shadow of More or Shadow of Bore?</h2><div class="news-meta has-rhythm--vert-top has-pad--top ellipseborder-top clearfix"><h3 class="news-byline pull-left text-base no-rhythm">      Last updated by
+  <a href="/profile/oscardayus/" rel="author">Oscar Dayus</a>
+                                on <time datetime="2017-10-05 10:01" pubdate="pubdate">October 5, 2017 at 10:01AM</time></h3><a href="#comments-block-33407819" class="comments js-seamless-content__goto-comments pull-right" rel="nofollow" data-content-guid="1100-6453805"><i><svg class="symbol symbol-comments-alt" aria-role="icon"><use xlink:href="#symbol-comments-alt"></use></svg></i> 70 Comments</a></div></section>
+      <div id="interstitial-wrap" class="js-mapped-ad mapped-ad mapped-interstitial mapped-interstitial-dart"  data-ad-type="interstitial"><div id="interstitial" class="ad-wrap ad-wrap-interstitial"></div></div>          <div id="leader_plus_top-wrap" class="js-mapped-ad mapped-ad mapped-leader_plus_top mapped-leader_plus_top-dart has-rhythm--max"  data-ad-type="leader_plus_top"><div id="leader_plus_top" class="ad-wrap ad-wrap-leader_plus_top"></div></div><div class="js-taboola-module taboola-leader_plus_top has-rhythm--max" data-taboola-parameters="{&quot;target_type&quot;:&quot;mix&quot;,&quot;mode&quot;:&quot;thumbnails-b-abp&quot;,&quot;container&quot;:&quot;taboola-abp-leaderboard-thumbnails&quot;,&quot;placement&quot;:&quot;Above Article Leaderboard - ABP&quot;}"></div>        <div id="mpu_top-wrap" class="js-mapped-ad mapped-ad mapped-mpu_top mapped-mpu_top-dart no-bg"  data-ad-type="mpu_top"><div id="mpu_top" class="ad-wrap ad-wrap-mpu_top"></div></div>
+                <div class="has-rhythm--max" >
+        <iframe class="js-play-on-scroll" src="/videos/embed/6441183/" width="640" height="360" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                  <span class="video-caption"><em>Now Playing:</em> Middle-earth: Shadow Of War Video Review</span>
+              </div>
+            <div class="pull-left">
+
+
+
+
+<ul class="share  share--column share--noCount" role="presentation">
+
+
+        <li class="share-item share-item--upvote" role="presentation">
+
+
+
+
+
+
+<form name="upvote" method="post" action="/vote/" class="js-upvote-form upvote-form  js-post-render-upvote" data-allow-unvote="" data-user-voted="" data-guid="1100-6453805"><button type="submit" id="upvote_upvote" name="upvote[upvote]" class=" share-item__container btn-text btn  js-upvote-btn btn-large" data-guid="1100-6453805" data-event-name="Upvote"><i><svg class="symbol symbol-thumbs-up symbol--nudge-bottom" aria-role="icon"><use xlink:href="#symbol-thumbs-up"></use></svg></i><span class="js-upvote-btn__text upvote-btn__text" data-success-msg="" data-has-voted-msg=""></span></button><input class="js-event-tracking" type="hidden" data-event-name="Upvote"><input type="hidden" id="upvote__token" name="upvote[_token]"    data-bb="1" data-token-id="upvote_1100-6453805" autocomplete="off" data-post-render-value="upvote_1100-6453805" data-post-render-param="CmsBundle.forumTokenIds[]" value="EZNjTSwH4hxcHygAiAHG/C/4/Lb9Tko8QGsGkqP1oW/fxCo7sFDd0Og5ZQ==" /><input type="hidden" id="upvote_assocId" name="upvote[assocId]" value="6453805" /><input type="hidden" id="upvote_assocTypeId" name="upvote[assocTypeId]" value="1100" /><li class="hp-row"><label for='upvote__website_url' >Leave Blank</label><div><input type="text" id="upvote__website_url" name="upvote[_website_url]"    class="hp-url" tabindex="-1" /></div></li></form>    </li>
+
+        <li class="share-item share-item--comments" role="presentation">
+      <a  title="Comment" class="js-seamless-content__goto-comments" href="#comments-block-33407819" data-content-guid="1100-6453805" rel="nofollow"">
+        <span class="share-item__container"><i><svg class="symbol symbol-comments symbol--nudge-bottom" aria-role="icon"><use xlink:href="#symbol-comments"></use></svg></i></span>
+      </a>
+    </li>
+
+    <li class="share-item share-item--facebook js-share-button-facebook" data-share-url="https://www.gamespot.com/articles/shadow-of-war-review-roundup/1100-6453805/" data-guid="1100-6453805" role="presentation">
+    <a class="js-event-tracking" class="js-event-tracking" data-event-tracking="Tracking|news_article|SocialShare|Facebook|1100-6453805" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.gamespot.com/articles/shadow-of-war-review-roundup/1100-6453805/" title="Facebook">
+      <span class="share-item__container"><i><svg class="symbol symbol-facebook symbol--color-white" aria-role="icon"><use xlink:href="#symbol-facebook"></use></svg></i></span>
+    </a>
+  </li>
+
+    <li class="share-item share-item--twitter js-share-button-twitter" data-share-url="https://www.gamespot.com/articles/shadow-of-war-review-roundup/1100-6453805/" data-guid="1100-6453805" role="presentation">
+    <a class="js-event-tracking" class="js-event-tracking" data-event-tracking="Tracking|news_article|SocialShare|Twitter|1100-6453805" target="_blank" href="https://twitter.com/intent/tweet?text=Shadow Of War Review Roundup&related=&url=https://www.gamespot.com/articles/shadow-of-war-review-roundup/1100-6453805/" title="Twitter">
+      <span class="share-item__container"><i><svg class="symbol symbol-twitter symbol--color-white" aria-role="icon"><use xlink:href="#symbol-twitter"></use></svg></i></span>
+    </a>
+  </li>
+
+    <li class="share-item share-item--flipboard js-share-button-flipboard" data-guid="1100-6453805" role="presentation">
+    <a class="js-event-tracking" data-event-tracking="Tracking|news_article|SocialShare|Flipboard|1100-6453805" target="_blank" href="https://share.flipboard.com/bookmarklet/popout?v=2&title=Shadow Of War Review Roundup&url=https://www.gamespot.com/articles/shadow-of-war-review-roundup/1100-6453805/&utm_source=gamespot.com&utm_medium=article-share&utm_campaign=publisher" title="Flipboard">
+      <span class="share-item__container"><i><svg class="symbol symbol-flipboard symbol--color-white" aria-role="icon"><use xlink:href="#symbol-flipboard"></use></svg></i></span>
+    </a>
+  </li>
+
+
+</ul>
+
+
+
+              <div class="media seamless--aside-follow">
+                      <hr />
+          <h5>Related</h5>
+
+          <figure class="media-figure l-item--pull ">
+            <a href="/middle-earth-shadow-of-war/" class="media-img imgflare--avatar">
+              <img class="js-box-art" data-toggle="tooltip" data-original-title="Middle-earth: Shadow of War" src="https://static.gamespot.com/uploads/square_avatar/1197/11970954/3200915-ig-shadowofwar-20170227.jpg" alt="Middle-earth: Shadow of War">
+            </a>
+          </figure>
+          <div>
+                                    <div class="stacks game-card-loading stacks--simple" data-post-render-param="GameBundle.gameIds[]" data-post-render-value="462606"><div class="js-pop-over-parent"><div class="stacks-signUp js-game-follow js-pop-over-container stacks-popup js-game-follow-unreg"
+             data-popover-game-id=462606
+             data-popover-container-name="293557774"
+             data-click-open-offset-X="0" data-click-open-offset-Y="0"><form class="js-game-card-follow-form" action="/api/follow/followGame/462606" method="post"><div class="l-item--pull stacks-signUp__image"><div class="media-img media-img--boxart"><img class='js-game-image' alt='%gameName%'></div></div><div class="stacks-signUp__title">Can't Get Enough %gameName%?</div><p class="stacks-signUp__deck">No spam, no fuss; just the latest updates delivered right to you.</p><input type="email" name="email" placeholder="Enter Your Email Address..." required class="stacks-signUp__input" /><input type="submit" value="Sign Up" class="btn btn-success stacks-signUp__submit" /><div class="error"></div></form><div class="hidden js-game-card-follow-others stacks-signUp__success"><strong class="stacks-signUp__title">You're Good to Go!</strong><p class="stacks-signUp__deck">We'll begin emailing you updates about %gameName%.</p></div></div><div class="stacks-action"><span class="stacks-action__container js-pop-over-toggle" data-pop-over="293557774"><span class="stacks-action__symbol"><i><svg class="symbol symbol-plus" aria-role="icon"><use xlink:href="#symbol-plus"></use></svg></i></span><span>Follow</span></span></div></div></div>          </div>
+        </div>
+
+    </div>
+
+
+
+  <div class="newsletter-subscribe news-byline alert alert-info text-left">
+      <div class="stacks--simple js-pop-over-parent" style="display:inline-block">
+                <div class="stacks-signUp js-game-follow js-pop-over-container stacks-popup js-game-follow-unreg"
+             data-click-open-offset-X="0" data-click-open-offset-Y="0">
+
+          <form class="js-game-card-follow-form" action="/newsletter/subscribe" method="post">
+
+            <div class="stacks-signUp__title">Want the latest gaming news as it breaks?</div>
+            <p class="stacks-signUp__deck">All the highlights in the world of games, lovingly delivered 2-3 times/week.</p>
+            <input type="email" name="email" placeholder="Enter Your Email Address..." required class="stacks-signUp__input" />
+            <input type="submit" value="Sign Up" class="btn btn-success stacks-signUp__submit" />
+            <div class="error"></div>
+          </form>
+
+          <div class="hidden js-game-card-follow-others stacks-signUp__success">
+            <strong class="stacks-signUp__title">You're Good to Go!</strong>
+            <p class="stacks-signUp__deck">You are now subscribed</p>
+          </div>
+        </div>
+
+        <div class="stacks-action">
+
+                    <span class="stacks-action__container js-pop-over-toggle" >
+            <span>
+              Subscribe for the latest gaming news
+            </span>
+          </span>
+
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+              <section itemprop="articleBody" class="article-body typography-format  typography-format--large">
+
+        <div class="js-content-entity-body">
+                    <p dir="ltr"><a href="/middle-earth-shadow-of-mordor/" data-ref-id="5000-221476">Middle-earth: Shadow of Mordor</a> was a surprise hit when it launched in 2014, and we even named it our <a href="https://www.gamespot.com/articles/middle-earth-shadow-of-mordor-overall-game-of-the-/1100-6423918/">Game of the Year</a>. Three years later, its sequel, <a href="https://www.gamespot.com/middle-earth-shadow-of-war/">Middle-earth: Shadow of War</a>, is about to launch.</p><p dir="ltr">It's already been the subject of controversy: <a href="https://www.gamespot.com/articles/shadow-of-war-adding-dlc-character-to-honor-develo/1100-6453054/">DLC honoring Michael Forgey</a>, a developer who passed away last year, <a href="https://www.gamespot.com/articles/warner-bros-affirms-its-not-profiting-on-shadow-of/1100-6453171/">came under fire</a> after there were indications that a portion of the profits wouldn't go to Forgey's widow and children. <a href="https://www.gamespot.com/articles/shadow-of-wars-controversial-dlc-is-going-free-pub/1100-6453615/">Publisher Warner Bros. later apologized and made the DLC free for everyone</a>. <a href="https://www.gamespot.com/articles/middle-earth-shadow-of-war-has-loot-boxes-and-more/1100-6452313/">Shadow of War's microtransactions</a> have also been criticized, as the first game didn't include them.</p><p dir="ltr">Otherwise, however, Shadow of War seems to be going down well with critics. We awarded the open-world game a 7/10 in our review. "It tries to be larger than its predecessor … yet it leaves you wanting less," wrote Justin Haywald. "But at its core, it's a fun experience with brilliant moments that provide fascinating insight into some of the untold stories of Middle-earth." Read more in our full <a href="https://www.gamespot.com/reviews/middle-earth-shadow-of-war-review/1900-6416783/" data-ref-id="1900-6416783">Shadow of War review</a>.</p><div data-embed-type="video" data-ref-id="2300-6439753" data-src="/videos/shadow-of-war-official-shadow-of-mordor-nemesis-fo/2300-6439753/" data-width="100%" data-height="100%"><iframe src="/videos/embed/6439753/" width="100%" height="100%" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div><p dir="ltr">For more on the open-world game, check out its <a href="https://www.gamespot.com/articles/shadow-of-wars-best-feature-might-be-its-trash-tal/1100-6453791/">best trash-talking Orcs</a>, the first eight minutes of <a href="https://www.gamespot.com/videos/middle-earth-shadow-of-war-first-8-minutes-of-game/2300-6441210/">Shadow of War gameplay</a>, or our feature video on <a href="https://www.gamespot.com/articles/the-struggle-to-bring-the-lord-of-the-rings-to-vid/1100-6453758/">the struggle to bring <em>The Lord of the Rings</em> to video games</a>. For more on the game's critical reception, meanwhile, you can see our review roundup below, or take a look at our sister site <a href="http://www.metacritic.com/game/playstation-4/middle-earth-shadow-of-war/critic-reviews" rel="nofollow">Metacritic</a>.</p><ul><li dir="ltr"><strong>Game</strong>: Middle-earth: Shadow of War</li><li dir="ltr"><strong>Developer / Publisher</strong>: Monolith Productions / Warner Bros.</li><li dir="ltr"><strong>Platforms</strong>: <a href="/ps4/" data-ref-id="5005-120">PS4</a>, <a href="/xbox-one/" data-ref-id="5005-121">Xbox One</a>, <a href="/pc/" data-ref-id="5005-19">PC</a></li><li dir="ltr"><strong>Release date</strong>: October 10</li><li dir="ltr"><strong>Price</strong>: US $60 / £43 / AU $100</li></ul><h2 dir="ltr">GameSpot -- 7/10</h2><p dir="ltr">"And that addition sums up several of Shadow of War's additions--things like the storefront and the menus and loot system don't make the game terrible, it just would've been better without them. It tries to be larger than its predecessor, there are more abilities, more weapons, more Orcs, yet it leaves you wanting less. But at its core, it's a fun experience with brilliant moments that provide fascinating insight into some of the untold stories of Middle-earth. I just wish it had known when to stop." -- <em>Justin Haywald</em> [<a href="https://www.gamespot.com/reviews/middle-earth-shadow-of-war-review/1900-6416783/">Full review</a>]</p><h2 dir="ltr">IGN -- 9.0/10</h2><p dir="ltr">"Similar to the way Batman: Arkham City built on the foundation of Arkham Asylum, Middle-earth: Shadow of War is bigger and more ambitious in scope than Shadow of Mordor, with great results. The way it expands the Nemesis system with far greater variety and fortress sieges makes even better use of the stand-out generated characters, and its battles with memorable uruk captains remain challenging all the way through the campaign and into the clever asynchronous multiplayer beyond." -- <em>Dan Stapleton</em> [<a href="http://uk.ign.com/articles/2017/10/05/middle-earth-shadow-of-war-review" rel="nofollow">Full review</a>]</p><h2 dir="ltr">Polygon -- 7.5/10</h2><p dir="ltr">"If you can get past the microtransactions, Shadow Wars seems set to provide a much meatier extended playtime than Shadow of Mordor ever offered. But more than anything, that's my biggest disappointment with Middle-earth: Shadow of War: Everything about it seems to come with a caveat, some small annoyance or two that you need to dig past to get to the still-very-fun game underneath." -- <em>Philip Kollar &amp; Chris Plante</em> [<a href="https://www.polygon.com/2017/10/5/16428308/middle-earth-shadow-of-war-review" rel="nofollow">Full review</a>]</p><h2 dir="ltr">Game Informer -- 9.5/10</h2><p dir="ltr">"Shadow of War fulfills the promise of its predecessor, completing a dark and violent lost tale set within the world of <em>The Lord of the Rings</em>. I was initially frustrated by the liberties that Monolith takes with this beloved fiction (which are plentiful), but I eventually abandoned myself to the insanity, and fell down the rabbit hole into a superb fantasy adventure. Monolith captures the thrill of power with aplomb; the way it simultaneously speaks of its dangers and corrupting potential is the real magic." -- <em>Matt Miller</em> [<a href="http://www.gameinformer.com/games/middle-earth_shadow_of_war/b/playstation4/archive/2017/10/05/game-informer-review-middle-earth-shadow-of-war.aspx" rel="nofollow">Full review</a>]</p><h2 dir="ltr">Eurogamer -- No score</h2><p dir="ltr">"Shadow of War ends up the very epitome of the difficult second album. A lot has been added in order to scale it up for a full blown sequel and much of it has been implemented with style and aplomb. As fun as the core is, however, it is often overshadowed by an onerous and self-indulgent story. What should be the game's crowning feature is instead reduced to an undeserved supporting role, like an exquisitely carved plinth groaning under the weight of a gaudy bronze bust of an elven wraith who's looking very, very serious indeed." -- <em>Johnny Chiodini</em> [<a href="http://www.eurogamer.net/articles/2017-10-05-middle-earth-shadow-of-war-review" rel="nofollow">Full review</a>]</p><h2 dir="ltr">GamesRadar -- 4.5/5</h2><p>"For the most part, this is big spectacle and richly layered experience. The different regions are beautiful and varied to explore, while Sauron's forces are alway entertaining to meet and beat. If there are moments that don't quite click or things that fatigue a little it's because of that scale. There's almost an Assassin's Creed 2 feel of map spatter to all the markers for towers, collectables, bits and so on. I've not 100%-ed it but you’re easily looking at a triple figure time should you try. This isn't a game to get in for the weekend, it's something to buy and cancel plans for the year." -- <em>Leon Hurley</em> [<a href="http://www.gamesradar.com/middle-earth-shadow-of-war-review/" rel="nofollow">Full review</a>]</p>
+                                  <div id="incontent-ad-wrap" class="js-mapped-ad mapped-ad mapped-incontent-ad mapped-incontent-ad-dart"  data-ad-type="incontent-ad"><div id="incontent-ad" class="ad-wrap ad-wrap-incontent-ad"></div></div>        </div>
+
+
+
+
+
+                                    <dl class="news-related">
+            <dt><i class="icon icon-tags"></i>  Filed under:</dt>
+                                                                                                                                                                                                              <dd>
+                                      <a href="/middle-earth-shadow-of-war/">
+                                    Middle-earth: Shadow of War
+                                      </a>
+                                  </dd>
+                                                                                                                                                                                                                            <dd>
+                                      <a href="/ps4/">
+                                    PlayStation 4
+                                      </a>
+                                  </dd>
+                                                                                                                                                                                                                            <dd>
+                                      <a href="/xbox-one/">
+                                    Xbox One
+                                      </a>
+                                  </dd>
+                                                                                                                                                                                                                            <dd>
+                                      <a href="/pc/">
+                                    PC
+                                      </a>
+                                  </dd>
+                                    </dl>
+
+
+
+
+
+
+
+
+<form name="upvote" method="post" action="/vote/" class="js-upvote-form upvote-form  js-post-render-upvote" data-allow-unvote="" data-user-voted="" data-guid="1100-6453805"><button type="submit" id="upvote_upvote" name="upvote[upvote]" class="btn-primary btn-upvote btn  js-upvote-btn btn-large" data-guid="1100-6453805" data-event-name="Upvote"><i><svg class="symbol symbol-thumbs-up symbol--nudge-bottom" aria-role="icon"><use xlink:href="#symbol-thumbs-up"></use></svg></i><span class="js-upvote-btn__text upvote-btn__text" data-success-msg=" Upvoted (17)" data-has-voted-msg=" Upvoted (16)">  Upvote (16)</span></button><input class="js-event-tracking" type="hidden" data-event-name="Upvote"><input type="hidden" id="upvote__token" name="upvote[_token]"    data-bb="1" data-token-id="upvote_1100-6453805" autocomplete="off" data-post-render-value="upvote_1100-6453805" data-post-render-param="CmsBundle.forumTokenIds[]" value="EZNjTSwH4hxcHygAiAHG/C/4/Lb9Tko8QGsGkqP1oW/fxCo7sFDd0Og5ZQ==" /><input type="hidden" id="upvote_assocId" name="upvote[assocId]" value="6453805" /><input type="hidden" id="upvote_assocTypeId" name="upvote[assocTypeId]" value="1100" /><li class="hp-row"><label for='upvote__website_url' >Leave Blank</label><div><input type="text" id="upvote__website_url" name="upvote[_website_url]"    class="hp-url" tabindex="-1" /></div></li></form>    &nbsp;<a class="js-seamless-content__goto-comments btn btn-large btn-primary article-comments__delay" href="#comments-block-33407819" data-content-guid="1100-6453805" rel="nofollow"><i><svg class="symbol symbol-comments" aria-role="icon"><use xlink:href="#symbol-comments"></use></svg></i>      View Comments (70)
+    </a>
+
+      </section>
+
+            <div id="mpu_bottom-wrap" class="js-mapped-ad mapped-ad mapped-mpu_bottom mapped-mpu_bottom-dart l-item--push l-item--push--resp no-pad"  data-ad-type="mpu_bottom"><div id="mpu_bottom" class="ad-wrap ad-wrap-mpu_bottom"></div></div>
+    </article>
+
+
+        <div class="js-taboola-module" data-taboola-parameters="{&quot;mode&quot;:&quot;thumbnails-b&quot;,&quot;container&quot;:&quot;taboola-bottom-page-thumbnails&quot;,&quot;placement&quot;:&quot;news_article Bottom Page Thumbnails&quot;,&quot;target_type&quot;:&quot;mix&quot;}"></div>
+
+  <div class="clearfix js-seamless-content__comments">
+        <div class="overflow--hidden">
+      <div class="well article-comments has-pad--max js-load-comments-container hide">
+                  <h5 class="text-center text-base text-bold text-capitalize type--xlarge has-rhythm--inc">Join the conversation</h5>
+          <div class="text-center text-emphasis text-color--light has-rhythm--min">There are <span class="text-color--tertiary text-bold">70 comments</span> about this story</div>
+
+<div id="comments-block-33407819" class="pod pod-comments comments-block clear  no-rhythm">
+      <a class="js-load-comments btn btn-full btn-primary article-comments__delay has-pad" data-ajax-url="/forums/comments/33407819/" href="/articles/shadow-of-war-review-roundup/1100-6453805/?comment_page=1#comments-block-33407819"><i><svg class="symbol symbol-comments" aria-role="icon"><use xlink:href="#symbol-comments"></use></svg></i>      Load Comments (70)
+    </a>
+  </div>
+              </div>
+    </div>
+  </div>
+
+
+        <div id="leader_bottom-wrap" class="js-mapped-ad mapped-ad mapped-leader_bottom mapped-leader_bottom-dart"  data-ad-type="leader_bottom"><div id="leader_bottom" class="ad-wrap ad-wrap-leader_bottom"></div></div>
+</div>
+                                          </div>
+                  <aside class="secondary-content  ">
+              </aside>
+              <div class="js-seamless-content__loading loading hide"></div>
+          </div>
+            <meta class="js-seamless-content__list" itemprop="seamless-content-list-items" data-list-items="[{&quot;guid&quot;:&quot;1100-6453805&quot;,&quot;url&quot;:&quot;\/articles\/shadow-of-war-review-roundup\/1100-6453805\/&quot;},{&quot;guid&quot;:&quot;1100-6453744&quot;,&quot;url&quot;:&quot;\/articles\/octobers-free-ps-plus-games-out-now-on-ps4-ps3-vit\/1100-6453744\/&quot;},{&quot;guid&quot;:&quot;1100-6453697&quot;,&quot;url&quot;:&quot;\/articles\/axiom-verge-nintendo-switch-giveaway\/1100-6453697\/&quot;},{&quot;guid&quot;:&quot;1100-6453822&quot;,&quot;url&quot;:&quot;\/articles\/the-xbox-one-x-has-an-image-of-master-chief-riding\/1100-6453822\/&quot;},{&quot;guid&quot;:&quot;1100-6451207&quot;,&quot;url&quot;:&quot;\/articles\/snes-classic-edition-buyers-guide-tracking-stock-a\/1100-6451207\/&quot;},{&quot;guid&quot;:&quot;1100-6453817&quot;,&quot;url&quot;:&quot;\/articles\/after-final-fantasy-spin-offs-square-enixs-next-vr\/1100-6453817\/&quot;},{&quot;guid&quot;:&quot;1100-6453815&quot;,&quot;url&quot;:&quot;\/articles\/assassins-creed-origins-pc-specs-and-system-requir\/1100-6453815\/&quot;},{&quot;guid&quot;:&quot;1100-6453816&quot;,&quot;url&quot;:&quot;\/articles\/octobers-new-my-nintendo-rewards-for-switch-3ds-an\/1100-6453816\/&quot;},{&quot;guid&quot;:&quot;1100-6453807&quot;,&quot;url&quot;:&quot;\/articles\/pokemon-ultra-sun-and-moon-trailer-reveals-another\/1100-6453807\/&quot;},{&quot;guid&quot;:&quot;1100-6453752&quot;,&quot;url&quot;:&quot;\/articles\/overwatch-halloween-2017-event-adds-new-skins-hall\/1100-6453752\/&quot;},{&quot;guid&quot;:&quot;1100-6434025&quot;,&quot;url&quot;:&quot;\/articles\/all-the-xbox-one-backwards-compatibility-games\/1100-6434025\/&quot;},{&quot;guid&quot;:&quot;1100-6453768&quot;,&quot;url&quot;:&quot;\/articles\/pubg-vs-fortnite-is-epics-free-battle-royale-mode-\/1100-6453768\/&quot;},{&quot;guid&quot;:&quot;1100-6453810&quot;,&quot;url&quot;:&quot;\/articles\/forza-motorsport-7-dev-will-change-vip-offer-and-a\/1100-6453810\/&quot;},{&quot;guid&quot;:&quot;1100-6453740&quot;,&quot;url&quot;:&quot;\/articles\/destiny-2-nightfall-guide-savathuns-song-strike-mo\/1100-6453740\/&quot;},{&quot;guid&quot;:&quot;1100-6453672&quot;,&quot;url&quot;:&quot;\/articles\/star-wars-battlefront-2-beta-pc-specs-and-requirem\/1100-6453672\/&quot;},{&quot;guid&quot;:&quot;1100-6453670&quot;,&quot;url&quot;:&quot;\/articles\/destiny-2-leviathan-raid-keys-can-disappear-heres-\/1100-6453670\/&quot;},{&quot;guid&quot;:&quot;1100-6453812&quot;,&quot;url&quot;:&quot;\/articles\/two-more-xbox-one-backwards-compatible-games-out-n\/1100-6453812\/&quot;},{&quot;guid&quot;:&quot;1100-6453802&quot;,&quot;url&quot;:&quot;\/articles\/overwatchs-latest-ptr-update-introduces-a-big-merc\/1100-6453802\/&quot;},{&quot;guid&quot;:&quot;1100-6453801&quot;,&quot;url&quot;:&quot;\/articles\/pes-2018s-data-pack-1-update-out-now-heres-what-it\/1100-6453801\/&quot;},{&quot;guid&quot;:&quot;1100-6453737&quot;,&quot;url&quot;:&quot;\/articles\/ps4-system-update-50-out-now-heres-everything-it-d\/1100-6453737\/&quot;},{&quot;guid&quot;:&quot;1100-6453809&quot;,&quot;url&quot;:&quot;\/articles\/netflix-increases-subscription-prices-in-the-us-ah\/1100-6453809\/&quot;}]" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+          </div>
+          <footer id="footer" class="mastfooter" role="complimentary"><div class="container row"><section class="footer-network"><span>© 2017 CBS Interactive Inc. All rights reserved.</span><a href="https://legalterms.cbsinteractive.com/privacy" >Privacy Policy</a><a href="https://legalterms.cbsinteractive.com/adchoice" >Ad Choice</a><a href="https://legalterms.cbsinteractive.com/terms-of-use" >Terms of Use</a><a href=/help/ data-click-track-id=coreBase7ab4821d5304ef493d0218e67086f202 >Help</a><a href=http://www.cbsinteractive.com/advertise data-click-track-id=coreBasef4f4584bf5208accac6e12a75b4f07be  target="_blank">Advertise</a><a href=mailto:cbsi-partnerships@cbsinteractive.com data-click-track-id=coreBase12314151de1ef16d5d111e022ad67ff2  target="_blank">Partnerships</a><a href=https://cbs.avature.net/cbsinteractivecareers/SearchJobs/?3_56_3=%22260%22 data-click-track-id=coreBase447af76a9deda9c9789207aae8332639  target="_blank">Careers</a><span id="qualtrics-feedback"></span></section><section class="footer-links hide-mobile"><ul><li><span class="footer-links__header">More Sites</span></li><li><a href=http://www.giantbomb.com/ data-click-track-id=coreBase3a1bbd3fdcb01d23ace29fff795ee322 ><i class="footer-social__item footer_logo_gb"></i>giantbomb.com</a></li><li><a href=http://www.gamefaqs.com/ data-click-track-id=coreBase513afe56b1e5b1e51f8967165dd9efe1 ><i class="footer-social__item footer_logo_gf"></i>gamefaqs.com</a></li><li><a href=http://www.metacritic.com/ data-click-track-id=coreBase323cda0410385e65172fd046e150b979 ><i class="footer-social__item footer_logo_mc"></i>metacritic.com</a></li><li><a href=http://www.gamerankings.com/ data-click-track-id=coreBase43a32ff31aed1806d581fb7a905b1597 ><i class="footer-social__item footer_logo_gr"></i>gamerankings.com</a></li></ul><ul><li><span class="footer-links__header">Reviews</span></li><li><a href=https://www.gamespot.com/reviews/ data-click-track-id=footer-reviews1 >Latest Reviews</a></li><li><a href=/reviews/pc data-click-track-id=footer-reviews2 >PC</a></li><li><a href=/reviews/ps4 data-click-track-id=footer-reviews3 >PS4</a></li><li><a href=/reviews/xbox-one data-click-track-id=footer-reviews4 >Xbox One</a></li><li><a href=/reviews/nintendo-switch data-click-track-id=footer-reviews5 >Switch</a></li></ul><ul><li><span class="footer-links__header">News</span></li><li><a href=https://www.gamespot.com/news/ data-click-track-id=footer-news1 >Latest News</a></li><li><a href=/news/pc data-click-track-id=footer-news2 >PC</a></li><li><a href=/news/ps4 data-click-track-id=footer-news3 >PS4</a></li><li><a href=/news/xbox-one data-click-track-id=footer-news4 >Xbox One</a></li><li><a href=/news/nintendo-switch data-click-track-id=footer-news5 >Switch</a></li></ul><ul><li><span class="footer-links__header">Shows</span></li><li><a href=https://www.gamespot.com/shows/reboot/ data-click-track-id=coreFooterVideoShow >Reboot</a></li><li><a href=https://www.gamespot.com/shows/gsnews/ data-click-track-id=coreFooterVideoShow1 >GameSpot News</a></li><li><a href=https://www.gamespot.com/shows/the-lobby/ data-click-track-id=coreFooterVideoShow2 >The Lobby</a></li><li><a href=https://www.gamespot.com/shows/New_Releases/ data-click-track-id=coreFooterVideoShow3 >New Releases</a></li><li><a href=https://www.gamespot.com/shows/gamespot-live/ data-click-track-id=coreFooterVideoShow4 >GameSpot Live</a></li></ul><ul><li><span class="footer-links__header">Talk to Us</span></li><li><a href=https://www.gamespot.com/forums/ data-click-track-id=coreBaseForumLatestTopicList >Forums</a></li><li class="footer--social-icons"><strong>GameSpot</strong><a href=http://facebook.com/gamespot data-click-track-id=footer-facebook  target="_blank" rel="nofollow"><i><svg class="symbol symbol-facebook-sign" aria-role="icon"><use xlink:href="#symbol-facebook-sign"></use></svg></i></a><a href=http://twitter.com/gamespot data-click-track-id=footer-twitter  target="_blank" rel="nofollow"><i><svg class="symbol symbol-twitter" aria-role="icon"><use xlink:href="#symbol-twitter"></use></svg></i></a><a href=http://youtube.com/gamespot data-click-track-id=footer-youtube  target="_blank" rel="nofollow"><i><svg class="symbol symbol-youtube-play" aria-role="icon"><use xlink:href="#symbol-youtube-play"></use></svg></i></a><a class="footer--social-instagram" href=http://instagram.com/gamespot data-click-track-id=footer-instagram  target="_blank" rel="nofollow"><i><svg class="symbol symbol-instagram" aria-role="icon"><use xlink:href="#symbol-instagram"></use></svg></i></a><a href=https://flipboard.com/@gamespot?utm_source=gamespot&utm_medium=follow&utm_campaign=tools data-click-track-id=footer-flipboard  target="_blank" rel="nofollow"><i><svg class="symbol symbol-flipboard" aria-role="icon"><use xlink:href="#symbol-flipboard"></use></svg></i></a><a href=/feeds data-click-track-id=footer-rss  title="RSS Feeds"><i><svg class="symbol symbol-rss" aria-role="icon"><use xlink:href="#symbol-rss"></use></svg></i></a></li><li class="footer--social-icons"><strong>GameSpot Universe</strong><a href=http://facebook.com/GameSpotUniverse data-click-track-id=footer-universe_facebook  target="_blank" rel="nofollow"><i><svg class="symbol symbol-facebook-sign" aria-role="icon"><use xlink:href="#symbol-facebook-sign"></use></svg></i></a><a href=http://twitter.com/gsuniverse data-click-track-id=footer-universe_twitter  target="_blank" rel="nofollow"><i><svg class="symbol symbol-twitter" aria-role="icon"><use xlink:href="#symbol-twitter"></use></svg></i></a><a href=http://youtube.com/GameSpotUniverse data-click-track-id=footer-universe_youtube  target="_blank" rel="nofollow"><i><svg class="symbol symbol-youtube-play" aria-role="icon"><use xlink:href="#symbol-youtube-play"></use></svg></i></a></li></ul></section><section class="footer-site"><a href=https://www.gamespot.com/ data-click-track-id=coreFooterFrontDoor  class="footer-logo"><i><svg class="symbol symbol-logo-outline-full" aria-role="icon"><use xlink:href="#symbol-logo-outline-full"></use></svg></i></a></section></div></footer>
+    </div>
+
+
+
+      <meta name="ssbfo" data-post-render-param="CmsBundle.ssbfo" data-post-render-value="1" content="" />
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script><script>
+  window.jQuery || document.write('<script src="https://static.gamespot.com/js/compiled/jquery.local.js?183e553b93b5c8363130870bfdc8fd70">\x3C/script>')
+</script><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script><script>
+  window.swfobject || document.write('<script src="https://static.gamespot.com/js/compiled/swfobject.local.js?183e553b93b5c8363130870bfdc8fd70">\x3C/script>')
+</script>
+
+          <script type='text/javascript'>var ___gXlrVarId=6;</script>      <script src="https://static.gamespot.com/js/compiled/all.js?183e553b93b5c8363130870bfdc8fd70" type="text/javascript"></script>
+          <script src="https://static.gamespot.com/js/compiled/uvp.js?183e553b93b5c8363130870bfdc8fd70" type="text/javascript"></script>
+
+
+
+    <script id="imageInfoBarTemplate" type="text/template">
+      <a href="<%= profileUrl %>" class="avatar img"><img src="<%= avatar %>" /></a>
+      <div>
+        <a href="<%= profileUrl %>"><%= author %></a> uploaded on <%= dateCreated %>.
+      </div>
+    </script>
+
+    <script id="imageCommentsTemplate" type="text/template">
+      <li>
+        <a href="<%= user.url %>" class="avatar img">
+          <img src="<%= user.img %>" />
+        </a>
+        <div>
+          <a href="<%= user.url %>"><%= user.username %></a> <%= body %>
+        </div>
+      </li>
+    </script>
+
+    <script id="imageFilmstripTemplate" type="text/template">
+      <li>
+        <a href="#imageViewer<%= id %>" data-ref-id="<%= id %>"><img src="http://gs.cbsimg.net/b.gif" data-img-src="<%= thumbnail %>" /></a>
+      </li>
+    </script>
+
+
+        <div id="js-filmstrip" class="filmstrip filmstrip-with-ads is-hidden" itemscope tabindex="-1" ><meta id="image_view-tracking-dw"
+                    class="js-post-render-tracking-consumer image_view-tracking-settings"
+              data-tracking-service="dw"
+        itemprop="image_view-tracking-dw"
+        content="{&quot;pageParams&quot;:{&quot;siteid&quot;:&quot;6&quot;,&quot;ptid&quot;:&quot;6036&quot;,&quot;onid&quot;:null,&quot;ednm&quot;:&quot;{edition}&quot;,&quot;ursuid&quot;:&quot;{ursuid}&quot;,&quot;regSilo&quot;:&quot;2&quot;,&quot;rsid&quot;:&quot;cbsigamespotsite&quot;,&quot;prodtypid&quot;:&quot;8&quot;,&quot;pagetype&quot;:&quot;news_article&quot;,&quot;assetguid&quot;:&quot;1100-6453805&quot;,&quot;assettitle&quot;:&quot;Shadow Of War Review Roundup&quot;,&quot;assettype&quot;:&quot;Article&quot;,&quot;author&quot;:[&quot;gs-2100-15568848&quot;],&quot;pid&quot;:462606,&quot;topicbrcrm&quot;:&quot;News|News Article&quot;},&quot;cleargifSrc&quot;:&quot;http:\/\/dw.cbsi.com\/clear\/c.gif?ptid=6036&amp;ednm=%7Bedition%7D&amp;ursuid=%7Bursuid%7D&amp;regSilo=2&amp;rsid=cbsigamespotsite&amp;prodtypid=8&amp;pagetype=news_article&amp;assetguid=1100-6453805&amp;assettitle=Shadow+Of+War+Review+Roundup&amp;assettype=Article&amp;author%5B0%5D=gs-2100-15568848&amp;pid=462606&amp;topicbrcrm=News%7CNews+Article&amp;sid=6&amp;ts=1507240393&quot;}"
+        ><meta id="image_view-tracking-ga"
+                    class="js-post-render-tracking-consumer image_view-tracking-settings"
+              data-tracking-service="ga"
+        itemprop="image_view-tracking-ga"
+        content="{&quot;custom&quot;:{&quot;PageType&quot;:{&quot;index&quot;:&quot;1&quot;,&quot;name&quot;:&quot;PageType&quot;,&quot;value&quot;:&quot;6036&quot;,&quot;scope&quot;:&quot;3&quot;},&quot;UserType&quot;:{&quot;index&quot;:&quot;2&quot;,&quot;name&quot;:&quot;UserType&quot;,&quot;value&quot;:&quot;{gaUserType}&quot;,&quot;scope&quot;:&quot;1&quot;}},&quot;account&quot;:&quot;UA-22577913-1&quot;}"
+        ><meta id="image_view-tracking-om"
+                    class="js-post-render-tracking-consumer image_view-tracking-settings"
+              data-tracking-service="om"
+        itemprop="image_view-tracking-om"
+        content="{&quot;brand&quot;:&quot;GameSpot&quot;,&quot;sid&quot;:&quot;gamespot&quot;,&quot;rsids&quot;:&quot;cbsigamespotsite,cbsicbsiall&quot;,&quot;user_status&quot;:&quot;{userStatus}&quot;,&quot;urs_id&quot;:&quot;{ursuid}&quot;,&quot;edition&quot;:&quot;{edition}&quot;,&quot;site_type&quot;:&quot;{siteType}&quot;,&quot;anon_id&quot;:&quot;{xclgfbrowser}&quot;,&quot;url&quot;:&quot;D=g&quot;,&quot;user_agent&quot;:&quot;D=User-Agent&quot;,&quot;page_type_id&quot;:6052,&quot;page_name&quot;:&quot;gs:\/articles\/shadow-of-war-review-roundup\/1100-6453805\/&quot;,&quot;ab_test&quot;:&quot;{abTestLabel}&quot;,&quot;theme&quot;:&quot;{theme}&quot;,&quot;event_hierarchy&quot;:&quot;{eventHierarchy}&quot;,&quot;marketing_cloud_id&quot;:&quot;10D31225525FF5790A490D4D@AdobeOrg&quot;,&quot;session&quot;:&quot;{ad_session}&quot;,&quot;page_type&quot;:&quot;image&quot;,&quot;channel&quot;:&quot;News&quot;,&quot;hierarchy&quot;:&quot;News|News Article|Games|News|PR&quot;,&quot;platform&quot;:[&quot;PlayStation 4&quot;,&quot;Xbox One&quot;,&quot;PC&quot;],&quot;content_source&quot;:&quot;CBSi&quot;,&quot;content_title&quot;:&quot;Shadow Of War Review Roundup&quot;,&quot;author_ids&quot;:[&quot;gs-2100-15568848&quot;],&quot;product_id&quot;:&quot;gs-5000-462606&quot;,&quot;content_type&quot;:&quot;image&quot;,&quot;content_guid&quot;:&quot;gs-1100-6453805&quot;,&quot;category&quot;:[&quot;Games&quot;,&quot;News&quot;,&quot;PR&quot;],&quot;game_title&quot;:&quot;Middle-earth: Shadow of War|The Lord of the Rings&quot;,&quot;genre&quot;:[&quot;Action&quot;,&quot;Adventure&quot;]}"
+        ><meta id="image_view-ad-settings" class="js-post-render-tracking-consumer ad-settings page-event-ad-settings" itemprop="page-event-ad-settings" content="{&quot;page_event_name&quot;:&quot;image_view&quot;,&quot;mapped_units&quot;:{&quot;overlay_mpu_top&quot;:{&quot;size&quot;:[[300,250]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;,&quot;ptype&quot;:&quot;image&quot;},&quot;on_event&quot;:&quot;image_view&quot;},&quot;overlay_leader_top&quot;:{&quot;size&quot;:[[970,66],[728,90]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;,&quot;ptype&quot;:&quot;image&quot;},&quot;on_event&quot;:&quot;image_view&quot;}}}"><div id="js-image-mask" class="image-mask"></div><div id="js-image-ad-leader" class="image-viewer-ad image-viewer-leader"><div id="overlay_leader_top-wrap" class="js-mapped-ad mapped-ad mapped-overlay_leader_top mapped-overlay_leader_top-dart"  data-ad-type="overlay_leader_top"><div id="overlay_leader_top" class="ad-wrap ad-wrap-overlay_leader_top" data-ad-event="image_view"></div></div></div><a id="js-image-close" href="#" class="image-control image-close" title="Close Viewer"><i><svg class="symbol symbol-remove symbol--size-3x" aria-role="icon"><use xlink:href="#symbol-remove"></use></svg></i></a><div id="js-image-pane" class="image-pane"><h3 id="js-image-title" class="image-title"></h3><img tabindex="0" src="" id="imageSource" alt="" /><div id="js-image-commands-tip" class="image-commands-tip image-commands-tip-hide"><p>Use your keyboard!</p><ul class="keyboard light"><li><i><svg class="symbol symbol-arrow-left symbol--size-large" aria-role="icon"><use xlink:href="#symbol-arrow-left"></use></svg></i></li><li><i><svg class="symbol symbol-arrow-right symbol--size-large" aria-role="icon"><use xlink:href="#symbol-arrow-right"></use></svg></i></li><li><i><svg class="symbol symbol-arrow-up symbol--size-large" aria-role="icon"><use xlink:href="#symbol-arrow-up"></use></svg></i></li><li><i><svg class="symbol symbol-arrow-down symbol--size-large" aria-role="icon"><use xlink:href="#symbol-arrow-down"></use></svg></i></li><li>ESC</li></ul></div><a href="#" tabindex="0" id="js-image-prev" class="image-control image-prev hidden" title="Previous Image"><i><svg class="symbol symbol-caret-left symbol--size-2x" aria-role="icon"><use xlink:href="#symbol-caret-left"></use></svg></i></a><a href="#" tabindex="0" id="js-image-next" class="image-control image-next hidden" title="Next Image"><i><svg class="symbol symbol-caret-right symbol--size-2x" aria-role="icon"><use xlink:href="#symbol-caret-right"></use></svg></i></a></div><div id="js-side-column" class="image-comments"><div id="js-image-ad-mpu" class="image-viewer-ad image-viewer-mpu"><div id="overlay_mpu_top-wrap" class="js-mapped-ad mapped-ad mapped-overlay_mpu_top mapped-overlay_mpu_top-dart"  data-ad-type="overlay_mpu_top"><div id="overlay_mpu_top" class="ad-wrap ad-wrap-overlay_mpu_top" data-ad-event="image_view"></div></div></div><ul><li class="upload" id="imageInfo"></li><li class="box login-alert"><p><a href="//auth.gamespot.com/login/">Log in</a> to comment</p></li></ul><ul class="scroll" id="imageComments"></ul></div><div class="image-strip"><a tabindex="0" href="#" id="js-image-view-film" class="image-view-film"><span id="js-btn-message" class="caret-message"></span><i><svg class="symbol symbol-caret-down symbol--size-large" aria-role="icon"><use xlink:href="#symbol-caret-down"></use></svg></i></a><div class="number"></div><ul id="js-image-strip"><li id="js-image-strip-load-more"><a href="#" class="more-images"></a></li></ul></div></div>
+            <script src="https://static.gamespot.com/js/compiled/imageViewer.js?183e553b93b5c8363130870bfdc8fd70" type="text/javascript"></script>
+
+
+  <script src="https://static.gamespot.com/js/compiled/site.js?183e553b93b5c8363130870bfdc8fd70" type="text/javascript"></script>
+  <script src="//tru.am/scripts/custom/cbsinteractive.js"></script>
+<!-- BEG: base custom_js -->
+
+      <script src="https://static.gamespot.com/js/compiled/articles.js?183e553b93b5c8363130870bfdc8fd70" type="text/javascript"></script>
+
+  <script type="text/javascript" async src="//www.lightboxcdn.com/vendor/c2e25955-6105-4b17-88c1-1c8e084d774b/lightbox_inline.js"></script>  <script type="text/javascript">
+    window.lightboxjsParams = {
+        gameId: '462606',
+        gameName: 'Middle-earth: Shadow of War',
+        gameBoxShot: 'https://static.gamespot.com/uploads/scale_tiny/1197/11970954/3200915-ig-shadowofwar-20170227.jpg',
+        followUrl: 'https://www.gamespot.com/api/follow/followGame/462606'
+    };
+  </script>
+
+              <script src="https://static.gamespot.com/js/compiled/public/relatedVideoAutoplay.js?183e553b93b5c8363130870bfdc8fd70" type="text/javascript"></script>
+                <script src="https://static.gamespot.com/js/compiled/seamlessContent.js?183e553b93b5c8363130870bfdc8fd70" type="text/javascript"></script>
+  <!-- END: base custom_js -->
+
+                      <meta id="tracking-dw"
+                    class="js-post-render-tracking-consumer tracking-settings"
+              data-tracking-service="dw"
+        itemprop="tracking-dw"
+        content="{&quot;pageParams&quot;:{&quot;siteid&quot;:&quot;6&quot;,&quot;ptid&quot;:&quot;6036&quot;,&quot;onid&quot;:null,&quot;ednm&quot;:&quot;{edition}&quot;,&quot;ursuid&quot;:&quot;{ursuid}&quot;,&quot;regSilo&quot;:&quot;2&quot;,&quot;rsid&quot;:&quot;cbsigamespotsite&quot;,&quot;prodtypid&quot;:&quot;8&quot;,&quot;pagetype&quot;:&quot;news_article&quot;,&quot;assetguid&quot;:&quot;1100-6453805&quot;,&quot;assettitle&quot;:&quot;Shadow Of War Review Roundup&quot;,&quot;assettype&quot;:&quot;Article&quot;,&quot;author&quot;:[&quot;gs-2100-15568848&quot;],&quot;pid&quot;:462606,&quot;topicbrcrm&quot;:&quot;News|News Article&quot;},&quot;cleargifSrc&quot;:&quot;http:\/\/dw.cbsi.com\/clear\/c.gif?ptid=6036&amp;ednm=%7Bedition%7D&amp;ursuid=%7Bursuid%7D&amp;regSilo=2&amp;rsid=cbsigamespotsite&amp;prodtypid=8&amp;pagetype=news_article&amp;assetguid=1100-6453805&amp;assettitle=Shadow+Of+War+Review+Roundup&amp;assettype=Article&amp;author%5B0%5D=gs-2100-15568848&amp;pid=462606&amp;topicbrcrm=News%7CNews+Article&amp;sid=6&amp;ts=1507240393&quot;}"
+        >
+                  <meta id="tracking-ga"
+                    class="js-post-render-tracking-consumer tracking-settings"
+              data-tracking-service="ga"
+        itemprop="tracking-ga"
+        content="{&quot;custom&quot;:{&quot;PageType&quot;:{&quot;index&quot;:&quot;1&quot;,&quot;name&quot;:&quot;PageType&quot;,&quot;value&quot;:&quot;6036&quot;,&quot;scope&quot;:&quot;3&quot;},&quot;UserType&quot;:{&quot;index&quot;:&quot;2&quot;,&quot;name&quot;:&quot;UserType&quot;,&quot;value&quot;:&quot;{gaUserType}&quot;,&quot;scope&quot;:&quot;1&quot;}},&quot;account&quot;:&quot;UA-22577913-1&quot;}"
+        >
+                  <meta id="tracking-om"
+                    class="js-post-render-tracking-consumer tracking-settings"
+              data-tracking-service="om"
+        itemprop="tracking-om"
+        content="{&quot;brand&quot;:&quot;GameSpot&quot;,&quot;sid&quot;:&quot;gamespot&quot;,&quot;rsids&quot;:&quot;cbsigamespotsite,cbsicbsiall&quot;,&quot;user_status&quot;:&quot;{userStatus}&quot;,&quot;urs_id&quot;:&quot;{ursuid}&quot;,&quot;edition&quot;:&quot;{edition}&quot;,&quot;site_type&quot;:&quot;{siteType}&quot;,&quot;anon_id&quot;:&quot;{xclgfbrowser}&quot;,&quot;url&quot;:&quot;D=g&quot;,&quot;user_agent&quot;:&quot;D=User-Agent&quot;,&quot;page_type_id&quot;:&quot;6036&quot;,&quot;page_name&quot;:&quot;gs:\/articles\/shadow-of-war-review-roundup\/1100-6453805\/&quot;,&quot;ab_test&quot;:&quot;{abTestLabel}&quot;,&quot;theme&quot;:&quot;{theme}&quot;,&quot;event_hierarchy&quot;:&quot;{eventHierarchy}&quot;,&quot;marketing_cloud_id&quot;:&quot;10D31225525FF5790A490D4D@AdobeOrg&quot;,&quot;session&quot;:&quot;{ad_session}&quot;,&quot;page_type&quot;:&quot;news_article&quot;,&quot;channel&quot;:&quot;News&quot;,&quot;hierarchy&quot;:&quot;News|News Article|Games|News|PR&quot;,&quot;platform&quot;:[&quot;PlayStation 4&quot;,&quot;Xbox One&quot;,&quot;PC&quot;],&quot;content_source&quot;:&quot;CBSi&quot;,&quot;content_title&quot;:&quot;Shadow Of War Review Roundup&quot;,&quot;author_ids&quot;:[&quot;gs-2100-15568848&quot;],&quot;product_id&quot;:&quot;gs-5000-462606&quot;,&quot;content_type&quot;:&quot;article&quot;,&quot;content_guid&quot;:&quot;gs-1100-6453805&quot;,&quot;category&quot;:[&quot;Games&quot;,&quot;News&quot;,&quot;PR&quot;],&quot;game_title&quot;:&quot;Middle-earth: Shadow of War|The Lord of the Rings&quot;,&quot;genre&quot;:[&quot;Action&quot;,&quot;Adventure&quot;]}"
+                  data-post-render-param="TrackingBundle.page_type"
+          data-post-render-value="news_article"
+      >
+
+        <script src="https://static.gamespot.com/js/compiled/tracking.js?183e553b93b5c8363130870bfdc8fd70" type="text/javascript"></script>
+
+  <meta name="trackingEventsLookup" content='[]' />
+
+
+    <noscript>
+      <img src="http://dw.cbsi.com/clear/c.gif?ptid=6036&amp;ednm=%7Bedition%7D&amp;ursuid=%7Bursuid%7D&amp;regSilo=2&amp;rsid=cbsigamespotsite&amp;prodtypid=8&amp;pagetype=news_article&amp;assetguid=1100-6453805&amp;assettitle=Shadow+Of+War+Review+Roundup&amp;assettype=Article&amp;author%5B0%5D=gs-2100-15568848&amp;pid=462606&amp;topicbrcrm=News%7CNews+Article&amp;sid=6&amp;ts=1507240393" alt="" class="visuallyhidden">
+    </noscript>
+
+
+
+                    <script type="text/javascript">
+          var taboola_url = '//cdn.taboola.com/libtrc/cbsinteractive-gamespot/loader.js';
+          var taboola_header_key = 'article';
+        </script>
+                  <script async src="https://static.gamespot.com/js/compiled/dbca04a.js?183e553b93b5c8363130870bfdc8fd70" type="text/javascript"></script>
+
+            <script type="text/javascript">function setUpAgknTag(tag){tag.setBpId("cbsinteractive");}</script>
+      <script src="//js.agkn.com/prod/v0/tag.js" async></script>
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+      window.addEventListener('error', function (e) {
+    if(e.target.tagName === 'SCRIPT' && e.target.src.indexOf('asset.pagefair') !== -1) {
+      pf_notify(true);
+    }
+  }, true);
+			(function()
+	{
+		$('head').append('<meta id="_pfTracking" content="" data-event-tracking="unknown" data-status="unknown" data-processed="0"/>');
+	}());
+
+	var pf_notify = function (x)
+	{
+				$('#_pfTracking').data('event-tracking', 'Tracking|pf|' + (x ? 'true' : 'false'));
+    $('#_pfTracking').data('status', !!x);
+
+				$(document).trigger('pf_state_update');
+
+				pf_notify = function(){};
+	};
+
+</script>
+<script type="text/javascript">
+  (function() {
+    function async_load(script_url){
+      var protocol = ('https:' == document.location.protocol ? 'https://' : 'http://');
+      var s = document.createElement('script'); s.src = protocol + script_url;
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    }
+    bm_website_code = '85AA4308C8624AAB';
+    jQuery(document).ready(function(){async_load('asset.pagefair.com/measure.min.js')});
+    jQuery(document).ready(function(){async_load('asset.pagefair.net/ads.min.js')});
+  })();
+</script>
+
+<div id="liveMessageOverlay" class="live_message-overlay" style="display:none;">
+     <div id="liveMessageInner" class="live_message-container">
+          <span><i><svg class="symbol symbol-info-sign" aria-role="icon"><use xlink:href="#symbol-info-sign"></use></svg></i></span>
+          <p id="liveMessageContent"></p>
+          <a onclick="closeOverlay();" class="live_message-close btn btn-large btn-default">Close</a>
+     </div>
+</div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"afb799a982","applicationID":"2515728","transactionName":"blVaMEAHDUdZVBYMDFcfexFBEgxZF3ADCAZKQFcQcxQXXVtbByQRTVlbCFcVIFtWQxAKD1VVSl4IAgpHSFsDHCJaRFELXE5K","queueTime":0,"applicationTime":379,"atts":"QhJNRggdHhgaVkBfGERN","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+
+</html>

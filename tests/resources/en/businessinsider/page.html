@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" >
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQ8EUVRACQAFVVdbAQk="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+    <title>What is a 'bump stock' and how does it work? Behind Las Vegas shooter's little-known device - Business Insider</title>
+    <meta name="date" content="2017-10-05" />
+<meta name="sailthru.date" content="2017-10-05" />
+<meta name="news_keywords" content="Las Vegas shooting, bump stock, Semi-automatic, Automatic, Guns, Firearms, Slide Fire, stephen paddock, ATF, Michelle Mark" />
+<meta name="sailthru.tags" content="Las Vegas shooting, bump stock, Semi-automatic, Automatic, Guns, Firearms, Slide Fire, stephen paddock, ATF, Michelle Mark" />
+<meta name="description" content="After the Las Vegas shooting, lawmakers and gun control advocates have turned their focus toward a little-known but powerful device known as the &quot;bump stock.&quot;" />
+<meta name="sailthru.description" content="After the Las Vegas shooting, lawmakers and gun control advocates have turned their focus toward a little-known but powerful device known as the &quot;bump stock.&quot;" />
+<meta name="title" content="Lawmakers are zeroing in on 'bump stock' devices after the Las Vegas shooting — here's how they work" />
+<meta name="sailthru.verticals" content="politics,defense,law,news" />
+<meta name="sailthru.title" content="Lawmakers are zeroing in on 'bump stock' devices after the Las Vegas shooting — here's how they work" />
+<meta name="tbi-image" content="http://static6.businessinsider.com/image/59d66f1d351ccfd9008b8ac6/lawmakers-are-zeroing-in-on-bump-stock-devices-after-the-las-vegas-shooting--heres-how-they-work.jpg" />
+<meta name="sailthru.image.full" content="http://static6.businessinsider.com/image/59d66f1d351ccfd9008b8ac6/lawmakers-are-zeroing-in-on-bump-stock-devices-after-the-las-vegas-shooting--heres-how-they-work.jpg" />
+<meta name="sailthru.image.thumb" content="http://static2.businessinsider.com/image/59d66f1d351ccfd9008b8ac6-50-50/lawmakers-are-zeroing-in-on-bump-stock-devices-after-the-las-vegas-shooting--heres-how-they-work.jpg" />
+<meta name="sailthru.author" content="Michelle Mark" />
+<meta property="og:title" content="Lawmakers are zeroing in on 'bump stock' devices after the Las Vegas shooting — here's how they work" />
+<meta property="og:description" content="After the Las Vegas shooting, lawmakers and gun control advocates have turned their focus toward a little-known but powerful device known as the &quot;bump stock.&quot;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" />
+<meta property="og:site_name" content="Business Insider" />
+<meta property="fb:app_id" content="155043519637" />
+<meta property="article:publisher" content="businessinsider" />
+<meta property="author" content="Michelle Mark" />
+<meta name="twitter:url" content="http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" />
+<meta name="twitter:title" content="Lawmakers are zeroing in on 'bump stock' devices after the Las Vegas shooting — here's how they work" />
+<meta name="twitter:description" content="After the Las Vegas shooting, lawmakers and gun control advocates have turned their focus toward a little-known but powerful device known as the &quot;bump stock.&quot;" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://static5.businessinsider.com/image/59d66f3bc68d7b1d008b8018-506-253/lawmakers-are-zeroing-in-on-bump-stock-devices-after-the-las-vegas-shooting--heres-how-they-work.jpg" />
+<meta name="twitter:site" content="PoliticsInsider" />
+<meta property="article:author" content="http://www.businessinsider.com/author/michelle-mark" />
+<meta property="og:image" content="http://static4.businessinsider.com/image/59d66f3bc68d7b1d008b8018-1190-625/lawmakers-are-zeroing-in-on-bump-stock-devices-after-the-las-vegas-shooting--heres-how-they-work.jpg" />
+<link rel="canonical" href="http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10">
+<link rel="alternate" href="http://www.businessinsider.de/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" hreflang="en-DE">
+<link rel="alternate" href="http://uk.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" hreflang="en-GB">
+<link rel="alternate" href="http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" hreflang="en-US">
+<link rel="alternate" href="http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" hreflang="x-default">
+    <link href="http://static1.businessinsider.com/assets/css/min-base-us.css?1507231948" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://static2.businessinsider.com/assets/css/min-post-us.css?1507231948" media="screen" rel="stylesheet" type="text/css" />
+<link rel="syndication-source" />
+<link href="https://amp.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" rel="amphtml" />    <link type="text/css" rel="stylesheet" media="print" href="http://static5.businessinsider.com/assets/css/print.css?1507231948" />
+
+    <!-- detect adblock users for Piano and set cookie appropriately -->
+    <script>
+
+    // CustomEvent polyfill
+    (function () {
+
+      if ( typeof window.CustomEvent === "function" ) return false;
+
+      function CustomEvent ( event, params ) {
+        params = params || { bubbles: false, cancelable: false, detail: undefined };
+        var evt = document.createEvent( 'CustomEvent' );
+        evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+        return evt;
+       }
+
+      CustomEvent.prototype = window.Event.prototype;
+
+      window.CustomEvent = CustomEvent;
+    })();
+
+    var setAdblockerCookie = function(adblocker) {
+        var d = new Date();
+        d.setTime(d.getTime() + 60 * 60 * 24 * 30 * 1000);
+        document.cookie = "__adblocker=" + (adblocker ? "true" : "false") + "; expires=" + d.toUTCString() + "; path=/";
+
+        var event = new CustomEvent('piano_set', {'detail' : adblocker});
+        document.dispatchEvent(event);
+    }
+
+    var script = document.createElement("script");
+    script.setAttribute("async", true);
+    script.setAttribute("src", "//www.npttech.com/advertising.js");
+    script.setAttribute("onerror", "setAdblockerCookie(true);");
+    script.setAttribute("onload", "setAdblockerCookie(false);");
+    document.getElementsByTagName("head")[0].appendChild(script);
+    </script>
+
+    <!-- Krux - Control Tag- Start -->
+    <!-- BEGIN Krux ControlTag for "businessinsider.com" -->
+<script class="kxct" data-id="I2I9M2yx" data-timing="async" data-version="3.0" type="text/javascript">
+  window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+  (function(){
+    var k=document.createElement('script');k.type='text/javascript';k.async=true;
+    k.src=(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag/I2I9M2yx.js';
+    var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+  }());
+</script>
+<!-- END Krux ControlTag -->    <!-- Krux - Control Tag- End -->
+
+    <!-- Krux - Start -->
+    <script class="kxint" type="text/javascript">
+      window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+      (function(){
+        function retrieve(n){
+          var m, k='kx'+n,ls=(function(){
+              try{
+                return window.localStorage;
+              }catch(e){
+                return null;
+              }
+            })();
+          if (ls) {
+              return ls[k] || "";
+          } else if (navigator.cookieEnabled) {
+              m = document.cookie.match(k+'=([^;]*)');
+              return (m && unescape(m[1])) || "";
+          } else {
+              return '';
+          }
+        }
+
+        Krux.user = retrieve('user');
+        Krux.segments = retrieve('segs') ? retrieve('segs').split(',') : [];
+      })();
+    </script>
+    <!-- Krux - End -->
+
+    <script type="text/javascript">
+    	var vertical = 'politics';
+        var index_ad_hierarch = 'politics';
+
+        window.headertag = window.headertag || {};
+        var PageType = window.headertag.pagetype = "post";
+
+        var post_id = '';
+        var _sf_startpt=(new Date()).getTime();
+    </script>
+
+    <!-- Index Exchange - start -->
+                <script type="text/javascript" src="http://js.indexww.com/ht/ls-business-insider.js" async></script>
+        <!-- Index Exchange - end -->
+
+    <script type="text/javascript">
+        //this should be refactored to the BI.Google_Plus object, however the BI core library will need to be moved to above the headScript call
+        window.gPlusConfigs = {client_id : '551214076990-h27puiaonnlg9a9772gq3qbe9nk6qnno.apps.googleusercontent.com', base_domain: 'businessinsider.com'};
+    </script>
+
+    <!-- IAS -->
+    <script type="text/javascript">
+        window.BI_adHierarchy = 'desktop/politics/politics/post';
+    </script>
+    <!-- IAS end -->
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://static5.businessinsider.com/assets/js/min2.js?1507231948"></script>
+<script type="application/ld+json">
+    //<![CDATA[
+    {"@context":"http:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/www.businessinsider.com\/what-is-a-bump-fire-stock-legal-does-it-do-2017-10"},"headline":"Lawmakers are zeroing in on \u0027bump stock\u0027 devices after the Las Vegas shooting \u2014 here\u0027s how they work","thumbnailUrl":"http:\/\/static6.businessinsider.com\/image\/59d66f1d351ccfd9008b8ac6\/lawmakers-are-zeroing-in-on-bump-stock-devices-after-the-las-vegas-shooting--heres-how-they-work.jpg","image":{"@type":"ImageObject","url":"http:\/\/static6.businessinsider.com\/image\/59d66f1d351ccfd9008b8ac6\/lawmakers-are-zeroing-in-on-bump-stock-devices-after-the-las-vegas-shooting--heres-how-they-work.jpg","height":1127,"width":1503},"datePublished":"2017-10-05T19:40:26Z","dateModified":"2017-10-05T19:40:37Z","dateCreated":"2017-10-05T19:40:26Z","keywords":["Las Vegas shooting","bump stock","Semi-automatic","Automatic","Guns","Firearms","Slide Fire","stephen paddock","ATF"],"author":{"@type":"Person","name":"Michelle Mark"},"name":"what-is-a-bump-fire-stock-legal-does-it-do-2017-10","publisher":{"@type":"Organization","name":"Business Insider","logo":{"@type":"ImageObject","url":"http:\/\/static1.businessinsider.com\/assets\/images\/us\/logos\/og-image-logo.png"}},"description":"In the wake of Sunday\u0027s deadly mass shooting in..."}    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    BI.post.isSlideshow=false;    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    post = {"id":"59d66e9d351ccfd9008b8aba","uri":"http:\/\/www.businessinsider.com\/what-is-a-bump-fire-stock-legal-does-it-do-2017-10","thumb":"http:\/\/static1.businessinsider.com\/image\/59d66f1d351ccfd9008b8ac6-90-90\/lawmakers-are-zeroing-in-on-bump-stock-devices-after-the-las-vegas-shooting--heres-how-they-work.jpg","author":"Michelle Mark","author_ids":"Michelle Mark:7l","post_type":"post"};    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+
+        Author = "Michelle Mark";
+        Category = "Las Vegas shooting|bump stock|Semi-automatic|Automatic|Guns|Firearms|Slide Fire|stephen paddock|ATF";
+        AuthorType = "Staff";
+        OriginalID = "";
+        Editor = "Brett LoGiurato";
+        BIISub = "none"
+            //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+
+        BI.nav_select = "Politics";
+        BI.highTrafficMode = 0;
+        BI.post.isDraft = 0;
+        BI.post.url = "http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10";
+        BI.post.name = "what-is-a-bump-fire-stock-legal-does-it-do-2017-10";
+        BI.post.vertical =  "politics";
+        BI.post.author =  ["Michelle Mark"];
+        BI.post.categories =  ["Las Vegas shooting","bump stock","Semi-automatic","Automatic","Guns","Firearms","Slide Fire","stephen paddock","ATF"];
+        BI.post.views =  3265;
+        BI.comments.currentPage = 0;
+        BI.comments.filterPundits = 1;
+        BI.comments.getAllComments = 1;
+            //]]>
+</script>
+    <!-- purrrf performance library reference point -->
+    <script type="text/javascript">
+        window._purrrf.setStart();
+    </script>
+
+    <!-- Video Scripts -->
+            <!-- JW Player Head -->
+        <script src="http://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+        <script src="//content.jwplatform.com/libraries/puACk8ZV.js"></script>
+        <!-- /JW Player Head -->
+
+    <!-- optimizely desktop -->
+        <!-- End optimizely desktop -->
+    <!--Tech Insider Pinterest-->
+
+    <!-- Facebook Instant Start -->
+    <meta property="fb:pages" content="20446254070" />
+    <!-- Facebook Instant Start -->
+
+
+    <meta name="tbi-vertical" content="politics" />
+    <meta name="viewport" content="width=1024" />
+
+    <!--[if gte IE 9]>
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link type="text/css" rel="stylesheet" media="all" href="http://static5.businessinsider.com/assets/css/ie8.css" />
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script type="text/javascript" src="http://static3.businessinsider.com/assets/js/vendor/ie8/placeholders.min.js"></script>
+    <![endif]-->
+
+    <!--[if IE 9]>
+        <link type="text/css" rel="stylesheet" media="all" href="http://static4.businessinsider.com/assets/css/ie9.css" />
+        <script type="text/javascript" src="http://static5.businessinsider.com/assets/js/shims/Element.classList.js"></script>
+    <![endif]-->
+
+    <!--Tech Insider if IE 9 -->
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/businessinsider/politics" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="http://static4.businessinsider.com/assets/images/us/favicons/apple-touch-icon.png?v=BI-US-2017-06-22" />
+<link rel="icon" type="image/png" sizes="32x32" href="http://static1.businessinsider.com/assets/images/us/favicons/favicon-32x32.png?v=BI-US-2017-06-22" />
+<link rel="icon" type="image/png" sizes="16x16" href="http://static5.businessinsider.com/assets/images/us/favicons/favicon-16x16.png?v=BI-US-2017-06-22" />
+<link rel="manifest" href="http://static5.businessinsider.com/assets/images/us/favicons/manifest.json?v=BI-US-2017-06-22" />
+<link rel="mask-icon" href="http://static6.businessinsider.com/assets/images/us/favicons/safari-pinned-tab.svg?v=BI-US-2017-06-22" color="#1D607C" />
+<link rel="shortcut icon" href="http://static3.businessinsider.com/assets/images/us/favicons/favicon.ico?v=BI-US-2017-06-22" />
+<meta name="msapplication-config" content="http://static2.businessinsider.com/assets/images/us/favicons/browserconfig.xml?v=BI-US-2017-06-22" />
+<meta name="theme-color" content="#1D607C" />
+<meta name="linkedin:owner" content="mid:1d5f7b" />
+
+    <!--[if gte IE 9]>
+        <meta name="application-name" content="Business Insider - politics"/>
+        <meta name="msapplication-tooltip" content="Start the page in Site Mode"/>
+        <meta name="msapplication-starturl" content="http://www.businessinsider.com/politics"/>
+        <meta name="msapplication-window" content="width=800;height=600"/>
+        <meta name="msapplication-navbutton-color" content="#4C7C8D"/>
+
+        <meta name="msapplication-task" content="name=Tech;action-uri=http://www.businessinsider.com/sai;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Media;action-uri=http://www.businessinsider.com/thewire;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Wall Street;action-uri=http://www.businessinsider.com/clusterstock;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Markets;action-uri=http://www.businessinsider.com/moneygame;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Strategy;action-uri=http://www.businessinsider.com/warroom;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+    <![endif]-->
+
+    <script type="text/javascript">BI.site = 'US';</script>
+    <script type="text/javascript">BI.siteURI = 'http://www.businessinsider.com';</script>
+    <script type="text/javascript">BI.secureURI = 'https://www.businessinsider.com';</script>
+    <script type="text/javascript">BI.staticURI = 'http://static1.businessinsider.com';</script>
+    <script type="text/javascript">BI.env.setDomain('http://www.businessinsider.com');</script>
+    <script type="text/javascript">BI.sailthruHorizonURI = 'horizon.businessinsider.com';</script>
+
+            <!-- *************** ANALYTICS *************** -->
+    <script>
+        BI.ANALYTICS_SERVICE_URL = '//analytics.businessinsider.com';
+    </script>
+    <!-- *************** END ANALYTICS *************** -->
+
+        <script type="text/javascript">BI.vertical='Politics';</script>
+
+    <script type="text/javascript">BI.configs.ads.post_load_ad_buffer= 50;</script>
+    <script type="text/javascript">BI.configs.ads.subnav_sticky_ad_buffer = 250;</script>
+    <script type="text/javascript">
+        BI.flags = BI.flags || {};
+        BI.flags.bii_facebook_tracking = 1;
+        BI.flags.bii_facebook_tracking_verticals = ["Apps and Platforms","Digital Media","Payments","Internet of Things","E-Commerce","eCommerce","Fintech"];
+    </script>
+
+
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+       api_key: x4dbohswv62d
+       authorize: true
+       scope: r_basicprofile r_emailaddress w_share
+    </script>
+
+<!-- Taboola head -->
+
+        <!-- Standard Taboola Script -->
+        <script type="text/javascript">
+            window._taboola = window._taboola || [];
+            _taboola.push({article:'auto'});
+            !function (e, f, u) {
+                e.async = 1;
+                e.src = u;
+                f.parentNode.insertBefore(e, f);
+            }(
+                document.createElement('script'),
+                document.getElementsByTagName('script')[0],
+                'http://cdn.taboola.com/libtrc/businessinsider/loader.js'
+            );
+        </script>
+<!-- / Taboola head -->
+
+<!-- Pinterest JS -->
+<script type="text/javascript">
+(function(d){
+    var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+    p.type = 'text/javascript';
+    p.async = true;
+    p.src = '//assets.pinterest.com/js/pinit.js';
+    f.parentNode.insertBefore(p, f);
+}(document));
+</script>
+
+<!-- Piano -->
+
+
+
+    <script>
+        // Piano: custom vars
+        tp = window.tp || [];
+        tp.push(["setUseTinypassAccounts", true ]);
+        tp.push(['setCustomVariable', 'PageType', PageType]);
+        tp.push(["setAid", 'B6sIXKLiin']);
+
+        tp.push(["setSandbox", false]);
+
+        (function(src){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=src;var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})("//cdn.tinypass.com/api/tinypass.min.js");
+
+        tp.push(['init', function () {
+            tp.experience.init();
+        }]);
+
+        // refresh on login
+        tp.push(["addHandler", "loginSuccess", function(){
+            tp.api.callApi('/access/list', {}, function(data){
+                if (typeof data.data != "undefined"){
+                    for ( var i in data.data ){
+                        // If user has access to something
+                        if ( data.data[i].granted ){
+                            tp.offer.close();
+                            location.reload();
+                        }
+                    }
+                }
+            });
+        }]);
+
+                    // post vars
+            tp.push(['setTags', ["Las Vegas shooting","bump stock","Semi-automatic","Automatic","Guns","Firearms","Slide Fire","stephen paddock","ATF"]]);
+            tp.push(['setCustomVariable', 'PrimaryVertical', 'politics']);
+
+                        tp.push(['setCustomVariable', 'SecondaryVertical_Defense', 1]);
+                        tp.push(['setCustomVariable', 'SecondaryVertical_Law', 1]);
+                        tp.push(['setCustomVariable', 'SecondaryVertical_News', 1]);
+
+        // Get current page location and store as cookie
+        var primeReferrer = window.location.href;
+        BI.cookies.set('__pref', primeReferrer, 2592e3);
+    </script>
+
+<!-- / PIANO -->
+
+<!-- Chartbeat -->
+    <script type="text/javascript">
+        // chartbeat wants the vars in global
+        window._sf_async_config = window._sf_async_config || {};
+        window._sf_async_config.uid = 14447;
+        window._sf_async_config.domain = 'businessinsider.com';
+        window._sf_async_config.flickerControl = false;
+        window._sf_async_config.useCanonical = false;
+        window._sf_startpt = (new Date()).getTime();
+    </script>
+    <script async src="https://static.chartbeat.com/js/chartbeat_mab.js"></script>
+<!-- / Chartbeat -->
+
+
+</head>
+
+
+<body class="responsive ">
+
+<div data-cookie-notice-container></div>
+<!-- print only -->
+<img class="print" src="http://static2.businessinsider.com/assets/images/us/logos/logo-print-v1.png" />
+
+<!-- FB Connect -->
+<div id="fb-root" data-bi-facebook-root="155043519637"></div>
+<!-- / FB Connect -->
+
+<!--[if lt IE 9]>
+    <div class="container>
+        <div class="row">
+            <div class="alert alert-error alert-block">
+                <h4>Warning!</h4>
+                You are using an outdated version of Internet Explorer.  For security reasons you should <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank" title="Upgrade IE">upgrade your browser</a>. Please go to Windows Updates and install the latest version.
+            </div>
+        </div>
+    </div>
+<![endif]-->
+
+<!-- masthead -->
+<div class="masthead">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span3 span3-mh">
+                                <div data-hamburger class="menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                                <a href="/" class="sprites logo"></a>
+            </div>
+            <div class="span6 span6-mh">
+
+                        <h2 class="vert-name ellipsis"><a href="http://www.businessinsider.com/politics">Politics</a></h2>
+
+                                                </div>
+            <!-- links -->
+            <div class="span3 span3-mh links list-pipes list-right no-pipe">
+                <ul class="search">
+                    <li>
+                        <a data-search-icon-open href="#" title="Search" class="display-none"><span class="svg sprites search-icon"></span></a>
+                        <a data-search-icon-close href="#" class="close-x display-none">
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+                <div>
+                    <ul class="links-promo">
+
+
+    <li class="social">
+        <a href="//www.facebook.com/businessinsider" title="Like us on Facebook" aria-label="Like us on Facebook" target="_blank"><i class="fa fa-facebook ks-header-facebook"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//twitter.com/businessinsider" title="Follow us on Twitter" aria-label="Follow us on Twitter" target="_blank"><i class="fa fa-twitter ks-header-twitter"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//www.linkedin.com/company/businessinsider" title="Connect with us on LinkedIn" aria-label="Connect with us on LinkedIn" target="_blank"><i class="fa fa-linkedin ks-header-linkedin"></i></a>
+    </li>
+
+                                                    <li class=""><a href="http://intelligence.businessinsider.com/?utm_source=businessinsider&utm_medium=site_header&utm_term=bi_site_header&utm_content=bi_site_header&utm_campaign=bi_site_header">BI Intelligence</a></li>
+
+                                                    <li class="login"><a href="/events">Events</a></li>
+                                            </ul>
+
+                    <ul class="links-user">
+
+
+
+                                                                        <span data-bi-ajax-route="/esi/user_menubar?0=json%3A%7B%22viking%22%3Atrue%7D"></span>                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Area -->
+    <div data-search-over class="nav-over transition">
+        <div class="container transition search">
+            <form method="get" action="/s" class="search-field">
+                <input data-search-input name="q" type="text" placeholder="Search" autocomplete="off">
+            </form>
+        </div>
+    </div>
+    <!-- Nav area -->
+            <div data-nav-over class="nav-over transition">
+
+        <div class="transition">
+            <div class="list-pipes nav-sections">
+                <ul class="verticals">
+
+
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Trending" href="/trending">
+                                Trending                            </a>
+                        </li>
+
+
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Tech Insider" href="/sai">
+                                Tech Insider                            </a>
+                        </li>
+
+
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Finance" href="/clusterstock">
+                                Finance                            </a>
+                        </li>
+
+
+                                            <li class="current-vertical-active">
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Politics" href="/politics">
+                                Politics                            </a>
+                        </li>
+
+
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Strategy" href="/warroom">
+                                Strategy                            </a>
+                        </li>
+
+
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Life" href="/thelife">
+                                Life                            </a>
+                        </li>
+
+
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Sports" href="/sportspage">
+                                Sports                            </a>
+                        </li>
+
+
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Video" href="/video">
+                                Video                            </a>
+                        </li>
+
+
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-All" href="/">
+                                All                            </a>
+                        </li>
+
+                                    </ul>
+            </div>
+                            <div class="main-nav-dropdown ks-nav-dropdown"></div>
+                    </div>
+    </div>
+</div>
+
+<!-- / masthead -->
+
+
+
+
+<div id="main-content">
+                                                            <div class="ad-subnav-container" data-ad-container>
+                        <div class="subnav-content leaderboard" data-sticky="leaderboard">
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="desktop/politics/politics/post" data-authors="michelle-mark" data-pagetype="post" data-pos="atf" data-region="Subnav" data-responsive="null" data-sizes="728x90,970x250,970x90" data-tag="shooting" data-url="/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" data-views="0-5000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+                        </div>
+                    </div>
+
+    <div class="container">
+        <!-- flash messages -->
+                <div class="siteskin-dropshadow">
+            <div class="row primary-row">
+                                    <div class="breaking-module-rendered" id="breaking-module-rendered">
+                        <div class="page-top">
+                        <span data-bi-ajax-route="/esi/breaking_module"></span>                        </div>
+                    </div>
+                                <div class="span8">
+                    <div class="breaking-module-siteskin" id="breaking-module-siteskin"></div>
+
+<a name="post-top"></a>
+
+<div id="share-email-tmpl">
+  <div id="shareEmailModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="shareEmailModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="shareEmailModalLabel"></h3>
+    </div>
+
+    <div class="modal-body">
+      <div class="share-email-error alert alert-error"></div>
+
+      <div class="share-email-body">
+        <div class="register">
+          <form id="form_form" class="form-horizontal share-email-form" action="#" method="post">
+            <div class="control-group">
+              <label for="mail_from" class="control-label">From</label>
+
+              <div class="controls">
+                <input type="text" name="mail_from" class="mail-from share-email-input" placeholder="Your Email Address" />
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="mail_to" class="control-label">To</label>
+
+              <div class="controls">
+                <input type="text" name="mail_to" class="mail-to share-email-input" placeholder="Friend's Email Address" />
+              </div>
+            </div>
+
+            <div class="share-email-captcha-container">
+              <div class="g-recaptcha" data-sitekey="6Lci0AUAAAAAALxy_wOu05bblbmrVjz8L7HU3d4S"></div>            </div>
+
+            <input type="hidden" name="action" value="email" />
+
+            <div class="control-group">
+              <div class="controls share-email-submit-container">
+                <input type="submit" class="btn submit email-post" value="Send" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="share-email-success" style="display:none">
+        <div class="alert alert-success">
+          You have successfully emailed the post.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="share-embed-tmpl">
+    <div id="shareEmbedModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="shareEmbedModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="shareEmbedModalLabel"></h3>
+      </div>
+      <div class="modal-body">
+
+
+<textarea rows="10" class="embed-textarea">
+
+
+</textarea>
+
+
+      </div>
+   </div>
+</div>
+
+<div  class="content post js-post">
+    <div class="sl-layout-post">
+
+<!-- Sponsored Post Tag -->
+
+<h1>Lawmakers are zeroing in on 'bump stock' devices after the Las Vegas shooting — here's how they work</h1>
+
+<div id="content" class="content">
+    <div class="post-top">
+        <!-- Byline -->
+        <div class="flex byline">
+
+
+	<div class="flex-item">
+		<div class="list-pipes no-pipe">
+			<ul>
+																		<li class="author-byline ks-author-byline"><a href="http://www.businessinsider.com/author/michelle-mark">Michelle Mark</a></li>
+													<li>    </li>
+
+				                    </ul>
+                </div>
+                <div class="list-pipes no-pipe">
+                    <ul>
+                		        			        <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1507232426">Oct.  5, 2017,  3:40 PM</span>
+</li>
+		    				<li class="pageviews">
+					<span class="svg sprites hot views"></span>
+					<span class="hot" title="Engagement">3,265</span>
+				</li>
+
+
+			</ul>
+
+		</div>
+	</div>
+</div>        <!-- Sharing -->
+        <div class="share">
+
+<!-- RRSSB start -->
+<div class="rrssb-baseline share-container ks-share-top clearfix" data-share style="display:block;">
+    <!-- buttons start here -->
+    <ul class="rrssb-buttons rrssb-top clearfix">
+                <li class="facebook ks-byline-fb">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" title="facebook" class="popup">
+                <i class="fa fa-facebook-square"></i>
+                <span class="text">facebook</span>
+            </a>
+        </li>
+
+                <li class="linkedin ks-byline-linkedin">
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10&amp;title=Lawmakers are zeroing in on 'bump stock' devices after the Las Vegas shooting — here's how they work&amp;summary=After the Las Vegas shooting, lawmakers and gun control advocates have turned their focus toward a little-known but powerful device known as the "bump stock."" title="linkedin" class="popup">
+                <i class="fa fa-linkedin"></i>
+                <span class="text">linkedin</span>
+            </a>
+        </li>
+
+                <li class="twitter ks-byline-tweet">
+            <a href="http://twitter.com/share?url=http://read.bi/2fNpajF&amp;via=PoliticsInsider&amp;text=Lawmakers+are+scrutinizing+bump+stocks+after+the+Las+Vegas+shooting+%E2%80%94+here%27s+how+they+work" title="twitter" class="popup">
+                <i class="fa fa-twitter"></i>
+                <span class="text">twitter</span>
+            </a>
+        </li>
+
+
+                <li class="email button-email ks-byline-email" data-href="http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10">
+            <a href="#" title="email">
+                <i class="icon-email light"></i>
+                <span class="text">email</span>
+            </a>
+        </li>
+
+
+                                    <li class="printbtn ks-byline-print">
+                    <a href="javascript:window.print()" title="print">
+                        <i class="fa fa-print"></i>
+                        <span class="text">print</span>
+                    </a>
+                </li>
+
+
+            </ul>
+    <!-- buttons end here -->
+</div>
+<!-- RRSSB end -->        </div>
+    </div>
+
+    <!-- Perfect Market content ad-->
+
+		 <!-- END Perfect Market content ad-->
+
+    <div class="clear-both">
+		<div class="KonaBody post-content">
+
+            <div>
+  <p>
+    <span class="KonaFilter image-container display-table float_right image on-image" data-post-image="">
+      <img src="http://static2.businessinsider.com/image/59d66f1d351ccfd9008b8ac6-1503/ap17277761127305.jpg" alt="bump stock device" data-mce-source="Associated Press/Rick Bowmer" data-mce-caption="a &amp;quotbump stock&amp;quot is attached to a semi-automatic rifle at the Gun Vault store and shooting range Wednesday, Oct. 4, 2017, in South Jordan, Utah."><span class="caption-source">
+        <span class="caption">a
+  "bump stock" is attached to a semi-automatic rifle at the Gun
+  Vault store and shooting range Wednesday, Oct. 4, 2017, in South
+  Jordan, Utah.</span>
+        <span class="source">Associated Press/Rick
+  Bowmer</span>
+      </span>
+    </span>
+  </p>
+  <p>
+  In the wake of Sunday's deadly mass shooting in Las Vegas,
+  lawmakers and gun-control advocates have turned their focus
+  toward a little-known but powerful device police say the gunman
+  used on his weapons: the "bump stock."
+</p>
+  <p>
+  Authorities say the shooter, <a href="http://www.businessinsider.com/las-vegas-gunman-stephen-paddock-meticulously-planned-shooting-attack-cameras-2017-10" target="_blank" rel="noopener noreferrer">64-year-old Stephen
+  Paddock</a>, had affixed bump stocks to at least 12 of the 23
+  firearms they later recovered from his room. The weapons were
+  used to gun down a crowd of concertgoers,
+  ultimately leaving 58 people dead.
+</p>
+  <p>
+  The bump stock devices gave his weapons <a href="http://www.businessinsider.com/las-vegas-gunman-bump-stock-automatic-weapon-2017-10" target="_blank" rel="noopener noreferrer">rapid-fire
+  capabilities</a> — a speed that would otherwise be impossible for
+  his semi-automatic rifles to achieve.
+</p>
+  <p>
+  Here's what you need to know:
+</p>
+  <h2>
+  What is a bump stock?
+</h2>
+  <p>
+  A bump stock is a device that can be legally purchased and
+  installed onto semi-automatic firearms, such as AR-15, AK-47, and
+  Saiga models, replacing the rifles' standard stocks.
+</p>
+  <p>
+  Unlike automatic firearms, which fire continuously while the
+  trigger is pulled, semi-automatic weapons fire one round per
+  trigger-pull. The bump stock harnesses the recoil energy produced
+  when a shot is fired from a semi-automatic rifle, and it "bumps"
+  the weapon back and forth between the shooter's shoulder and
+  trigger finger.
+</p>
+  <p>
+  Since the shooter's finger is still pulling the trigger for
+  each shot, the firearm technically remains a semi-automatic,
+  even as it achieves a rate of fire similar to that
+  produced by an automatic.
+</p>
+  <h3>
+  Watch the way the rifle rapidly slides back and forth:
+</h3>
+  <p>
+    <div>
+	<div class="vimeo-embed-container">
+		<iframe src="//player.vimeo.com/video/131206596?autoplay=0&amp;loop=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+</div></p>
+  <p>
+  Bump stocks typically consist of two main parts: a block that
+  replaces the pistol grip, and a hollow shoulder stock installed
+  over the rear of the rifle, fitting with a sliding-stock
+  buffer-tube assembly, according to a <a href="https://www.slidefire.com/downloads/BATFE.pdf" target="_blank" rel="noopener noreferrer">review</a> by the Bureau of Alcohol,
+  Tobacco, Firearms, and Explosives. Here's what one bump stock
+  model looks like before it's installed onto an AR-15:
+</p>
+  <p>
+    <span class="KonaFilter image-container display-table image on-image" data-post-image="">
+      <img src="http://static1.businessinsider.com/image/59d66e47c68d7b6d118b7de6-1000/ssar15-mod-rifle-stock-3.jpg" alt="bump stock" data-mce-source="Slide Fire" data-link="http://www.slidefire.com/ssar15-mod"><span class="source-only source">
+        <a href="http://www.slidefire.com/ssar15-mod">Slide
+  Fire</a>
+      </span>
+    </span>
+  </p>
+  <h2>
+  When and why were they created?
+</h2>
+  <p>
+  Bump stocks are a relatively recent product, and were only
+  cleared as legal devices by the federal government in 2010.
+</p>
+  <p>
+  The founder of Slide Fire, the most prominent bump stock
+  manufacturer, has previously said he created the devices to
+  simulate automatic fire, and that his product was meant for
+  recreational purposes.
+</p>
+  <p>
+  "A friend and I were out shooting one day and we weren't able to
+  fire as fast as we wanted," <a href="http://www.thealbanynews.net/archives/2443" target="_blank" rel="noopener noreferrer">Jeremiah Cottle told The Albany News in
+  2011</a>. "We couldn't afford what we wanted — a fully automatic
+  rifle — so I started to think about how I could make something
+  that would work and be affordable."
+</p>
+  <p>
+  Slide Fire launched online sales in late 2010 and hit immediate
+  success, blowing past their annual sales goal in the first week,
+  Cottle told the newspaper.
+</p>
+  <p>
+  Prior to its launch, Slide Fire had requested an evaluation of
+  the bump stock from the Firearms Technology Branch of the ATF
+  bureau. In its request, the company appears to have told the
+  bureau the devices were intended for people with disabilities.
+  <a href="https://www.slidefire.com/downloads/BATFE.pdf" target="_blank" rel="noopener noreferrer">A responding letter signed by
+  the FTB chief</a> said that the company's initial request had
+  described the purpose of the bump stock as "to assist persons
+  whose hands have limited mobility to "bump-fire' an AR-15 type
+  rifle."
+</p>
+  <p>
+  The letter continued:
+</p>
+  <p style="padding-left: 30px;">
+  "The stock has no automatically functioning mechanical parts or
+  springs and performs no automatic mechanical function when
+  installed. In order to use the installed device, the shooter must
+  apply constant forward pressure with the non-shooting hand and
+  constant rearward pressure with the shooting
+  hand. Accordingly, we find that the 'bump-stock' is a
+  firearm part and is not regulated as a firearm under Gun Control
+  Act or the National Firearms Act."
+</p>
+  <p>
+  When asked by reporters why the devices had been cleared by the
+  ATF, spokeswoman Jill Snyder said the bureau had previously
+  determined that bump stocks do not mechanically alter the
+  function of rifles or convert them into automatic weapons.
+</p>
+  <p>
+  "Bump-fire stocks, while simulating automatic fire, do not
+  actually alter the firearm to fire automatically, making them
+  legal under current federal law," Snyder said.
+</p>
+  <h2>
+  What will happen in the wake of the Las Vegas shooting?
+</h2>
+  <p>
+    <span class="KonaFilter image-container display-table float_right image on-image" data-post-image="">
+      <img src="http://static4.businessinsider.com/image/59d67428c68d7ba45a8b4b49-2000/ap17277640241295.jpg" alt="bump stock device" data-mce-source="Associated Press/Allen G. Breed" data-mce-caption="Shooting instructor Frankie McRae aims an AR-15 rifle fitted with a &amp;quotbump stock&amp;quot at his 37 PSR Gun Club in Bunnlevel, N.C., on Wednesday, Oct. 4, 2017."><span class="caption-source">
+        <span class="caption">Shooting
+  instructor Frankie McRae aims an AR-15 rifle fitted with a "bump
+  stock" at his 37 PSR Gun Club in Bunnlevel, N.C., on Wednesday,
+  Oct. 4, 2017.</span>
+        <span class="source">Associated Press/Allen
+  G. Breed</span>
+      </span>
+    </span>
+  </p>
+  <p>
+  Lawmakers have already introduced bills to ban the sale of bump
+  stocks, and it's a move that appears to have some bipartisan
+  support, unlike many gun control proposals in the past.
+</p>
+  <p><a href="http://www.businessinsider.com/conservative-media-bump-stocks-2017-10" target="_blank" rel="noopener noreferrer">House Speaker Paul
+  Ryan</a> told MSNBC on Thursday that a ban on bump stocks was
+  clearly "something we need to look into," and Republican senators
+  such as Ron Johnson of Wisconsin and John Cornyn of Texas
+  <a href="http://www.businessinsider.com/republicans-bump-stocks-2017-10" target="_blank" rel="noopener noreferrer">have both come out in
+  support of</a> debate on a possible ban, as has Republican
+  Rep. Bill Flores of Texas.
+</p>
+  <p>
+  "There's no reason for a typical gun owner to own anything that
+  converts a semiautomatic to something that behaves like an
+  automatic," <a href="http://thehill.com/homenews/house/353881-top-conservative-calls-for-ban-on-device-used-by-vegas-shooter" target="_blank" rel="noopener noreferrer">Flores told The
+  Hill</a>.
+</p>
+  <p>
+  The National Rifle Association on Thursday also suggested it
+  <a href="http://www.businessinsider.com/nra-bump-stocks-las-vegas-shooting-statement-2017-10" target="_blank" rel="noopener noreferrer">would be open to new
+  regulations on bump stocks</a>, calling for a federal review of
+  the device by the ATF.
+</p>
+  <p>
+  Several politicians have said in recent days they were <a href="https://www.nytimes.com/2017/10/04/us/politics/bump-stock-fire-legal-republicans-congress.html?_r=0" target="_blank" rel="noopener noreferrer">unaware such devices
+  even existed</a>, and Kellyanne Conway, top counselor to
+  President Donald Trump, <a href="http://www.businessinsider.com/kellyanne-conway-bump-stocks-las-vegas-shooting-guns-control-2017-10" target="_blank" rel="noopener noreferrer">lambasted the Obama
+  administration</a> for having approved the devices in the first
+  place.
+</p>
+  <p>
+  "This is a device that Obama's ATF decided would not be regulated
+  in 2010, and I think that's an important part of this
+  conversation," she said on "Fox &amp; Friends" on Thursday
+  morning.
+</p>
+  <p>
+  Consumers also appear to be stocking up on the devices out of
+  fear they'll soon be outlawed, as has been the case after
+  previous mass shootings. Many gun retailers appear to have
+  already <a href="http://www.businessinsider.com/las-vegas-shooting-bump-stocks-used-retailers-response-2017-10" target="_blank" rel="noopener noreferrer">sold out of bump
+  stocks</a> in the days following the Las Vegas shooting.
+</p>
+  <p>
+  Even Slide Fire has suspended new orders on their website "in
+  order to provide the best service with those already placed."
+</p>
+</div>                                        <!-- See Also Text Links -->
+        <div id="see-also-links" class="see-also">
+                            <h3><span class="all-caps">SEE ALSO:</span> <a href="http://www.businessinsider.com/las-vegas-gunman-stephen-paddock-meticulously-planned-shooting-attack-cameras-2017-10" >The Las Vegas gunman meticulously planned his attack with chilling precision, down to a camera hidden in a food-service cart in the hallway</a>
+                </h3>
+                    </div>
+    <!--  / See Also Text Links -->
+
+     <div class="margin-top popular-video">
+        <h3>NOW WATCH: <a href="http://www.businessinsider.com/firings-trump-administration-anthony-scaramucci-fired-resignation-steve-bannon-2017-8">Tom Price resigns after controversy over private flights — here are the casualties of the Trump administration so far</a></h3>
+            <!-- JW Player -->
+                <div
+                    id="video-popular"
+                    data-popular-video
+                    data-media-id="DBwCcsq5"
+                    data-auto-start="false"
+                    data-ad-tag-url="http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&impl=s&url=http%3A%2F%2Fwww.businessinsider.com%2Fwhat-is-a-bump-fire-stock-legal-does-it-do-2017-10&correlator=TIME_STAMP&cust_params=vp_abl%3D1%26tag%3DLas-Vegas-shooting%2Cbump-stock%2CSemi-automatic%2CAutomatic%2CGuns%2CFirearms%2CSlide-Fire%2Cstephen-paddock%2CATF%26authors%3DMichelle-Mark%26mpt%3DJWPlayer&cmsid=642&vpos=preroll&vid=DBwCcsq5&pagetype=post&description_url=http%3A%2F%2Fwww.businessinsider.com%2Fwhat-is-a-bump-fire-stock-legal-does-it-do-2017-10&iu=4442842%2FDesktop%2Fpolitics"
+                    data-show-ad="true"
+                    data-ad-placement="pre"
+                    data-show-recommendations="false"
+                    data-recommendations-id=4yvN3aI1                >
+                </div>
+    </div>
+
+					</div>
+
+
+        <!-- Post category tags -->
+		    <div class="category-wrapper" data-category-wrapper>
+
+        <div class="tags-top align-right">
+            More:
+
+                                                                                <a href="http://www.businessinsider.com/category/las-vegas-shooting">Las Vegas shooting</a>
+                                                                                                    <a href="http://www.businessinsider.com/category/bump-stock">bump stock</a>
+                                                                                                    <a href="http://www.businessinsider.com/category/semi-automatic">Semi-automatic</a>
+                                                                                                    <a href="http://www.businessinsider.com/category/automatic">Automatic</a>
+
+                                                <span href="#" id="tags-top-popover" class="" title=""><i class="fa fa-chevron-down"></i>
+                        <div class="popover bottom">
+                            <div class="popover-content">
+
+                                    <a href="http://www.businessinsider.com/category/guns">Guns</a>
+
+
+                                    <a href="http://www.businessinsider.com/category/firearms">Firearms</a>
+
+
+                                    <a href="http://www.businessinsider.com/category/slide-fire">Slide Fire</a>
+
+
+                                    <a href="http://www.businessinsider.com/category/stephen-paddock">stephen paddock</a>
+
+
+                                    <a href="http://www.businessinsider.com/category/atf">ATF</a>
+
+                                            </div>
+                        </div>
+                    </span>
+                                    </div>
+    </div>
+
+    </div>
+</div>
+
+        <div id="social-reader-notification" class="alert clear-both" style="display:none;"></div>
+
+        <div id="facebook-notification" class="alert" style="display:none;"></div>
+
+            </div>
+
+
+        <div class="bottom-share-module clearfix clear-both">
+            <!-- RRSSB BOTTOM POST CALL -->
+
+<!-- RRSSB start -->
+<div class="rrssb-baseline share-container ks-share-bottom margin-top margin-bottom clearfix" style="display:none;">
+    <!-- buttons start here -->
+    <ul class="rrssb-buttons rrssb-bottom clearfix">
+               <li class="facebook ks-byline-fb">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" title="facebook" class="popup">
+                <i class="fa fa-facebook-square"></i>
+                <span class="text">facebook</span>
+            </a>
+        </li>
+
+                <li class="linkedin ks-byline-linkedin">
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10&amp;title=Lawmakers are zeroing in on 'bump stock' devices after the Las Vegas shooting — here's how they work&amp;summary=After the Las Vegas shooting, lawmakers and gun control advocates have turned their focus toward a little-known but powerful device known as the "bump stock."" title="linkedin" class="popup">
+                <i class="fa fa-linkedin"></i>
+                <span class="text">linkedin</span>
+            </a>
+        </li>
+
+                <li class="twitter ks-byline-tweet">
+            <a href="http://twitter.com/share?url=http://read.bi/2fNpajF&amp;via=PoliticsInsider&amp;text=Lawmakers+are+scrutinizing+bump+stocks+after+the+Las+Vegas+shooting+%E2%80%94+here%27s+how+they+work" title="twitter" class="popup">
+                <i class="fa fa-twitter"></i>
+                <span class="text">twitter</span>
+            </a>
+        </li>
+
+
+                <li class="email button-email ks-byline-email" data-href="http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10">
+            <a href="#" title="email">
+                <i class="icon-email light"></i>
+                <span class="text">email</span>
+            </a>
+        </li>
+
+                                    <li class="printbtn ks-byline-print">
+                    <a href="javascript:window.print()" title="print">
+                        <i class="fa fa-print"></i>
+                        <span class="text">print</span>
+                    </a>
+                </li>
+
+            </ul>
+    <!-- buttons end here -->
+</div>
+<!-- RRSSB end -->
+
+<!-- This Empty div tells sailthru where to fly out the concierge promo. -->
+<div id="bottom-share-links"></div>
+        </div>
+
+                                    <!-- Standard Taboola Script -->
+                                    <div id="taboola-below-main-column"></div>
+                    <script type="text/javascript">
+                        window._taboola = window._taboola || [];
+                                                    _taboola.push({mode:'thumbs-1r', container:'taboola-below-main-column', placement:'below-main-column'});
+                                            </script>
+                                <div class="clearfix"></div>
+
+
+<div class="sailthru-overlay" data-sailthru-overlay>
+    <div class="sailthru-modal" data-sailthru-modal>
+        <span class="sailthru-modal-close" data-sailthru-modal-close>×</span>
+        <iframe src="" frameborder="0" class="sailthru-iframe" data-sailthru-iframe></iframe>
+    </div>
+</div>
+
+<div class="bottom-recommended clear-fix pull-left ks-recommended">
+    <h3 class="underlined thin">
+                    Recommended For You
+
+        <span class="sailthru-anchor" data-sailthru-anchor>
+            <span class="sailthru-anchor-text">Powered by Sailthru</span>
+        </span>
+    </h3>
+
+    <!-- Concierge posts -->
+    <ul class="media-list pull-left ">
+        <li class="media concierge-post">
+            <a class="concierge-post-link" href=""><div class="seealso-image"><img src="http://static4.businessinsider.com/assets/images/transparent.gif" alt="" /></div></a>
+            <h4 class="related"><a class="title-link concierge-post-link" href=""></a></h4>
+        </li>
+        <li class="media concierge-post">
+            <a class="concierge-post-link" href=""><div class="seealso-image"><img src="http://static4.businessinsider.com/assets/images/transparent.gif" alt="" /></div></a>
+            <h4 class="related"><a class="title-link concierge-post-link" href=""></a></h4>
+        </li>
+        <li class="media concierge-post">
+            <a class="concierge-post-link" href=""><div class="seealso-image"><img src="http://static4.businessinsider.com/assets/images/transparent.gif" alt="" /></div></a>
+            <h4 class="related"><a class="title-link concierge-post-link" href=""></a></h4>
+        </li>
+        <li class="media concierge-post">
+            <a class="concierge-post-link" href=""><div class="seealso-image"><img src="http://static4.businessinsider.com/assets/images/transparent.gif" alt="" /></div></a>
+            <h4 class="related"><a class="title-link concierge-post-link" href=""></a></h4>
+        </li>
+                <li class="media concierge-post last-story">
+            <a class="concierge-post-link" href=""><div class="seealso-image"><img src="http://static4.businessinsider.com/assets/images/transparent.gif" alt="" /></div></a>
+            <h4 class="related"><a class="title-link concierge-post-link" href=""></a></h4>
+        </li>
+    </ul>
+</div>
+            <div class="clearfix"></div>
+
+
+
+
+
+        <!-- Schema.org/Article metadata -->
+<div style="display:none;" itemscope itemtype="http://schema.org/Article">
+    <h1 itemprop="name">Lawmakers are zeroing in on 'bump stock' devices after the Las Vegas shooting — here's how they work</h1>
+    <a href="http://www.businessinsider.com/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" itemprop="url">Lawmakers are zeroing in on 'bump stock' devices after the Las Vegas shooting — here's how they work</a>
+    <img src="http://static5.businessinsider.com/image/59d66f1d351ccfd9008b8ac6-100-100/lawmakers-are-zeroing-in-on-bump-stock-devices-after-the-las-vegas-shooting--heres-how-they-work.jpg"  itemprop="image" />
+    <div itemprop="description"><p>In the wake of Sunday's deadly mass shooting in...</p></div>
+</div>
+<!-- / Schema.org/Article metadata -->
+
+
+
+    <!-- Simple Reach (all post types) -->
+
+</div>
+
+                    </div>
+                                            <div class="span4">
+                            <div class="main-rail">
+
+<div id="right-rail" class="right-rail">
+	<div class="sl-layout-post">
+		<!-- PERFECT MARKET RR -->
+
+			<!-- Only show at uppermost top if skin is active -->
+
+			<!-- Vertical Host -->
+													<!-- / Vertical Host -->
+
+			<!-- Countdown Clock  -->
+						<!-- / Countdown Clock  -->
+
+			<!-- Top Right Rail Ad -->
+						<!-- / Top Right Rail Ad -->
+
+			<!-- Recommended For You  -->
+                            <!-- editorial sidebar -->
+<div class="clear-fix ks-recommended rail-recommended">
+            <h3 class="underlined thin">Recommended For You</h3>
+        <!-- Concierge posts -->
+    <ul class="media-list">
+        <li class="media concierge-post">
+            <a class="pull-left" href=""><div class="seealso-image"><img src="http://static4.businessinsider.com/assets/images/transparent.gif" width="60" alt="" /></div></a>
+            <div class="media-body"><p><a class="title-link concierge-post-link" href=""></a></p></div>
+        </li>
+    </ul>
+</div>            			<!-- / Recommended For You  -->
+
+			<!-- Show here if skin is not active -->
+												<div class="right-ad" data-ad-container>
+						<div class="min-height-250">
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="desktop/politics/politics/post" data-authors="michelle-mark" data-pagetype="post" data-region="Upper 300" data-responsive="null" data-sizes="300x250,300x600,300x400,300x1050" data-tag="shooting" data-url="/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" data-views="0-5000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+						</div>
+					</div>
+
+			<!-- Finance widget - Main -->
+							<div id="finanzen_right_rail_anchor">
+                                        <div class="bottom-info clearfix">
+                        <a href="/disclaimer-finance" class="disclaimer">Disclaimer</a>
+                    </div>
+
+                    <div id="tradeit-container"></div>
+                </div>
+
+						    <!-- taboola videos -->
+				    <!-- Standard Taboola Script -->
+    <div id="taboola-right-rail-thumbnails"></div>
+    <script type="text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({mode: 'organic-thumbnails-e', container: 'taboola-right-rail-thumbnails', placement: 'Right Rail Thumbnails', target_type: 'video'});
+    </script>
+
+
+			<!-- Middle 300 -->
+							<div class="right-ad" data-ad-container>
+					<div>
+
+	<div data-bi-ad data-ad-container class="ad dfp position-load" data-adunit="desktop/politics/politics/post" data-authors="michelle-mark" data-pagetype="post" data-region="Middle 300" data-responsive="null" data-sizes="300x250" data-tag="shooting" data-url="/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" data-views="0-5000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('');
+		}());
+	</script>
+					</div>
+				</div>
+
+							<!-- taboola 'from the web' - needs correct condition -->
+				    <!-- Standard Taboola Script -->
+    <div id="taboola-right-rail-thumbnails-2"></div>
+    <script type="text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({mode: 'ab_thumbnails-a_2x1', container: 'taboola-right-rail-thumbnails-2', placement: 'Right Rail Thumbnails 2nd', target_type: 'video'});
+    </script>
+
+
+						  <!-- Dianomi Ad -->
+
+
+<div class="right-ad">
+    <div class="dianomi-ad"></div>
+
+    <script>
+        BI.dianomi.setConfigKey(true);
+        BI.dianomi.init('US');
+    </script>
+</div>
+			<!-- Featured -->
+		 	                <div class="right-ad" data-ad-container>
+                    <div>
+
+<div class="sponsored-content-widget ks-rr-sponsored-content-widget">
+            <h3 class="underlined thin">Featured</h3>
+        <ul class="media-list">
+                <li id="id-" class="media">
+                        <a class="pull-left" href="http://www.businessinsider.com/stock-market-news-debating-odds-correction-2017-9">
+                                    <img src="http://static2.businessinsider.com/image/59cd62f7c68d7b0b028b582b-60/debating-the-odds-of-a-stock-market-correction.jpg" alt="Debating the odds of a stock market correction" />
+                            </a>
+            <div class="media-body">
+                <p><a class="title" href="http://www.businessinsider.com/stock-market-news-debating-odds-correction-2017-9">Debating the odds of a stock market correction</a></p>
+            </div>
+            <p class="align-right">
+                <a href="http://www.businessinsider.com/the-bottom-line">More &quot;The Bottom Line&quot; »</a>            </p>
+        </li>
+                <li id="id-" class="media">
+                        <a class="pull-left" href="http://www.businessinsider.com/how-chatbots-could-change-customer-service-over-the-next-5-years-2017-9">
+                                    <img src="http://static1.businessinsider.com/image/59ce8218c68d7b1c008b5dc7-60/how-chatbots-could-change-customer-service-over-the-next-5-years.jpg" alt="How chatbots could change customer service over the next 5 years" />
+                            </a>
+            <div class="media-body">
+                <p><a class="title" href="http://www.businessinsider.com/how-chatbots-could-change-customer-service-over-the-next-5-years-2017-9">How chatbots could change customer service over the next 5 years</a></p>
+            </div>
+            <p class="align-right">
+                <a href="http://www.businessinsider.com/boardroom-2030">More &quot;Boardroom 2030&quot; »</a>            </p>
+        </li>
+                <li class="featured-300-ad">
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="desktop/politics/politics/post" data-authors="michelle-mark" data-pagetype="post" data-region="Featured 300" data-responsive="null" data-sizes="300x120" data-tag="shooting" data-url="/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" data-views="0-5000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+        </li>
+    </ul>
+</div>                    </div>
+                </div>
+
+			<!-- Newsletters -->
+
+<div class="right-subscribe">
+    <div class="right-news">
+                    <h3 class="underlined thin">
+                <span class="news-vert">Politics</span> Emails &amp; Alerts
+            </h3>
+
+        <p>Get the best of Business Insider delivered to your inbox every day.</p>
+
+        <a href="/register?action=newsletters&first=newsletters" class="btn submit" id="news-signup">Sign-Up</a>
+    </div>
+</div>
+
+			<!-- Editorial Sidebar -->
+							<span data-bi-ajax-route="/esi/ed_sidebar"></span>
+			<!-- Editorial Sidebar 2 -->
+							<!-- editorial sidebar 2 -->
+<div id="editorial2" class="ks-rr-editorial-2" data-bi-heatmap="editorial">
+            <h3 class="underlined thin">Get the Slide Deck from Henry Blodget's IGNITION Presentation on the Future of Digital</h3>
+    	<div>
+		<p><a href="/future-of-digital-slide-deck?utm_source=businessinsider&amp;utm_medium=rr&amp;utm_campaign=NextBigThingDeckbirr&amp;utm_term=birr"><img src="https://static6.businessinsider.com/image/589df07f8e91c66f5d9dffd1-700/ignition-future-of-digital-free.png" border="0" alt="EXCLUSIVE FREE REPORT: 30 Big Tech Predictions for 2017" style="margin: 0 auto;" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3 class="underlined thin">Read Business Insider On The Go</h3>
+<p style="text-align: center;"><span>Available on iOS or Android</span></p>
+<div style="text-align: center !important; width: 100%; display: block;"><a href="https://itunes.apple.com/app/apple-store/id554260576?pt=385758&amp;ct=right-rail&amp;mt=8"><img src="http://static2.businessinsider.com/image/51e9584f69beddbb1d000003-208/appstorebadgeen.png" border="0" style="margin: 0px 0px 10px 0px;" /></a> <br /><a href="https://play.google.com/store/apps/details?id=com.freerange360.mpp.businessinsider&amp;referrer=utm_source=right-rail"><img src="http://static1.businessinsider.com/image/57d95e358b987d18049f3f06-300/google-play.png" border="0" alt="Google Play" width="238" height="92" /></a></div>	</div>
+</div>
+<script>amplify.publish('editorial-sidebar-loaded', 'editorial2');</script>
+<!-- / editorial sidebar 2 -->
+
+			<!-- Jobs Widget -->
+
+<!-- Jobs Module -->
+<div class="jobs ks-rr-jobs hide-uk">
+	<h5 class="text-ad pull-right"><a href="http://www.careerbuilder.com/Jobseeker/Jobs/JobResults.aspx?IPath=QH&qb=1&s_rawwords=&s_freeloc=&s_jobtypes=ALL&lr=cbpar_busiin&siteid=cbpar_busiin026&utm_source=businessinsider&utm_medium=partner&utm_campaign=businessinsider-all-jobs-applys" title="Visit Career Builder"><img src="http://static3.businessinsider.com/assets/images/careerbuilder.png" alt="Career Builder" width="175"></a></h5>
+	<h3>Find A Job</h3>
+
+	<!-- <div class="row-fluid"> -->
+	<table>
+		<tr>
+			<td>
+				<a rel="nofollow" href="http://www.careerbuilder.com/Jobseeker/Jobs/JobResults.aspx?IPath=QH&qb=1&s_rawwords=technology&s_freeloc=&s_jobtypes=ALL&lr=cbpar_busiin&siteid=cbpar_busiin020&utm_source=businessinsider&utm_medium=partner&utm_campaign=businessinsider-tech-applys">Tech Jobs</a>
+			</td>
+			<td>
+				<a rel="nofollow" href="http://www.careerbuilder.com/Jobseeker/Jobs/JobResults.aspx?IPath=QH&qb=1&s_rawwords=c-level&s_freeloc=&s_jobtypes=ALL&lr=cbpar_busiin&siteid=cbpar_busiin023&utm_source=businessinsider&utm_medium=partner&utm_campaign=businessinsider-c-level-applys">C-Level Jobs</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a rel="nofollow" href="http://www.careerbuilder.com/Jobseeker/Jobs/JobResults.aspx?IPath=QH&qb=1&s_rawwords=media&s_freeloc=&s_jobtypes=ALL&lr=cbpar_busiin&siteid=cbpar_busiin021&utm_source=businessinsider&utm_medium=partner&utm_campaign=businessinsider-media-applys">Media Jobs</a>
+			</td>
+			<td>
+				<a rel="nofollow" href="http://www.careerbuilder.com/Jobseeker/Jobs/JobResults.aspx?IPath=QH&qb=1&s_rawwords=design&s_freeloc=&s_jobtypes=ALL&lr=cbpar_busiin&siteid=cbpar_busiin024&utm_source=businessinsider&utm_medium=partner&utm_campaign=businessinsider-design-applys">Design Jobs</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a rel="nofollow" href="http://www.careerbuilder.com/Jobseeker/Jobs/JobResults.aspx?IPath=QH&qb=1&s_rawwords=finance&s_freeloc=&s_jobtypes=ALL&lr=cbpar_busiin&siteid=cbpar_busiin022&utm_source=businessinsider&utm_medium=partner&utm_campaign=businessinsider-finance-applys">Finance Jobs</a>
+			</td>
+			<td>
+				<a rel="nofollow" href="http://www.careerbuilder.com/Jobseeker/Jobs/JobResults.aspx?IPath=QH&qb=1&s_rawwords=sales&s_freeloc=&s_jobtypes=ALL&lr=cbpar_busiin&siteid=cbpar_busiin025&utm_source=businessinsider&utm_medium=partner&utm_campaign=businessinsider-sales-applys">Sales Jobs</a>
+			</td>
+		</tr>
+	</table>
+
+	<div class="clearfix">
+		<a href="http://www.careerbuilder.com/Jobseeker/Jobs/JobResults.aspx?IPath=QH&qb=1&s_rawwords=&s_freeloc=&s_jobtypes=ALL&lr=cbpar_busiin&siteid=cbpar_busiin026&utm_source=businessinsider&utm_medium=partner&utm_campaign=businessinsider-all-jobs-applys">See All Jobs &#187;</a>
+	</div>
+
+</div>
+
+
+
+
+			<!-- Author Sold -->
+							<div class="right-ad lower300" data-sticky="lower300">
+					<div>
+
+	<div data-bi-ad data-ad-container class="ad dfp position-load" data-adunit="desktop/politics/politics/post" data-authors="michelle-mark" data-pagetype="post" data-region="Lower 300" data-responsive="null" data-sizes="300x250,300x600" data-tag="shooting" data-url="/what-is-a-bump-fire-stock-legal-does-it-do-2017-10" data-views="0-5000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('');
+		}());
+	</script>
+					</div>
+				</div>
+
+			</div>
+</div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+
+
+            </div>
+            <div class="footer" data-bi-footer>
+
+                <div class="container">
+
+                    <section class="top">
+                        <a href="/" class="sprites logo"></a>
+                        <section class="social-icons">
+                            <span class="social-prompt">Follow us on:</span>
+
+                            <ul class="links-user">
+
+
+    <li class="social">
+        <a href="//www.facebook.com/businessinsider" title="Like us on Facebook" aria-label="Like us on Facebook" target="_blank"><i class="fa fa-facebook ks-header-facebook"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//twitter.com/businessinsider" title="Follow us on Twitter" aria-label="Follow us on Twitter" target="_blank"><i class="fa fa-twitter ks-header-twitter"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//www.linkedin.com/company/businessinsider" title="Connect with us on LinkedIn" aria-label="Connect with us on LinkedIn" target="_blank"><i class="fa fa-linkedin ks-header-linkedin"></i></a>
+    </li>
+
+
+                                                        </section>
+                        <div class="sister-sites-container">
+                            <span class="sister-site-prompt">Also check out:</span>
+
+                            <a href="//www.thisisinsider.com" class="sister-sites sister-one"></a>
+                            <a href="//markets.businessinsider.com" class="sister-sites sister-two"></a>
+                        </div>
+
+                    </section>
+
+                    <div class="list-pipes">
+                        <ul>
+                        <li>* Copyright &copy; 2017 Business Insider Inc. All rights reserved. <span class="nowrap">Registration on or use of this site constitutes acceptance of our
+                                                                <a href="/terms">Terms of Service</a>                                and
+                                                                                                <a href="/privacy-policy">Privacy Policy</a>.</span>
+                            </li>
+                            <li><a href="/disclaimer">Disclaimer</a></li>
+                                                            <li><a href="/commerce-on-business-insider">Commerce Policy</a></li>
+                                                                                        <li><a href="http://nytm.org/made">Made in NYC</a></li>
+                                                    </ul>
+                    </div>
+                    <div class="list-pipes">
+                        <ul>
+                                                                                    <li>Stock quotes by <a href="http://www.finanzen.net/">finanzen.net</a></li>
+                                                    </ul>
+                    </div>
+                    <div class="international-links list-pipes">
+                        <ul><li>International Editions:</li>
+                            <li><a href="http://uk.businessinsider.com?IR=C">UK</a></li><li><a href="http://www.businessinsider.de?IR=C">DE</a></li><li><a href="http://www.businessinsider.com.au/">AUS</a></li><li><a href="http://www.businessinsider.in/">IN</a></li><li><a href="http://www.businessinsider.my/">MY</a></li><li><a href="http://www.businessinsider.sg/">SG</a></li><li><a href="http://www.businessinsider.com.pl/?IR=C">PL</a></li><li><a href="http://nordic.businessinsider.com/?IR=C">SE</a></li><li><a href="http://www.businessinsider.nl?IR=C">NL</a></li><li><a href="http://www.businessinsider.fr/?IR=C">FR</a></li><li><a href="https://it.businessinsider.com">IT</a></li><li><a href="http://www.businessinsider.jp">JP</a></li>                        </ul>
+                    </div>
+                                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="http://static1.businessinsider.com/assets/js/min-foot.js?1507231948"></script>
+
+<!--[if gte IE 9]>
+<script type="text/javascript">amplify.publish("ie9-pinned-site", {"hid":null,"vertical":"politics"});</script><![endif]-->
+
+<!-- Freemium User Check -->
+ <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        if (BI.cookies.get("bipf")) {
+            document.body.classList.add("prime");
+        }
+    });
+</script>
+<!-- End Freemium User Check -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src=""//www.googletagmanager.com/ns.html?id=GTM-NS64GV"" height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NS64GV');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Piano -->
+<!-- End Piano -->
+
+<!-- Twitter widget.js -->
+<script type="text/javascript">
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src="https://platform.twitter.com/widgets.js";
+        js.async=true;
+        fjs.parentNode.insertBefore(js,fjs);
+    }}(document,"script","twitter-wjs");
+</script>
+<!-- /Twitter widget.js -->
+
+
+    <!-- Begin comScore Tag -->
+    <script type="text/javascript">
+        var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "9900186"
+            , options:{ url_append:"comscorekw = politics"}        });
+        (function() {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+            s.async = true;
+            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+            el.parentNode.insertBefore(s, el);
+        })();
+    </script>
+    <noscript>
+        <img src="http://b.scorecardresearch.com/p?c1=2&c2=9900186&cv=2.0&cj=1" />
+    </noscript>
+    <!-- End comScore Tag -->
+
+        <!-- Chartbeat -->
+    <script type="text/javascript">
+        // chartbeat wants the vars in global
+        window._sf_async_config.sections = 'politics';
+        window._sf_async_config.authors = 'Michelle Mark';
+
+        //only set the following if on a video post
+
+        //only set the following if on a sponsored post
+
+        (function(){
+          function loadChartbeat() {
+            window._sf_endpt=(new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',
+               (('https:' === document.location.protocol) ? 'https://s3.amazonaws.com/' : 'http://') +
+               'static.chartbeat.com/js/chartbeat_video.js');
+            document.body.appendChild(e);
+          }
+          var oldonload = window.onload;
+          window.onload = (typeof window.onload != 'function') ?
+             loadChartbeat : function() { oldonload(); loadChartbeat(); };
+        })();
+    </script>
+    <!-- / Chartbeat -->
+
+            <!-- Sailthru Concierge -->
+        <script type="text/javascript" src="http://ak.sail-horizon.com/horizon/v1.js"></script>
+        <script type="text/javascript" src="http://ak.sail-horizon.com/scout/v1.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            // Sailthru Concierge
+            if (window.Sailthru) {
+                var sailthruOpts = {
+                    domain: 'horizon.businessinsider.com'
+                                            , concierge: { from: 'top', threshold: $('#bottom-share-links') }
+                                    };
+                if (window.outerWidth < 800) { //on small screens we dont want the flyout to appear
+                    delete sailthruOpts.concierge;
+                }
+                Sailthru.setup(sailthruOpts);
+            }
+        });
+        </script>
+        <!-- / Sailthru Concierge -->
+
+<!-- Perfect market JS -->
+    <!-- End Perfect market JS-->
+
+<!-- taboola foot -->
+    <script type="text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({flush: true});
+    </script>
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4b4136998e","applicationID":"13516968","transactionName":"ZVZVZRBVXEJVVkJRDVwcdEQRQF1cG0VZSxY=","queueTime":0,"applicationTime":171,"atts":"SRFCE1hPTx0WVBQCGU9O","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
