@@ -1,0 +1,1571 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+
+	<link rel="shortcut icon" href="https://cdn7.digitaltrends.com/favicon.ico?ver=2" />
+	<link rel="apple-touch-icon" href="https://cdn7.digitaltrends.com/touch-icon-iphone.png?ver=2" />
+	<link rel="apple-touch-icon" sizes="72x72" href="https://cdn7.digitaltrends.com/touch-icon-ipad.png?ver=2" />
+	<link rel="apple-touch-icon" sizes="114x114" href="https://cdn7.digitaltrends.com/touch-icon-iphone4.png?ver=2" />
+
+	<style>
+		@-ms-viewport {
+		    width: extend-to-zoom;
+		    zoom: 1.0;
+		}
+	</style>
+	<meta name="viewport" content="initial-scale=1" />
+
+
+					<meta name="tags" content="entitlement,iOS,privacy,Uber" />
+
+		<script>
+			(function() {
+				var query_string, query_vars, utm_source, utm_medium, utm_term, utm_content, utm_campaign, i, l, keyval, utm_cookie;
+
+				// check query
+				query_string = window.location.search.substring(1);
+				query_vars   = query_string.split('&');
+
+				utm_source = utm_medium = utm_term = utm_content = utm_campaign = '';
+				for (i = 0, l = query_vars.length; i < l; i++) {
+					keyval = query_vars[i].split('=');
+
+					if (undefined !== keyval[0] && undefined !== keyval[1]) {
+						if ('utm_source' === keyval[0]) {
+							utm_source = keyval[1];
+						}
+						else if ('utm_medium' === keyval[0]) {
+							utm_medium = keyval[1];
+						}
+						else if ('utm_term' === keyval[0]) {
+							utm_term = keyval[1];
+						}
+						else if ('utm_content' === keyval[0]) {
+							utm_content = keyval[1];
+						}
+						else if ('utm_campaign' === keyval[0]) {
+							utm_campaign = keyval[1];
+						}
+					}
+				}
+
+				if (utm_source || utm_medium || utm_term || utm_content || utm_campaign) { // try for new
+					window.dt_utm_data = {
+						utm_source:   utm_source,
+						utm_medium:   utm_medium,
+						utm_term:     utm_term,
+						utm_content:  utm_content,
+						utm_campaign: utm_campaign
+					};
+
+					document.cookie = 'dt_utm='+JSON.stringify(window.dt_utm_data)+'; expires=0; path=/';
+				}
+				else { // try for old
+					utm_cookie = (result = new RegExp('(?:^|; )'+encodeURIComponent('dt_utm')+'=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+
+					if (utm_cookie) {
+						window.dt_utm_data = JSON.parse(utm_cookie);
+					}
+				}
+			})();
+		</script>
+
+
+<!-- This site is optimized with the Yoast SEO plugin v5.4.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Uber iOS app can virtually &#8216;see&#8217; your phone screen, and Apple approved it</title>
+<meta name="description" content="Code inside the Uber iOS app made it possible to see on-screen activities, even when the app was running in the background."/>
+<link rel="canonical" href="https://www.digitaltrends.com/mobile/uber-ios-app-entitlement-news/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Uber iOS app can virtually &#8216;see&#8217; your phone screen, and Apple approved it" />
+<meta property="og:description" content="Code inside the Uber iOS app made it possible to see on-screen activities, even when the app was running in the background." />
+<meta property="og:url" content="https://www.digitaltrends.com/mobile/uber-ios-app-entitlement-news/" />
+<meta property="og:site_name" content="Digital Trends" />
+<meta property="article:publisher" content="https://www.facebook.com/digitaltrends" />
+<meta property="article:author" content="https://www.facebook.com/andyboxall" />
+<meta property="article:tag" content="entitlement" />
+<meta property="article:tag" content="iOS" />
+<meta property="article:tag" content="privacy" />
+<meta property="article:tag" content="Uber" />
+<meta property="article:published_time" content="2017-10-06T04:43:51-07:00" />
+<meta property="article:modified_time" content="2017-10-06T05:54:06-07:00" />
+<meta property="og:updated_time" content="2017-10-06T05:54:06-07:00" />
+<meta property="og:image" content="https://icdn4.digitaltrends.com/image/uber_stock-1200x630-c-ar1.91.jpg?ver=2" />
+<meta property="og:image:secure_url" content="https://icdn4.digitaltrends.com/image/uber_stock-1200x630-c-ar1.91.jpg?ver=2" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+		<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Code inside the Uber iOS app made it possible to see on-screen activities, even when the app was running in the background." />
+<meta name="twitter:title" content="Uber iOS app can virtually &#8216;see&#8217; your phone screen, and Apple approved it" />
+<meta name="twitter:site" content="@digitaltrends" />
+<meta name="twitter:image" content="https://icdn5.digitaltrends.com/image/uber_stock-510x0.jpg?ver=2" />
+<meta name="twitter:creator" content="@AndyBoxall" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.digitaltrends.com\/","name":"Digital Trends","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.digitaltrends.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<!-- / Yoast SEO plugin. -->
+
+            <link rel="amphtml" href="https://www.digitaltrends.com/mobile/uber-ios-app-entitlement-news/amp/">
+        <link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//mtrx.go.sonobi.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Digital Trends | Feed" href="https://www.digitaltrends.com/feed/" />
+<link rel='stylesheet' id='dt-css'  href='https://cdn5.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/styles/css/dt.css?ver=1507242374098' type='text/css' media='all' />
+<script id="dt-head-script">!function(t,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.ES6Promise=e()}(this,function(){"use strict";function t(t){var e=typeof t;return null!==t&&("object"===e||"function"===e)}function e(t){return"function"==typeof t}function n(t){I=t}function r(t){J=t}function o(){return function(){return process.nextTick(a)}}function i(){return"undefined"!=typeof H?function(){H(a)}:c()}function s(){var t=0,e=new V(a),n=document.createTextNode("");return e.observe(n,{characterData:!0}),function(){n.data=t=++t%2}}function u(){var t=new MessageChannel;return t.port1.onmessage=a,function(){return t.port2.postMessage(0)}}function c(){var t=setTimeout;return function(){return t(a,1)}}function a(){for(var t=0;t<G;t+=2){var e=$[t],n=$[t+1];e(n),$[t]=void 0,$[t+1]=void 0}G=0}function f(){try{var t=require,e=t("vertx");return H=e.runOnLoop||e.runOnContext,i()}catch(n){return c()}}function l(t,e){var n=arguments,r=this,o=new this.constructor(p);void 0===o[et]&&k(o);var i=r._state;return i?!function(){var t=n[i-1];J(function(){return x(i,o,t,r._result)})}():E(r,o,t,e),o}function h(t){var e=this;if(t&&"object"==typeof t&&t.constructor===e)return t;var n=new e(p);return g(n,t),n}function p(){}function v(){return new TypeError("You cannot resolve a promise with itself")}function d(){return new TypeError("A promises callback cannot return that same promise.")}function _(t){try{return t.then}catch(e){return it.error=e,it}}function y(t,e,n,r){try{t.call(e,n,r)}catch(o){return o}}function m(t,e,n){J(function(t){var r=!1,o=y(n,e,function(n){r||(r=!0,e!==n?g(t,n):S(t,n))},function(e){r||(r=!0,j(t,e))},"Settle: "+(t._label||" unknown promise"));!r&&o&&(r=!0,j(t,o))},t)}function b(t,e){e._state===rt?S(t,e._result):e._state===ot?j(t,e._result):E(e,void 0,function(e){return g(t,e)},function(e){return j(t,e)})}function w(t,n,r){n.constructor===t.constructor&&r===l&&n.constructor.resolve===h?b(t,n):r===it?(j(t,it.error),it.error=null):void 0===r?S(t,n):e(r)?m(t,n,r):S(t,n)}function g(e,n){e===n?j(e,v()):t(n)?w(e,n,_(n)):S(e,n)}function A(t){t._onerror&&t._onerror(t._result),T(t)}function S(t,e){t._state===nt&&(t._result=e,t._state=rt,0!==t._subscribers.length&&J(T,t))}function j(t,e){t._state===nt&&(t._state=ot,t._result=e,J(A,t))}function E(t,e,n,r){var o=t._subscribers,i=o.length;t._onerror=null,o[i]=e,o[i+rt]=n,o[i+ot]=r,0===i&&t._state&&J(T,t)}function T(t){var e=t._subscribers,n=t._state;if(0!==e.length){for(var r=void 0,o=void 0,i=t._result,s=0;s<e.length;s+=3)r=e[s],o=e[s+n],r?x(n,r,o,i):o(i);t._subscribers.length=0}}function M(){this.error=null}function P(t,e){try{return t(e)}catch(n){return st.error=n,st}}function x(t,n,r,o){var i=e(r),s=void 0,u=void 0,c=void 0,a=void 0;if(i){if(s=P(r,o),s===st?(a=!0,u=s.error,s.error=null):c=!0,n===s)return void j(n,d())}else s=o,c=!0;n._state!==nt||(i&&c?g(n,s):a?j(n,u):t===rt?S(n,s):t===ot&&j(n,s))}function C(t,e){try{e(function(e){g(t,e)},function(e){j(t,e)})}catch(n){j(t,n)}}function O(){return ut++}function k(t){t[et]=ut++,t._state=void 0,t._result=void 0,t._subscribers=[]}function Y(t,e){this._instanceConstructor=t,this.promise=new t(p),this.promise[et]||k(this.promise),B(e)?(this.length=e.length,this._remaining=e.length,this._result=new Array(this.length),0===this.length?S(this.promise,this._result):(this.length=this.length||0,this._enumerate(e),0===this._remaining&&S(this.promise,this._result))):j(this.promise,q())}function q(){return new Error("Array Methods must be provided an Array")}function F(t){return new Y(this,t).promise}function D(t){var e=this;return new e(B(t)?function(n,r){for(var o=t.length,i=0;i<o;i++)e.resolve(t[i]).then(n,r)}:function(t,e){return e(new TypeError("You must pass an array to race."))})}function K(t){var e=this,n=new e(p);return j(n,t),n}function L(){throw new TypeError("You must pass a resolver function as the first argument to the promise constructor")}function N(){throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.")}function U(t){this[et]=O(),this._result=this._state=void 0,this._subscribers=[],p!==t&&("function"!=typeof t&&L(),this instanceof U?C(this,t):N())}function W(){var t=void 0;if("undefined"!=typeof global)t=global;else if("undefined"!=typeof self)t=self;else try{t=Function("return this")()}catch(e){throw new Error("polyfill failed because global object is unavailable in this environment")}var n=t.Promise;if(n){var r=null;try{r=Object.prototype.toString.call(n.resolve())}catch(e){}if("[object Promise]"===r&&!n.cast)return}t.Promise=U}var z=void 0;z=Array.isArray?Array.isArray:function(t){return"[object Array]"===Object.prototype.toString.call(t)};var B=z,G=0,H=void 0,I=void 0,J=function(t,e){$[G]=t,$[G+1]=e,G+=2,2===G&&(I?I(a):tt())},Q="undefined"!=typeof window?window:void 0,R=Q||{},V=R.MutationObserver||R.WebKitMutationObserver,X="undefined"==typeof self&&"undefined"!=typeof process&&"[object process]"==={}.toString.call(process),Z="undefined"!=typeof Uint8ClampedArray&&"undefined"!=typeof importScripts&&"undefined"!=typeof MessageChannel,$=new Array(1e3),tt=void 0;tt=X?o():V?s():Z?u():void 0===Q&&"function"==typeof require?f():c();var et=Math.random().toString(36).substring(16),nt=void 0,rt=1,ot=2,it=new M,st=new M,ut=0;return Y.prototype._enumerate=function(t){for(var e=0;this._state===nt&&e<t.length;e++)this._eachEntry(t[e],e)},Y.prototype._eachEntry=function(t,e){var n=this._instanceConstructor,r=n.resolve;if(r===h){var o=_(t);if(o===l&&t._state!==nt)this._settledAt(t._state,e,t._result);else if("function"!=typeof o)this._remaining--,this._result[e]=t;else if(n===U){var i=new n(p);w(i,t,o),this._willSettleAt(i,e)}else this._willSettleAt(new n(function(e){return e(t)}),e)}else this._willSettleAt(r(t),e)},Y.prototype._settledAt=function(t,e,n){var r=this.promise;r._state===nt&&(this._remaining--,t===ot?j(r,n):this._result[e]=n),0===this._remaining&&S(r,this._result)},Y.prototype._willSettleAt=function(t,e){var n=this;E(t,void 0,function(t){return n._settledAt(rt,e,t)},function(t){return n._settledAt(ot,e,t)})},U.all=F,U.race=D,U.resolve=h,U.reject=K,U._setScheduler=n,U._setAsap=r,U._asap=J,U.prototype={constructor:U,then:l,"catch":function(t){return this.then(null,t)}},U.polyfill=W,U.Promise=U,U.polyfill(),U});
+"use strict";var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(){var t={},e=Array.prototype.slice,n=Function.prototype.bind,o=function(e){return t.isObject(e)?Object.create(e):{}},r=function(e,n,r,i,c){if(!(i instanceof n))return e.apply(r,c);var s=o(e.prototype),a=e.apply(s,c);return t.isObject(a)?a:s};t.bind=function(o,i){if(n&&o.bind===n)return n.apply(o,e.call(arguments,1));if(!t.isFunction(o))throw new TypeError("Bind must be called on a function");var c=e.call(arguments,2);return function t(){return r(o,t,i,this,c.concat(e.call(arguments)))}},t.partial=function(n){var o=e.call(arguments,1);return function e(){for(var i=0,c=o.length,s=Array(c),a=0;a<c;a++)s[a]=o[a]===t?arguments[i++]:o[a];for(;i<arguments.length;)s.push(arguments[i++]);return r(n,e,this,this,s)}},t.before=function(t,e){var n;return function(){return--t>0&&(n=e.apply(this,arguments)),t<=1&&(e=null),n}},t.once=t.partial(t.before,2),t.keys=function(e){return t.isObject(e)?Object.keys(e):[]},t.isObject=function(t){var e=void 0===t?"undefined":_typeof(t);return"function"===e||"object"===e&&!!t};var i=0;t.uniqueId=function(t){var e=++i+"";return t?"dt-event-"+t+e:"dt-event-"+e};var c=window.DTEvents={},s=/\s+/,a=function e(n,o,r,i,c){var a,l=0;if(r&&"object"===(void 0===r?"undefined":_typeof(r))){void 0!==i&&"context"in c&&void 0===c.context&&(c.context=i);for(a=t.keys(r);l<a.length;l++)o=e(n,o,a[l],r[a[l]],c)}else if(r&&s.test(r))for(a=r.split(s);l<a.length;l++)o=n(o,a[l],i,c);else o=n(o,r,i,c);return o};c.on=function(t,e,n){return l(this,t,e,n)};var l=function(t,e,n,o,r){return t._events=a(f,t._events||{},e,n,{context:o,ctx:t,listening:r}),r&&((t._listeners||(t._listeners={}))[r.id]=r),t};c.listenTo=function(e,n,o){if(!e)return this;var r=e._listenId||(e._listenId=t.uniqueId("l")),i=this._listeningTo||(this._listeningTo={}),c=i[r];if(!c){var s=this._listenId||(this._listenId=t.uniqueId("l"));c=i[r]={obj:e,objId:r,id:s,listeningTo:i,count:0}}return l(e,n,o,this,c),this};var f=function(t,e,n,o){if(n){var r=t[e]||(t[e]=[]),i=o.context,c=o.ctx,s=o.listening;s&&s.count++,r.push({callback:n,context:i,ctx:i||c,listening:s})}return t};c.off=function(t,e,n){return this._events?(this._events=a(u,this._events,t,e,{context:n,listeners:this._listeners}),this):this},c.stopListening=function(e,n,o){var r=this._listeningTo;if(!r)return this;for(var i=e?[e._listenId]:t.keys(r),c=0;c<i.length;c++){var s=r[i[c]];if(!s)break;s.obj.off(n,o,this)}return this};var u=function(e,n,o,r){if(e){var i,c=0,s=r.context,a=r.listeners;if(n||o||s){for(var l=n?[n]:t.keys(e);c<l.length;c++){var f=e[n=l[c]];if(!f)break;for(var u=[],d=0;d<f.length;d++){var v=f[d];o&&o!==v.callback&&o!==v.callback._callback||s&&s!==v.context?u.push(v):(i=v.listening)&&0==--i.count&&(delete a[i.id],delete i.listeningTo[i.objId])}u.length?e[n]=u:delete e[n]}return e}for(var p=t.keys(a);c<p.length;c++)delete a[(i=a[p[c]]).id],delete i.listeningTo[i.objId]}};c.once=function(e,n,o){var r=a(d,{},e,n,t.bind(this.off,this));return"string"==typeof e&&null==o&&(n=void 0),this.on(r,n,o)},c.listenToOnce=function(e,n,o){var r=a(d,{},n,o,t.bind(this.stopListening,this,e));return this.listenTo(e,r)};var d=function(e,n,o,r){if(o){var i=e[n]=t.once(function(){r(n,i),o.apply(this,arguments)});i._callback=o}return e};c.trigger=function(t){if(!this._events)return this;for(var e=Math.max(0,arguments.length-1),n=Array(e),o=0;o<e;o++)n[o]=arguments[o+1];return a(v,this._events,t,void 0,n),this};var v=function(t,e,n,o){if(t){var r=t[e],i=t.all;r&&i&&(i=i.slice()),r&&p(r,o),i&&p(i,[e].concat(o))}return t},p=function(t,e){var n,o=-1,r=t.length,i=e[0],c=e[1],s=e[2];switch(e.length){case 0:for(;++o<r;)(n=t[o]).callback.call(n.ctx);return;case 1:for(;++o<r;)(n=t[o]).callback.call(n.ctx,i);return;case 2:for(;++o<r;)(n=t[o]).callback.call(n.ctx,i,c);return;case 3:for(;++o<r;)(n=t[o]).callback.call(n.ctx,i,c,s);return;default:for(;++o<r;)(n=t[o]).callback.apply(n.ctx,e);return}};c.bind=c.on,c.unbind=c.off,c.extendTo=function(t){if(t&&"object"===(void 0===t?"undefined":_typeof(t)))for(var e in c)Object.prototype.hasOwnProperty.call(c,e)&&(t[e]=c[e])}}(),window.DTEvent={_promised_events:{},getEventPromise:function(t){var e=this;return this._promised_events.hasOwnProperty(t)||(this._promised_events[t]=new Promise(function(n,o){e.once(t,function(){n(arguments)},e)})),this._promised_events[t]},promise:function(t){this.getEventPromise.apply(this,arguments),this.trigger.apply(this,arguments)}},window.DTEvents.extendTo(window.DTEvent);var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(){var t={},e=function(t){var e;try{var n="__storage_test__";return(e=window[t]).setItem(n,n),e.removeItem(n),!0}catch(t){return t instanceof DOMException&&(22===t.code||1014===t.code||"QuotaExceededError"===t.name||"NS_ERROR_DOM_QUOTA_REACHED"===t.name)&&0!==e.length}},n=function(){if(e("localStorage"))try{var n=JSON.stringify(t);n&&"string"==typeof n&&window.localStorage.setItem("dt_prefs",n)}catch(t){console.log("DTPrefs: save failed.")}};(function(){if(e("localStorage"))try{var n=window.localStorage.getItem("dt_prefs");n&&(n=JSON.parse(n))&&"object"===(void 0===n?"undefined":_typeof(n))&&Object.keys(n).forEach(function(e){t[e]=n[e]})}catch(t){console.log("DTPrefs: load failed.")}})(),window.DTPrefs={get:function(e,n,o){return e=e||"",n=n||"rooay7Nrv3dvPQfT",o=void 0!==o?o:null,void 0!==t[n]&&e&&void 0!==t[n][e]?t[n][e]:o},set:function(e,o,r){e=e||"",o=o||"rooay7Nrv3dvPQfT",r=r||null,e&&(void 0===t[o]&&(t[o]={}),t[o][e]=r,n())},del:function(e,o){e=e||"",void 0!==t[o=o||"rooay7Nrv3dvPQfT"]&&e&&void 0!==t[o][e]&&(delete t[o][e],Object.keys(t[o]).length||delete t[o],n())}}}(),window.dtDOMReady=function(t){if("function"!=typeof t)throw new Error("Callback is not a function.");"interactive"===document.readyState||"complete"===document.readyState?t():document.addEventListener("DOMContentLoaded",t)},window.dtDecodeBase64=function(t){var e,n={},o=[],r="",i=String.fromCharCode,c=[[65,91],[97,123],[48,58],[43,44],[47,48]];for(z in c)for(e=c[z][0];e<c[z][1];e++)o.push(i(e));for(e=0;e<64;e++)n[o[e]]=e;for(e=0;e<t.length;e+=72){var s,a=0,l=0,f=t.substring(e,e+72);for(s=0;s<f.length;s++)for(a=(a<<6)+n[f.charAt(s)],l+=6;l>=8;)r+=i((a>>>(l-=8))%256)}return r},window.dtHTMLEntities=function(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&apos;")};
+'use strict';var _typeof='function'==typeof Symbol&&'symbol'==typeof Symbol.iterator?function(a){return typeof a}:function(a){return a&&'function'==typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?'symbol':typeof a};(function(){'use strict';var a=1,b={actions:[],actionLimit:30,debug:!1,logStyles:{log:'background: #aaa; color: #333',warning:'background: #ccc; color: #555',error:'background: #000; color: #777'},personas:{},pruneTime:4838400,storageKey:'dt_personas',traits:{},traitLimit:50},c=window.navigator&&window.navigator.userAgent&&-1!==window.navigator.userAgent.search(/bot|crawler|spider/i),d=c,e={},f={},g={actions:{},key:'',traits:[],version:a},h=!1,i=!1,j=function(a){for(var b,c=Object(a),d=1;d<arguments.length;d++)if(b=arguments[d],null!=b)for(var e in b)Object.prototype.hasOwnProperty.call(b,e)&&(c[e]=b[e]);return c},k=function(a){var b;try{var c='__storage_test__';return b=window[a],b.setItem(c,c),b.removeItem(c),!0}catch(a){return a instanceof DOMException&&(22===a.code||1014===a.code||'QuotaExceededError'===a.name||'NS_ERROR_DOM_QUOTA_REACHED'===a.name)&&0!==b.length}},l=function(){var a=0<arguments.length&&void 0!==arguments[0]?arguments[0]:'',b=arguments[1],c=2<arguments.length&&void 0!==arguments[2]?arguments[2]:'log',d=3<arguments.length&&void 0!==arguments[3]&&arguments[3];if(d||h){var f=-1<['warning','error'].indexOf(c)?c:'log',g='%cDTPersonas:';g+=-1<['warning','error'].indexOf(f)?' '+f.toUpperCase()+':':'',g+=a&&'string'==typeof a?' '+a:'';var i=[g];if(e.logStyles[f]&&i.push(e.logStyles[f]),void 0!==b&&i.push(b),'function'==typeof window.console[f]){var j;(j=window.console)[f].apply(j,i)}else{var k;(k=window.console).log.apply(k,i)}}},m=function(a){return'string'==typeof a?a.replace(/[^A-Za-z0-9-_]/gm,''):''},n=function(a){if(!a||'string'!=typeof a)throw new Error('Missing or bad query.');var b=a.replace(/\s/gm,''),c=b.match(/^[=!<>][=]?/),d=c?c[0]:'==',e=m(b);if(!e)throw new Error('No key found in query.');return{key:e,operator:d}},o=function(a,b){var c=2<arguments.length&&arguments[2]!==void 0?arguments[2]:'==',d=+a,e=+b;if('number'!=typeof d||'number'!=typeof e)throw new Error('I specifically said numbers. NUMBERS!!!');switch(c){case'<':return d<e;case'<=':return d<=e;case'>':return d>e;case'>=':return d>=e;case'!=':return d!==e;case'==':return d===e;default:throw new Error('Unsupported operator.');}},p=function(a,b){if(!a||'object'!==('undefined'==typeof a?'undefined':_typeof(a)))throw new Error('Missing or bad actions.');if(b&&'number'!=typeof b)throw new Error('Bad pruneTime.');var c={};return Object.keys(a).forEach(function(d){if(Array.isArray(a[d])){var e=a[d].filter(function(a){return'number'==typeof a&&(b&&Date.now()/1e3-a>b?!1:!0)}),f=a[d].length-e.length;if(f&&l('Pruned '+f+' old actions from '+d+'.'),e.length){var g=m(d);g&&(c[g]=e)}}}),c},q=function(a,b,c){if(!a||'object'!==('undefined'==typeof a?'undefined':_typeof(a)))throw new Error('Missing or bad actions.');var e=m(b);if(!e)throw new Error('Missing or bad key.');if(c&&'number'!=typeof c)throw new Error('Bad pruneLimit.');var f=JSON.parse(JSON.stringify(a));if(d)return l('Did not record '+e+' action (disabled).'),f;Array.isArray(f[e])||(f[e]=[]),f[e].push(Math.ceil(Date.now()/1e3)),l('Recorded '+e+' action.');var g=Math.max(0,f[e].length-c);return g&&(f[e].splice(0,g),l('Pruned '+g+' over limit actions from '+e+'.')),f},r=function(a,b,c,d){if(!a||'object'!==('undefined'==typeof a?'undefined':_typeof(a)))throw new Error('Missing or bad actions.');var e=m(b);if(!e)throw new Error('Missing or bad key.');if(c&&'number'!=typeof c)throw new Error('Bad lt.');if(d&&'number'!=typeof d)throw new Error('Bad gt.');if(!Array.isArray(a[e]))return 0;if(!c&&!d)return a[e].length;var f=0;return a[e].forEach(function(a){var b=Date.now()/1e3-a;return c&&d&&b<c&&b>d?void f++:c&&b<c?void f++:void(d&&b>d&&f++)}),f},s=function(){if(d)return l('Data not saved (disabled).'),!1;try{if(k('localStorage')){var a={actions:g.actions,version:g.version};return window.localStorage.setItem(e.storageKey,JSON.stringify(a)),l('Data saved.',a),!0}}catch(a){l('Save data failed.',a,'error',!0)}return l('Data not saved.'),!1},t=function(){if(d)return l('Data not loaded (disabled).'),!1;try{if(k('localStorage')){var b=JSON.parse(window.localStorage.getItem(e.storageKey));if(b){if(b.version===a)return g.actions=p(b.actions||{},e.pruneTime),l('Data Loaded.',b),!0;l('Saved data is wrong api version.')}}}catch(a){l('Load data failed.',a,'error',!0)}return l('Data not loaded.'),!1},u={storageAvailable:k,init:function init(){var a=0<arguments.length&&arguments[0]!==void 0?arguments[0]:{},c={};d&&(c.traits=[],c.actions=[]),j(e,b,a,c),h=e.debug||-1!==window.location.search.search(/dtpersonasdebug=1/);var k=Date.now();t(),e.actions.forEach(function(a,b){try{'function'==typeof a&&a(u.record)}catch(a){l('Caught exception from action at index '+b+'.',a,'error',!0)}}),e.traits.forEach(function(a,b){try{if(!a||'string'!=typeof a.key||'function'!=typeof a.condition)throw new Error('Trait object is bad.');var c=m(a.key);if(!c)throw new Error('Key is bad.');a.condition()&&(g.traits.length<e.traitLimit?g.traits.push(c):l('Trait limit hit.'))}catch(a){l('Caught exception from trait at index '+b+'.',a,'error',!0)}}),e.personas.forEach(function(a,b){try{if(!a||'string'!=typeof a.key||'number'!=typeof a.rank||'function'!=typeof a.condition)throw new Error('Persona object is bad.');var c=m(a.key);if(!c)throw new Error('Key is bad.');f[a.key]=a,!g.key&&a.condition()&&(g.key=c)}catch(a){l('Caught exception from persona at index '+b+'.',a,'error',!0)}}),g.key&&document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('persona-'+g.key)},!1),s(),i=!0,l('Persona defined',g),l('Init took '+(Date.now()-k)+'ms to run.')},record:function record(a){try{g.actions=q(g.actions,a,e.actionLimit),i&&s()}catch(a){l('Caught exception on record. Action was not recorded.',a,'error',!0)}},count:function count(a,b,c){try{return r(g.actions,a,b,c)}catch(a){return l('Caught exception on count, returning default.',a,'error',!0),0}},get:function get(){return g.key},is:function is(a){var b=n(a);return g.key&&f[g.key]&&f[b.key]?o(f[g.key].rank,f[b.key].rank,b.operator):null},getTraits:function getTraits(){return g.traits},hasTrait:function hasTrait(a){return-1!==g.traits.indexOf(a)},isBot:function isBot(){return c},isDisabled:function isDisabled(){return d}};window.DTPersonas=u})(),function(){var a=window.DTPersonas,b=-1!==window.location.search.search(/dt_?debug=1/)||a.storageAvailable('localStorage')&&window.localStorage.getItem('dt_debug');a.init({debug:b,personas:[{key:'bot',rank:2,condition:function condition(){return a.isBot()}},{key:'disabled',rank:2,condition:function condition(){return a.isDisabled()}},{key:'staff',rank:2,condition:function condition(){return a.hasTrait('staff-visitor')}},{key:'power-user',rank:6,condition:function condition(){return a.hasTrait('direct-visitor')&&a.hasTrait('frequent-visitor')&&a.hasTrait('engaged')}},{key:'subscriber',rank:5,condition:function condition(){return!1}},{key:'user',rank:4,condition:function condition(){return a.hasTrait('direct-visitor')}},{key:'prospect',rank:3,condition:function condition(){return a.hasTrait('session-visitor')&&a.hasTrait('referred')}},{key:'acquired',rank:1,condition:function condition(){return a.hasTrait('ua-referred')}},{key:'referred',rank:2,condition:function condition(){return a.hasTrait('referred')}},{key:'none',rank:2,condition:function condition(){return!0}}],traits:[{key:'direct-visitor',condition:function condition(){return!!a.count('direct-enter',604800)}},{key:'session-visitor',condition:function condition(){return!!a.count('session-view',1800)}},{key:'recent-visitor',condition:function condition(){return!!a.count('unique-view',172800,10800)}},{key:'frequent-visitor',condition:function condition(){return 10<a.count('unique-view',1209600,10800)}},{key:'staff-visitor',condition:function condition(){return!!a.count('staff-view')}},{key:'ua-referred',condition:function condition(){return!!a.count('ua-view',86400)}},{key:'fb-referred',condition:function condition(){return!!a.count('facebook-enter',86400)}},{key:'search-referred',condition:function condition(){return!!a.count('search-enter',86400)}},{key:'referred',condition:function condition(){return!!a.count('referral',86400)}},{key:'engaged',condition:function condition(){return 3<a.count('engage',1209600)||3<=a.count('session-view')/Math.max(a.count('unique-view'),1)}}],actions:[function(a){-1===document.referrer.search(/https?:\/\/(?:[a-z0-9]+\.)?www\.digitaltrends\.com\//i)?a('unique-view'):a('session-view')},function(a){-1!==window.location.search.search(/utm_[^=]+?=/i)||document.referrer||window.location.pathname&&-1===window.location.pathname.search(/^\/[^/]*?\/?$/)||a('direct-enter')},function(a){-1===document.referrer.search(/https?:\/\/www\.google\.com\//i)?-1===document.referrer.search(/https?:\/\/www\.facebook\.com\//i)?-1===document.referrer.search(/https?:\/\/www\.twitter\.com\//i)?-1!==document.referrer.search(/https?:\/\/www\.reddit\.com\//i)&&(a('reddit-enter'),a('referral')):(a('twitter-enter'),a('referral')):(a('facebook-enter'),a('referral')):(a('search-enter'),a('referral'))},function(a){if(window.dt_utm_data)for(var b=[{k:'medium',v:'cpc'}],c=b.length;c--;)if(window.dt_utm_data['utm_'+b[c].k]===b[c].v){a('ua-view');break}},function(a){window.DTEvent.on('dt:share:shared',function(b){a('engage'),a('share'),'string'==typeof b&&-1!==['twitter','facebook','reddit','pinterest','linkedin'].indexOf(b)&&a(b+'-share')})},function(a){window.DTEvent.on('dt:dynamic_components:user_data_available',function(b){((b||{}).capabilities||{}).edit_posts&&a('staff-view')})}]})}();</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.digitaltrends.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.digitaltrends.com/wp-includes/wlwmanifest.xml" />
+<link rel='shortlink' href='https://www.digitaltrends.com/?p=1254347' />
+
+			<script>
+				(function() {
+					'use strict';
+
+					var options = {"qnqb92BhrzmkpqGx":{"post_sharing_data":{"object_id":1254347,"taxonomy":"","url":"https:\/\/www.digitaltrends.com\/mobile\/uber-ios-app-entitlement-news\/","summary":"Code inside the Uber iOS app made it possible to see and record on-screen activities, even when the Uber app was running in the background, according to security researchers. Uber says the feature has never been abused.","title":"Uber iOS app can virtually &#8216;see&#8217; your phone screen, and Apple approved it","image":"https:\/\/icdn3.digitaltrends.com\/image\/uber_stock.jpg?ver=2","twitter_text":"Uber iOS app can virtually &#8216;see&#8217; your phone screen, and Apple approved it","twitter_hash_tags":""},"related_video_pool":[]},"debug":{"related_video_data":[]},"sticky_video":{"active":1,"related":1,"mute":1,"delay":5,"suppress_time":0,"categories":{"good":[],"bad":["press-releases"]},"article_types":{"good":[],"bad":["feature"]},"post_types":{"good":["post"],"bad":[]}},"dtvideos":{"jwplayer_kill_ads":false,"jwplayer_player_id":"6B7vzQfZ","ad_schedule_id":"HtW7UHty","ad_tag":"https:\/\/pubads.g.doubleclick.net\/gampad\/ads?sz=970x556&iu=\/5611\/dtmn.video\/dt_ros&ciu_szs&impl=s&gdfp_req=1&env=vp&output=xml_vast3&unviewed_position_start=1&url=__page-url__&description_url=http%3A%2F%2Fwww.digitaltrends.com&correlator=__random-number__&cmsid=2860&vid=__item-mediaid__","ad_targeting_params":{"tags":["entitlement","ios","privacy","uber"],"cat":["apple","mobile","trending"],"supports":["bt","bt2","mp","skin"],"aid":1254347}}};
+
+					var get = function (key, group, def) {
+						key = key || '';
+						group = group || 'qnqb92BhrzmkpqGx';
+						def = (typeof def !== 'undefined') ? def : null;
+
+						if (typeof options[group] !== 'undefined') {
+							if (key && typeof options[group][key] !== 'undefined') {
+								return options[group][key];
+							}
+						}
+
+						return def;
+					};
+
+					var getAll = function () {
+						return JSON.parse(JSON.stringify(options));
+					};
+
+					var set = function (key, group, data) {
+						key = key || '';
+						group = group || 'qnqb92BhrzmkpqGx';
+						data = data || null;
+
+						if (key) {
+							if (typeof options[group] === 'undefined') {
+								options[group] = {};
+							}
+
+							options[group][key] = data;
+						}
+					};
+
+					var del = function (key, group) {
+						key = key || '';
+						group = group || 'qnqb92BhrzmkpqGx';
+
+						if (typeof options[group] !== 'undefined') {
+							if (key && typeof options[group][key] !== 'undefined') {
+								delete(options[group][key]);
+							}
+						}
+					};
+
+					window.DTOptions = {
+						get: get,
+						getAll: getAll,
+						set: set,
+						del: del,
+					};
+				}());
+			</script>
+
+			<meta name="news_keywords" content="mobile, technology, Uber, iOS, privacy, entitlement">
+			<!-- Begin GPT -->
+			<script type="text/javascript">
+				var googletag = googletag || {};
+				googletag.cmd = googletag.cmd || [];
+				(function() {
+					var gads   = document.createElement( 'script' );
+					gads.async = true;
+					gads.type  = 'text/javascript';
+					var useSSL = 'https:' == document.location.protocol;
+					gads.src   = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+					var node   = document.getElementsByTagName( 'script' )[0];
+					node.parentNode.insertBefore( gads, node );
+				})();
+			</script>
+			<!-- End GPT -->
+
+					<!-- DT Variables (digitaltrends-2013/functions.php) -->
+		<script type="text/javascript">
+			var ajaxurl = "https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/ajax-actions.php";
+			var ord 	= Math.random()*10000000000000000;
+					var DT_Facebook_AppId = '61377565444';
+		var DT_Facebook_ChannelUrl = 'https://www.digitaltrends.com/fb-channel.php';
+		var DT_Facebook_PageId = '8522591132';
+
+		window.dt_lists_map = {"dt-newsletter":"daily-brief","dt-deals-newsletter":"deals"};
+
+				var DTVFeaturedVideoCategories = [{"query":"auto:recommended","title":"Trending Now"},{"query":"taxonomy:video_category:how-to-videos","title":"Quick Tips"},{"query":"taxonomy:video_category:car-videos,computer-videos,cool-tech-videos,home-videos,home-theater-videos,mobile-videos,outdoor-videos,photography-videos","title":"Latest Reviews"},{"query":"taxonomy:video_category:game-trailers","title":"Game Trailers"},{"query":"taxonomy:video_category:movie-trailers-videos","title":"Movie Trailers"},{"query":"taxonomy:video_category:home-theater-videos","title":"Home Theater"},{"query":"taxonomy:video_category:car-videos","title":"Cars"},{"query":"taxonomy:video_category:mobile-videos","title":"Mobile"},{"query":"taxonomy:video_category:computer-videos","title":"Computing"},{"query":"taxonomy:video_category:cool-tech-videos","title":"Cool Tech"},{"query":"taxonomy:video_category:how-to-videos","title":"How To"},{"query":"taxonomy:video_category:gaming-videos","title":"Gaming"},{"query":"taxonomy:video_category:home-videos","title":"Home"}];
+				</script>
+		<!-- End DT Variables -->
+
+			<script>
+				(function() {
+					'use strict';
+
+					var l10ns = {"ahe084RE8hgWerv8":{"video-home":{"play_all":"Play All","view_more":"View More","by":"By"},"video-player":{"empty_playlist":"<strong>Playlist is empty<\/strong> Choose another playlist or try searching"}}};
+
+					var get = function get(key, group) {
+						key = key || '';
+						group = group || 'ahe084RE8hgWerv8';
+
+						if (typeof l10ns[group] !== 'undefined') {
+							if (key && typeof l10ns[group][key] !== 'undefined') {
+								return l10ns[group][key];
+							}
+						}
+
+						return null;
+					};
+
+					window.DTL10n = {
+						get: get,
+					};
+				}());
+			</script>
+
+					<meta property="fb:app_id" content="61377565444"/>
+		<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"SomeProducts","url":"https:\/\/www.digitaltrends.com\/mobile\/uber-ios-app-entitlement-news\/","offers":[{"@type":"offer","url":"https:\/\/www.digitaltrends.com\/go\/?provider=manual&url=http%3A%2F%2Faos.prf.hn%2Fclick%2Fcamref%3A1101l7vG%2Fcreativeref%3A1011l5186","name":"Apple Watch","description":null,"image":"https:\/\/icdn2.digitaltrends.com\/image\/applewatch-34r-modularclock-3rdparty-print-220x220.jpg?ver=1","price":"549","priceCurrency":"USD"}]}</script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.digitaltrends.com\/mobile\/uber-ios-app-entitlement-news\/"},"dateCreated":"October 6, 2017","datePublished":"October 6, 2017","dateModified":"October 6, 2017","articleSection":"post","author":{"@type":"Person","name":"Andy Boxall"},"creator":{"@type":"Thing","name":"Andy Boxall"},"headline":"Uber iOS app can virtually &#8216;see&#8217; your phone screen, and Apple approved it","url":"https:\/\/www.digitaltrends.com\/mobile\/uber-ios-app-entitlement-news\/","thumbnailUrl":"https:\/\/icdn2.digitaltrends.com\/image\/uber_stock-1500x1000.jpg?ver=2","image":{"@type":"ImageObject","url":"https:\/\/icdn3.digitaltrends.com\/image\/uber_stock.jpg?ver=2","width":1500,"height":1000},"publisher":{"@type":"Organization","name":"Digital Trends","url":"https:\/\/digitaltrends.com","logo":{"@type":"ImageObject","url":"https:\/\/cdn.dtcn.com\/assets\/images\/logos\/dt_60x60.png","width":60,"height":60}},"keywords":["entitlement","iOS","privacy","Uber"]}</script><meta property="fb:pages" content="8522591132" /><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+      <meta name="onesignal" content="wordpress-plugin"/>
+          <link rel="manifest"
+            href="https://www.digitaltrends.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/manifest.json.php?gcm_sender_id="/>
+          <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>    <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://www.digitaltrends.com");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '87a1768e-b153-4fcf-9039-77585a740492';
+oneSignal_options['autoRegister'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['disable'] = true;
+oneSignal_options['path'] = "https://www.digitaltrends.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.6b31cc7e-8212-45ce-95eb-ed8c35d3e69c";
+oneSignal_options['persistNotification'] = false;
+oneSignal_options['promptOptions'] = { };
+              OneSignal.init(window._oneSignalInitOptions);
+                    });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+
+		<script>
+			window.dataLayer = [{
+															'ajax_url': 'https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/ajax-actions.php',
+																				'https': 'on',
+																				'canonical_url': 'https://www.digitaltrends.com/mobile/uber-ios-app-entitlement-news/',
+																				'post_id': '1254347',
+																				'post_title': 'Uber iOS app can virtually &#8216;see&#8217; your phone screen, and Apple approved it',
+																				'page_type': 'single',
+																				'post_type': 'post',
+																				'post_author': 'Andy Boxall',
+																				'publish_date': '1507248000',
+																				'publish_date_by_day': '20171006',
+																				'word_count': '426',
+																				'header_media_type': 'image',
+																				'header_media_location': 'default',
+																				'category': ['apple\',\'mobile'],
+																				'post_tag': ['entitlement\',\'ios\',\'privacy\',\'uber'],
+																				'post_format': [''],
+																				'primary_category': 'mobile',
+																				'primary_category_name': 'Mobile',
+																				'primary_category_url': 'https://www.digitaltrends.com/mobile/',
+																				'categories': 'apple,mobile',
+																				'article_type': 'news',
+												}];
+
+			(function() {
+				'use strict';
+
+				if (window.DTPersonas) {
+					var persona = window.DTPersonas.get();
+
+					if (persona && window.dataLayer.length) {
+						window.dataLayer[0]['persona'] = persona;
+					}
+				}
+			}());
+
+			(function() {
+				'use strict';
+
+				var storageAvailable = function(type) {
+					var storage;
+
+					try {
+						var x = '__storage_test__';
+						storage = window[type];
+						storage.setItem(x, x);
+						storage.removeItem(x);
+						return true;
+					} catch (e) {
+						return e instanceof DOMException && (
+							e.code === 22 ||
+							e.code === 1014 ||
+							e.name === 'QuotaExceededError' ||
+							e.name === 'NS_ERROR_DOM_QUOTA_REACHED'
+						) && storage.length !== 0;
+					}
+				};
+
+				if (storageAvailable('sessionStorage')) {
+					var id = window.sessionStorage.getItem('dtSessionId');
+
+					if (!id) {
+						id = (function() {
+							var a = Date.now();
+							var b = Math.floor((1 + Math.random()) * 0x100000).toString(16);
+							var c = Math.floor((1 + Math.random()) * 0x100000).toString(16);
+
+							return 'v1-'+a+'-'+b+'-'+c;
+						}());
+
+						window.sessionStorage.setItem('dtSessionId', id);
+						document.cookie = 'dtSessionId=' + id + ';path=/';
+					}
+
+					if (window.dataLayer.length) {
+						window.dataLayer[0]['dt_session_id'] = id;
+					}
+				}
+			}());
+		</script>
+
+		<script>
+			if (window.dataLayer && window.dt_utm_data) {
+				dataLayer.push(dt_utm_data);
+			}
+		</script>
+
+
+</head>
+
+
+<!--[if lt IE 7]> <body class="ie6 ie ieold post-template-default single single-post postid-1254347 single-format-standard dtads-unskin dtads-no-broadside"> <![endif]-->
+<!--[if IE 7]>    <body class="ie7 ie ieold post-template-default single single-post postid-1254347 single-format-standard dtads-unskin dtads-no-broadside"> <![endif]-->
+<!--[if IE 8]>    <body class="ie8 ie ieold post-template-default single single-post postid-1254347 single-format-standard dtads-unskin dtads-no-broadside"> <![endif]-->
+<!--[if IE 9]>    <body class="ie9 ie post-template-default single single-post postid-1254347 single-format-standard dtads-unskin dtads-no-broadside"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<body class="post-template-default single single-post postid-1254347 single-format-standard dtads-unskin dtads-no-broadside"  data-post-id="1254347" data-post-type="post" data-primary-category="4" >
+<!--<![endif]-->
+
+			<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKFXF7"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WKFXF7');</script>
+		<!-- End Google Tag Manager -->
+
+
+
+<header class="m-bartender h-bartender" data-scope="bartender">
+
+	<!--googleoff: all-->
+
+		<span class="m-bartender--door h-front"></span>
+
+		<span class="m-bartender--door h-back"></span>
+
+	<!--googleon: all-->
+
+	<div class="m-header-top m-pint h-header-top h-pint" data-type="static" data-priority="1">
+	<div class="m-header-brand">
+		<div class="dt">
+			<a href="https://www.digitaltrends.com">
+				DT
+			</a>
+		</div>
+
+		<div class="logo">
+			<a href="https://www.digitaltrends.com">
+				Digital Trends
+			</a>
+		</div>
+	</div>
+
+
+	<div class="m-share-list">
+		<div class="item facebook">
+			<a href="http://www.facebook.com/DigitalTrends" target="_blank" rel="nofollow" title="Follow us on Facebook"></a>
+		</div>
+
+		<div class="item twitter">
+			<a href="http://twitter.com/digitaltrends" target="_blank" rel="nofollow" title="Follow us on Twitter""></a>
+		</div>
+
+		<div class="item instagram">
+			<a href="https://instagram.com/digitaltrends" target="_blank" rel="nofollow" title="Follow us on Instagram"></a>
+		</div>
+
+		<div class="item mail">
+			<a href="https://www.digitaltrends.com/newsletter/" target="_blank" title="Get the DT Newsletter"></a>
+		</div>
+
+		<div class="item rss">
+			<a href="https://www.digitaltrends.com/rss-home/" target="_blank" title="Subscribe to our RSS Feed"></a>
+		</div>
+	</div>
+</div>
+
+
+<div class="m-header-bot m-pint h-header-bot h-pint" data-type="fixed" data-essential="1" data-priority="1">
+	<div class="m-header-triggers h-header-triggers">
+		<div class="item menu h-trigger" data-module="h-header-module_nav">
+			<a href="javascript:void(0)"></a>
+		</div>
+
+		<div class="item search h-trigger" data-module="m-header-search">
+			<a href="javascript:void(0)"></a>
+		</div>
+
+		<div class="item share h-trigger" data-module="m-header-share">
+			<a href="javascript:void(0)"></a>
+		</div>
+	</div>
+
+	<div class="m-header-brand">
+		<div class="dt">
+			<a href="https://www.digitaltrends.com">
+				DT
+			</a>
+		</div>
+
+		<div class="logo">
+			<a href="https://www.digitaltrends.com">
+				Digital Trends
+			</a>
+		</div>
+	</div>
+
+
+	<nav class="m-nav m-header-module h-header-module h-header-module_nav">
+		<div class="m-nav--wrap">
+			<ul id="menu-primary-navigation" class="menu"><li id="menu-item-411326" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-411326 menu-object_id-352391"><a href="https://www.digitaltrends.com/product-reviews/"><span>Product Reviews</span></a>
+<div class="m-subnav h-subnav"><div class="m-subnav--wrap"><ul class="sub-menu">
+	<li id="menu-item-878540" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-878540 menu-object_id-100008"><a href="https://www.digitaltrends.com/cell-phone-reviews/"><span>Phones</span></a></li>
+	<li id="menu-item-411312" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411312 menu-object_id-100007"><a href="https://www.digitaltrends.com/tv-reviews/"><span>TVs</span></a></li>
+	<li id="menu-item-411310" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411310 menu-object_id-100015"><a href="https://www.digitaltrends.com/laptop-reviews/"><span>Laptops</span></a></li>
+	<li id="menu-item-487062" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-487062 menu-object_id-143751"><a href="https://www.digitaltrends.com/car-reviews/"><span>Cars</span></a></li>
+	<li id="menu-item-487060" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-487060 menu-object_id-143758"><a href="https://www.digitaltrends.com/game-reviews/"><span>Games</span></a></li>
+	<li id="menu-item-1240103" class="menu-item menu-item-type-post_type menu-item-object-topic menu-item-1240103 menu-object_id-535133"><a title="Movies" href="https://www.digitaltrends.com/topic/movie-reviews/"><span>Movies</span></a></li>
+	<li id="menu-item-411311" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411311 menu-object_id-105121"><a href="https://www.digitaltrends.com/tablet-reviews/"><span>Tablets</span></a></li>
+	<li id="menu-item-411308" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411308 menu-object_id-171096"><a href="https://www.digitaltrends.com/headphone-reviews/"><span>Headphones</span></a></li>
+	<li id="menu-item-411307" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-411307 menu-object_id-171097"><a href="https://www.digitaltrends.com/digital-camera-reviews/"><span>Cameras</span></a></li>
+	<li id="menu-item-415181" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-415181 menu-object_id-100014"><a href="https://www.digitaltrends.com/desktop-computer-reviews/"><span>Desktops</span></a></li>
+	<li id="menu-item-719217" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-719217 menu-object_id-166594"><a href="https://www.digitaltrends.com/speaker-subwoofer-reviews/"><span>Speakers</span></a></li>
+	<li id="menu-item-654857" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-654857 menu-object_id-161314"><a href="https://www.digitaltrends.com/appliance-reviews/"><span>Appliances</span></a></li>
+	<li id="menu-item-655695" class="menu-item menu-item-type-taxonomy menu-item-object-review_category menu-item-655695 menu-object_id-161325"><a href="https://www.digitaltrends.com/wearable-reviews/"><span>Wearables</span></a></li>
+	<li id="menu-item-411328" class="more menu-item menu-item-type-post_type menu-item-object-page menu-item-411328 menu-object_id-352391"><a href="https://www.digitaltrends.com/product-reviews/"><span>More Product Reviews</span></a></li>
+</ul><div class="m-mega h-mega" data-scope="mega"><div class="m-mega--wrap h-mega-content"></div></div></div></div>
+</li>
+<li id="menu-item-411314" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-411314 menu-object_id-411314"><a href="http://www.digitaltrends.com/page/1/"><span>News</span></a>
+<div class="m-subnav h-subnav"><div class="m-subnav--wrap"><ul class="sub-menu">
+	<li id="menu-item-411316" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-411316 menu-object_id-4"><a href="https://www.digitaltrends.com/mobile/"><span>Mobile</span></a></li>
+	<li id="menu-item-1090692" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1090692 menu-object_id-5"><a href="https://www.digitaltrends.com/computing/"><span>Computing</span></a></li>
+	<li id="menu-item-411318" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411318 menu-object_id-7"><a href="https://www.digitaltrends.com/home-theater/"><span>Home Theater</span></a></li>
+	<li id="menu-item-411317" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411317 menu-object_id-6"><a href="https://www.digitaltrends.com/gaming/"><span>Gaming</span></a></li>
+	<li id="menu-item-411321" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411321 menu-object_id-173913"><a href="https://www.digitaltrends.com/cars/"><span>Cars</span></a></li>
+	<li id="menu-item-411323" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411323 menu-object_id-17"><a href="https://www.digitaltrends.com/photography/"><span>Photography</span></a></li>
+	<li id="menu-item-411319" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411319 menu-object_id-8"><a href="https://www.digitaltrends.com/home/"><span>Home</span></a></li>
+	<li id="menu-item-552454" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-552454 menu-object_id-952"><a href="https://www.digitaltrends.com/movies/"><span>Movies &#038; TV</span></a></li>
+	<li id="menu-item-674164" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-674164 menu-object_id-512"><a href="https://www.digitaltrends.com/music/"><span>Music</span></a></li>
+	<li id="menu-item-411322" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-411322 menu-object_id-571"><a href="https://www.digitaltrends.com/cool-tech/"><span>Emerging Tech</span></a></li>
+	<li id="menu-item-1092238" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1092238 menu-object_id-182182"><a href="https://www.digitaltrends.com/outdoors/"><span>Outdoors</span></a></li>
+	<li id="menu-item-1215464" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1215464 menu-object_id-20"><a href="https://www.digitaltrends.com/how-to/"><span>How-To</span></a></li>
+	<li id="menu-item-887776" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-887776 menu-object_id-167480"><a href="https://www.digitaltrends.com/business/"><span>Business</span></a></li>
+	<li id="menu-item-470294" class="more menu-item menu-item-type-custom menu-item-object-custom menu-item-470294 menu-object_id-470294"><a href="http://www.digitaltrends.com/page/1/"><span>More Coverage</span></a></li>
+</ul><div class="m-mega h-mega" data-scope="mega"><div class="m-mega--wrap h-mega-content"></div></div></div></div>
+</li>
+<li id="menu-item-520473" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-520473 menu-object_id-19"><a href="https://www.digitaltrends.com/features/"><span>Features</span></a>
+<div class="m-subnav h-subnav"><div class="m-subnav--wrap"><ul class="sub-menu">
+	<li id="menu-item-1227147" class="menu-item menu-item-type-taxonomy menu-item-object-features menu-item-1227147 menu-object_id-1223938"><a href="https://www.digitaltrends.com/2017-outdoor-awards/"><span>2017 Outdoor Awards</span></a></li>
+	<li id="menu-item-1213696" class="menu-item menu-item-type-taxonomy menu-item-object-features menu-item-1213696 menu-object_id-1210071"><a title="2017 Car Awards" href="https://www.digitaltrends.com/2017-car-awards/"><span>2017 Car Awards</span></a></li>
+	<li id="menu-item-1204365" class="menu-item menu-item-type-taxonomy menu-item-object-features menu-item-1204365 menu-object_id-1200381"><a href="https://www.digitaltrends.com/smart-cities/"><span>Smart Cities</span></a></li>
+	<li id="menu-item-944182" class="menu-item menu-item-type-taxonomy menu-item-object-features menu-item-944182 menu-object_id-662908"><a href="https://www.digitaltrends.com/topic/audiophile/"><span>The Audiophile</span></a></li>
+	<li id="menu-item-944184" class="menu-item menu-item-type-taxonomy menu-item-object-features menu-item-944184 menu-object_id-500705"><a href="https://www.digitaltrends.com/topic/awesome-tech-cant-buy-yet/"><span>Awesome Tech</span></a></li>
+	<li id="menu-item-1174721" class="menu-item menu-item-type-taxonomy menu-item-object-features menu-item-1174721 menu-object_id-1146011"><a href="https://www.digitaltrends.com/future-of-food/"><span>Future of Food</span></a></li>
+	<li id="menu-item-944127" class="menu-item menu-item-type-taxonomy menu-item-object-features menu-item-944127 menu-object_id-698180"><a href="https://www.digitaltrends.com/topic/now-boarding/"><span>Now Boarding</span></a></li>
+	<li id="menu-item-944128" class="menu-item menu-item-type-taxonomy menu-item-object-features menu-item-944128 menu-object_id-674650"><a href="https://www.digitaltrends.com/topic/road-rave/"><span>Road Rave</span></a></li>
+	<li id="menu-item-1128491" class="menu-item menu-item-type-taxonomy menu-item-object-features menu-item-1128491 menu-object_id-1112964"><a href="https://www.digitaltrends.com/smart-apartment/"><span>Smart Apartment</span></a></li>
+	<li id="menu-item-944185" class="menu-item menu-item-type-taxonomy menu-item-object-features menu-item-944185 menu-object_id-904945"><a href="https://www.digitaltrends.com/topic/weekend-workshop/"><span>Weekend Workshop</span></a></li>
+	<li id="menu-item-1202893" class="menu-item menu-item-type-taxonomy menu-item-object-features menu-item-1202893 menu-object_id-1013948"><a href="https://www.digitaltrends.com/dt10/"><span>DT10: Tech&#8217;s Future</span></a></li>
+	<li id="menu-item-925355" class="more menu-item menu-item-type-taxonomy menu-item-object-category menu-item-925355 menu-object_id-19"><a href="https://www.digitaltrends.com/features/"><span>More Features</span></a></li>
+</ul><div class="m-mega h-mega" data-scope="mega"><div class="m-mega--wrap h-mega-content"></div></div></div></div>
+</li>
+<li id="menu-item-878542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-878542 menu-object_id-352392"><a href="https://www.digitaltrends.com/videos/"><span>Videos</span></a>
+<div class="m-subnav h-subnav"><div class="m-subnav--wrap"><ul class="sub-menu">
+	<li id="menu-item-1123720" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123720 menu-object_id-1123720"><a href="http://www.digitaltrends.com/dt-daily-videos/"><span>DT Daily</span></a></li>
+	<li id="menu-item-1123721" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123721 menu-object_id-1123721"><a href="http://www.digitaltrends.com/trends-with-benefits/"><span>Trends with Benefits</span></a></li>
+	<li id="menu-item-1123723" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123723 menu-object_id-1123723"><a href="http://www.digitaltrends.com/close-to-the-metal/"><span>Close to the Metal</span></a></li>
+	<li id="menu-item-1123722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123722 menu-object_id-1123722"><a href="http://www.digitaltrends.com/between-the-streams/"><span>Between the Streams</span></a></li>
+	<li id="menu-item-1123724" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123724 menu-object_id-1123724"><a href="http://www.digitaltrends.com/dot-life/"><span>.life</span></a></li>
+	<li id="menu-item-1123727" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123727 menu-object_id-1123727"><a href="http://www.digitaltrends.com/innovators-and-essentials/"><span>Innovators</span></a></li>
+	<li id="menu-item-1123728" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123728 menu-object_id-1123728"><a href="http://www.digitaltrends.com/pro-test/"><span>Pro:Test</span></a></li>
+	<li id="menu-item-1123726" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123726 menu-object_id-1123726"><a href="http://www.digitaltrends.com/got-it-made/"><span>Got It Made</span></a></li>
+	<li id="menu-item-1123725" class="more menu-item menu-item-type-custom menu-item-object-custom menu-item-1123725 menu-object_id-1123725"><a href="http://www.digitaltrends.com/videos/"><span>More Videos</span></a></li>
+</ul><div class="m-mega h-mega" data-scope="mega"><div class="m-mega--wrap h-mega-content"></div></div></div></div>
+</li>
+<li id="menu-item-1162479" class="t-mainnav menu-item menu-item-type-post_type menu-item-object-topic menu-item-1162479 menu-object_id-1143132"><a title="Deals" href="https://www.digitaltrends.com/deals/"><span>Deals</span></a></li>
+<li id="menu-item-1109021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1109021 menu-object_id-1107626"><a href="https://www.digitaltrends.com/best-products/"><span>Best Products</span></a></li>
+<li id="menu-item-1229325" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1229325 menu-object_id-20"><a href="https://www.digitaltrends.com/how-to/"><span>How To</span></a></li>
+<li id="menu-item-601892" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-601892 menu-object_id-601892"><a><span>More</span></a>
+<div class="m-subnav h-subnav"><div class="m-subnav--wrap"><ul class="sub-menu">
+	<li id="menu-item-1122749" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1122749 menu-object_id-1122749"><a href="#"><span>More</span></a>
+	<div class="m-subnav h-subnav"><div class="m-subnav--wrap"><ul class="sub-menu">
+		<li id="menu-item-601896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601896 menu-object_id-46"><a href="https://www.digitaltrends.com/contact/corrections/"><span>Corrections</span></a></li>
+		<li id="menu-item-824555" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-824555 menu-object_id-821368"><a href="https://www.digitaltrends.com/news-tips/"><span>Send Us Your News Tip</span></a></li>
+		<li id="menu-item-1147716" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1147716 menu-object_id-183628"><a href="https://www.digitaltrends.com/giveaways/"><span>Giveaways</span></a></li>
+		<li id="menu-item-943586" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-943586 menu-object_id-943586"><a target="_blank" href="https://shop.digitaltrends.com/"><span>DT Shop</span></a></li>
+		<li id="menu-item-754038" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-754038 menu-object_id-754038"><a target="_blank" href="http://es.digitaltrends.com"><span>DT Español</span></a></li>
+		<li id="menu-item-601900" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-601900 menu-object_id-601900"><a target="_blank" href="http://www.themanual.com"><span>The Manual</span></a></li>
+	</ul><div class="m-mega h-mega" data-scope="mega"><div class="m-mega--wrap h-mega-content"></div></div></div></div>
+</li>
+	<li id="menu-item-1122751" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1122751 menu-object_id-1122751"><a href="#"><span>Who We Are</span></a>
+	<div class="m-subnav h-subnav"><div class="m-subnav--wrap"><ul class="sub-menu">
+		<li id="menu-item-601893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601893 menu-object_id-2"><a href="https://www.digitaltrends.com/about/"><span>About Us</span></a></li>
+		<li id="menu-item-601897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601897 menu-object_id-54"><a href="https://www.digitaltrends.com/jobs-overview/"><span>Careers</span></a></li>
+		<li id="menu-item-601894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601894 menu-object_id-16"><a href="https://www.digitaltrends.com/about/advertise-on-digital-trends/"><span>Advertise</span></a></li>
+		<li id="menu-item-601895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601895 menu-object_id-19"><a href="https://www.digitaltrends.com/about/company-contacts/"><span>Contact Us</span></a></li>
+		<li id="menu-item-601898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601898 menu-object_id-27"><a href="https://www.digitaltrends.com/legal/privacy-policy/"><span>Privacy Policy</span></a></li>
+		<li id="menu-item-601899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601899 menu-object_id-25"><a href="https://www.digitaltrends.com/legal/terms-of-use/"><span>Terms of Use</span></a></li>
+	</ul><div class="m-mega h-mega" data-scope="mega"><div class="m-mega--wrap h-mega-content"></div></div></div></div>
+</li>
+	<li id="menu-item-1122750" class="social menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1122750 menu-object_id-1122750"><a href="#"><span>Social</span></a>
+	<div class="m-subnav h-subnav"><div class="m-subnav--wrap"><ul class="sub-menu">
+		<li id="menu-item-1122780" class="linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-1122780 menu-object_id-1122780"><a target="_blank" href="https://www.linkedin.com/company/digitaltrends-com"><span>LinkedIn</span></a></li>
+		<li id="menu-item-1122783" class="pinterest menu-item menu-item-type-custom menu-item-object-custom menu-item-1122783 menu-object_id-1122783"><a target="_blank" href="http://pinterest.com/digitaltrends/"><span>Pinterest</span></a></li>
+		<li id="menu-item-1122787" class="youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-1122787 menu-object_id-1122787"><a target="_blank" href="http://www.youtube.com/subscription_center?add_user=DigitalTrends"><span>YouTube</span></a></li>
+		<li id="menu-item-1122778" class="gplus menu-item menu-item-type-custom menu-item-object-custom menu-item-1122778 menu-object_id-1122778"><a target="_blank" href="https://plus.google.com/+digitaltrends/posts"><span>Google+</span></a></li>
+		<li id="menu-item-1122798" class="rss menu-item menu-item-type-post_type menu-item-object-page menu-item-1122798 menu-object_id-633862"><a href="https://www.digitaltrends.com/rss-home/"><span>RSS Home</span></a></li>
+		<li id="menu-item-1122802" class="mail menu-item menu-item-type-post_type menu-item-object-page menu-item-1122802 menu-object_id-794740"><a href="https://www.digitaltrends.com/newsletter/"><span>Newsletter</span></a></li>
+		<li id="menu-item-1122777" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-1122777 menu-object_id-1122777"><a target="_blank" href="http://www.facebook.com/DigitalTrends"><span>Facebook</span></a></li>
+		<li id="menu-item-1122776" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-1122776 menu-object_id-1122776"><a target="_blank" href="http://twitter.com/digitaltrends"><span>Twitter</span></a></li>
+		<li id="menu-item-1122781" class="instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-1122781 menu-object_id-1122781"><a target="_blank" href="https://instagram.com/digitaltrends"><span>Instagram</span></a></li>
+	</ul><div class="m-mega h-mega" data-scope="mega"><div class="m-mega--wrap h-mega-content"></div></div></div></div>
+</li>
+</ul><div class="m-mega h-mega" data-scope="mega"><div class="m-mega--wrap h-mega-content"></div></div></div></div>
+</li>
+</ul>
+			<div class="m-mega-more h-mega-more" style="display: none;">
+				<ul id="menu-extra-links-1" class="sub-menu"><li id="menu-item-1202790" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1202790 menu-object_id-739034"><a href="https://www.digitaltrends.com/mobile/best-smartphones/">Best Smartphones</a></li>
+<li id="menu-item-1202798" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1202798 menu-object_id-1111397"><a href="https://www.digitaltrends.com/home-theater/best-tvs/">Best TVs</a></li>
+<li id="menu-item-1202807" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1202807 menu-object_id-715619"><a href="https://www.digitaltrends.com/computing/best-laptops/">Best Laptops</a></li>
+<li id="menu-item-1202819" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1202819 menu-object_id-806930"><a href="https://www.digitaltrends.com/computing/best-desktop-pcs/">Best Desktops</a></li>
+<li id="menu-item-1202810" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1202810 menu-object_id-1044183"><a href="https://www.digitaltrends.com/home-theater/best-headphones/">Best Headphones</a></li>
+<li id="menu-item-1202802" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1202802 menu-object_id-1058096"><a href="https://www.digitaltrends.com/cool-tech/best-drones/">Best Drones</a></li>
+<li id="menu-item-1202812" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1202812 menu-object_id-723539"><a href="https://www.digitaltrends.com/mobile/best-tablets/">Best Tablets</a></li>
+<li id="menu-item-1202991" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1202991 menu-object_id-966404"><a href="https://www.digitaltrends.com/cool-tech/best-3d-printers/">Best 3D Printers</a></li>
+<li id="menu-item-1202818" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1202818 menu-object_id-475084"><a href="https://www.digitaltrends.com/wearables/best-smartwatch/">Best Smartwatches</a></li>
+</ul>
+				<ul class="m-small-share-list">
+					<li class="item rss">
+						<a href="https://www.digitaltrends.com/rss-home/" target="_blank" rel="nofollow">
+							RSS
+						</a>
+					</li>
+
+					<li class="item mail">
+						<a href="https://www.digitaltrends.com/newsletter/" target="_blank">
+							DT Newsletter
+						</a>
+					</li>
+
+					<li class="item twitter">
+						<a href="http://twitter.com/digitaltrends" target="_blank" rel="nofollow">
+							Twitter
+						</a>
+					</li>
+
+					<li class="item facebook">
+						<a href="http://www.facebook.com/DigitalTrends" target="_blank" rel="nofollow">
+							Facebook
+						</a>
+					</li>
+
+					<li class="item gplus">
+						<a href="https://plus.google.com/+digitaltrends/posts" target="_blank" rel="nofollow">
+							Google+
+						</a>
+					</li>
+
+					<li class="item linkedin">
+						<a href="https://www.linkedin.com/company/digitaltrends-com" target="_blank" rel="nofollow">
+							LinkedIn
+						</a>
+					</li>
+
+					<li class="item instagram">
+						<a href="https://instagram.com/digitaltrends" target="_blank" rel="nofollow">
+							Instagram
+						</a>
+					</li>
+
+					<li class="item pinterest">
+						<a href="http://pinterest.com/digitaltrends/" target="_blank" rel="nofollow">
+							Pinterest
+						</a>
+					</li>
+
+					<li class="item youtube">
+						<a href="http://www.youtube.com/subscription_center?add_user=DigitalTrends" target="_blank" rel="nofollow">
+							YouTube
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="m-header-share m-header-module h-header-module h-header-module_share">
+		<div class="m-header-share--wrap">
+			<div class="m-share-list">
+				<div class="item rss">
+					<a href="https://www.digitaltrends.com/rss-home/" target="_blank" title="Subscribe to our RSS Feed"></a>
+				</div>
+
+				<div class="item mail">
+					<a href="https://www.digitaltrends.com/newsletter/" target="_blank" title="Get the DT Newsletter"></a>
+				</div>
+
+				<div class="item facebook">
+					<a href="http://www.facebook.com/DigitalTrends" target="_blank" rel="nofollow" title="Follow us on Facebook"></a>
+				</div>
+
+				<div class="item twitter">
+					<a href="http://twitter.com/digitaltrends" target="_blank" rel="nofollow" title="Follow us on Twitter"></a>
+				</div>
+
+				<div class="item gplus">
+					<a href="https://plus.google.com/+digitaltrends/posts" target="_blank" rel="nofollow" title="Follow us on Google+"></a>
+				</div>
+
+				<div class="item linkedin">
+					<a href="https://www.linkedin.com/company/digitaltrends-com" target="_blank" rel="nofollow" title="Follow us on LinkedIn"></a>
+				</div>
+
+				<div class="item instagram">
+					<a href="https://instagram.com/digitaltrends" target="_blank" rel="nofollow" title="Follow us on Instagram"></a>
+				</div>
+
+				<div class="item pinterest">
+					<a href="http://pinterest.com/digitaltrends/" target="_blank" rel="nofollow" title="Follow us on Pinterest"></a>
+				</div>
+
+				<div class="item youtube">
+					<a href="http://www.youtube.com/subscription_center?add_user=DigitalTrends" target="_blank" rel="nofollow" title="Follow us on YouTube"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="m-header-search m-header-module h-header-module h-header-module_search">
+		<div class="m-header-search--wrap">
+			<form method="get" action="https://www.digitaltrends.com/">
+				<input type="submit" class="button" value="Search">
+				<input type="text" class="field h-field" name="s" placeholder="What are you looking for?">
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/template" id="t-mega-link">
+	<div class="m-mega-mod_link">
+		<a href="<%= href %>">
+			<%- text %>
+		</a>
+	</div>
+</script>
+
+
+<script type="text/template" id="t-mega-item">
+	<div class="item <%- classes %>">
+		<% if (date) { %>
+			<div class="thumb">
+				<a href="<%- permalink %>">
+					<% if (video_cat) { %>
+						<div class="play"></div>
+
+						<img src="<%- thumb %>" alt="">
+					<% } else { %>
+						<img src="<%- thumb %>" alt="">
+					<% } %>
+				</a>
+			</div>
+		<% } %>
+
+		<div class="meta">
+			<h4 class="title">
+				<a href="<%- permalink %>">
+					<%= title %>
+				</a>
+			</h4>
+
+			<% if ( date ) { %>
+				<div class="date">
+					Posted <span><%- date %></span>
+				</div>
+			<% } %>
+
+			<% if ( score ) { %>
+				<div class="score">
+					<span class="num">
+						<%- score %>
+					</span>
+
+					<a href="https://www.digitaltrends.com/review-score-breakdown/">
+						<span class="stars">
+							<%= DT.stars_html( score ) %>
+						</span>
+					</a>
+				</div>
+			<% } %>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/template" id="t-mega-reviews">
+	<div class="m-mega-mod m-mega-mod_reviews">
+		<h4 class="m-mega-mod--title">
+			<%- meta.title %>
+		</h4>
+
+		<div class="items">
+			<%= items %>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/template" id="t-mega-ec">
+	<div class="m-mega-mod m-mega-mod_reviews ec">
+		<div class="m-mega-mod--more">
+			<a href="https://www.digitaltrends.com/editors-choice">
+				See All
+			</a>
+		</div>
+
+		<h4 class="m-mega-mod--title">
+			<a href="https://www.digitaltrends.com/editors-choice">
+				<%- meta.title %>
+			</a>
+		</h4>
+
+		<div class="items">
+			<%= items %>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/template" id="t-mega-text-list">
+	<div class="m-mega-mod_text-list">
+		<h4 class="m-mega-mod--title">
+			<%- meta.title %>
+		</h4>
+
+		<div class="items">
+			<%= items %>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/template" id="t-mega-hero">
+	<div class="m-mega-mod m-mega-mod_hero">
+		<h4 class="m-mega-mod--title">
+			<%- meta.title %>
+		</h4>
+
+		<h4 class="m-mega-mod--title alt">
+			<%- meta.alt_title %>
+		</h4>
+
+		<div class="items">
+			<%= items %>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/template" id="t-mega-list">
+	<div class="m-mega-mod m-mega-mod_list">
+		<h4 class="m-mega-mod--title">
+			<%- meta.title %>
+		</h4>
+
+		<div class="items">
+			<%= items %>
+		</div>
+	</div>
+</script>
+
+</header>
+
+
+<div class="l-main-container">
+
+	<div class="l-page "  data-dtads-inject="1" data-trending="1"itemscope itemtype="http://schema.org/Article" data-post-id="1254347" data-post-url="https://www.digitaltrends.com/mobile/uber-ios-app-entitlement-news/">
+
+
+<div class="m-leaderboard ">
+	<div class="l-block">
+		<div class="dtads-slot dtads-slot-leaderboard dtads-desktop" data-type="leaderboard" ></div>		<div class="dtads-slot dtads-slot-leaderboard-tablet dtads-tablet" data-type="leaderboard_tablet" ></div>		<div class="dtads-slot dtads-slot-leaderboard-mobile dtads-mobile" data-type="leaderboard_mobile" ></div>
+					<div class="dtads-slot dtads-out-of-page dtads-desktop dtads-tablet dtads-mobile" data-type="out_of_page" ></div>			</div>
+</div>
+
+
+
+		<div class="l-block ">
+
+
+				<header class="m-title-block">
+
+					<div class="crumbs" data-scope="breadcrumbs">
+						<span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="https://www.digitaltrends.com/" rel="v:url" property="v:title">Home</a> <em>&gt;</em> <span rel="v:child" typeof="v:Breadcrumb"><a href="https://www.digitaltrends.com/mobile/" rel="v:url" property="v:title">Mobile</a> <em>&gt;</em> <span class="breadcrumb_last">Uber iOS app can virtually &#8216;see&#8217; your&hellip;</span></span></span></span>					</div>
+
+					<h1 class="title" itemprop="headline">
+						Uber iOS app can virtually &#8216;see&#8217; your phone screen, and Apple approved it					</h1>
+
+
+					<div class="byline">
+						<cite data-scope="byline">
+	<span class="by">By</span>
+
+
+		<span class="vcard">
+			<a class="author url fn " rel="author" href="https://www.digitaltrends.com/users/andy_boxall/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Andy Boxall</span></a><!--This <a> here is good feng-shui -->
+		</span>
+
+
+
+	<span class="dash">&mdash;</span>
+
+	<time itemprop="datePublished" class="date dtreviewed" datetime="2017-10-06T04:43:51+00:00" pubdate="pubdate">
+		Posted on October 6, 2017 4:43 am	</time>
+
+
+	<span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+		<meta itemprop="name" content="Digital Trends">
+	</span>
+
+	</cite>					</div>
+
+				</header>
+
+
+
+
+
+	<div class="m-header-media image" data-scope="header-media">
+
+	<div class="m-share m-share_bar  full h-share-bar">
+		<div class="m-share--wrap">
+
+			<div class="key-items">
+
+
+
+									<div class="key-item facebook is-empty h-share-count h-do-share" data-app="facebook">
+						<a href="javascript:void(0)" title="Share this on Facebook">
+							<span id="dt-dc-share-count-0" class="count h-count"></span>						</a>
+					</div>
+
+
+									<div class="key-item twitter is-empty h-do-share" data-app="twitter">
+						<a href="javascript:void(0)" title="Share this on Twitter">
+						</a>
+					</div>
+
+
+
+											<div class="key-item text subscribe is-empty h-topic-newsletter-subscribe">
+							<a href="javascript:void(0)" title="Subscribe to this topic">
+								<span class="text">Subscribe</span>
+							</a>
+						</div>
+
+
+
+									<div class="key-item text share is-empty h-do-share">
+						<a href="javascript:void(0)" title="Share this">
+							<span class="text">Share</span>
+						</a>
+					</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+				<a href="http://s3.amazonaws.com/digitaltrends-uploads-prod/2017/03/uber_stock.jpg" rel="post" >
+					<img width="640" src="https://icdn9.digitaltrends.com/image/uber_stock-640x0.jpg?ver=2" class="attachment-dt_header_media size-dt_header_media wp-image-1147578" alt="how to delete your uber account" />				</a>
+
+
+				<div class='m-image-credit' data-image-id='1147578' ><a href="https://www.123rf.com/profile_junce">junce/123RF</a></div>
+
+
+	</div>
+
+
+
+			<aside class="l-sidebar h-smart-sidebar">
+
+	<div class="dtads-slot dtads-slot-half-roadblock dtads-desktop" data-type="halfpage_roadblock" ></div>
+
+
+<div class="m-discovery">
+	<div class="items">
+					<div class="item">
+				<div class="thumb">
+					<a href="https://www.digitaltrends.com/gaming/best-snes-games/gallery/" rel="nofollow">
+						<img src="https://icdn2.digitaltrends.com/image/best-snes-games-3-80x80-c.jpg?ver=1" class="attachment-width=80&amp;height=80&amp;crop=1 size-width=80&amp;height=80&amp;crop=1 wp-image-802578" alt="best SNES games SNES controller atop a stack of games" />					</a>
+				</div>
+
+				<div class="meta">
+					<h4 class="title">
+						<a href="https://www.digitaltrends.com/gaming/best-snes-games/gallery/" rel="nofollow">
+							They&#8217;re just super: The 25 best SNES games						</a>
+					</h4>
+				</div>
+			</div>
+					<div class="item">
+				<div class="thumb">
+					<a href="https://www.digitaltrends.com/photography/best-space-photos/gallery/" rel="nofollow">
+						<img src="https://icdn2.digitaltrends.com/image/juno-phantom-80x80-c.jpg" class="attachment-width=80&amp;height=80&amp;crop=1 size-width=80&amp;height=80&amp;crop=1 wp-image-1245146" alt="best space photos" />					</a>
+				</div>
+
+				<div class="meta">
+					<h4 class="title">
+						<a href="https://www.digitaltrends.com/photography/best-space-photos/gallery/" rel="nofollow">
+							Get your Sagan on with 50 awe-inspiring photos of the final frontier						</a>
+					</h4>
+				</div>
+			</div>
+			</div>
+</div>
+
+
+
+
+	<div class="l-group">
+
+		<div class="dtads-slot dtads-slot-mpu-sticky dtads-desktop" data-type="mpu_sticky" ></div>
+
+					<div class="m-discovery">
+				<div class="items">
+											<div class="item post">
+															<div class="thumb">
+									<a href="https://www.digitaltrends.com/dt-daily/dt-daily-uber-banned-london/">
+										<img src="https://icdn2.digitaltrends.com/image/dt-daily-00_00_41_16-still028-90x90-c.jpg" class="attachment-thumbnail-small size-thumbnail-small wp-image-1246991" alt="dt daily uber banned london 00 41 16 still028" />									</a>
+								</div>
+
+							<div class="meta">
+								<div class="title">
+									<a href="https://www.digitaltrends.com/dt-daily/dt-daily-uber-banned-london/">
+										Uber will be banned from operating in London for deceptive practices									</a>
+								</div>
+							</div>
+						</div>
+											<div class="item post">
+															<div class="thumb">
+									<a href="https://www.digitaltrends.com/cars/how-to-delete-your-uber-account/">
+										<img src="https://icdn2.digitaltrends.com/image/uber_stock-90x90-c.jpg?ver=2" class="attachment-thumbnail-small size-thumbnail-small wp-image-1147578" alt="how to delete your uber account" />									</a>
+								</div>
+
+							<div class="meta">
+								<div class="title">
+									<a href="https://www.digitaltrends.com/cars/how-to-delete-your-uber-account/">
+										Here&#8217;s how to delete your Uber account and cut ties with the company									</a>
+								</div>
+							</div>
+						</div>
+											<div class="item post">
+															<div class="thumb">
+									<a href="https://www.digitaltrends.com/mobile/uber-in-app-messaging/">
+										<img src="https://icdn2.digitaltrends.com/image/newsroomheader-90x90-c.jpg" class="attachment-thumbnail-small size-thumbnail-small wp-image-1225797" alt="uber" />									</a>
+								</div>
+
+							<div class="meta">
+								<div class="title">
+									<a href="https://www.digitaltrends.com/mobile/uber-in-app-messaging/">
+										Uber&#039;s new in-app messaging can help cut down on awkward texts with your driver									</a>
+								</div>
+							</div>
+						</div>
+											<div class="item post">
+															<div class="thumb">
+									<a href="https://www.digitaltrends.com/outdoors/uber-q-smart-grill/">
+										<img src="https://icdn2.digitaltrends.com/image/uberq-smart-portable-multi-griller-13-90x90-c.jpg" class="attachment-thumbnail-small size-thumbnail-small wp-image-1210665" alt="UberQ Smart Portable Multi Griller" />									</a>
+								</div>
+
+							<div class="meta">
+								<div class="title">
+									<a href="https://www.digitaltrends.com/outdoors/uber-q-smart-grill/">
+										The Uber Q is a portable, app-enabled grill that&#8217;s small enough to take anywhere									</a>
+								</div>
+							</div>
+						</div>
+									</div>
+			</div>
+
+	</div>
+
+</aside>
+
+
+
+			<div class="l-content-wrap">
+
+<div class="m-newsletter-minimal  h-register-newsletter">
+
+	<div class="line-1 h-message">Get today's popular <strong>Digital&nbsp;Trends</strong> articles in your inbox:</div>
+
+
+	<form class="h-form" method="post">
+		<input type="text" class="field h-field" name="dt_newsletter_register_email" placeholder="Enter your email">
+
+		<input type="hidden" name="dt_newsletter_source" value="dt-newsletter-above-content">
+		<input type="hidden" name="dt_lists[]" value="daily-brief">
+
+		<input type="text" name="robot" value="" style="display:none">
+
+		<input type="submit" class="submit h-submit" value="Sign Up">
+	</form>
+
+</div>
+
+				<article class="m-content " itemprop="articleBody" data-scope="content">
+
+
+<div class="m-quick-take m-quick-take--left">
+    <div class="title">
+        Why it matters to you    </div>
+            <p class="bullet">Permissions inside the Uber app sound like a privacy nightmare, but have never been abused, and will soon be removed.</p>
+    </div>
+<p>To better prepare its Apple Watch app, Uber used technology enabling it to view and record what was happening on an iPhone’s screen, even when the Uber app was only running in the background. The permission to do this was granted by Apple, and although Uber claims not to use the system anymore, it remains part of the app. The news comes from Sudo Security Group, which unearthed the capability — called an Entitlement — in the Uber app.</p>
+<p>While this sounds like a security and privacy nightmare, the entitlement doesn’t work like a screen-recording app, according to an app researcher speaking to <a href="https://gizmodo.com/researchers-uber-s-ios-app-had-secret-permissions-that-1819177235" target="_blank" rel="noopener">Gizmodo</a>, and will be removed from the app soon. What it does is visualize colors and pixels on the screen, not precise details. However, the concern is this data could be decoded and interpreted to reveal sensitive personal information, user habits, or, should Uber’s app be hacked by criminals, passwords and other login information.</p>
+<p>What makes this unusual is that Uber is the only third-party app developer using it. Other entitlements are commonly <a href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html" target="_blank" rel="noopener">used by app developers</a>, as they provide access to key phone features, such as the camera and Apple Pay. They operate in a similar way to permissions on Android. The entitlement used by Uber here is considered <a href="http://wccftech.com/apple-uber-secret-record-iphone-screen/" target="_blank" rel="noopener">reserved for Apple’s use only</a>, due to its privacy and security concerns. Using entitlements without Apple’s approval would normally result in the developer being banned from the App Store.</p>
+<p>The entitlement was used by Uber to assist the <a href='https://www.digitaltrends.com/watch-reviews/apple-watch-review/'>Apple Watch Series One</a> render maps correctly. Apple partnered with Uber to show how the app would operate on the Apple Watch during its March 2015 event. Apparently, developers had four months to prepare Apple Watch apps before the launch, which may explain why Apple granted Uber use of the entitlement at the time, to ensure it was stage-ready on the day.</p>
+<p>Uber says the entitlement has not been used since then, and it has never tracked any unauthorized access or use of it. However, Uber’s reputation <a href='https://www.digitaltrends.com/cars/uber-faces-doj-investigation-greyball-software/'>regarding privacy</a> has been <a href='https://www.digitaltrends.com/mobile/uber-fingerprinting-app-store/'>tarnished before</a>, and although it says it will remove the entitlement, it’s unclear why it hasn’t done so before now, given the potential for abuse.</p>
+
+	                <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+	                    <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+	                        <meta itemprop="url" content="http://cdn.dtcn.com/dt/dt-logo-small.png">
+	                        <meta itemprop="width" content="0">
+	                        <meta itemprop="height" content="0">
+	                    </span>
+	                    <meta itemprop="name" content="Digital Trends">
+	                </span>
+
+				</article>
+
+
+									<div class="m-signoff"></div>
+
+				<style>
+	.m-fa8ls4wfrl { margin-top: 60px; overflow: hidden; }
+	.m-fa8ls4wfrl div { float: right; }
+	.m-fa8ls4wfrl div:first-child { float: left; }
+	@media (max-width: 1077px) { .m-fa8ls4wfrl div { margin: 0 auto; float: none !important; } }
+</style>
+
+<div class="m-fa8ls4wfrl">
+	<div class="dtads-slot dtads-slot-mpu-59d7835fb0992 dtads-desktop" data-type="mpu-59d7835fb0992" ></div>	<div class="dtads-slot dtads-slot-mpu-59d7835fb09e7 dtads-desktop" data-type="mpu-59d7835fb09e7" ></div>	<div class="dtads-slot dtads-slot-mpu-variable-mobile-59d7835fb0a39 dtads-mobile" data-type="mpu_variable_mobile-59d7835fb0a39" ></div></div>
+			</div>
+
+
+
+<div class="m-blockboard dtads-collapse-mobile ">
+	<div class="m-blockboard--inner">
+		<div class="l-block">
+			<div class="dtads-slot dtads-slot-board-59d7835fb0aa3 dtads-desktop dtads-tablet" data-type="board-59d7835fb0aa3" ></div>		</div>
+	</div>
+</div>
+			<div class="l-block">
+
+				<section class="m-grid-river" data-scope="infinite-discovery">
+					<div class="m-grid-river--items l-1-hero-3-item infinite" id="h-river"></div>
+				</section>
+
+				<script>
+					DTEvent.getEventPromise( 'dt:infinite:init' ).then( function() {
+						var infinite_river = new DT.Infinite.Elements( {
+							container_id: 'h-river',
+							el_class:     'm-grid-river--group',
+							fill_on_load: false,
+							ajax_action:  'dt_infinite_discovery_ajax',
+							ajax_data: {
+								term: '4',
+								post: '1254347'
+							}
+						});
+					});
+				</script>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		var dt_premium_toc = setInterval(function() {
+			if ( 'undefined' !== typeof DT_AWARDS_TOC ) {
+				clearInterval( dt_premium_toc );
+				new DT_AWARDS_TOC();
+			}
+		}, 200);
+	</script>
+
+
+
+			<footer class="m-site-foot" id="dt-site-foot">
+				<div class="m-site-foot--inner">
+					<ul id="menu-footer" class="m-site-foot--menu"><li id="menu-item-1221595" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1221595 menu-object_id-1221595"><a href="#">Must Reads</a>
+<ul  class="sub-menu">
+	<li id="menu-item-1221609" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1221609 menu-object_id-424992"><a href="https://www.digitaltrends.com/movies/best-netflix-movies/">Best Netflix Movies</a></li>
+	<li id="menu-item-1235751" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1235751 menu-object_id-820057"><a title="Best Netflix Original Series" href="https://www.digitaltrends.com/movies/best-netflix-original-series/">Best Netflix Original Series</a></li>
+	<li id="menu-item-1235752" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-1235752 menu-object_id-124856"><a title="Best iPhone Games" href="https://www.digitaltrends.com/tag/best-iphone-games/">Best iPhone Games</a></li>
+	<li id="menu-item-1234604" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1234604 menu-object_id-1111397"><a title="Best TVs" href="https://www.digitaltrends.com/home-theater/best-tvs/">Best TVs</a></li>
+	<li id="menu-item-1246763" class="menu-item menu-item-type-post_type menu-item-object-review menu-item-1246763 menu-object_id-1241023"><a title="iPhone X Review" href="https://www.digitaltrends.com/cell-phone-reviews/apple-iphone-x-review/">iPhone X Review</a></li>
+	<li id="menu-item-1246762" class="menu-item menu-item-type-post_type menu-item-object-review menu-item-1246762 menu-object_id-1246514"><a title="iPhone 8 Plus Review" href="https://www.digitaltrends.com/cell-phone-reviews/apple-iphone-8-plus-review/">iPhone 8 Plus Review</a></li>
+</ul>
+</li>
+<li id="menu-item-1221593" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1221593 menu-object_id-1221593"><a href="#">Who We Are</a>
+<ul  class="sub-menu">
+	<li id="menu-item-1221636" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221636 menu-object_id-2"><a href="https://www.digitaltrends.com/about/">About</a></li>
+	<li id="menu-item-1221630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221630 menu-object_id-16"><a href="https://www.digitaltrends.com/about/advertise-on-digital-trends/">Advertise</a></li>
+	<li id="menu-item-1221629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221629 menu-object_id-19"><a href="https://www.digitaltrends.com/about/company-contacts/">Contact Us</a></li>
+	<li id="menu-item-1221626" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221626 menu-object_id-27"><a href="https://www.digitaltrends.com/legal/privacy-policy/">Privacy Policy</a></li>
+	<li id="menu-item-1221625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221625 menu-object_id-25"><a href="https://www.digitaltrends.com/legal/terms-of-use/">Terms of Use</a></li>
+	<li id="menu-item-1221627" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221627 menu-object_id-46"><a href="https://www.digitaltrends.com/contact/corrections/">Corrections</a></li>
+	<li id="menu-item-1221632" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1221632 menu-object_id-1221632"><a target="_blank" href="https://www.digitaltrends.com/jobs-overview/">Careers</a></li>
+</ul>
+</li>
+<li id="menu-item-1221592" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1221592 menu-object_id-1221592"><a href="#">Related Coverage</a>
+<ul  class="sub-menu">
+	<li id="menu-item-1221606" class="menu-item menu-item-type-post_type menu-item-object-topic menu-item-1221606 menu-object_id-1143132"><a href="https://www.digitaltrends.com/deals/">DT Deals</a></li>
+	<li id="menu-item-1221605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221605 menu-object_id-1107626"><a href="https://www.digitaltrends.com/best-products/">Best Products</a></li>
+	<li id="menu-item-1221602" class="menu-item menu-item-type-post_type menu-item-object-topic menu-item-1221602 menu-object_id-633078"><a href="https://www.digitaltrends.com/topic/dt-giveaways-test/">Giveaways</a></li>
+	<li id="menu-item-1221599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1221599 menu-object_id-1221599"><a target="_blank" href="https://shop.digitaltrends.com/">DT Shop</a></li>
+	<li id="menu-item-1221600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1221600 menu-object_id-1221600"><a target="_blank" href="https://es.digitaltrends.com/">DT Español</a></li>
+	<li id="menu-item-1221601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1221601 menu-object_id-1221601"><a target="_blank" href="https://www.themanual.com/">The Manual</a></li>
+</ul>
+</li>
+<li id="menu-item-1221596" class="m-social menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1221596 menu-object_id-1221596"><a href="#">Add Us To Your Social Channels</a>
+<ul  class="sub-menu">
+	<li id="menu-item-1221639" class="item facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-1221639 menu-object_id-1221639"><a target="_blank" href="https://www.facebook.com/DigitalTrends">Facebook</a></li>
+	<li id="menu-item-1221640" class="item twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-1221640 menu-object_id-1221640"><a target="_blank" href="https://twitter.com/digitaltrends">Twitter</a></li>
+	<li id="menu-item-1221643" class="item instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-1221643 menu-object_id-1221643"><a target="_blank" href="https://www.instagram.com/digitaltrends/">Instagram</a></li>
+	<li id="menu-item-1221641" class="item linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-1221641 menu-object_id-1221641"><a target="_blank" href="https://www.linkedin.com/company-beta/90282/">Linkedin</a></li>
+	<li id="menu-item-1221644" class="item pinterest menu-item menu-item-type-custom menu-item-object-custom menu-item-1221644 menu-object_id-1221644"><a target="_blank" href="https://www.pinterest.com/digitaltrends/">Pinterest</a></li>
+	<li id="menu-item-1221645" class="item youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-1221645 menu-object_id-1221645"><a target="_blank" href="https://www.youtube.com/channel/UC8wXC0ZCfGt3HaVLy_fdTQw?sub_confirmation=1">YouTube</a></li>
+	<li id="menu-item-1221647" class="item rss menu-item menu-item-type-post_type menu-item-object-page menu-item-1221647 menu-object_id-633862"><a href="https://www.digitaltrends.com/rss-home/">RSS Home</a></li>
+</ul>
+</li>
+</ul>
+					<div class="m-site-foot--brand">
+						<a href="https://www.digitaltrends.com">
+							<span class="label">
+								Digital Trends							</span>
+						</a>
+					</div>
+
+					<div class="m-site-foot--blurb">
+						Digital Trends helps readers keep tabs on the fast-paced world of tech with all the latest news, fun product reviews, insightful editorials, and one-of-a-kind sneak peeks.					</div>
+
+											<a class="m-site-foot--newsletter" href="https://www.digitaltrends.com/newsletter">
+							<strong>Subscribe</strong> to our Newsletter						</a>
+
+					<div class="m-site-foot--copyright">
+						Copyright &copy;2017 Designtechnica Corporation.
+						All rights reserved.					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script type="text/template" id="t-carousel-gallery">
+	<div class="m-carousel-gallery--wrap h-wrap">
+		<div class="m-carousel-gallery--slides h-slides"></div>
+
+		<div class="m-carousel-gallery--controls h-controls">
+			<div class="shift next h-next">
+				<a href="javascript:">Next</a>
+			</div>
+
+			<div class="shift prev h-prev">
+				<a href="javascript:">Previous</a>
+			</div>
+
+			<div class="m-carousel-gallery--dots h-pos-dots"></div>
+
+			<div class="m-carousel-gallery--num h-pos-text">
+				<span class="current h-pos-text-current"></span> of <span class="total h-pos-text-total"></span>
+			</div>
+
+			<div class="m-carousel-gallery--autoplay h-autoplay">
+				<div>Video starting in <span class="seconds h-autoplay-seconds"></span></div>
+			</div>
+		</div>
+
+		<div class="m-carousel-gallery--player h-player h-sticky-video m-sticky-video"></div>
+	</div>
+
+	<div class="m-carousel-gallery--close h-close">
+		<a href="javascript:">Close Video</a>
+	</div>
+
+	<div class="m-carousel-gallery--meta h-meta">
+		<div class="m-carousel-gallery--content h-content"></div>
+	</div>
+</script>
+
+<script type="text/template" id="t-carousel-gallery-pos-dots">
+	<div class="dot h-pos-dots-dot">
+		<a href="javascript:"></a>
+	</div>
+</script>
+
+<script type="text/template" id="t-carousel-gallery-loader">
+	<div class="m-carousel-gallery--loader">
+		<div class="inner">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="t-carousel-gallery-play">
+	<div class="m-carousel-gallery--play">
+		<a href="javascript:">Play</a>
+	</div>
+</script><script type="text/template" id="t-videoplayer-container">
+	<div class="m-videoplayer--inner h-inner">
+		<div class="m-videoplayer--wrap h-wrap">
+			<div class="m-videoplayer--player h-player"></div>
+
+			<div class="m-videoplayer--meta h-player-meta"></div>
+
+			<div class="m-videoplayer--message h-player-message"></div>
+
+			<div class="m-videoplayer--drawer h-drawer">
+				<div class="m-videoplayer--panel playlist">
+					<div class="m-videoplayer--jump">
+						<select class="jump h-playlist-jump"></select>
+					</div>
+
+					<div class="m-videoplayer--pane h-playlist-pane">
+						<div class="m-videoplayer--items h-playlist-items"></div>
+					</div>
+				</div>
+
+				<div class="m-videoplayer--panel search">
+					<div class="m-videoplayer--term">
+						<div class="label">Results for</div>
+
+						<div class="term h-search-term"></div>
+					</div>
+
+					<div class="m-videoplayer--pane h-search-pane">
+						<div class="m-videoplayer--items h-search-items"></div>
+					</div>
+				</div>
+
+				<div class="m-videoplayer--search">
+					<div class="close h-search-clear">Clear search</div>
+
+					<input class="field h-search-field" type="text" placeholder="Find Videos">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="m-videoplayer--loader">
+		<div class="inner">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/template" id="t-videoplayer-item">
+	<% var id = (typeof id === 'string') ? id : '' %>
+	<% var title = (typeof title === 'string') ? title : '' %>
+	<% var thumb = (typeof thumb === 'string') ? thumb : '' %>
+	<% var is_playing = (typeof is_playing !== 'undefined' && is_playing) ? 'is-playing' : '' %>
+	<% var is_next = (typeof is_next !== 'undefined' && is_next) ? 'is-next' : '' %>
+
+	<div class="item <%- is_playing %> <%- is_next %> h-item" data-id="<%- id %>">
+		<div class="inner">
+			<div class="meta">
+			<span><%= is_next ? 'UP NEXT' : '' %></span>
+				<% if (title) { %>
+					<div class="title"><%= title %></div>
+				<% } %>
+			</div>
+
+			<% if (thumb) { %>
+				<div class="thumb" style="background-image: url('<%= thumb %>');"></div>
+			<% } %>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/template" id="t-videoplayer-meta">
+	<% var title = (typeof title === 'string') ? title : '' %>
+	<% var play_count = (typeof play_count !== 'undefined') ? parseInt(play_count) || 0 : 0 %>
+	<% var author = (typeof author === 'string') ? author : '' %>
+	<% var date = (typeof date === 'string') ? date : '' %>
+	<% var plural = (play_count > 1) ? 's' : '' %>
+
+	<% if (title) { %>
+		<div class="label">Now Playing</div>
+
+		<% if (play_count) { %>
+			<div class="count"><%= play_count %> Play<%= plural %></div>
+		<% } %>
+
+		<div class="title"><%= title %></div>
+
+		<% if (author) { %>
+			<div class="author">By <strong><%= author %></strong></div>
+		<% } %>
+
+		<% if (date) { %>
+			<div class="date"><%= date %></div>
+		<% } %>
+	<% } %>
+</script>
+
+
+<script type="text/template" id="t-videoplayer-message">
+	<% var label = (typeof label === 'string') ? label : '' %>
+	<% var text = (typeof text === 'string') ? text : '' %>
+
+	<div class="label"><%= label %></div>
+
+	<div class="text"><%= text %></div>
+</script>
+
+			<!-- Begin DT Ads -->
+			<script type="text/javascript">
+				var dtads_slot_types = {"out_of_page":{"class":"dtads-out-of-page","keyvals":{"type":"roadblock"}},"leaderboard":{"class":"dtads-slot-leaderboard","sizes":[[728,90],[950,250],[970,66],[970,90],[970,250],[970,418],[970,200],[940,230],[970,300]],"keyvals":{"type":"roadblock","loc":"lb"}},"leaderboard_tablet":{"class":"dtads-slot-leaderboard-tablet","sizes":[[728,90],[728,230]],"keyvals":{"type":"roadblock","loc":"lb"}},"leaderboard_mobile":{"class":"dtads-slot-leaderboard-mobile","sizes":[[320,50],[320,100]],"keyvals":{"loc":"lb"}},"leaderboard_limited":{"class":"dtads-slot-leaderboard","sizes":[[728,90]],"keyvals":{"type":"roadblock","loc":"lb"}},"board":{"class":"dtads-slot-board","sizes":[[728,90]]},"mpu":{"class":"dtads-slot-mpu","sizes":[[300,250]]},"mpu_roadblock":{"class":"dtads-slot-mpu-roadblock","sizes":[[300,250]],"keyvals":{"type":"roadblock"}},"mpu_sticky":{"class":"dtads-slot-mpu-sticky","sizes":[[300,250]],"keyvals":{"loc":"sb"}},"mpu_content":{"class":"dtads-slot-mpu-content","sizes":[[300,250]],"keyvals":{"loc":"content"}},"mpu_variable_mobile":{"class":"dtads-slot-mpu-variable-mobile","sizes":[[300,250],[320,480],[350,480]]},"mpu_content_mobile":{"class":"dtads-slot-mpu-content-mobile","sizes":[[320,50],[320,100],[300,50],[300,250],[320,480],[350,480]],"keyvals":{"loc":"content"}},"halfpage":{"class":"dtads-slot-half","sizes":[[300,250],[300,600],[300,900],[300,1050]]},"halfpage_roadblock":{"class":"dtads-slot-half-roadblock","sizes":[[300,250],[300,600],[300,900],[300,1050]],"keyvals":{"type":"roadblock","loc":"sb"}},"bigtop":{"class":"dtads-slot-bigtop","sizes":[[1400,600]],"keyvals":{"type":"roadblock"}},"mpu-59d7835fb0992":{"class":"dtads-slot-mpu-59d7835fb0992","sizes":[[300,250]],"keyvals":{"loc":"bs"}},"mpu-59d7835fb09e7":{"class":"dtads-slot-mpu-59d7835fb09e7","sizes":[[300,250]],"keyvals":{"loc":"bs-1"}},"mpu_variable_mobile-59d7835fb0a39":{"class":"dtads-slot-mpu-variable-mobile-59d7835fb0a39","sizes":[[300,250],[320,480],[350,480]],"keyvals":{"loc":"bs-2"}},"board-59d7835fb0aa3":{"class":"dtads-slot-board-59d7835fb0aa3","sizes":[[728,90]],"keyvals":{"loc":"btc"}}};
+				var dtads_unit_name  = '/5611/dt.dgt.www';
+				var dtads_keyvals    = {"tags":["entitlement","ios","privacy","uber"],"cat":["apple","mobile","trending"],"supports":["bt","bt2","mp","skin"],"aid":1254347};
+				var dtads_lazy       = false;
+			</script>
+			<!-- End DT Ads -->
+
+			<div id="dt-dc-footer-components-0" ></div><div id="dt-dc-linked-keywords-injection-0" ></div><div id="dt-dc-wp_admin_toolbar-0" ></div>
+		<script>
+			window.dt_meganav_data = {"review_category":{"all":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/laptop-reviews\/acer-predator-helios-300-review\/","title":"Acer Predator Helios 300","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/acer-predator-helios-300-220x110-c.jpg","classes":"review rp","score":"8","video_cat":false},{"type":"review","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/headphone-reviews\/google-pixel-buds-review\/","title":"Google Pixel Buds hands-on","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/google-pixel-buds-review-press-220x110-c.jpg","classes":"review","score":"0","video_cat":false},{"type":"review","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/smart-home-reviews\/google-home-mini-review\/","title":"Google Home Mini and Home Max hands-on","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/google-home-mini-press-v2-220x110-c.jpg","classes":"review","score":"0","video_cat":false},{"type":"review","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/laptop-reviews\/google-pixelbook-review\/","title":"Google Pixelbook hands-on","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/google-pixelbook-prod-220x110-c.jpg","classes":"review","score":"0","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"page","date":"","permalink":"https:\/\/www.digitaltrends.com\/about\/how-we-test\/","title":"How we test","thumb":"","classes":"page","score":"","video_cat":false},{"type":"page","date":"","permalink":"https:\/\/www.digitaltrends.com\/awards\/","title":"Awards we offer","thumb":"","classes":"page","score":"","video_cat":false},{"type":"page","date":"","permalink":"https:\/\/www.digitaltrends.com\/review-score-breakdown\/","title":"What our review scores mean","thumb":"","classes":"page","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/vr-headset-reviews\/playstation-vr-review\/","title":"PlayStation VR","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/sony-playstation-vr-product-220x110-c.jpg?ver=1","classes":"review ec","score":"8","video_cat":false},{"type":"review","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/digital-camera-reviews\/nikon-d850-review\/","title":"Nikon D850","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/nikon-d850-review-2-220x110-c.jpg","classes":"review ec","score":"9","video_cat":false}]}],"object_id_100008":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/cell-phone-reviews\/google-pixel-2-review\/","title":"Google Pixel 2 and Pixel 2 XL hands-on","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/google-pixel-2-screen-2-220x110-c.jpg","classes":"review","score":"0","video_cat":false},{"type":"review","date":"September 28, 2017","permalink":"https:\/\/www.digitaltrends.com\/cell-phone-reviews\/lg-v30-review\/","title":"LG V30 hands-on","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/lg-v30-press-220x110-c.jpg","classes":"review","score":"0","video_cat":false},{"type":"review","date":"September 26, 2017","permalink":"https:\/\/www.digitaltrends.com\/cell-phone-reviews\/essential-phone-review\/","title":"Essential Phone (PH-1)","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/essential-phone-prod-220x110-c.jpg","classes":"review rp","score":"7","video_cat":false},{"type":"review","date":"September 26, 2017","permalink":"https:\/\/www.digitaltrends.com\/cell-phone-reviews\/lg-x-venture-review\/","title":"LG X Venture","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/lg-x-press-220x110-c.jpg","classes":"review rp","score":"6","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/mobile\/best-smartphones\/","title":"The best smartphone you can buy","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/mobile\/best-phablets\/","title":"The best phablet you can buy","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/mobile\/best-cheap-phones\/","title":"The best cheap phones you can buy","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"September 21, 2017","permalink":"https:\/\/www.digitaltrends.com\/cell-phone-reviews\/apple-iphone-8-plus-review\/","title":"iPhone 8 Plus","thumb":"https:\/\/icdn6.digitaltrends.com\/image\/iphone-8-plus-press-220x110-c.jpg","classes":"review ec","score":"8","video_cat":false},{"type":"review","date":"September 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/cell-phone-reviews\/samsung-galaxy-note-8-review\/","title":"Samsung Galaxy Note 8","thumb":"https:\/\/icdn7.digitaltrends.com\/image\/sm_n950f_galaxynote8_press-220x110-c.jpg","classes":"review ec","score":"8","video_cat":false}]}],"object_id_100007":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"September 19, 2017","permalink":"https:\/\/www.digitaltrends.com\/tv-reviews\/lg-oled65e7p-review\/","title":"LG E7 series (OLED65E7P)","thumb":"https:\/\/icdn8.digitaltrends.com\/image\/lg-e7-oled-review-oled65e7p-press-220x110-c.jpg","classes":"review rp","score":"8","video_cat":false},{"type":"review","date":"April 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/tv-reviews\/lg-signature-oled65w7p-w7-series-oled-tv-review\/","title":"LG Signature OLED65W7P W7 Series OLED TV","thumb":"https:\/\/icdn9.digitaltrends.com\/image\/oled65w7p-press-220x110-c.jpg?ver=1","classes":"review ec","score":"10","video_cat":false},{"type":"review","date":"December 10, 2016","permalink":"https:\/\/www.digitaltrends.com\/tv-reviews\/vizio-m65-d0-m-series-2016-review\/","title":"Vizio M-Series 4K TV","thumb":"https:\/\/icdn1.digitaltrends.com\/image\/vizio-m-series-m65-d0-product-220x110-c.jpg?ver=1","classes":"review rp","score":"7","video_cat":false},{"type":"review","date":"November 29, 2016","permalink":"https:\/\/www.digitaltrends.com\/tv-reviews\/lg-oled55b6p-review\/","title":"LG OLED55B6P 4K HDR OLED TV","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/lg-b6-oled-55-product-220x110-c.jpg?ver=1","classes":"review ec","score":"10","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/cord-cutting-four-steps-to-cut-the-cord\/","title":"Cord Cutting 101: Four Easy Steps to Cut the Cord","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/best-tvs-under-1000\/","title":"The best TVs under $1,000","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/4k-ultra-hd-buying-guide\/","title":"4K Ultra HD Buying Guide","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"September 22, 2017","permalink":"https:\/\/www.digitaltrends.com\/tv-reviews\/lg-c7-oled55c7p-review\/","title":"LG C7 Series (OLED55C7P)","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/lg-c7-series-review-oled65c7p-oled55c7p-press-v2-220x110-c.jpg","classes":"review ec","score":"10","video_cat":false},{"type":"review","date":"September 21, 2017","permalink":"https:\/\/www.digitaltrends.com\/tv-reviews\/samsung-q9f-qled-qn65q9famfxza-review\/","title":"Samsung Q9F series (QN65Q9F)","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/samsung-q9f-q9-series-qn65q9f-qn75q9f-press-220x110-c.jpg","classes":"review ec","score":"8","video_cat":false}]}],"object_id_100015":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/laptop-reviews\/acer-predator-helios-300-review\/","title":"Acer Predator Helios 300","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/acer-predator-helios-300-220x110-c.jpg","classes":"review rp","score":"8","video_cat":false},{"type":"review","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/laptop-reviews\/google-pixelbook-review\/","title":"Google Pixelbook hands-on","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/google-pixelbook-prod-220x110-c.jpg","classes":"review","score":"0","video_cat":false},{"type":"review","date":"September 28, 2017","permalink":"https:\/\/www.digitaltrends.com\/laptop-reviews\/asus-zenbook-flip-s-review\/","title":"Asus ZenBook Flip S","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/asus-zenbook-flip-s-review-prd-220x110-c.jpg","classes":"review rp","score":"8","video_cat":false},{"type":"review","date":"September 27, 2017","permalink":"https:\/\/www.digitaltrends.com\/laptop-reviews\/hp-zbook-14u-g4-review\/","title":"HP ZBook 14u G4","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/hp-zbook-14u-g4-220x110-c.jpg","classes":"review","score":"6","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/computing\/best-laptops\/","title":"The best laptops you can buy","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/computing\/best-laptops-under-500\/","title":"These sub-$500 laptops take computing to the streets without breaking the bank","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/computing\/dell-xps-13-vs-asus-zenbook-ux305\/","title":"Two ultrabooks enter, only one leaves: Dell&#8217;s XPS 13 vs. Asus Zenbook UX305CA","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"July 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/laptop-reviews\/microsoft-surface-pro-2017-review\/","title":"Microsoft Surface Pro (2017)","thumb":"https:\/\/icdn7.digitaltrends.com\/image\/surface-pro-2017-press-220x110-c.jpg","classes":"review ec","score":"9","video_cat":false},{"type":"review","date":"June 19, 2017","permalink":"https:\/\/www.digitaltrends.com\/laptop-reviews\/microsoft-surface-pro-4-review\/","title":"Microsoft Surface Pro 4","thumb":"https:\/\/icdn8.digitaltrends.com\/image\/microsoft-surface-pro-4-220x110-c.jpg?ver=1","classes":"review ec","score":"8","video_cat":false}]}],"object_id_143751":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"October 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/car-reviews\/2018-honda-accord-review\/","title":"2018 Honda Accord First Drive","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/2018-honda-accord-first-drive-prd-220x110-c.jpg","classes":"review","score":"0","video_cat":false},{"type":"review","date":"September 29, 2017","permalink":"https:\/\/www.digitaltrends.com\/car-reviews\/2017-vanderhall-venice-review\/","title":"2017 Vanderhall Venice first drive","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/vanderhall-venice-prod-220x110-c.jpg","classes":"review","score":"0","video_cat":false},{"type":"review","date":"September 26, 2017","permalink":"https:\/\/www.digitaltrends.com\/car-reviews\/2018-aston-martin-db11-v8-review\/","title":"2018 Aston Martin DB11 V8 first drive","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/2018-aston-martin-db11-v8-top-angle-220x110-c.jpg","classes":"review","score":"0","video_cat":false},{"type":"review","date":"September 25, 2017","permalink":"https:\/\/www.digitaltrends.com\/car-reviews\/2018-polaris-slingshot-review\/","title":"2018 Polaris Slingshot first drive","thumb":"https:\/\/icdn9.digitaltrends.com\/image\/072617-2018-slingshot-slr-le-ghost-gray-lime-squeeze-prd-220x110-c.jpg","classes":"review","score":"0","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/cars\/fastest-cars-in-the-world-photo-gallery\/","title":"Hold on to your butts: These are the 25 fastest cars in the world","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/cars\/most-expensive-cars-in-the-world\/","title":"Here are the 10 most expensive cars in the world that you wish you could afford","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/cars\/best-first-cars-the-perfect-rides-for-new-drivers\/","title":"The best cars for new drivers","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"August 16, 2017","permalink":"https:\/\/www.digitaltrends.com\/car-reviews\/2017-bentley-bentayga-review\/","title":"2017 Bentley Bentayga","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/2017-bentley-bentayga-press-220x110-c.jpg","classes":"review ec","score":"8","video_cat":false},{"type":"review","date":"August 9, 2017","permalink":"https:\/\/www.digitaltrends.com\/car-reviews\/2017-porsche-cayenne-s-e-hybrid-review\/","title":"2017 Porsche Cayenne S E-Hybrid","thumb":"https:\/\/icdn5.digitaltrends.com\/image\/2017-porsche-cayenne-s-e-hybrid-press-220x110-c.jpg","classes":"review ec","score":"9","video_cat":false}]}],"object_id_143758":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/game-reviews\/forza-7-review\/","title":"Forza Motorsport 7","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/forza-motorsport-7-prod-220x110-c.jpg?ver=1","classes":"review rp","score":"8","video_cat":false},{"type":"review","date":"September 29, 2017","permalink":"https:\/\/www.digitaltrends.com\/game-reviews\/project-cars-2-review\/","title":"Project CARS 2","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/project-cars-2-press-220x110-c.jpg","classes":"review","score":"6","video_cat":false},{"type":"review","date":"September 28, 2017","permalink":"https:\/\/www.digitaltrends.com\/game-reviews\/dishonored-death-of-the-outsider-review\/","title":"\u2018Dishonored: Death of the Outsider\u2019","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/dishhonored-death-of-the-outsider-press-220x110-c.jpg","classes":"review rp","score":"8","video_cat":false},{"type":"review","date":"September 27, 2017","permalink":"https:\/\/www.digitaltrends.com\/game-reviews\/doom-for-switch-review\/","title":"Doom for Switch hands-on preview","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/doom-nintendo-switch-review-prd-220x110-c.jpg","classes":"review","score":"0","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/gaming\/best-xbox-one-games\/","title":"The 20 best Xbox One games you can play right now","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/gaming\/best-ps4-games\/","title":"The best PS4 games you can buy right now","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/gaming\/best-indie-games-e3\/","title":"The underdogs of E3 2017: The 10 best indie games on display this year","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"September 19, 2017","permalink":"https:\/\/www.digitaltrends.com\/game-reviews\/nba-2k18-review\/","title":"\u2019NBA 2K18\u2019","thumb":"https:\/\/icdn1.digitaltrends.com\/image\/nba-2k18-review-press-220x110-c.jpg","classes":"review ec","score":"9","video_cat":false},{"type":"review","date":"September 1, 2017","permalink":"https:\/\/www.digitaltrends.com\/game-reviews\/xcom-2-war-of-the-chosen-review\/","title":"XCOM 2: War of the Chosen","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/xcom-2-war-of-the-chosen-logo-220x110-c.jpg","classes":"review ec","score":"10","video_cat":false}]}],"object_id_105121":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"September 15, 2017","permalink":"https:\/\/www.digitaltrends.com\/tablet-reviews\/remarkable-tablet-review\/","title":"ReMarkable tablet","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/remarkable-tablet-prod-220x110-c.jpg","classes":"review","score":"4","video_cat":false},{"type":"review","date":"July 28, 2017","permalink":"https:\/\/www.digitaltrends.com\/laptop-reviews\/asus-transformer-t304-review\/","title":"Asus Transformer Pro T304","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/asus-transformer-t304-prod-220x110-c.jpg","classes":"review","score":"6","video_cat":false},{"type":"review","date":"July 11, 2017","permalink":"https:\/\/www.digitaltrends.com\/laptop-reviews\/lenovo-thinkpad-x1-tablet-review\/","title":"Lenovo ThinkPad X1 Tablet Gen 2","thumb":"https:\/\/icdn5.digitaltrends.com\/image\/thinkpad-x1-tablet-2nd-gen-press-220x110-c.jpg","classes":"review","score":"6","video_cat":false},{"type":"review","date":"June 7, 2017","permalink":"https:\/\/www.digitaltrends.com\/tablet-reviews\/amazon-fire-hd-8-2017-review\/","title":"Amazon Fire HD 8 (2017)","thumb":"https:\/\/icdn6.digitaltrends.com\/image\/amazon-fire-hd-8-prod-220x110-c.jpg?ver=1","classes":"review rp","score":"6","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/mobile\/best-tablets\/","title":"The best tablets you can buy","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/mobile\/how-to-pick-a-tablet\/","title":"Tablet buying guide: everything to know before you buy a tablet","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/mobile\/best-cheap-tablets\/","title":"The best 6 cheap tablets to buy","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"June 19, 2017","permalink":"https:\/\/www.digitaltrends.com\/laptop-reviews\/microsoft-surface-pro-4-review\/","title":"Microsoft Surface Pro 4","thumb":"https:\/\/icdn8.digitaltrends.com\/image\/microsoft-surface-pro-4-220x110-c.jpg?ver=1","classes":"review ec","score":"8","video_cat":false},{"type":"review","date":"June 16, 2017","permalink":"https:\/\/www.digitaltrends.com\/tablet-reviews\/apple-ipad-pro-10-5-inch-review\/","title":"Apple iPad Pro 10.5-inch","thumb":"https:\/\/icdn7.digitaltrends.com\/image\/apple-ipad-pro-10-5-inch-press-220x110-c.jpg","classes":"review ec","score":"9","video_cat":false}]}],"object_id_171096":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/headphone-reviews\/google-pixel-buds-review\/","title":"Google Pixel Buds hands-on","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/google-pixel-buds-review-press-220x110-c.jpg","classes":"review","score":"0","video_cat":false},{"type":"review","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/headphone-reviews\/bowers-and-wilkins-px-headphones-review\/","title":"Bowers and Wilkins PX hands-on","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/bowers-and-wilkins-px-prd-220x110-c.jpg","classes":"review","score":"0","video_cat":false},{"type":"review","date":"September 27, 2017","permalink":"https:\/\/www.digitaltrends.com\/headphone-reviews\/jbl-e55bt-review\/","title":"JBL E55BT","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/jbl-e55-bt-220x110-c.jpg","classes":"review rp","score":"8","video_cat":false},{"type":"review","date":"August 31, 2017","permalink":"https:\/\/www.digitaltrends.com\/headphone-reviews\/b-o-play-beoplay-e8-review\/","title":"B&#038;O Play Beoplay E8 hands-on","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/beoplay-e8-press-220x110-c.jpg","classes":"review","score":"0","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/best-in-ear-headphones\/","title":"The best earbuds you can buy","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/health-fitness\/best-headphones-for-running\/","title":"Pound pavement to a soundtrack with the best running headphones","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/most-expensive-headphones\/","title":"5 outrageous headphones that will blow your mind, and your savings","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"July 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/headphone-reviews\/v-moda-forza-metallo-wireless-review\/","title":"V-Moda Forza Metallo Wireless","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/v-moda-forza-metallo-prod-220x110-c.jpg","classes":"review ec","score":"9","video_cat":false},{"type":"review","date":"June 13, 2017","permalink":"https:\/\/www.digitaltrends.com\/headphone-reviews\/yamaha-hph-mt8-headphone-review\/","title":"Yamaha HPH-MT8 Headphone","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/yamaha-hph-mt8-prod-220x110-c.jpg?ver=1","classes":"review ec","score":"9","video_cat":false}]}],"object_id_171097":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"October 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/digital-camera-reviews\/frontrow-camera-review\/","title":"FrontRow Camera","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/frontrow_prdthmb-220x110-c.jpg","classes":"review","score":"6","video_cat":false},{"type":"review","date":"October 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/digital-camera-reviews\/dxo-one-review\/","title":"DxO One","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/dxo-one-press-220x110-c.jpg","classes":"review rp","score":"8","video_cat":false},{"type":"review","date":"September 6, 2017","permalink":"https:\/\/www.digitaltrends.com\/digital-camera-reviews\/kodak-pixpro-orbit-360-review\/","title":"Kodak Pixpro Orbit360 4K","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/kodak-pixpro-orbit360-prod-220x110-c.jpg","classes":"review","score":"5","video_cat":false},{"type":"review","date":"September 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/digital-camera-reviews\/hasselblad-x1d-50c-review\/","title":"Hasselblad X1D","thumb":"https:\/\/icdn5.digitaltrends.com\/image\/hasselblad-x1d-50c-press-220x110-c.jpg","classes":"review rp","score":"7","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/photography\/best-dslr-cameras-for-beginners\/","title":"Best DSLR cameras under $1,000","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/photography\/best-action-cams\/","title":"The best action camera you can buy","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/photography\/best-point-and-shoot-cameras\/","title":"The best point-and-shoot cameras you can buy","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/digital-camera-reviews\/nikon-d850-review\/","title":"Nikon D850","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/nikon-d850-review-2-220x110-c.jpg","classes":"review ec","score":"9","video_cat":false},{"type":"review","date":"September 11, 2017","permalink":"https:\/\/www.digitaltrends.com\/digital-camera-reviews\/panasonic-lumix-gh5-review\/","title":"Panasonic Lumix GH5","thumb":"https:\/\/icdn7.digitaltrends.com\/image\/81uzfjavihl-_sl1500_-220x110-c.jpg","classes":"review ec","score":"9","video_cat":false}]}],"object_id_100014":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"September 8, 2017","permalink":"https:\/\/www.digitaltrends.com\/desktop-computer-reviews\/asus-g11df-gaming-desktop-review\/","title":"Asus G11DF gaming desktop","thumb":"https:\/\/icdn9.digitaltrends.com\/image\/asus-g11df-prod-220x110-c.jpg","classes":"review","score":"6","video_cat":false},{"type":"review","date":"August 23, 2017","permalink":"https:\/\/www.digitaltrends.com\/desktop-computer-reviews\/apple-imac-with-retina-display-review\/","title":"Apple iMac with Retina 5K Display (2017)","thumb":"https:\/\/icdn1.digitaltrends.com\/image\/imac-2017-prod-220x110-c.jpg?ver=2","classes":"review rp","score":"7","video_cat":false},{"type":"review","date":"August 17, 2017","permalink":"https:\/\/www.digitaltrends.com\/desktop-computer-reviews\/dell-inspiron-5675-review\/","title":"Dell Inspiron 5675 gaming desktop","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/dell-inspiron-5675-prod-220x110-c.jpg","classes":"review rp","score":"7","video_cat":false},{"type":"review","date":"August 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/desktop-computer-reviews\/dell-inspiron-27-7000-2017-review\/","title":"Dell Inspiron 27 7000 (2017)","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/desktop-inspiron-27-7000_prdthmb-220x110-c.jpg","classes":"review rp","score":"8","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/computing\/best-desktop-pcs\/","title":"The best desktop PC you can buy","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/computing\/best-ultra-wide-monitors\/","title":"The best ultrawide monitors you can buy","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/computing\/best-gaming-mouse\/","title":"The best gaming mouse you can buy","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"July 6, 2017","permalink":"https:\/\/www.digitaltrends.com\/desktop-computer-reviews\/origin-neuron-review\/","title":"Origin Neuron","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/origin-neuron-press-220x110-c.jpg","classes":"review ec","score":"9","video_cat":false},{"type":"review","date":"July 28, 2016","permalink":"https:\/\/www.digitaltrends.com\/desktop-computer-reviews\/alienware-alpha-r2-review\/","title":"Alienware Alpha R2","thumb":"https:\/\/icdn5.digitaltrends.com\/image\/alienware-alpha-r2-product-220x110-c.jpg?ver=1","classes":"review ec","score":"9","video_cat":false}]}],"object_id_166594":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"September 20, 2017","permalink":"https:\/\/www.digitaltrends.com\/sound-bar-reviews\/q-acoustics-m2-soundbase-review\/","title":"Q Acoustics M2 Soundbase hands-on","thumb":"https:\/\/icdn6.digitaltrends.com\/image\/q-acoustics-m2-soundbase-220x110-c.jpg","classes":"review","score":"0","video_cat":false},{"type":"review","date":"August 22, 2017","permalink":"https:\/\/www.digitaltrends.com\/speaker-reviews\/crosley-radio-s100-review\/","title":"Crosley Radio S100","thumb":"https:\/\/icdn7.digitaltrends.com\/image\/crosley-s100-bluetooth-bookshelf-speakers-review-press-220x110-c.jpg","classes":"review","score":"5","video_cat":false},{"type":"review","date":"August 8, 2017","permalink":"https:\/\/www.digitaltrends.com\/wireless-speaker-dock-reviews\/soundcast-vg1-review\/","title":"Soundcast VG1","thumb":"https:\/\/icdn8.digitaltrends.com\/image\/soundcast-vg1-prd-2-220x110-c.jpg","classes":"review rp","score":"8","video_cat":false},{"type":"review","date":"August 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/sound-bar-reviews\/bose-soundtouch-300-acoustimass-300-soundbar-bass-module-review\/","title":"Bose SoundTouch 300 and Acoustimass 300","thumb":"https:\/\/icdn9.digitaltrends.com\/image\/bose-soundtouch-300-acoustimass-300-press-220x110-c.jpg","classes":"review","score":"7","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/ultimate-surround-sound-guide-different-formats-explained\/","title":"Ultimate surround sound guide: Different formats explained","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/how-to-buy-speakers-a-beginners-guide-to-home-audio\/","title":"How to buy speakers like a boss: A beginner&#8217;s guide to home audio","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/buying-guides\/best-bluetooth-speakers-under-100\/","title":"Best Bluetooth speakers under $100","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"September 8, 2017","permalink":"https:\/\/www.digitaltrends.com\/speaker-reviews\/aperion-audio-verus-ii-review\/","title":"Aperion Audio Verus II Grand","thumb":"https:\/\/icdn1.digitaltrends.com\/image\/verus-2-grand-tower-speaker-press-220x110-c.jpg","classes":"review ec","score":"9","video_cat":false},{"type":"review","date":"July 27, 2017","permalink":"https:\/\/www.digitaltrends.com\/speaker-reviews\/kef-q150-review\/","title":"KEF Q150 bookshelf speakers","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/kefq150_prdthmb-220x110-c.jpg","classes":"review ec","score":"9","video_cat":false}]}],"object_id_161314":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"September 30, 2017","permalink":"https:\/\/www.digitaltrends.com\/coffee-tea-maker-reviews\/bonaverde-berlin-brewing-system-review\/","title":"Bonaverde Berlin brewing system","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/bonaverde-berlin-silver-prod-220x110-c.jpg","classes":"review","score":"5","video_cat":false},{"type":"review","date":"August 28, 2017","permalink":"https:\/\/www.digitaltrends.com\/vacuum-cleaner-reviews\/samsung-powerbot-r7070-review\/","title":"Samsung Powerbot R7070","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/samsung-powerbot-r7070-220x110-c.jpg","classes":"review","score":"6","video_cat":false},{"type":"review","date":"August 27, 2017","permalink":"https:\/\/www.digitaltrends.com\/vacuum-cleaner-reviews\/lg-hom-bot-turbo-plus-cr5765gd-review\/","title":"LG Hom-Bot Turbo+ CR5765GD","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/lg-cr5765gd-press-220x110-c.jpg","classes":"review","score":"6","video_cat":false},{"type":"review","date":"August 15, 2017","permalink":"https:\/\/www.digitaltrends.com\/cooking-appliance-reviews\/hestan-cue-review\/","title":"Hestan Cue smart cooking system","thumb":"https:\/\/icdn5.digitaltrends.com\/image\/hestan-cue-prod-220x110-c.jpg","classes":"review","score":"6","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/home\/washer-dryer-buying-guide\/","title":"Everything you need to know about buying a washer and dryer","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/home\/best-refrigerators\/","title":"The best refrigerator you can buy","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/home\/best-dishwashers\/","title":"The best dishwasher you can buy","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"May 18, 2017","permalink":"https:\/\/www.digitaltrends.com\/oven-reviews\/delonghi-livenza-review\/","title":"DeLonghi Livenza","thumb":"https:\/\/icdn7.digitaltrends.com\/image\/delonghi-livenza-product-220x110-c.jpg?ver=1","classes":"review ec","score":"9","video_cat":false},{"type":"review","date":"March 15, 2017","permalink":"https:\/\/www.digitaltrends.com\/cooking-appliance-reviews\/anova-precision-cooker-wi-fi-review\/","title":"Anova Precision Cooker Wi-Fi","thumb":"https:\/\/icdn8.digitaltrends.com\/image\/anova-precision-cooker-wifi-product-220x110-c.jpg?ver=1","classes":"review ec","score":"8","video_cat":false}]}],"object_id_161325":[{"meta":{"template":"reviews","title":"Latest"},"items":[{"type":"review","date":"September 25, 2017","permalink":"https:\/\/www.digitaltrends.com\/wearable-reviews\/verizon-wear24-review\/","title":"Verizon Wear24","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/verizon-wear24-11v2-220x110-c.jpg","classes":"review","score":"5","video_cat":false},{"type":"review","date":"September 25, 2017","permalink":"https:\/\/www.digitaltrends.com\/watch-reviews\/apple-watch-series-3-review\/","title":"Apple Watch Series 3","thumb":"https:\/\/icdn9.digitaltrends.com\/image\/applewatch3prdthmb-220x110-c.jpg","classes":"review rp","score":"8","video_cat":false},{"type":"review","date":"September 20, 2017","permalink":"https:\/\/www.digitaltrends.com\/watch-reviews\/movado-connect-review\/","title":"Movado Connect","thumb":"https:\/\/icdn1.digitaltrends.com\/image\/movado-connect-prod-220x110-c.jpg","classes":"review rp","score":"6","video_cat":false},{"type":"review","date":"September 8, 2017","permalink":"https:\/\/www.digitaltrends.com\/watch-reviews\/michael-kors-access-grayson-review\/","title":"Michael Kors Access Grayson smartwatch","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/michael-kors-greyson-220x110-c.jpg","classes":"review rp","score":"6","video_cat":false}]},{"meta":{"template":"text-list","title":"See Also"},"items":[{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/wearables\/best-fitness-trackers-devices-gadgets\/","title":"The best fitness trackers you can buy","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/wearables\/best-smartwatch\/","title":"The best smartwatches you can buy","thumb":"","classes":"post","score":"","video_cat":false},{"type":"post","date":"","permalink":"https:\/\/www.digitaltrends.com\/wearables\/best-smart-jewelry\/","title":"The best smart jewelry you can buy","thumb":"","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"ec","title":"Editors' Choice"},"items":[{"type":"review","date":"August 18, 2017","permalink":"https:\/\/www.digitaltrends.com\/fitness-apparel-reviews\/garmin-fenix-5x-review\/","title":"Garmin Fenix 5X","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/garmin-fenix-5x-prod-220x110-c.jpg","classes":"review ec","score":"10","video_cat":false},{"type":"review","date":"July 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/fitness-apparel-reviews\/garmin-forerunner-935-review\/","title":"Garmin Forerunner 935","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/garmin-forerunner-935-prod-220x110-c.jpg","classes":"review ec","score":"10","video_cat":false}]}]},"category":{"all":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/photography\/is-google-clips-another-lifelogging-camera-no-one-asked-for\/","title":"Google thought of everything with its new Clips lifelogging cam. Except &#8216;Why?&#8217;","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/google-clips-press-video-snap-table-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/dtdeals\/portable-tech-gadgets-roundup\/","title":"10 must-have portable tech gadgets you can score for cheap right now","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/regalighter-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/tesla-model-3-performance-specs-news-rumors\/","title":"Tesla Model 3: Performance, specs, and news","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/model-3-social-2-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/airbus-cityairbus-quadcopter-news-photos-range-specs-price\/","title":"The pioneering CityAirbus quadcopter takes big step toward production","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/city-airbus-preview-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_4":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/mobile\/pixel-2-home-should-be-only-products-google-makes\/","title":"The Pixel 2 looks amazing. So why did Google bother with all the other nonsense?","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/google-clips-oct-4-event-014063-2-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/dtdeals\/portable-tech-gadgets-roundup\/","title":"10 must-have portable tech gadgets you can score for cheap right now","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/regalighter-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/mobile\/iphone-6-problems\/","title":"26 major iPhone 6 problems and what to do about them","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/apple-iphone-6-plus-review-screen-angle-2-2-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/mobile\/how-to-root-android\/","title":"How to root Android phones or tablets in 2017 (and unroot them)","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/galaxy-s6-edge-plus-hands-212x106-c.png?ver=1","classes":"post","score":"","video_cat":false}]}],"object_id_5":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/computing\/can-democracy-be-digitized-vets-at-polco-say-yes\/","title":"Can democracy be digitized? These vets at Polco say yes","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/polco-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/computing\/equifax-data-breach-affects-143-million-americans\/","title":"Equifax confirms it suffered a separate data breach in March","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/equifax-headquarters-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/photography\/adobe-portfolio-lightroom-uploads-behance\/","title":"Adobe Portfolio can now upload entire Lightroom collections at once","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/adobeportfolio-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/famous-tech-flops\/","title":"8 Infamous tech flops that were way ahead of their time","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/power_glove_us-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_7":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 6, 2017","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/cedia-2017-what-to-expect\/","title":"From Alexa to massive OLED TVs, CEDIA 2017 blueprints the future of home theater","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/cedia-2017-what-we-expect-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/google-pixel-buds-headphones-news\/","title":"Google\u2019s new Pixel Buds earphones are wireless, but not like Apple\u2019s AirPods","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/pixel-buds-feat-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/klipsch-heritage-hp-3-headphones\/","title":"Klipsch&#039;s Heritage HP 3 look out of the 20th century, but sound like the 21st","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/heritage-hp-3-walnut-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/best-bluetooth-speakers\/","title":"The best Bluetooth speakers you can buy","thumb":"https:\/\/icdn5.digitaltrends.com\/image\/tradlose-hojttalere-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]}],"object_id_6":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/gaming\/why-assassins-creed-origins-setting-is-its-best-quality\/","title":"How Ubisoft excavated ancient Egypt for &#8216;Assassin&#8217;s Creed Origins&#8217; rich&hellip;","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/aco_screen_tombstellae_previews_1506632376-feat-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/famous-tech-flops\/","title":"8 Infamous tech flops that were way ahead of their time","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/power_glove_us-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/gaming\/assassins-creed-origins-settings-gameplay-release-date-news\/","title":"Everything we know about &#8216;Assassin&#8217;s Creed Origins&#8217;","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/assassins_creed_origins_microsoft_e3_2017-12487-2-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/mobile\/toys-r-us-augmented-reality-game\/","title":"Can a new in-store augmented reality game help save Toys R Us?","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/toys-r-us-ar-game-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_173913":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/bentley-rolf-frech-interview-electrification-autonomy\/","title":"Bentley&#8217;s R&#038;D boss talks Continental GT, and how to unite tech and luxury","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/dt-frankfurt-bentley-continental-gt-3-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/tesla-model-3-performance-specs-news-rumors\/","title":"Tesla Model 3: Performance, specs, and news","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/model-3-social-2-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/airbus-cityairbus-quadcopter-news-photos-range-specs-price\/","title":"The pioneering CityAirbus quadcopter takes big step toward production","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/city-airbus-preview-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/self-driving-taxi-service\/","title":"Self-driving taxi service proves popular with California seniors","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/voyage-driverless-car-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_17":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/photography\/is-google-clips-another-lifelogging-camera-no-one-asked-for\/","title":"Google thought of everything with its new Clips lifelogging cam. Except &#8216;Why?&#8217;","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/google-clips-press-video-snap-table-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/photography\/adobe-portfolio-lightroom-uploads-behance\/","title":"Adobe Portfolio can now upload entire Lightroom collections at once","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/adobeportfolio-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/photography\/polaroid-camera-drones-launch\/","title":"Polaroid (yes, that Polaroid) now has four new camera drones","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/pl2900_1-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/mobile\/lg-v30-news\/","title":"The LG V30 is a media powerhouse, and it&#8217;s coming in September","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/v30-6-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_8":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/home\/halloween-effects\/","title":"How to Create Spooky Halloween Effects With Smart Home Lighting And Sound","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/spooky-halloween-lighting-haunted-house-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/home\/hilton-smart-room\/","title":"Your hotel stay could soon involve a smart room thanks to Hilton","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/hilton-hotels-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/home\/effie\/","title":"Bored with ironing? Effie quickly irons up to 12 items of clothing at once","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/effie-4-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/dtdeals\/smart-home-device-deals\/","title":"8 hot deals on smart-home devices that automate, control, and protect your home","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/smart-home-deals-eufy-genie-smart-speaker-with-amazon-alexa-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_952":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 26, 2017","permalink":"https:\/\/www.digitaltrends.com\/movies\/blade-runner-2049-ford-gosling-villeneuve-panel\/","title":"For the creators of &#8216;Blade Runner 2049,&#8217; honoring the original was everything","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/blade-runner-2049-interview-harrison-ford-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/movies\/stranger-things-season-2\/","title":"&#8216;Stranger Things\u2019 season 2 is coming! Here&#8217;s everything we know","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/strangerthings_s2_press5-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/movies\/justice-league-movie-news-guide\/","title":"From Aquaman to Darkseid, here&#8217;s everything we know about &#8216;Justice League&#8217;","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/justice-league-1500x1000-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/movies\/avatar-2-movie-news-cast\/","title":"&#8216;Titanic&#8217; star Kate Winslet will reunite with James Cameron for &#8216;Avatar 2&#8217;","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/performance-by-an-actress-in-a-supporting-role-kate-winslet-steve-jobs-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]}],"object_id_512":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 29, 2017","permalink":"https:\/\/www.digitaltrends.com\/music\/neil-finn-live-stream-album\/","title":"Ever wonder how an album is made? Neil Finn live-streamed the process","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/neil-finn-drama-getty-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/google-pixel-buds-headphones-news\/","title":"Google\u2019s new Pixel Buds earphones are wireless, but not like Apple\u2019s AirPods","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/pixel-buds-feat-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/music\/tom-petty-dead-1950-2017\/","title":"Legendary rocker Tom Petty dies at 66","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/tom-petty-dead-age-66-rbc-bluesfest-2017-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/nura-nuraphones-machine-learning-headphones\/","title":"The Nuraphone uses machine learning to digitally mold sound to your hearing","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/nuraphone-lifestyle-3-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_571":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 28, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/rescue-drones-hurricane-flood-disaster-relief\/","title":"Drones can help when disaster strikes, but only when they&#8217;re allowed to","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/disaster-drone-texas-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/airbus-cityairbus-quadcopter-news-photos-range-specs-price\/","title":"The pioneering CityAirbus quadcopter takes big step toward production","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/city-airbus-preview-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/mars-lava-tubes\/","title":"Lava tubes on Mars could provide shelter for streets and towns, study says","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/chinamars-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/parasite-machine-ad-infinitum\/","title":"Parasitic machine forces you to generate power for it against your will","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/ad-infinitum-a-human-getting-trapped-in-the-cuffs-arthur-silber-photographer-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_182182":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 24, 2017","permalink":"https:\/\/www.digitaltrends.com\/outdoors\/ossia-cota-wireless-power-outdoors\/","title":"The pioneers of wireless electricity want to bring it to your next campsite","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/hiking-with-a-group-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/intel-powers-research-with-whale-snot\/","title":"Researchers are measuring ocean health with drones, A.I., and whale snot","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/1-snot-bot-1-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/adidas-am4-robot-made-running-shoe\/","title":"Adidas robot factory pumps out its first city-specific running shoes","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/adidas-am4-shoe-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/wearables\/samsung-unveils-gear-sport-fit2-pro\/","title":"Samsung unveils fitness-minded smartwatch, activity tracker, wireless earbuds","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/gear-fit2-pro-official-7-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_20":[{"meta":{"template":"hero","title":"Most Popular","alt_title":"Most Popular"},"items":[{"type":"post","date":"October 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/social-media\/how-to-use-twitter\/","title":"How to use Twitter like a social media boss","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/new-twitter-440x220-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"On The Rise"},"items":[{"type":"post","date":"October 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/mobile\/how-to-root-android\/","title":"How to root Android phones or tablets in 2017 (and unroot them)","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/galaxy-s6-edge-plus-hands-212x106-c.png?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/mobile\/ios-11-problems\/","title":"Common iOS 11 problems and how to handle them","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/apple-ios-11-2-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/computing\/how-to-convert-a-pdf-into-an-excel-document\/","title":"Need to know how to convert a PDF into an Excel document? Try these methods","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/excel-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]}],"object_id_167480":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 18, 2017","permalink":"https:\/\/www.digitaltrends.com\/business\/noel-lee-reinventing-monster\/","title":"Exclusive: Beaten by Beats, here&#8217;s how Monster is reinventing itself","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/monster-noel-lee-interview-gold-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/mobile\/android-pay-guide\/","title":"Everything you need to know about Android Pay","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/bankofamerica-coffee-shop-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/business\/lenovo-thinkpad-anniversary-edition-25-released\/","title":"It&#8217;s real! Lenovo unveils 25th Anniversary ThinkPad with retro keyboard, styling","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/lenovo-thinkpad-anniversary-edition-25-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/uber-founder-travis-kalanick-steps-down-as-ceo\/","title":"Former Uber CEO Travis Kalanick may be looking to regain the helm","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/travis-kalanick-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_183628":[{"meta":{"template":"hero","title":"Most Popular","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 6, 2017","permalink":"https:\/\/www.digitaltrends.com\/giveaways\/dt-giveaways-toast-handcrafted-cases-covers\/","title":"Enter to win a handcrafted, laser-cut case for your favorite device from Toast","thumb":"https:\/\/icdn5.digitaltrends.com\/image\/toast-cases-giveaway-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"On The Rise"},"items":[{"type":"post","date":"August 17, 2017","permalink":"https:\/\/www.digitaltrends.com\/giveaways\/dt-giveaway-zte-blade-z-max\/","title":"DT Giveaway: ZTE Blade Z Max","thumb":"https:\/\/icdn5.digitaltrends.com\/image\/zte-blade-max-head-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"August 14, 2017","permalink":"https:\/\/www.digitaltrends.com\/giveaways\/best-outdoor-gear-2017\/","title":"DT Giveaway: 2017&#8217;s Best Outdoor Gear","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/outdoor-awards-giveaway-best-gear-2017-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"July 26, 2017","permalink":"https:\/\/www.digitaltrends.com\/giveaways\/1more-earbuds-dt-giveaway\/","title":"DT Giveaway: 1More earbuds","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/1more-giveaway-header-2-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}]},"features":{"all":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 29, 2017","permalink":"https:\/\/www.digitaltrends.com\/music\/neil-finn-live-stream-album\/","title":"Ever wonder how an album is made? Neil Finn live-streamed the process","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/neil-finn-drama-getty-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"September 27, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/volvo-commitment-hybrid-electric-autonomous-cars\/","title":"Volvo&#8217;s U.S. boss clears the air on electrification, self-driving cars, safety","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/lex-kerssemakers-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"September 24, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/awesome-tech-new-crowdfunding-projects-pimax-biolite-arduboy\/","title":"Awesome tech you can&#8217;t buy yet: 8K VR, smoke-free fires, a drone for your home","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/firepit_home_hero_v2-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 1, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/awesome-tech-new-crowdfunding-projects-embr-wave-swaky-euclid\/","title":"Awesome tech you can&#8217;t buy yet: Eskates, snow bikes, a better measuring cup","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/awesome-tech-embr-wave-thermostat-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_1223938":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"August 18, 2017","permalink":"https:\/\/www.digitaltrends.com\/outdoors\/best-trekking-gear-2017-outdoor-awards\/","title":"Best Trekking Gear: 2017 Digital Trends Outdoor Awards","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/danner-mountain-600s-best-trekking-outdoor-awards-feature-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"August 17, 2017","permalink":"https:\/\/www.digitaltrends.com\/outdoors\/best-gear-unwind-2017-outdoor-awards\/","title":"Best Gear for Unwinding: 2017 Digital Trends Outdoor Awards","thumb":"https:\/\/icdn6.digitaltrends.com\/image\/best-gear-unwind-otterbox-cooler-outdoor-awards-feature-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"August 15, 2017","permalink":"https:\/\/www.digitaltrends.com\/outdoors\/best-sleeping-gear-2017-outdoor-awards\/","title":"Best Sleeping Gear: 2017 Digital Trends Outdoor Awards","thumb":"https:\/\/icdn5.digitaltrends.com\/image\/best-sleeping-gear-big-agnas-tent-outdoor-awards-header-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"August 16, 2017","permalink":"https:\/\/www.digitaltrends.com\/outdoors\/best-recreation-gear-2017-outdoor-awards\/","title":"Best Recreation Gear: 2017 Digital Trends Outdoor Awards","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/best-recreation-gear-red-paddle-sup-outdoor-awards-feature-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_1210071":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"July 12, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/best-car-of-the-year-2017-car-awards\/","title":"Car of the Year: 2017 Digital Trends Car Awards","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/digital-trends-car-awards-best-performance-car-2017-audi-r8-v10-plus-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"July 12, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/best-luxury-2017-car-awards\/","title":"Best Luxury Car: 2017 Digital Trends Car Awards","thumb":"https:\/\/icdn5.digitaltrends.com\/image\/digital-trends-best-luxury-cars-2017-awards-feature-212x106-c.png","classes":"post","score":"","video_cat":false},{"type":"post","date":"July 12, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/best-alternative-energy-2017-car-awards\/","title":"Best Alt-Energy Car: 2017 Digital Trends Car Awards","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/digital-trends-2017-best-alternative-energy-car-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"July 12, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/best-daily-driver-2017-car-awards\/","title":"Best Daily Driver: 2017 Digital Trends Car Awards","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/digital-trends-car-awards-best-daily-driver-featured-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_1200381":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"August 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/home\/cities-looking-become-smart-need-look-beyond-adding-sensors\/","title":"Becoming a smart city takes more than sensors and buzzwords","thumb":"https:\/\/icdn6.digitaltrends.com\/image\/what-is-a-smart-city-series-introduction-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"July 24, 2017","permalink":"https:\/\/www.digitaltrends.com\/home\/barcelona-smart-city-technology\/","title":"Tech is making life in Barcelona better, even if you don&#8217;t know it&#8217;s there","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/aerial-view-of-eixample-district-barcelona-spain-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"July 17, 2017","permalink":"https:\/\/www.digitaltrends.com\/home\/kansas-city-smart-city-technology\/","title":"Sensor-studded Kansas City is like a giant smartphone. Now it just needs apps","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/kansas-city-smart-city-downtown-skyline-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"July 31, 2017","permalink":"https:\/\/www.digitaltrends.com\/home\/austin-texas-smart-city-technology\/","title":"How Austin brought the human touch to smart city planning","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/austin-texas-smart-city-downtown-skyline-feature-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_662908":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 29, 2017","permalink":"https:\/\/www.digitaltrends.com\/music\/neil-finn-live-stream-album\/","title":"Ever wonder how an album is made? Neil Finn live-streamed the process","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/neil-finn-drama-getty-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"September 8, 2017","permalink":"https:\/\/www.digitaltrends.com\/music\/audiophile-living-colour-vernon-reid\/","title":"Furious times call for furious songs on &#8216;Shade,&#8217; Living Colour&#8217;s righteous return","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/living_colour_-_2017_-_photo_by_karsten_steiger-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"September 22, 2017","permalink":"https:\/\/www.digitaltrends.com\/music\/chameleonic-guitarist-kaki-king\/","title":"Backed by an orchestra, Kaki King shape shifts yet again on &#8216;Live at Berklee&#8217;","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/kaki-king-acoustic-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"September 15, 2017","permalink":"https:\/\/www.digitaltrends.com\/music\/deer-tick-double-album-interview\/","title":"Deer Tick returns from hiatus with a double-barreled dual album release","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/deer-tick-logo-getty-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_500705":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 24, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/awesome-tech-new-crowdfunding-projects-pimax-biolite-arduboy\/","title":"Awesome tech you can&#8217;t buy yet: 8K VR, smoke-free fires, a drone for your home","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/firepit_home_hero_v2-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"September 10, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/awesome-tech-new-crowdfunding-projects-pantoids-moai\/","title":"Awesome tech you can&#8217;t buy yet: Aquarium robots and LED globes","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/riptid-r1-electric-skateboard-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"September 3, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/awesome-tech-new-crowdfunding-projects-wolverine-slughaus-flexsafe\/","title":"Awesome tech you can&#8217;t buy yet: Self-healing gear bags and 3D-printed jewelry","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/wolverine-pack-self-healing-utility-bag-2-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 1, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/awesome-tech-new-crowdfunding-projects-embr-wave-swaky-euclid\/","title":"Awesome tech you can&#8217;t buy yet: Eskates, snow bikes, a better measuring cup","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/awesome-tech-embr-wave-thermostat-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_1146011":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"April 27, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/future-of-food-tech-helping-bees-comeback\/","title":"RoboBees, city sanctuaries, and hot hives could save the world from &#8216;beepocalypse&#8217;","thumb":"https:\/\/icdn6.digitaltrends.com\/image\/beekeeper_ff_feat-440x220-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"April 25, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/future-of-food-introduction\/","title":"Can tech help us feed a population of 9 billion-plus? Welcome to the Future of Food","thumb":"https:\/\/icdn8.digitaltrends.com\/image\/future-of-food-topic-feature-2-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"April 25, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/future-of-food-could-insects-provide-protein-for-our-booming-population\/","title":"The burger of the future comes from crickets, not cows","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/edible_bugs_ff_body_01-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"April 26, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/future-of-food-vertical-farming\/","title":"Will vertical farming continue to grow, or has it hit the greenhouse ceiling?","thumb":"https:\/\/icdn9.digitaltrends.com\/image\/vertical-farming-future-of-food-3-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]}],"object_id_698180":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 21, 2017","permalink":"https:\/\/www.digitaltrends.com\/features\/j-d-power-best-airports-in-customer-satisfaction\/","title":"J.D. Power survey finds satisfaction levels at all-time high at best U.S. airports","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/orlando-airport-0001-440x220-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"June 13, 2017","permalink":"https:\/\/www.digitaltrends.com\/business\/honeywell-connected-aircraft-inflight-wifi\/","title":"Want to live-stream 10,000 feet in the air? Honeywell&#8217;s inflight tech will let you","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/honeywell-1-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"July 18, 2017","permalink":"https:\/\/www.digitaltrends.com\/virtual-reality\/best-vr-apps-for-travel\/","title":"The best VR apps for travel","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/now-boarding-vr-travel-apps-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"July 15, 2017","permalink":"https:\/\/www.digitaltrends.com\/business\/do-you-really-need-smart-luggage\/","title":"Smart travelers don&#8217;t need smart luggage yet, but we haven&#8217;t lost hope","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/airport-luggage-pickup-2-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_674650":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"September 27, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/volvo-commitment-hybrid-electric-autonomous-cars\/","title":"Volvo&#8217;s U.S. boss clears the air on electrification, self-driving cars, safety","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/lex-kerssemakers-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"September 2, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/five-cars-eligible-for-import-in-2018\/","title":"Barely legal: 5 hot imports you can finally drive on American roads in 2018","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/bancroft-roadster-34234321-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"August 14, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/cheap-used-evs\/","title":"Not ready to drop $35K on a new EV? You won&#8217;t believe how cheap they are used","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/2017-chevy-bolt-ev-review-0001-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"September 22, 2017","permalink":"https:\/\/www.digitaltrends.com\/cars\/pioneer-speaker-factory\/","title":"Inside the Japanese factory where Pioneer still makes car speakers by hand","thumb":"https:\/\/icdn3.digitaltrends.com\/image\/pioneer-speaker-factory-foam-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}],"object_id_1112964":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"March 16, 2017","permalink":"https:\/\/www.digitaltrends.com\/home\/six-months-living-in-the-smart-apartment\/","title":"I loaded my condo with tech &#8211; and discovered smart homes still need a lot of work","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/philips_hue_white_ambiance_mit_amazon_alexa-440x220-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"March 9, 2017","permalink":"https:\/\/www.digitaltrends.com\/home\/how-to-hide-wires-tech-smart-apartment\/","title":"Wire you doing this to me? How I hid unsightly tech in my smart apartment","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/cable-drawer-hide-wires-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"March 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/home\/smart-beds-gardens-toys-smart-apartment\/","title":"Automated gardens and smart beds made my apartment every geek&#8217;s domestic dream","thumb":"https:\/\/icdn1.digitaltrends.com\/image\/sleepnumber-smartbed-2-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"February 23, 2017","permalink":"https:\/\/www.digitaltrends.com\/home\/the-best-smart-security-camera-smart-apartment\/","title":"Smart security cameras are creepy, but the Nest Cam gave me some peace of mind","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/nest-camera-indoor-smart-apartment-header-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]}],"object_id_904945":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"April 4, 2017","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/diy-brushless-gimbal-for-dslr\/","title":"Weekend Workshop: How to build a brushless gimbal to shoot super stable video","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/weekend-workshop-brushless-gimbal-feat-440x220-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 1, 2016","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/weekend-workshop-solar-powered-bluetooth-radio-2\/","title":"Weekend Workshop: Keep on rocking off the grid with a DIY solar Bluetooth speaker","thumb":"https:\/\/icdn4.digitaltrends.com\/image\/weekend-workshop-solar-powered-radio-with-bluetooth-mp3_-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"September 24, 2016","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/weekend-workshop-electric-hot-dog-cooker\/","title":"Weekend Workshop: Electrify your meat with this DIY hot dog cooker","thumb":"https:\/\/icdn6.digitaltrends.com\/image\/diy_hotdog_cooker_feat-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"September 17, 2016","permalink":"https:\/\/www.digitaltrends.com\/cool-tech\/weekend-workshop-diy-electric-light-bulb\/","title":"Weekend Workshop: Build an old-school lightbulb from pencil lead and a jar","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/weekend-workshop-diy-electric-light-bulb_-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]}],"object_id_1013948":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"December 19, 2016","permalink":"https:\/\/www.digitaltrends.com\/features\/dt10-we-have-virtual-reality-whats-next-is-straight-out-of-the-matrix\/","title":"We have virtual reality. What&#8217;s next is straight out of &#8216;The Matrix&#8217;","thumb":"https:\/\/icdn7.digitaltrends.com\/image\/dt10-vr-feature-440x220-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"December 12, 2016","permalink":"https:\/\/www.digitaltrends.com\/features\/dt10-how-digital-photography-reinvented-itself\/","title":"How digital photography reinvented itself to become better than ever","thumb":"https:\/\/icdn8.digitaltrends.com\/image\/dt10-photography-light-feature-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"December 5, 2016","permalink":"https:\/\/www.digitaltrends.com\/features\/dt10-language-and-tech\/","title":"Tech is upending the ways we write, speak, and even think","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/dt10-language-featured-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false},{"type":"post","date":"November 21, 2016","permalink":"https:\/\/www.digitaltrends.com\/features\/dt10-your-next-tv-will-pack-more-than-just-more-pixels\/","title":"Your next TV will pack more than just additional pixels","thumb":"https:\/\/icdn1.digitaltrends.com\/image\/the-future-of-football-with-hololens-212x106-c.jpg?ver=1","classes":"post","score":"","video_cat":false}]}],"object_id_19":[{"meta":{"template":"hero","title":"Latest","alt_title":"Most Popular"},"items":[{"type":"post","date":"October 5, 2017","permalink":"https:\/\/www.digitaltrends.com\/photography\/is-google-clips-another-lifelogging-camera-no-one-asked-for\/","title":"Google thought of everything with its new Clips lifelogging cam. Except &#8216;Why?&#8217;","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/google-clips-press-video-snap-table-440x220-c.jpg","classes":"post","score":"","video_cat":false}]},{"meta":{"template":"list","title":"Most Popular"},"items":[{"type":"post","date":"October 6, 2017","permalink":"https:\/\/www.digitaltrends.com\/mobile\/best-ipad-apps\/","title":"The 100 best iPad apps for your Apple tablet (October)","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/1-traktor-dj-ios-212x106-c.jpg","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 6, 2017","permalink":"https:\/\/www.digitaltrends.com\/mobile\/uber-ios-app-entitlement-news\/","title":"Uber iOS app can virtually &#8216;see&#8217; your phone screen, and Apple approved it","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/uber_stock-212x106-c.jpg?ver=2","classes":"post","score":"","video_cat":false},{"type":"post","date":"October 6, 2017","permalink":"https:\/\/www.digitaltrends.com\/home-theater\/focal-clear-headphones-review\/","title":"Focal Clear headphones review","thumb":"https:\/\/icdn2.digitaltrends.com\/image\/focal-clear-3-212x106-c.jpg","classes":"post","score":"","video_cat":false}]}]}};
+		</script>
+
+					<script>
+			window['dt_dynamic_components'] = "{\"share-count\":[{\"name\":\"share-count\",\"args\":{\"type\":\"facebook\",\"object_id\":1254347,\"taxonomy\":\"\"},\"i\":0}],\"footer-components\":[{\"name\":\"footer-components\",\"args\":null,\"i\":0}],\"linked-keywords-injection\":[{\"name\":\"linked-keywords-injection\",\"args\":{\"post_id\":1254347},\"i\":0}],\"wp_admin_toolbar\":[{\"name\":\"wp_admin_toolbar\",\"args\":{\"post_id\":1254347},\"i\":0}]}";
+			</script>
+					<script>
+			(function( vent ){
+
+				vent.on( 'dt:dynamic_components:user_data_available', function( user_data ){
+
+					dataLayer.push({
+						'logged_in': 1,
+						'user_id': user_data.user_ID,
+						'client_ip': user_data.ip_address,
+						'user_roles': user_data.roles
+					});
+
+				} );
+
+				vent.on( 'dt:dynamic_components:guest_ip_available', function( ip_address ){
+
+					dataLayer.push({
+						'logged_in': 0,
+						'client_ip': ip_address
+					});
+
+				} );
+
+				vent.on( 'dt:dynamic_components:user_ready', function(){
+
+					dataLayer.push({
+						'event': 'user_ready'
+					});
+
+				} );
+
+
+			}( DTEvent ) );
+		</script>
+		<script>var dtads_inject_ad_slot_html = { desktop: '<div class="dtads-slot dtads-slot-mpu-content dtads-desktop dtads-tablet" data-type="mpu_content" ></div>', tablet: '<div class="dtads-slot dtads-slot-mpu-content dtads-desktop dtads-tablet" data-type="mpu_content" ></div>', mobile: '<div class="dtads-slot dtads-slot-mpu-content-mobile dtads-mobile" data-type="mpu_content_mobile" ></div>' };</script>			<script type="text/template" id="t-topic-newsletter-signup-modal">
+
+				<div class="m-modal m-topic-newsletter-signup-modal h-topic-newsletter-signup-modal">
+
+					<div class="m-modal--wrap">
+
+						<div class="m-modal--view">
+							<h3 class="m-modal--big-text">
+								Get future <span class="tag">Mobile</span> content delivered straight to your inbox
+							</h3>
+						</div>
+
+						<div class="m-modal--form m-base-form fat">
+							<div class="field-block">
+								<input class="h-email-topic-newsletter-signup-modal" type="text" maxlength="1280" placeholder="Your email" />
+							</div>
+
+							<div class="block final">
+								<div class="button h-submit-topic-newsletter-signup-modal" data-tag="mobile">Submit</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</script>
+
+			<script type="text/template" id="t-topic-newsletter-success-modal">
+
+				<div class="m-modal m-topic-newsletter-success-modal h-topic-newsletter-success-modal">
+
+					<div class="m-modal--wrap">
+
+						<div class="m-modal--view">
+							<h3 class="m-modal--big-text">
+								<span>Success!</span>
+							</h3>
+						</div>
+
+						<div class="m-modal--form m-base-form fat">
+							<div class="block final">
+								<a class="button" href="https://www.digitaltrends.com/newsletter-management?email=<%= email %>">Manage Your <span>Subscriptions</span></a>
+								<a class="close h-close-success-modal" href="javascript:void(0)">Close</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</script>
+
+		<script type="text/template" id="t-comments">
+
+<section
+	class="m-comments"
+	data-comment-count="0"
+	data-comment-module="facebook"
+	data-comments-open=""
+	data-comments-order="desc"
+	data-post-id="1254347"
+	data-scope="comments"
+	id="comments-1254347"
+></section>
+		</script>
+
+		<link rel='stylesheet' id='dropcap_stylesheet-css'  href='https://cdn5.digitaltrends.com/wp-content/plugins/drop-cap-shortcode/css/style.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://cdn6.digitaltrends.com/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='https://cdn4.digitaltrends.com/wp-includes/css/admin-bar.min.css?ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js?ver=1.11.0' defer></script>
+<script type='text/javascript' src='https://cdn2.digitaltrends.com/wp-content/plugins/visualizer/js/lib/clipboardjs/clipboard.min.js?ver=3.0.0' defer></script>
+<script type='text/javascript' src='//mtrx.go.sonobi.com/morpheus.digitaltrends.1658.js?ver=1.0.0' defer></script>
+
+		<script id="dt-foot-script">
+			document.addEventListener('DOMContentLoaded', function() {
+				var goodBrowser = (
+					window.Promise &&
+					window.fetch &&
+					window.Symbol &&
+					window.WeakMap &&
+					window.NodeList &&
+					window.NodeList.prototype[Symbol.iterator]
+				);
+
+				var loadScript = function (src) {
+					var scriptEl = document.createElement('script');
+					scriptEl.src = src;
+
+					scriptEl.onload = function() {
+						DTEvent.promise('dt-foot-script-ready');
+					};
+
+					scriptEl.onerror = function() {
+						DTEvent.promise('dt-foot-script-failed');
+					};
+
+					var thisScriptEl = document.getElementById('dt-foot-script');
+
+					thisScriptEl.parentNode.insertBefore(scriptEl, thisScriptEl.nextSibling);
+				};
+
+				var log = function (msg, level) {
+					if (window.console && window.console.log) {
+						if (level && window.console.warn) {
+							console.warn(msg);
+						} else {
+							console.log(msg);
+						}
+					}
+				};
+
+				if (goodBrowser) {
+					log('Good browser. No polyfills needed.');
+					loadScript('https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/scripts/js/dt-foot.min.js?ver=1507242374098');
+				} else {
+					log('Inferior browser. Do you want polyfills? Because that\'s how you get polyfills.', 1);
+					loadScript('https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/scripts/js/dt-foot-polyfill.min.js?ver=1507242374098');
+				}
+			}, false);
+		</script>
+
+		<script type='text/javascript' src='https://cdn3.digitaltrends.com/wp-includes/js/wp-embed.min.js?ver=4.8.2' defer></script>
+	</body>
+</html>

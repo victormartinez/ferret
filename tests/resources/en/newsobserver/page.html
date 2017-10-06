@@ -1,0 +1,2905 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    <meta charset="utf-8">
+
+
+
+
+<script>
+    var gomez={
+    gs: new Date().getTime(),
+    acctId:"D3FD89",
+    grpId:"Escenic",
+    grpId1:"RAL",
+    grpId2:window.location.hostname,
+    grpId3:"unknown",
+    pgId:"story-detail",
+    wrate:1
+};
+</script>
+
+<script type='text/javascript'>
+    var a=window;a.dT_?a.console&&a.console.log("Duplicate agent injection detected, turning off redundant initConfig."):navigator.userAgent&&0<=navigator.userAgent.indexOf("RuxitSynthetic")||window.dT_||(window.dT_={cfg:"async=1|cors=1|doNotDetect=scr|md=acctId=bgomez.acctId,grpId=bgomez.grpId,grpId1=bgomez.grpId1,grpId2=bgomez.grpId2,grpId3=bgomez.grpId3,pgId=bgomez.pgId|lastModification=1501178412042|tp=500,50,5,1,10|reportUrl=//mcclatchy.dynatracesaas.com/dynaTraceMonitor|agentUri=//mcclatchy.dynatracesaas.com/dtagent_A23STVhjpqrstx_7000000031020.js|auto=#AUTO#|domain=#DOMAIN#|rid=RID_#REQUEST_ID#|rpid=#RESPONSE_ID#|app=Default Application"});(function(){function y(){var a=0;try{a=I.performance.timing.navigationStart+Math.floor(I.performance.now())}catch(b){}return 0>=a||isNaN(a)?(new Date).getTime():a}function n(a,b){for(var e=1;e<arguments.length;e++)a.push(arguments[e])}function m(a,b){return parseInt(a,b||10)}function g(a,b){var e=-1;b&&a&&a.indexOf&&(e=a.indexOf(b));return e}function J(a){document.cookie=a+'="";path=/'+(d.domain?";domain="+d.domain:"")+"; expires=Thu, 01 Jan 1970 00:00:01 GMT;"}function K(a){a=encodeURIComponent(a);
+    var b=[];if(a)for(var e=0;e<a.length;e++){var c=a.charAt(e);n(b,ia[c]||c)}return b.join("")}function z(a,b,e,c){b||0==b?(b=(""+b).replace(/[;\n\r]/g,"_"),b="DTSA"===a.toUpperCase()?K(b):b,a=a+"="+b+";path=/"+(d.domain?";domain="+d.domain:""),e&&(a+=";expires="+e.toUTCString()),c&&(a+=";Secure"),document.cookie=a):J(a)}function r(a){var b,e,c,d=document.cookie.split(";");for(b=0;b<d.length;b++)if(e=g(d[b],"="),c=d[b].substring(0,e),e=d[b].substring(e+1),c=c.replace(/^\s+|\s+$/g,""),c===a)return"DTSA"===
+    a.toUpperCase()?decodeURIComponent(e):e;return""}function M(a){return/^[0-9A-Za-z_\$\+\/\.\-\*%\|]*$/.test(a)}function A(){var a=r(t);return a&&M(a)?a:""}function N(a){z(t,a,void 0,c.bcv("ssc"))}function O(a){a=a||A();var b={sessionId:null,c:null};if(a){var e=g(a,"|"),c=a;-1!==e&&(c=a.substring(0,e));e=g(c,"$");-1!==e?(b.sessionId=c.substring(e+1),b.c=c.substring(0,e)):b.sessionId=c}return b}function P(a){return O(a).c}function Q(a){if(a)return O(a).sessionId;if(a=A()){var b=g(a,"|");-1!=b&&(a=a.substring(0,
+    b))}return a}function B(a,b){return Math.floor(Math.random()*(b-a+1))+a}function R(a){var b=window.crypto||window.msCrypto,e;if(b)e=new Int8Array(a),b.getRandomValues(e);else for(e=[],b=0;b<a;b++)e.push(B(0,32));a=[];for(b=0;b<e.length;b++){var c=Math.abs(e[b]%32);a.push(String.fromCharCode(c+(9>=c?48:55)))}return a.join("")}function S(a){return document.getElementsByTagName(a)}function T(a){var b=a.length;if("number"===typeof b)a=b;else{for(var b=0,e=2048;a[e-1];)b=e,e+=e;for(var c=7;1<e-b;)c=(e+
+    b)/2,a[c-1]?b=c:e=c;a=a[c]?e:b}return a}function U(a){var b={};a=a.split("|");for(var e=0;e<a.length;e++){var c=a[e].split("=");2==c.length&&(b[c[0]]=decodeURIComponent(c[1].replace(/\+/g," ")))}return b}function p(a,b,e){b=b||{};a=a.split("|");for(var c=0;c<a.length;c++){var d=g(a[c],"="),f;-1===d?(f=a[c],b[f]="1"):(f=a[c].substring(0,d),b[f]=a[c].substring(d+1,a[c].length))}e||V(b);return b}function C(a){return a in d?d[a]:W[a]}function X(a){var b=location.hostname;return b&&a?b==a||-1!==b.indexOf("."+
+    a,b.length-("."+a).length):!0}function D(a){d[a]=0>g(d[a],"#"+a.toUpperCase())?d[a]:""}function ja(a,b){var e={};d.legacy="1";if(a){var f=/([a-zA-Z]*)[0-9]{0,4}_([a-zA-Z_0-9]*)_[0-9]+/g.exec(a);f&&f.length&&(e.csu=f[1],e.featureHash=f[2],e.dtVersion=c.version[0]+""+c.version[1])}b&&p(b,e,!0);X(e.domain)||(delete e.domain,e.domainOverride=location.hostname+","+e.domain);return e}function V(a){var b=a.spc;if(b){var c=document.createElement("textarea");c.innerHTML=b;a.spc=c.value}}function Y(a){var b=
+    a.agentUri;b&&-1<g(b,"_")&&(b=/([a-zA-Z]*)[0-9]{0,4}_([a-zA-Z_0-9]*)_[0-9]+/g.exec(b),a.csu=b[1],a.featureHash=b[2])}function Z(a){a.bp1||(a.bp2="1");X(d.domain)||(d.domainOverride=location.hostname+","+d.domain,delete d.domain)}function u(a){var b=document.cookie?document.cookie.split(a).length-1:0;if(1<b){var c=d.domain||window.location.hostname,f=window.location.hostname,L=window.location.pathname,h=0,k=0;q.push(a);do{var v=f.substr(h);if(v!=c||"/"!==L){var g=a,l=v==c?null:v,n=L,m=1,p=0;do document.cookie=
+    g+'=""'+(l?";domain="+l:"")+";path="+n.substr(0,m)+"; expires=Thu, 01 Jan 1970 00:00:01 GMT;",m=n.indexOf("/",m),p++;while(-1!=m&&5>p);g=document.cookie?document.cookie.split(a).length-1:0;g<b&&(q.push(v),b=g)}h=f.indexOf(".",h)+1;k++}while(0!=h&&10>k&&1<b)}}function aa(a,b){for(var c=ba(b),d=!1,f=0;f<c.length;f++)c[f].frameId===w&&(c[f].b=a,d=!0);d||n(c,{frameId:w,b:a});ca(c)}function ca(a){var b="";if(a){for(var b=[],c=0;c<a.length;c++)"-"!=a[c].b&&(0<c&&0<b.length&&n(b,"p"),n(b,a[c].frameId),n(b,
+    "h"),n(b,a[c].b));b=b.join("")}b||(b="-");z("dtPC",b)}function ba(a){var b=r("dtPC"),c=[];if(b&&"-"!==b)for(var b=b.split("p"),d=0;d<b.length;d++){var f=b[d].split("h");if(2===f.length&&f[0]&&f[1]){var h=f[0],g;if(!(g=a)){g=m(h.split("_")[0]);var k=y()%6E8;k<g&&(k+=6E8);g=g+9E5>k}g&&n(c,{frameId:h,b:f[1]})}}return c}var l=window;if(!l.dT_||!l.dT_.cfg||"string"!=typeof l.dT_.cfg||l.dT_.initialized)l.console&&l.console.log("Initconfig not found or agent already initialized! This is an injection issue.");
+    else if(!(navigator.userAgent&&0<=navigator.userAgent.indexOf("RuxitSynthetic"))){var ka=window.setTimeout,E=window.sessionStorage,c={version:"10123170720155615",cfg:window.dT_&&window.dT_.cfg,ica:1};window.dT_=c;var I=window;c.agentStartTime=y();c.nw=y;c.apush=n;c.st=function(a,b){return ka(a,b)};c.buildType="appmon";var ia={"!":"%21","~":"%7E","*":"%2A","(":"%28",")":"%29","'":"%27",$:"%24",";":"%3B",",":"%2C"};c.gSSV=function(a){try{if(E)return E[a]}catch(b){}return null};c.sSSV=function(a,b){try{window.sessionStorage.setItem(a,
+    b)}catch(e){}};c.pn=m;c.iVSC=M;c.io=g;c.dC=J;c.sC=z;c.esc=K;c.gSId=P;c.gDtc=Q;c.gSC=A;c.sSC=N;c.gC=r;c.cRN=B;c.cRS=R;c.gEL=T;c.gEBTN=S;var d={reportUrl:"dynaTraceMonitor",initializedModules:"",csu:"dtagent",dataDtConfig:c.cfg},F;try{F=window.localStorage}catch(a){}(function(){var a=d.dataDtConfig;"string"==typeof a&&-1==g(a,"#CONFIGSTRING")&&(p(a,d),D("domain"),D("auto"),D("app"),Y(d))})();var l=S("script"),da=T(l),f,h;if(0<da)for(var k,ea=d.csu+"_bootstrap.js",G=0;G<da;G++)if(k=l[G],k.attributes){var fa=
+    k.attributes.getNamedItem("data-dtconfig"),x=k.src;if(fa)if(h=ja(k.src,fa.value),!f)f=h;else if("1"!=h.syntheticConfig){f=h;break}(k=x&&x.indexOf(ea))&&0<=k&&(k=k+ea.length+5,h||(h=d),h.app=x.length>k?x.substr(k):"Default%20Application")}if(f)for(var H in f)f.hasOwnProperty(H)&&(d[H]=f[H]);d.rx_visitID&&(c.rx_visitID=d.rx_visitID);(function(){var a=d.csu,a=(a.indexOf("dbg")==a.length-3?a.substr(0,a.length-3):a)+"_"+d.app+"_Store";try{var b=F&&F.getItem(a);if(b){var c=U(b),f=p(c.config,c).lastModification||
+    "",g=d.lastModification||"",h=m(f.substr(0,13)),k=m(g.substr(0,13));if(!g||h>=k)for(var l in c)c.hasOwnProperty(l)&&("config"==l?p(c[l],d):d[l]=c[l])}}catch(ma){}})();Z(d);try{var ga=d.ign;if(ga&&(new RegExp(ga)).test(window.location.href)){document.dT_=window.dT_=null;return}}catch(a){}var t="dtCookie";c.gSCN=function(){return t};c.gPCHN=function(){return"x-dtpc"};c.gRHN=function(){return"x-dtreferer"};c.pageContextCookieName="dtPC";c.latencyCookieName="dtLatC";c.mobileSessionIDCookieName="dtAdk";
+    c.cfg=d;c.pCfg=U;c.pCSAA=p;c.cFHFAU=Y;c.sCD=Z;c.hDSC=V;c.bcv=function(a){a=C(a);return"false"===a||"0"===a?!1:!!a};c.ncv=function(a){var b=m(C(a));isNaN(b)&&(b=m(W[a]));return b};c.scv=function(a){return String(C(a))};c.stcv=function(a,b){d[a]=b};c.rplC=function(a){return d=a};var q=[];u("dtPC");u(t);u("dtLatC");u("rxvt");c.aDCI=function(a){0<q.length&&(a.a("dCN",q.join(","),!1),q=[])};var W={ade:"",app:"",bandwidth:"300",bp1:!1,bp2:!1,bs:!1,cors:!1,csu:"",cux:!1,disableCookieManager:!1,disableLogging:!1,
+    disableXhrFailures:!1,domain:"",domainOverride:"",doNotDetect:"",dsndb:!1,dsss:!1,euf:!1,evl:"",extblacklist:"",exteventsoff:!1,fa:!1,featureHash:"",ffi:!1,hvt:216E5,ign:"",instr:"",lab:!1,legacy:!1,lmut:!0,lzwd:!1,md:"",mdn:5E3,mepp:10,moa:30,mrt:3,msl:3E4,ncw:!1,ntd:!1,oat:180,pui:!1,reportUrl:"",rid:"",ridPath:"",rpid:"",rt:0,rtl:100,rtp:1,rtt:1E3,rtu:200,sl:100,sosi:!1,spc:"",spl:!1,ssc:!1,st:3E3,svNB:!1,tp:"500,50,3",tvc:3E3,uam:!1,WST:!1,xb:"",xbp:null,xmut:!0,xt:0},w=c.agentStartTime%6E8+"_"+
+    m(B(0,1E3));c.gFId=function(){return w};c.frameId=w;aa(1);c.gPC=ba;c.cPC=aa;c.sPC=ca;var ha;try{ha=E.getItem("dtDisabled")}catch(a){}d.auto||d.legacy||ha||(f=d.agentname||d.csu||"dtagent",f=r("dtUseDebugAgent")?d.debugName||f+"dbg":d.name||f,h=d.agentUri||d.agentLocation+"/"+f+"_"+d.featureHash+"_"+d.buildNumber,d.async?(f=document.createElement("script"),f.setAttribute("src",h),d.async&&f.setAttribute("defer","true"),f.setAttribute("crossorigin","anonymous"),h=document.getElementsByTagName("script")[0],
+    h.parentElement.insertBefore(f,h)):document.write('<script type="text/javascript" src="'+h+'">\x3c/script>'));Q()||N(""+R(32));var la=P();c.gcSId=function(){return la}}})();
+</script>
+
+
+
+
+
+        <meta name="msapplication-TileColor" content="#FFFFFF"/>
+
+
+
+
+        <meta name="msapplication-TileImage" content="http://www.newsobserver.com/static/theme/newsobserver/base/ico/windowsmetro-144.png"/>
+
+
+
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.newsobserver.com/static/theme/newsobserver/base/ico/apple-touch-icon-144-precomposed.png"/>
+
+
+
+
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.newsobserver.com/static/theme/newsobserver/base/ico/apple-touch-icon-114-precomposed.png"/>
+
+
+
+
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.newsobserver.com/static/theme/newsobserver/base/ico/apple-touch-icon-72-precomposed.png"/>
+
+
+
+
+        <link rel="apple-touch-icon-precomposed" href="http://www.newsobserver.com/static/theme/newsobserver/base/ico/apple-touch-icon-57-precomposed.png"/>
+
+
+
+
+        <link rel="shortcut icon" href="http://www.newsobserver.com/static/theme/newsobserver/base/ico/favicon.png"/>
+
+
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+
+
+
+        <meta name="twitter:site" content="newsobserver"/>
+
+
+
+
+        <meta name="twitter:title" content="Fed up with catcalling, she took 24 selfies with smiling men who she says harassed her"/>
+
+
+
+
+        <meta property="og:site_name" content="newsobserver"/>
+
+
+
+
+        <meta property="og:type" content="article"/>
+
+
+
+
+        <meta property="og:title" content="Fed up with catcalling, she took 24 selfies with smiling men who she says harassed her"/>
+
+
+
+
+        <meta property="og:url" content="http://www.newsobserver.com/news/nation-world/article177205031.html"/>
+
+
+
+
+        <meta property="og:image" content="http://pics.mcclatchyinteractive.com/news/nation-world/l2j0sw/picture177281926/alternates/LANDSCAPE_1140/catttte"/>
+
+
+
+
+        <meta name="twitter:image" content="http://pics.mcclatchyinteractive.com/news/nation-world/l2j0sw/picture177281926/alternates/LANDSCAPE_1140/catttte"/>
+
+
+
+
+        <meta property="og:description" content="Noa Jansma, a 20-year-old student from Amsterdam, started an Instagram project #DearCatcallers where took a selfie with more than 24 men who catcalled her for a month."/>
+
+
+
+
+        <meta name="twitter:description" content="Noa Jansma, a 20-year-old student from Amsterdam, started an Instagram project #DearCatcallers where took a selfie with more than 24 men who catcalled her for a month."/>
+
+
+
+
+        <meta property="fb:app_id" content="571418586252964"/>
+
+
+
+
+
+
+            <title>Amsterdam woman posts selfies of men who catcall her on Instagram | News &amp; Observer</title>
+
+        <meta name="title" content="Amsterdam woman posts selfies of men who catcall her on Instagram | News &amp; Observer"/>
+
+
+
+
+        <meta name="allow-comments" content="true"/>
+
+
+
+
+        <meta name="description" content="Noa Jansma, a 20-year-old student from Amsterdam, started an Instagram project #DearCatcallers where took a selfie with more than 24 men who catcalled her for a month."/>
+
+
+
+
+        <meta name="keywords" content="Noa Jansma, 20, Amsterdam, woman, catcall, sexual harassment, compliment, study, American, UK, fed up, Instagram, Dear, Catcaller, DearCatcaller,"/>
+
+
+
+
+        <meta name="news_keywords" content="Noa Jansma, 20, Amsterdam, woman, catcall, sexual harassment, compliment, study, American, UK, fed up, Instagram, Dear, Catcaller, DearCatcaller,"/>
+
+
+
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+
+
+
+        <meta name="googlebot" content="noodp, noarchive"/>
+
+
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+
+
+        <link rel="canonical" href="http://www.newsobserver.com/news/nation-world/article177205031.html"/>
+
+
+
+
+        <meta name="original-source" content="http://www.newsobserver.com/news/nation-world/article177205031.html"/>
+
+
+
+
+        <meta name="google-site-verification" content="0GF1Ok35O1TQ_B8R4lQYz4N1nBr-YJflnAXsHV8ePEo"/>
+
+
+
+
+<link rel="amphtml" href="http://amp.newsobserver.com/news/nation-world/article177205031.html">
+
+<meta name="msapplication-TileImage" content="/wps/build/images/newsobserver/windowsmetro-144.png"/>
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/wps/build/images/newsobserver/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/wps/build/images/newsobserver/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/wps/build/images/newsobserver/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/wps/build/images/newsobserver/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="/wps/build/images/newsobserver/favicon.png">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript"
+            src="/wps/source/scripts/libs/require.js"></script>
+
+<script type="text/javascript">
+    var wpsConfig = {
+        baseUrl: '/wps/source/scripts/src',
+        urlArgs: 'misv=072bacd',
+        paths: {
+            'fastdom': '../libs/fastdom.min',
+            'moment': '../libs/moment.min',
+            'jwplayer': ['https://d12j9jiosu7f.cloudfront.net/jwplayer-7.8.7/jwplayer',
+                         '../libs/jwplayer'],
+            'flickity': '../libs/flickity.pkgd.min',
+            'identity': '../libs/identityModulev3.min'
+        },
+        waitSeconds: 0
+    };
+
+    var wpsRequire = requirejs.config(wpsConfig);
+</script>
+
+<script>
+    var mi = (function(mod) {
+        mod.lazyloaders = mod.lazyloaders || [];
+        return mod;
+    })(mi || {});
+
+</script>
+
+
+    <script>mi.inMarket=false</script>
+
+
+
+
+<link href="/wps/build/css/theme.markets/newsobserver-d791e4cf36.css" rel="stylesheet" type="text/css"/>
+
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="/wps/build/js/mi-header-1d5957ebeb.js"></script>
+
+
+
+
+    <script type="text/javascript" src="/wps/source/scripts/libs/guid.js"></script>
+    <script>
+        wpsRequire(['identity'], function(IdentityModule) {
+            $(window).load(function() {
+                var identityModule = new IdentityModule();
+                var identityCookieName = 'AccessToken';
+                var identityPrefix = 'mcv4';
+                $.getJSON('https://api.ipify.org?format=jsonp&callback=?')
+                 .done(function(json) {
+                     identityModule.GenerateIdentity(identityCookieName, identityPrefix, [json.ip]);
+                 })
+                 .fail(function() {
+                     identityModule.GenerateIdentity(identityCookieName, identityPrefix, [getGuid()]);
+                });
+            });
+        });
+    </script>
+
+
+
+
+        <!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 -->
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+mi.pageInfo.setConf({
+'marketInfo.viewsizes':[{"Extra-Small":[0,0]},{"Large":[1200,600]},{"Medium":[992,300]},{"Small":[768,300]}],
+'marketInfo.adsizes':{"outofpage":{},"wallpaper":{'1600x600':[1600,600],'None':[]},"floorboard":{'285x70':[285,70],'None':[]},"default":{'120x20':[120,20],'120x240':[120,240],'120x600':[120,600],'146x60':[146,60],'160x600':[160,600],'160x90':[160,90],'168x28':[168,28],'180x150':[180,150],'216x36':[216,36],'234x60':[234,60],'240x400':[240,400],'300x100':[300,100],'300x250':[300,250],'300x50':[300,50],'300x600':[300,600],'300x75':[300,75],'320x450':[320,450],'320x50':[320,50],'336x280':[336,280],'468x60':[468,60],'500x300':[500,300],'600x250':[600,250],'728x90':[728,90],'960x30':[960,30],'970x90':[970,90],'Billboard Flex':[[960,30],[970,30],[970,90],[970,250]],'Flex Ad':[[300,250],[300,600]],'None':[],'Rising Star':[500,300],'Welcome Ad':[[300,250],[300,600],[550,480],[600,500]]} },'accuweather.apiKey':'2ce96fe9da724185a27db1e6a3ecf580',
+'accuweather.dev':'false',
+'accuweather.locationKey':'329823',
+'accuweather.locationString':'Raleigh',
+'accuweather.partnerCode':'MCCLATCHY',
+'cs.circ_phone':'1-800-522-4205',
+'cs.circ_url':'http://newsobserver.com/myaccount',
+'facebook.app.id':'571418586252964',
+'findnsave.tracking':'findnsave',
+'headerDateDisplay':'false',
+'marketInfo.CarsAFF':'triangle',
+'marketInfo.JobsQSCTY':'raleigh',
+'marketInfo.JobsQSSTS':'NC,US',
+'marketInfo.JobsSEO':'The news &amp; Observer and NewsObserver.com are proud to serve the people of Raleigh and the Research Triangle in North Carolina with a job search tool and career resource. You will find both full time and part time local opportunities in a variety of career fields including banking, retail, medical, construction, restaurant and IT.',
+'marketInfo.JobsSiteID':'mc_no012',
+'marketInfo.Jobslr':'CBMC_NO',
+'marketInfo.addcities':'Raleigh, Durham, Chapel Hill, Cary, Carrboro, Clayton, Garner, Triangle, The Research Triangle',
+'marketInfo.adretargeting.kill_list':'[&quot;simpli.fi&quot;]',
+'marketInfo.allow_ads':'true',
+'marketInfo.allow_nativo':'true',
+'marketInfo.careerbuilder.dmc_code':'ral',
+'marketInfo.careerbuilder.dmc_id':'1035',
+'marketInfo.careerbuilder.lr':'CBMC_NO',
+'marketInfo.careerbuilder.mxjobsrchcriteria_rawwords':'outside+sales',
+'marketInfo.careerbuilder.s_freshness':'30',
+'marketInfo.careerbuilder.s_rawwords':'CustomField3:RALEIGHTJ',
+'marketInfo.clipped_taxonomy':'News/National',
+'marketInfo.code':'RAL',
+'marketInfo.county':'Wake County',
+'marketInfo.domain':'newsobserver',
+'marketInfo.followLinks':'false',
+'marketInfo.location':'Raleigh',
+'marketInfo.logoAltText':'The News and Observer',
+'marketInfo.market_identifier':'RAL.site_newsobserver',
+'marketInfo.name':'The News &amp; Observer',
+'marketInfo.networkid':'7675',
+'marketInfo.phone':'919-829-4500',
+'marketInfo.product':'site',
+'marketInfo.region':'The Triangle',
+'marketInfo.siteId':'156',
+'marketInfo.sourcelevel':'nationworld',
+'marketInfo.state':'North Carolina',
+'marketInfo.state_abbreviation':'NC',
+'marketInfo.staticDirectory':'newsobserver',
+'marketInfo.taxonomy':'News/National///',
+'marketInfo.webmaster_email':'efrederick@newsobserver.com',
+'marketInfo.zipcode':'27602',
+'nativo.story.placements':'840669,775563,844352',
+'nativo.video.placements':'869322,869321',
+'pressPlus.zone':'SX0aQdtL2wmlZCw6feEJwJ',
+'publication.domain':'NewsObserver.com',
+'publication.mediadomain':'media2.newsobserver.com',
+'wufoo.formID':'',
+'marketInfo.pagelevel':'story',
+});
+</script>
+
+<script type="text/javascript">
+    var mistats = mistats || {};
+    mistats.pagelevel="Story";
+    mistats.cmsid="Story:177205031";
+    mistats.pagename="Story:177205031|Fed up with catcalling, she took 24 selfies with smiling men who she says harassed her";
+    mistats.taxonomy="News|National|||";
+    mistats.channel="Nation &amp; World";
+    mistats.contentsource="NewsDesk_MCC|By Mandy Matneymmatney@islandpacket.com";
+    mistats.pubdate="2017/10/05";
+    mistats.moddate="2017/10/06 H07";
+    mistats.keywords="Noa Jansma 20 Amsterdam woman catcall sexual harassment compliment study American UK fed up Instagram Dear Catcaller DearCatcaller";
+</script>
+<script src="http://media2.newsobserver.com/misites/nao/newsobserver.js"></script>
+
+
+    <script type="text/javascript">
+        var imgLazyLoadThreshold = 500;
+    </script>
+
+
+<script type="text/javascript">
+    var getSubscribedFlag = false;
+</script>
+
+
+
+
+
+    <script type="text/javascript">
+        getSubscribedFlag = checkUserSubscribed('MPPSessionId');
+        console.log('SubscribedFlag :', getSubscribedFlag);
+    </script>
+
+
+
+
+    <script type="text/javascript">
+        mi_Ads.env.create();
+    </script>
+
+
+<!-- as we will be patching MI_Ads.js we need to be injected here instead of required -->
+<script type="text/javascript" src="/wps/source/scripts/src/amazon-patch.js?misv=072bacd"></script>
+<script type="text/javascript">
+    ! function(a9, a, p, s, t, A, g) {
+        if (a[a9]) return;
+
+        function q(c, r) {
+            a[a9]._Q.push([c, r])
+        }
+        a[a9] = {
+            init: function() {
+                q("i", arguments)
+            },
+            fetchBids: function() {
+                q("f", arguments)
+            },
+            setDisplayBids: function() {},
+            _Q: []
+        };
+        A = p.createElement(s);
+        A.async = !0;
+        A.src = t;
+        g = p.getElementsByTagName(s)[0];
+        g.parentNode.insertBefore(A, g)
+    }("apstag", window, document, "script", "//c.amazon-adsystem.com/aax2/apstag.js");
+
+    var patches = [AmazonPatch.patches.preRoll];
+
+    $.when(
+        AmazonPatch.amazon.init({
+            pubID: '3108',
+            adServer: 'googletag',
+            videoAdServer: 'DFP',
+            bidTimeout: 5 * 1000 // setting the timeout to 5 seconds
+        })
+    ).then(function(patch) {
+        patch.apply(patches);
+    });
+</script>
+
+
+
+            <script src="//acdn.adnxs.com/prebid/c/7543/pb.js" async="true"></script>
+<script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [],
+    googletag.cmd.push(function(){
+        googletag.pubads().disableInitialLoad();
+    });
+    var getPreBidVarValue = function() {
+        var constructedVar;
+        var urlPathReg = /([^\/]*)\/*$/;
+        var classifiedSearchReg = /homes|cars|jobs|search/;
+        var urlPath = window.location.pathname;
+        var lastUrlComponent = urlPath.match(urlPathReg)[1];
+        var marketIdentifier = mi.pageInfo.getConf('marketInfo.market_identifier');
+        var pageLevel = mi.pageInfo.getConf('marketInfo.pagelevel');
+        var sourceLevel = mi.pageInfo.getConf('marketInfo.sourcelevel');
+
+        if ( lastUrlComponent === 'video' ) {
+            pageLevel = 'videofront';
+        } else if ( lastUrlComponent === 'galleries' ) {
+            pageLevel = 'galleryfront';
+        } else if ( lastUrlComponent.match(classifiedSearchReg) ) {
+            pageLevel = pageLevel + '.' + sourceLevel;
+        }
+
+        if ( mi_Ads.env.outOfMarket.pageLevelOOM === true && mi_Ads.env.outOfMarket.serverOOMHeader === true ) {
+            pageLevel = pageLevel + '-oom';
+        }
+
+        constructedVar = marketIdentifier + '.' + pageLevel;
+
+        return constructedVar;
+    };
+    var preBidMarketPage = getPreBidVarValue();
+</script>
+
+
+
+
+	<script type="text/javascript" src="http://ad.crwdcntrl.net/5/c=7436/pe=y/callback=extractPid"></script>
+
+
+
+
+
+
+    <script type="text/javascript" src="https://cdn-pci.optimizely.com/js/5967330005.js"></script>
+
+
+
+<script>
+    var _prx = window._prx || [];
+    _prx.push(['cfg.SetNoAutoStart']);
+</script>
+<script src="//s.ntv.io/serve/load.js" async></script>
+
+
+
+
+<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5" async></script>
+
+
+
+    </head>
+    <body class="story wps-body-main">
+
+
+    <header>
+
+    <div class="hide">
+        <div class="ad-widget" id="mn-gpt-1" adtype="outofpage" pkg="None" data-ad-policy="onPageLoad" audience="all" articleId="177205031"></div>
+    </div>
+
+     <div id="masthead-container">
+        <div class="container">
+            <div class="masthead-row">
+                <div id="masthead-main">
+                    <div id="masthead-logo">
+                        <a href="/" target="_top">
+                            <img src="/wps/build/images/newsobserver/logo-lg.png" alt="The News &amp; Observer | NewsObserver.com" class="img-responsive center-block" />
+                        </a>
+                    </div>
+
+<div id="quick-nav" class="hidden-xs">
+    <ul class="nav navbar-nav">
+
+            <li><a href="/news/local/#navlink=navbar">Local News</a></li>
+
+            <li><a href="/sports/#navlink=navbar">Sports</a></li>
+
+            <li><a href="/living/#navlink=navbar">Living</a></li>
+
+            <li><a href="http://www.newsobserver.com/classified-ads#navlink=navbar">Classifieds</a></li>
+
+    </ul>
+
+    <div id="site-search-lg" class="visible-lg">
+
+
+    <form action="/search/" class="form-inline" id="site-search" role="search">
+
+        <input type="text" name="q" class="form-control"/>
+        <button class="input-group-addon" type="submit">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+    </form>
+
+    </div>
+    <div id="search-icon-sm-md" class="site-search dropdown visible-md visible-sm">
+        <a href="#" class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search"></span></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li class="input-group">
+
+
+    <form action="/search/" class="form-inline" id="site-search" role="search">
+
+        <input type="text" name="q" class="form-control" placeholder="Search the site"/>
+        <button class="input-group-addon" type="submit">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+    </form>
+
+            </li>
+        </ul>
+    </div>
+</div>
+
+                </div>
+                <div id="masthead-ad" class="visible-md visible-lg"><div class="ad-widget" id="mn-gpt-2" adtype="default" pkg="None" data-ad-policy="onPageLoad" audience="all" atf="y" defaultsize="Large" Large="234x60" Medium="234x60" Small="None" Extra-Small="None" articleId="177205031"></div></div>
+            </div>
+            <div id="main-nav-container">
+                <div class="weather-container hidden-xs">
+                    <div class="miWeather">
+    <a href="/weather">
+        <div class="miWeatherCurrent">
+
+            <div class="mi-weather-conditions"><img src="/wps/source/images/widgets/weather/small/3.png" alt="Partly sunny"/>
+                    <div class="mi-weather-conditions-temp">
+                        57°
+                    </div>
+                </div>
+        </div>
+    </a>
+</div>
+
+                </div>
+                <div id="login-subscribe" class="hidden-xs">
+
+<ul class="paywall-links">
+
+
+
+
+
+
+
+
+
+        <script type="text/javascript">
+            var userName = checkUserSubscribed('MPPUser');
+            var signInOrAccountLink = '<li class="mpp-usericon"><a href="https://account.newsobserver.com/static/signin"> Sign In</a> </li>';
+            var subscribeOrSignOutLink = '<li><a href="https://account.newsobserver.com/static/subscribe">Subscribe</a></li>';
+            if ( getSubscribedFlag ) {
+                if(userName) {
+                    userName = JSON.parse(userName);
+                }
+                subscribeOrSignOutLink = '<li><a href="https://account.newsobserver.com/sign-out">Sign Out</a> </li>';
+                if( userName && userName.firstName) {
+                    signInOrAccountLink = '<li class="mpp-username mpp-usericon"><a href="https://account.newsobserver.com/my-account"> '+userName.firstName+'</a></li>';
+                }else{
+                    signInOrAccountLink = '<li class="mpp-usericon"><a href="https://account.newsobserver.com/my-account"> My Account</a></li>';
+                }
+            }
+            if ( 1 ==1 ) {
+                $(".hidden-xs ul.paywall-links").prepend(signInOrAccountLink," ",subscribeOrSignOutLink);
+            }
+            else {
+                $("#navbar-collapse-1 ul.paywall-links").prepend(signInOrAccountLink," ",subscribeOrSignOutLink);
+            }
+        </script>
+
+</ul>
+                </div>
+
+<div id="main-nav">
+    <nav class="navbar navbar-default " role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <span class="nav-label hidden-xs">Full Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar-collapse-1" class="navbar-collapse collapse">
+            <div id="search-icon-xs" class="site-search dropdown visible-xs">
+                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search"></span></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li class="input-group">
+
+
+    <form action="/search/" class="form-inline" id="site-search" role="search">
+
+        <input type="text" name="q" class="form-control" placeholder="Search the site"/>
+        <button class="input-group-addon" type="submit">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+    </form>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="weather-container visible-xs">
+                <div class="miWeather">
+    <a href="/weather">
+        <div class="miWeatherCurrent">
+
+            <div class="mi-weather-conditions"><img src="/wps/source/images/widgets/weather/small/3.png" alt="Partly sunny"/>
+                    <div class="mi-weather-conditions-temp">
+                        57°
+                    </div>
+                </div>
+        </div>
+    </a>
+</div>
+
+            </div>
+
+<ul class="paywall-links">
+
+
+
+
+
+
+
+
+
+        <script type="text/javascript">
+            var userName = checkUserSubscribed('MPPUser');
+            var signInOrAccountLink = '<li class="mpp-usericon"><a href="https://account.newsobserver.com/static/signin"> Sign In</a> </li>';
+            var subscribeOrSignOutLink = '<li><a href="https://account.newsobserver.com/static/subscribe">Subscribe</a></li>';
+            if ( getSubscribedFlag ) {
+                if(userName) {
+                    userName = JSON.parse(userName);
+                }
+                subscribeOrSignOutLink = '<li><a href="https://account.newsobserver.com/sign-out">Sign Out</a> </li>';
+                if( userName && userName.firstName) {
+                    signInOrAccountLink = '<li class="mpp-username mpp-usericon"><a href="https://account.newsobserver.com/my-account"> '+userName.firstName+'</a></li>';
+                }else{
+                    signInOrAccountLink = '<li class="mpp-usericon"><a href="https://account.newsobserver.com/my-account"> My Account</a></li>';
+                }
+            }
+            if ( 2 ==1 ) {
+                $(".hidden-xs ul.paywall-links").prepend(signInOrAccountLink," ",subscribeOrSignOutLink);
+            }
+            else {
+                $("#navbar-collapse-1 ul.paywall-links").prepend(signInOrAccountLink," ",subscribeOrSignOutLink);
+            }
+        </script>
+
+</ul>
+            <ul class="nav navbar-nav">
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                Customer Service
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <b class="caret"></b>
+                            </a>
+
+    <ul class="dropdown-menu">
+
+
+                <li><a href="/customer-service/#navlink=subnav">Customer Service</a></li>
+
+
+
+                <li><a href="http://support.newsobserver.com#navlink=subnav">Support</a></li>
+
+
+
+                <li><a href="/customer-service/contact-us/#navlink=subnav">Contact Us</a></li>
+
+
+
+                <li><a href="/customer-service/about-us/#navlink=subnav">About Us</a></li>
+
+
+
+                <li><a href="/customer-service/faq/#navlink=subnav">FAQ</a></li>
+
+
+
+                <li class="dropdown-header">Stay connected</li>
+
+
+
+                <li><a href="http://www.newsobserver.com/mobile/#navlink=subnav">Mobile &amp; Apps</a></li>
+
+
+
+                <li><a href="https://www.facebook.com/newsandobserver/#navlink=subnav">Facebook</a></li>
+
+
+
+                <li><a href="https://plus.google.com/+newsandobserver/videos/#navlink=subnav">Google+</a></li>
+
+
+
+                <li><a href="http://instagram.com/newsobserver/#navlink=subnav">Instagram</a></li>
+
+
+
+                <li><a href="https://twitter.com/newsobserver/#navlink=subnav">Twitter</a></li>
+
+
+
+                <li><a href="http://www.newsobserver.com/customer-service/social-media/#navlink=subnav">Social Media Directory</a></li>
+
+
+
+                <li><a href="http://www.newsobserverstore.com#navlink=subnav">N&amp;O Store</a></li>
+
+
+
+                <li><a href="http://photostore.newsobserver.com/mycapture/index.asp#navlink=subnav">Buy Photos</a></li>
+
+
+
+                <li><a href="/news/databases/#navlink=subnav">Databases</a></li>
+
+
+
+                <li><a href="http://www.newslibrary.com/sites/rlob/#navlink=subnav">Archives</a></li>
+
+
+
+                <li><a href="http://x.email.newsobserver.com/ats/url.aspx?cr=663&amp;wu=15#navlink=subnav">Newsletters</a></li>
+
+
+    </ul>
+
+                        </li>
+
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                My Subscription
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <b class="caret"></b>
+                            </a>
+
+    <ul class="dropdown-menu">
+
+
+                <li><a href="/customer-service/plus/#navlink=subnav">N&amp;O Plus</a></li>
+
+
+
+                <li><a href="https://account.newsobserver.com/my-account/#navlink=subnav">Manage Account</a></li>
+
+
+
+                <li><a href="/rewards/#navlink=subnav">Rewards</a></li>
+
+
+
+                <li><a href="/customer-service/e-edition/#navlink=subnav">E-edition</a></li>
+
+
+
+                <li><a href="/customer-service/newsletter-signup/#navlink=subnav">Newsletter Signup</a></li>
+
+
+
+                <li><a href="http://nie.newsobserver.com/#navlink=subnav">News in Education</a></li>
+
+
+    </ul>
+
+                        </li>
+
+
+
+                        <li class="nav-divider"></li>
+
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                News
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <b class="caret"></b>
+                            </a>
+
+    <ul class="dropdown-menu">
+
+
+                <li><a href="/news/#navlink=subnav">All News</a></li>
+
+
+
+                <li><a href="/news/local/news-columns-blogs/#navlink=subnav">Blogs</a></li>
+
+
+
+                <li><a href="/news/local/news-columns-blogs/#navlink=subnav">Columnists</a></li>
+
+
+
+                <li><a href="/news/local/crime/#navlink=subnav">Crime</a></li>
+
+
+
+                <li><a href="/news/local/education/#navlink=subnav">Education</a></li>
+
+
+
+                <li><a href="/news/business/health-care/#navlink=subnav">Health</a></li>
+
+
+
+                <li><a href="/news/local/#navlink=subnav">Local</a></li>
+
+
+
+                <li><a href="/news/nation-world/#navlink=subnav">Nation/World</a></li>
+
+
+
+                <li><a href="/news/business/technology/#navlink=subnav">Science</a></li>
+
+
+
+                <li><a href="/news/local/education/thumbs-up/#navlink=subnav">Thumbs Up</a></li>
+
+
+
+                <li><a href="/news/traffic/#navlink=subnav">Traffic</a></li>
+
+
+
+                <li><a href="/news/weather/#navlink=subnav">Weather</a></li>
+
+
+
+                <li><a href="/news/weird/#navlink=subnav">Weird News</a></li>
+
+
+
+                <li class="dropdown-header">Counties</li>
+
+
+
+                <li><a href="/news/local/counties/durham-county/#navlink=subnav">Durham County</a></li>
+
+
+
+                <li><a href="/news/local/counties/johnston-county/#navlink=subnav">Johnston County</a></li>
+
+
+
+                <li><a href="/news/local/counties/orange-county/#navlink=subnav">Orange County</a></li>
+
+
+
+                <li><a href="/news/local/counties/wake-county/#navlink=subnav">Wake County</a></li>
+
+
+    </ul>
+
+                        </li>
+
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                Sports
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <b class="caret"></b>
+                            </a>
+
+    <ul class="dropdown-menu">
+
+
+                <li><a href="/sports/#navlink=subnav">All Sports</a></li>
+
+
+
+                <li><a href="/sports/mlb/#navlink=subnav">Baseball</a></li>
+
+
+
+                <li><a href="/sports/nhl/carolina-hurricanes/#navlink=subnav">Canes</a></li>
+
+
+
+                <li><a href="/sports/college/#navlink=subnav">College</a></li>
+
+
+
+                <li><a href="/sports/spt-columns-blogs/#navlink=subnav">Columns &amp; Blogs</a></li>
+
+
+
+                <li><a href="/sports/high-school/#navlink=subnav">High Schools</a></li>
+
+
+
+                <li><a href="/sports/nascar-auto-racing/#navlink=subnav">NASCAR &amp; Auto Racing</a></li>
+
+
+
+                <li><a href="/sports/nba/#navlink=subnav">NBA</a></li>
+
+
+
+                <li><a href="/sports/nfl/#navlink=subnav">NFL</a></li>
+
+
+
+                <li><a href="/sports/nhl/#navlink=subnav">NHL</a></li>
+
+
+
+                <li><a href="/sports/olympics/#navlink=subnav">Olympics</a></li>
+
+
+
+                <li><a href="/sports/outdoors/#navlink=subnav">Outdoors</a></li>
+
+
+
+                <li><a href="/sports/nfl/carolina-panthers/#navlink=subnav">Panthers</a></li>
+
+
+
+                <li><a href="/sports/soccer/#navlink=subnav">Soccer</a></li>
+
+
+
+                <li class="dropdown-header">Schools</li>
+
+
+
+                <li><a href="/sports/college/acc/duke/#navlink=subnav">Duke</a></li>
+
+
+
+                <li><a href="/sports/college/aac/east-carolina-university/#navlink=subnav">East Carolina</a></li>
+
+
+
+                <li><a href="/sports/college/acc/nc-state/#navlink=subnav">NC State</a></li>
+
+
+
+                <li><a href="/sports/college/acc/unc/#navlink=subnav">North Carolina</a></li>
+
+
+    </ul>
+
+                        </li>
+
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                Politics
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <b class="caret"></b>
+                            </a>
+
+    <ul class="dropdown-menu">
+
+
+                <li><a href="/news/politics-government/#navlink=subnav">All Politics</a></li>
+
+
+
+                <li><a href="/news/politics-government/state-politics/#navlink=subnav">State Politics</a></li>
+
+
+
+                <li><a href="/news/politics-government/politics-columns-blogs/#navlink=subnav">Blogs</a></li>
+
+
+
+                <li><a href="/news/politics-government/politics-columns-blogs/#navlink=subnav">Columnists</a></li>
+
+
+
+                <li><a href="http://www.politifact.com/#navlink=subnav">PolitiFact</a></li>
+
+
+
+                <li><a href="http://www.politifact.com/north-carolina/#navlink=subnav">PolitiFact NC</a></li>
+
+
+
+                <li><a href="/news/politics-government/politics-columns-blogs/rob-christensen/#navlink=subnav">Rob Christensen</a></li>
+
+
+
+                <li><a href="/news/politics-government/politics-columns-blogs/under-the-dome/#navlink=subnav">Under the Dome</a></li>
+
+
+    </ul>
+
+                        </li>
+
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                Business
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <b class="caret"></b>
+                            </a>
+
+    <ul class="dropdown-menu">
+
+
+                <li><a href="/business/#navlink=subnav">All Business</a></li>
+
+
+
+                <li><a href="/news/business/biz-columns-blogs/#navlink=subnav">Blogs</a></li>
+
+
+
+                <li><a href="/news/business/biz-columns-blogs/#navlink=subnav">Columnists</a></li>
+
+
+
+                <li><a href="/news/business/health-care/#navlink=subnav">Health Care</a></li>
+
+
+
+                <li><a href="/news/business/personal-finance/#navlink=subnav">Personal Finance</a></li>
+
+
+
+                <li><a href="/news/business/real-estate-news/#navlink=subnav">Real Estate</a></li>
+
+
+
+                <li><a href="/news/business/small-business/#navlink=subnav">Shop Talk</a></li>
+
+
+
+                <li><a href="http://markets.financialcontent.com/mi.newsob/markets/#navlink=subnav">Stocks Center</a></li>
+
+
+
+                <li><a href="/news/business/technology/#navlink=subnav">Technology</a></li>
+
+
+    </ul>
+
+                        </li>
+
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                Living
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <b class="caret"></b>
+                            </a>
+
+    <ul class="dropdown-menu">
+
+
+                <li><a href="/living/#navlink=subnav">All Living</a></li>
+
+
+
+                <li><a href="/entertainment/ent-columns-blogs/video-now-blog/#navlink=subnav">Video Now</a></li>
+
+
+
+                <li><a href="/living/travel/best-kept-secrets/#navlink=subnav">Best-Kept Secrets</a></li>
+
+
+
+                <li><a href="/living/liv-columns-blogs/#navlink=subnav">Blogs</a></li>
+
+
+
+                <li><a href="/customer-service/announcements-celebrations/#navlink=subnav">Celebrations</a></li>
+
+
+
+                <li><a href="/entertainment/comics/#navlink=subnav">Comics</a></li>
+
+
+
+                <li><a href="http://www.trianglemom2mom.com/#navlink=subnav">Family</a></li>
+
+
+
+                <li><a href="/living/fashion/#navlink=subnav">Fashion</a></li>
+
+
+
+                <li><a href="/living/health-fitness/#navlink=subnav">Fitness</a></li>
+
+
+
+                <li><a href="/living/food-drink/#navlink=subnav">Food</a></li>
+
+
+
+                <li><a href="http://games.newsobserver.com/#navlink=subnav">Games and Puzzles</a></li>
+
+
+
+                <li><a href="/living/home-garden/#navlink=subnav">Home and Garden</a></li>
+
+
+
+                <li><a href="/entertainment/horoscopes/#navlink=subnav">Horoscopes</a></li>
+
+
+
+                <li><a href="/living/food-drink/mouthful-blog/#navlink=subnav">Mouthful</a></li>
+
+
+
+                <li><a href="/living/liv-columns-blogs/past-times/#navlink=subnav">Past Times</a></li>
+
+
+
+                <li><a href="/living/pets/#navlink=subnav">Pets</a></li>
+
+
+
+                <li><a href="/living/religion/#navlink=subnav">Religion</a></li>
+
+
+
+                <li><a href="/living/travel/#navlink=subnav">Travel</a></li>
+
+
+    </ul>
+
+                        </li>
+
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                Entertainment
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <b class="caret"></b>
+                            </a>
+
+    <ul class="dropdown-menu">
+
+
+                <li><a href="/entertainment/ent-columns-blogs/video-now-blog/#navlink=subnav">Video Now</a></li>
+
+
+
+                <li><a href="/entertainment/arts-culture/#navlink=subnav">Arts News</a></li>
+
+
+
+                <li><a href="http://artsnownc.com/#navlink=subnav">ArtsNow</a></li>
+
+
+
+                <li><a href="/entertainment/books/#navlink=subnav">Books</a></li>
+
+
+
+                <li><a href="/rewards/#navlink=subnav">Contests</a></li>
+
+
+
+                <li><a href="/entertainment/restaurants/#navlink=subnav">Dining</a></li>
+
+
+
+                <li><a href="/entertainment/#navlink=subnav">Entertainment</a></li>
+
+
+
+                <li><a href="http://events.triangle.com/#navlink=subnav">Events</a></li>
+
+
+
+                <li><a href="http://games.newsobserver.com/#navlink=subnav">Games</a></li>
+
+
+
+                <li><a href="/entertainment/movies-news-reviews/#navlink=subnav">Movies</a></li>
+
+
+
+                <li><a href="/entertainment/music-news-reviews/#navlink=subnav">Music</a></li>
+
+
+
+                <li><a href="http://www.triangle.com/#navlink=subnav">Nightlife</a></li>
+
+
+
+                <li><a href="/entertainment/tv/#navlink=subnav">Television</a></li>
+
+
+
+                <li><a href="/entertainment/music-news-reviews/on-the-beat-blog/#navlink=subnav">On the Beat</a></li>
+
+
+
+                <li><a href="/entertainment/tv/warm-tv-blog/#navlink=subnav">Happiness is a Warm TV</a></li>
+
+
+    </ul>
+
+                        </li>
+
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                Opinion
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <b class="caret"></b>
+                            </a>
+
+    <ul class="dropdown-menu">
+
+
+                <li><a href="/opinion/#navlink=subnav">All Opinion</a></li>
+
+
+
+                <li><a href="/opinion/opn-columns-blogs/#navlink=subnav">Columnists</a></li>
+
+
+
+                <li><a href="/opinion/editorial-cartoons/dwane-powell/#navlink=subnav">Dwane Powell</a></li>
+
+
+
+                <li><a href="/opinion/editorials/#navlink=subnav">Editorials</a></li>
+
+
+
+                <li><a href="/opinion/letters-to-the-editor/#navlink=subnav">Letters</a></li>
+
+
+
+                <li><a href="/opinion/opn-columns-blogs/opinion-shop/#navlink=subnav">Opinion Shop Blog</a></li>
+
+
+
+                <li><a href="/opinion/op-ed/#navlink=subnav">Other Views</a></li>
+
+
+
+                <li><a href="/opinion/letters-to-the-editor/submit-letter/#navlink=subnav">Submit a Letter</a></li>
+
+
+    </ul>
+
+                        </li>
+
+
+
+                        <li><a href="/obits/#navlink=subnav">Obituaries</a><li>
+
+
+
+                        <li class="nav-divider"></li>
+
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                Advertise
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <b class="caret"></b>
+                            </a>
+
+    <ul class="dropdown-menu">
+
+
+                <li><a href="http://www.nandomediacompany.com#navlink=subnav">Advertise with us</a></li>
+
+
+
+                <li><a href="/advertise/place-an-ad/#navlink=subnav">Place Ad</a></li>
+
+
+
+                <li><a href="http://triangle.adperfect.com/?catid=198#navlink=subnav">Apartments</a></li>
+
+
+
+                <li><a href="http://triangle.adperfect.com/?catid=201#navlink=subnav">Cars</a></li>
+
+
+
+                <li><a href="http://triangle.adperfect.com/?catid=197#navlink=subnav">Homes</a></li>
+
+
+
+                <li><a href="http://triangle.adperfect.com/?catid=191#navlink=subnav">Jobs</a></li>
+
+
+
+                <li><a href="http://www.newsobserver.com/advertise/classifieds/article18589503.html#navlink=subnav">Legals</a></li>
+
+
+
+                <li><a href="http://placead2.newsobserver.com#navlink=subnav">Obits/In Memoriams</a></li>
+
+
+
+                <li><a href="http://placead2.newsobserver.com#navlink=subnav">Weddings</a></li>
+
+
+    </ul>
+
+                        </li>
+
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                Shopping
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <b class="caret"></b>
+                            </a>
+
+    <ul class="dropdown-menu">
+
+
+                <li><a href="http://findnsave.newsobserver.com/#navlink=subnav">Local Deals</a></li>
+
+
+
+                <li><a href="http://triangle.dealsaver.com/#navlink=subnav">Today&#39;s Daily Deal</a></li>
+
+
+
+                <li><a href="http://findnsave.newsobserver.com/PrintCoupons#navlink=subnav">Grocery Coupons</a></li>
+
+
+
+                <li><a href="http://specialsections.newsobserver.com/SS/Tiles.aspx#navlink=subnav">Special Sections</a></li>
+
+
+
+                <li><a href="/advertise/circulars/#navlink=subnav">Today&#39;s Circulars</a></li>
+
+
+
+                <li><a href="/customer-service/subscription/zone-subscriber-rewards/#navlink=subnav">Rewards</a></li>
+
+
+
+                <li><a href="http://photostore.newsobserver.com/#navlink=subnav">Photo Store</a></li>
+
+
+    </ul>
+
+                        </li>
+
+
+
+                        <li><a href="http://www.newsobserver.com/classified-ads#navlink=subnav">Classifieds</a><li>
+
+
+
+                        <li><a href="https://jobs.triangle.com/#navlink=subnav">Jobs</a><li>
+
+
+
+                        <li><a href="http://www.startmoonlighting.com/mni/The-News-and-Observer/?utm_source=The-News-and-Observer&amp;utm_medium=navweblink&amp;utm_campaign=MNI#navlink=subnav">Moonlighting</a><li>
+
+
+
+                        <li><a href="/cars/#navlink=subnav">Cars</a><li>
+
+
+
+                        <li><a href="/homes/#navlink=subnav">Homes</a><li>
+
+
+
+                        <li><a href="http://www.legalnotice.org/pl/newsobserver/landing1.aspx#navlink=subnav">Legals</a><li>
+
+
+            </ul>
+        </div>
+    </nav>
+</div>
+<script type="text/javascript">
+
+jQuery('.dropdown > a').attr('data-target','#');
+
+// Make dropdowns work on hover at large breakpoint
+jQuery(function() {
+    jQuery("#masthead-container .dropdown").hover(
+        function(){ if ($(window).width() > 1200) { $(this).addClass('open') } },
+        function(){ if ($(window).width() > 1200) { $(this).removeClass('open') } }
+    );
+});
+
+// Make subnav same height as main nav
+$('#navbar-collapse-1').on('shown.bs.collapse', function () {
+var nav_height = jQuery("#main-nav .navbar-nav").height();
+jQuery("#main-nav .navbar-nav .dropdown-menu").css( "min-height", nav_height + "px" );
+});
+
+</script>
+
+            </div>
+        </div>
+    </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div id="leaderboard-ad" class="ad border-bottom">
+      <!-- mobile-leaderboard class is integrated with sticky-leaderboard.js -->
+        <div class="visible-xs mobile-leaderboard">
+            <div class="ad-widget" id="mn-gpt-3" adtype="default" pkg="b" data-ad-policy="onPageLoad" audience="all" atf="y" defaultsize="Extra-Small" Large="None" Medium="None" Small="None" Extra-Small="320x50" articleId="177205031"></div>
+        </div>
+        <div class="hidden-xs">
+            <div class="ad-widget" id="mn-gpt-4" adtype="default" pkg="d" data-ad-policy="onPageLoad" audience="all" atf="y" defaultsize="Large" Large="728x90" Medium="728x90" Small="728x90" Extra-Small="None" articleId="177205031"></div>
+        </div>
+    </div>
+</div>
+<section class="container story" role="main">
+    <div class="row story-rail-wrapper">
+
+        <div class="wide-rail">
+
+
+
+
+
+
+
+    <div class="lead-item">
+
+
+
+
+
+
+
+
+
+
+    <div class="img-container picture ">
+        <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="http://pics.mcclatchyinteractive.com/news/nation-world/l2j0sw/picture177281926/alternates/FREE_1140/catttte" media="(min-width: 992px)">
+            <source srcset="http://pics.mcclatchyinteractive.com/news/nation-world/l2j0sw/picture177281926/alternates/FREE_960/catttte" media="(min-width: 768px)">
+            <source srcset="http://pics.mcclatchyinteractive.com/news/nation-world/l2j0sw/picture177281926/alternates/FREE_768/catttte" media="(min-width: 601px)">
+            <source srcset="http://pics.mcclatchyinteractive.com/news/nation-world/l2j0sw/picture177281926/alternates/FREE_640/catttte" media="(min-width: 441px)">
+            <source srcset="http://pics.mcclatchyinteractive.com/news/nation-world/l2j0sw/picture177281926/alternates/FREE_480/catttte" media="(min-width: 320px)">
+            <!--[if IE 9]></video><![endif]-->
+
+            <img class="responsive-image"  srcset="http://pics.mcclatchyinteractive.com/news/nation-world/l2j0sw/picture177281926/alternates/FREE_1140/catttte" alt="" title="" />
+
+        </picture>
+
+</div>
+
+
+                <div class="caption">
+
+
+
+        <span class="photographer">Matney, Mandy</span>
+
+
+
+                </div>
+
+
+
+            <div class="lead-caption">
+
+
+
+
+
+        <span class="photographer">Matney, Mandy</span>
+
+
+
+
+
+            </div>
+
+    </div>
+    <script type="text/javascript">
+        setLeadImageSize();
+        $(window).resize(function() {
+            var clientWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            if (clientWidth > 767) {
+                $('.lead-item').find('.caption').hide();
+                $('.lead-item .lead-caption').show();
+            }
+            else {
+                $('.lead-item .lead-caption').hide();
+            }
+            setLeadImageSize();
+        });
+        $('.lead-item img').click(function(){
+            var elemWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            if(elemWidth < 768){
+                $('.lead-item .caption').slideToggle(250);
+            }
+        });
+        $(".lead-item .wps-caption-toggle").click(function(){
+            $('.lead-item .caption').slideToggle(250);
+        });
+        function setLeadImageSize() {
+            var leadWidth = $('.lead-item').width();
+            var leadHeight = Math.floor(leadWidth*11/16) + 'px';
+            $('.lead-item .img-container').css('max-height', leadHeight);
+            $('.lead-item img').css({'max-height': leadHeight, 'max-width': leadWidth});
+        }
+    </script>
+
+
+
+
+
+
+
+            <div id="story-header">
+                <h2 class="heading section-main-heading link">
+                    <a href="http://www.newsobserver.com/news/nation-world/">Nation & World</a>
+                </h2>
+
+                <h3 class="title">Fed up with catcalling, she took 24 selfies with smiling men who she says harassed her</h3>
+            </div>
+            <div id="story-body-items"><div class="byline element-spacing-small">
+                        <p>By Mandy Matney</p><p><a href="mailto:mmatney@islandpacket.com" title="">mmatney@islandpacket.com</a></p>
+                    </div>
+                <div class="share-tools-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(window).scroll(function() {
+    var windowCurrentPos = $(window).scrollTop();
+    var scrollTopPos = $("#story-body-items").offset().top-50;
+    var scrollEndPos = $("#commenting-container").offset().top;
+    if(windowCurrentPos >= scrollEndPos || windowCurrentPos < scrollTopPos) {
+        $(".share-tools-wrapper").removeClass("sticky-tools");
+    }
+    else {
+        $(".share-tools-wrapper").addClass("sticky-tools");
+    }
+});
+</script>
+<ul class="share-icons">
+    <li class="facebook">
+
+
+                <a class="facebook-share" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http://www.newsobserver.com/news/nation-world/article177205031.html" onclick="popupFunction(this.href, 5393);return false;"></a>
+
+
+        <div class="glyphicon glyphicon-facebook"></div>
+    </li>
+    <li class="twitter">
+
+            <a title="Share on Twitter" href="https://twitter.com/share?text=Fed up with catcalling, she took 24 selfies with smiling men who she says harassed her&amp;url=http://www.newsobserver.com/news/nation-world/article177205031.html" onclick="popupFunction(this.href, 5349);return false;"></a>
+
+        <div class="glyphicon glyphicon-twitter"></div>
+    </li>
+
+    <li class="email">
+
+            <a title="Share by Email" href="mailto:?subject=Fed up with catcalling, she took 24 selfies with smiling men who she says harassed her&body=http://www.newsobserver.com/news/nation-world/article177205031.html" onclick="nextbee.credit_share_articles(5342);"></a>
+
+        <div class="glyphicon glyphicon-envelope"></div>
+    </li>
+    <li class="more" onClick="return true">
+        <ul class="share-options">
+
+                <li class="linked-in"><a id="linkedInId" title="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.newsobserver.com/news/nation-world/article177205031.html&title=Fed up with catcalling, she took 24 selfies with smiling men who she says harassed her"><span class="glyphicon glyphicon-linkedin"></span>LinkedIn</a></li>
+
+
+                <li class="google"><a title="Share on Google Plus" href="https://plus.google.com/share?url=http://www.newsobserver.com/news/nation-world/article177205031.html" onclick="popupFunction(this.href, 5384);return false;"><span class="glyphicon glyphicon-google-plus"></span>Google+</a></li>
+
+
+                <li class="pinterest"><a id="pinterestId" title="Share on Pinterest" href="http://www.pinterest.com/pin/create/button/?url=http://www.newsobserver.com/news/nation-world/article177205031.html&description=Fed up with catcalling, she took 24 selfies with smiling men who she says harassed her&media=http://pics.mcclatchyinteractive.com/news/nation-world/l2j0sw/picture177281926/alternates/LANDSCAPE_1140/catttte"><span class="glyphicon glyphicon-pinterest-p"></span>Pinterest</a></li>
+
+            <li class="reddit"><a title="Share on Reddit" href="http://www.reddit.com/submit?url=http://www.newsobserver.com/news/nation-world/article177205031.html"><span class="glyphicon glyphicon-reddit"></span>Reddit</a></li>
+            <li class="print"><a title="Print" href="javascript:window.print();"><span class="glyphicon glyphicon-print"></span>Print</a></li>
+            <li class="reprints"><a title="Reprints" href="http://www.mcclatchyreprints.com">Order Reprint of this Story</a></li>
+        </ul>
+        <div class="glyphicon glyphicon-share"></div>
+    </li>
+</ul>
+<script>
+    if(checkUserSubscribed('MPPUser')){
+
+            document.getElementById('linkedInId').onclick = function() {
+                nextbee.credit_share_articles(5412, this.href);
+                return false;
+            }
+
+
+
+            document.getElementById('pinterestId').onclick = function() {
+                nextbee.credit_share_articles(5363, this.href);
+                return false;
+            }
+
+    }
+
+
+    function popupFunction(url, widgId) {
+        window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');
+        nextbee.credit_share_articles(widgId);
+    }
+</script>
+
+                </div>
+
+                <p class="published-date">
+
+                                 October 05, 2017 1:33 PM
+
+                </p>
+
+                <div class="dateline-storybody">
+
+                    <div id="story-target" class="clearfix">
+                        <div id="content-body-" class="content-body">
+
+
+
+                                <p>Noa Jansma was tired of men yelling random, obscene, repulsive “pick-up lines” as she passed on the street, which <a href="http://www.stopstreetharassment.org/2017/07/new-research-new-campaign/" target="_blank" title="">studies show happens to a majority of women</a>.</p>
+
+
+
+
+                                <p>So the 21-year-old from Amsterdam started an Instagram project she calls #<a href="https://www.instagram.com/dearcatcallers/" target="_blank" title="">DearCatcallers</a>. Jansma took 24 selfies with men she accused of catcalling her in the past month “to create awareness about the objectification of women in my daily life.”</p>
+
+
+
+
+                                <p>“By making the selfie, both the objectifier and the object are assembled in one composition,” Jansma wrote on Instagram. “Myself, as the object, standing in front of the catcallers represents the reversed power ratio which is caused by this project."</p>
+
+
+
+
+                                <p>Jansma said she was <a href="http://www.independent.co.uk/life-style/woman-selfies-street-harrassers-harrassment-catcalls-men-instagram-noa-jansma-a7983991.html" target="_blank" title="">catcalled more than the 24 times</a> she took a photo, but only did so when she felt safe, according to the Independent.</p>
+
+                                    <div id="newsletter-signUpWidget"></div>
+                                    <script type="text/javascript">
+                                    var randomUrl = getRandomUrl('http://x.email.newsobserver.com/ats/url.aspx?cr=663&wu=216,http://x.email.newsobserver.com/ats/url.aspx?cr=663&wu=230,http://x.email.newsobserver.com/ats/url.aspx?cr=663&wu=235');
+                                    $("<iframe/>", {
+                                        "class" : "col-xs-12",
+                                        "src" : randomUrl,
+                                        "scrolling" : "no",
+                                        "frameborder" : "no"
+                                    }).appendTo("#newsletter-signUpWidget");
+                                    </script>
+
+
+
+
+                                <p>She said only <a href="http://www.independent.co.uk/life-style/woman-selfies-street-harrassers-harrassment-catcalls-men-instagram-noa-jansma-a7983991.html" target="_blank" title="">one man asked why she was taking the selfie</a>, according to Dutch newspaper Het Parool, as reported and translated by The Independent. </p>
+
+
+
+
+
+
+    <div class="ad visible-xs" >
+        <div class="ad-widget" id="mn-gpt-5" adtype="default" pkg="c" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Extra-Small" Large="None" Medium="None" Small="None" Extra-Small="300x250" articleId="177205031"></div>
+    </div>
+
+        <script type='text/template' id='perfectpixeltop-template'>
+
+
+
+
+
+
+
+
+            <script src="http://launch.newsinc.com/js/embed.js" id="_nw2e-js"></script>
+            <script type="text/javascript">var _informq = _informq || []; _informq.push(['embed']);</script>
+
+        <div class="inform-embed" data-placement-id="inform-video-player-1" data-config-distributor-id="91219" data-config-width="100%" data-config-height="9/16w"></div>
+
+
+         </script><div id='perfectpixeltop-target'></div><script> lazyLoadingModule("perfectpixeltop-template", "perfectpixeltop-target", "perfectpixel",500, undefined, undefined, undefined, "undefined", "undefined", "true" ,"", "undefined","undefined"); </script>
+
+
+
+
+
+                                <p>In the photos, Jansma appears stone cold, angry and annoyed while her catcallers are laughing, touching her and gleeful, as if it’s all a joke.</p>
+
+
+
+
+                                <p>"They're not at all suspicious because they find what they do completely normal," she told Het Parool. </p>
+
+
+
+
+                                <p>She also includes disturbing captions that include the exact phrases she alleges her catcallers said. </p>
+
+
+
+
+                                <p>"I know what I would do with you, baby."</p>
+
+
+
+
+                                <p>"God bless, When I see you, all I get is wild thoughts, wild, Wild Thoughts!!" </p>
+
+
+
+
+
+
+    <div class="ad visible-xs" >
+        <div class="ad-widget" id="mn-gpt-6" adtype="default" pkg="e" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Extra-Small" Large="None" Medium="None" Small="None" Extra-Small="300x250" articleId="177205031"></div>
+    </div>
+
+
+
+
+
+                                <p>Her account has more than 69,000 followers and has been praised by women around the world who can relate, calling her “brave” and “inspiring.” But some of the comments represent the exact attitude she is fighting. </p>
+
+
+
+
+                                <p>“What do u expect, u pretty. and thumbs up to the brave men not scared to tell u that,” one commenter wrote.</p>
+
+
+
+
+                                <p>A British journalist started a similar project, Cheer Up Luv, where she photographs women where they were harassed to raise awareness of sexual objectification and harassment. </p>
+
+
+
+
+                                <p>In 2014, a New York woman’s YouTube video recording of“10 hours of walking in NYC as a woman” went viral. </p>
+
+
+
+
+                                <div class="ng_mm_link1"><div class="videowrapper"><iframe allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/b1XGPvbWn0A" width="560"> </iframe></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="ad visible-xs" >
+        <div class="ad-widget" id="mn-gpt-7" adtype="default" pkg="f" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Extra-Small" Large="None" Medium="None" Small="None" Extra-Small="300x250" articleId="177205031"></div>
+    </div>
+
+
+
+
+
+                                <p>Though Jansma’s 30-day project has ended, she wants to continue the fight against catcalling by encouraging women around the world to send her #DearCatcallers selfies. </p>
+
+
+
+
+                                <p>“My month of posts has ended, but it doesn't mean that catcallers are in the past as well,” Jansma wrote. “To show that it's a global phenomenon and that this art-project is not only about me, I'll pass on the account to different girls around the world. This will be a process and it will take time, so please stay tuned."</p>
+
+
+
+
+
+                        </div>
+                        <div class="hidden">
+                            <div class="ad-widget" id="mn-gpt-8" adtype="default" pkg="None" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Large" Large="336x280" Medium="336x280" Small="336x280" Extra-Small="336x280" articleId="177205031"></div>
+                        </div>
+
+
+                                <!-- Nothing is configured -->
+
+
+
+                                <!-- Nothing is configured -->
+
+
+
+                                <!-- Nothing is configured -->
+
+
+
+
+
+
+
+
+
+                            <div id="story-cta-widget" class="subscription-cta-widget cta-fullwidth">
+                                <h2 class="widget-title">Never miss a local story.</h2>
+                                <p class="widget-subhead">Sign up today for a free 30 day free trial of unlimited digital access.</p>
+                                <div class="btn btn-primary widget-button">
+                                    <a href="https://account.newsobserver.com/subscribe/create?param=fHVFCUY=">SUBSCRIBE NOW</a>
+                                </div>
+                                <script type="text/javascript">
+                                    if(!getSubscribedFlag)
+                                    {
+                                        document.getElementById('story-cta-widget').style.display = "block";
+                                    } else {
+                                        document.getElementById('story-cta-widget').style.display = "none";
+                                    }
+                                </script>
+                            </div>
+
+                    </div>
+                </div>
+
+
+
+
+    <script class="tout-sdk tout-sdk-script-tag">
+    !function(){var TOUT=window.TOUT=window.TOUT||{},utils={getCanonicalLinkHref:function(){for(var links=document.getElementsByTagName("link"),i=0;i<links.length;i++)if("canonical"===links[i].getAttribute("rel"))return links[i].getAttribute("href");return""},getMetaTagContentByProperty:function(metaTagProperty){for(var metaTags=document.getElementsByTagName("meta"),i=0;i<metaTags.length;i++)if(metaTags[i].getAttribute("property")===metaTagProperty)return metaTags[i].getAttribute("content");return""},getWindowLocationOrigin:function(){return window.location.protocol+"//"+window.location.host},getCanonicalUrl:function(){var canonicalUrl=utils.getCanonicalLinkHref()||utils.getMetaTagContentByProperty("og:url");return canonicalUrl&&"/"===canonicalUrl[0]&&(canonicalUrl=utils.getWindowLocationOrigin()+canonicalUrl),canonicalUrl},getOgUrl:function(){var ogUrl=utils.getMetaTagContentByProperty("og:url");return ogUrl&&"/"===ogUrl[0]&&(ogUrl=utils.getWindowLocationOrigin()+ogUrl),ogUrl},getRelCanonical:function(){var relCanonical=utils.getCanonicalLinkHref();return relCanonical&&"/"===relCanonical[0]&&(relCanonical=utils.getWindowLocationOrigin()+relCanonical),relCanonical},getExternalArticleId:function(){return utils.getMetaTagContentByProperty("tout:article:id")},getCurrentProtocol:function(){return"https:"===document.location.protocol?"https:":"http:"},getPlatformHost:function(){return TOUT.SDK_HOST||"platform.tout.com"}};TOUT.mapAsyncFetchApp={init:function(brandUid,options){this.brandUid=brandUid,this.active=!0,this.productFetched=!1,this.dataLoaded=!1,this.startedSuccessfully=!1,this.options=options||{},this.options.paramsWhitelist||(this.options.paramsWhitelist=["brand_uid","external_article_id","og_url","window_location","rel_canonical","async_fetch"])},fetch:function(){var script=document.createElement("script"),src=utils.getCurrentProtocol()+"//"+utils.getPlatformHost()+"/mid_article_player.js",params=TOUT.mapAsyncFetchApp.getMidArticleQueryParams(),joinCharacter="?";for(var param in params)params.hasOwnProperty(param)&&""!==params[param]&&(src+=joinCharacter+param+"="+encodeURIComponent(params[param]),joinCharacter="&");script.src=src;var firstScript=document.getElementsByTagName("script")[0];firstScript.parentNode.insertBefore(script,firstScript)},start:function(){this.productFetched&&this.dataLoaded&&!this.startedSuccessfully&&(this.startedSuccessfully=!0,TOUT.midArticleProductLoader.start(TOUT.data.mid_article_player_experiment))},getMidArticleQueryParams:function(){var params={};return this._whitelistContains("brand_uid")&&(params.brand_uid=this.brandUid),this._whitelistContains("content_referrer")&&(params.content_referrer=document.referrer),this._whitelistContains("external_article_id")&&(params.external_article_id=utils.getExternalArticleId()),this._whitelistContains("og_url")&&(params.og_url=utils.getOgUrl()),this._whitelistContains("window_location")&&(params.window_location=document.location.href),this._whitelistContains("rel_canonical")&&(params.rel_canonical=utils.getRelCanonical()),this._whitelistContains("async_fetch")&&(params.async_fetch=!0),params},_whitelistContains:function(value){return this.options.paramsWhitelist&&this.options.paramsWhitelist.indexOf(value)>-1}}}();
+    !function(){var TOUT=window.TOUT=window.TOUT||{};if(console&&console.log&&console.log("Tout SDK: "+ +new Date),!TOUT._sdkScriptTagParsedAt){TOUT._sdkScriptTagParsedAt=new Date,TOUT.EMBED_CODE_VERSION="1.2.0";var sdkHost=TOUT.SDK_HOST||"platform.tout.com",sdkProtocol=TOUT.SDK_PROTOCOL||("https:"==window.location.protocol?"https:":"http:"),analyticsHost=TOUT.SDK_ANALYTICS_HOST||"analytics.tout.com",analyticsProtocol=TOUT.SDK_ANALYTICS_PROTOCOL||sdkProtocol;TOUT.onReady=TOUT.onReady||function(func){return TOUT._onReadyQueue=TOUT._onReadyQueue||[],TOUT._onReadyQueue.push(func),TOUT},TOUT.fireSimpleAnalyticsPixel=function(trigger_name,attrs){var img=new Image,url=analyticsProtocol+"//"+analyticsHost+"/events?trigger="+trigger_name;for(var attr in attrs)attrs.hasOwnProperty(attr)&&(url+="&"+attr+"="+encodeURIComponent(attrs[attr]));return img.src=url,img},TOUT.init=function(brandUid,options){options=options||{};var sdkScriptId="tout-js-sdk";if(document.getElementById(sdkScriptId)&&!options.forceInit)return TOUT;if(brandUid=TOUT.SDK_BRAND_UID||brandUid,"undefined"==typeof brandUid||"string"!=typeof brandUid||0===brandUid.length||brandUid.length>7)return TOUT.fireSimpleAnalyticsPixel("sdk_log",{log_level:"error",log_message:"BRAND_UID_NOT_DEFINED",content_page_url:window.location.href}),console&&console.error&&console.error("TOUT - Invalid Brand UID: "+brandUid),TOUT;TOUT._initOptions=options;var script=document.createElement("script");script.type="text/javascript",script.src=sdkProtocol+"//"+sdkHost+"/sdk/v1/"+brandUid+".js",script.id=sdkScriptId,script.className="tout-sdk";var firstScript=document.getElementsByTagName("script")[0];return firstScript.parentNode.insertBefore(script,firstScript),TOUT.fireSimpleAnalyticsPixel("sdk_initialized",{content_brand_uid:brandUid,sdk_embed_code_version:TOUT.EMBED_CODE_VERSION,content_page_url:window.location.href}),TOUT}}}();
+    (function(){
+      var brandUid = "c53d4f";
+      TOUT.mapAsyncFetchApp.init(brandUid);
+      TOUT.init(brandUid);
+      TOUT.mapAsyncFetchApp.fetch();
+    })();
+    </script>
+
+
+
+
+    <script>
+        ! function() {
+            var tagalongWidth = 325;
+            if (window.innerWidth <= 320) {
+                tagalongWidth = window.innerWidth / 2
+            }
+            if (window.innerWidth > 320 && window.innerWidth <= 768) {
+                tagalongWidth = window.innerWidth * 0.4
+            }
+            if (window.innerWidth > 768 && window.innerWidth < 1367) {
+                tagalongWidth = window.innerWidth / 3
+            }
+            if (tagalongWidth > 325) {
+                tagalongWidth = 325
+            }
+            document.body.addEventListener('ToutSDKLoad', function(evt) { //wait for SDK to load
+                TOUT.model.setMixinSettings('TagAlong', { //change width of tagalong unit before player is created
+                    popoutWidth: tagalongWidth
+                })
+            })
+        }();
+    </script>
+
+
+    <div class="tout-sdk tout-below-article"></div>
+
+
+
+                    <script type='text/template' id='perfectpixelbottom-template'>
+
+
+
+
+
+
+
+
+            <script src="http://launch.newsinc.com/js/embed.js" id="_nw2e-js"></script>
+            <script type="text/javascript">var _informq = _informq || []; _informq.push(['embed']);</script>
+
+        <div class="inform-embed" data-placement-id="inform-video-player-2" data-config-distributor-id="91219" data-config-width="100%" data-config-height="9/16w"></div>
+
+
+                     </script><div id='perfectpixelbottom-target'></div><script> lazyLoadingModule("perfectpixelbottom-template", "perfectpixelbottom-target", "perfectpixel",500, undefined, undefined, undefined, "undefined", "undefined", "true" ,"", "undefined","undefined"); </script>
+
+
+
+
+
+
+
+    <script type='text/template' id='zerg-template'>
+        <div id="vendor-stories-content">
+            <h2 class='heading vendor-storiescontent-heading'>Suggested for you</h2>
+        </div>
+        <div class="vendor-storiescontent-main-container" id="zergnet-widget-53321"></div>
+     </script><div id='zerg-target'></div><script> lazyLoadingModule("zerg-template", "zerg-target", "zerg",500, undefined, undefined, undefined, "undefined", "53321", "true" ,"", "undefined","undefined"); </script>
+
+
+
+                <div id="commenting-container" class="commenting-container element-spacing-large">
+
+                        <h2 class="heading link">
+    <a class="comments-toggle" href="javascript:void(0);">
+        <span class="glyphicon glyphicon-comment-o"></span>&nbsp; Comments &nbsp;<span class="glyphicon glyphicon-chevron-down rotate"></span>
+    </a>
+</h2>
+
+<!--Needs to be on the DOM on page load for IE. Needs to be visible to set the correct height of the comment component. I'm hiding it on document ready. Appending it later did not work-->
+<div id="fb-comments" class="fb-comments in" data-href="" data-width="100%" data-numposts="10"></div>
+
+<script>
+(function(){
+  var $commentingContainer = $('#commenting-container'),
+      $commentContainerChevron = $commentingContainer.find(".glyphicon-chevron-down"),
+      $fbComments = $("#fb-comments");
+
+    if($("meta[property='fb:app_id']").length === 1 && $("meta[name='allow-comments']").prop("content") === "true") {
+
+      $commentingContainer.on('click', 'a.comments-toggle', function(){
+        if (typeof mi.commenting === "undefined") {
+            mi.commenting = new mi.Commenting();
+            mi.commenting.setConf( {
+                accountName: mi.pageInfo.getConf('marketInfo.domain'),
+                fbapp_id: mi.pageInfo.getConf('facebook.app.id'),
+                fb_comment_div: {'data-width': '100%'}
+            });
+            mi.commenting.display();
+            FB.XFBML.parse(document.getElementById("fb-comments"));
+        }
+
+        toggleComments();
+      });
+
+      $(document).ready(function(){
+        toggleComments();
+      });
+
+    } else {
+
+        var disabledText = 'Comments have been disabled for this story.';
+        $fbComments.prepend("<p><strong>" + disabledText + "</strong></p>");
+
+    }
+
+    //toggleClass() wasn't working in IE the first time if it has the class
+    function toggleComments(){
+      if ($fbComments.hasClass('in')) {
+          $fbComments.removeClass('in');
+          $commentContainerChevron.removeClass("rotate");
+      }else {
+          $fbComments.addClass('in');
+          $commentContainerChevron.addClass("rotate");
+      }
+    }
+})();
+</script>
+
+
+                </div>
+            </div>
+            <div id="nativoArticlePage" ></div>
+        </div>
+
+
+
+<div class="narrow-rail">
+    <div class="ad hidden-xs">
+        <div class="ad-widget" id="mn-gpt-9" adtype="default" pkg="b" data-ad-policy="onPageLoad" audience="all" atf="y" defaultsize="Large" Large="Flex Ad" Medium="Flex Ad" Small="300x250" Extra-Small="None" articleId="177205031"></div>
+    </div>
+    <div class="element-spacing-medium">
+        <div id="video-widget" class="headline-list">
+            <h2 class="heading link"><a href="/video/">Videos</a></h2>
+            <div class="teaser">
+                <div id="container-177205031-1507290501534" class="container-177205031-1507290501534">
+
+
+
+
+<div class="wf-wps-side-bar">
+<div class="mi-video-sidebar-widget" id="video-detail--1507290501650">
+    <div id="video-container--1507290501650">
+
+
+
+
+
+
+<script type='text/template' id='videosidebar-template-'>
+
+<div id="video-detail--1507290501650" class="media-wrap">
+    <div class="video-media" data-id="" data-index>
+        <div id="player--1507290501650" class="player" data-id="">
+            <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; background: url('') no-repeat center center; background-size: cover;">
+        </div>
+    </div>
+
+    <div class="mi-video-utility-bar share-icons  hide">
+
+        <a class="mi-video-share-btn mi-video-utility-item" data-item="share-rail" >
+         <span class="glyphicon glyphicon-share" title="Share" ></span>
+        </a>
+        <a class="mi-video-embed-btn mi-video-utility-item" data-item="embed-rail" >
+            <span class="glyphicon glyphicon-code" title="Embed Links" ></span>
+        </a>
+        <a class="mi-video-info-btn mi-video-utility-item" data-item="info-rail" >
+            <span class="glyphicon glyphicon-info-circle" title="Info" ></span>
+        </a>
+    </div>
+        <div id="mi-video-overlay--1507290501650" class="mi-video-custom-overlay-wrap" >
+    <div class="mi-video-eos-wrap">
+    <h3 class="mi-video-overlay-title">More Videos</h3>
+
+    <div class="mi-video-eos">
+
+    </div>
+</div>
+
+    <div class="mi-video-share-wrap">
+    <span class="mi-video-close-share glyphicon glyphicon-remove"></span>
+    <ul class="video-share-icons video">
+        <li class="embed">
+            <div class="form-group">
+                <label>Video Link</label>
+                <textarea class="mi-share-link" readonly="true" ></textarea>
+                <button class="btn btn-primary select-btn">copy</button>
+            </div>
+            <div class="form-group">
+                <label>Embed Code</label>
+                <textarea class="overlay-embed-share" readonly="true" ></textarea>
+                <button class="btn btn-primary select-btn">copy</button>
+            </div>
+        </li>
+        <li class="facebook">
+            <a class="facebook-share"
+               href=""
+               onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');return false;"
+               title="Share on Facebook">
+                <span class="glyphicon glyphicon-facebook"></span>
+                <span class="utility-text">Facebook</span>
+            </a>
+        </li>
+        <li class="twitter">
+            <a class="twitter-share"
+               href=""
+               onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');return false;"
+               title="Share on Twitter">
+                <span class="glyphicon glyphicon-twitter"></span>
+                <span class="utility-text">Twitter</span>
+            </a>
+        </li>
+        <li class="email">
+            <a class="email-share" href="">
+                <span class="glyphicon glyphicon-envelope"></span>
+                <span class="utility-text">Email</span>
+            </a>
+        </li>
+        <li class="media-det">
+
+
+                <h4 class="media-title">Feinstein introduces legislation to close 'automatic weapons loophole' after Las Vegas shooting</h4>
+                <p class="media-leadtext">Sen. Dianne Feinstein on Wednesday introduced legislation to close what she calls an automatic weapons loophole that allows gun owners to convert semi-automatic rifles into rapid-fire automatic machines. The gunman who killed 59 people and injured more than 500 others in Las Vegas, Nevada had a dozen guns that were outfitted with a “bump stock” device.
+</p>
+
+        </li>
+    </ul>
+</div>
+
+</div>
+
+
+    </div>
+</div>
+
+
+
+ </script><div id='videosidebar-target-'></div><script> lazyLoadingModule("videosidebar-template-", "videosidebar-target-", "videosidebar",500, [{"id":"177211886","asset_type":"videoIngest","url":"http://www.newsobserver.com/news/nation-world/national/article177211886.html","duration":"1:44","image":"http://www.newsobserver.com/news/nation-world/national/n97f0s-feinsteinKEY/alternates/LANDSCAPE_768/feinsteinKEY","title":"Feinstein introduces legislation to close 'automatic weapons loophole' after Las Vegas shooting","description":"Feinstein introduces legislation to close 'automatic weapons loophole' after Las Vegas shooting <span class=\"title-duration\">1:44</span>","displayDescription":"Sen. Dianne Feinstein on Wednesday introduced legislation to close what she calls an automatic weapons loophole that allows gun owners to convert semi-automatic rifles into rapid-fire automatic machines. The gunman who killed 59 people and injured more than 500 others in Las Vegas, Nevada had a dozen guns that were outfitted with a “bump stock” device.\n","videographer":"C-SPAN","credit":"","published":1507226519,"sources":[{"file":"http://dr6lcqo3bxtwa.cloudfront.net/binary/2017/10/5/17/1437582013143-p5k4ma/FeinsteinGunLegislation-1507226516387.mp4"},{"file":"http://dr6lcqo3bxtwa.cloudfront.net/binary/2017/10/5/17/1437580321678-6bjrso/FeinsteinGunLegislation-1507226517110.mp4"},{"file":"http://dr6lcqo3bxtwa.cloudfront.net/binary/2017/10/5/17/art_177211886/FeinsteinGunLegislation.m3u8"}],"mediaid":"","ads":[{"publication":"newsobserver","tag":"http://pubads.g.doubleclick.net/gampad/ads?ciu_szs=300x250&correlator=%5Btimestamp%5D&cust_params=sect%3Dnational%26id%3D177211886%26eid%3D177205031%26vidlength%3Dlong%26pl%3D&env=vp&gdfp_req=1&hl=en&impl=s&iu=%2F7675%2FRAL.site_newsobserver%2FNews%2FNational&output=vast&sz=400x300&unviewed_position_start=1&url=%5Breferrer_url%5D&vidlength=long&vpos=preroll","lang":"en","sz":"400x300","vpos":"preroll","cust_params":"sect=national&id=177211886&eid=177205031&vidlength=long&pl="}]},{"id":"177178211","asset_type":"videoIngest","url":"http://www.newsobserver.com/news/nation-world/national/article177178211.html","duration":"3:25","image":"http://www.newsobserver.com/news/nation-world/national/ykrngb-bumpstock.KEY/alternates/LANDSCAPE_768/bumpstock.KEY","title":"'Bump stock:' Watch a demonstration and learn how the gun device works","description":"'Bump stock:' Watch a demonstration and learn how the gun device works <span class=\"title-duration\">3:25</span>","displayDescription":"The deadly Las Vegas shooting brought to light the use of a device called a \"bump stock,” which allows a semi-automatic rifle to mimic a fully automatic ones. Critics say that the device disregards current federal restrictions on automatic guns, but a gun store owner in Texas disagrees.","videographer":"AP","credit":"","published":1507222515,"sources":[{"file":"http://dr6lcqo3bxtwa.cloudfront.net/binary/2017/10/5/15/1437582013143-p5k4ma/APGunStoreVideo_1_1-1507222511228.mp4"},{"file":"http://dr6lcqo3bxtwa.cloudfront.net/binary/2017/10/5/15/1437580321678-6bjrso/APGunStoreVideo_1_1-1507222512125.mp4"},{"file":"http://dr6lcqo3bxtwa.cloudfront.net/binary/2017/10/5/15/art_177178211/APGunStoreVideo_1_1.m3u8"}],"mediaid":"8BD7L3cu","ads":[{"publication":"newsobserver","tag":"http://pubads.g.doubleclick.net/gampad/ads?ciu_szs=300x250&correlator=%5Btimestamp%5D&cust_params=sect%3Dnational%26id%3D177178211%26eid%3D177205031%26vidlength%3Dlong%26pl%3D&env=vp&gdfp_req=1&hl=en&impl=s&iu=%2F7675%2FRAL.site_newsobserver%2FNews%2FNational&output=vast&sz=400x300&unviewed_position_start=1&url=%5Breferrer_url%5D&vidlength=long&vpos=preroll","lang":"en","sz":"400x300","vpos":"preroll","cust_params":"sect=national&id=177178211&eid=177205031&vidlength=long&pl="}]},{"id":"176917086","asset_type":"videoIngest","url":"http://www.newsobserver.com/news/nation-world/national/article176917086.html","duration":"3:06","image":"http://www.newsobserver.com/news/nation-world/national/dgemt5-bodycamKEY/alternates/LANDSCAPE_768/bodycamKEY","title":"Bodycam footage shows the chaos as police try to locate Las Vegas shooter, evacuate citizens","description":"Bodycam footage shows the chaos as police try to locate Las Vegas shooter, evacuate citizens <span class=\"title-duration\">3:06</span>","displayDescription":"WARNING: PROFANITY AND GUNFIRE. Las Vegas Metropolitan Police on October 3 released bodycam footage from officers at the scene of a mass shooting near Mandalay Bay hotel on the evening of Sunday, October 1. Undersheriff Kevin McMahill narrates this footage during a press conference, saying the footage showed officers hunkering down behind a wall that “faces Mandalay Bay,” while trying to determine the direction of the shooting. Loud bangs, as well as screams and sobs from the crowd, can be heard in the video.","videographer":"Las Vegas Metropolitan Police","credit":"","published":1507127655,"sources":[{"file":"http://dr6lcqo3bxtwa.cloudfront.net/binary/2017/10/4/14/1437582013143-p5k4ma/VegasBodyCamNarration_1-1507127651195.mp4"},{"file":"http://dr6lcqo3bxtwa.cloudfront.net/binary/2017/10/4/14/1437580321678-6bjrso/VegasBodyCamNarration_1-1507127651965.mp4"},{"file":"http://dr6lcqo3bxtwa.cloudfront.net/binary/2017/10/4/14/art_176917086/VegasBodyCamNarration_1.m3u8"}],"mediaid":"vFF6nzCr","ads":[{"publication":"newsobserver","tag":"http://pubads.g.doubleclick.net/gampad/ads?ciu_szs=300x250&correlator=%5Btimestamp%5D&cust_params=sect%3Dnational%26id%3D176917086%26eid%3D177205031%26vidlength%3Dlong%26pl%3D&env=vp&gdfp_req=1&hl=en&impl=s&iu=%2F7675%2FRAL.site_newsobserver%2FNews%2FNational&output=vast&sz=400x300&unviewed_position_start=1&url=%5Breferrer_url%5D&vidlength=long&vpos=preroll","lang":"en","sz":"400x300","vpos":"preroll","cust_params":"sect=national&id=176917086&eid=177205031&vidlength=long&pl="}]}], {"wpsInclude":false,"wpsArea":null,"autoPlay":false,"pubName":"newsobserver","embed":false,"cacheBust":"072bacd","iterator":10,"uniqueID":"-1507290501650","paywallEnabled":true,"domainName":"www.newsobserver.com","pubId":"15","baseTemplate":"story"}, [], "undefined", "undefined", "undefined" ,"", "undefined","undefined"); </script>
+
+
+
+
+        <div class="video-details">
+            <time class="published-date timeago hidden">18 hours ago</time>
+            <h2 class="title video-title">
+                <a href="http://www.newsobserver.com/news/nation-world/national/article177211886.html">Feinstein introduces legislation to close 'automatic weapons loophole' after Las Vegas shooting</a>
+            </h2>
+        </div>
+    </div>
+    <div id="playlist--1507290501650">
+        <div class="mi-playlist-sidebar">
+
+
+                    <a class="playlist-item" href="#0" data-index="0">
+                        <div class="media posterframe-wrapper">
+                            <img src="http://www.newsobserver.com/news/nation-world/national/n97f0s-feinsteinKEY/alternates/LANDSCAPE_200/feinsteinKEY" alt="Feinstein introduces legislation to close 'automatic weapons loophole' after Las Vegas shooting"/>
+                            <span class="glyphicon glyphicon-play-circle"></span>
+                            <span class="duration">1:44</span>
+                        </div>
+                        <div class="media-desc">
+                            <time class="published-date hidden">18 hours ago</time>
+                            <h4 class="title video-title">Feinstein introduces legislation to close 'automatic weapons loophole' after Las Vegas shooting</h4>
+                        </div>
+                    </a>
+
+
+
+                    <a class="playlist-item" href="#1" data-index="1">
+                        <div class="media posterframe-wrapper">
+                            <img src="http://www.newsobserver.com/news/nation-world/national/ykrngb-bumpstock.KEY/alternates/LANDSCAPE_200/bumpstock.KEY" alt="'Bump stock:' Watch a demonstration and learn how the gun device works"/>
+                            <span class="glyphicon glyphicon-play-circle"></span>
+                            <span class="duration">3:25</span>
+                        </div>
+                        <div class="media-desc">
+                            <time class="published-date hidden">19 hours ago</time>
+                            <h4 class="title video-title">'Bump stock:' Watch a demonstration and learn how the gun device works</h4>
+                        </div>
+                    </a>
+
+
+
+                    <a class="playlist-item" href="#2" data-index="2">
+                        <div class="media posterframe-wrapper">
+                            <img src="http://www.newsobserver.com/news/nation-world/national/dgemt5-bodycamKEY/alternates/LANDSCAPE_200/bodycamKEY" alt="Bodycam footage shows the chaos as police try to locate Las Vegas shooter, evacuate citizens"/>
+                            <span class="glyphicon glyphicon-play-circle"></span>
+                            <span class="duration">3:06</span>
+                        </div>
+                        <div class="media-desc">
+                            <time class="published-date hidden">2 days ago</time>
+                            <h4 class="title video-title">Bodycam footage shows the chaos as police try to locate Las Vegas shooter, evacuate citizens</h4>
+                        </div>
+                    </a>
+
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+                </div>
+                <div class="clearfix footer element_spacing_large">
+                    <p class="readmore">
+                        <a href="/video">
+                            View More Video
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    <div>
+    <div class="ad hidden-xs">
+        <div class="ad-widget" id="mn-gpt-10" adtype="default" pkg="c" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Large" Large="300x250" Medium="300x250" Small="300x250" Extra-Small="None" articleId="177205031"></div>
+    </div>
+
+
+
+
+
+<div class="element-spacing-medium">
+    <section id="more-stories-widget" class="headline-list element_spacing_large">
+
+
+                <h2 class="heading link">
+                    <a href="/news/nation-world/">
+                        Nation & World
+                    </a>
+                </h2>
+
+
+                        <article class="media">
+                            <div class="teaser">
+                                <h2 class="title">
+                                    <a href="http://www.newsobserver.com/entertainment/celebrities/article177362061.html">
+                                        Nobel Peace Prize awarded to anti-nuclear campaign group
+                                    </a>
+                                </h2>
+                            </div>
+                        </article>
+
+
+
+                        <article class="media">
+                            <div class="teaser">
+                                <h2 class="title">
+                                    <a href="http://www.newsobserver.com/news/nation-world/world/article177372141.html">
+                                        The Latest: Nobel Peace Prize resonates in Japan
+                                    </a>
+                                </h2>
+                            </div>
+                        </article>
+
+
+
+                        <article class="media">
+                            <div class="teaser">
+                                <h2 class="title">
+                                    <a href="http://www.newsobserver.com/entertainment/celebrities/article177143511.html">
+                                        British novelist Kazuo Ishiguro wins Nobel Literature Prize
+                                    </a>
+                                </h2>
+                            </div>
+                        </article>
+
+
+
+                        <article class="media">
+                            <div class="teaser">
+                                <h2 class="title">
+                                    <a href="http://www.newsobserver.com/news/nation-world/world/article177378956.html">
+                                        Iran arrests brother of country's senior vice president
+                                    </a>
+                                </h2>
+                            </div>
+                        </article>
+
+
+
+                        <article class="media">
+                            <div class="teaser">
+                                <h2 class="title">
+                                    <a href="http://www.newsobserver.com/news/nation-world/world/article177372991.html">
+                                        Iraqi Kurdistan receives body of late President Talabani
+                                    </a>
+                                </h2>
+                            </div>
+                        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="clearfix">
+                    <div class="more-stories-link wps-stories-link">
+                        <a href="/news/nation-world/">
+                            Nation & World
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+    </section>
+</div>
+    <div class="ad hidden-xs">
+        <div class="ad-widget" id="mn-gpt-11" adtype="default" pkg="e" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Large" Large="Flex Ad" Medium="Flex Ad" Small="300x250" Extra-Small="None" articleId="177205031"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="ad hidden-xs">
+        <div class="ad-widget" id="mn-gpt-12" adtype="default" pkg="None" data-ad-policy="onPageLoad" audience="nonsub" atf="n" defaultsize="Large" Large="300x250" Medium="300x250" Small="300x250" Extra-Small="None" oom="y"  articleId="177205031"></div>
+    </div>
+    <div class="ad hidden-xs">
+        <div class="ad-widget" id="mn-gpt-13" adtype="default" pkg="None" data-ad-policy="onPageLoad" audience="nonsub" atf="n" defaultsize="Large" Large="300x250" Medium="300x250" Small="300x250" Extra-Small="None" oom="y"  articleId="177205031"></div>
+    </div>
+</div>
+
+    </div>
+</section>
+
+<div class="container">
+    <div class="ad hidden-xs">
+        <div class="ad-widget" id="mn-gpt-14" adtype="default" pkg="None" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Large" Large="728x90" Medium="728x90" Small="728x90" Extra-Small="none" articleId="177205031"></div>
+    </div>
+</div>
+
+<img src="https://cdn.relaymedia.com/ping?url=http%3A%2F%2Fwww.newsobserver.com%2Fnews%2Fnation-world%2Farticle177205031.html" width="1" height="1">
+
+
+
+
+
+
+<div id="footer" class="wps-footer">
+    <header id="footer-logo">
+        <div class="container text-center">
+            <a href="/" target="_top">
+                <img src="/wps/build/images/newsobserver/logo-sm.png" alt="The News &amp; Observer | NewsObserver.com" class="img-responsive" />
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div id="accordion" class="panel-group">
+                <div class="panel full-width-content col-sm-6 col-md-6">
+                    <div class="panel-heading">
+                        <h2 class="heading"><a data-toggle="" data-parent="#accordion" href="#collapseOne">Subscriptions</a></h2>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <ul class="footer-menu">
+
+                                    <li><a href="https://account.newsobserver.com/static/subscribe/#navlink=mi_footer">Start a Subscription</a></li>
+
+                                    <li><a href="https://mcciservices.newscyclecloud.com/cgi-bin/cmo_mcc-c-cmdb-est-01.sh/custservice/web/login.html?siteid=RAL#navlink=mi_footer">Customer Service</a></li>
+
+                                    <li><a href="http://digital.olivesoftware.com/Olive/ODN/NewsAndObserver/default.aspx#navlink=mi_footer">eEdition</a></li>
+
+                                    <li><a href="https://mcciservices.newscyclecloud.com/cgi-bin/cmo_mcc-c-cmdb-est-01.sh/custservice/web/login.html?siteid=RAL#navlink=mi_footer">Vacation Hold</a></li>
+
+                                    <li><a href="https://mcciservices.newscyclecloud.com/cgi-bin/cmo_mcc-c-cmdb-est-01.sh/custservice/web/login.html?siteid=RAL#navlink=mi_footer">Pay Your Bill</a></li>
+
+                                    <li><a href="/rewards">Rewards</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel full-width-content col-sm-6 col-md-6">
+                    <div class="panel-heading">
+                        <h2 class="heading"><a data-toggle="" data-parent="#accordion" href="#collapseTwo">Site Information</a></h2>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <ul class="footer-menu">
+
+                                    <li><a href="http://www.newsobserver.com/customer-service/about-us/#navlink=mi_footer">About Us</a></li>
+
+                                    <li><a href="http://www.newsobserver.com/customer-service/contact-us/#navlink=mi_footer">Contact Us</a></li>
+
+                                    <li><a href="http://x.email.newsobserver.com/ats/url.aspx?cr=663&amp;wu=15#navlink=mi_footer">Newsletters</a></li>
+
+                                    <li><a href="http://nie.newsobserver.com/#navlink=mi_footer">News in Education</a></li>
+
+                                    <li><a href="http://www.triangle.com/#navlink=mi_footer">Triangle.com</a></li>
+
+                                    <li><a href="http://www.legalnotice.org/pl/newsobserver/landing1.aspx#navlink=mi_footer">Legal Notices</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel full-width-content col-sm-6 col-md-6">
+                    <div class="panel-heading">
+                        <h2 class="heading"><a data-toggle="" data-parent="#accordion" href="#collapseThree">Social, Mobile &amp; More</a></h2>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <ul class="footer-menu">
+
+                                    <li><a href="http://x.email.newsobserver.com/ats/url.aspx?cr=663&amp;wu=46#navlink=mi_footer">Text News Alerts</a></li>
+
+                                    <li><a href="/mobile/#navlink=mi_footer">Mobile &amp; Apps</a></li>
+
+                                    <li><a href="https://www.facebook.com/newsandobserver#navlink=mi_footer">Facebook</a></li>
+
+                                    <li><a href="https://twitter.com/newsobserver/#navlink=mi_footer">Twitter</a></li>
+
+                                    <li><a href="https://www.youtube.com/user/newsobservertube/#navlink=mi_footer">YouTube</a></li>
+
+                                    <li><a href="https://plus.google.com/+newsandobserver/#navlink=mi_footer">Google+</a></li>
+
+                                    <li><a href="/careers/#navlink=mi_footer">Careers at the N&amp;O</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel full-width-content col-sm-6 col-md-6">
+                    <div class="panel-heading">
+                        <h2 class="heading"><a data-toggle="" data-parent="#accordion" href="#collapseFour">Advertising</a></h2>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <ul class="footer-menu">
+
+                                    <li><a href="http://www.nandomediacompany.com#navlink=mi_footer">Advertise With Us</a></li>
+
+                                    <li><a href="/customer-service/privacy-policy/#interest_advertising">About Our Ads</a></li>
+
+                                    <li><a href="/advertise/place-an-ad/#navlink=mi_footer">Place a Classified</a></li>
+
+                                    <li><a href="http://triangle.dealsaver.com/#navlink=mi_footer">Local Deals</a></li>
+
+                                    <li><a href="http://findnsave.newsobserver.com/#navlink=mi_footer">Shopping</a></li>
+
+                                    <li><a href="http://www.newsobserverstore.com/#navlink=mi_footer">N&amp;O Store</a></li>
+
+                                    <li><a href="http://photostore.newsobserver.com/#navlink=mi_footer">N&amp;O Photos</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="footer-legal">
+            <div class="panel col-sm-6 col-md-3 full-width-content">
+                <div class="panel-heading">
+                    <h2 class="heading"><a data-toggle="" data-parent="#footer-legal" href="#collapseLegal">More</a></h2>
+                </div>
+                <div id="collapseLegal" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <ul class="footer-menu-legal">
+
+                                <li><a href="/customer-service/copyright/#navlinks=footer">Copyright</a></li>
+
+                                <li><a href="/customer-service/commenting-policy/#navlinks=footer">Commenting Policy</a></li>
+
+                                <li><a href="/news/submit-news/#navlink=mi_footer">Report News</a></li>
+
+                                <li><a href="/customer-service/privacy-policy/#navlink=mi_footer">Privacy Policy</a></li>
+
+                                <li><a href="/customer-service/terms-of-service/#navlink=mi_footer">Terms of Use</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(window).on('resize load', function() {
+    var iWindowWidth = window.innerWidth;
+    if (iWindowWidth <= 767) {
+        $('#accordion .collapse, #footer-legal .collapse').removeClass('in');
+        $('#accordion .collapse, #footer-legal .collapse').addClass('out');
+        $('#accordion .heading a, #footer-legal .heading a').attr('data-toggle', 'collapse');
+    }
+    else {
+        $('#accordion .collapse, #footer-legal .collapse').removeClass('out');
+        $('#accordion .collapse, #footer-legal .collapse').addClass('in');
+        $('#accordion .heading a, #footer-legal .heading a').attr('data-toggle', '');
+        $('#footer-legal').find('#collapseLegal').css("height","auto");
+        if($('#accordion .collapse').hasClass('in')) {
+            $('#accordion .collapse').css("height","auto");
+        }
+    }
+});
+
+(function(){
+    var topPanel;
+    $('#footer-legal .panel-heading a').click(function(){
+        topPanel = $('#accordion').find(".panel-collapse.in")
+        if(topPanel){
+            topPanel.prev().find("a[href=#"+topPanel.attr("id")+"]").trigger("click");
+        }
+    });
+    $('#accordion .panel-heading a').click(function(){
+        topPanel = $('#footer-legal').find(".panel-collapse.in")
+        if(topPanel){
+            topPanel.prev().find("a[href=#"+topPanel.attr("id")+"]").trigger("click");
+        }
+    });
+})();
+</script>
+
+<div id="wallpaperWrapper" style="display:none;">
+    <div class="ad-widget" id="mn-gpt-15" adtype="wallpaper" pkg="None" data-ad-policy="onPageLoad" audience="all" atf="y" defaultsize="Large" Large="1600x600" Medium="None" Small="None" Extra-Small="None" articleId="177205031"><script type='text/javascript'>initWallpaperAd(['#mn-gpt-15'], "section[role='main']"); createWallpaperAd();</script></div>
+</div>
+
+        <div id="floorboard" class="hidden-xs">
+            <div id="floorboard_outer">
+                <div id="floorTagWrapper" style="display:none;">
+                    <div class="ad-widget" id="mn-gpt-16" adtype="floorboard" pkg="a" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Large" Large="285x70" Medium="285x70" Small="285x70" Extra-Small="None" articleId="177205031"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript">
+            mi_Ads.env.init();
+        </script>
+
+
+<div id="mistatstag" style="display:none;">
+
+        <script src="http://media2.newsobserver.com/mistats/products/escenic_s_code.js"></script>
+        <script src="http://media2.newsobserver.com/mistats/products/escenic.js"></script>
+        <script src="http://media2.newsobserver.com/mistats/finalizestats.js"></script>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    //<![CDATA[
+    var clientDT = new Date().getTime();
+    document.write('<img style="display:none;" src="http://ece-logger.nandomedia.com:8083/analysis-logger/Logger?rt=1&ctxId=10892&contextPath=7041-10892&pubId=15&cat=&meta=read-story&objId=177205031&type=article&title=Fed+up+with+catcalling%2C+she+took+24+selfies+with+smiling+men+who+she+says+harassed+her&url=http%3A%2F%2Fwww.newsobserver.com%2Fnews%2Fnation-world%2Farticle177205031.html&amp;clientDT=' + clientDT + '" alt="" width="1" height="1"/>');
+    //]]>
+</script>
+
+<noscript>
+    <div>
+        <img src="http://ece-logger.nandomedia.com:8083/analysis-logger/Logger?rt=1&ctxId=10892&contextPath=7041-10892&pubId=15&cat=&meta=read-story&objId=177205031&type=article&title=Fed+up+with+catcalling%2C+she+took+24+selfies+with+smiling+men+who+she+says+harassed+her&url=http%3A%2F%2Fwww.newsobserver.com%2Fnews%2Fnation-world%2Farticle177205031.html" alt="one pixel graphics" width="1" height="1"/>
+    </div>
+</noscript>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+    var WFClientTypeDef = {
+        "extraSmall": "(max-width: 767px)",
+        "medium": "(min-width: 992px) and (max-width: 1199px)",
+        "large": "(min-width: 1200px)",
+        "small": "(min-width: 768px) and (max-width: 991px)"
+    };
+    var imageSizes = [80, 160, 200, 320, 400, 480, 560, 640, 720, 768, 960, 1080, 1140];
+</script>
+<script type="text/javascript" src="/wps/build/js/mi-footer-4c6a9bd5cd.js"></script>
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 968074018;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/968074018/?value=0&guid=ON&script=0"/>
+        </div>
+    </noscript>
+
+
+    <!-- Start MdotLabs Tag -->
+<div class="mlabs_container">
+<script src="http://tags.mdotlabs.com/tracking.php?siteID=e8AJ" async></script>
+</div>
+<!-- End MdotLabs Tag -->
+
+
+
+    <script type="text/javascript">
+        mi.pageInfo.setConf("chartbeat.uid", 62447);
+    </script>
+
+<script src="/wps/source/scripts/libs/md5.min.js"></script>
+<script type="text/javascript">
+    var nextbee = {
+        user_cookie: undefined,
+        user_email: undefined,
+        nextbee_host: "app.nextbee.com",
+        nextbee_campaign: "3729",
+        nextbee_client: "1703",
+        API_AUTHORIZATION_KEY: 'DECGCFCFHEACGCDBIBGZ158469415068700193Y!n-868654787',
+        ENCRYPTION_KEY: '0.9240762',
+
+        credit_read_story: function() {
+            this.post_to_nextbee("5438");
+        },
+
+        credit_watch_video: function() {
+            this.post_to_nextbee("5336");
+        },
+
+        credit_share_articles: function(id, url) {
+            this.post_to_nextbee(id, url);
+        },
+
+        initialize: function() {
+            this.user_cookie = checkUserSubscribed('MPPUser');
+            if (this.user_cookie) {
+                var cookie_json = JSON.parse(this.user_cookie);
+                if (cookie_json) {
+                    this.user_email = cookie_json.emailAddress;
+                }
+            }
+
+                this.credit_read_story();
+
+        },
+
+        required_values_present: function (widget_id) {
+            return this.user_cookie && this.user_email &&
+                   this.nextbee_host && this.nextbee_client && this.nextbee_campaign &&
+                   widget_id;
+        },
+
+        post_to_nextbee: function (widget_id, href) {
+            if (this.required_values_present(widget_id)) {
+                var nextbee_url = ['https://' + this.nextbee_host, 'nextbeeapis',
+                    this.nextbee_client, this.nextbee_campaign, 'Event'].join('/') +
+                    '?email=' + encodeURIComponent(this.user_email) +
+                    '&widget_config_id=' + widget_id;
+                var timestamp_key = Math.floor(Date.now()).toString();
+                var api_call_signature = md5(this.API_AUTHORIZATION_KEY +
+                    this.ENCRYPTION_KEY + timestamp_key);
+
+                console.log("NextBee URL: " + nextbee_url +
+                    "\nAuth. Key: " + this.API_AUTHORIZATION_KEY +
+                    "\nEnc. Key:  " + this.ENCRYPTION_KEY +
+                    "\nTimestamp: " + timestamp_key +
+                    "\nSignature: " + api_call_signature);
+
+                $.ajax( { url: nextbee_url, type: 'post', headers: {
+                    'ts-key': timestamp_key,
+                    'api-call-signature': api_call_signature,
+                    'cache-control': 'no-cache',
+                    'content-type': 'application/json',
+                    },
+                    complete: function(data) {
+                        if(href)
+                        {
+                            window.location.href = href;
+                        }
+                        console.log("NextBee API response: " + data.responseText);
+                    }
+                } );
+            }
+        }
+    };
+
+    $(function(){
+        nextbee.initialize();
+    });
+</script>
+
+
+
+<!-- Start Lotame Tag -->
+	<script src="http://tags.crwdcntrl.net/c/7447/cc.js?ns=_cc7447" id="LOTCC_7447"></script>
+	<script>_cc7447.bcp();</script>
+<!-- End Lotame Tag -->
+
+
+
+
+    </body>
+</html>
